@@ -1,5 +1,5 @@
 # OpenPVSignal
-OpenPVSignal is an ontology aiming to foster the publication of pharmacovigilance signal information (currently communicated by drug regulatory authorities in free-text reports), using Linked Data and Semantic Web technologies.
+OpenPVSignal is an ontology aiming to foster the publication of pharmacovigilance signal information (currently communicated by drug regulatory authorities via their Newsletters or Web sites as free-text reports), using Linked Data and Semantic Web technologies.
 
 OpenPVSignal is currently under development. It is currently in the final development phase, while a scientific paper about OpenPVSignal is currently being prepared.
 
