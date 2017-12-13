@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://inab.certh.gr/OpenPVSignal"
+     xml:base="http://purl.org/OpenPVSignal"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://inab.certh.gr/OpenPVSignal"
-     versionIRI="http://inab.certh.gr/OpenPVSignal/draft-v0.8">
-    <Prefix name="" IRI="http://inab.certh.gr/OpenPVSignal"/>
+     ontologyIRI="http://purl.org/OpenPVSignal"
+     versionIRI="http://purl.org/OpenPVSignal/draft-v0.8">
+    <Prefix name="" IRI="http://purl.org/OpenPVSignal"/>
     <Prefix name="mp" IRI="http://purl.org/mp/"/>
     <Prefix name="oa#" IRI="http://www.w3.org/ns/oa#"/>
     <Prefix name="opv" IRI="http://inab.certh.gr/OpenPVSignal"/>
@@ -23,6 +23,10 @@
     <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
     <Import>http://purl.obolibrary.org/obo/dron.owl</Import>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present information n pharmacoviginal signal information, originally contained in free-text reports.</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.7-20171109</Literal>
     </Annotation>
@@ -34,57 +38,248 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal</Literal>
     </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present information n ADR signal free text reports.</Literal>
-    </Annotation>
     <Declaration>
-        <Class IRI="#Patient"/>
+        <DataProperty IRI="#has_count_of_women"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ADR_Mechanism"/>
+        <DataProperty IRI="#refers_to_outcome_after_action"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_max_age"/>
+        <DataProperty IRI="#has_min_age"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_upper_limit"/>
+        <DataProperty IRI="#has_median_age"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#refers_to_dechallenge_process"/>
+        <ObjectProperty IRI="#hasClass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dosage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confidence_interval_0.95"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VigiBase_Report"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_age"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indication"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="oa#:hasTarget"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#is_related_with_secondary_suspect_drug"/>
+        <Class IRI="#ADR_Signal_Report"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_confidence_interval"/>
+        <ObjectProperty IRI="#refers_to_dosage"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_gender"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_count"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Relative_Reporting_Ratio"/>
+        <Class IRI="#Intake_form"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#refers_to_number_of_reports"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Summary"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_class"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_ATC_code"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_content"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Adverse_Effect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clinical_trial_information"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_patient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_drug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reports_group"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_subgroup_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongs_to_reports_group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_case_narrative"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_lower_limit"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Statistical_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_mechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_form_of_intake"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_dechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#time_to_onset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_free_text_reporting_element"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_confidence_interval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_primary_suspect_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_drug_exposure"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_MedDRA_code"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concerns_indication_for_use"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_average_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_database"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spontaneous_report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Free_text_reporting_element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lareb_report"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_concomitant_drug"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_first_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ADR_Mechanism"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Signal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_RxNorm_code"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_drug_intake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DDI_Signal_Report"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_last_name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_supported_by_spontaneous_report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrugClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_signal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_rechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_affiliation"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_subject"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Statistical_entity"/>
+        <Class IRI="#Warning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Case_narrative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prescription_on_population_data"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structured_Product_Labels_information"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Literature_information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drug"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relative_Reporting_Ratio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_reporter_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_count"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pharmacovigilance_Signal_Report"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_registration_date"/>
@@ -96,94 +291,37 @@
         <ObjectProperty IRI="#is_part_of"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_reported_drug_usage"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#refers_to_dechallenge_outcome"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
+        <Class IRI="#Bibliographic_reference"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drug"/>
+        <DataProperty IRI="#has_creation_date"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Conclusion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Clinical_trial_information"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_drug"/>
+        <ObjectProperty IRI="#is_related_with_interacting_drug"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_ICD_code"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Warning"/>
+        <Class IRI="#Drug_Usage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#is_supported_by_spontaneous_report"/>
+        <Class IRI="#Patient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drug_class_effect_information"/>
+        <DataProperty IRI="#modified_on"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_affiliation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_author"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_adverse_effect"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_value"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Prescription_on_population_data"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Drug_Exposure"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_trade_name"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_overall_conclusion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_drugbank_code"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Author"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_min_age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DrugClass"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Mechanism"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_dosage_value"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Introduction"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ADR_supporting_information"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Disproportionality_analysis_statistical_data_item"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_free_text_reporting_element"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_case_narrative"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_first_name"/>
+        <ObjectProperty IRI="#is_related_with_secondary_suspect_drug"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Reporting_Odds_Ratio"/>
@@ -192,217 +330,79 @@
         <DataProperty IRI="#initially_identified_on"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_database"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#modified_on"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Drug_Usage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_form_of_intake"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#has_MedDRA_prefered_term"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Reports_group"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pharmacovigilance_Signal_Report"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Bibliographic_reference"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#time_to_onset"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_subgroup_of"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_class"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Summary"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_dosage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_reporter_type"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Literature_information"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_ATC_code"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_median_age"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasClass"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_number_of_reports"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Adverse_Effect"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_count_of_women"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#belongs_to_reports_group"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_interacting_drug"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_creation_date"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_RxNorm_code"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Dosage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_patient"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ADR_Signal_Report"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_reported_drug_usage"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_rechallenge_process"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_outcome_after_action"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Confidence_interval_0.95"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Intake_form"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_ID"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Indication"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Structured_Product_Labels_information"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_primary_suspect_drug"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VigiBase_Report"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_drug_exposure"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Case_narrative"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_average_age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Spontaneous_report"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_MedDRA_code"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#concerns_indication_for_use"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_mechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Free_text_reporting_element"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_drug_intake"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DDI_Signal_Report"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_signal"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lareb_report"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_concomitant_drug"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_last_name"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Signal"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#Adverse_Effect"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001000"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Condition"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000061"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Drug"/>
-        <Class IRI="http://purl.obolibrary.org/obo/DRON_00000005"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="#Drug_Exposure"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000931"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_trade_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_dosage_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_drugbank_code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_upper_limit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Introduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drug_class_effect_information"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_max_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_overall_conclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Author"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ADR_supporting_information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disproportionality_analysis_statistical_data_item"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/DRON_00000005"/>
+        <Class IRI="#Drug"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Drug_Usage"/>
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0000011"/>
+        <Class IRI="#Drug_Usage"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Patient"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001817"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Signal"/>
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0000028"/>
+        <Class IRI="#Signal"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Spontaneous_report"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000127"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Warning"/>
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0000055"/>
+        <Class IRI="#Warning"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000127"/>
+        <Class IRI="#Spontaneous_report"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000931"/>
+        <Class IRI="#Drug_Exposure"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001000"/>
+        <Class IRI="#Adverse_Effect"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001817"/>
+        <Class IRI="#Patient"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000061"/>
+        <Class IRI="#Condition"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#ADR_Mechanism"/>
