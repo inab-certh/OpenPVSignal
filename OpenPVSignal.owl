@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl">
+    <Prefix name="" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
     <Prefix name="mp" IRI="http://purl.org/mp/"/>
     <Prefix name="oa#" IRI="http://www.w3.org/ns/oa#"/>
     <Prefix name="opv" IRI="http://inab.certh.gr/OpenPVSignal"/>
@@ -15,12 +16,10 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="openpvsignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
+    <Import>http://purl.org/mp</Import>
     <Import>http://www.w3.org/2006/time#2016</Import>
     <Import>http://www.w3.org/ns/oa#</Import>
-    <Import>http://purl.org/mp</Import>
     <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/dron/dron-pro.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/dron/dron-upper.owl</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present information n pharmacoviginal signal information, originally contained in free-text reports.</Literal>
@@ -59,10 +58,10 @@
         <ObjectProperty IRI="#time_to_onset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Introduction"/>
+        <ObjectProperty IRI="#is_related_with_interacting_drug"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#is_related_with_interacting_drug"/>
+        <Class IRI="#Introduction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Bibliographic_reference"/>
@@ -81,6 +80,9 @@
     </Declaration>
     <Declaration>
         <AnnotationProperty abbreviatedIRI="oa#:hasTarget"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#refers_to_database"/>
@@ -137,6 +139,9 @@
         <ObjectProperty IRI="#is_related_with_drug_intake"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://www.w3.org/ns/prov#value"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_RxNorm_code"/>
     </Declaration>
     <Declaration>
@@ -167,16 +172,19 @@
         <DataProperty IRI="#has_median_age"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#refers_to_rechallenge_process"/>
+        <DataProperty IRI="#has_ATC_code"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_ATC_code"/>
+        <DataProperty IRI="#refers_to_rechallenge_process"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_part_of"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Free_text_reporting_element"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#refers_to_form_of_intake"/>
@@ -212,10 +220,10 @@
         <DataProperty IRI="#has_ID"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
+        <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Condition"/>
+        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Clinical_trial_information"/>
@@ -290,16 +298,19 @@
         <DataProperty IRI="#has_upper_limit"/>
     </Declaration>
     <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Drug_class_effect_information"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Adverse_Effect"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasClass"/>
+        <DataProperty IRI="#has_min_age"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_min_age"/>
+        <ObjectProperty IRI="#hasClass"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DrugClass"/>
@@ -332,10 +343,10 @@
         <Class IRI="#Mechanism"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_author"/>
+        <DataProperty IRI="#has_count_of_men"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_count_of_men"/>
+        <ObjectProperty IRI="#refers_to_author"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_value"/>
@@ -368,10 +379,6 @@
         <DataProperty IRI="#initially_identified_on"/>
     </Declaration>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/DRON_00000005"/>
-        <Class IRI="#Drug"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0000011"/>
         <Class IRI="#Drug_Usage"/>
     </EquivalentClasses>
@@ -399,10 +406,6 @@
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0001817"/>
         <Class IRI="#Patient"/>
     </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000061"/>
-        <Class IRI="#Condition"/>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#ADR_Mechanism"/>
         <Class IRI="#Mechanism"/>
@@ -414,10 +417,6 @@
     <SubClassOf>
         <Class IRI="#ADR_supporting_information"/>
         <Class IRI="#Free_text_reporting_element"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ADR_supporting_information"/>
-        <Class abbreviatedIRI="mp:Reference"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Adverse_Effect"/>
@@ -535,10 +534,6 @@
         <Class abbreviatedIRI="mp:Data"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Spontaneous_report"/>
-        <Class abbreviatedIRI="mp:Reference"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Statistical_entity"/>
         <Class abbreviatedIRI="mp:Data"/>
     </SubClassOf>
@@ -553,10 +548,6 @@
     <SubClassOf>
         <Class IRI="#VigiBase_Report"/>
         <Class IRI="#Spontaneous_report"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Warning"/>
-        <Class abbreviatedIRI="mp:Reference"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
@@ -604,15 +595,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#is_supported_by_spontaneous_report"/>
-        <ObjectProperty abbreviatedIRI="mp:references"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#is_supported_by_spontaneous_report"/>
         <ObjectProperty abbreviatedIRI="mp:supportedByData"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
-        <ObjectProperty abbreviatedIRI="mp:references"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
@@ -731,7 +714,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
-        <Class IRI="#Signal"/>
+        <ObjectUnionOf>
+            <Class IRI="#Signal"/>
+            <Class IRI="#Statistical_entity"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_adverse_effect"/>
@@ -1446,14 +1432,14 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clinical trial information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Conclusion</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The main outcome of a signal report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The main outcome of a signal report</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Conclusion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
