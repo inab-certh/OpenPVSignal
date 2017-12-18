@@ -157,6 +157,9 @@
         <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#has_drugbank_code"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_affiliation"/>
     </Declaration>
     <Declaration>
@@ -235,9 +238,6 @@
         <DataProperty IRI="#has_content"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_drugbank_code"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#refers_to_drug"/>
     </Declaration>
     <Declaration>
@@ -307,10 +307,10 @@
         <Class IRI="#Adverse_Effect"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_min_age"/>
+        <ObjectProperty IRI="#hasClass"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasClass"/>
+        <DataProperty IRI="#has_min_age"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DrugClass"/>
@@ -888,10 +888,6 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
-        <DataProperty IRI="#has_drugbank_code"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
         <DataProperty IRI="#has_last_name"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
@@ -923,9 +919,6 @@
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#has_creation_date"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_drugbank_code"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#has_gender"/>
@@ -975,10 +968,6 @@
             <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
             <Class IRI="#Spontaneous_report"/>
         </ObjectUnionOf>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_drugbank_code"/>
-        <Class IRI="#Drug"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#has_first_name"/>
@@ -1132,10 +1121,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_creation_date"/>
         <Datatype abbreviatedIRI="xsd:date"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_drugbank_code"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#has_first_name"/>
@@ -1906,7 +1891,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_drugbank_code</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has drugbank code</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has drugbank code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2416,6 +2401,10 @@
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_RxNorm_code"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_drugbank_code"/>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
     </SubAnnotationPropertyOf>
 </Ontology>
