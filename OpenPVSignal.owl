@@ -67,9 +67,6 @@
         <Class IRI="#Bibliographic_reference"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_MedDRA_code"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Drug_Exposure"/>
     </Declaration>
     <Declaration>
@@ -142,9 +139,6 @@
         <DataProperty IRI="http://www.w3.org/ns/prov#value"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_RxNorm_code"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Spontaneous_report"/>
     </Declaration>
     <Declaration>
@@ -152,6 +146,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_count_of_women"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_ICD_code"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Summary"/>
@@ -170,9 +167,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_median_age"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_ATC_code"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#refers_to_rechallenge_process"/>
@@ -211,6 +205,9 @@
         <Class IRI="#Case_narrative"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#has_MedDRA_prefered_term"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#refers_to_class"/>
     </Declaration>
     <Declaration>
@@ -232,6 +229,9 @@
         <Class IRI="#Conclusion"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="#has_RxNorm_code"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_content"/>
     </Declaration>
     <Declaration>
@@ -239,9 +239,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_drug"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_ICD_code"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
@@ -287,6 +284,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ADR_supporting_information"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_ATC_code"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ADR_Mechanism"/>
@@ -355,9 +355,6 @@
         <DataProperty IRI="#refers_to_number_of_reports"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_MedDRA_prefered_term"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Patient"/>
     </Declaration>
     <Declaration>
@@ -377,6 +374,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#initially_identified_on"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_MedDRA_code"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0000011"/>
@@ -919,12 +919,6 @@
         <DataProperty IRI="#has_ID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#has_MedDRA_code"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
-        <DataProperty IRI="#has_RxNorm_code"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#has_age"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -950,28 +944,8 @@
         <Class IRI="#Spontaneous_report"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#has_ATC_code"/>
-        <Class IRI="#Drug"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_ICD_code"/>
-        <Class IRI="#Condition"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
         <DataProperty IRI="#has_ID"/>
         <Class IRI="#Spontaneous_report"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_MedDRA_code"/>
-        <Class IRI="#Adverse_Effect"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_MedDRA_prefered_term"/>
-        <Class IRI="#Adverse_Effect"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#has_RxNorm_code"/>
-        <Class IRI="#Drug"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#has_affiliation"/>
@@ -1117,27 +1091,7 @@
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#has_ATC_code"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_ICD_code"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#has_ID"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_MedDRA_code"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_MedDRA_prefered_term"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#has_RxNorm_code"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1802,7 +1756,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_ATC_code</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ATC code</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ATC code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1812,7 +1766,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_ICD_code</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ICD code</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ICD code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1832,7 +1786,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_MedDRA_code</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MedDRA code</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MedDRA code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1852,7 +1806,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_RxNorm_code</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RxNorm code</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RxNorm code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2444,6 +2398,26 @@
         <IRI>#Proportional_Reporting_Ratio_(POR)</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Proportional Reporting Ratio (PRR)</Literal>
     </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_ATC_code"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_ICD_code"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_MedDRA_code"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_MedDRA_prefered_term"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="#has_RxNorm_code"/>
+        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    </SubAnnotationPropertyOf>
 </Ontology>
 
 
