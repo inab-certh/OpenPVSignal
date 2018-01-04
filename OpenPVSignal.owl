@@ -88,10 +88,10 @@
         <DataProperty IRI="#refers_to_database"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_adverse_effect"/>
+        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000055"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000055"/>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Warning"/>
@@ -688,6 +688,9 @@
     <TransitiveObjectProperty>
         <ObjectProperty IRI="#is_part_of"/>
     </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
+    </TransitiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#belongs_to_reports_group"/>
         <Class IRI="#Spontaneous_report"/>
@@ -696,6 +699,7 @@
         <ObjectProperty IRI="#concerns_indication_for_use"/>
         <ObjectUnionOf>
             <Class IRI="#Drug"/>
+            <Class IRI="#DrugClass"/>
             <Class IRI="#Drug_Usage"/>
             <Class IRI="#Reports_group"/>
         </ObjectUnionOf>
@@ -768,6 +772,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_adverse_effect"/>
         <ObjectUnionOf>
+            <Class IRI="#Adverse_Effect"/>
             <Class IRI="#Disproportionality_analysis_statistical_data_item"/>
             <Class IRI="#Drug"/>
             <Class IRI="#Signal"/>
