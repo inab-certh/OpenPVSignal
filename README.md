@@ -12,4 +12,4 @@ b) Indicative instantiations of the OpenPVSignal ontology contained in the "exam
 - The FDA Drug Safety Communications' Web site (cf. FDA_Drug_Safety_Communication_2_3_2011_PPIs_and_low_magnesium_levels.owl, Source: https://www.fda.gov/Drugs/DrugSafety/ucm245011.htm)
 - The Netherlands Pharmacovigilance Center - Lareb Web site (cf. Lareb_2013_3_Esomeprazole_and_tinnitus.owl, Source: https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf)
 
-For further information or guidance on how you could contribute to OpenPVSignal development, please contact Pantelis Natsiavas (pnatsiavas@certh.gr) and Dr. Vassilis Koutkias (vkoutkias@certh.gr).
+For further information or guidance on how you could use OpenPVSignal or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr) and Dr. Vassilis Koutkias (vkoutkias@certh.gr).
