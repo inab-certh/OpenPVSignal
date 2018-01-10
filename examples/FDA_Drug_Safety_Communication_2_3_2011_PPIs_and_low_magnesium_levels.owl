@@ -45,6 +45,9 @@
         <NamedIndividual IRI="#6._Epstein_M,_McGrath_S,_Law_F._Proton-pump_inhibitors_and_hypomagnesemic_hypoparathyroidism._NEJM._October_26,_2006._355;17:1,834-1,836."/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#FAERS_reports"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#stomach_ulcer"/>
     </Declaration>
     <Declaration>
@@ -58,6 +61,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#More_than_one_year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Center_for_Drug_Evaluation_and_Research_-_FDA"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#7._Hoorn_EJ,_MD,_van_der_Hoek_J,_de_Man_RA,_Kuipers_EJ,_et_al._A_case_series_of_proton_pump_inhibitor–_induced_hypomagnesemia._Am_J_Kidney_Dis._February_25_2010._(epub)."/>
@@ -167,12 +173,20 @@
         <NamedIndividual IRI="#Arrhythmia"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author"/>
+        <NamedIndividual IRI="#Center_for_Drug_Evaluation_and_Research_-_FDA"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_narrative"/>
         <NamedIndividual IRI="#Data_Summary"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Literature_information"/>
         <NamedIndividual IRI="#Data_Summary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group"/>
+        <NamedIndividual IRI="#FAERS_reports"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal"/>
@@ -359,6 +373,11 @@
         <NamedIndividual IRI="#9._Metz_DC,_Sostek_MB,_Ruszniewski_P,_Forsmark_CE,_et_al._Effects_of_esomeprazole_on_acid_output_in_patients_with_Zollinger-Ellison_syndrome_or_idiopathic_gastric_acid_hypersecretion._Am_J_Gastroenterol._(December_2007)._102(12);_2648-2654."/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity"/>
+        <NamedIndividual IRI="#Long_term_usage_of_PPIs_can_lead_to_low_magnesium"/>
+        <NamedIndividual IRI="#FAERS_reports"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
         <NamedIndividual IRI="#Long_term_usage_of_PPIs_can_lead_to_low_magnesium"/>
         <NamedIndividual IRI="#hypomagnesemia"/>
@@ -387,6 +406,11 @@
         <ObjectProperty IRI="http://purl.org/mp/references"/>
         <NamedIndividual IRI="#PPIs_ADR_mechanism"/>
         <NamedIndividual IRI="#5._Cundy_T,_Dissanayake_A._Severe_hypomagnesemia_in_long-term_users_of_proton-pump_inhibitors._Clinical_Endocrinology_(2008)._69;_338-341."/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author"/>
+        <NamedIndividual IRI="#Proton_pump_inhibitors_and_low_magnesium_levels_FDA_drug_safety_communication"/>
+        <NamedIndividual IRI="#Center_for_Drug_Evaluation_and_Research_-_FDA"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal"/>
@@ -497,6 +521,16 @@ OTC PPIs are marketed for the treatment of frequent heartburn under the brand na
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_subject"/>
         <NamedIndividual IRI="#Data_Summary"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data Summary</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count"/>
+        <NamedIndividual IRI="#FAERS_reports"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">38</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database"/>
+        <NamedIndividual IRI="#FAERS_reports"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FAERS</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
@@ -720,8 +754,18 @@ Today&apos;s communication is in keeping with FDA&apos;s commitment to inform th
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Center_for_Drug_Evaluation_and_Research_-_FDA</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Center for Drug Evaluation and Research - FDA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Data_Summary</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Data Summary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FAERS_reports</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FAERS reports</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
