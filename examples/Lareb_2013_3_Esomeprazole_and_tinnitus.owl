@@ -20,20 +20,20 @@
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">First example of OpenPVSignal application (LAREB)</Literal>
     </Annotation>
     <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.3-20171109</Literal>
+    </Annotation>
+    <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Example of applying OpenPVSignal model on publishing information originally published in a LAREB report. This example uses information published on https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf.</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.2-20170918</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.3-20171109</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf</Literal>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.4-20180124</Literal>
     </Annotation>
     <Declaration>
         <NamedIndividual IRI="#onset_time_for_report_A"/>
@@ -63,9 +63,6 @@
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_interacting_drug"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#mometasone"/>
     </Declaration>
     <Declaration>
@@ -87,6 +84,9 @@
         <NamedIndividual IRI="#Patient_I"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Bibliographic_reference_7"/>
     </Declaration>
     <Declaration>
@@ -100,6 +100,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#reflux-oesophagitis"/>
@@ -162,6 +165,9 @@
         <NamedIndividual IRI="#mebeverine"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_action_upon_adverse_effect"/>
     </Declaration>
     <Declaration>
@@ -199,9 +205,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ROR_of_all_ppis_in_vigibase"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#SmPC"/>
@@ -267,6 +270,9 @@
         <NamedIndividual IRI="#LAREB"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_secondary_suspect_drug"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#venlafaxine"/>
     </Declaration>
     <Declaration>
@@ -309,9 +315,6 @@
         <NamedIndividual IRI="#Report_F"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#esomeprazole_use_in_report_G"/>
     </Declaration>
     <Declaration>
@@ -328,9 +331,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#ADR_supporting_information"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#diarrhoea"/>
@@ -606,6 +606,9 @@
         <NamedIndividual IRI="#Databases"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Patient_C"/>
     </Declaration>
     <Declaration>
@@ -777,13 +780,7 @@
         <NamedIndividual IRI="#onset_time_for_report_D"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_secondary_suspect_drug"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_confidence_interval"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_E"/>
@@ -817,6 +814,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#half_day_interval_between_administrations"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
     </Declaration>
     <Declaration>
         <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect"/>
@@ -889,9 +889,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="http://purl.org/mp/referencedBy"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#some_hours_duration_fuzzy_concept"/>
@@ -1009,7 +1006,7 @@
         <NamedIndividual IRI="#Class_effects"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#ADR_supporting_information"/>
+        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element"/>
         <NamedIndividual IRI="#Databases"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1093,7 +1090,7 @@
         <NamedIndividual IRI="#Piroxicam"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#ADR_supporting_information"/>
+        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element"/>
         <NamedIndividual IRI="#Prescription_data"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1185,7 +1182,7 @@
         <NamedIndividual IRI="#Report_J"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#ADR_supporting_information"/>
+        <Class IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element"/>
         <NamedIndividual IRI="#Reports_section"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1678,7 +1675,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://www.w3.org/ns/oa#TextQuoteSelector"/>
-        <AnonymousIndividual nodeID="_:genid13445"/>
+        <AnonymousIndividual nodeID="_:genid27717"/>
     </ClassAssertion>
     <DifferentIndividuals>
         <NamedIndividual IRI="#Esomperazol"/>
@@ -1742,7 +1739,7 @@
     <ObjectPropertyAssertion>
         <Annotation>
             <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <AnonymousIndividual nodeID="_:genid13446"/>
+            <AnonymousIndividual nodeID="_:genid27718"/>
         </Annotation>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass"/>
         <NamedIndividual IRI="#Esomperazol"/>
@@ -2015,20 +2012,6 @@
         <NamedIndividual IRI="#rabeprazole"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_A"/>
-        <NamedIndividual IRI="#Omeprazol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <IRI>#Bibliographic_reference_6</IRI>
-        </Annotation>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_secondary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_A"/>
-        <NamedIndividual IRI="#Piroxicam"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
         <NamedIndividual IRI="#Report_A"/>
         <NamedIndividual IRI="#Tinnitus"/>
@@ -2037,6 +2020,11 @@
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_A"/>
         <NamedIndividual IRI="#Patient_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_A"/>
+        <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2049,29 +2037,18 @@
         <NamedIndividual IRI="#piroxicam_use_in_report_A"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
+            <IRI>#Bibliographic_reference_6</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_secondary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_A"/>
+        <NamedIndividual IRI="#Piroxicam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
         <NamedIndividual IRI="#Report_A"/>
         <NamedIndividual IRI="#onset_time_for_report_A"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_B"/>
-        <NamedIndividual IRI="#ethinylestradiol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_B"/>
-        <NamedIndividual IRI="#mebeverine"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_B"/>
-        <NamedIndividual IRI="#mometasone"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_B"/>
-        <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
@@ -2079,28 +2056,34 @@
         <NamedIndividual IRI="#Tinnitus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_B"/>
+        <NamedIndividual IRI="#ethinylestradiol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_B"/>
+        <NamedIndividual IRI="#mebeverine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_B"/>
+        <NamedIndividual IRI="#mometasone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_B"/>
         <NamedIndividual IRI="#Patient_B"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
         <NamedIndividual IRI="#Report_B"/>
-        <NamedIndividual IRI="#onset_time_for_report_B"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_C"/>
         <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <IRI>#Bibliographic_reference_7</IRI>
-        </Annotation>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_secondary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_C"/>
-        <NamedIndividual IRI="#Ibuprofen"/>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
+        <NamedIndividual IRI="#Report_B"/>
+        <NamedIndividual IRI="#onset_time_for_report_B"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
@@ -2148,19 +2131,28 @@
         <NamedIndividual IRI="#Patient_C"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_C"/>
+        <NamedIndividual IRI="#Omeprazol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
         <NamedIndividual IRI="#Report_C"/>
         <NamedIndividual IRI="#omeprazole_use_in_report_C"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
+            <IRI>#Bibliographic_reference_7</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_secondary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_C"/>
+        <NamedIndividual IRI="#Ibuprofen"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
         <NamedIndividual IRI="#Report_C"/>
         <NamedIndividual IRI="#onset_time_for_report_C"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_D"/>
-        <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
@@ -2183,38 +2175,14 @@
         <NamedIndividual IRI="#Patient_D"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
         <NamedIndividual IRI="#Report_D"/>
-        <NamedIndividual IRI="#onset_time_for_report_D"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_E"/>
-        <NamedIndividual IRI="#budesonide"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_E"/>
-        <NamedIndividual IRI="#calcium_carbonate"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_interacting_drug"/>
-        <NamedIndividual IRI="#Report_E"/>
-        <NamedIndividual IRI="#teriparatide"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_E"/>
         <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <IRI>#Bibliographic_reference_8</IRI>
-        </Annotation>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_secondary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_E"/>
-        <NamedIndividual IRI="#meloxicam"/>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
+        <NamedIndividual IRI="#Report_D"/>
+        <NamedIndividual IRI="#onset_time_for_report_D"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
@@ -2227,9 +2195,29 @@
         <NamedIndividual IRI="#unilateral_hearing_loss"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_E"/>
+        <NamedIndividual IRI="#budesonide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_E"/>
+        <NamedIndividual IRI="#calcium_carbonate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug"/>
+        <NamedIndividual IRI="#Report_E"/>
+        <NamedIndividual IRI="#teriparatide"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_E"/>
         <NamedIndividual IRI="#Patient_E"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_E"/>
+        <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2247,28 +2235,28 @@
         <NamedIndividual IRI="#teriparatide_use_in_report_E"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <IRI>#Bibliographic_reference_8</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_secondary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_E"/>
+        <NamedIndividual IRI="#meloxicam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
         <NamedIndividual IRI="#Report_E"/>
         <NamedIndividual IRI="#onset_time_for_report_E"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_F"/>
-        <NamedIndividual IRI="#Omeprazol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <Annotation>
-            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
-            <IRI>#Bibliographic_reference_9</IRI>
-        </Annotation>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_secondary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_F"/>
-        <NamedIndividual IRI="#venlafaxine"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
         <NamedIndividual IRI="#Report_F"/>
         <NamedIndividual IRI="#Tinnitus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_F"/>
+        <NamedIndividual IRI="#Omeprazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2276,34 +2264,18 @@
         <NamedIndividual IRI="#omeprazole_dosage_for_report_F"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <Annotation>
+            <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
+            <IRI>#Bibliographic_reference_9</IRI>
+        </Annotation>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_secondary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_F"/>
+        <NamedIndividual IRI="#venlafaxine"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset"/>
         <NamedIndividual IRI="#Report_F"/>
         <NamedIndividual IRI="#onset_time_for_report_F"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_G"/>
-        <NamedIndividual IRI="#alendronic_acid"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_concomitant_drug"/>
-        <NamedIndividual IRI="#Report_G"/>
-        <NamedIndividual IRI="#zopiclone"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_interacting_drug"/>
-        <NamedIndividual IRI="#Report_G"/>
-        <NamedIndividual IRI="#prednisolone"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_interacting_drug"/>
-        <NamedIndividual IRI="#Report_G"/>
-        <NamedIndividual IRI="#valaciclovir"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_G"/>
-        <NamedIndividual IRI="#Esomperazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
@@ -2311,9 +2283,34 @@
         <NamedIndividual IRI="#Tinnitus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_G"/>
+        <NamedIndividual IRI="#alendronic_acid"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_concomitant_drug"/>
+        <NamedIndividual IRI="#Report_G"/>
+        <NamedIndividual IRI="#zopiclone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug"/>
+        <NamedIndividual IRI="#Report_G"/>
+        <NamedIndividual IRI="#prednisolone"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug"/>
+        <NamedIndividual IRI="#Report_G"/>
+        <NamedIndividual IRI="#valaciclovir"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_G"/>
         <NamedIndividual IRI="#Patient_G"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_G"/>
+        <NamedIndividual IRI="#Esomperazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2336,11 +2333,6 @@
         <NamedIndividual IRI="#onset_time_for_report_G"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_H"/>
-        <NamedIndividual IRI="#Esomperazol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
         <NamedIndividual IRI="#Report_H"/>
         <NamedIndividual IRI="#Tinnitus"/>
@@ -2349,6 +2341,11 @@
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_H"/>
         <NamedIndividual IRI="#Patient_H"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_H"/>
+        <NamedIndividual IRI="#Esomperazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2361,11 +2358,6 @@
         <NamedIndividual IRI="#onset_time_for_report_H"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_I"/>
-        <NamedIndividual IRI="#Esomperazol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect"/>
         <NamedIndividual IRI="#Report_I"/>
         <NamedIndividual IRI="#Tinnitus"/>
@@ -2374,6 +2366,11 @@
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_I"/>
         <NamedIndividual IRI="#Patient_I"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_I"/>
+        <NamedIndividual IRI="#Esomperazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -2386,14 +2383,14 @@
         <NamedIndividual IRI="#onset_time_for_report_I"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_primary_suspect_drug"/>
-        <NamedIndividual IRI="#Report_J"/>
-        <NamedIndividual IRI="#Esomperazol"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient"/>
         <NamedIndividual IRI="#Report_J"/>
         <NamedIndividual IRI="#Patient_J"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug"/>
+        <NamedIndividual IRI="#Report_J"/>
+        <NamedIndividual IRI="#Esomperazol"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage"/>
@@ -3385,12 +3382,12 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/oa#hasSelector"/>
-        <AnonymousIndividual nodeID="_:genid13446"/>
+        <AnonymousIndividual nodeID="_:genid27718"/>
         <NamedIndividual IRI="#selector_1"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://www.w3.org/ns/oa#hasSelector"/>
-        <AnonymousIndividual nodeID="_:genid13447"/>
+        <AnonymousIndividual nodeID="_:genid27719"/>
         <NamedIndividual IRI="#selector_1"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
@@ -4366,22 +4363,22 @@ Patient A was recovering two weeks after the withdrawal of both omeprazole and p
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2.0</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#esomeprazole_dosage_for_report_G"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#esomeprazole_dosage_for_report_H"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#esomeprazole_dosage_for_report_I"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#esomeprazole_dosage_for_report_J"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">40mg</Literal>
     </DataPropertyAssertion>
@@ -4419,7 +4416,7 @@ Since H /K -ATP-ase extrudes H in exchange to K from intracellular milieu to ext
 Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#meloxicam_dosage_for_report_E"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">15mg</Literal>
     </DataPropertyAssertion>
@@ -4429,32 +4426,32 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">17. US SmPC Nexium ®.(version date: 2012, access date: 15-4-2013) http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/021153s044,021957s014,022101s011lbl.pdf and 18. US SmPC Prilosec ®.(version date: 2012, access date: 15-4-2013) http://www.accessdata.fda.gov/drugsatfda_docs/label/2012/019810s095,022056s011lbl.pdf.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_A"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_B"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">40mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_C"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_D"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_E"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#omeprazole_dosage_for_report_F"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">20mg</Literal>
     </DataPropertyAssertion>
@@ -4519,12 +4516,12 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">&apos;16. Product Monograph Panto® IV. (version date: 30-1-2012, access date: 3-4-2013) www.tpi.takeda.com.&apos;</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#piroxicam_dosage_for_report_A"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">20mg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#prednisolone_dosage_for_report_A"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">40mg</Literal>
     </DataPropertyAssertion>
@@ -4534,9 +4531,19 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">284320</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_esomeprazole_2007"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
         <NamedIndividual IRI="#prescriptions_for_esomeprazole_2008"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">310670</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_esomeprazole_2008"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
@@ -4544,9 +4551,19 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">344730</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_esomeprazole_2009"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
         <NamedIndividual IRI="#prescriptions_for_esomeprazole_2010"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">340750</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_esomeprazole_2010"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
@@ -4554,9 +4571,19 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">338020</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_esomeprazole_2011"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
         <NamedIndividual IRI="#prescriptions_for_omeprazole_2007"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1039000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_omeprazole_2007"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
@@ -4564,9 +4591,19 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1220000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_omeprazole_2008"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
         <NamedIndividual IRI="#prescriptions_for_omeprazole_2009"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1376000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_omeprazole_2009"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
@@ -4574,9 +4611,19 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1596000</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_omeprazole_2010"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value"/>
         <NamedIndividual IRI="#prescriptions_for_omeprazole_2011"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1700000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country"/>
+        <NamedIndividual IRI="#prescriptions_for_omeprazole_2011"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Netherlands</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content"/>
@@ -4604,12 +4651,12 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">July 2013</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#teriparatide_dosage_for_report_E"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">600mcg</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage_value"/>
+        <DataProperty IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value"/>
         <NamedIndividual IRI="#valaciclovir_dosage_for_report_G"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">500mg</Literal>
     </DataPropertyAssertion>
@@ -4650,17 +4697,17 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/oa#exact"/>
-        <AnonymousIndividual nodeID="_:genid13445"/>
+        <AnonymousIndividual nodeID="_:genid27717"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">On April 5 2013, the database of the Netherlands Pharmacovigilance Centre Lareb contained 10 reports of (aggravated) tinnitus in association with Esomeprazole. The reporting odds ratio (ROR) was 0.9 (95% CI: 0.5-1.8), which is not disproportional, see Table 2.</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/oa#prefix"/>
-        <AnonymousIndividual nodeID="_:genid13445"/>
+        <AnonymousIndividual nodeID="_:genid27717"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Databases</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="http://www.w3.org/ns/oa#suffix"/>
-        <AnonymousIndividual nodeID="_:genid13445"/>
+        <AnonymousIndividual nodeID="_:genid27717"/>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">On April 5 , the WHO database of the Uppsala Monitoring Centre contained 171 reports of (aggravated) tinnitus associated with omeprazole and 75 reports of (aggravated) tinnitus associated with esomeprazole.</Literal>
     </DataPropertyAssertion>
     <AnnotationAssertion>
@@ -4686,7 +4733,7 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasTarget"/>
         <IRI>#Annotation_of_ROR_1</IRI>
-        <AnonymousIndividual nodeID="_:genid13448"/>
+        <AnonymousIndividual nodeID="_:genid27720"/>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5675,17 +5722,17 @@ Theoretically the inhibition of H /K -ATP-ase may increase the intracellular pH.
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasSource"/>
-        <AnonymousIndividual nodeID="_:genid13449"/>
+        <AnonymousIndividual nodeID="_:genid27721"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasSource"/>
-        <AnonymousIndividual nodeID="_:genid13450"/>
+        <AnonymousIndividual nodeID="_:genid27722"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.w3.org/ns/oa#hasSource"/>
-        <AnonymousIndividual nodeID="_:genid13451"/>
+        <AnonymousIndividual nodeID="_:genid27723"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://databankws.lareb.nl/Downloads/KWB_2013_3_Esomeprazole_and_tinnitus.pdf</Literal>
     </AnnotationAssertion>
     <DatatypeDefinition>
