@@ -25,16 +25,12 @@
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.8-20180109</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present pharmacovigilance signal information, originally contained in free-text reports.</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.9-20180124</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present pharmacovigilance signal information, originally contained in free-text reports.</Literal>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.9-20180125</Literal>
     </Annotation>
     <Declaration>
         <ObjectProperty IRI="#has_mechanism"/>
@@ -58,10 +54,10 @@
         <ObjectProperty IRI="#time_to_onset"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Bibliographic_reference"/>
+        <Class IRI="#Introduction"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Introduction"/>
+        <Class IRI="#Bibliographic_reference"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Drug_Exposure"/>
@@ -160,10 +156,10 @@
         <Class IRI="http://purl.obolibrary.org/obo/OAE_0001000"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="#has_drugbank_code"/>
+        <ObjectProperty IRI="#refers_to_concomitant_drug"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_concomitant_drug"/>
+        <AnnotationProperty IRI="#has_drugbank_code"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
@@ -275,9 +271,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#refers_to_dechallenge_process"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_country"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
@@ -1251,10 +1244,6 @@
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#refers_to_country"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
         <DataProperty IRI="#refers_to_database"/>
         <DataOneOf>
             <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Eudravigilance</Literal>
@@ -2197,16 +2186,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_confidence_interval</IRI>
         <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to confidence interval</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#refers_to_country</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Connects the respective entity with a country (i.e. the country name)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#refers_to_country</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to country</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
