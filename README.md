@@ -1,4 +1,4 @@
-# `OpenPVSignal`: An Ontology Model Aiming to Advance Pharmacovigilance Signal Search, Sharing and Reuse via FAIR Data Principles and Semantic Web Technologies
+# `OpenPVSignal`: An Ontology Model Aiming to Advance Search, Sharing and Reuse of Pharmacovigilance Signal Information
 **OpenPVSignal** is an ontology aiming to foster the publication of pharmacovigilance signal information, which is currently communicated by drug regulatory authorities via their Newsletters or Web sites as free-text reports, using *Linked Data* and *Semantic Web* technologies. Comforming to [FAIR data principles](https://www.force11.org/group/fairgroup/fairprinciples), **OpenPVSignal** aspires to advance search, sharing and reuse of Pharmacovigilance signal information.
 
 **OpenPVSignal** is currently under its final development phase, while a scientific paper describing its design, development and validation is currently being prepared.
