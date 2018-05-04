@@ -6,7 +6,7 @@
 In this repository you may find:
 1. The [`OpenPVSignal ontology model`](OpenPVSignal.owl).
 2. Indicative instantiations of the OpenPVSignal ontology contained in the [`examples`](examples) folder, concerning 3 signal reports communicated via:
-- The WHO Pharaceuticals Newsletter:
+- The WHO Pharmaceuticals Newsletter:
   - Instantiation: [`WHO_UMC_Pharmaceuticals_Newsletter_2017_3_Ibrutinib_and_pneumonitis.owl`](examples/WHO_UMC_Pharmaceuticals_Newsletter_2017_3_Ibrutinib_and_pneumonitis.owl)
   - Source: [WHO Pharmaceuticals Newsletter, no. 3, 2017, pp. 14-19](http://apps.who.int/iris/bitstream/10665/258799/1/WPN-2017-03-eng.pdf?ua=1)
 - The FDA Drug Safety Communications Web site:
