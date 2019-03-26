@@ -1,6 +1,6 @@
-<img src="https://github.com/inab-certh/OpenPVSignal/blob/master/logo.png" width="217" height="98" align="right">
+<img src="https://github.com/inab-certh/OpenPVSignal/blob/master/logo.png" width="217" height="98" align="left">
 
-# `OpenPVSignal`: Advancing Information Search, Sharing and Reuse on Pharmacovigilance Signals via FAIR Principles and Semantic Web Technologies
+# Advancing Information Search, Sharing and Reuse on Pharmacovigilance Signals via FAIR Principles and Semantic Web Technologies
 
 **OpenPVSignal** is an ontology aiming to foster the publication of Pharmacovigilance Signal information, which is currently communicated by drug regulatory authorities via their Newsletters or Web sites as free-text reports. To this end, **OpenPVSignal** relies on *Linked Data* and *Semantic Web* technologies, and conforms to [FAIR data principles](https://www.force11.org/group/fairgroup/fairprinciples), aspiring to advance search, sharing and reuse of information about Pharmacovigilance Signals.
 
