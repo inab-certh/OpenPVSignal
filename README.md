@@ -1,4 +1,4 @@
-<img src="https://github.com/inab-certh/OpenPVSignal/blob/master/logo.png" width="390" height="177" align="left">
+<img src="https://github.com/inab-certh/OpenPVSignal/blob/master/logo.png" width="195" height="88">
 
 # Advancing Information Search, Sharing and Reuse on Pharmacovigilance Signals via FAIR Principles and Semantic Web Technologies
 
