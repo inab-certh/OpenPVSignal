@@ -19,7 +19,7 @@ In this repository you may find:
   - Source: <a href="https://www.fda.gov/Drugs/DrugSafety/ucm245011.htm" target="_blank">FDA Drug Safety Communication: Low magnesium levels can be associated with long-term use of Proton Pump Inhibitor drugs (PPIs)</a>
 - The Netherlands Pharmacovigilance Center - Lareb Web site:
   - Instantiation: <a href="examples/Lareb_2013_3_Esomeprazole_and_tinnitus.owl" target="_blank">Lareb_2013_3_Esomeprazole_and_tinnitus.owl</a>
-  - Source: <a href"https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf" target="_blank">https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf</a>
+  - Source: <a href="https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf" target="_blank">https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf</a>
 
 **OpenPVSignal** is versioned following the <a href="https://semver.org/" target="_blank">semantic versioning scheme</a>, applying the guidelines provided <a href="https://github.com/dbrock/semver-howto/blob/master/README.md" target="_blank">here</a>. The last part of the version refers to the date that this version has been created. For example, version 0.8.20171211 is the version that has been first commited on GitHub, on 2017, 11th of December. Typically, each new version should be worked on a branch, following the rationale presented <a href="http://nvie.com/posts/a-successful-git-branching-model/">here</a>.
 
