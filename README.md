@@ -8,7 +8,7 @@
 **OpenPVSignal** is currently under its final development phase, while a scientific paper describing its design, development and validation has been published in "Frontiers in Pharmacology" and can be found [here](https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full).
 
 In this repository you may find:
-1. The [`OpenPVSignal ontology model`](OpenPVSignal.owl).
+1. The [`OpenPVSignal ontology model`](OpenPVSignal.owl){:target="_blank" rel="noopener"}.
 2. The OpenPVSignal [web page](https://inab-certh.github.io/OpenPVSignal/)
 3. Indicative instantiations of the OpenPVSignal ontology contained in the [`examples`](examples) folder, concerning 3 signal reports communicated via:
 - The WHO Pharmaceuticals Newsletter:
