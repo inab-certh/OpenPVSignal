@@ -7,7 +7,7 @@
 
 **OpenPVSignal** is currently under its final development phase, while a scientific paper describing its design, development and validation has been published in "Frontiers in Pharmacology" and can be found <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full" target="_blank">here</a>.
 
-<!-- {% include vimeoPlayer.html id=98641507 %} -->
+{% include vimeoPlayer.html id=328047797 %}
 
 In this repository you may find:
 1. The <a href="OpenPVSignal.owl" target="_blank">OpenPVSignal ontology model</a>.
