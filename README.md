@@ -17,7 +17,7 @@ In this repository you may find:
   - Instantiation: <a href="examples/WHO_UMC_Pharmaceuticals_Newsletter_2017_3_Ibrutinib_and_pneumonitis.owl" target="_blank">WHO_UMC_Pharmaceuticals_Newsletter_2017_3_Ibrutinib_and_pneumonitis.owl</a>
   - Source: <a href="http://apps.who.int/iris/bitstream/10665/258799/1/WPN-2017-03-eng.pdf?ua=1" target="_blank">WHO Pharmaceuticals Newsletter, no. 3, 2017, pp. 14-19</a>
 - The FDA Drug Safety Communications Web site:
-  - Instantiation: <a href="examples/FDA_Drug_Safety_Communication_2_3_2011_PPIs_and_low_magnesium_levels.owl" target="_blank">FDA_Drug_Safety_Communication_2_3_2011_PPIs_and_low_magnesium_levels.owl</a)
+  - Instantiation: <a href="examples/FDA_Drug_Safety_Communication_2_3_2011_PPIs_and_low_magnesium_levels.owl" target="_blank">FDA_Drug_Safety_Communication_2_3_2011_PPIs_and_low_magnesium_levels.owl</a>)
   - Source: <a href="https://www.fda.gov/Drugs/DrugSafety/ucm245011.htm" target="_blank">FDA Drug Safety Communication: Low magnesium levels can be associated with long-term use of Proton Pump Inhibitor drugs (PPIs)</a>
 - The Netherlands Pharmacovigilance Center - Lareb Web site:
   - Instantiation: <a href="examples/Lareb_2013_3_Esomeprazole_and_tinnitus.owl" target="_blank">Lareb_2013_3_Esomeprazole_and_tinnitus.owl</a>
