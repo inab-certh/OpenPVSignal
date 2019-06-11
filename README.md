@@ -7,7 +7,7 @@
 
 {% include vimeoPlayer.html id=328047797 %}
 
-**OpenPVSignal** is currently under its final development phase, while a scientific paper describing its design, development and validation has been published in "Frontiers in Pharmacology" and can be found <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full" target="_blank">here</a>.
+**OpenPVSignal** is currently under its final development phase, while a scientific paper describing its design, development and validation has been published in "Frontiers in Pharmacology" and can be found <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full" target="_blank">here</a>. Moreover, a presentation of OpenPVSignal can be found in the "Uppsala Reports", the news magazine of WHO-UMC (i.e. the Uppsala Monitoring Centre, the World Health Organization reference centre for pharmacovigilance). The article can be accessed in https://view.publitas.com/uppsala-monitoring-centre/uppsala-reports-80/page/20-21.
 
 In this repository you may find:
 1. The <a href="OpenPVSignal.owl" target="_blank">OpenPVSignal ontology model</a>.
