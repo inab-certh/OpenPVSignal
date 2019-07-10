@@ -7,13 +7,13 @@
 
 **OpenPVSignal** relies on *Linked Data* and *Semantic Web* technologies, and conforms to <a href="https://www.force11.org/group/fairgroup/fairprinciples" target="_blank">FAIR data principles</a>, aspiring to advance search, sharing and reuse of information about Pharmacovigilance Signals.
 
-A video presenting the rationale of **OpenPVSignal** is available here: {% include vimeoPlayer.html id=328047797 %}
-
 A scientific paper describing the **OpenPVSignal** design, development and validation has been published in "Frontiers in Pharmacology" and can be found <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full" target="_blank">here</a>.
 
 Moreover, an article about **OpenPVSignal** was published in **Uppsala Reports**, the magazine released by the Uppsala Monitoring Centre, and it can be accessed <a href="https://view.publitas.com/uppsala-monitoring-centre/uppsala-reports-80/page/20-21" target="_blank">here</a>.
 
 User-friendly tools are currently under development that will enable the use of **OpenPVSignal** for annotating signal report data by pharmacovigilance experts, hiding this way the underlying technical details of the model.
+
+{% include vimeoPlayer.html id=328047797 %}
 
 In this repository you may find:
 1. The <a href="OpenPVSignal.owl" target="_blank">OpenPVSignal ontology model</a>.
