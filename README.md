@@ -7,7 +7,7 @@
 
 **OpenPVSignal** relies on *Linked Data* and *Semantic Web* technologies, and conforms to <a href="https://www.force11.org/group/fairgroup/fairprinciples" target="_blank">FAIR data principles</a>, aspiring to advance search, sharing and reuse of information about Pharmacovigilance Signals.
 
-{% include vimeoPlayer.html id=328047797 %}
+A video presenting the rationale of **OpenPVSignal** is available here: {% include vimeoPlayer.html id=328047797 %}
 
 A scientific paper describing the **OpenPVSignal** design, development and validation has been published in "Frontiers in Pharmacology" and can be found <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00609/full" target="_blank">here</a>.
 
