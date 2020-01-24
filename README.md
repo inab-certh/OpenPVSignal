@@ -31,4 +31,4 @@ In this repository you may find:
 
 **OpenPVSignal** is versioned following the <a href="https://semver.org/" target="_blank">semantic versioning scheme</a>, applying the guidelines provided <a href="https://github.com/dbrock/semver-howto/blob/master/README.md" target="_blank">here</a>. The last part of the version refers to the date that this version has been created. For example, version 0.8.20171211 is the version that has been first commited on GitHub, on 2017, 11th of December. Typically, each new version should be worked on a branch, following the rationale presented <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">here</a>.
 
-> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr) and Dr. Vassilis Koutkias (vkoutkias@certh.gr).
+> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr).
