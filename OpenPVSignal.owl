@@ -7,402 +7,340 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl">
     <Prefix name="" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="mp" IRI="http://purl.org/mp/"/>
-    <Prefix name="oa#" IRI="http://www.w3.org/ns/oa#"/>
+    <Prefix name="oa" IRI="http://www.w3.org/ns/oa#"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
     <Prefix name="opv" IRI="http://inab.certh.gr/OpenPVSignal"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="core" IRI="http://purl.obolibrary.org/obo/uberon/core#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="pato" IRI="http://purl.obolibrary.org/obo/pato#"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
+    <Prefix name="core1" IRI="http://purl.obolibrary.org/obo/core#"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="uberon" IRI="http://purl.obolibrary.org/obo/uberon#"/>
+    <Prefix name="subsets" IRI="http://purl.obolibrary.org/obo/ro/subsets#"/>
+    <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
+    <Prefix name="OpenPVSignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#"/>
     <Prefix name="openpvsignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
+    <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
     <Import>http://purl.org/mp</Import>
     <Import>http://www.w3.org/2006/time#2016</Import>
     <Import>http://www.w3.org/ns/oa#</Import>
-    <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present pharmacovigilance signal information, originally contained in free-text reports.</Literal>
+    </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal</Literal>
     </Annotation>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">draft-v0.9-20180129</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">OpenPVSignal ontology describes a model able to present pharmacovigilance signal information, originally contained in free-text reports.</Literal>
+        <Literal xml:lang="en">draft-v0.9-20200521</Literal>
     </Annotation>
     <Declaration>
-        <ObjectProperty IRI="#has_mechanism"/>
+        <Class abbreviatedIRI="obo:IAO_0000300"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drug_Exposure_Time"/>
+        <Class abbreviatedIRI="obo:OAE_0000011"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#modified_on"/>
+        <Class abbreviatedIRI="obo:OAE_0000028"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+        <Class abbreviatedIRI="obo:OAE_0000055"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_creation_date"/>
+        <Class abbreviatedIRI="obo:OAE_0000127"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drug_Usage"/>
+        <Class abbreviatedIRI="obo:OAE_0000931"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
+        <Class abbreviatedIRI="obo:OAE_0001000"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Case_Report_Information"/>
+        <Class abbreviatedIRI="obo:OAE_0001563"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#time_to_onset"/>
+        <Class abbreviatedIRI="obo:OAE_0001817"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Introduction"/>
+        <Class abbreviatedIRI="obo:OAE_0001867"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Bibliographic_reference"/>
+        <Class abbreviatedIRI="obo:OBI_0000047"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Pharmacovigilance_Signal_Report"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_average_age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Warning_Information"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001563"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="oa#:hasTarget"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000031"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_interacting_drug"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:gYear"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_database"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lareb_Report"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000055"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_adverse_effect"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_first_name"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Signal"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_primary_suspect_drug"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_trade_name"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Drug_Intake_Form"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Individual_Case_Safety_Report"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#concerns_indication_for_use"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Reporting_Odds_Ratio"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000028"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_dose_value"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_age"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_last_name"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#VigiBase_Report"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Drug_Class_Effect_Information"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_drug_intake"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://www.w3.org/ns/prov#value"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_count_of_women"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_ICD_code"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Summary"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001000"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_concomitant_drug"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_drugbank_code"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_affiliation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Confidence_interval_0.95"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_signal"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_median_age"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_rechallenge_process"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_part_of"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Free_text_reporting_element"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000300"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_form_of_intake"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:date"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_dechallenge_outcome"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_MeSH_tree_number"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_patient"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Number_of_prescriptions_on_population"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Disproportionality_Analysis_Measure"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_related_with_drug_exposure"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000931"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#has_free_text_reporting_element"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_subgroup_of"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_MedDRA_prefered_term"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_class"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_count"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_ID"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000127"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Condition"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Conclusion"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Clinical_trial_information"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_RxNorm_code"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_content"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_drug"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_secondary_suspect_drug"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_dechallenge_process"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001867"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_lower_limit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Indication"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Author"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000011"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_confidence_interval"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_max_age"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Adverse_Effect_Mechanism"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_gender"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_ATC_code"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#has_SNOMED-CT_code"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_upper_limit"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_outcome_after_action"/>
-    </Declaration>
-    <Declaration>
-        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001817"/>
+        <Class abbreviatedIRI="obo:OGMS_0000031"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Adverse_Effect"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Class IRI="#Adverse_Effect_Mechanism"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasClass"/>
+        <Class IRI="#Author"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_min_age"/>
+        <Class IRI="#Bibliographic_reference"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DrugClass"/>
+        <Class IRI="#Case_Report_Information"/>
     </Declaration>
     <Declaration>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <Class IRI="#Clinical_trial_information"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Structured_Product_Labels_information"/>
+        <Class IRI="#Conclusion"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Reports_group"/>
+        <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#belongs_to_reports_group"/>
+        <Class IRI="#Confidence_interval_0.95"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disproportionality_Analysis_Measure"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dosage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Relative_Reporting_Ratio"/>
+        <Class IRI="#Drug"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_dosage"/>
+        <Class IRI="#DrugClass"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_overall_conclusion"/>
+        <Class IRI="#Drug_Class_Effect_Information"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_reported_drug_usage"/>
+        <Class IRI="#Drug_Exposure_Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drug_Intake_Form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drug_Usage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Free_text_reporting_element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Individual_Case_Safety_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Introduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lareb_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Literature_information"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mechanism"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#has_count_of_men"/>
+        <Class IRI="#Number_of_prescriptions_on_population"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#refers_to_author"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Statistical_Entity"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_value"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#refers_to_number_of_reports"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#has_registration_date"/>
+        <Class IRI="#Past_Diagnosis"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Patient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Literature_information"/>
+        <Class IRI="#Pharmacovigilance_Signal_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Relative_Reporting_Ratio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reporting_Odds_Ratio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reports_group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Signal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Statistical_Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structured_Product_Labels_information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VigiBase_Report"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warning_Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information_Component_(IC)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information_Component_(IC0005)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Information_Component__025_(IC025)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongs_to_reports_group"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#concerns_indication_for_use"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasClass"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_free_text_reporting_element"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_mechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_drug_exposure"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_related_with_drug_intake"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_subgroup_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_supported_by_statistical_entity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_author"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_class"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_concomitant_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_confidence_interval"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_dosage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_interacting_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_patient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_primary_suspect_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_reported_drug_usage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_secondary_suspect_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_signal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#time_to_onset"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_affiliation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_average_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_content"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_count"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_count_of_men"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_count_of_women"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_creation_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_first_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_gender"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_last_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_lower_limit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_max_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_median_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_min_age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_overall_conclusion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_registration_date"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_reporter_type"/>
@@ -411,52 +349,139 @@
         <DataProperty IRI="#has_subject"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#has_trade_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_upper_limit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_value"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#initially_identified_on"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Drug"/>
+        <DataProperty IRI="#modified_on"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_database"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_dechallenge_outcome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_dechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_dose_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_form_of_intake"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_number_of_reports"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_outcome_after_action"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_rechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="prov:value"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_ATC_code"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_ICD_code"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_MeSH_tree_number"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#has_MedDRA_code"/>
     </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_MedDRA_prefered_term"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_RxNorm_code"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_SNOMED-CT_code"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#has_drugbank_code"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasExactSynonym"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="oa:hasTarget"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYear"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <Class abbreviatedIRI="obo:IAO_0000300"/>
         <Class IRI="#Free_text_reporting_element"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000011"/>
+        <Class abbreviatedIRI="obo:OAE_0000011"/>
         <Class IRI="#Drug_Usage"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000028"/>
+        <Class abbreviatedIRI="obo:OAE_0000028"/>
         <Class IRI="#Signal"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000055"/>
+        <Class abbreviatedIRI="obo:OAE_0000055"/>
         <Class IRI="#Warning_Information"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000931"/>
+        <Class abbreviatedIRI="obo:OAE_0000931"/>
         <Class IRI="#Drug_Exposure_Time"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001000"/>
+        <Class abbreviatedIRI="obo:OAE_0001000"/>
         <Class IRI="#Adverse_Effect"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001563"/>
+        <Class abbreviatedIRI="obo:OAE_0001563"/>
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001817"/>
+        <Class abbreviatedIRI="obo:OAE_0001817"/>
         <Class IRI="#Patient"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0001867"/>
+        <Class abbreviatedIRI="obo:OAE_0001867"/>
         <Class IRI="#Dosage"/>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="http://purl.obolibrary.org/obo/OGMS_0000031"/>
+        <Class abbreviatedIRI="obo:OGMS_0000031"/>
         <Class IRI="#Condition"/>
     </EquivalentClasses>
     <SubClassOf>
@@ -473,13 +498,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Author"/>
-        <Class IRI="http://www.w3.org/ns/prov#Agent"/>
+        <Class abbreviatedIRI="prov:Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Author"/>
         <ObjectUnionOf>
-            <Class IRI="http://www.w3.org/ns/prov#Organization"/>
-            <Class IRI="http://www.w3.org/ns/prov#Person"/>
+            <Class abbreviatedIRI="prov:Organization"/>
+            <Class abbreviatedIRI="prov:Person"/>
         </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
@@ -512,7 +537,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Drug"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OBI_0000047"/>
+        <Class abbreviatedIRI="obo:OBI_0000047"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Drug_Class_Effect_Information"/>
@@ -524,7 +549,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Individual_Case_Safety_Report"/>
-        <Class IRI="http://purl.obolibrary.org/obo/OAE_0000127"/>
+        <Class abbreviatedIRI="obo:OAE_0000127"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Individual_Case_Safety_Report"/>
@@ -551,8 +576,12 @@
         <Class IRI="#Statistical_Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Past_Diagnosis"/>
+        <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Patient"/>
-        <Class IRI="http://www.w3.org/ns/prov#Person"/>
+        <Class abbreviatedIRI="prov:Person"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pharmacovigilance_Signal_Report"/>
@@ -597,6 +626,18 @@
     <SubClassOf>
         <Class IRI="#Warning_Information"/>
         <Class abbreviatedIRI="mp:Reference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Information_Component_(IC)"/>
+        <Class IRI="#Disproportionality_Analysis_Measure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Information_Component_(IC0005)"/>
+        <Class IRI="#Information_Component_(IC)"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Information_Component__025_(IC025)"/>
+        <Class IRI="#Information_Component_(IC)"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
@@ -932,7 +973,7 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_value"/>
-        <DataProperty IRI="http://www.w3.org/ns/prov#value"/>
+        <DataProperty abbreviatedIRI="prov:value"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#modified_on"/>
@@ -1109,9 +1150,9 @@
     <DataPropertyRange>
         <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">discontinued</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hospitalization</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">no change</Literal>
+            <Literal>discontinued</Literal>
+            <Literal>hospitalization</Literal>
+            <Literal>no change</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1127,14 +1168,14 @@
         <DataUnionOf>
             <Datatype abbreviatedIRI="xsd:integer"/>
             <DataOneOf>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">1-10</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">11-20</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">21-30</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">31-40</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">41-50</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">51-60</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">61-70</Literal>
-                <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">71 or older</Literal>
+                <Literal>1-10</Literal>
+                <Literal>11-20</Literal>
+                <Literal>21-30</Literal>
+                <Literal>31-40</Literal>
+                <Literal>41-50</Literal>
+                <Literal>51-60</Literal>
+                <Literal>61-70</Literal>
+                <Literal>71 or older</Literal>
             </DataOneOf>
         </DataUnionOf>
     </DataPropertyRange>
@@ -1164,8 +1205,8 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_gender"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">female</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">male</Literal>
+            <Literal>female</Literal>
+            <Literal>male</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1200,12 +1241,12 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_overall_conclusion"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Further investigation needed</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">causal association</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">causal association most probable</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">causal association probable</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">no clear conclusion</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rejected</Literal>
+            <Literal>Further investigation needed</Literal>
+            <Literal>causal association</Literal>
+            <Literal>causal association most probable</Literal>
+            <Literal>causal association probable</Literal>
+            <Literal>no clear conclusion</Literal>
+            <Literal>rejected</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1215,15 +1256,15 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_reporter_type"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">clinical trial report</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">health care professional, other than physician</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">informal carer</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">other</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">patient</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pharmaceutical company</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">pharmacist</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">physician</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">study</Literal>
+            <Literal>clinical trial report</Literal>
+            <Literal>health care professional, other than physician</Literal>
+            <Literal>informal carer</Literal>
+            <Literal>other</Literal>
+            <Literal>patient</Literal>
+            <Literal>pharmaceutical company</Literal>
+            <Literal>pharmacist</Literal>
+            <Literal>physician</Literal>
+            <Literal>study</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1258,18 +1299,18 @@
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_database"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Eudravigilance</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FAERS</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">LAREB</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">WHO Vigibase</Literal>
+            <Literal>Eudravigilance</Literal>
+            <Literal>FAERS</Literal>
+            <Literal>LAREB</Literal>
+            <Literal>WHO Vigibase</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_dechallenge_outcome"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">negative - condition still applied appeared</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">positive - condition not applied</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unknown</Literal>
+            <Literal>negative - condition still applied</Literal>
+            <Literal>positive - condition not applied</Literal>
+            <Literal>unknown</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1283,19 +1324,19 @@
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_form_of_intake"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">collyrium</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">inhaled</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">injected</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">injected (intramuscular)</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">injected (intraveneous)</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nasal</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">oral</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">other</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">rectal</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">smoked</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">subcutaneous</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">sublingual</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">topical (skin)</Literal>
+            <Literal>collyrium</Literal>
+            <Literal>inhaled</Literal>
+            <Literal>injected</Literal>
+            <Literal>injected (intramuscular)</Literal>
+            <Literal>injected (intraveneous)</Literal>
+            <Literal>nasal</Literal>
+            <Literal>oral</Literal>
+            <Literal>other</Literal>
+            <Literal>rectal</Literal>
+            <Literal>smoked</Literal>
+            <Literal>subcutaneous</Literal>
+            <Literal>sublingual</Literal>
+            <Literal>topical (skin)</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1305,29 +1346,30 @@
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_outcome_after_action"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">death</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hospitalization for treatment</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">no recovery</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">permanent injury</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery after drug withdrawal</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery after hospitalization</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery with no further information</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery without drug withdrawal</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unknown</Literal>
+            <Literal>death</Literal>
+            <Literal>hospitalization for treatment</Literal>
+            <Literal>no recovery</Literal>
+            <Literal>permanent injury</Literal>
+            <Literal>recovery after drug withdrawal</Literal>
+            <Literal>recovery after hospitalization</Literal>
+            <Literal>recovery with no further information</Literal>
+            <Literal>recovery without drug withdrawal</Literal>
+            <Literal>unknown</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_rechallenge_outcome"/>
         <DataOneOf>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">death</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hospitalization for treatment</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">negative rechallenge - condition not appeared</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">permanent injury</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery after drug withdrawl</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery after hospitalization</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery with no further information</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">recovery without drug withdrawl</Literal>
-            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">unknown</Literal>
+            <Literal>death</Literal>
+            <Literal>hospitalization for treatment</Literal>
+            <Literal>negative rechallenge - condition not appeared</Literal>
+            <Literal>permanent injury</Literal>
+            <Literal>positive rechallenge - condition appeared again</Literal>
+            <Literal>recovery after drug withdrawl</Literal>
+            <Literal>recovery after hospitalization</Literal>
+            <Literal>recovery with no further information</Literal>
+            <Literal>recovery without drug withdrawl</Literal>
+            <Literal>unknown</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1335,160 +1377,160 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Adverse_Effect</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Note for Guidance on Clinical Safety Data Management:
+        <Literal>Note for Guidance on Clinical Safety Data Management:
 Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/docs/en_GB/document_library/Scientific_guideline/2009/09/WC500002749.pdf -</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Adverse_Effect</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Noxious and unintended response to a medicinal product.</Literal>
+        <Literal>Noxious and unintended response to a medicinal product.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Adverse_Effect</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adverse Effect</Literal>
+        <Literal xml:lang="en">Adverse Effect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Adverse_Effect_Mechanism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Spratto, G.R.; Woods, A.L. (2010). Delmar Nurse&apos;s Drug Handbook. Cengage Learning. ISBN 978-1-4390-5616-5.</Literal>
+        <Literal>Spratto, G.R.; Woods, A.L. (2010). Delmar Nurse&apos;s Drug Handbook. Cengage Learning. ISBN 978-1-4390-5616-5.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <AnnotationProperty abbreviatedIRI="dc:title"/>
         <IRI>#Adverse_Effect_Mechanism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adverse Effect Mechanism</Literal>
+        <Literal>Adverse Effect Mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Adverse_Effect_Mechanism</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A free-text description of the mechanism of action related with an adverse effect.</Literal>
+        <Literal xml:lang="en">A free-text description of the mechanism of action related with an adverse effect.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Adverse_Effect_Mechanism</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Adverse Effect Mechanism</Literal>
+        <Literal xml:lang="en">Adverse Effect Mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Author</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The person or organization that wrote or was responsible for writing the respective PV signal report.</Literal>
+        <Literal xml:lang="en">The person or organization that wrote or was responsible for writing the respective PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Author</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Author</Literal>
+        <Literal xml:lang="en">Author</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Bibliographic_reference</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reference to published material that is cited in the PV signal report (e.g. scientific paper, book, report etc.)</Literal>
+        <Literal>Reference to published material that is cited in the PV signal report (e.g. scientific paper, book, report etc.)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Bibliographic_reference</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Bibliographic reference</Literal>
+        <Literal xml:lang="en">Bibliographic reference</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Case_Report_Information</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3010033/</Literal>
+        <Literal>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3010033/</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Case_Report_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Description of the findings from case report publications which are mentioned in the PV signal report.</Literal>
+        <Literal xml:lang="en">Description of the findings from case report publications which are mentioned in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Case_Report_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Case Report Information</Literal>
+        <Literal xml:lang="en">Case Report Information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Clinical_trial_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Description of the findings from clinical trials which are mentioned in the PV signal report.</Literal>
+        <Literal xml:lang="en">Description of the findings from clinical trials which are mentioned in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Clinical_trial_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Clinical Trial Information</Literal>
+        <Literal xml:lang="en">Clinical Trial Information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The free-text description of the main outcome of the PV signal report.</Literal>
+        <Literal>The free-text description of the main outcome of the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Conclusion</Literal>
+        <Literal>Conclusion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Condition</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://meshb.nlm.nih.gov/record/ui?ui=D004194</Literal>
+        <Literal>https://meshb.nlm.nih.gov/record/ui?ui=D004194</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
         <IRI>#Condition</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Disease</Literal>
+        <Literal>Disease</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Condition</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A definite pathologic process with a characteristic set of signs and symptoms. It may affect the whole body or any of its parts, and its etiology, pathology, and prognosis may be known or unknown.</Literal>
+        <Literal xml:lang="en">A definite pathologic process with a characteristic set of signs and symptoms. It may affect the whole body or any of its parts, and its etiology, pathology, and prognosis may be known or unknown.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Condition</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Condition</Literal>
+        <Literal xml:lang="en">Condition</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Confidence_interval_0.95</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Based on the https://www.investopedia.com/terms/c/confidenceinterval.asp</Literal>
+        <Literal>Based on the https://www.investopedia.com/terms/c/confidenceinterval.asp</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Confidence_interval_0.95</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The marginal values of the range in which the respective statistical measure (e.g. PRR or ROR) belongs with a propability of 95%.</Literal>
+        <Literal>The marginal values of the range in which the respective statistical measure (e.g. PRR or ROR) belongs with a propability of 95%.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Confidence_interval_0.95</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Confidence Interval 0.95</Literal>
+        <Literal>Confidence Interval 0.95</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Disproportionality_Analysis_Measure</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.jmp.com/content/dam/jmp/documents/en/white-papers/disproportionality-105686.pdf</Literal>
+        <Literal>https://www.jmp.com/content/dam/jmp/documents/en/white-papers/disproportionality-105686.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Disproportionality_Analysis_Measure</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Statistical feature depicting the comparison between the rate at which a particular event of interest (e.g. adverse effect) co-occurs with a given drug, and the rate of this event occuring without the drug.</Literal>
+        <Literal>Statistical feature depicting the comparison between the rate at which a particular event of interest (e.g. adverse effect) co-occurs with a given drug, and the rate of this event occuring without the drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Disproportionality_Analysis_Measure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Disproportionality Analysis Measure</Literal>
+        <Literal xml:lang="en">Disproportionality Analysis Measure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Dosage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://www.medlinguistics.com/didyouknow.asp</Literal>
+        <Literal>http://www.medlinguistics.com/didyouknow.asp</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Dosage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.verywell.com/drug-dose-definition-and-examples-1123989</Literal>
+        <Literal>https://www.verywell.com/drug-dose-definition-and-examples-1123989</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Dosage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The regulated administration of individual doses, the quantity of drug to be administered at one time, or the total quantity administered during a specified period, i.e. the dosage not only tells the quantity of medicine to be taken, but it also tells the frequency or the number of times a medicine has to be taken by the patient.</Literal>
+        <Literal>The regulated administration of individual doses, the quantity of drug to be administered at one time, or the total quantity administered during a specified period, i.e. the dosage not only tells the quantity of medicine to be taken, but it also tells the frequency or the number of times a medicine has to be taken by the patient.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1496,666 +1538,671 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">Dosage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
+        <Literal>The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Product intended to be administered to humans for treating or preventing disease, with the view to making a medical diagnosis or to restore, correct or modify physiological functions</Literal>
+        <Literal>Product intended to be administered to humans for treating or preventing disease, with the view to making a medical diagnosis or to restore, correct or modify physiological functions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Drug</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug</Literal>
+        <Literal xml:lang="en">Drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#DrugClass</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Drug_class</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Drug_class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DrugClass</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A set of medications that have similar chemical structures, the same mechanism of action (i.e., bind to the same biological target), a related mode of action, and/or are used to treat the same disease.</Literal>
+        <Literal>A set of medications that have similar chemical structures, the same mechanism of action (i.e., bind to the same biological target), a related mode of action, and/or are used to treat the same disease.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DrugClass</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug Class</Literal>
+        <Literal>Drug Class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Drug_Class_Effect_Information</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free text information regarding the administration of drugs with similar structure and mechanism of action (i.e. they belong to the same class) as described in the PV signal report.</Literal>
+        <Literal>Free text information regarding the administration of drugs with similar structure and mechanism of action (i.e. they belong to the same class) as described in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Drug_Class_Effect_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free text information regarding the effect of the drugs belonging to a specific drug class.</Literal>
+        <Literal xml:lang="en">Free text information regarding the effect of the drugs belonging to a specific drug class.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Drug_Class_Effect_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug Class Effect Information</Literal>
+        <Literal xml:lang="en">Drug Class Effect Information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Drug_Exposure_Time</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The time related information regarding the administration of a drug to a patient (e.g. when it started and when it ended).</Literal>
+        <Literal xml:lang="en">The time related information regarding the administration of a drug to a patient (e.g. when it started and when it ended).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Drug_Exposure_Time</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug Exposure Time</Literal>
+        <Literal xml:lang="en">Drug Exposure Time</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Drug_Intake_Form</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Dosage_form</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Dosage_form</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
         <IRI>#Drug_Intake_Form</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Administration Route</Literal>
+        <Literal>Administration Route</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
         <IRI>#Drug_Intake_Form</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Dosage Form</Literal>
+        <Literal>Dosage Form</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Drug_Intake_Form</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The form of the drug taken by the patient (e.g. injection, pill etc.).</Literal>
+        <Literal xml:lang="en">The form of the drug taken by the patient (e.g. injection, pill etc.).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Drug_Intake_Form</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug Intake Form</Literal>
+        <Literal xml:lang="en">Drug Intake Form</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Drug_Usage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The details of an overall drug administration process (e.g. exposure, intake form, dosage).</Literal>
+        <Literal>The details of an overall drug administration process (e.g. exposure, intake form, dosage).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Drug_Usage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Drug Usage</Literal>
+        <Literal>Drug Usage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Free_text_reporting_element</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free-text snippets that could be used in human readable reports (e.g. in printing PDFs)</Literal>
+        <Literal xml:lang="en">Free-text snippets that could be used in human readable reports (e.g. in printing PDFs)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Free_text_reporting_element</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free text reporting element</Literal>
+        <Literal xml:lang="en">Free text reporting element</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Indication</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://www.medicinenet.com/script/main/art.asp?articlekey=32545</Literal>
+        <Literal>https://www.medicinenet.com/script/main/art.asp?articlekey=32545</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Indication</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A medical condition which makes a particular treatment or procedure advisable</Literal>
+        <Literal xml:lang="en">A medical condition which makes a particular treatment or procedure advisable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Indication</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indication</Literal>
+        <Literal>Indication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
         <IRI>#Individual_Case_Safety_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Individual Case Report</Literal>
+        <Literal>Individual Case Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasExactSynonym"/>
         <IRI>#Individual_Case_Safety_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Spontaneous Report</Literal>
+        <Literal>Spontaneous Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Individual_Case_Safety_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A report triggered by a suspicion of a healthcare professional or a patient that observed signs and symptoms could have been caused by a medicine.</Literal>
+        <Literal xml:lang="en">A report triggered by a suspicion of a healthcare professional or a patient that observed signs and symptoms could have been caused by a medicine.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Individual_Case_Safety_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Individual Case Safety Report</Literal>
+        <Literal xml:lang="en">Individual Case Safety Report</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Introduction</IRI>
+        <Literal>The initial part of a PV signal report, typically providing contextual information about the signal.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Introduction</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Introduction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Introduction</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The initial part of a PV signal report, typically providing contextual information about the signal.</Literal>
+        <Literal xml:lang="en">Introduction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Lareb_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Individual Case Safety Report submitted in the Dutch spontaneous report system maintained by Lareb.</Literal>
+        <Literal xml:lang="en">An Individual Case Safety Report submitted in the Dutch spontaneous report system maintained by Lareb.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Lareb_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Lareb Report</Literal>
+        <Literal>Lareb Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Literature_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Description of the findings in scientific literature as contained in the PV signal report.</Literal>
+        <Literal xml:lang="en">Description of the findings in scientific literature as contained in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Literature_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Literature Information</Literal>
+        <Literal xml:lang="en">Literature Information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Mechanism</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A free-text description of a drug&apos;s mechanism of action, as described in the PV signal report.</Literal>
+        <Literal xml:lang="en">A free-text description of a drug&apos;s mechanism of action, as described in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Mechanism</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mechanism</Literal>
+        <Literal xml:lang="en">Mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Number_of_prescriptions_on_population</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The count of the specific drug prescriptions on a population basis.</Literal>
+        <Literal xml:lang="en">The count of the specific drug prescriptions on a population basis.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Number_of_prescriptions_on_population</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Number of prescriptions on population</Literal>
+        <Literal xml:lang="en">Number of prescriptions on population</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Past_Diagnosis</IRI>
+        <Literal>Past Diagnosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Patient</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
+        <Literal>The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Patient</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Person awaiting or under medical care or treatment by a health professional</Literal>
+        <Literal>Person awaiting or under medical care or treatment by a health professional</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Patient</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Patient</Literal>
+        <Literal xml:lang="en">Patient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Pharmacovigilance_Signal_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free text reports published by PV monitoring organizations regarding a PV signal. Examples include reports published by FDA, WHO-UMC and Lareb.</Literal>
+        <Literal>Free text reports published by PV monitoring organizations regarding a PV signal. Examples include reports published by FDA, WHO-UMC and Lareb.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pharmacovigilance_Signal_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Pharmacovigilance Signal Report</Literal>
+        <Literal xml:lang="en">Pharmacovigilance Signal Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Relative_Reporting_Ratio</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">http://openvigil.sourceforge.net/doc/DPA.pdf</Literal>
+        <Literal>http://openvigil.sourceforge.net/doc/DPA.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Relative_Reporting_Ratio</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the observed frequency of the adverse event to expected frequency in the total population sample.</Literal>
+        <Literal>Depicts the observed frequency of the adverse event to expected frequency in the total population sample.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Relative_Reporting_Ratio</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relative Reporting Ratio (RRR)</Literal>
+        <Literal xml:lang="en">Relative Reporting Ratio (RRR)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Reporting_Odds_Ratio</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
+        <Literal>The Need for Definitions in Pharmacovigilance Marie Lindquist - https://www.ncbi.nlm.nih.gov/pubmed/17867720</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Reporting_Odds_Ratio</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The Odds of exposure (to a Medicinal product ) in cases (e.g. individuals with an Adverse reaction) divided by the Odds of exposure in controls (e.g. individuals without the Adverse reaction).</Literal>
+        <Literal>The Odds of exposure (to a Medicinal product ) in cases (e.g. individuals with an Adverse reaction) divided by the Odds of exposure in controls (e.g. individuals without the Adverse reaction).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Reporting_Odds_Ratio</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reporting Odds Ratio (ROR)</Literal>
+        <Literal xml:lang="en">Reporting Odds Ratio (ROR)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Reports_group</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">A set of Individual Case Safety Reports corresponding to specific criteria (e.g. country of origin).</Literal>
+        <Literal>A set of Individual Case Safety Reports corresponding to specific criteria (e.g. country of origin).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Reports_group</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Reports group</Literal>
+        <Literal>Reports group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Response_to_Pharmacovigilance_Signal_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Arguments to the claims of a PV signal report, as contained in the PV signal report itself in free-text format. Typically, such a response would be issued by a pharmaceutical company producing the investigated drug.</Literal>
+        <Literal>Arguments to the claims of a PV signal report, as contained in the PV signal report itself in free-text format. Typically, such a response would be issued by a pharmaceutical company producing the investigated drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Response_to_Pharmacovigilance_Signal_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Response to Pharmacovigilance Signal Report</Literal>
+        <Literal xml:lang="en">Response to Pharmacovigilance Signal Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Signal</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Council for International Organisations of Medical Sciences Working
+        <Literal>Council for International Organisations of Medical Sciences Working
 group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
 (CIOMS, Geneva 2010)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Signal</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Information that arises from one or multiple sources (including observations and experiments), which suggests a new potentially causal association, or a new aspect of a known association, between an intervention and an event or set of related events, either adverse or beneficial, that is judged to be of sufficient likelihood to justify verificatory action.</Literal>
+        <Literal xml:lang="en">Information that arises from one or multiple sources (including observations and experiments), which suggests a new potentially causal association, or a new aspect of a known association, between an intervention and an event or set of related events, either adverse or beneficial, that is judged to be of sufficient likelihood to justify verificatory action.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Signal</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Signal</Literal>
+        <Literal xml:lang="en">Signal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Statistical_Entity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Concepts that depict the result of the calculation of specific statistical processes (e.g. disproportionality analysis)</Literal>
+        <Literal xml:lang="en">Concepts that depict the result of the calculation of specific statistical processes (e.g. disproportionality analysis)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Statistical_Entity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Statistical Entity</Literal>
+        <Literal xml:lang="en">Statistical Entity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Structured_Product_Labels_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Free-text description of information elaborated the leaflet which is typically part of the drug&apos;s packaging (a.k.a Structured Product Label, or Summary of Product Characteristics - SmPC), as contained in the PV signal report.</Literal>
+        <Literal xml:lang="en">Free-text description of information elaborated the leaflet which is typically part of the drug&apos;s packaging (a.k.a Structured Product Label, or Summary of Product Characteristics - SmPC), as contained in the PV signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Structured_Product_Labels_information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Structured Product Labels information</Literal>
+        <Literal xml:lang="en">Structured Product Labels information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Summary</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">The free text summary of a pharmacovigilance signal report</Literal>
+        <Literal>The free text summary of a pharmacovigilance signal report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Summary</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Summary</Literal>
+        <Literal xml:lang="en">Summary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#VigiBase_Report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">An Individual Case Safety Report stored in the VigiBase database maintained by WHO-UMC.</Literal>
+        <Literal>An Individual Case Safety Report stored in the VigiBase database maintained by WHO-UMC.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#VigiBase_Report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VigiBase report</Literal>
+        <Literal xml:lang="en">VigiBase report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Warning_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Information related with adverse effects or contraindications that are already identified in various data sources (e.g. product labels).</Literal>
+        <Literal xml:lang="en">Information related with adverse effects or contraindications that are already identified in various data sources (e.g. product labels).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Warning_Information</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Warning Information</Literal>
+        <Literal xml:lang="en">Warning Information</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#belongs_to_reports_group</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a spontaneous report with a report group.</Literal>
+        <Literal>Relates a spontaneous report with a report group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#belongs_to_reports_group</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">belongs to reports group</Literal>
+        <Literal>belongs to reports group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#concerns_action_upon_adverse_effect</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the actions upon the diagnosis of the adverse effect, as reported in the respective spontaneous report.</Literal>
+        <Literal>Depicts the actions upon the diagnosis of the adverse effect, as reported in the respective spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#concerns_action_upon_adverse_effect</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">concerns action upon adverse effect</Literal>
+        <Literal xml:lang="en">concerns action upon adverse effect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#concerns_indication_for_use</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the condition which can be considered the reason for the respective drug administration.</Literal>
+        <Literal>Identifies the condition which can be considered the reason for the respective drug administration.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#concerns_indication_for_use</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">concerns indication for use</Literal>
+        <Literal xml:lang="en">concerns indication for use</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasClass</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a drug with the drug class that it belongs to.</Literal>
+        <Literal>Relates a drug with the drug class that it belongs to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasClass</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">belongs to class</Literal>
+        <Literal>belongs to class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_ATC_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the ATC code of the respective drug.</Literal>
+        <Literal>Identifies the ATC code of the respective drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_ATC_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ATC code</Literal>
+        <Literal>has ATC code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_ICD_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the ICD code of the respective condition.</Literal>
+        <Literal>Identifies the ICD code of the respective condition.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_ICD_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ICD code</Literal>
+        <Literal>has ICD code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_ID</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refers to the ID used for the specific spontaneous report, to be referenced in the overall signal report.</Literal>
+        <Literal>Refers to the ID used for the specific spontaneous report, to be referenced in the overall signal report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_ID</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has ID</Literal>
+        <Literal xml:lang="en">has ID</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_MeSH_tree_number</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the MeSH tree code of the respective entity.</Literal>
+        <Literal>Identifies the MeSH tree code of the respective entity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_MeSH_tree_number</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MeSH tree number</Literal>
+        <Literal>has MeSH tree number</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_MedDRA_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the MedDRA code of the respective adverse effect.</Literal>
+        <Literal>Identifies the MedDRA code of the respective adverse effect.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_MedDRA_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MedDRA code</Literal>
+        <Literal>has MedDRA code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_MedDRA_prefered_term</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the MedDRA preferred term regarding the respective adverse effect.</Literal>
+        <Literal>Identifies the MedDRA preferred term regarding the respective adverse effect.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_MedDRA_prefered_term</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has MedDRA prefered term</Literal>
+        <Literal>has MedDRA prefered term</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_RxNorm_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the RxNorm code of the respective drug.</Literal>
+        <Literal>Identifies the RxNorm code of the respective drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_RxNorm_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has RxNorm code</Literal>
+        <Literal>has RxNorm code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_SNOMED-CT_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Indentifies the SNOMED-CT code of the respective entity</Literal>
+        <Literal>Indentifies the SNOMED-CT code of the respective entity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_SNOMED-CT_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has SNOMED-CT code</Literal>
+        <Literal>has SNOMED-CT code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_affiliation</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the respective author&apos;s professional affiliation(s).</Literal>
+        <Literal>Depicts the respective author&apos;s professional affiliation(s).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_affiliation</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has affiliation</Literal>
+        <Literal xml:lang="en">has affiliation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Refers to the patient&apos;s age. It should be noted that the target value can be either an integer or an enumeration depiction the respective age decade.</Literal>
+        <Literal>Refers to the patient&apos;s age. It should be noted that the target value can be either an integer or an enumeration depiction the respective age decade.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_age</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has age</Literal>
+        <Literal xml:lang="en">has age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_average_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the average age of the patients referred by a specific spontaneous reports group.</Literal>
+        <Literal>Depicts the average age of the patients referred by a specific spontaneous reports group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_average_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has average age</Literal>
+        <Literal>has average age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_content</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Links to the free text of the respective element. Formatting information could be included (e.g. in HTML format).</Literal>
+        <Literal xml:lang="en">Links to the free text of the respective element. Formatting information could be included (e.g. in HTML format).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_content</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has content</Literal>
+        <Literal xml:lang="en">has content</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_count</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the total number of patients belonging to a specific report group.</Literal>
+        <Literal>Depicts the total number of patients belonging to a specific report group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_count</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has count</Literal>
+        <Literal>has count</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_count_of_men</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the total number of men belonging to a specific report group.</Literal>
+        <Literal>Depicts the total number of men belonging to a specific report group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_count_of_men</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has count of men</Literal>
+        <Literal>has count of men</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_count_of_women</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the total number of women belonging to a specific report group.</Literal>
+        <Literal>Depicts the total number of women belonging to a specific report group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_count_of_women</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has count of women</Literal>
+        <Literal>has count of women</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_creation_date</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares the date(s) that the respective pharmacovigilance signal report has been created.</Literal>
+        <Literal>Declares the date(s) that the respective pharmacovigilance signal report has been created.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_creation_date</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has creation date</Literal>
+        <Literal xml:lang="en">has creation date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_drugbank_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the drugbank code of the respective drug.</Literal>
+        <Literal>Identifies the drugbank code of the respective drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_drugbank_code</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has drugbank code</Literal>
+        <Literal>has drugbank code</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_first_name</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares the person&apos;s first name.</Literal>
+        <Literal>Declares the person&apos;s first name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_first_name</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has first name</Literal>
+        <Literal xml:lang="en">has first name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_free_text_reporting_element</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a free-text reporting element with the pharmacovigilance report that it belongs to.</Literal>
+        <Literal>Relates a free-text reporting element with the pharmacovigilance report that it belongs to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_free_text_reporting_element</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has free text reporting element</Literal>
+        <Literal xml:lang="en">has free text reporting element</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_gender</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the patient&apos;s gender.</Literal>
+        <Literal>Depicts the patient&apos;s gender.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_gender</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has gender</Literal>
+        <Literal xml:lang="en">has gender</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_last_name</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares the person&apos;s last name.</Literal>
+        <Literal>Declares the person&apos;s last name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_last_name</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has last name</Literal>
+        <Literal xml:lang="en">has last name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_lower_limit</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the confidence interval&apos;s lower limit.</Literal>
+        <Literal>Depicts the confidence interval&apos;s lower limit.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_lower_limit</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has lower limit</Literal>
+        <Literal>has lower limit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_max_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the maximum age of the patients referred by a specific spontaneous reports group.</Literal>
+        <Literal>Depicts the maximum age of the patients referred by a specific spontaneous reports group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_max_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has max age</Literal>
+        <Literal>has max age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_mechanism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the relation between a drug or a drug class and a mechanism of action.</Literal>
+        <Literal>Depicts the relation between a drug or a drug class and a mechanism of action.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_mechanism</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has mechanism</Literal>
+        <Literal>has mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_median_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the median age of the patients referred by a specific spontaneous reports group.</Literal>
+        <Literal>Depicts the median age of the patients referred by a specific spontaneous reports group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_median_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has median age</Literal>
+        <Literal>has median age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_min_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the minimum age of the patients referred by a specific spontaneous reports group.</Literal>
+        <Literal>Depicts the minimum age of the patients referred by a specific spontaneous reports group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_min_age</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has min age</Literal>
+        <Literal>has min age</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_overall_conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">It depicts the final conclusion of the report in an enumeratable form.</Literal>
+        <Literal>It depicts the final conclusion of the report in an enumeratable form.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_overall_conclusion</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has overall conclusion</Literal>
+        <Literal>has overall conclusion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_registration_date</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares the date(s) that the respective drug has been registered.</Literal>
+        <Literal>Declares the date(s) that the respective drug has been registered.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_registration_date</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has registration date</Literal>
+        <Literal>has registration date</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_reporter_type</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the category of the person that submitted the respective spontaneous report.</Literal>
+        <Literal>Depicts the category of the person that submitted the respective spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_reporter_type</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has reporter type</Literal>
+        <Literal xml:lang="en">has reporter type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_subject</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the subject of the respective free-text section.</Literal>
+        <Literal xml:lang="en">Depicts the subject of the respective free-text section.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2165,399 +2212,444 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_trade_name</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the respective drug&apos;s trade name.</Literal>
+        <Literal>Depicts the respective drug&apos;s trade name.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_trade_name</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has trade name</Literal>
+        <Literal xml:lang="en">has trade name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_upper_limit</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the confidence interval&apos;s upper limit.</Literal>
+        <Literal>Depicts the confidence interval&apos;s upper limit.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_upper_limit</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has upper limit</Literal>
+        <Literal>has upper limit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_value</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the value of the respective statistical data item.</Literal>
+        <Literal>Depicts the value of the respective statistical data item.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_value</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">has value</Literal>
+        <Literal>has value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#initially_identified_on</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the date that the respective signal has been originally identified on.</Literal>
+        <Literal>Depicts the date that the respective signal has been originally identified on.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#initially_identified_on</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">initially identified on</Literal>
+        <Literal>initially identified on</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_part_of</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts that a free-text snippet could be part of a larger free-text section.</Literal>
+        <Literal>Depicts that a free-text snippet could be part of a larger free-text section.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_part_of</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is part of</Literal>
+        <Literal>is part of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_related_with_drug_exposure</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates the information regarding a specific drug usage with the respective time exposure.</Literal>
+        <Literal>Relates the information regarding a specific drug usage with the respective time exposure.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_related_with_drug_exposure</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is related with drug exposure</Literal>
+        <Literal xml:lang="en">is related with drug exposure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_related_with_drug_intake</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates the usage of a drug with a specific intake form.</Literal>
+        <Literal>Relates the usage of a drug with a specific intake form.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_related_with_drug_intake</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is related with drug intake form</Literal>
+        <Literal xml:lang="en">is related with drug intake form</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_subgroup_of</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Enables the identification of a spontaneous report group as part of another spontaneous report group.</Literal>
+        <Literal>Enables the identification of a spontaneous report group as part of another spontaneous report group.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_subgroup_of</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is subgroup of</Literal>
+        <Literal>is subgroup of</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_supported_by_individual_case_report</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a pharmacovigilance signal with the corresponding individual case reports.</Literal>
+        <Literal>Relates a pharmacovigilance signal with the corresponding individual case reports.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_supported_by_individual_case_report</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is supported by individual case report</Literal>
+        <Literal xml:lang="en">is supported by individual case report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_supported_by_statistical_entity</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a pharmacovigilance signal with the supporting statistical data.</Literal>
+        <Literal>Relates a pharmacovigilance signal with the supporting statistical data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#is_supported_by_statistical_entity</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">is supported by statistical entity</Literal>
+        <Literal xml:lang="en">is supported by statistical entity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#modified_on</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Declares the date(s) that the respective pharmacovigilance signal report has been modified.</Literal>
+        <Literal>Declares the date(s) that the respective pharmacovigilance signal report has been modified.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#modified_on</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">modified on</Literal>
+        <Literal xml:lang="en">modified on</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_adverse_effect</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts a reference to the respective adverse effect.</Literal>
+        <Literal>Depicts a reference to the respective adverse effect.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_adverse_effect</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to adverse effect</Literal>
+        <Literal xml:lang="en">refers to adverse effect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_author</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the author that the respective manuscript refers to.</Literal>
+        <Literal>Identifies the author that the respective manuscript refers to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_author</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to author</Literal>
+        <Literal xml:lang="en">refers to author</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_class</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts a reference with the respective drug class.</Literal>
+        <Literal>Depicts a reference with the respective drug class.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_class</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to class</Literal>
+        <Literal>refers to class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_concomitant_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Explicitly states that the respective drug is reported as a concomittant drug in the specific spontaneous report.</Literal>
+        <Literal>Explicitly states that the respective drug is reported as a concomittant drug in the specific spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_concomitant_drug</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to concomitant drug</Literal>
+        <Literal xml:lang="en">refers to concomitant drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_confidence_interval</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts a relation with a specific confidence interval.</Literal>
+        <Literal>Depicts a relation with a specific confidence interval.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_confidence_interval</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to confidence interval</Literal>
+        <Literal>refers to confidence interval</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_database</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the database that the respective data are related with.</Literal>
+        <Literal>Identifies the database that the respective data are related with.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_database</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to database</Literal>
+        <Literal>refers to database</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_dechallenge_outcome</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the outcome of the dechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
+        <Literal>Depicts the outcome of the dechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_dechallenge_outcome</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to dechallenge outcome</Literal>
+        <Literal>refers to dechallenge outcome</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_dechallenge_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts if the respective dosage is used as part of a dechallenge process.</Literal>
+        <Literal>Depicts if the respective dosage is used as part of a dechallenge process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_dechallenge_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to dechallenge process</Literal>
+        <Literal>refers to dechallenge process</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_dosage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a drug usage with a specifc dosage.</Literal>
+        <Literal>Relates a drug usage with a specifc dosage.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_dosage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to dosage</Literal>
+        <Literal>refers to dosage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_dose_value</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the dose value of the respective dosage scheme, including the units (e.g. mg).</Literal>
+        <Literal>Depicts the dose value of the respective dosage scheme, including the units (e.g. mg).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_dose_value</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to dose value</Literal>
+        <Literal>refers to dose value</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts a relation with the respective drug.</Literal>
+        <Literal>Depicts a relation with the respective drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_drug</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to drug</Literal>
+        <Literal xml:lang="en">refers to drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_form_of_intake</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the intake form of a respective drug.</Literal>
+        <Literal>Depicts the intake form of a respective drug.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_form_of_intake</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to form of intake</Literal>
+        <Literal xml:lang="en">refers to form of intake</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_interacting_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Explicitly states that the respective drug is reported as an interacting drug in the specific spontaneous report.</Literal>
+        <Literal>Explicitly states that the respective drug is reported as an interacting drug in the specific spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_interacting_drug</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to interacting drug</Literal>
+        <Literal xml:lang="en">refers to interacting drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_interval_between_administrations</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the time passed between two consecutive drug administrations.</Literal>
+        <Literal>Identifies the time passed between two consecutive drug administrations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_interval_between_administrations</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to interval between administrations</Literal>
+        <Literal>refers to interval between administrations</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_number_of_reports</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the count of the spontaneous reports based on which the respective statistical data item has been calculated.</Literal>
+        <Literal>Identifies the count of the spontaneous reports based on which the respective statistical data item has been calculated.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_number_of_reports</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to number of reports</Literal>
+        <Literal>refers to number of reports</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_outcome_after_action</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the outcome of the action against the respective adverse effect, as reported in the spontaneous report.</Literal>
+        <Literal>Depicts the outcome of the action against the respective adverse effect, as reported in the spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_outcome_after_action</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to outcome after action</Literal>
+        <Literal xml:lang="en">refers to outcome after action</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_patient</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the patient that the respective spontaneous report refers to.</Literal>
+        <Literal>Identifies the patient that the respective spontaneous report refers to.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_patient</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to patient</Literal>
+        <Literal xml:lang="en">refers to patient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_primary_suspect_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Explicitly states that the respective drug is reported as the primary suspect drug in the specific spontaneous report.</Literal>
+        <Literal>Explicitly states that the respective drug is reported as the primary suspect drug in the specific spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_primary_suspect_drug</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to primary suspect drug</Literal>
+        <Literal xml:lang="en">refers to primary suspect drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_rechallenge_outcome</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the outcome of the rechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
+        <Literal>Depicts the outcome of the rechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_rechallenge_outcome</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to rechallenge outcome</Literal>
+        <Literal>refers to rechallenge outcome</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_rechallenge_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts if the respective dosage is used as part of a rechallenge process.</Literal>
+        <Literal>Depicts if the respective dosage is used as part of a rechallenge process.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_rechallenge_process</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to rechallenge process</Literal>
+        <Literal>refers to rechallenge process</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_reported_drug_usage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a spontaneous report with the respective drug usages.</Literal>
+        <Literal>Relates a spontaneous report with the respective drug usages.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_reported_drug_usage</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to reported drug usage</Literal>
+        <Literal>refers to reported drug usage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_secondary_suspect_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Explicitly states that the respective drug is reported as a secondary suspect drug in the specific spontaneous report.</Literal>
+        <Literal>Explicitly states that the respective drug is reported as a secondary suspect drug in the specific spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_secondary_suspect_drug</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to secondary suspect drug</Literal>
+        <Literal>refers to secondary suspect drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_signal</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Relates a pharmacovigilance signal report with the respective signal.</Literal>
+        <Literal>Relates a pharmacovigilance signal report with the respective signal.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_signal</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">refers to signal</Literal>
+        <Literal xml:lang="en">refers to signal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#time_to_onset</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Identifies the time passed before the adverse effect symptoms start, according to the respective spontaneous report.</Literal>
+        <Literal>Identifies the time passed before the adverse effect symptoms start, according to the respective spontaneous report.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#time_to_onset</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">time to onset</Literal>
+        <Literal>time to onset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.obolibrary.org/obo/IAO_0000119"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information_Component_(IC)</IRI>
+        <Literal>IC stands for “information component”, which is an indicator value for disproportionate reporting when using the method for disproportionality analysis developed by UMC.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Information_Component_(IC)</IRI>
+        <Literal>https://www.who-umc.org/vigibase/vigilyze/analytics-in-vigilyze/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Information_Component_(IC)</IRI>
+        <Literal>Information Component (IC)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information_Component_(IC0005)</IRI>
+        <Literal>The lower endpoint of a 99.9% credibility interval for the Information Component, IC0005 is used to support analysis of subgroup-specific associations between substances and effects analogously to how IC025 is used for general analysis of substance-effect associations: a positive value for IC0005 suggests, but does not prove, a causal relation between the substance and the reaction in the subgroup under consideration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Information_Component_(IC0005)</IRI>
+        <Literal>https://www.who-umc.org/vigibase/vigilyze/analytics-in-vigilyze/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Information_Component_(IC0005)</IRI>
+        <Literal>Information Component 0005 (IC0005)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information_Component__025_(IC025)</IRI>
+        <Literal>IC025 is the lower end of a 95% credibility interval for the Information Component. A positive IC025 value is the traditional threshold used in statistical signal detection at UMC. IC025 is also used as one component of the disproportionality parameter in the vigiRank method.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Information_Component__025_(IC025)</IRI>
+        <Literal>https://www.who-umc.org/vigibase/vigilyze/analytics-in-vigilyze/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Information_Component__025_(IC025)</IRI>
+        <Literal>Information Component 025 (IC025)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Proportional_Reporting_Ratio_(POR)</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">https://en.wikipedia.org/wiki/Proportional_reporting_ratio</Literal>
+        <Literal>https://en.wikipedia.org/wiki/Proportional_reporting_ratio</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Proportional_Reporting_Ratio_(POR)</IRI>
-        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Depicts the extent to which a particular adverse effect is reported for individuals taking a specific drug, compared to the frequency at which the same adverse event is reported for patients taking some other drug (or who are taking any drug in a specified class of drugs).</Literal>
+        <Literal>Depicts the extent to which a particular adverse effect is reported for individuals taking a specific drug, compared to the frequency at which the same adverse event is reported for patients taking some other drug (or who are taking any drug in a specified class of drugs).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Proportional_Reporting_Ratio_(POR)</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Proportional Reporting Ratio (PRR)</Literal>
+        <Literal xml:lang="en">Proportional Reporting Ratio (PRR)</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_ATC_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_ICD_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_MeSH_tree_number"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_MedDRA_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_MedDRA_prefered_term"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_RxNorm_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_SNOMED-CT_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_drugbank_code"/>
-        <AnnotationProperty IRI="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+        <AnnotationProperty abbreviatedIRI="oboInOwl:hasDbXref"/>
     </SubAnnotationPropertyOf>
     <AnnotationPropertyRange>
         <AnnotationProperty IRI="#has_ATC_code"/>
@@ -2611,5 +2703,5 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
