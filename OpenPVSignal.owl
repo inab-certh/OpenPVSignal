@@ -100,6 +100,9 @@
         <Class IRI="#Clinical_trial_information"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Cohort_Profile"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Conclusion"/>
     </Declaration>
     <Declaration>
@@ -166,6 +169,9 @@
         <Class IRI="#Pharmacovigilance_Signal_Report"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Prevalence"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Relative_Reporting_Ratio"/>
     </Declaration>
     <Declaration>
@@ -194,6 +200,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Warning_Information"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#age_adult"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Information_Component_(IC)"/>
@@ -235,6 +244,9 @@
         <ObjectProperty IRI="#is_subgroup_of"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#is_supported_by_cohort_profile"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
     </Declaration>
     <Declaration>
@@ -248,6 +260,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_class"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_cohort_profile"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_concomitant_drug"/>
@@ -385,6 +400,18 @@
         <DataProperty IRI="#refers_to_outcome_after_action"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#refers_to_partial_dechallenge_outcome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_partial_dechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_partial_rechallenge_outcome"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_partial_rechallenge_process"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#refers_to_rechallenge_outcome"/>
     </Declaration>
     <Declaration>
@@ -443,6 +470,9 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:gYearMonth"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:IAO_0000300"/>
@@ -524,6 +554,14 @@
         <Class IRI="#Free_text_reporting_element"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Cohort_Profile"/>
+        <Class abbreviatedIRI="obo:OAE_0000127"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cohort_Profile"/>
+        <Class abbreviatedIRI="mp:Data"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Conclusion"/>
         <Class IRI="#Free_text_reporting_element"/>
     </SubClassOf>
@@ -588,6 +626,10 @@
         <Class abbreviatedIRI="mp:Micropublication"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Prevalence"/>
+        <Class IRI="#Statistical_Entity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Relative_Reporting_Ratio"/>
         <Class IRI="#Disproportionality_Analysis_Measure"/>
     </SubClassOf>
@@ -628,6 +670,22 @@
         <Class abbreviatedIRI="mp:Reference"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#age_adult"/>
+        <Class abbreviatedIRI="obo:PATO_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#age_adult"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#has_age"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:integer"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">18</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Information_Component_(IC)"/>
         <Class IRI="#Disproportionality_Analysis_Measure"/>
     </SubClassOf>
@@ -662,6 +720,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#is_related_with_drug_intake"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_supported_by_cohort_profile"/>
+        <ObjectProperty abbreviatedIRI="mp:supportedByData"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
@@ -759,6 +821,7 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#has_mechanism"/>
         <ObjectUnionOf>
+            <Class IRI="#Adverse_Effect"/>
             <Class IRI="#Drug"/>
             <Class IRI="#DrugClass"/>
         </ObjectUnionOf>
@@ -778,6 +841,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_subgroup_of"/>
         <Class IRI="#Reports_group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_supported_by_cohort_profile"/>
+        <Class IRI="#Signal"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
@@ -806,6 +873,22 @@
         <ObjectUnionOf>
             <Class IRI="#Pharmacovigilance_Signal_Report"/>
             <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_cohort_profile"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cohort_Profile"/>
+            <Class IRI="#Disproportionality_Analysis_Measure"/>
+            <Class IRI="#Dosage"/>
+            <Class IRI="#DrugClass"/>
+            <Class IRI="#Drug_Exposure_Time"/>
+            <Class IRI="#Drug_Intake_Form"/>
+            <Class IRI="#Drug_Usage"/>
+            <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Number_of_prescriptions_on_population"/>
+            <Class IRI="#Signal"/>
+            <Class IRI="#Warning_Information"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -900,6 +983,10 @@
         <Class IRI="#Reports_group"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#is_supported_by_cohort_profile"/>
+        <Class IRI="#Cohort_Profile"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#is_supported_by_individual_case_report"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyRange>
@@ -918,6 +1005,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_class"/>
         <Class IRI="#DrugClass"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_cohort_profile"/>
+        <Class IRI="#Prevalence"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_confidence_interval"/>
@@ -949,7 +1040,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#time_to_onset"/>
-        <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+        <Class IRI="http://www.w3.org/2006/time#Instant"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_count_of_men"/>
@@ -968,6 +1059,10 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#has_min_age"/>
+        <DataProperty IRI="#has_age"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#has_value"/>
         <DataProperty abbreviatedIRI="mp:value"/>
     </SubDataPropertyOf>
@@ -982,6 +1077,22 @@
     <SubDataPropertyOf>
         <DataProperty IRI="#refers_to_database"/>
         <DataProperty abbreviatedIRI="mp:publishedOn"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#refers_to_partial_dechallenge_outcome"/>
+        <DataProperty IRI="#refers_to_dechallenge_outcome"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#refers_to_partial_dechallenge_process"/>
+        <DataProperty IRI="#refers_to_dechallenge_process"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#refers_to_partial_rechallenge_outcome"/>
+        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#refers_to_partial_rechallenge_process"/>
+        <DataProperty IRI="#refers_to_rechallenge_process"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#refers_to_rechallenge_outcome"/>
@@ -1113,6 +1224,7 @@
         <ObjectUnionOf>
             <Class IRI="#Disproportionality_Analysis_Measure"/>
             <Class IRI="#Reports_group"/>
+            <Class IRI="#VigiBase_Report"/>
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1170,6 +1282,7 @@
             <DataOneOf>
                 <Literal>1-10</Literal>
                 <Literal>11-20</Literal>
+                <Literal>18 or older</Literal>
                 <Literal>21-30</Literal>
                 <Literal>31-40</Literal>
                 <Literal>41-50</Literal>
@@ -1362,12 +1475,14 @@
         <DataOneOf>
             <Literal>death</Literal>
             <Literal>hospitalization for treatment</Literal>
+            <Literal>irrelevant death</Literal>
             <Literal>negative rechallenge - condition not appeared</Literal>
             <Literal>permanent injury</Literal>
             <Literal>positive rechallenge - condition appeared again</Literal>
             <Literal>recovery after drug withdrawl</Literal>
             <Literal>recovery after hospitalization</Literal>
             <Literal>recovery with no further information</Literal>
+            <Literal>recovery with sequelae</Literal>
             <Literal>recovery without drug withdrawl</Literal>
             <Literal>unknown</Literal>
         </DataOneOf>
@@ -1376,6 +1491,47 @@
         <DataProperty IRI="#refers_to_rechallenge_process"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Reports_group"/>
+                <Variable IRI="#a"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Reports_group"/>
+                <Variable IRI="#b"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#is_subgroup_of"/>
+                <Variable IRI="#a"/>
+                <Variable IRI="#b"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#refers_to_database"/>
+                <Variable IRI="#b"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#refers_to_database"/>
+                <Variable IRI="#a"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Adverse_Effect</IRI>
@@ -1456,6 +1612,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Clinical_trial_information</IRI>
         <Literal xml:lang="en">Clinical Trial Information</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Cohort_Profile</IRI>
+        <Literal>Characteristics of a Cohort study group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Cohort_Profile</IRI>
+        <Literal>Cohort Profile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -1751,6 +1917,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Pharmacovigilance_Signal_Report</IRI>
         <Literal xml:lang="en">Pharmacovigilance Signal Report</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Prevalence</IRI>
+        <Literal>The proportion of persons in a population who have a particular disease or attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Prevalence</IRI>
+        <Literal>Prevalence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -2320,7 +2496,7 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <Literal xml:lang="en">modified on</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_adverse_effect</IRI>
         <Literal>Depicts a reference to the respective adverse effect.</Literal>
     </AnnotationAssertion>
@@ -2348,6 +2524,11 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_class</IRI>
         <Literal>refers to class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_cohort_profile</IRI>
+        <Literal>refers to cohort profile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2478,6 +2659,46 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_outcome_after_action</IRI>
         <Literal xml:lang="en">refers to outcome after action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_partial_dechallenge_outcome</IRI>
+        <Literal>Depicts the outcome of the partial dechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_partial_dechallenge_outcome</IRI>
+        <Literal>refers to partial dechallenge outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_partial_dechallenge_process</IRI>
+        <Literal>Depicts if the respective dosage is used as part of a partial dechallenge process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_partial_dechallenge_process</IRI>
+        <Literal>refers to partial dechallenge process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_partial_rechallenge_outcome</IRI>
+        <Literal>Depicts the outcome of the partial rechallenge process applied to the respective adverse effect, as reported in the spontaneous report.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_partial_rechallenge_outcome</IRI>
+        <Literal>refers to partial rechallenge outcome</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_partial_rechallenge_process</IRI>
+        <Literal>Depicts if the respective dosage is used as part of a partial rechallenge process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_partial_rechallenge_process</IRI>
+        <Literal>refers to partial rechallenge process</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
