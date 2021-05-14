@@ -29,6 +29,7 @@
     <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
     <Prefix name="OpenPVSignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#"/>
     <Prefix name="openpvsignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
+    <Import>http://eulersharp.sourceforge.net/2003/03swap/countries</Import>
     <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
     <Import>http://purl.org/mp</Import>
     <Import>http://www.w3.org/2006/time#2016</Import>
@@ -211,10 +212,16 @@
         <Class IRI="#Information_Component_(IC0005)"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Information_Component_005_(IC005)"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Information_Component__025_(IC025)"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#belongs_to_reports_group"/>
@@ -271,10 +278,16 @@
         <ObjectProperty IRI="#refers_to_confidence_interval"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#refers_to_country"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#refers_to_dosage"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_drug"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_information_component"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_interacting_drug"/>
@@ -379,6 +392,9 @@
         <DataProperty IRI="#modified_on"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#refers_to_challenge_type"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#refers_to_database"/>
     </Declaration>
     <Declaration>
@@ -451,6 +467,9 @@
         <AnnotationProperty abbreviatedIRI="dc:title"/>
     </Declaration>
     <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <Declaration>
         <AnnotationProperty abbreviatedIRI="oboInOwl:hasBroadSynonym"/>
     </Declaration>
     <Declaration>
@@ -470,9 +489,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:IAO_0000300"/>
@@ -694,6 +710,10 @@
         <Class IRI="#Information_Component_(IC)"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Information_Component_005_(IC005)"/>
+        <Class IRI="#Information_Component_(IC)"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Information_Component__025_(IC025)"/>
         <Class IRI="#Information_Component_(IC)"/>
     </SubClassOf>
@@ -896,6 +916,10 @@
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_country"/>
+        <Class IRI="#Reports_group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_dosage"/>
         <Class IRI="#Drug_Usage"/>
     </ObjectPropertyDomain>
@@ -913,6 +937,18 @@
             <Class IRI="#Signal"/>
             <Class IRI="#Warning_Information"/>
         </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_information_component"/>
+        <Class IRI="#Information_Component_(IC0005)"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_information_component"/>
+        <Class IRI="#Information_Component_005_(IC005)"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_information_component"/>
+        <Class IRI="#Information_Component__025_(IC025)"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_interacting_drug"/>
@@ -1015,12 +1051,20 @@
         <Class IRI="#Confidence_interval_0.95"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_country"/>
+        <Class IRI="http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_dosage"/>
         <Class IRI="#Dosage"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_drug"/>
         <Class IRI="#Drug"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_information_component"/>
+        <Class IRI="#Information_Component_(IC)"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
@@ -1165,6 +1209,10 @@
         <Class IRI="#Patient"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#has_gender"/>
+        <Class IRI="#Reports_group"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#has_last_name"/>
         <Class IRI="#Author"/>
     </DataPropertyDomain>
@@ -1218,6 +1266,10 @@
             <Class IRI="#Pharmacovigilance_Signal_Report"/>
             <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
         </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#refers_to_challenge_type"/>
+        <Class IRI="#Reports_group"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#refers_to_database"/>
@@ -1408,6 +1460,13 @@
     <DataPropertyRange>
         <DataProperty IRI="#modified_on"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#refers_to_challenge_type"/>
+        <DataOneOf>
+            <Literal>Dechallenge</Literal>
+            <Literal>Rechallenge</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_database"/>
@@ -2517,6 +2576,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_challenge_type</IRI>
+        <Literal>Refers to the type of challenge outcome as reported in Report Groups.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_challenge_type</IRI>
+        <Literal>refers to challenge type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_class</IRI>
         <Literal>Depicts a reference with the respective drug class.</Literal>
     </AnnotationAssertion>
@@ -2619,6 +2688,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_form_of_intake</IRI>
         <Literal xml:lang="en">refers to form of intake</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_information_component</IRI>
+        <Literal>Associates a lower point of am information component credibility interval to the information component it derives from.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_information_component</IRI>
+        <Literal>refers to information component</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2809,6 +2888,21 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Information_Component_(IC0005)</IRI>
         <Literal>Information Component 0005 (IC0005)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Information_Component_005_(IC005)</IRI>
+        <Literal>The lower endpoint of a 99% credibility interval for the Information Component, IC005 is used to support analysis of subgroup-specific associations between substances and effects analogously to how IC025 is used for general analysis of substance-effect associations: a positive value for IC005 suggests, but does not prove, a causal relation between the substance and the reaction in the subgroup under consideration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Information_Component_005_(IC005)</IRI>
+        <Literal>https://www.who-umc.org/vigibase/vigilyze/analytics-in-vigilyze/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Information_Component_005_(IC005)</IRI>
+        <Literal>Information Component 005 (IC005)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
