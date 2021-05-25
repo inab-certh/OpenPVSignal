@@ -344,6 +344,15 @@
         <DataProperty IRI="#has_creation_date"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#has_expected_count"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_expected_count_of_men"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_expected_count_of_women"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has_first_name"/>
     </Declaration>
     <Declaration>
@@ -432,6 +441,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#refers_to_rechallenge_process"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#refers_to_signal_category"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="prov:value"/>
@@ -955,6 +967,10 @@
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_interacting_drug"/>
+        <Class IRI="#Signal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
         <Class IRI="#Dosage"/>
     </ObjectPropertyDomain>
@@ -1099,12 +1115,24 @@
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
+        <DataProperty IRI="#has_expected_count"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_expected_count_of_men"/>
+        <DataProperty IRI="#has_expected_count"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#has_expected_count_of_women"/>
+        <DataProperty IRI="#has_expected_count"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty IRI="#has_last_name"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_min_age"/>
-        <DataProperty IRI="#has_age"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_value"/>
@@ -1140,6 +1168,10 @@
     </SubDataPropertyOf>
     <SubDataPropertyOf>
         <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#refers_to_signal_category"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
     <FunctionalDataProperty>
@@ -1269,6 +1301,10 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#refers_to_challenge_type"/>
+        <Class IRI="#Individual_Case_Safety_Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#refers_to_challenge_type"/>
         <Class IRI="#Reports_group"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
@@ -1282,6 +1318,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#refers_to_dechallenge_outcome"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#refers_to_dechallenge_outcome"/>
+        <Class IRI="#Reports_group"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#refers_to_dechallenge_process"/>
@@ -1304,8 +1344,16 @@
         <Class IRI="#Individual_Case_Safety_Report"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#refers_to_outcome_after_action"/>
+        <Class IRI="#Reports_group"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#refers_to_rechallenge_outcome"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#refers_to_rechallenge_outcome"/>
+        <Class IRI="#Reports_group"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#refers_to_rechallenge_process"/>
@@ -1330,7 +1378,7 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_age"/>
         <DataUnionOf>
-            <Datatype abbreviatedIRI="xsd:integer"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
             <DataOneOf>
                 <Literal>1-10</Literal>
                 <Literal>11-20</Literal>
@@ -1364,6 +1412,10 @@
         <Datatype abbreviatedIRI="xsd:date"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#has_expected_count"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#has_first_name"/>
         <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
@@ -1372,6 +1424,7 @@
         <DataOneOf>
             <Literal>female</Literal>
             <Literal>male</Literal>
+            <Literal>unknown</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1520,11 +1573,13 @@
         <DataOneOf>
             <Literal>death</Literal>
             <Literal>hospitalization for treatment</Literal>
+            <Literal>irrelevant death</Literal>
             <Literal>no recovery</Literal>
             <Literal>permanent injury</Literal>
             <Literal>recovery after drug withdrawal</Literal>
             <Literal>recovery after hospitalization</Literal>
             <Literal>recovery with no further information</Literal>
+            <Literal>recovery with sequelae</Literal>
             <Literal>recovery without drug withdrawal</Literal>
             <Literal>unknown</Literal>
         </DataOneOf>
@@ -1549,6 +1604,14 @@
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_rechallenge_process"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#refers_to_signal_category"/>
+        <DataOneOf>
+            <Literal>Adverse drug reaction</Literal>
+            <Literal>Drug-drug interaction</Literal>
+            <Literal>Off-label use</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DLSafeRule>
         <Annotation>
@@ -2316,6 +2379,36 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_expected_count</IRI>
+        <Literal>Depicts the expected number of cases for a specific drug-adverse event pair.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_expected_count</IRI>
+        <Literal>has expected count</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_expected_count_of_men</IRI>
+        <Literal>Depicts the expected number of cases for a specific drug-adverse event pair regarding women.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_expected_count_of_men</IRI>
+        <Literal>has expected count of men</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_expected_count_of_women</IRI>
+        <Literal>Depicts the expected number of cases for a specific drug-adverse event pair regarding men.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_expected_count_of_women</IRI>
+        <Literal>has expected count of women</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_first_name</IRI>
         <Literal>Declares the person&apos;s first name.</Literal>
     </AnnotationAssertion>
@@ -2526,6 +2619,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#is_supported_by_cohort_profile</IRI>
+        <Literal>Relates a pharmacovigilance signal with a cohort profile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#is_supported_by_cohort_profile</IRI>
+        <Literal>is supported by cohort profile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#is_supported_by_individual_case_report</IRI>
         <Literal>Relates a pharmacovigilance signal with the corresponding individual case reports.</Literal>
     </AnnotationAssertion>
@@ -2618,6 +2721,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_confidence_interval</IRI>
         <Literal>refers to confidence interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_country</IRI>
+        <Literal>Assosiates a report group to a country.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_country</IRI>
+        <Literal>refers to country</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2848,6 +2961,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_signal</IRI>
         <Literal xml:lang="en">refers to signal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_signal_category</IRI>
+        <Literal>Refers to the the type of signal in question.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_signal_category</IRI>
+        <Literal>refers to signal category</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
