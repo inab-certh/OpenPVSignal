@@ -83,6 +83,9 @@
         <Class abbreviatedIRI="obo:OGMS_0000031"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Adverse_Drug-Drug_interaction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Adverse_Effect"/>
     </Declaration>
     <Declaration>
@@ -122,6 +125,9 @@
         <Class IRI="#Drug"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Drug-Drug_interaction"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DrugClass"/>
     </Declaration>
     <Declaration>
@@ -156,6 +162,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Mechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medication_Errors"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Number_of_prescriptions_on_population"/>
@@ -294,6 +303,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_medication_error"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -519,6 +531,10 @@
         <Class IRI="#Warning_Information"/>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OAE_0000233"/>
+        <Class IRI="#Medication_Errors"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class abbreviatedIRI="obo:OAE_0000931"/>
         <Class IRI="#Drug_Exposure_Time"/>
     </EquivalentClasses>
@@ -542,6 +558,14 @@
         <Class abbreviatedIRI="obo:OGMS_0000031"/>
         <Class IRI="#Condition"/>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Adverse_Drug-Drug_interaction"/>
+        <Class IRI="#Adverse_Effect"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Adverse_Drug-Drug_interaction"/>
+        <Class IRI="#Drug-Drug_interaction"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Adverse_Effect"/>
         <Class IRI="#Condition"/>
@@ -896,6 +920,7 @@
             <Class IRI="#Disproportionality_Analysis_Measure"/>
             <Class IRI="#Drug"/>
             <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Medication_Errors"/>
             <Class IRI="#Signal"/>
             <Class IRI="#Warning_Information"/>
         </ObjectUnionOf>
@@ -973,6 +998,18 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
         <Class IRI="#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_medication_error"/>
+        <ObjectUnionOf>
+            <Class IRI="#Adverse_Effect"/>
+            <Class IRI="#Disproportionality_Analysis_Measure"/>
+            <Class IRI="#Drug"/>
+            <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Medication_Errors"/>
+            <Class IRI="#Signal"/>
+            <Class IRI="#Warning_Information"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -1089,6 +1126,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
         <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_medication_error"/>
+        <Class IRI="#Medication_Errors"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -1662,6 +1703,16 @@
         </Head>
     </DLSafeRule>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Adverse_Drug-Drug_interaction</IRI>
+        <Literal>A negative response to a drug combination that may lead to unexpected side effects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Adverse_Drug-Drug_interaction</IRI>
+        <Literal>Adverse Drug-Drug interaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#Adverse_Effect</IRI>
         <Literal>Note for Guidance on Clinical Safety Data Management:
@@ -1848,6 +1899,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <Literal xml:lang="en">Drug</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Drug-Drug_interaction</IRI>
+        <Literal>The effect of a drug combination. Can be either positive or detrimental.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Drug-Drug_interaction</IRI>
+        <Literal>Drug-Drug interaction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#DrugClass</IRI>
         <Literal>https://en.wikipedia.org/wiki/Drug_class</Literal>
@@ -2006,6 +2067,26 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Mechanism</IRI>
         <Literal xml:lang="en">Mechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:OAE_0004334"/>
+        <IRI>#Medication_Errors</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20000224</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medication_Errors</IRI>
+        <Literal>Medication errors are defined as any preventable events that may cause or lead to inappropriate medication use or patient harm while the medication is in the control of the health care professional, patient or consumer. Such events may be related to professional practice, health care products, procedures and systems, including prescribing, order communication, product labeling, packaging and nomenclature, compounding, dispensing, distribution, administration, education, monitoring and use. A medication error can ultimately result in an adverse drug reaction (medication error with an ADR) or may have no clinical consequences (medication error without an ADR). A medication error can also be intercepted prior to the patient&apos;s exposure to the error. A potential medication error is a scenario which does not involve an actual patient, and represents circumstances or information capable of leading to the occurrence of a medication error. Medication errors cause a large number of ADRs annually: create a major public-health burden representing 18.7-56% of all adverse drug events among hospital patients; may cause unintended harm; are considered preventable. Medication errors result from a variety of human (e.g., healthcare professional; care giver; patient) and product-related reasons, for example: miscommunication of drug orders due to poor handwriting; confusion between drugs with similar names; poor packaging design; confusion of dosing units; unclear instructions. Medication errors can have an impact on: patients; healthcare professionals; pharmaceutical manufacturers; regulatory agencies; health insurance providers; national patient safety organisations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <IRI>#Medication_Errors</IRI>
+        <Literal>http://purl.bioontology.org/ontology/MEDDRA/20000224</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Medication_Errors</IRI>
+        <Literal>Medication errors</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2838,6 +2919,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_interval_between_administrations</IRI>
         <Literal>refers to interval between administrations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_medication_error</IRI>
+        <Literal>Depicts a reference to the respective medication error.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_medication_error</IRI>
+        <Literal>refers to medication error</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
