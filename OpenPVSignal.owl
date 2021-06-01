@@ -116,6 +116,9 @@
         <Class IRI="#Confidence_interval_0.95"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Discussion"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Disproportionality_Analysis_Measure"/>
     </Declaration>
     <Declaration>
@@ -309,6 +312,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_patient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_pharmacovigilance_signal_report"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_primary_suspect_drug"/>
@@ -622,6 +628,10 @@
         <Class IRI="#Statistical_Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Discussion"/>
+        <Class IRI="#Free_text_reporting_element"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Disproportionality_Analysis_Measure"/>
         <Class IRI="#Statistical_Entity"/>
     </SubClassOf>
@@ -816,6 +826,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#refers_to_patient"/>
         <ObjectProperty abbreviatedIRI="mp:attributedTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#refers_to_pharmacovigilance_signal_report"/>
+        <ObjectProperty abbreviatedIRI="mp:argues"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#refers_to_primary_suspect_drug"/>
@@ -1016,6 +1030,10 @@
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_pharmacovigilance_signal_report"/>
+        <Class IRI="#Response_to_Pharmacovigilance_Signal_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_primary_suspect_drug"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
@@ -1134,6 +1152,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_patient"/>
         <Class IRI="#Patient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_pharmacovigilance_signal_report"/>
+        <Class IRI="#Pharmacovigilance_Signal_Report"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_reported_drug_usage"/>
@@ -1470,7 +1492,6 @@
         <DataOneOf>
             <Literal>female</Literal>
             <Literal>male</Literal>
-            <Literal>unknown</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1623,6 +1644,7 @@
             <Literal>irrelevant death</Literal>
             <Literal>no recovery</Literal>
             <Literal>permanent injury</Literal>
+            <Literal>recovering</Literal>
             <Literal>recovery after drug withdrawal</Literal>
             <Literal>recovery after hospitalization</Literal>
             <Literal>recovery with no further information</Literal>
@@ -1847,6 +1869,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Confidence_interval_0.95</IRI>
         <Literal>Confidence Interval 0.95</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Discussion</IRI>
+        <Literal>The signal section that discusses the findings.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Discussion</IRI>
+        <Literal>Discussion</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -2999,6 +3031,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_patient</IRI>
         <Literal xml:lang="en">refers to patient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_pharmacovigilance_signal_report</IRI>
+        <Literal>Relates a pharmacovigilance signal response to the pharmacovigilance signal report.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_pharmacovigilance_signal_report</IRI>
+        <Literal>refers to pharmacovigilance signal report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
