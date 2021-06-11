@@ -149,6 +149,9 @@
         <Class IRI="#Free_text_reporting_element"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Incidence"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Indication"/>
     </Declaration>
     <Declaration>
@@ -648,6 +651,10 @@
         <Class abbreviatedIRI="mp:ArticleText"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Incidence"/>
+        <Class IRI="#Statistical_Entity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Individual_Case_Safety_Report"/>
         <Class abbreviatedIRI="obo:OAE_0000127"/>
     </SubClassOf>
@@ -909,6 +916,10 @@
         <Class IRI="#Drug_Usage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_related_with_drug_intake"/>
+        <Class IRI="#Reports_group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#is_subgroup_of"/>
         <Class IRI="#Reports_group"/>
     </ObjectPropertyDomain>
@@ -1119,7 +1130,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_cohort_profile"/>
-        <Class IRI="#Prevalence"/>
+        <ObjectUnionOf>
+            <Class IRI="#Incidence"/>
+            <Class IRI="#Prevalence"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_confidence_interval"/>
@@ -2024,6 +2038,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Free_text_reporting_element</IRI>
         <Literal xml:lang="en">Free text reporting element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Incidence</IRI>
+        <Literal>Refers to the occurrence of new cases of disease or injury in a population over a specified period of time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Incidence</IRI>
+        <Literal>Incidence</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
