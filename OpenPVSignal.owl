@@ -185,6 +185,9 @@
         <Class IRI="#Pharmacovigilance_Signal_Report"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Potential_Confounder"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Prevalence"/>
     </Declaration>
     <Declaration>
@@ -252,6 +255,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#has_mechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_potential_confounding_factor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#is_part_of"/>
@@ -363,6 +369,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_creation_date"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_evaluation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#has_expected_count"/>
@@ -1314,12 +1323,23 @@
         </ObjectUnionOf>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#has_evaluation"/>
+        <ObjectUnionOf>
+            <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Reports_group"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#has_first_name"/>
         <Class IRI="#Author"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#has_gender"/>
         <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_gender"/>
+        <Class IRI="#Potential_Confounder"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#has_gender"/>
@@ -1492,6 +1512,16 @@
     <DataPropertyRange>
         <DataProperty IRI="#has_creation_date"/>
         <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_evaluation"/>
+        <DataOneOf>
+            <Literal>Doubtful</Literal>
+            <Literal>Not assessable</Literal>
+            <Literal>Possible</Literal>
+            <Literal>Probable</Literal>
+            <Literal>Unrelated</Literal>
+        </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#has_expected_count"/>
@@ -2186,6 +2216,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Potential_Confounder</IRI>
+        <Literal>Confounders are factors other than the exposure/intervention that may affect the outcome of interest and that can be related to exposure/intervention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Potential_Confounder</IRI>
+        <Literal>Potential Confounder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Prevalence</IRI>
         <Literal>The proportion of persons in a population who have a particular disease or attribute</Literal>
     </AnnotationAssertion>
@@ -2523,6 +2563,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_evaluation</IRI>
+        <Literal>Evaluation of the imputability on the basis of the data contained in PV reports/reports groups</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_evaluation</IRI>
+        <Literal>has evaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#has_expected_count</IRI>
         <Literal>Depicts the expected number of cases for a specific drug-adverse event pair.</Literal>
     </AnnotationAssertion>
@@ -2650,6 +2700,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#has_overall_conclusion</IRI>
         <Literal>has overall conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#has_potential_confounding_factor</IRI>
+        <Literal>Relates a Signal or report/reports group to a potential confounding factor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_potential_confounding_factor</IRI>
+        <Literal>has potential confounding factor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
