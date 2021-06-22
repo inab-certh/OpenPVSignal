@@ -308,6 +308,9 @@
         <ObjectProperty IRI="#refers_to_drug"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#refers_to_drug_drug_interaction"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#refers_to_information_component"/>
     </Declaration>
     <Declaration>
@@ -1010,6 +1013,18 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_drug_drug_interaction"/>
+        <ObjectUnionOf>
+            <Class IRI="#Adverse_Effect"/>
+            <Class IRI="#Disproportionality_Analysis_Measure"/>
+            <Class IRI="#Drug"/>
+            <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Medication_Errors"/>
+            <Class IRI="#Signal"/>
+            <Class IRI="#Warning_Information"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_information_component"/>
         <Class IRI="#Information_Component_(IC0005)"/>
     </ObjectPropertyDomain>
@@ -1159,6 +1174,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_drug"/>
         <Class IRI="#Drug"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_drug_drug_interaction"/>
+        <Class IRI="#Drug-Drug_interaction"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_information_component"/>
@@ -2902,6 +2921,11 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <Literal>refers to class</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_cohort_profile</IRI>
+        <Literal>Depicts a reference for Incidence or Prevalence to a cohort profile.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_cohort_profile</IRI>
         <Literal>refers to cohort profile</Literal>
@@ -2995,6 +3019,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_drug</IRI>
         <Literal xml:lang="en">refers to drug</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_drug_drug_interaction</IRI>
+        <Literal>Depicts a reference to group of interacting drugs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_drug_drug_interaction</IRI>
+        <Literal>refers to drug-drug interraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
