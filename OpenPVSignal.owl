@@ -320,6 +320,9 @@
         <ObjectProperty IRI="#refers_to_interval_between_administrations"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#refers_to_known_adverse_effect"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#refers_to_medication_error"/>
     </Declaration>
     <Declaration>
@@ -339,6 +342,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_signal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_unconfirmed_adverse_effect"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#time_to_onset"/>
@@ -852,6 +858,10 @@
         <ObjectProperty IRI="#refers_to_drug"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#refers_to_known_adverse_effect"/>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#refers_to_patient"/>
         <ObjectProperty abbreviatedIRI="mp:attributedTo"/>
     </SubObjectPropertyOf>
@@ -870,6 +880,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#refers_to_signal"/>
         <ObjectProperty abbreviatedIRI="mp:argues"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#refers_to_unconfirmed_adverse_effect"/>
+        <ObjectProperty IRI="#refers_to_adverse_effect"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -1000,7 +1014,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_country"/>
-        <Class IRI="#Reports_group"/>
+        <Class abbreviatedIRI="mp:Data"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_dosage"/>
@@ -1805,6 +1819,10 @@
             <Literal>sublingual</Literal>
             <Literal>topical (skin)</Literal>
         </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#refers_to_geographical_region"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_number_of_reports"/>
@@ -3203,6 +3221,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_known_adverse_effect</IRI>
+        <Literal>Depicts a reference to the respective known adverse effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_known_adverse_effect</IRI>
+        <Literal>refers to known adverse effect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#refers_to_medication_error</IRI>
         <Literal>Depicts a reference to the respective medication error.</Literal>
     </AnnotationAssertion>
@@ -3360,6 +3388,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_signal_category</IRI>
         <Literal>refers to signal category</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_unconfirmed_adverse_effect</IRI>
+        <Literal>Depicts a reference to the respective unconfirmed adverse effect.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_unconfirmed_adverse_effect</IRI>
+        <Literal>refers to unconfirmed adverse effect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
