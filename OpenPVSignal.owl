@@ -29,7 +29,6 @@
     <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
     <Prefix name="OpenPVSignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl#"/>
     <Prefix name="openpvsignal" IRI="http://purl.org/OpenPVSignal/OpenPVSignal.owl"/>
-    <Import>http://eulersharp.sourceforge.net/2003/03swap/countries</Import>
     <Import>http://purl.obolibrary.org/obo/oae.owl</Import>
     <Import>http://purl.org/mp</Import>
     <Import>http://www.w3.org/2006/time#2016</Import>
@@ -324,6 +323,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_medication_error"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refers_to_past_diagnosis"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -1084,6 +1086,10 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refers_to_past_diagnosis"/>
+        <Class IRI="#Individual_Case_Safety_Report"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_patient"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
@@ -1213,6 +1219,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_medication_error"/>
         <Class IRI="#Medication_Errors"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_past_diagnosis"/>
+        <Class IRI="#Past_Diagnosis"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refers_to_patient"/>
@@ -1654,6 +1664,7 @@
             <Literal>unt/mL</Literal>
             <Literal>vial</Literal>
             <Literal>wafer</Literal>
+            <Literal>μg</Literal>
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -2333,6 +2344,11 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Number_of_prescriptions_on_population</IRI>
         <Literal xml:lang="en">Number of prescriptions on population</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Past_Diagnosis</IRI>
+        <Literal>Previous diagnosis of conditions</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3300,6 +3316,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#refers_to_partial_rechallenge_process</IRI>
         <Literal>refers to partial rechallenge process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_past_diagnosis</IRI>
+        <Literal>Assosiates an Individual Case Safety Report with a past diagnosis.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_past_diagnosis</IRI>
+        <Literal>refers to past diagnosis</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
