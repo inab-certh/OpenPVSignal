@@ -241,7 +241,31 @@
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="mp:ArticleText"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mp:Claim"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mp:Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mp:Micropublication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="mp:Reference"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="prov:Person"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#belongs_to_reports_group"/>
@@ -353,6 +377,24 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#time_to_onset"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:argues"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:attributedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:attributionAsAuthor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:hasAttribution"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:hasElement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="mp:supportedByData"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
@@ -499,6 +541,15 @@
         <DataProperty IRI="#refers_to_signal_category"/>
     </Declaration>
     <Declaration>
+        <DataProperty abbreviatedIRI="mp:editedOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="mp:publishedOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="mp:value"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI="prov:value"/>
     </Declaration>
     <Declaration>
@@ -554,57 +605,6 @@
     </Declaration>
     <Declaration>
         <Datatype abbreviatedIRI="xsd:gYearMonth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mp:editedOn"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="prov:Organization"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:attributedTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:hasElement"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:argues"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="prov:Person"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mp:ArticleText"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:supportedByData"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:attributionAsAuthor"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mp:publishedOn"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mp:Reference"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="mp:value"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mp:Micropublication"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI="mp:hasAttribution"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="prov:Agent"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mp:Data"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="mp:Claim"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:IAO_0000300"/>
@@ -1304,7 +1304,10 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#time_to_onset"/>
-        <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        <ObjectUnionOf>
+            <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
+            <Class IRI="http://www.w3.org/2006/time#Instant"/>
+        </ObjectUnionOf>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_count_of_men"/>
@@ -1691,6 +1694,7 @@
             <Literal>mEq</Literal>
             <Literal>mL</Literal>
             <Literal>mU</Literal>
+            <Literal>mcg</Literal>
             <Literal>mg</Literal>
             <Literal>mg/actuat</Literal>
             <Literal>mg/hr</Literal>
@@ -1864,6 +1868,7 @@
     <DataPropertyRange>
         <DataProperty IRI="#refers_to_dechallenge_outcome"/>
         <DataOneOf>
+            <Literal>death after drug withdrawl</Literal>
             <Literal>negative - condition still applied</Literal>
             <Literal>positive - condition not applied</Literal>
             <Literal>unknown</Literal>
