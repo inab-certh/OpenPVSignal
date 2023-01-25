@@ -1,0 +1,27 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Test Case: An "Patient" instance has to be defined with an age, a gender and a label
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Patient ;
+sh:and (
+	[ sh:property[
+		sh:path OpenPVSignal:has_age ;	
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path OpenPVSignal:has_gender;
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path rdfs:label ;
+		sh:minCount 1;
+		]
+	]).

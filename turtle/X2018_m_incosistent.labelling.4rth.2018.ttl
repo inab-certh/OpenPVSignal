@@ -1,0 +1,1312 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa#: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl> rdf:type owl:Ontology ;
+                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                    mp: ;
+                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/274266/"^^xsd:anyURI ;
+                                                                        rdfs:label "Inconsistent labelling for drug interactions"^^rdfs:Literal ;
+                                                                        owl:versionInfo "draft-v0.95-20210611"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#concerns_action_upon_adverse_effect
+:concerns_action_upon_adverse_effect rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/OAE_0001197
+<http://purl.obolibrary.org/obo/OAE_0001197> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> rdf:type owl:Class .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#AcetylsalicylicAcid
+:AcetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfAspirin ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "B01AC06" ;
+                     rdfs:label "Acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#BacterialInfection
+:BacterialInfection rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "A49" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10060945 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Bacterial infection" ;
+                    rdfs:label "Bacterial infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#BipolarDisorder
+:BipolarDisorder rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F31.9" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10057667 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Bipolar disorder" ;
+                 rdfs:label "Bipolar disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ciprofloxacin
+:Ciprofloxacin rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :fluoroquinolones ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfCiprofloxacin ,
+                                                                             :possible_mechanism_of_hypoglycaemia ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J01MA02" ;
+               rdfs:label "Ciprofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#DiabetesMellitus
+:DiabetesMellitus rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "E11" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10012601 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Diabetes mellitus" ;
+                  rdfs:label "Diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Dipyridamole
+:Dipyridamole rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfDipyridamole ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "B01AC07" ;
+              rdfs:label "Dipyridamole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Dipyridamole_usage
+:Dipyridamole_usage rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Thromboembolism ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Dipyridamole ;
+                    rdfs:label "Dipyridamole usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#DrugLevelIncreased
+:DrugLevelIncreased rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R89.2" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013722 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Drug level increased" ;
+                    rdfs:label "Drug level increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#GastrointestinalHaemorrhage
+:GastrointestinalHaemorrhage rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "K92.2" ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10017955 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Gastrointestinal haemorrhage" ;
+                             rdfs:label "Gastrointestinal haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Hypoglycaemia
+:Hypoglycaemia rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "E16.2" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10020993 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Hypoglycaemia" ;
+               rdfs:label "Hypoglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Inconsistent_labelling_for_drug_interactions
+:Inconsistent_labelling_for_drug_interactions rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pvSignal ,
+                                                                                                               <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena> ,
+                                                                                                               <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Sertraline_–_quetiapine_and_serotonin_syndrome> ,
+                                                                                                               <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Tacrolimus_–_mycophenolic_acid_and_drug_level_increased> ;
+                                              mp:publishedBy :Marian_Atalla ,
+                                                             :Sarah_Watson ,
+                                                             :Sofia_Zappacosta ,
+                                                             :Uppsala_Monitoring_Centre ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/10/2018"^^xsd:date ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                              rdfs:label "Inconsistent labelling for drug interactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#InfoForQuietiapineAndSertraline
+:InfoForQuietiapineAndSertraline rdf:type owl:NamedIndividual ,
+                                          <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :SerotoninSyndrome ;
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Quetiapine ,
+                                                                                                :Sertraline ;
+                                 mp:references :Ref.10 ,
+                                               :Ref.8 ,
+                                               :Ref.9 ;
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The risk of developing SS or NMS increases when concomitant antipsychotics such as quetiapine are administrated to patients using sertraline, as described in the UK SmPC for sertraline.9 The antipsychotic quetiapine on its own has also been reported to cause NMS.10 Interestingly, no mention of an increased risk of SS is present in neither of the labels for quetiapine when used in combination with sertraline.8,10. " ;
+                                 rdfs:label "labelling for quietiapine and sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "During a signal detection screening focusing on interactions, four drug-drug-adverse drug reaction (ADR) combinations were highlighted in VigiBase, the WHO global database of individual case safety reports. The case series for the combinations presented here are not signals per se, however they reveal labelling inconsistencies regarding the interaction information in the available product information issued by the Food and Drug Administration (FDA) in the United States (US), the Medicines and Healthcare products Regulatory Agency (MHRA) in the United Kingdom (UK) and the European Medicines Agency (EMA) in the European Union (EU). The ‘inconsistencies’ refer to differences in the information provided by these regulatory agencies, being incomplete or contradictory. A drug-drug-ADR interaction was considered labelled when the interaction was mentioned in at least one of the sources of the interacting drugs. Ideally, the interaction and the potential ADRs caused by it should be mentioned for both interacting drugs in the US FDA label and the UK Summary of Product Characteristics (SmPC) if the drugs are marketed in both countries." ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#IschaemicStroke
+:IschaemicStroke rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I63.9" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10061256 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Ischaemic stroke" ;
+                 rdfs:label "Ischaemic stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Levofloxacin
+:Levofloxacin rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :fluoroquinolones ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_Levofloxacin ,
+                                                                            :possible_mechanism_of_hypoglycaemia ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J01MA12" ;
+              rdfs:label "Levofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Levofloxacin_usage
+:Levofloxacin_usage rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :BacterialInfection ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Levofloxacin ;
+                    rdfs:label "Levofloxacin usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Marian_Atalla
+:Marian_Atalla rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Marian" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Atalla" ;
+               rdfs:label "Marian Atalla" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfAspirin
+:MechanismOfAspirin rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                    mp:references :Ref.15 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Acetylsalicylic acid (ASA) is broadly used in sporadic  or continuous treatments for various indications  because of its analgesic, anti-inflammatory, antipyretic and uricosuric actions." ;
+                    rdfs:label "Mechanism of aspirin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfCiprofloxacin
+:MechanismOfCiprofloxacin rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Ciprofloxacin ;
+                          mp:references :Ref.2 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "antibacterial agents" ;
+                          rdfs:label "Mechanism of Ciprofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfDipyridamole
+:MechanismOfDipyridamole rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                         mp:references :Ref.16 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "a  platelet aggregation inhibitor" ;
+                         rdfs:label "Mechanism of dipyridamole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfMetformin
+:MechanismOfMetformin rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                      mp:references :Ref.1 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Metformin is a well-known antidiabetic agent from the group of biguanides. It is believed not to cause hypoglycaemia in monotherapy, but can do so if combined with other oral antidiabetic drugs or insulin " ;
+                      rdfs:label "Mechanism of Metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfMycophenolicAcid
+:MechanismOfMycophenolicAcid rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                             mp:references :Ref.12 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "highly potent  immunosuppressive agents" ;
+                             rdfs:label "Mechanism of mycophenolic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfQuetiapine
+:MechanismOfQuetiapine rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                       mp:references :Ref.8 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Quetiapine is an atypical antipsychotic agent with affinity for brain serotonin and dopamine D1- and D2-receptors." ;
+                       rdfs:label "Mechanism of quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfSertarline
+:MechanismOfSertarline rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                       mp:references :Ref.7 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Sertraline is a selective serotonin reuptake inhibitor (SSRI)" ;
+                       rdfs:label "Mechanism of Sertarline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MechanismOfTacrolimus
+:MechanismOfTacrolimus rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                       mp:references :Ref.11 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "highly potent  immunosuppressive agents" ;
+                       rdfs:label "Mechanism of tacrolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Mechanism_of_Levofloxacin
+:Mechanism_of_Levofloxacin rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Levofloxacin ;
+                           mp:references :Ref.3 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "antibacterial agents" ;
+                           rdfs:label "Mechanism of Levofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Melaena
+:Melaena rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "K92.1" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10027141 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Melaena" ;
+         rdfs:label "Melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MentalStatusChanges
+:MentalStatusChanges rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R41.82" ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10048294 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Mental status changes" ;
+                     rdfs:label "Mental status changes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Metformin
+:Metformin rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :biguanides ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfMetformin ,
+                                                                         :possible_mechanism_of_hypoglycaemia ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "A10BA02 " ;
+           rdfs:label "Metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Metformin_usage
+:Metformin_usage rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :DiabetesMellitus ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metformin ;
+                 rdfs:label "Metformin usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#MycophenolicAcid
+:MycophenolicAcid rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfMycophenolicAcid ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "L04AA06 " ;
+                  rdfs:label "Mycophenolic Acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Mycophenolic_acid_usage
+:Mycophenolic_acid_usage rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Prophylaxis_against_transplant_rejection ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :MycophenolicAcid ;
+                         mp:references :Ref.11 ;
+                         rdfs:label "Mycophenolic acid usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#PanicDisorder
+:PanicDisorder rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F41.0" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10033666 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Panic disorder" ;
+               rdfs:label "Panic disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Post-traumaticStressDisorder
+:Post-traumaticStressDisorder rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F43.1" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10036316 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Post-traumatic stress disorder" ;
+                              rdfs:label "Post-traumatic stress disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Prophylaxis_against_transplant_rejection
+:Prophylaxis_against_transplant_rejection rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10048870 ;
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Prophylaxis against transplant rejection" ;
+                                          rdfs:label "prophylaxis against transplant rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Quetiapine
+:Quetiapine rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfQuetiapine ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N05AH04 " ;
+            rdfs:label "Quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Quetiapine_usage
+:Quetiapine_usage rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :BipolarDisorder ,
+                                                                                              :Schizophrenia ,
+                                                                                              :majorDepressiveDisorder ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Quetiapine ;
+                  rdfs:label "Quetiapine usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for metformin.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drug
+Info.cfm?setid=462198db-084d-4fb9-b5ca-
+86a8bacc9284 Accessed: November 2017""" ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for quetiapine.
+Available from: http://
+www.medicines.org.uk/emc/medicine/27669
+Accessed: November 2017.""" ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for mycophenolic acid.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/
+drugInfo.cfm?setid=dc24aa15-330c-4698-
+872f-159d7e582b4b Accessed: November
+2017.
+12. DailyMed: Product label for tacrolimus.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo. cfm?setid=de2315b0-6344-43ac-9aea-
+3e3b68d828e7 Accessed: November 2017.
+13. European Medicines Agency: Summary of
+Product Characteristics for mycophenolic acid.
+Available from:
+https://www.medicines.org.uk/emc/
+medicine/34264 Accessed: November 2017.
+14. European Medicines Agency: Summary of
+Product Characteristics for tacrolimus.
+Available from: https://
+www.medicines.org.uk/emc/medicine/23205
+Accessed: November 2017.
+15. DailyMed: Product label for acetylsalicylic acid.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo.cfm?setid=eb29d6be-f095-44b2-b6ed-
+7e4167b596f8 Accessed: November 2017.""" ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for mycophenolic acid.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/
+drugInfo.cfm?setid=dc24aa15-330c-4698-
+872f-159d7e582b4b Accessed: November
+2017.
+12. DailyMed: Product label for tacrolimus.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo. cfm?setid=de2315b0-6344-43ac-9aea-
+3e3b68d828e7 Accessed: November 2017.
+13. European Medicines Agency: Summary of
+Product Characteristics for mycophenolic acid.
+Available from:
+https://www.medicines.org.uk/emc/
+medicine/34264 Accessed: November 2017.
+14. European Medicines Agency: Summary of
+Product Characteristics for tacrolimus.
+Available from: https://
+www.medicines.org.uk/emc/medicine/23205
+Accessed: November 2017.
+15. DailyMed: Product label for acetylsalicylic acid.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo.cfm?setid=eb29d6be-f095-44b2-b6ed-
+7e4167b596f8 Accessed: November 2017.""" ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for mycophenolic acid.
+Available from:
+https://www.medicines.org.uk/emc/
+medicine/34264 Accessed: November 2017.""" ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for tacrolimus.
+Available from: https://
+www.medicines.org.uk/emc/medicine/23205
+Accessed: November 2017""" ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for acetylsalicylic acid.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo.cfm?setid=eb29d6be-f095-44b2-b6ed-
+7e4167b596f8 Accessed: November 2017.""" ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """ DailyMed: Product label for dipyridamole Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo.cfm?setid=92e0cb56-8c06-46e2-a217-
+7213877f17d1 Accessed: November 2017.""" ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """Taber’s Medical Dictionary Online (melena)
+Available from:
+https://www.tabers.com/tabersonline/view/
+Tabers-Dictionary/765994/all/melena
+Accessed: November 2017.""" ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for acetylsalicylic acid
+- dipyridamole. Available from:
+https://dailymed.nlm.nih.
+gov/dailymed/drugInfo.cfm?setid=423dfd08-
+1e1b-43f7-ab83-166ec6111608 Accessed:
+November 2017.""" ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for acetylsalicylic acid
+- dipyridamole. Available from:
+http://www.medicines.org.uk/emc/
+medicine/33532 Accessed: November 2017""" ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for metformin.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drug
+Info.cfm?setid=462198db-084d-4fb9-b5ca-
+86a8bacc9284 Accessed: November 2017""" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for acetylsalicylic acid
+- dipyridamole. Available from:
+http://www.medicines.org.uk/emc/
+medicine/33532 Accessed: November 2017""" ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for acetylsalicylic acid
+- dipyridamole. Available from:
+http://www.medicines.org.uk/emc/
+medicine/33532 Accessed: November 2017""" ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for levofloxacin.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo. cfm?setid=7d3f1001-b111-4038-82ada0465f8e854a Accessed: November 2017.""" ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for levofloxacin.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drugI
+nfo. cfm?setid=7d3f1001-b111-4038-82ada0465f8e854a Accessed: November 2017.""" ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for ciprofloxacin.
+Available from: http://
+www.medicines.org.uk/emc/medicine/20345
+Accessed: November 2017.""" ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for levofloxacin.
+Available from: http://
+www.medicines.org.uk/emc/medicine/25987
+Accessed: November 2017.""" ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for sertraline.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/dru
+gInfo. cfm?setid=aed2b158-d1d1-4dcb-
+8611-2324b2b75a37 Accessed: November
+2017""" ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """DailyMed: Product label for quetiapine.
+Available from:
+https://dailymed.nlm.nih.gov/dailymed/drug
+Info.cfm?setid=85bdb3a6-3129-4f8b-95b9-
+a7559d9b911c Accessed: November 2017.""" ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for sertraline.
+Available from: http://
+www.medicines.org.uk/emc/medicine/23920
+Accessed: November 2017.""" ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sarah_Watson
+:Sarah_Watson rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Sarah" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Watson" ;
+              rdfs:label "Sarah Watson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Schizophrenia
+:Schizophrenia rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F20" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10039626 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Schizophrenia" ;
+               rdfs:label "Schizophrenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#SerotoninSyndrome
+:SerotoninSyndrome rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G25. 79" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10040108 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Serotonin syndrome" ;
+                   rdfs:label "Serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sertraline
+:Sertraline rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#selectiveSerotoninReuptakeInhibitor(SSRI)> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfSertarline ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N06AB06" ;
+            rdfs:label "Sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sertraline_usage
+:Sertraline_usage rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :PanicDisorder ,
+                                                                                              :Post-traumaticStressDisorder ,
+                                                                                              :SocialAnxietyDisorder ,
+                                                                                              :depressiveEpisodes ,
+                                                                                              :obsessiveCompulsiveDisorder ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Sertraline ;
+                  rdfs:label "Sertraline usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#SocialAnxietyDisorder
+:SocialAnxietyDisorder rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F40. 10" ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10041242 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Social anxiety disorder" ;
+                       rdfs:label "Social anxiety disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sofia_Zappacosta
+:Sofia_Zappacosta rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Sofia" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Zappacosta" ;
+                  rdfs:label "Sofia Zappacosta" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Tacrolimus
+:Tacrolimus rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :MechanismOfTacrolimus ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "D11AH01" ;
+            rdfs:label "Tacrolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Tacrolimus_usage
+:Tacrolimus_usage rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Prophylaxis_against_transplant_rejection ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Tacrolimus ;
+                  mp:references :Ref.12 ;
+                  rdfs:label "Tacrolimus usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Thromboembolism
+:Thromboembolism rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "O88. 23" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10061169 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Embolism" ;
+                 rdfs:label "Thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Tremor
+:Tremor rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R25.1" ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10044565 ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Tremor" ;
+        rdfs:label "Tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#UK_SmPC_for_mycophenolic_acid
+:UK_SmPC_for_mycophenolic_acid rdf:type owl:NamedIndividual ,
+                                        <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :DrugLevelIncreased ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :MycophenolicAcid ,
+                                                                                              :Tacrolimus ;
+                               mp:references :Ref.11 ,
+                                             :Ref.12 ,
+                                             :Ref.13 ,
+                                             :Ref.14 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In the UK SmPC for mycophenolic acid, it is mentioned that the drug exposure of mycophenolic acid may increase when administered concurrently with tacrolimus (compared to when it is administered with ciclosporin).13 It is also stated that clinicians should note this increase and adjust the dose of mycophenolic acid according to the situation. However, the UK SmPC for tacrolimus does not mention this interaction.14 On the other hand, this interaction is given by the FDA for tacrolimus but not for mycophenolic acid.11,12" ;
+                               rdfs:label "labelling for mycophenolic acid and tacrolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#biguanides
+:biguanides rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "D08AC" ;
+            rdfs:label "biguanides" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#depressiveEpisodes
+:depressiveEpisodes rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F32" ;
+                    rdfs:label "depressive episodes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#fluoroquinolones
+:fluoroquinolones rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J01MA" ;
+                  rdfs:label "fluoroquinolones" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#infoForAcetelysalicylicAcidAndDipyridamoleAndMelaena
+:infoForAcetelysalicylicAcidAndDipyridamoleAndMelaena rdf:type owl:NamedIndividual ,
+                                                               <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Melaena ;
+                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :AcetylsalicylicAcid ,
+                                                                                                                     :Dipyridamole ;
+                                                      mp:references :Ref.15 ,
+                                                                    :Ref.16 ,
+                                                                    :Ref.18 ,
+                                                                    :Ref.19 ,
+                                                                    :Ref.20 ,
+                                                                    :Ref.21 ;
+                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The US label for the combination pill mentions an  “increased risk of bleeding” when using ASA and  extended-release dipyridamole.19 The UK SmPC for  the combination pill, on the contrary, says that the  addition of dipyridamole to ASA does not increase  the incidence of bleeding events, when these two  substances are combined.18  However, the UK SmPC for ASA (75 mg) mentions  that an increased risk of gastrointestinal bleeding is  present when concomitant anti-platelet agents such  as dipyridamole are used.20 Similarly, the US ASA label also mentions the increased risk when using  ASA with anti-coagulants, but no specific mention of  dipyridamole is described.15 The inconsistency is  strengthened when looking at the dipyridamole  labels: the US label does not mention the risk of  bleeding and the UK SmPC mentions that the  concomitant use with ASA does not increase the  risk of bleeding." ,
+                                                                                                                  "The treatment with ASA and dipyridamole is available as a combination pill in the US and the EU for the secondary prevention of ischaemic stroke and for prophylaxis of thromboembolism associated with prosthetic heart valves. The combination treatment includes a small 25 mg dose of ASA with 200 mg of dipyridamole.18,19" ;
+                                                      rdfs:label "labelling for acetelysalicylic acid and dipyridamole and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#majorDepressiveDisorder
+:majorDepressiveDisorder rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F33" ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10057840 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Major depression" ;
+                         rdfs:label "major depressive disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#melaena_pathophysiology
+:melaena_pathophysiology rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Melaena ;
+                         mp:references :Ref.17 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Melaena describes dark (tarry), faeces containing partly digested blood, as a result of internal bleeding or the swallowing of blood.17" ;
+                         rdfs:label "melaena pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#muscularRigidity
+:muscularRigidity rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "M25. 60" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10028330 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Muscle rigidity" ;
+                  rdfs:label "muscular rigidity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#neurolepticMalignantSyndrome
+:neurolepticMalignantSyndrome rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G21.0" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10029282 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Neuroleptic malignant syndrome" ;
+                              rdfs:label "neuroleptic malignant syndrome " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#obsessiveCompulsiveDisorder
+:obsessiveCompulsiveDisorder rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F42" ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10029898 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "obsessive compulsive disorder" ;
+                             rdfs:label "obsessive compulsive disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#possible_mechanism_of_hypoglycaemia
+:possible_mechanism_of_hypoglycaemia rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect_Mechanism> ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypoglycaemia ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "These fluoroquinolones may intensify the action of metformin." ;
+                                     rdfs:label "possible mechanism of hypoglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForMetforminWithciprofloxacin/levofloxacin> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypoglycaemia ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Ciprofloxacin ,
+                                                                         :Levofloxacin ,
+                                                                         :Metformin ;
+          mp:supportedByData <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#InfoRegardingHypoglycaemiaTriggeredByMetforminAndciprofloxacin/levofloxacin> ,
+                             <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/10/2018" ;
+          rdfs:label "signal Metformin – ciprofloxacin/levofloxacin and hypoglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForAsaAndDipyridamoleAndMelaena
+:reportsForAsaAndDipyridamoleAndMelaena rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Melaena ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :AcetylsalicylicAcid ,
+                                                                                                                   :Dipyridamole ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :AcetylsalicylicAcid ,
+                                                                                                                       :Dipyridamole ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 30 ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                        rdfs:label "reports for asa and dipyridamole and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForSertralineAndQuetiapineAndNMS
+:reportsForSertralineAndQuetiapineAndNMS rdf:type owl:NamedIndividual ,
+                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :neurolepticMalignantSyndrome ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Quetiapine ,
+                                                                                                                    :Sertraline ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Quetiapine ,
+                                                                                                                        :Sertraline ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 15 ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                         rdfs:label "reports for  sertraline and quetiapine and NMS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForSertralineAndQuetiapineAndSS
+:reportsForSertralineAndQuetiapineAndSS rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :SerotoninSyndrome ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Quetiapine ,
+                                                                                                                   :Sertraline ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Quetiapine ,
+                                                                                                                       :Sertraline ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 29 ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                        rdfs:label "reports for  sertraline and quetiapine and SS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForTacrolimusAndMycophenolicAcidAndDrugLevelIncreased
+:reportsForTacrolimusAndMycophenolicAcidAndDrugLevelIncreased rdf:type owl:NamedIndividual ,
+                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :DrugLevelIncreased ;
+                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :MycophenolicAcid ,
+                                                                                                                             :Tacrolimus ;
+                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 24 ;
+                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                              rdfs:label "reports for tacrolimus/mycophenolic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#seizures
+:seizures rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G40.9" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10039906 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Seizure" ;
+          rdfs:label "seizures" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#sertraline_and_NMS
+:sertraline_and_NMS rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :MentalStatusChanges ,
+                                                                                             :Tremor ,
+                                                                                             :muscularRigidity ,
+                                                                                             :neurolepticMalignantSyndrome ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Sertraline ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The development of neuroleptic malignant syndrome (NMS) has also been reported with SSRIs, including treatment with sertraline. NMS is characterized by similar symptoms to SS, such as altered mental status, muscular rigidity and tremor." ;
+                    rdfs:label "sertraline and NMS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#sertraline_and_SS
+:sertraline_and_SS rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :MentalStatusChanges ,
+                                                                                            :SerotoninSyndrome ,
+                                                                                            :neurolepticMalignantSyndrome ,
+                                                                                            :seizures ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Sertraline ;
+                   mp:references :Ref.7 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Sertraline has been described to cause serotonin syndrome (SS), a potentially life-threatening condition whose signs and symptoms may include mental status changes, seizures, neuromuscular symptoms.7" ;
+                   rdfs:label "sertraline and SS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#transplantRejection
+:transplantRejection rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10044439 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Transplant rejection" ;
+                     rdfs:label "transplant rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Acetelylsalicylic_acid/dipyridamole_usage
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Acetelylsalicylic_acid/dipyridamole_usage> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :IschaemicStroke ,
+                                                                                                                                                                                             :Thromboembolism ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :AcetylsalicylicAcid ,
+                                                                                                                                                                                :Dipyridamole ;
+                                                                                                                 rdfs:label "Acetelylsalicylic acid/dipyridamole usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Acetylsalicylic_acid_–_dipyridamole_and_melaena
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Acetylsalicylic_acid_–_dipyridamole_and_melaena> rdf:type owl:NamedIndividual ,
+                                                                                                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                                                                                                       mp:references :Ref.15 ,
+                                                                                                                                     :Ref.16 ,
+                                                                                                                                     :Ref.17 ,
+                                                                                                                                     :Ref.18 ,
+                                                                                                                                     :Ref.19 ,
+                                                                                                                                     :Ref.20 ,
+                                                                                                                                     :Ref.21 ;
+                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Acetylsalicylic acid (ASA) is broadly used in sporadic or continuous treatments for various indications because of its analgesic, anti-inflammatory, antipyretic and uricosuric actions.15 Dipyridamole, a platelet aggregation inhibitor, is indicated as an adjunct to oral anti-coagulation in the prevention of postoperative thromboembolic complications of cardiac valve replacement.16 Melaena describes dark (tarry), faeces containing partly digested blood, as a result of internal bleeding or the swallowing of blood.17 The treatment with ASA and dipyridamole is available as a combination pill in the US and the EU for the secondary prevention of ischaemic stroke and for prophylaxis of thromboembolism associated with prosthetic heart valves. The combination treatment includes a small 25 mg dose of ASA with 200 mg of dipyridamole.18,19 As of 10 November 2017, there were 30 reports in VigiBase in which the drugs are reported as suspected or interacting with melaena. The number of reports increases to 85 when adding the term gastrointestinal haemorrhage. The US label for the combination pill mentions an “increased risk of bleeding” when using ASA and extended-release dipyridamole.19 The UK SmPC for the combination pill, on the contrary, says that the addition of dipyridamole to ASA does not increase the incidence of bleeding events, when these two substances are combined.18 However, the UK SmPC for ASA (75 mg) mentions that an increased risk of gastrointestinal bleeding is present when concomitant anti-platelet agents such as dipyridamole are used.20 Similarly, the US ASA label also mentions the increased risk when using ASA with anti-coagulants, but no specific mention of dipyridamole is described.15 The inconsistency is strengthened when looking at the dipyridamole labels: the US label does not mention the risk of bleeding and the UK SmPC mentions that the concomitant use with ASA does not increase the risk of bleeding.16,21" ;
+                                                                                                                       rdfs:label "Acetylsalicylic acid – dipyridamole and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ciprofloxacin/levofloxacin_usage
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Ciprofloxacin/levofloxacin_usage> rdf:type owl:NamedIndividual ,
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :BacterialInfection ;
+                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Ciprofloxacin ;
+                                                                                                        rdfs:label "Ciprofloxacin usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#InfoRegardingHypoglycaemiaTriggeredByMetforminAndciprofloxacin/levofloxacin
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#InfoRegardingHypoglycaemiaTriggeredByMetforminAndciprofloxacin/levofloxacin> rdf:type owl:NamedIndividual ,
+                                                                                                                                                            <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypoglycaemia ;
+                                                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Ciprofloxacin ,
+                                                                                                                                                                                                                  :Levofloxacin ,
+                                                                                                                                                                                                                  :Metformin ;
+                                                                                                                                                   mp:references :Ref.1 ,
+                                                                                                                                                                 :Ref.2 ,
+                                                                                                                                                                 :Ref.3 ,
+                                                                                                                                                                 :Ref.4 ,
+                                                                                                                                                                 :Ref.5 ,
+                                                                                                                                                                 :Ref.6 ;
+                                                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The reports support the FDA warning of the potential risk of the interaction between antidiabetic agents and ciprofloxacin or levofloxacin." ,
+                                                                                                                                                                                                               "The warning is present in the FDA labels for the antibacterial agents but not in the label for metformin.1,2,3 When looking at the UK SmPC, there is no mention of the ciprofloxacin or levofloxacin interaction in the metformin label. The warning regarding the interaction is only present in the levofloxacin SmPC.4,5,6 " ;
+                                                                                                                                                   rdfs:label "labelling for hypoglycaemia triggered by metformin and ciprofloxacin/levofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Metformin_–_ciprofloxacin/levofloxacin_and_hypoglycaemia
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Metformin_–_ciprofloxacin/levofloxacin_and_hypoglycaemia> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                                                                                                                mp:references :Ref.1 ,
+                                                                                                                                              :Ref.2 ,
+                                                                                                                                              :Ref.3 ,
+                                                                                                                                              :Ref.4 ,
+                                                                                                                                              :Ref.5 ,
+                                                                                                                                              :Ref.6 ;
+                                                                                                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Metformin is a well-known antidiabetic agent from the group of biguanides. It is believed not to cause hypoglycaemia in monotherapy, but can do so if combined with other oral antidiabetic drugs or insulin.1 Ciprofloxacin and levofloxacin, both antibacterial agents from the group of fluoroquinolones, have not been shown to cause hypoglycaemia when administered alone in the treatment of bacterial infections.2,3 As of 10 November 2017, there were 32 reports where metformin and ciprofloxacin or levofloxacin were co-reported as suspected or interacting related to hypoglycaemic effects in VigiBase. The reports support the FDA warning of the potential risk of the interaction between antidiabetic agents and ciprofloxacin or levofloxacin. These fluoroquinolones may intensify the action of metformin. The warning is present in the FDA labels for the antibacterial agents but not in the label for metformin.1,2,3 When looking at the UK SmPC, there is no mention of the ciprofloxacin or levofloxacin interaction in the metformin label. The warning regarding the interaction is only present in the levofloxacin SmPC." ;
+                                                                                                                                rdfs:label """Metformin & ciprofloxacin/levofloxacin
+and hypoglycaemia""" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sertraline_–_quetiapine_and_serotonin_syndrome
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Sertraline_–_quetiapine_and_serotonin_syndrome> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                                                                                                      mp:references :Ref.10 ,
+                                                                                                                                    :Ref.7 ,
+                                                                                                                                    :Ref.8 ,
+                                                                                                                                    :Ref.9 ;
+                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Sertraline is a selective serotonin reuptake inhibitor (SSRI) indicated for the treatment of depressive episodes, panic disorder, obsessive compulsive disorder, social anxiety disorder and post-traumatic stress disorder.7 Quetiapine is an atypical antipsychotic agent with affinity for brain serotonin and dopamine D1- and D2-receptors. It is indicated for the treatment of schizophrenia, bipolar disorder and as an add-on treatment of major depressive episodes in patients with major depressive disorder.8 Sertraline has been described to cause serotonin syndrome (SS), a potentially life-threatening condition whose signs and symptoms may include mental status changes, seizures, neuromuscular symptoms.7 The development of neuroleptic malignant syndrome (NMS) has also been reported with SSRIs, including treatment with sertraline. NMS is characterized by similar symptoms to SS, such as altered mental status, muscular rigidity and tremor. As of 10 November 2017, there were 29 reports where sertraline and quetiapine were co-reported as suspected or interacting drugs related to SS, and 15 reports for NMS. The risk of developing SS or NMS increases when concomitant antipsychotics such as quetiapine are administrated to patients using sertraline, as described in the UK SmPC for sertraline.9 The antipsychotic quetiapine on its own has also been reported to cause NMS.10 Interestingly, no mention of an increased risk of SS is present in neither of the labels for quetiapine when used in combination with sertraline.8,10" ;
+                                                                                                                      rdfs:label "Sertraline – quetiapine and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Tacrolimus_–_mycophenolic_acid_and_drug_level_increased
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#Tacrolimus_–_mycophenolic_acid_and_drug_level_increased> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                                                                                                               mp:references :Ref.11 ,
+                                                                                                                                             :Ref.12 ,
+                                                                                                                                             :Ref.13 ,
+                                                                                                                                             :Ref.14 ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Tacrolimus and mycophenolic acid are highly potent immunosuppressive agents, indicated for the prophylaxis of acute transplant rejection.11,12 Mycophenolic acid is indicated in combination with ciclosporin and corticosteroids.13 As of 10 November 2017, there were 24 reports in VigiBase in which tacrolimus and mycophenolic acid were reported as suspected or interacting drugs with respect to the adverse event “drug level increased”. In the UK SmPC for mycophenolic acid, it is mentioned that the drug exposure of mycophenolic acid may increase when administered concurrently with tacrolimus (compared to when it is administered with ciclosporin).13 It is also stated that clinicians should note this increase and adjust the dose of mycophenolic acid according to the situation. However, the UK SmPC for tacrolimus does not mention this interaction.14 On the other hand, this interaction is given by the FDA for tacrolimus but not for mycophenolic acid." ;
+                                                                                                                               rdfs:label "Tacrolimus – mycophenolic acid and drug level increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForAsaAnddipyridamole,melaena,GastrointestinalHaemorrhage
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForAsaAnddipyridamole,melaena,GastrointestinalHaemorrhage> rdf:type owl:NamedIndividual ,
+                                                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :GastrointestinalHaemorrhage ,
+                                                                                                                                                                                                                 :Melaena ;
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :AcetylsalicylicAcid ,
+                                                                                                                                                                                                                   :Dipyridamole ;
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :AcetylsalicylicAcid ,
+                                                                                                                                                                                                                       :Dipyridamole ;
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 85 ;
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                                        rdfs:label "reports for asa/ dipyridamole/ melaena and gastrointestinal haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForMetforminWithciprofloxacin/levofloxacin
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForMetforminWithciprofloxacin/levofloxacin> rdf:type owl:NamedIndividual ,
+                                                                                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypoglycaemia ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Ciprofloxacin ,
+                                                                                                                                                                                                    :Levofloxacin ,
+                                                                                                                                                                                                    :Metformin ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Ciprofloxacin ,
+                                                                                                                                                                                                        :Levofloxacin ,
+                                                                                                                                                                                                        :Metformin ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 32 ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                         rdfs:label "reports for metformin  with ciprofloxacin/levofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#selectiveSerotoninReuptakeInhibitor(SSRI)
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#selectiveSerotoninReuptakeInhibitor(SSRI)> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N06AB" ;
+                                                                                                                 rdfs:label "selective serotonin reuptake inhibitor (SSRI)" ,
+                                                                                                                            "selectiveSerotoninReuptakeInhibitor(SSRI)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Acetylsalicylic_acid_–_dipyridamole_and_melaena> rdf:type owl:NamedIndividual ,
+                                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :reportsForAsaAndDipyridamoleAndMelaena ,
+                                                                                                                                                                                                                 <http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#reportsForAsaAnddipyridamole,melaena,GastrointestinalHaemorrhage> ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :GastrointestinalHaemorrhage ,
+                                                                                                                                                                                                       :Melaena ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :AcetylsalicylicAcid ,
+                                                                                                                                                                                                             :Dipyridamole ;
+                                                                                                                              mp:supportedByData :infoForAcetelysalicylicAcidAndDipyridamoleAndMelaena ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/10/2018" ;
+                                                                                                                              rdfs:label "signal Acetylsalicylic acid – dipyridamole and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Sertraline_–_quetiapine_and_serotonin_syndrome
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Sertraline_–_quetiapine_and_serotonin_syndrome> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :reportsForSertralineAndQuetiapineAndNMS ,
+                                                                                                                                                                                                                :reportsForSertralineAndQuetiapineAndSS ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :SerotoninSyndrome ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Quetiapine ,
+                                                                                                                                                                                                            :Sertraline ,
+                                                                                                                                                                                                            :neurolepticMalignantSyndrome ;
+                                                                                                                             mp:supportedByData :InfoForQuietiapineAndSertraline ,
+                                                                                                                                                :sertraline_and_NMS ,
+                                                                                                                                                :sertraline_and_SS ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/10/2018" ;
+                                                                                                                             rdfs:label "signal Sertraline – quetiapine and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Tacrolimus_–_mycophenolic_acid_and_drug_level_increased
+<http://purl.org/OpenPVSignal/Signals/2018_4_incosistent_labeling.owl#signal_Tacrolimus_–_mycophenolic_acid_and_drug_level_increased> rdf:type owl:NamedIndividual ,
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :reportsForTacrolimusAndMycophenolicAcidAndDrugLevelIncreased ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :DrugLevelIncreased ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :MycophenolicAcid ,
+                                                                                                                                                                                                     :Tacrolimus ;
+                                                                                                                                      mp:supportedByData :UK_SmPC_for_mycophenolic_acid ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/10/2018" ;
+                                                                                                                                      rdfs:label "signal Tacrolimus – mycophenolic acid and drug level increased" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

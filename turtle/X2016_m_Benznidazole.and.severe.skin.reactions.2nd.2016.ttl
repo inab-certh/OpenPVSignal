@@ -1,0 +1,522 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions> .
+
+<http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions> rdf:type owl:Ontology ;
+                                                                                  owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                              mp: ;
+                                                                                  rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255494/"^^xsd:anyURI ;
+                                                                                  rdfs:label "Benznidazole and severe skin reactions"^^xsd:Literal ;
+                                                                                  owl:versionInfo "draft-v0.95-20211025"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#AmericanTrypanosomiasis
+:AmericanTrypanosomiasis rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ,
+                                  OpenPVSignal:Indication ;
+                         OpenPVSignal:refers_to_adverse_effect :cardiomyopathy ,
+                                                               :megacolon ,
+                                                               :megaoesophagus ;
+                         OpenPVSignal:has_ICD_code "B57" ;
+                         OpenPVSignal:has_MedDRA_code 10001935 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "American trypanosomiasis" ;
+                         rdfs:label "American Trypanosomiasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#American_Trypanosomiasis_pathophysiology
+:American_Trypanosomiasis_pathophysiology rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Free_text_reporting_element ;
+                                          OpenPVSignal:refers_to_adverse_effect :AmericanTrypanosomiasis ;
+                                          mp:references :Ref.1 ;
+                                          OpenPVSignal:has_content "The acute stage often goes unnoticed as it manifests with unspecific symptoms, if any. In the chronic stage, less than half of the patients will develop life-threatening cardiomyopathy and digestive disease (megaoesophagus and megacolon).1" ;
+                                          rdfs:label "American Trypanosomiasis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Benznidazole_and_severe_skin_reactions
+:Benznidazole_and_severe_skin_reactions rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                        OpenPVSignal:refers_to_author :Dr_Pia_Caduff_Janosa ;
+                                        OpenPVSignal:refers_to_signal :pvSignal ;
+                                        mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                        OpenPVSignal:has_creation_date "18/05/2017" ;
+                                        OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                        rdfs:label "Benznidazole and severe skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Conclusion
+:Conclusion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Conclusion ;
+            OpenPVSignal:has_content "Due to the scarce information available on medications used for neglected tropical diseases, we would like to signal this association." ;
+            rdfs:label "Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Dr_Pia_Caduff_Janosa
+:Dr_Pia_Caduff_Janosa rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Author ;
+                      OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                      OpenPVSignal:has_first_name "Pia" ;
+                      OpenPVSignal:has_last_name "Caduff-Janosa" ;
+                      rdfs:label "Dr Pia Caduff Janosa" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#IC025ForBenznidazoleAndErythemaMultiforme
+:IC025ForBenznidazoleAndErythemaMultiforme rdf:type owl:NamedIndividual ,
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                           OpenPVSignal:refers_to_adverse_effect :erythema_multiforme ;
+                                           OpenPVSignal:refers_to_drug :benznidazole ;
+                                           OpenPVSignal:has_value 0.09 ;
+                                           rdfs:label "IC025 for benznidazole and erythema multiforme" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Introduction
+:Introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ;
+              OpenPVSignal:has_content "Benznidazole is a nitroimidazole derivative indicated for the treatment of Chagas disease (American Trypanosomiasis), a tropical protozoan infection with Trypanosoma cruzi endemic in Central and South America. The drug shows good efficacy in the acute stage of the disease but limited therapeutic success in chronic disease. The acute stage often goes unnoticed as it manifests with unspecific symptoms, if any. In the chronic stage, less than half of the patients will develop life-threatening cardiomyopathy and digestive disease (megaoesophagus and megacolon).1 Drugs available for treatment are nifurtimox and benznidazole. Commercial preparations of benznidazole have been available in Central and Latin America since 2012, ending a long period of shortage after the first commercialized products were discontinued in 1998, more than 25 years after their appearance on the market. The product information leaflet of Abarax®, dated 2012, lists mostly benign cutaneous eruptions among possible side effects, with the recommendation to discontinue treatment if fever and/or adenopathy occur.2 Severe skin reactions such as Stevens-Johnson syndrome (SJS) or toxic epidermal necrolysis (TEN) are not listed. Several publications on the treatment of Chagas disease document rash as a frequent adverse reaction to benznidazole without any mention of SJS or TEN." ;
+              rdfs:label "Introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.3 ;
+                        OpenPVSignal:has_content "A possible causal association for severe skin reactions and benznidazole is further supported by the fact that SJS and TEN have been associated with imidazole derivatives, and are listed in the Summary of Product Characteristics of metronidazole.3" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Mechanism_of_benznidazole
+:Mechanism_of_benznidazole rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Mechanism ;
+                           OpenPVSignal:has_content "Benznidazole is a nitroimidazole derivative indicated for the treatment of Chagas disease (American Trypanosomiasis), a tropical protozoan infection with Trypanosoma cruzi endemic in Central and South America. The drug shows good efficacy in the acute stage of the disease but limited therapeutic success in chronic disease." ;
+                           rdfs:label "Mechanism of benznidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#PIL_of_Abarax
+:PIL_of_Abarax rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Structured_Product_Labels_information ,
+                        OpenPVSignal:Warning_Information ;
+               OpenPVSignal:refers_to_adverse_effect :adenopathy ,
+                                                     :cutaneousEruptions ,
+                                                     :fever ;
+               OpenPVSignal:refers_to_drug :benznidazole ;
+               mp:references :Ref.2 ;
+               OpenPVSignal:has_content "The product information leaflet of Abarax®, dated 2012, lists mostly benign cutaneous eruptions among possible side effects, with the recommendation to discontinue treatment if fever and/or adenopathy occur.2 Severe skin reactions such as Stevens-Johnson syndrome (SJS) or toxic epidermal necrolysis (TEN) are not listed." ;
+               rdfs:label "PIL of Abarax" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Publications_for_Chagas_disease
+:Publications_for_Chagas_disease rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :rash ;
+                                 OpenPVSignal:refers_to_drug :benznidazole ;
+                                 OpenPVSignal:has_content "Several publications on the treatment of Chagas disease document rash as a frequent adverse reaction to benznidazole without any mention of SJS or TEN." ;
+                                 rdfs:label "Publications for Chagas disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Centers for disease control and prevention. Available from: http://www.cdc.gov/dpdx/ trypanosomiasisAmerican/index.html. Accessed: 30 September 2015." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Laboratorio Elea. Available from: http://www.elea.com/ uploads/Modules/Productos/abarax-501340- 00.pdf. Accessed: 30 September 2015." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of Product Characteristics for Metronidazole. Available from: http://www.medicines.org.uk/ emc/medicine/30191. Accessed: 30 September 2015." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "The combination benznidazole and the WHO-ART preferred term erythema multiforme (EM) was highlighted in the WHO Global ICSR Database, VigiBase®, as standing out statistically (IC025 0.09). A total of eight reports were analysed after including also reports with SJS and TEN. Two reports originate from Argentina, the other six from Spain (one patient explicitly reported to be of Latin-American origin), and refer to patients (seven women, one man) between 16 and 55 years of age (median 32.5 years). Three cases reported erythema multiforme (one erythema multiforme major), three SJS and two TEN. Benznidazole was the only suspected medication reported in all but one case, where posaconazole had been administered concomitantly for seven days. Time to onset could not be calculated in one report and varied between 8 and 46 days in the remaining seven reports (median time to onset 28 days). Benznidazole was discontinued by all patients and four were reported to have recovered, one with sequelae. One further patient was recovering at the time of reporting, two are reported as not recovered, and in one case the outcome was unknown. In one report ‘Drug Reaction with Eosinophilia and Systemic Symptoms’ (DRESS syndrome) was co-reported approximately three weeks before developing SJS under treatment, and the patient, who was concomitantly treated with posaconazole for seven days, also developed hepatitis and neutropenia (from which she recovered). Both hepatitis and neutropenia are known side effects of azole anti-infective." ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#SmPC_of_metronidazole
+:SmPC_of_metronidazole rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001197 ,
+                                OpenPVSignal:Structured_Product_Labels_information ,
+                                OpenPVSignal:Warning_Information ;
+                       OpenPVSignal:refers_to_adverse_effect :Stevens-JohnsonSyndrome ,
+                                                             :toxicEpidermalNecrolysis ;
+                       OpenPVSignal:refers_to_drug :metronidazole ;
+                       mp:references :Ref.3 ;
+                       OpenPVSignal:has_content "A possible causal association for severe skin reactions and benznidazole is further supported by the fact that SJS and TEN have been associated with imidazole derivatives, and are listed in the Summary of Product Characteristics of metronidazole.3" ;
+                       rdfs:label "SmPC of metronidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Stevens-JohnsonSyndrome
+:Stevens-JohnsonSyndrome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "L51.1" ;
+                         OpenPVSignal:has_MedDRA_code 10042033 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Stevens-Johnson syndrome" ;
+                         rdfs:label "Stevens- Johnson syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#Upsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Upsalla Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#adenopathy
+:adenopathy rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R59.9" ;
+            OpenPVSignal:has_MedDRA_code 10025197 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Lymphadenopathy" ;
+            rdfs:label "adenopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#benznidazole
+:benznidazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :Mechanism_of_benznidazole ;
+              OpenPVSignal:has_ATC_code "P01CA02 " ;
+              rdfs:label "benznidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#cardiomyopathy
+:cardiomyopathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10007636 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiomyopathy" ;
+                rdfs:label "cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#cutaneousEruptions
+:cutaneousEruptions rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "R21" ;
+                    OpenPVSignal:has_MedDRA_code 10040841 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Skin eruption" ;
+                    rdfs:label "cutaneous eruptions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#erythema_multiforme
+:erythema_multiforme rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10015218 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Erythema multiforme" ;
+                     rdfs:label "erythema multiforme" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#megacolon
+:megacolon rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10027110 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Megacolon" ;
+           rdfs:label "megacolon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#megaoesophagus
+:megaoesophagus rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10056100 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Megaoesophagus" ;
+                rdfs:label "megaoesophagus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#metronidazole
+:metronidazole rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "G01AF01 " ;
+               rdfs:label "metronidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#nifurtimox
+:nifurtimox rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "P01CC01 " ;
+            rdfs:label "nifurtimox" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#overallReportsForErythemaMultiforeAndBenznidazole
+:overallReportsForErythemaMultiforeAndBenznidazole rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:refers_to_adverse_effect :Stevens-JohnsonSyndrome ,
+                                                                                         :erythema_multiforme ,
+                                                                                         :toxicEpidermalNecrolysis ;
+                                                   OpenPVSignal:refers_to_drug :benznidazole ;
+                                                   OpenPVSignal:time_to_onset :timeToOnset ;
+                                                   OpenPVSignal:has_count 8 ;
+                                                   OpenPVSignal:has_count_of_men 1 ;
+                                                   OpenPVSignal:has_count_of_women 7 ;
+                                                   OpenPVSignal:has_max_age 55 ;
+                                                   OpenPVSignal:has_median_age "32.5"^^xsd:float ;
+                                                   OpenPVSignal:has_min_age 16 ;
+                                                   OpenPVSignal:refers_to_challenge_type "Dechallenge" ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "overall reports for benznidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#posaconazole
+:posaconazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J02AC04 " ;
+              rdfs:label "posaconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :American_Trypanosomiasis_pathophysiology ,
+                                                   :Conclusion ,
+                                                   :Introduction ,
+                                                   :ReportsInVigibase ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForBenznidazoleAndErythemaMultiforme ,
+                                                          :overallReportsForErythemaMultiforeAndBenznidazole ,
+                                                          :reportsFromArgentina ,
+                                                          :reportsFromSpain ,
+                                                          :reportsWithBenznidazoleAsTheOnlySuspect ,
+                                                          :reportsWithErythemaMultiforme ,
+                                                          :reportsWithNoRecovery ,
+                                                          :reportsWithPosaconazoleAsAConcomitantDrug ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithRecoveryAsOutcome ,
+                                                          :reportsWithStevenJohnsonSyndrome ,
+                                                          :reportsWithToxicEpidermalNecrolysis ,
+                                                          :reports_with_recovering ,
+                                                          :reports_with_recovery_with_sequelae_as_outcome ,
+                                                          :reports_with_unknown_outcome ;
+          OpenPVSignal:refers_to_adverse_effect :Stevens-JohnsonSyndrome ,
+                                                :erythema_multiforme ,
+                                                :toxicEpidermalNecrolysis ;
+          OpenPVSignal:refers_to_drug :benznidazole ;
+          OpenPVSignal:refers_to_primary_suspect_drug :benznidazole ;
+          mp:supportedByData :PIL_of_Abarax ,
+                             :Publications_for_Chagas_disease ,
+                             :SmPC_of_metronidazole ;
+          OpenPVSignal:initially_identified_on "18/05/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#rash
+:rash rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      rdfs:label "rash" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsFromArgentina
+:reportsFromArgentina rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Argentina" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports from Argentina" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsFromSpain
+:reportsFromSpain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                  OpenPVSignal:has_count 6 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithBenznidazoleAsTheOnlySuspect
+:reportsWithBenznidazoleAsTheOnlySuspect rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                         OpenPVSignal:refers_to_primary_suspect_drug :benznidazole ;
+                                         OpenPVSignal:has_count 7 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports with benznidazole as the only suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithErythemaMultiforme
+:reportsWithErythemaMultiforme rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                               OpenPVSignal:refers_to_adverse_effect :erythema_multiforme ;
+                               OpenPVSignal:has_count 3 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports with erythema multiforme" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithNoRecovery
+:reportsWithNoRecovery rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                       OpenPVSignal:has_count 2 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                       rdfs:label "reports with no recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithPosaconazoleAsAConcomitantDrug
+:reportsWithPosaconazoleAsAConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                           OpenPVSignal:refers_to_concomitant_drug :posaconazole ;
+                                           OpenPVSignal:has_count 1 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "reports with posaconazole as a concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithRecoveryAsOutcome
+:reportsWithRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                              OpenPVSignal:has_count 3 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                              rdfs:label "reports with recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithStevenJohnsonSyndrome
+:reportsWithStevenJohnsonSyndrome rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                  OpenPVSignal:refers_to_adverse_effect :Stevens-JohnsonSyndrome ;
+                                  OpenPVSignal:has_count 3 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with steven johnson syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reportsWithToxicEpidermalNecrolysis
+:reportsWithToxicEpidermalNecrolysis rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                     OpenPVSignal:refers_to_adverse_effect :toxicEpidermalNecrolysis ;
+                                     OpenPVSignal:has_count 2 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports with toxic epidermal necrolysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reports_with_recovering
+:reports_with_recovering rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                         rdfs:label "reports with recovering" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reports_with_recovery_with_sequelae_as_outcome
+:reports_with_recovery_with_sequelae_as_outcome rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                                                OpenPVSignal:has_count 1 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+                                                rdfs:label "reports with recovery with sequelae as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#reports_with_unknown_outcome
+:reports_with_unknown_outcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :overallReportsForErythemaMultiforeAndBenznidazole ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                              rdfs:label "reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#timeToOnset
+:timeToOnset rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2006/time#DurationDescription> ;
+             OpenPVSignal:has_content "Time to onset could not be calculated in one report and varied between 8 and 46 days in the remaining seven reports (median time to onset 28 days). " ;
+             rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#toxicEpidermalNecrolysis
+:toxicEpidermalNecrolysis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "L51.2" ;
+                          OpenPVSignal:has_MedDRA_code 10044223 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Toxic epidermal necrolysis" ;
+                          rdfs:label "toxic epidermal necrolysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#usageOfBenznidazole
+:usageOfBenznidazole rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :AmericanTrypanosomiasis ;
+                     OpenPVSignal:refers_to_drug :benznidazole ;
+                     rdfs:label "usage of benznidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_2_benznidazole_severe_skin_reactions#usage_of_nifurtimox
+:usage_of_nifurtimox rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :AmericanTrypanosomiasis ;
+                     OpenPVSignal:refers_to_drug :nifurtimox ;
+                     rdfs:label "usage of nifurtimox" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,24 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Test Case: A "Drug" instance has to be identifiable with an ATC code and a label
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Drug ;
+sh:and (
+	[sh:property[
+		sh:path OpenPVSignal:has_ATC_code ;	
+		sh:minCount 1;
+		sh:severity sh:Violation ; 
+		]
+	]
+	[sh:property[
+		sh:path rdfs:label ;	
+		sh:minCount 1;
+		sh:severity sh:Violation ;
+		] 
+]).

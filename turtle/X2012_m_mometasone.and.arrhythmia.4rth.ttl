@@ -1,0 +1,1863 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia> .
+
+<http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia> rdf:type owl:Ontology ;
+                                                                     owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                     rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255525/"^^xsd:anyURI ;
+                                                                     rdfs:label "Mometasone and Arrhythmia"^^xsd:Literal ;
+                                                                     owl:versionInfo "draft-v0.95-20211013"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#AEs_of_dry_powder_inhalation_momesatone
+:AEs_of_dry_powder_inhalation_momesatone rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Warning_Information ;
+                                         OpenPVSignal:refers_to_adverse_effect :dysphonia ,
+                                                                               :headache ,
+                                                                               :hypersensitivity ,
+                                                                               :oralCandidiasis ,
+                                                                               :pharyngitis ;
+                                         OpenPVSignal:refers_to_drug :mometasone ;
+                                         mp:references :Ref.3 ;
+                                         OpenPVSignal:refers_to_form_of_intake "inhaled" ;
+                                         rdfs:label "AEs of dry powder inhalation momesatone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#AEs_of_nasal_spray_momesatone
+:AEs_of_nasal_spray_momesatone rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :epistaxis ,
+                                                                     :headache ,
+                                                                     :hypersensitivity ,
+                                                                     :taste_and_smell_disturbances ;
+                               OpenPVSignal:refers_to_drug :mometasone ;
+                               mp:references :Ref.2 ;
+                               OpenPVSignal:refers_to_form_of_intake "nasal" ;
+                               rdfs:label "AEs of nasal spray momesatone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#AEs_of_topical_momesatone
+:AEs_of_topical_momesatone rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_adverse_effect :acneiform_reaction ,
+                                                                 :burning_skin ,
+                                                                 :pruritus ,
+                                                                 :skin_atrophy ,
+                                                                 :tingling_skin ;
+                           OpenPVSignal:refers_to_drug :mometasone ;
+                           mp:references :Ref.1 ;
+                           OpenPVSignal:refers_to_form_of_intake "topical (skin)" ;
+                           rdfs:label "AEs of topical momesatone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Corticosteroids
+:Corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_mechanism :proposedAEMechanismForMometasone ;
+                 OpenPVSignal:has_ATC_code "H02 " ;
+                 rdfs:label "Corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :Ref.11 ;
+                         OpenPVSignal:has_content """The existing literature with regard to corticosteroid use and arrhythmia is rather limited and consists of some case reports that refer to systemic methylprednisolone but not to inhaled corticosteroids. There has been one literature report of AF in association with fluticasone proprionate by the inhalation route and case control studies have shown an increased risk of AF in association with oral corticosteroids. A postulated mechanism by which corticosteroids can cause heart rate disorders involves potassium efflux in cardiac cells.11
+It is generally accepted that systemic effects of corticosteroids are considerably less likely with inhaled or intranasal administration but it is possible that these effects may occur in susceptible individuals.
+However, there have been no reports in the literature implicating arrhythmias for mometasone. Case reports in VigiBase suggest that there is a signal for the association of mometasone and arrhythmia. Most of the cases have mometasone as the sole suspected drug and a positive dechallenge, supporting a signal. In the few reports that describe the time to onset, it is consistent with a drug-induced effect. Importantly, in four of the cases, the reaction recurred on rechallenge.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Drugs_implicated_in_arrhythmias
+:Drugs_implicated_in_arrhythmias rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_class :antiarrhythmicDrugs ,
+                                                              :anticholinergicDrugs ,
+                                                              :antihistamines ,
+                                                              :methylxanthines ,
+                                                              :sympathomimetics ;
+                                 OpenPVSignal:refers_to_drug :cisapride ,
+                                                             :erythromycin ;
+                                 mp:references :Ref.5 ;
+                                 OpenPVSignal:has_content "A wide range of drugs has been implicated in the development of arrhythmias including antihistamines, sympathomimetics, methylxanthines, anticholinergic drugs, antiarrhythmic drugs and a variety of other drugs including cisapride and erythromycin.5" ;
+                                 rdfs:label "Drugs implicated in arrhythmias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ian_Boyd
+:Ian_Boyd rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Author ;
+          OpenPVSignal:has_first_name "Ian" ;
+          OpenPVSignal:has_last_name "Boyd" ;
+          rdfs:label "Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ;
+                     OpenPVSignal:has_content """Mometasone is a synthetic corticosteroid with anti- inflammatory, antipruritic and vasoconstrictive properties.1 It is available in three dosage forms: topical, nasal spray and dry powder inhalation.
+The topical form is presented as a cream or lotion and is indicated for the short term relief of inflammatory and pruritic manifestations of corticosteroid responsive dermatoses, such as psoriasis and atopic dermatitis. Common adverse effects (AEs) of the topical preparations include skin reactions such as pruritus, burning, tingling, signs of skin atrophy and acneiform reactions.1 Other local reactions have also been reported less commonly. The nasal spray is available for treatment of allergic rhinitis, nasal polyps and rhinosinusitis. Systemic absorption is possible from the nasal spray although bioavailability is regarded as low. Common AEs of the nasal preparation include headache, epistaxis and nasal reactions.
+Other AEs include rare hypersensitivity reactions and disturbances of taste and smell.2 The dry powder inhalation is available for treatment of asthma, and oral candidiasis is a very common AE. Other common AEs include pharyngitis, headache and dysphonia. There is also potential for hypersensitivity reactions.3
+Arrhythmia refers to disturbances in normal cardiac rhythm. It includes a large and heterogeneous group of conditions which arise from abnormal electrical activity in the heart. Arrhythmias can range from minor, common \"skipped beats\" to life-threatening conditions. In general, arrhythmia can refer to disturbances in rate or rhythm but simple disturbances in rate such as bradychardia or tachycardia would usually be coded as such. Arrhythmias may be caused by many different factors including coronary artery disease, electrolyte imbalance, heart muscle disorders and as indicated above, may occur in \"normal, healthy\" hearts.4 A wide range of drugs has been implicated in the development of arrhythmias including antihistamines, sympathomimetics, methylxanthines, anticholinergic drugs, antiarrhythmic drugs and a variety of other drugs including cisapride and erythromycin.5""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Warning_Information ;
+           OpenPVSignal:refers_to_drug :mometasone ;
+           mp:references :Ref.2 ;
+           OpenPVSignal:has_content "The product literature for mometasone does not refer to arrhythmia. As noted above, bioavailability is regarded as low from the nasal spray which has been implicated with the majority of the reports. The product information also notes that systemic effects were not detected in adults, adolescents or children following the administration of mometasone aqueous nasal spray.2" ;
+           rdfs:label "Product info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.10 ,
+                                      :Ref.11 ,
+                                      :Ref.2 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """The product literature for mometasone does not refer to arrhythmia. As noted above, bioavailability is regarded as low from the nasal spray which has been implicated with the majority of the reports.
+The product information also notes that systemic effects were not detected in adults, adolescents or children following the administration of mometasone aqueous nasal spray.2 Oteri and colleagues reported the development of a paroxysmal atrial fibrillation (AF) with fast ventricular response after the administration of a different inhaled corticosteroid, fluticasone propionate, to a 15 year old boy, which resolved after discontinuation of the drug. The patient had a history of allergic asthma and had been treated for several years with cetirizine and inhaled mometasone to treat seasonal allergic rhinitis.7 The authors noted that corticosteroid-induced AF had previously been reported in three case control studies.8-10 Huerta et al. reported a twofold increased risk of AF among users of oral corticosteroids compared with nonusers.
+Conversely, no increased risk was found among users of inhaled corticosteroids. The results of a large population-based case control study, conducted in Denmark, showed an almost doubled risk of AF or flutter associated with systemic corticosteroid use, with respect to nonuse, in patients with and without chronic obstructive pulmonary disease or asthma and cardiovascular diseases.9 Van der Hooft also reported an increase in the risk of AF among users of systemic corticosteroids in a study which involved 385 cases of AF from the Netherlands.10 It has been postulated that high doses of corticosteroids mediate potassium efflux via a direct effect on the cell membrane, which may induce arrhythmogenesis.11""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#MechanismOfMometasone
+:MechanismOfMometasone rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       mp:references :Ref.1 ;
+                       OpenPVSignal:has_content "Mometasone is a synthetic corticosteroid with anti- inflammatory, antipruritic and vasoconstrictive properties.1" ;
+                       rdfs:label "Mechanism of mometasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Mometasone_and_Arrhythmia
+:Mometasone_and_Arrhythmia rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                           OpenPVSignal:refers_to_author :Ian_Boyd ;
+                           OpenPVSignal:refers_to_signal :pvSignal ;
+                           OpenPVSignal:has_creation_date "01/08/2012" ;
+                           OpenPVSignal:has_overall_conclusion "causal association" ;
+                           rdfs:label "Mometasone and Arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#OteriReport
+:OteriReport rdf:type owl:NamedIndividual ,
+                      obo:OAE_0001197 ;
+             OpenPVSignal:refers_to_adverse_effect :paroxysmalAtrialFibrillation ;
+             OpenPVSignal:refers_to_drug :mometasone ;
+             mp:references :Ref.10 ,
+                           :Ref.7 ,
+                           :Ref.8 ,
+                           :Ref.9 ;
+             OpenPVSignal:has_content "Oteri and colleagues reported the development of a paroxysmal atrial fibrillation (AF) with fast ventricular response after the administration of a different inhaled corticosteroid, fluticasone propionate, to a 15 year old boy, which resolved after discontinuation of the drug. The patient had a history of allergic asthma and had been treated for several years with cetirizine and inhaled mometasone to treat seasonal allergic rhinitis.7 The authors noted that corticosteroid-induced AF had previously been reported in three case control studies.8-10 " ;
+             rdfs:label "Oteri report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 12 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 75 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 41 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 64 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 25 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 57 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 38 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 74 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 79 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 64 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 57 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 33 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "TGA. Product Information for Elocon, 14 February 2012. URL: https://www.ebs.tga.gov.au/ebs/picmi/picmir epository.nsf/pdf?OpenAgent&id=CP-2010-PI- 06036-/Accessed: 23 March 2012." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "van der Hooft CS, Heeringa J, Brusselle GG, et al. Corticosteroids and the risk of atrial fibrillation. Arch Intern Med. 2006; 166:1016-1020." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Fujimoto S, Kondoh H, Yamamoto Y, Hisanaga S, Tanaka K. Holter electrocardiogram monitoring in nephrotic patients during methylprednisolone pulse therapy. Am J Nephrol 1990; 10: 231—236." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "TGA. Product Information for Nasonex Aqueous Nasal Spray, 25 January 2012. URL: https://www.ebs.tga.gov.au/ebs/picmi/picmir epository.nsf/pdf?OpenAgent&id=CP-2010-PI- 06105-3 Accessed: 23 March 2012." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Product Information for Asmanex Twisthaler. URL: http://www.medicines.org.uk/EMC/medicine/ 24365/SPC/Asmanex+Twisthaler+200+micro grams+In halation+Powder/#INDICATIONS Accessed 26 March 2012." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "MedicineNet.com. Heart Disease and Abnormal Heart Rhythm (Arrhythmia). URL: http://www.medicinenet.com/arrhythmia_irre gular_heartbeat/article.html Accessed 23 March 2012." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wooten JM. Drug-induced arrhythmias. Modern Medicine, 2002. URL: http://www.modernmedicine.com/modernme dicine/Assessment/Drug-induced- arrhythmias/ArticleStandard/Article/detail/11 5915#1/ Accessed 23 March 2012." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Caster O, Norén GN, Madigan D, Bate A. Large-Scale Regression-Based Pattern Discovery: The Example of Screening the WHO Global Drug Safety Database. Statistical Analysis and Data Mining 2010; 3: 197-208." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Oteri A, Bussolini A, Sacchi M, Clementi E, Zuccotti GV, Radice S. A case of atrial fibrillation induced by inhaled fluticasone propionate. Pediatrics 2010; 126: e1237- e1241." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Huerta C, Lanes SF, Garcia Rodriguez LA. Respiratory medications and the risk of cardiac arrhythmias. Epidemiology 2005; 16: 360-366." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Christiansen CF, Christensen S, Mehnert F, Cummings SR, Chapurlat RD, Sorensen HT. Glucocorticoid use and risk of atrial fibrillation or flutter: a population-based, case-control study. Arch Intern Med. 2009; 169: 1677- 1683." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :commentsPatient1 ;
+         OpenPVSignal:refers_to_adverse_effect :anginaPectoris ,
+                                               :arrhythmiaIncident ;
+         OpenPVSignal:refers_to_concomitant_drug :methylphenidate ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "negative rechallenge - condition not appeared" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :commentsPatient10 ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                :hypokalemia ,
+                                                :tachycardia ;
+          OpenPVSignal:refers_to_concomitant_drug :amlodipine ,
+                                                  :ergocalciferol ,
+                                                  :estradiol ,
+                                                  :mometasone ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tramadol ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                                :cortisolDecreased ,
+                                                :depression ,
+                                                :fatigue ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :commentsPatient12 ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                                :malaise ,
+                                                :palpitations ;
+          OpenPVSignal:refers_to_concomitant_drug :calcium ,
+                                                  :magnesium ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#plantago_ovata_/_ispaghula_husk> ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                                :extrasystoles ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :commentsPatient15 ;
+          OpenPVSignal:refers_to_adverse_effect :ageusia ,
+                                                :agitation ,
+                                                :anxiety ,
+                                                :arrhythmiaIncident ,
+                                                :dysgeusia ,
+                                                :hypoesthesia ,
+                                                :insomnia ,
+                                                :tachycardia ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :commentsPatient3 ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                               :dizziness ,
+                                               :headache ,
+                                               :vertigo ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :brimonidine ,
+                                                 :digoxin ,
+                                                 :fexofenadine ,
+                                                 :glimepiride ,
+                                                 :latanoprost ,
+                                                 :metformin ,
+                                                 :phsyllium_seed_husk ,
+                                                 :ranitidine ,
+                                                 :verapamil ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :commentsPatient4 ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                               :atrioventricularBlock ,
+                                               :epistaxis ,
+                                               :hemoptysis ,
+                                               :palpitations ,
+                                               :pneumothorax ,
+                                               :sickSinusSyndrome ,
+                                               :tachycardia ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :calcium ,
+                                                 :ergocalciferol ,
+                                                 :famotidine ,
+                                                 :lansoprazole ,
+                                                 :levothyroxine ,
+                                                 :metoprolol ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#fluticasone_propionate_/_salmeterol_xinafoate> ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :oxygen ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                               :chestPain ,
+                                               :hypertension ,
+                                               :vertigo ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :tacalcitol ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                               :heartDisorder ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :commentsPatient7 ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaAtrial ,
+                                               :extrasystoles ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ,
+                                               :ecgAbnormal ,
+                                               :extrasystoles ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arrhythmiaAtrial ,
+                                               :extrasystoles ,
+                                               :palpitations ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.6 ;
+                   OpenPVSignal:has_content """As of March 2012 there are 15 individual case safety reports (ICSRs) of arrhythmia and two ICSRs of atrial arrhythmia in association with mometasone in the WHO Global ICSR database,VigiBaseTM. One report was excluded from the analysis as it was a neonatal with congenital heart disease which leaves 16 reports in total. It should be noted that these associations were generated using a different signal identifying process which relies on the Lasso Logistic Regression value and does not require the IC025 to be positive.6 The reports were submitted from the US (13 cases), the UK, Sweden and Switzerland (one case13 each). The patients ranged in age from 12 to 79 years with a median of 57 years in the 12 cases in which this information was provided. In the 14 cases which provided the information, the gender distribution was relatively even with 6 males and 8 females. Noteworthy is that six reports were consumer reports. Out of the rest of the reports one had no reporter type listed and nine reports came from physicians, pharmacists and other health care professionals. Mometasone was the only drug suspected in 13 cases and only three of these listed concomitant drugs. One of the remaining three cases had one co-suspected drug, one case had two other suspected drugs and in case 10 it was shown on the original report that the reporter had listed mometasone as a concomitant drug. Out of the cases that listed concomitant drugs there was no pattern in the drugs reported as concomitant apart from the occasional use of vitamins, minerals and calcium. Mometasone was administered intranasally in the majority (13) of the cases with two reports of inhalation and one of topical use.
+Time to onset was reported in only three of the reports and ranged from the same day up to three months. The duration of use was recorded in three additional reports and was three to four days in two cases and two months in another. A positive dechallenge from mometasone was recorded in nine cases. The indication for use of mometasone was reported in ten cases and included allergic conditions or nasal polyps in eight cases, psoriasis in the case where mometasone was used topically and asthma in one of the cases of inhalational use.
+As noted in Table 1, the reported reaction was unspecified arrhythmia in 12 cases and tachycardia, heart rate abnormal and extrasystoles in the remaining cases. Eight of the cases reported more than one term relating to arrhythmia such as palpitations, atrial fibrillation, sick sinus syndrome and atrioventricular block. Some of these terms were also reported by themselves as reactions to mometasone or in combination with other heart rate related terms than arrhythmia, but these reports were not included in this analysis. Three patients had a past history of arrhythmia. In case 1 the patient had a history of Wolff-Parkinson- White syndrome but had not had any symptoms for six years when after three days of mometasone use the patient experienced arrhythmia. In case 3 arrhythmia was included in the patient's medical history without further explanations and in case 13 the patient had occasional extra heart beats that increased strongly when mometasone was administered and disappeared upon removal of the drug.
+The same thing happened when trying to use the drug 6 months later. Four cases in total, reported that the reaction recurred on rechallenge.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#Response_from_MAH_MSD
+:Response_from_MAH_MSD rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                       OpenPVSignal:refers_to_pharmacovigilance_signal_report :Mometasone_and_Arrhythmia ;
+                       OpenPVSignal:has_content """Response from MAH, MSD, regarding a signal of mometasone and Arrhythmia
+We have reviewed these documents.
+All reports of arrhythmia, including atrial fibrillation, for mometasone products (oral, nasal, topical) will be included in the list of closely monitored adverse events.
+Medical assessment of reports with the adverse events of arrhythmia will be provided in the upcoming 3-year PSUR, 23-May-2009 to 22-May-2012.""" ;
+                       rdfs:label "Response from MAH MSD" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Mometasone is a synthetic corticosteroid with anti- inflammatory, antipruritic and vasoconstrictive properties, it is available in three dosage forms: topical, nasal spray and dry powder inhalation. In VigiBaseTM there are currently (March 2012) 15 reports of arrhythmia and two reports of atrial arrhythmia in association with mometasone. The reports are from the United States, United Kingdom, Sweden and Switzerland. Mometasone had been withdrawn in ten cases and the reaction recurred on rechallenge in three of the cases. Case control studies have demonstrated an increased risk of atrial fibrillation (AF) in association with oral corticosteroid use and a mechanism has been proposed. The possibility of systemic reactions in association with intranasal, inhaled or topical corticosteroids is considered low but there has been one literature report of AF in association with fluticasone. Case reports in VigiBase suggest that there is a signal for the association of mometasone and arrhythmia." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#acneiform_reaction
+:acneiform_reaction rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10000520 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Acneiform dermatitis" ;
+                    rdfs:label "acneiform reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#ageusia
+:ageusia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R432" ;
+         OpenPVSignal:has_MedDRA_code 10001480 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Ageusia" ;
+         rdfs:label "ageusia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R451" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#allergicRhinitis
+:allergicRhinitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "J309" ;
+                  OpenPVSignal:has_MedDRA_code 10039085 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Rhinitis allergic" ;
+                  rdfs:label "allergic rhinitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#allergy
+:allergy rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Indication ;
+         OpenPVSignal:has_MedDRA_code 10001738 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Allergy" ;
+         rdfs:label "allergy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#amlodipine
+:amlodipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA01" ,
+                                      "C08GA02" ,
+                                      "C09BB03" ,
+                                      "C09BB04" ,
+                                      "C09BB07" ,
+                                      "C09BX01" ,
+                                      "C09DB01" ,
+                                      "C09DB02" ,
+                                      "C09DB04" ,
+                                      "C09DB05" ,
+                                      "C09DB06" ,
+                                      "C09DB07" ,
+                                      "C09DX01" ,
+                                      "C09DX03" ,
+                                      "C09XA53" ,
+                                      "C09XA54" ,
+                                      "C10BX03" ,
+                                      "C10BX07" ,
+                                      "C10BX09" ,
+                                      "C10BX11" ;
+            rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#anginaPectoris
+:anginaPectoris rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I209" ;
+                OpenPVSignal:has_MedDRA_code 10002383 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+                rdfs:label "angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#antiarrhythmicDrugs
+:antiarrhythmicDrugs rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:DrugClass ;
+                     OpenPVSignal:has_ATC_code "C01B " ;
+                     rdfs:label "antiarrhythmic drugs " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#anticholinergicDrugs
+:anticholinergicDrugs rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:DrugClass ;
+                      OpenPVSignal:has_ATC_code "R03BB" ;
+                      rdfs:label "anticholinergic drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#antihistamines
+:antihistamines rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "R06 " ;
+                rdfs:label "antihistamines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "F419" ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#arrhythmia
+:arrhythmia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Free_text_reporting_element ;
+            OpenPVSignal:is_part_of :IntroductionContent ;
+            OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+            mp:references :Ref.4 ,
+                          :Ref.5 ;
+            OpenPVSignal:has_content "Arrhythmia refers to disturbances in normal cardiac rhythm. It includes a large and heterogeneous group of conditions which arise from abnormal electrical activity in the heart. Arrhythmias can range from minor, common \"skipped beats\" to life-threatening conditions general, arrhythmia can refer to disturbances in rate or rhythm but simple disturbances in rate such as bradychardia or tachycardia would usually be coded as such. Arrhythmias may be caused by many different factors including coronary artery disease, electrolyte imbalance, heart muscle disorders and as indicated above, may occur in \"normal, healthy\" hearts.4" ;
+            rdfs:label "arrhythmia pathobiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#arrhythmiaAtrial
+:arrhythmiaAtrial rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10003656 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Atrial arrhythmia" ;
+                  rdfs:label "arrhythmia atrial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#arrhythmiaIncident
+:arrhythmiaIncident rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "I499" ;
+                    OpenPVSignal:has_MedDRA_code 10003119 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Arrhythmia" ;
+                    rdfs:label "arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#asthma
+:asthma rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "J45" ;
+        OpenPVSignal:has_MedDRA_code 10003553 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Asthma" ;
+        rdfs:label "asthma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#atopicDermatitis
+:atopicDermatitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "L20.9" ;
+                  OpenPVSignal:has_MedDRA_code 10012438 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Dermatitis atopic" ;
+                  rdfs:label "atopic dermatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#atrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "I4891" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#atrioventricularBlock
+:atrioventricularBlock rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "I442" ;
+                       OpenPVSignal:has_MedDRA_code 10003671 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Atrioventricular block" ;
+                       rdfs:label "atrioventricular block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#brimonidine
+:brimonidine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "D11AX21" ,
+                                       "S01EA05" ;
+             rdfs:label "brimonidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#burning_skin
+:burning_skin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10006792 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Burning skin" ;
+              rdfs:label "burning skin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#calcium
+:calcium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A11AA02" ,
+                                   "A11GB01" ,
+                                   "M05BB01" ,
+                                   "M05BB02" ,
+                                   "M05BB04" ,
+                                   "M05BB05" ,
+                                   "M05BB08" ;
+         OpenPVSignal:has_MedDRA_code 10005392 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Blood calcium" ;
+         rdfs:label "calcium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#chestPain
+:chestPain rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R07" ;
+           OpenPVSignal:has_MedDRA_code 10008479 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Chest pain" ;
+           rdfs:label "chest pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#cisapride
+:cisapride rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A03FA02" ;
+           rdfs:label "cisapride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient1
+:commentsPatient1 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "History of Wolff- Parkinson-White syndrome, no episodes for six years. The reporter considers the event unlikely related to mometasone." ;
+                  rdfs:label "comments report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient10
+:commentsPatient10 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content """The primary reporter does not mention mometasone as suspected but as a medication at the
+time of the event""" ;
+                   rdfs:label "comments report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient12
+:commentsPatient12 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content "Recovered from palpitations and malaise." ;
+                   rdfs:label "comments report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient15
+:commentsPatient15 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content "Patient hospitalised for panic attack" ;
+                   rdfs:label "comments report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient3
+:commentsPatient3 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "History of arrhythmia Had a vertigo that was so bad that he started to vomit which caused the heart to go out of sinus rhythm" ;
+                  rdfs:label "comments report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient4
+:commentsPatient4 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "The patient took part in a blinded zolendronate study, study medication was listed as suspect" ;
+                  rdfs:label "comments report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#commentsPatient7
+:commentsPatient7 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content """Her medical doctor and Cardiologist believed that the event was not
+related to the drug""" ;
+                  rdfs:label "comments report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#cortisolDecreased
+:cortisolDecreased rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10011198 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Cortisol decreased" ;
+                   rdfs:label "cortisol decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#digoxin
+:digoxin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C01AA05" ;
+         rdfs:label "digoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#durationOfTreatment
+:durationOfTreatment rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "The duration of use was recorded in three additional reports and was three to four days in two cases and two months in another" ;
+                     rdfs:label "duration of treatment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#dysgeusia
+:dysgeusia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R432" ;
+           OpenPVSignal:has_MedDRA_code 10013911 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dysgeusia" ;
+           rdfs:label "dysgeusia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#dysphonia
+:dysphonia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R490" ;
+           OpenPVSignal:has_MedDRA_code 10013952 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dysphonia" ;
+           rdfs:label "dysphonia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#ecgAbnormal
+:ecgAbnormal rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R9431" ;
+             OpenPVSignal:has_MedDRA_code 10014363 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Electrocardiogram abnormal" ;
+             rdfs:label "ecg abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#epistaxis
+:epistaxis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R040" ;
+           OpenPVSignal:has_MedDRA_code 10015090 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Epistaxis" ;
+           rdfs:label "epistaxis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#ergocalciferol
+:ergocalciferol rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11CC01" ;
+                rdfs:label "ergocalciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#erythromycin
+:erythromycin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "D10AF02" ,
+                                        "D10AF52" ,
+                                        "J01FA01" ,
+                                        "S01AA17" ;
+              rdfs:label "erythromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#estradiol
+:estradiol rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G02BB01" ,
+                                     "G03AA14" ,
+                                     "G03AB08" ,
+                                     "G03CA03" ,
+                                     "G03CA53" ,
+                                     "G03EA01" ,
+                                     "G03EA02" ,
+                                     "G03EA03" ,
+                                     "G03FA01" ,
+                                     "G03FA02" ,
+                                     "G03FA03" ,
+                                     "G03FA04" ,
+                                     "G03FA05" ,
+                                     "G03FA06" ,
+                                     "G03FA07" ,
+                                     "G03FA08" ,
+                                     "G03FA09" ,
+                                     "G03FA10" ,
+                                     "G03FA11" ,
+                                     "G03FA12" ,
+                                     "G03FA13" ,
+                                     "G03FA14" ,
+                                     "G03FA15" ,
+                                     "G03FA16" ,
+                                     "G03FA17" ,
+                                     "G03FB01" ,
+                                     "G03FB02" ,
+                                     "G03FB03" ,
+                                     "G03FB04" ,
+                                     "G03FB05" ,
+                                     "G03FB06" ,
+                                     "G03FB07" ,
+                                     "G03FB08" ,
+                                     "G03FB09" ,
+                                     "G03FB10" ,
+                                     "G03FB11" ,
+                                     "G03FB12" ,
+                                     "G03HB01" ;
+           OpenPVSignal:has_MedDRA_code 10030227 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Oestradiol" ;
+           rdfs:label "estradiol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#extrasystoles
+:extrasystoles rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "I493" ;
+               OpenPVSignal:has_MedDRA_code 10015856 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Extrasystoles" ;
+               rdfs:label "extrasystoles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#famotidine
+:famotidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA03" ,
+                                      "A02BA53" ;
+            rdfs:label "famotidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ,
+                                   "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#fexofenadine
+:fexofenadine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "R06AX26" ;
+              rdfs:label "fexofenadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#glimepiride
+:glimepiride rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BB12" ,
+                                       "A10BD04" ,
+                                       "A10BD06" ;
+             rdfs:label "glimepiride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#heartDisorder
+:heartDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "I519" ;
+               OpenPVSignal:has_MedDRA_code 10061024 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Cardiac disorder" ;
+               rdfs:label "heart disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#hemoptysis
+:hemoptysis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R042" ;
+            OpenPVSignal:has_MedDRA_code 10018964 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Haemoptysis" ;
+            rdfs:label "hemoptysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#huertaReport
+:huertaReport rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001197 ;
+              OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+              OpenPVSignal:refers_to_class :Corticosteroids ;
+              mp:references :Ref.9 ;
+              OpenPVSignal:has_content "Huerta et al. reported a twofold increased risk of AF among users of oral corticosteroids compared with nonusers. Conversely, no increased risk was found among users of inhaled corticosteroids. The results of a large population-based case control study, conducted in Denmark, showed an almost doubled risk of AF or flutter associated with systemic corticosteroid use, with respect to nonuse, in patients with and without chronic obstructive pulmonary disease or asthma and cardiovascular diseases.9" ;
+              rdfs:label "huerta report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#hypersensitivity
+:hypersensitivity rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "T7840XA" ;
+                  OpenPVSignal:has_MedDRA_code 10020751 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypersensitivity" ;
+                  rdfs:label "hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#hypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#hypoesthesia
+:hypoesthesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R201" ;
+              OpenPVSignal:has_MedDRA_code 10020937 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypoaesthesia" ;
+              rdfs:label "hypoesthesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#hypokalemia
+:hypokalemia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "E876" ;
+             OpenPVSignal:has_MedDRA_code 10021015 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypokalaemia" ;
+             rdfs:label "hypokalemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#insomnia
+:insomnia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G470" ;
+          OpenPVSignal:has_MedDRA_code 10022437 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Insomnia" ;
+          rdfs:label "insomnia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#lansoprazole
+:lansoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC03" ,
+                                        "A02BC53" ,
+                                        "A02BD02" ,
+                                        "A02BD03" ,
+                                        "A02BD07" ,
+                                        "A02BD09" ,
+                                        "A02BD10" ;
+              rdfs:label "lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#latanoprost
+:latanoprost rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "S01EE01" ;
+             rdfs:label "latanoprost" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#magnesium
+:magnesium rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A12CC" ;
+           rdfs:label "magnesium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#malaise
+:malaise rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R538 " ;
+         OpenPVSignal:has_MedDRA_code 10025482 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Malaise" ;
+         rdfs:label "malaise" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ,
+                                     "A10BD02" ,
+                                     "A10BD03" ,
+                                     "A10BD05" ,
+                                     "A10BD07" ,
+                                     "A10BD08" ,
+                                     "A10BD10" ,
+                                     "A10BD11" ,
+                                     "A10BD13" ,
+                                     "A10BD14" ,
+                                     "A10BD15" ,
+                                     "A10BD16" ,
+                                     "A10BD17" ,
+                                     "A10BD18" ,
+                                     "A10BD20" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#methylphenidate
+:methylphenidate rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06BA04" ;
+                 rdfs:label "methylphenidate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#methylxanthines
+:methylxanthines rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_ATC_code "R03DA" ;
+                 rdfs:label "methylxanthines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#mometasone
+:mometasone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :MechanismOfMometasone ,
+                                       :proposedAEMechanismForMometasone ;
+            OpenPVSignal:has_ATC_code "D07AC13" ,
+                                      "D07XC03" ,
+                                      "R01AD09" ,
+                                      "R03AK09" ,
+                                      "R03BA07" ;
+            rdfs:label "mometasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#nasalPolyps
+:nasalPolyps rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "J33.9" ;
+             OpenPVSignal:has_MedDRA_code 10028756 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Nasal polyps" ;
+             rdfs:label "nasal polyps" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#oralCandidiasis
+:oralCandidiasis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "B37.0" ;
+                 OpenPVSignal:has_MedDRA_code 10030963 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Oral candidiasis" ;
+                 rdfs:label "oral candidiasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#overall_reports_in_vigibase
+:overall_reports_in_vigibase rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:refers_to_adverse_effect :arrhythmiaAtrial ,
+                                                                   :arrhythmiaIncident ;
+                             OpenPVSignal:refers_to_drug :mometasone ;
+                             OpenPVSignal:time_to_onset :timeToOnsetContent ;
+                             <http://www.w3.org/2006/time#hasDuration> :durationOfTreatment ;
+                             OpenPVSignal:has_count 16 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#oxygen
+:oxygen rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Drug ;
+        OpenPVSignal:has_ATC_code "V03AN01" ;
+        rdfs:label "oxygen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#palpitations
+:palpitations rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R002" ;
+              OpenPVSignal:has_MedDRA_code 10033557 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+              rdfs:label "palpitations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#paroxysmalAtrialFibrillation
+:paroxysmalAtrialFibrillation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "I4891" ;
+                              OpenPVSignal:has_MedDRA_code 10003658 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                              rdfs:label "paroxysmal atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#pharyngitis
+:pharyngitis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "J029" ;
+             OpenPVSignal:has_MedDRA_code 10034835 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Pharyngitis" ;
+             rdfs:label "pharyngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#phsyllium_seed_husk
+:phsyllium_seed_husk rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A06AC01" ;
+                     rdfs:label "phsyllium seed husk" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#pneumothorax
+:pneumothorax rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "J939" ;
+              OpenPVSignal:has_MedDRA_code 10035759 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pneumothorax" ;
+              rdfs:label "pneumothorax" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#proposedAEMechanismForMometasone
+:proposedAEMechanismForMometasone rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Adverse_Effect_Mechanism ;
+                                  OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+                                  mp:references :Ref.11 ;
+                                  OpenPVSignal:has_content "It has been postulated that high doses of corticosteroids mediate potassium efflux via a direct effect on the cell membrane, which may induce arrhythmogenesis.11" ;
+                                  rdfs:label "proposed AE mechanism for mometasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#psoriasis
+:psoriasis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L40" ;
+           OpenPVSignal:has_MedDRA_code 10037153 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Psoriasis" ;
+           rdfs:label "psoriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :arrhythmia ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :overall_reports_in_vigibase ,
+                                                          :reportsFromConsumers ,
+                                                          :reportsFromHealthcareProfessionals ,
+                                                          :reportsFromSweden ,
+                                                          :reportsFromSwitzerland ,
+                                                          :reportsFromUK ,
+                                                          :reportsFromUS ,
+                                                          :reportsInVigibaseForMometasoneAndArrhythmia ,
+                                                          :reportsOfMometasoneAndAtrialArrhythmia ,
+                                                          :reportsOfMometasoneBeingAdministeredIntranasally ,
+                                                          :reportsOfMometasoneBeingAdministeredTopically ,
+                                                          :reportsOfMometasoneBeingInhaled ,
+                                                          :reportsOfMometasoneBeingTheOnlySuspectDrug ,
+                                                          :reportsWithAgeInformation ,
+                                                          :reportsWithGenderInformation ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithPositiveRechallenge ,
+                                                          :reports_with_allergic_conditions_or_nasal_polyps ,
+                                                          :reports_with_asthma ,
+                                                          :reports_with_psoriasis ;
+          OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+          OpenPVSignal:refers_to_drug :mometasone ;
+          OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+          mp:supportedByData :AEs_of_dry_powder_inhalation_momesatone ,
+                             :AEs_of_nasal_spray_momesatone ,
+                             :AEs_of_topical_momesatone ,
+                             :Drugs_implicated_in_arrhythmias ,
+                             :Labelling ,
+                             :OteriReport ,
+                             :huertaReport ,
+                             :vanDerHooft ;
+          OpenPVSignal:initially_identified_on "01/08/2012" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#ranitidine
+:ranitidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA02" ,
+                                      "A02BA07" ;
+            rdfs:label "ranitidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromConsumers
+:reportsFromConsumers rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                      OpenPVSignal:has_count 6 ;
+                      OpenPVSignal:has_reporter_type "patient" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports from consumers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromHealthcareProfessionals
+:reportsFromHealthcareProfessionals rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                    OpenPVSignal:has_count 9 ;
+                                    OpenPVSignal:has_reporter_type "health care professional" ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports from healthcare professionals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromSweden
+:reportsFromSweden rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Sweden" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from Sweden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromSwitzerland
+:reportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromUK
+:reportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+               OpenPVSignal:has_count 1 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsFromUS
+:reportsFromUS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+               OpenPVSignal:has_count 13 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsInVigibaseForMometasoneAndArrhythmia
+:reportsInVigibaseForMometasoneAndArrhythmia rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                             OpenPVSignal:refers_to_adverse_effect :arrhythmiaIncident ;
+                                             OpenPVSignal:refers_to_drug :mometasone ;
+                                             OpenPVSignal:has_count 14 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "reports in vigibase for mometasone and arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsOfMometasoneAndAtrialArrhythmia
+:reportsOfMometasoneAndAtrialArrhythmia rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                        OpenPVSignal:refers_to_adverse_effect :arrhythmiaAtrial ;
+                                        OpenPVSignal:refers_to_drug :mometasone ;
+                                        OpenPVSignal:has_count 2 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports in vigibase for mometasone and atrial arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsOfMometasoneBeingAdministeredIntranasally
+:reportsOfMometasoneBeingAdministeredIntranasally rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                                  OpenPVSignal:has_count 13 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  OpenPVSignal:refers_to_form_of_intake "nasal" ;
+                                                  rdfs:label "reports of mometasone being administered intranasally" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsOfMometasoneBeingAdministeredTopically
+:reportsOfMometasoneBeingAdministeredTopically rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                               OpenPVSignal:has_count 1 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               OpenPVSignal:refers_to_form_of_intake "topical (skin)" ;
+                                               rdfs:label "reports of mometasone being administered topically" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsOfMometasoneBeingInhaled
+:reportsOfMometasoneBeingInhaled rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                 OpenPVSignal:has_count 2 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 OpenPVSignal:refers_to_form_of_intake "inhaled" ;
+                                 rdfs:label "reports of mometasone being inhaled" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsOfMometasoneBeingTheOnlySuspectDrug
+:reportsOfMometasoneBeingTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :mometasone ;
+                                            OpenPVSignal:has_count 13 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports of mometasone being the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsWithAgeInformation
+:reportsWithAgeInformation rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                           OpenPVSignal:has_count 12 ;
+                           OpenPVSignal:has_max_age "71.0"^^xsd:float ;
+                           OpenPVSignal:has_median_age "57.0"^^xsd:float ;
+                           OpenPVSignal:has_min_age "12.0"^^xsd:float ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with age information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsWithGenderInformation
+:reportsWithGenderInformation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                              OpenPVSignal:has_count 14 ;
+                              OpenPVSignal:has_count_of_men 6 ;
+                              OpenPVSignal:has_count_of_women 8 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports with gender information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                OpenPVSignal:has_count 9 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reportsWithPositiveRechallenge
+:reportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reports_with_allergic_conditions_or_nasal_polyps
+:reports_with_allergic_conditions_or_nasal_polyps rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:concerns_indication_for_use :allergy ,
+                                                                                           :nasalPolyps ;
+                                                  OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                                                  OpenPVSignal:has_count 8 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports with allergic conditions or nasal polyps" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reports_with_asthma
+:reports_with_asthma rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:concerns_indication_for_use :asthma ;
+                     OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                     OpenPVSignal:has_count 1 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     OpenPVSignal:refers_to_form_of_intake "inhaled" ;
+                     rdfs:label "reports with asthma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#reports_with_psoriasis
+:reports_with_psoriasis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:concerns_indication_for_use :psoriasis ;
+                        OpenPVSignal:is_subgroup_of :overall_reports_in_vigibase ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        OpenPVSignal:refers_to_form_of_intake "topical (skin)" ;
+                        rdfs:label "reports with psoriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#rhinosinusitis
+:rhinosinusitis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Indication ;
+                OpenPVSignal:has_MedDRA_code 10052106 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Rhinosinusitis" ;
+                rdfs:label "rhinosinusitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#sickSinusSyndrome
+:sickSinusSyndrome rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I49.5" ;
+                   OpenPVSignal:has_MedDRA_code 10075889 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Sinus node dysfunction" ;
+                   rdfs:label "sick sinus syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#skin_atrophy
+:skin_atrophy rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10040799 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Skin atrophy" ;
+              rdfs:label "skin atrophy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#sympathomimetics
+:sympathomimetics rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:DrugClass ;
+                  OpenPVSignal:has_ATC_code "R01BA " ;
+                  rdfs:label "sympathomimetics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#tacalcitol
+:tacalcitol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D05AX04" ;
+            rdfs:label "tacalcitol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#tachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R000" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#taste_and_smell_disturbances
+:taste_and_smell_disturbances rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_MedDRA_code 20000046 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Taste and smell disorders (SMQ)" ;
+                              rdfs:label "taste and smell disturbances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#timeToOnsetContent
+:timeToOnsetContent rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2006/time#DurationDescription> ;
+                    OpenPVSignal:has_content "Time to onset was reported in only three of the reports and ranged from the same day up to three months" ;
+                    rdfs:label "time to onset content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#tingling_skin
+:tingling_skin rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10043881 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Tingling skin" ;
+               rdfs:label "tingling skin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ,
+                                    "N02AX52" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#usage_of_mometasone
+:usage_of_mometasone rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :atopicDermatitis ,
+                                                              :psoriasis ;
+                     OpenPVSignal:refers_to_drug :mometasone ;
+                     mp:references :Ref.1 ;
+                     OpenPVSignal:has_content """The topical form is presented as a cream or lotion and is indicated for the short term relief of inflammatory and pruritic manifestations of corticosteroid responsive dermatoses, such as psoriasis and atopic dermatitis. Common adverse effects (AEs) of the topical preparations include skin reactions such as pruritus, burning, tingling, signs of skin atrophy and acneiform reactions.1
+Other local reactions have also been reported less commonly.""" ;
+                     OpenPVSignal:refers_to_form_of_intake "topical (skin)" ;
+                     rdfs:label "usage of mometasone as topical" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#usage_of_mometasone_as_dry_powder_inhalation
+:usage_of_mometasone_as_dry_powder_inhalation rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Drug_Usage ;
+                                              OpenPVSignal:concerns_indication_for_use :asthma ;
+                                              OpenPVSignal:refers_to_drug :mometasone ;
+                                              mp:references :Ref.3 ;
+                                              OpenPVSignal:has_content "The dry powder inhalation is available for treatment of asthma, and oral candidiasis is a very common AE. Other common AEs include pharyngitis, headache and dysphonia. There is also potential for hypersensitivity reactions.3" ;
+                                              OpenPVSignal:refers_to_form_of_intake "inhaled" ;
+                                              rdfs:label "usage of mometasone as dry powder inhalation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#usage_of_mometasone_as_nasal_spray
+:usage_of_mometasone_as_nasal_spray rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Usage ;
+                                    OpenPVSignal:concerns_indication_for_use :allergicRhinitis ,
+                                                                             :nasalPolyps ,
+                                                                             :rhinosinusitis ;
+                                    OpenPVSignal:refers_to_drug :mometasone ;
+                                    mp:references :Ref.2 ;
+                                    OpenPVSignal:has_content """The nasal spray is available for treatment of allergic rhinitis, nasal polyps and 
+rhinosinusitis. Systemic absorption is possible from the nasal spray although bioavailability is regarded as low. Common AEs of the nasal preparation include headache, epistaxis and nasal reactions. Other AEs include rare hypersensitivity reactions and disturbances of taste and smell.2""" ;
+                                    OpenPVSignal:refers_to_form_of_intake "nasal" ;
+                                    rdfs:label "usage of mometasone as nasal spray" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#vanDerHooft
+:vanDerHooft rdf:type owl:NamedIndividual ,
+                      obo:OAE_0001197 ;
+             OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+             OpenPVSignal:refers_to_class :Corticosteroids ;
+             mp:references :Ref.10 ;
+             OpenPVSignal:has_content "Van der Hooft also reported an increase in the risk of AF among users of systemic corticosteroids in a study which involved 385 cases of AF from the Netherlands." ;
+             rdfs:label "van der hooft" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#verapamil
+:verapamil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C08DA01" ,
+                                     "C08DA51" ,
+                                     "C09BB10" ;
+           rdfs:label "verapamil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#vertigo
+:vertigo rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R42" ;
+         OpenPVSignal:has_MedDRA_code 10047340 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Vertigo" ;
+         rdfs:label "vertigo" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ,
+                                    "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#fluticasone_propionate_/_salmeterol_xinafoate
+<http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#fluticasone_propionate_/_salmeterol_xinafoate> rdf:type owl:NamedIndividual ,
+                                                                                                                           OpenPVSignal:Drug ;
+                                                                                                                  OpenPVSignal:has_ATC_code "R03AK06" ;
+                                                                                                                  rdfs:label "fluticasone propionate / salmeterol xinafoate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#plantago_ovata_/_ispaghula_husk
+<http://purl.org/OpenPVSignal/Signals/2012_4_mometasone_arrhythmia#plantago_ovata_/_ispaghula_husk> rdf:type owl:NamedIndividual ,
+                                                                                                             OpenPVSignal:Drug ;
+                                                                                                    OpenPVSignal:has_ATC_code "A06AC01" ,
+                                                                                                                              "A06AC51" ;
+                                                                                                    rdfs:label "plantago ovata / ispaghula husk" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:palpitation OpenPVSignal:has_ICD_code "R002" ;
+             OpenPVSignal:has_MedDRA_code 10033557 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+             rdfs:label "palpitation" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

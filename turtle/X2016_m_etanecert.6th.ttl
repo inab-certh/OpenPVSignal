@@ -1,0 +1,564 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl> rdf:type owl:Ontology ;
+                                                                                                  owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                              mp: ;
+                                                                                                  rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255490/"^^xsd:anyURI ;
+                                                                                                  rdfs:label "Etanercept and injection site ulceration / injection site necrosis - characterization of an ADR"^^xsd:Literal ;
+                                                                                                  owl:versionInfo "draft-v0.95-20211025"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Data_against_the_signal_causality_relationship
+:Data_against_the_signal_causality_relationship rdf:type owl:NamedIndividual ,
+                                                         obo:OAE_0001182 ;
+                                                OpenPVSignal:has_content "On the other hand, for the cases where either a wrong injection technique or local infection were reported, the likely explanation is that poor technique could have led first to infection and then to ulceration. As these patients are all adults, they are likely to self-inject the drug; more efforts should be put into providing patients with training." ,
+                                                                         "Two cases are unlikely to be related to etanercept, as in one the reaction occurred at a shingle vaccine injection site, and in the other the reaction occurred before the therapy was started. " ;
+                                                rdfs:label "Data against the signal causality relationship" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Discussion_and_Conclusion
+:Discussion_and_Conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.1 ,
+                                         :Ref.2 ,
+                                         :Ref.4 ,
+                                         :Ref.5 ;
+                           OpenPVSignal:has_content "In the light of the ability of this medication to cause vasculitis1 , together with the predisposition of the underlying disease4 , detailed information provided by the original reports for this combination are consistent with manifestations of cutaneous vasculitis.5 These findings would therefore strengthen the hypothesis that etanercept induced injection site reactions are immune-mediated.2 On the other hand, for the cases where either a wrong injection technique or local infection were reported, the likely explanation is that poor technique could have led first to infection and then to ulceration. As these patients are all adults, they are likely to self-inject the drug; more efforts should be put into providing patients with training." ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Etanercept_and_injection_site_ulceration_injection_site_necrosis_characterization_of_an_ADR
+:Etanercept_and_injection_site_ulceration_injection_site_necrosis_characterization_of_an_ADR rdf:type owl:NamedIndividual ,
+                                                                                                      OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                             OpenPVSignal:refers_to_author :Ms_Marilina_Castellano ;
+                                                                                             OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                             mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                                                             OpenPVSignal:has_creation_date "01/12/2016" ;
+                                                                                             OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                                                                             rdfs:label "Etanercept and injection site ulceration_injection site necrosis_characterization of an ADR" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Mechanism_of_Etanercept
+:Mechanism_of_Etanercept rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         mp:references :Ref.1 ;
+                         OpenPVSignal:has_content "Etanercept is a recombinant receptor inhibitor for the Tumour Necrosis Factor and it is indicated as an immunomodulator for the treatment of both primary and secondary arthritis in adults" ;
+                         rdfs:label "Mechanism of Etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Mechanism_of_injection_site_ulceration
+:Mechanism_of_injection_site_ulceration rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Adverse_Effect_Mechanism ;
+                                        OpenPVSignal:refers_to_adverse_effect :injectionSiteUlceration ;
+                                        mp:references :Ref.3 ;
+                                        OpenPVSignal:has_content "injection site ulcerations can be due to either an improper injection technique that may result in infection and consequently to ulceration or to the drug itself via different mechanisms.  " ;
+                                        rdfs:label "Mechanism of injection site ulceration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ms_Marilina_Castellano
+:Ms_Marilina_Castellano rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Author ;
+                        OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                        OpenPVSignal:has_first_name "Marilina" ;
+                        OpenPVSignal:has_last_name "Castellano" ;
+                        rdfs:label "Ms Marilina Castellano" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#OverallReportsForInjectionSiteNecrosis
+:OverallReportsForInjectionSiteNecrosis rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                        OpenPVSignal:refers_to_adverse_effect :injectionSiteNecrosis ;
+                                        OpenPVSignal:refers_to_drug :etanercept ;
+                                        OpenPVSignal:time_to_onset :TimeToOnsetData ;
+                                        OpenPVSignal:has_count 2 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Overall reports for injection site necrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#OverallReportsForInjectionSiteUlceration
+:OverallReportsForInjectionSiteUlceration rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                          OpenPVSignal:refers_to_adverse_effect :injectionSiteUlceration ;
+                                          OpenPVSignal:refers_to_drug :etanercept ;
+                                          OpenPVSignal:has_count 29 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "Overall reports for injection site ulceration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Overall_reports
+:Overall_reports rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:refers_to_adverse_effect :injectionSiteNecrosis ,
+                                                       :injectionSiteUlceration ;
+                 OpenPVSignal:refers_to_drug :etanercept ;
+                 OpenPVSignal:has_count 31 ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Overall reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of Product Characteristics for etanercept (Enbrel®). Available from: https://www. medicines.org.uk/emc/medicine/19162. Accessed: 13 January 2016.  " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Batycka-Baran A, Flaig M, Molin S, Ruzicka T, Prinz JC. Etanercept-induced injection site reactions: potential pathomechanisms and clinical assessment. Expert Opin Drug Saf. 2012 Nov;11(6):911-21. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Shai A, Maibach HI. Wound healing and ulcers of the skin diagnosis and therapy: The practical approach. Berlin, Heidelberg: Springer-Verlag Berlin Heidelberg; 2005. Available from: http://public.eblib.com/choice/ publicfullrecord.aspx?p=30914. Accessed: 13 January 2016. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Xue Y, Cohen JM, Wright NA, Merola JF. Skin signs of rheumatoid arthritis and its therapyinduced cutaneous side effects. Am J Clin Dermatol. 2016 Apr;17(2):147-62. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Panuncialman J, Falanga V. Unusual causes of cutaneous ulceration. Surg Clin North Am. 2010 Dec;90(6):1161-80 " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "As of January 2016, there are 29 reports for the PT injection site ulceration in VigiBase® and two more reports for the PT injection site necrosis. A widened search in VigiBase® revealed 444 reports for the PT injection site vesicles. The 31 reports originate from the United States, the United Kingdom and Colombia. The majority of these patients were receiving treatment for rheumatoid arthritis; psoriatic arthropathy and psoriasis were other reported indications. Among the co-reported terms were rash and pain. Seven cases described systemic symptoms such as oedema generalized, influenza like symptoms or nausea. Two cases coreported injection technique errors and two injection site infections. One third of the cases provided additional details where the reaction was described as manifesting with nodules, welts or vesicles. In particular, one patient developed extensive erythema covered in small open sores and another experienced multiple ulcers that developed between calves and ankles at both legs. Reactions manifested from one week to five years after therapy was started where this information was provided, occurring within one month in the majority of cases. In six of these cases, the event occurred shortly or within two days after the injection was given, with one patient experiencing the event after each injection. Etanercept was the only suspected drug in all cases save one where infliximab was also suspected. Two cases are unlikely to be related to etanercept, as in one the reaction occurred at a shingle vaccine injection site, and in the other the reaction occurred before the therapy was started." ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#ReportsThatHadInjectionSiteInfections
+:ReportsThatHadInjectionSiteInfections rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                       OpenPVSignal:refers_to_adverse_effect :hadInjectionSiteInfections ;
+                                       OpenPVSignal:refers_to_drug :etanercept ;
+                                       OpenPVSignal:has_count 2 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "Reports that had injection site infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#ReportsThatHadInjectionTechniqueErrors
+:ReportsThatHadInjectionTechniqueErrors rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                        OpenPVSignal:refers_to_adverse_effect :injection_technique_error ;
+                                        OpenPVSignal:refers_to_drug :etanercept ;
+                                        OpenPVSignal:has_count 2 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Reports that had injection technique errors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#ReportsThatReportedSystemicSymptoms
+:ReportsThatReportedSystemicSymptoms rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                     OpenPVSignal:refers_to_adverse_effect :influenzaLikeSymptoms ,
+                                                                           :nausea ,
+                                                                           :oedemaGeneralized ;
+                                     OpenPVSignal:refers_to_drug :etanercept ;
+                                     OpenPVSignal:has_count 7 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Reports that reported systemic symptoms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Response_from_Pfizer
+:Response_from_Pfizer rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                      OpenPVSignal:refers_to_pharmacovigilance_signal_report :Etanercept_and_injection_site_ulceration_injection_site_necrosis_characterization_of_an_ADR ;
+                      OpenPVSignal:has_content """The Uppsala Monitoring Centre (UMC) invited Pfizer, as the Marketing Authorization Holder (MAH) for etanercept (Enbrel®) in Europe, to comment on a proposed communication from the UMC regarding a signal of injection site ulceration/ injection site necrosis in patients treated with etanercept. Pfizer agrees with the UMC that injection site reactions (ISRs) are well characterised and reported as very common adverse reactions associated with etanercept therapy, occurring at a frequency of ≥ 1/10.1 The local symptoms of ISRs are usually mild, including bleeding at the puncture site, bruising, erythema, itching, pain or swelling, and are generally transient and do not recur with treatment.1 In fact, less than 1.5% of ISR events reported to Pfizer as postmarketing cases are classified as serious, and less than 0.02% of events of ISRs reported from clinical trials are considered to be serious adverse events. A cumulative search of Pfizer’s safety database up to 18 April 2016 for the Medical Dictionary for Regulatory Activities (MedDRA) Preferred Terms (PTs) Injection site ulcer and Injection site necrosis identified 39 and 7 cases, respectively. These 46 cases represent less than 0.04% of all cases of ISRs reported to Pfizer. Of these, 13 cases were reported as serious, representing less than 0.15% of all reported serious cases of ISRs. Pfizer expects, but cannot confirm, that there is significant overlap with the 31 cases retrieved for the search of the same PTs performed by the UMC in VigiBase® (WHO Global ICSR database). The majority of cases in Pfizer’s safety database were reported from the United States, with 1 case from the United Kingdom, and no cases reported from Colombia. Additional countries reporting cases to Pfizer include Argentina, Brazil, France, Japan, the Netherlands, Spain, and Switzerland. A review of these cases showed minimal relevant information including lack of information on diagnosis, treatment, concomitant medications, and descriptive information regarding the manifestations of the ISRs. The review did not reveal any cases which described suspected or confirmed cutaneous vasculitis. Pfizer is of the view that the causes of serious ISRs are likely multifactorial. Hypersensitivity, infection due to improper injection technique or device failure, and cutaneous vasculitis have been described as potential causes. A small study that assessed biopsy data from etanercept-associated ISRs suggested T-lymphocyte mediated delayed type hypersensitivity reactions, with eventual induction of tolerance, as a possible mechanism of action.2 While cutaneous vasculitis is listed as a rare (≥ 1/10,000 to < 1/1,000) adverse reaction for etanercept,1 the currently available evidence in Pfizer’s safety database does not suggest that events reported as injection site ulceration or injection site necrosis are due to cutaneous vasculitis. Pfizer strongly agrees that patient training in the use of proper injection technique to prevent infections that could lead to serious ISRs is very important. To this end, Pfizer maintains extensive region-specific educational programs, which differ according to individual market requirements. These programs for patients and health-care providers support the use of proper injection technique and include visual teaching guides, demonstration devices, and instructional materials in both print and video format. They also include a toll free number and website for patient assistance and questions in many regions. Pfizer continues regular pharmacovigilance surveillance monitoring of the important risk of ISRs through review of postmarketing data, clinical trial data, and published literature. Pfizer acknowledges UMC’s additional characterisation of ISRs and seeks further clarification through 
+ongoing surveillance with a particular focus on identifying any causes for which the risk can be mitigated through increased awareness and patient and physician education.
+References
+1. Enbrel (etanercept) Summary of Product Characteristics applicable to EU/EEA Member States. Available from: http://www.ema.
+europa.eu/ema/index.jsp?curl=pages/medicine
+s/human/medicines/000262/human_med_000764.jsp&mid=WC0b01ac058001d124 
+2. Zeltser R, Valle L, Tanck C, et al. Clinical, histological, and immunophenotypic characteristics of injection site reactions associated with etanercept. Arch Dermatol. 2001;137(7):893-9.""" ;
+                      rdfs:label "Response from Pfizer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Skin_reactions_and_etanercept
+:Skin_reactions_and_etanercept rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Structured_Product_Labels_information ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :cutaneousVasculitis ;
+                               OpenPVSignal:refers_to_drug :etanercept ;
+                               mp:references :Ref.1 ;
+                               OpenPVSignal:has_content "In addition, serious skin reactions such as cutaneous vasculitis are also mentioned in the product information.1" ;
+                               rdfs:label "Skin reactions and etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#TimeToOnsetData
+:TimeToOnsetData rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 OpenPVSignal:has_content "Reactions manifested from one week to five years after therapy was started where this information was provided, occurring within one month in the majority of cases." ;
+                 rdfs:label "Time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#bleeding
+:bleeding rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10005103 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Bleeding" ;
+          rdfs:label "bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#bruising
+:bruising rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10006504 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Bruising" ;
+          rdfs:label "bruising" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#cutaneousVasculitis
+:cutaneousVasculitis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "L95.9" ;
+                     OpenPVSignal:has_MedDRA_code 10011686 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cutaneous vasculitis" ;
+                     rdfs:label "cutaneous vasculitis " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#erythema
+:erythema rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L53.9" ;
+          OpenPVSignal:has_MedDRA_code 10015150 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Erythema" ;
+          rdfs:label "erythema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#etanercept
+:etanercept rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :Mechanism_of_Etanercept ;
+            OpenPVSignal:has_ATC_code "L04AB01" ;
+            rdfs:label "etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#hadInjectionSiteInfections
+:hadInjectionSiteInfections rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "T80.62XA" ;
+                            OpenPVSignal:has_MedDRA_code 10022076 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Injection site infection" ;
+                            rdfs:label "Injection site infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#infliximab
+:infliximab rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "L04AB02" ;
+            rdfs:label "infliximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#influenzaLikeSymptoms
+:influenzaLikeSymptoms rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "J11.1" ;
+                       OpenPVSignal:has_MedDRA_code 10022004 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Influenza like illness" ;
+                       rdfs:label "influenza like symptoms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#injectionSiteNecrosis
+:injectionSiteNecrosis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "L90.5" ;
+                       OpenPVSignal:has_MedDRA_code 10022082 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Injection site necrosis" ;
+                       rdfs:label "injection site necrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#injectionSiteUlceration
+:injectionSiteUlceration rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "L98.499" ;
+                         OpenPVSignal:has_MedDRA_code 10022105 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Injection site ulcer" ;
+                         rdfs:label "injection site ulceration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#injectionSiteVesicles
+:injectionSiteVesicles rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "L27.0" ;
+                       OpenPVSignal:has_MedDRA_code 10022111 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Injection site vesicles" ;
+                       rdfs:label "Injection site vesicles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#injection_technique_error
+:injection_technique_error rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_MedDRA_code 10064737 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Wrong injection technique" ;
+                           rdfs:label "injection technique error" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ;
+              OpenPVSignal:has_content "The combination of injection site ulceration and etanercept was highlighted in VigiBase®, the WHO international database of suspected adverse drug reactions. This analysis focused on the WHO-ART preferred term (PT) ‘injection site ulceration’ and was then extended to the adjacent PT ‘injection site necrosis’, as they are a related phenomenon. Etanercept is a recombinant receptor inhibitor for the Tumour Necrosis Factor and it is indicated as an immunomodulator for the treatment of both primary and secondary arthritis in adults.1 Etanercept injection site reactions are well documented and characterised2; they are usually mild, including bleeding, bruising, erythema, itching, pain or swelling, and injection site ulcerations are not mentioned; these reactions usually occur within one month but recall injection site reactions can also occur at the most recent site of injection. In addition, serious skin reactions such as cutaneous vasculitis are also mentioned in the product information.1 In general, injection site ulcerations can be due to either an improper injection technique that may result in infection and consequently to ulceration or to the drug itself via different mechanisms. As an example, immunomodulators injected intramuscularly have been reported as causing necrotizing vasculitis.3 Serious skin reactions at the injection site represent a complication that may lead to therapy discontinuation: this notice aims to report cases of injection site ulceration and to characterize more accurately etanercept-induced injection site reactions." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#itching
+:itching rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "L29.9" ;
+         OpenPVSignal:has_MedDRA_code 10023084 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Itching" ;
+         rdfs:label "itching" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11.0" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#oedemaGeneralized
+:oedemaGeneralized rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R21" ;
+                   OpenPVSignal:has_MedDRA_code 10018092 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Generalised oedema" ;
+                   rdfs:label "oedema generalized" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#overallReportsForInjectionSiteVesicles
+:overallReportsForInjectionSiteVesicles rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:refers_to_adverse_effect :injectionSiteVesicles ;
+                                        OpenPVSignal:refers_to_drug :etanercept ;
+                                        OpenPVSignal:has_count 444 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "overall reports for injection site vesicles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#pain
+:pain rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R52" ;
+      OpenPVSignal:has_MedDRA_code 10033371 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Pain" ;
+      rdfs:label "pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#psoriasis
+:psoriasis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L40" ;
+           OpenPVSignal:has_MedDRA_code 10037153 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Psoriasis" ;
+           rdfs:label "psoriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#psoriaticArthropathy
+:psoriaticArthropathy rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Indication ;
+                      OpenPVSignal:has_ICD_code "L40.52" ;
+                      OpenPVSignal:has_MedDRA_code 10037162 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Psoriatic arthropathy" ;
+                      rdfs:label "psoriatic arthropathy " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Discussion_and_Conclusion ,
+                                                   :ReportsInVigibase ,
+                                                   :introduction ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsForInjectionSiteNecrosis ,
+                                                          :OverallReportsForInjectionSiteUlceration ,
+                                                          :Overall_reports ,
+                                                          :ReportsThatHadInjectionSiteInfections ,
+                                                          :ReportsThatHadInjectionTechniqueErrors ,
+                                                          :ReportsThatReportedSystemicSymptoms ,
+                                                          :overallReportsForInjectionSiteVesicles ,
+                                                          :reportsNotConnectedWithEtanercept ,
+                                                          :reportsWithEtanerceptAsTheOnlySuspect ,
+                                                          :reportsWithInfliximabAsSuspect ,
+                                                          :reportsWithShorterOnset ;
+          OpenPVSignal:refers_to_adverse_effect :injectionSiteNecrosis ,
+                                                :injectionSiteUlceration ;
+          OpenPVSignal:refers_to_drug :etanercept ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          mp:supportedByData :Data_against_the_signal_causality_relationship ,
+                             :Skin_reactions_and_etanercept ,
+                             :validityOfTheSignal ,
+                             :well_documented_and_characterised_ADR_for_etanercept ;
+          OpenPVSignal:initially_identified_on "01/12/2016" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#reportsNotConnectedWithEtanercept
+:reportsNotConnectedWithEtanercept rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                   OpenPVSignal:has_count 2 ;
+                                   OpenPVSignal:has_evaluation "Unrelated" ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports not connected with etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#reportsWithEtanerceptAsTheOnlySuspect
+:reportsWithEtanerceptAsTheOnlySuspect rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                       OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+                                       OpenPVSignal:has_count 30 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with etanercept as the only suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#reportsWithInfliximabAsSuspect
+:reportsWithInfliximabAsSuspect rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                OpenPVSignal:refers_to_secondary_suspect_drug :infliximab ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with infliximab as suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#reportsWithShorterOnset
+:reportsWithShorterOnset rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :Overall_reports ;
+                         OpenPVSignal:time_to_onset :timeToOnsetShort ;
+                         OpenPVSignal:has_count 6 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with shorter Onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#rheumatoidArthritis
+:rheumatoidArthritis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "M06.9" ;
+                     OpenPVSignal:has_MedDRA_code 10039073 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Rheumatoid arthritis" ;
+                     rdfs:label "rheumatoid arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#swelling
+:swelling rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R60.9" ;
+          OpenPVSignal:has_MedDRA_code 10042674 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Swelling" ;
+          rdfs:label "swelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#timeToOnsetShort
+:timeToOnsetShort rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  OpenPVSignal:has_content "In six of these cases, the event occurred shortly or within two days after the injection was given, with one patient experiencing the event after each injection. " ;
+                  rdfs:label "time to onset short" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#usage_of_etanercept
+:usage_of_etanercept rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :psoriasis ,
+                                                              :psoriaticArthropathy ,
+                                                              :rheumatoidArthritis ;
+                     OpenPVSignal:refers_to_drug :etanercept ;
+                     rdfs:label "usage of etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#validityOfTheSignal
+:validityOfTheSignal rdf:type owl:NamedIndividual ,
+                              obo:OAE_0001197 ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ;
+                     OpenPVSignal:has_content "In the light of the ability of this medication to cause vasculitis1, together with the predisposition of the underlying disease4, detailed information provided by the original reports for this combination are consistent with manifestations of cutaneous vasculitis. These findings would therefore strengthen the hypothesis that etanercept induced injection site reactions are immune-mediated.2" ;
+                     rdfs:label "validity of the signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_etanercept_injecetion_site_ulceration_necrosis.owl#well_documented_and_characterised_ADR_for_etanercept
+:well_documented_and_characterised_ADR_for_etanercept rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Warning_Information ;
+                                                      OpenPVSignal:refers_to_adverse_effect :bleeding ,
+                                                                                            :bruising ,
+                                                                                            :erythema ,
+                                                                                            :itching ,
+                                                                                            :pain ,
+                                                                                            :swelling ;
+                                                      OpenPVSignal:refers_to_drug :etanercept ;
+                                                      mp:references :Ref.2 ;
+                                                      OpenPVSignal:has_content """Etanercept is a recombinant receptor inhibitor for the Tumour Necrosis Factor and it is indicated as an immunomodulator for the treatment of both primary and secondary arthritis in adults.1 Etanercept injection site reactions are well documented and characterised; they are usually mild, including bleeding, bruising, erythema, itching, pain or swelling, and injection site ulcerations are not mentioned; these reactions usually occur within one month but recall injection site reactions can also occur at the most recent site of injection. In addition, serious skin reactions such as cutaneous vasculitis are also mentioned in the product information.In general, injection site ulcerations can be due to either an improper
+injection technique that may result in infection and consequently to ulceration or to the drug itself via different mechanisms""" ;
+                                                      rdfs:label "well documented and characterised ADR for etanercept" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

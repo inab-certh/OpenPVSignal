@@ -1,0 +1,1251 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders> .
+
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders> rdf:type owl:Ontology ;
+                                                                                     owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                 mp: ;
+                                                                                     rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255528/"^^xsd:anyURI ;
+                                                                                     rdfs:label "Everolimus and serious gastrointestinal disorders"^^xsd:Literal ;
+                                                                                     owl:versionInfo "draft-v0.95-20211013"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#ADRs_of_everolimus
+:ADRs_of_everolimus rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Warning_Information ;
+                    OpenPVSignal:refers_to_adverse_effect :anorexia ,
+                                                          :diarrhoea ,
+                                                          :fatigue ,
+                                                          :headache ,
+                                                          :hypercholesterolemia ,
+                                                          :hyperglycaemia ,
+                                                          :hypertriglyceridemia ,
+                                                          :infectiousPneumonitis ,
+                                                          :leukocytopenia ,
+                                                          :neutropenia ,
+                                                          :pneumonitis ,
+                                                          :rash ,
+                                                          :stomatitis ,
+                                                          :thrombocytopenia ;
+                    OpenPVSignal:refers_to_drug :everolimus ;
+                    mp:references :Ref.11 ;
+                    OpenPVSignal:has_content "Apart from the official labelling, many of the known adverse reactions of everolimus come from its extensive use in transplantation patients and solid organ malignancy, notably renal cell carcinoma. Oral treatment with everolimus 10 mg daily or 50 mg once weekly resulted in adverse effects including stomatitis, rash, fatigue, headache, anorexia, diarrhoea, neutropenia, hyperglycaemia, hypercholesterolemia, hypertriglyceridaemia, mild leukocytopenia, and thrombocytopenia. Other toxicities include infectious and non-infectious pneumonitis.11\"" ;
+                    rdfs:label "ADRs of everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#ClinicalTrialsForEverolimus
+:ClinicalTrialsForEverolimus rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Clinical_trial_information ;
+                             OpenPVSignal:refers_to_drug :everolimus ;
+                             mp:references :Ref.8 ,
+                                           :Ref.9 ;
+                             OpenPVSignal:has_content "A large number of published and ongoing clinical studies have recently shown promising antitumor activity of everolimus against different tumour types such as breast cancer, advanced gastrointestinal cancer, hepatocellular carcinoma, and lymphoma, when used as monotherapy or in combination with vascular endothelial growth factor (VEGF) and epidermal growth factor receptor (EGFR) inhibitors.8,9" ;
+                             rdfs:label "Clinical trials for everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """VigiBase reports of selected serious GI adverse reactions (GI haemorrhages and ulcers) associated with everolimus allow us to suspect a possible connection between the drug and the development or worsening of GI toxicity.
+We would like to stress that patients' typology is various and ranges from transplantation to oncology. Many of the patients are taking other drugs and potential and individual risk factors for the development of GI toxicity cannot be gathered from the reports. However, the proportion of fatal outcomes is high in patients who experienced the selected GI disorders in association with everolimus treatment. The prospective of an increase in use of everolimus in different clinical settings, also in combination with other drugs such as bevacizumab and sorafenib, makes the issue of utility of this drug. Vigilance is therefore necessary for identifying any emerging toxicity which has not been reported yet.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#EU_product_labelling_for_everolimus
+:EU_product_labelling_for_everolimus rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Structured_Product_Labels_information ,
+                                              OpenPVSignal:Warning_Information ;
+                                     OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                                                           :diabetesMellitus ,
+                                                                           :diarrhoea ,
+                                                                           :fatigue ,
+                                                                           :hypercholesterolemia ,
+                                                                           :hyperglycaemia ,
+                                                                           :hypophosphatemia ,
+                                                                           :infections ,
+                                                                           :lymphopenia ,
+                                                                           :neutropenia ,
+                                                                           :pneumonitis ,
+                                                                           :stomatitis ,
+                                                                           :thrombocytopenia ;
+                                     OpenPVSignal:refers_to_drug :everolimus ;
+                                     mp:references :Ref.10 ;
+                                     OpenPVSignal:has_content """In the everolimus EU product labelling the most frequent grade 3-4 adverse reactions (incidence >2% in at least one pivotal study) were anaemia, 
+fatigue, diarrhoea, infections, stomatitis, hyperglycaemia, thrombocytopenia, lymphopenia, neutropenia, hypophosphataemia, hypercholesterolaemia, diabetes mellitus, and pneumonitis.10""" ;
+                                     rdfs:label "EU product labelling for everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Everolimus_and_serious_gastrointestinal_disorders
+:Everolimus_and_serious_gastrointestinal_disorders rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                   OpenPVSignal:refers_to_signal :pvSignal ;
+                                                   OpenPVSignal:has_creation_date "01/06/2012" ;
+                                                   OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                                   rdfs:label "Everolimus and serious gastrointestinal disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content """Introduction
+Everolimus is a macrolide immunosuppressant and anti-neoplastic drug.1,2 It inhibits the protein called mam¬malian Target Of Rapamycin (mTOR), a key regulatory kinase, as well as the antigenic and interleukin stimulated activation and proliferation of T and B lymphocytes.3,4 Union for the prevention of organ transplant rejection since 2003, for advanced renal cell carcinoma and pancreatic neuroendocrine tumours since 2009 and for patients with subependymal giant cell astrocytoma (SEGA) associated with tuberous sclerosis complex, not amenable for surgery since 2011.5 Some differences regarding the date of authorization in the specific indications have been observed between EU and the United States. Everolimus has been marketed in the US for the treatment of advanced renal cell carcinoma since 2009, for kidney and heart transplant rejection and SEGA since 2010 and for neuroendocrine tumours since 2011.6,7 A large number of published and ongoing clinical studies have recently shown promising antitumor activity of everolimus against different tumour types such as breast cancer, advanced gastrointestinal cancer, hepatocellular carcinoma, and lymphoma, when used as monotherapy or in combination with vascular endothelial growth factor (VEGF) and epidermal growth factor receptor (EGFR) inhibitors.8,9 The recommended initial dose for the prophylaxis of organ rejection in adult patients is 0.75 mg orally twice a day in combination with other immunosuppressant drugs, whereas in oncology the recommended dose is 10 mg once a day.1,2""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#LiteratureInformation
+:LiteratureInformation rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Literature_information ;
+                       mp:references :Ref.10 ,
+                                     :Ref.11 ,
+                                     :Ref.12 ,
+                                     :Ref.13 ,
+                                     :Ref.14 ,
+                                     :Ref.15 ;
+                       OpenPVSignal:has_content """Literature and Labelling
+In the everolimus EU product labelling the most frequent grade 3-4 adverse reactions (incidence
+>2% in at least one pivotal study) were anaemia, fatigue, diarrhoea, infections, stomatitis, hyperglycaemia, thrombocytopenia, lymphopenia, neutropenia, hypophosphataemia, hypercholesterolaemia, diabetes mellitus, and pneumonitis.10
+Apart from the official labelling, many of the known adverse reactions of everolimus come from its extensive use in transplantation patients and solid organ malignancy, notably renal cell carcinoma. Oral treatment with everolimus 10 mg daily or 50 mg once weekly resulted in adverse effects including stomatitis, rash, fatigue, headache, anorexia, diarrhoea, neutropenia, hyperglycaemia, hypercholesterolemia, hypertriglyceridaemia, mild leukocytopenia, and thrombocytopenia. Other toxicities include infectious and non-infectious pneumonitis.11
+Regarding gastrointestinal (GI) toxicity, post- marketing studies confirmed the already known and labelled adverse drug reactions (ADRs), with no new findings regarding GI haemorrhage or GI ulcers. A recent review on the management of adverse events related to targeted therapies in renal cell carcinoma pointed out the problem of everolimus-related infectious and non-infectious pneumonitis and other disorders associated with metabolism and nutrition (hypercholesterolemia and hyperglycaemia). Upper GI complications associated with everolimus included stomatitis and mucositis whereas gastrointestinal perforation, a complication associated with bevacizumab and other therapies in renal cell carcinoma, has not been reported with everolimus.12
+Two case reports of GI bleeding (grade 5 and 2 respectively) regarding patients with hepatocellular carcinoma recurrence after liver transplantation, treated with sorafenib and everolimus have recently been published.13,14 The authors did not exclude a possible additive effect of everolimus on the already known increase in risk of GI and non GI bleeding for sorafenib and other vascular endothelial growth factor receptor (VEGFR) tyrosine-kinase inhibitors.15""" ;
+                       rdfs:label "Literature information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#MechanismOfEverolimus
+:MechanismOfEverolimus rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       mp:references :Ref.1 ,
+                                     :Ref.2 ,
+                                     :Ref.3 ,
+                                     :Ref.4 ;
+                       OpenPVSignal:has_content "Everolimus is a macrolide immunosuppressant and anti-neoplastic drug.1,2 It inhibits the protein called mam¬malian Target Of Rapamycin (mTOR), a key regulatory kinase, as well as the antigenic and interleukin stimulated activation and proliferation of T and B lymphocytes.3,4" ;
+                       rdfs:label "Mechanism of everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US product labelling for everolimus (Zortress®). URL: http://wwwaccessdata.fda.gov/drugsatfda_docs/ label/2010/021560s000lbl.pdf Accessed: 23 February 2012." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content """EU SPC for everolimus (Afinitor®). http://www.ema.europa.eu/docs/en_GB/document_library/EPAR_-
+_Product_Information/human/001038/WC 500022814.pdf.
+Accessed: 23 February 2012.""" ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Rodriguez-Pascual J, Cheng E, Maroto P, Duran I, Emergent toxicities associated with the use of m TOR inhibitors in patients with advanced renal carcinoma. Anticancer Drugs 2010;21(5):478-486." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Eisen T, Sternberg C N, Robert C, Mulders P, Pyle L, Zbinden S et al. Targeted Therapies for Renal Cell Carcinoma: Review of Adverse Event Management Strategies. J Natl Cancer Inst 2012;104(2):93-113." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Mancuso A, Airoldi A, Vigano R and Pinzello G. Fatal gastric bleeding during sorafenib treatment for hepatocellular carcinoma recurrence after liver transplantation. Dig Liver Dis 2011 Sep;43(9):754." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Bhoori S, Toffanin S, Sposito C, Germini A, Pellegrinelli A, Lampis A et al. Personalized molecular targeted therapy in advanced, recurrent hepatocellular carcinoma after liver trans-plantation: a proof of principle. J Hepatol May 2010;52(5):771-5." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Je Y, Schutz F and Choueiri T. Risk of bleeding with vascular endothelial growth factor receptor tyrosine-kinase inhibitors sunitinib and sorafenib: a systematic review and meta-analysis of clinical trials. Lancet Oncol October 2009;10(10):967- 974." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US product labelling for everolimus (Afinitor®). URL: http://www.accessdata.fda.gov/drugsatfda_docs/ label/2011/022344s9s10lbl.pdf Accessed: 23 February 2012." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vitko S, Tedesco H, Eris J, Pascual J, Whelchel J, Magee JC et al. Everolimus with optimized cyclosporine dosing in renal transplant recipients: 6-month safety and efficacy results of two randomized studies. Am J Transplant April 2004;4(4):626-635." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vignot S, Faivre S, Aguirre D and Raymond E, mTOR-targeted therapy of cancer with rapamycin derivatives. Ann Oncol 2005;16(4):525-37." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Assessment Report (EPAR). URL: http://wwwema.europa.eu/docs/en_GB/do cument_library/EPAR_-_Assessment_Report_-_Variation/human/001038/WC500115282. pdf Accessed: 22 February 2012." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA. URL: http://www.fda.gov/AboutFDA/ CentersOffices/OfficeofMedicalProductsand Tobacco/CDER/ucm231967.htm Accessed: 22 February 2012." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA. URL: http://www.fda.gov/AboutFDA/ CentersOffices/OfficeofMedicalProductsand Tobacco/CDER/ucm254392.htm Accessed: 22 February 2012." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Oberstein E and Wasif Saif M. Safety and Efficacy of Everolimus in Adult Patients with Neuroendocrine Tumors. Clin Med Insights Oncol 2012;6:41-51." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Guglielmelli P, Barosi G, Rambaldi A, Marchioli R, Masciulli A, Tozzi L et al. Safety and efficacy of everolimus, a mTOR inhibitor, as single agent in a phase 1/2 study in patients with myelofibrosis. Blood 2011;118:2069-2076." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "The WHO Global Individual Case Safety Report (ICSR) database, VigiBase™, contains 636 reports of GI system disorders associated with everolimus as of November 2011. The first report dates back to 2002, however the majority of the reports were added to the database in 2010-2011. This could be explained by the extended indications of everolimus in the last two years and the related increase in the number of patients using the drug for different indications. This assessment focused on three categories of serious GI adverse reactions: GI haemorrhages, GI ulcers and the two related symptoms haematemesis and melaena. After exclusion of duplicate reports, everolimus was associated with GI haemorrhages in 27 reports, duodenal ulcers in eight, gastric ulcers in four, peptic ulcers in five, haematemesis in nine and melaena in 9 reports. In the reports which presented multiple simultaneous reactions, the cases were classified following this priority: GI haemorrhage, ulcer, melaena and haematemesis. That is, if both GI haemorrhage and melaena were present in the same report, the report was considered belonging to the group of GI haemorrhage. After this adjustment, the cases of serious GI disorders associated with everolimus present in VigiBase and considered for the assessment were 47 in total. The reports originated from eight different countries: 27 from the United States, 11 from Germany, two each from United Kingdom, Canada and Italy and one each from Austria, Czech Republic and Sweden. The characteristics of the case reports are shown in Table 1. In the majority of cases, other GI symptoms reported were vomiting, diarrhoea and abdominal pain. In some cases disorders in other organs or tissues were also referred to, such as haematologic reactions, metabolic alterations, cardiovascular disorders and infections. However, in nearly half of the cases the adverse reactions appeared to be related to GI haemorrhage or ulcer and no other pathologies were described. In 20 cases, everolimus was indicated as the only suspected drug and in eight of them no other concomitant drug was listed. However, considering the type of patients treated, this is more likely due to incomplete reporting than to a real monotherapy. Sorafenib was suspected together with everolimus in association with serious GI disorders in five patients and bevacizumab in three patients. Among concomitant drugs the most frequent was ciclosporin (five patients), which was also reported as suspected in one case. As everolimus, ciclosporin and sorafenib are all substrates of CYP3A4 a potential interaction could be speculated, however the reports do not allow to further assess the role or relevance in these cases. Eight of the GI haemorrhage cases also reported use of other drugs interfering with blood coagulation, such as acetylsalicylic acid, warfarin and heparins.  In total there were 13 fatal cases, regardless of death cause, among the 47 reports. In five of them (three GI haemorrhages, two GI ulcers) sorafenib or bevacizumab was co-reported with everolimus. For cases where complete treatment dates were provided, twelve of the patients were treated with everolimus for a duration of one to six months, in a few cases for less than one month or more than one year. Although incomplete treatment dates, six additional patients had used everolimus for at least two months." ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Everolimus is a macrolide immunosuppressant and antineoplastic drug used in organ transplantation and oncology. As of November 2011, VigiBase contained 47 individual case safety reports (ICSRs) of selected serious gastrointestinal (GI) reactions (GI haemorrhages, ulcers, haematemesis and melaena) associated with the use of everolimus. The majority of the cases were added to the database in 2010-2011, which could partly be explained by the extended indications of everolimus in the last two years. Co-reported drugs included sorafenib, bevacizumab and anticoagulant drugs, all of which may cause GI haemorrhages, but information on other possible confounders was often missing. GI toxicities, such as hemorrhages and ulcers, are not mentioned as adverse drug reactions (ADRs) in the product labelling. However, VigiBase reports sugggest a possible connection between everolimus and the development or worsening of GI toxicity which has previously been unidentified." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D64.9" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R630" ;
+          OpenPVSignal:has_MedDRA_code 10061428 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#bevacizumab
+:bevacizumab rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "L01XC07" ;
+             rdfs:label "bevacizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#cancer
+:cancer rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "C801" ;
+        OpenPVSignal:has_MedDRA_code 10028997 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Neoplasm malignant" ;
+        rdfs:label "tumours" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#casesOfGIBleedingAndEverolimus
+:casesOfGIBleedingAndEverolimus rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001197 ;
+                                OpenPVSignal:is_part_of :LiteratureInformation ;
+                                OpenPVSignal:refers_to_adverse_effect :giHaemorrhage ;
+                                OpenPVSignal:refers_to_drug :everolimus ,
+                                                            :sorafenib ;
+                                mp:references :Ref.13 ,
+                                              :Ref.14 ,
+                                              :Ref.15 ;
+                                OpenPVSignal:has_content "Two case reports of GI bleeding (grade 5 and 2 respectively) regarding patients with hepatocellular carcinoma recurrence after liver transplantation, treated with sorafenib and everolimus have recently been published.13,14 The authors did not exclude a possible additive effect of everolimus on the already known increase in risk of GI and non GI bleeding for sorafenib and other vascular endothelial growth factor receptor (VEGFR) tyrosine-kinase inhibitors.15" ;
+                                rdfs:label "cases of GI bleeding and everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#ciclosporin
+:ciclosporin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "L04AD01" ,
+                                       "S01XA18" ;
+             rdfs:label "ciclosporin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#diabetesMellitus
+:diabetesMellitus rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "E119" ;
+                  OpenPVSignal:has_MedDRA_code 10012601 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" ;
+                  rdfs:label "diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R19.7" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#duodenalUlcers
+:duodenalUlcers rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10013836 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Duodenal ulcer" ;
+                rdfs:label "duodenal ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#everolimus
+:everolimus rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :MechanismOfEverolimus ;
+            OpenPVSignal:has_ATC_code "L01XE10" ,
+                                      "L04AA18" ;
+            rdfs:label "everolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#everolimusUsage
+:everolimusUsage rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug_Usage ;
+                 OpenPVSignal:concerns_indication_for_use :pancreaticNeuroendocrineTumours ,
+                                                          :renalCellCarcinoma ,
+                                                          :subependymalGiantCellAstrocytoma ;
+                 OpenPVSignal:refers_to_dosage :recommendedInitialDoseForOncology ;
+                 OpenPVSignal:refers_to_drug :everolimus ;
+                 mp:references :Ref.5 ,
+                               :Ref.6 ,
+                               :Ref.7 ;
+                 OpenPVSignal:has_content "Everolimus has been authorized in the European Union for the prevention of organ transplant rejection since 2003, for advanced renal cell carcinoma and pancreatic neuroendocrine tumours since 2009 and for patients with subependymal giant cell astrocytoma (SEGA) associated with tuberous sclerosis complex, not amenable for surgery since 2011.5 Some differences regarding the date of authorization in the specific indications have been observed between EU and the United States. Everolimus has been marketed in the US for the treatment of advanced renal cell carcinoma since 2009, for kidney and heart transplant rejection and SEGA since 2010 and for neuroendocrine tumours since 2011.6,7" ;
+                 rdfs:label "everolimus usage for oncology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#everolimus_usage_for_organ_rejection
+:everolimus_usage_for_organ_rejection rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Drug_Usage ;
+                                      OpenPVSignal:concerns_indication_for_use :transplantRejection ;
+                                      OpenPVSignal:refers_to_dosage :recommendedInitialDoseForOrganRejection ;
+                                      OpenPVSignal:refers_to_drug :everolimus ;
+                                      mp:references :Ref.5 ,
+                                                    :Ref.6 ,
+                                                    :Ref.7 ;
+                                      OpenPVSignal:has_content "Everolimus has been authorized in the European Union for the prevention of organ transplant rejection since 2003, for advanced renal cell carcinoma and pancreatic neuroendocrine tumours since 2009 and for patients with subependymal giant cell astrocytoma (SEGA) associated with tuberous sclerosis complex, not amenable for surgery since 2011.5 Some differences regarding the date of authorization in the specific indications have been observed between EU and the United States. Everolimus has been marketed in the US for the treatment of advanced renal cell carcinoma since 2009, for kidney and heart transplant rejection and SEGA since 2010 and for neuroendocrine tumours since 2011.6,7" ;
+                                      rdfs:label "everolimus usage for organ rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ,
+                                   "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#gastricUlcers
+:gastricUlcers rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10017822 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Gastric ulcer" ;
+               rdfs:label "gastric ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#gastrointestinal_disorder
+:gastrointestinal_disorder rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_MedDRA_code 10017947 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal disorders" ;
+                           rdfs:label "gastrointestinal disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#giHaemorrhage
+:giHaemorrhage rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K922" ;
+               OpenPVSignal:has_MedDRA_code 10017955 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal haemorrhage" ;
+               rdfs:label "gi haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#gi_ulcer
+:gi_ulcer rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10061459 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal ulcer" ;
+          rdfs:label "gi ulcer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#haematemesis
+:haematemesis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10018830 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Haematemesis" ;
+              rdfs:label "haematemesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#hypercholesterolemia
+:hypercholesterolemia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "E78.5" ;
+                      OpenPVSignal:has_MedDRA_code 10020603 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hypercholesterolaemia" ;
+                      rdfs:label "hypercholesterolemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#hyperglycaemia
+:hyperglycaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R73.9" ;
+                OpenPVSignal:has_MedDRA_code 10020635 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperglycaemia" ;
+                rdfs:label "hyperglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#hypertriglyceridemia
+:hypertriglyceridemia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "E78.1" ;
+                      OpenPVSignal:has_MedDRA_code 10020869 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hypertriglyceridaemia" ;
+                      rdfs:label "hypertriglyceridemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#hypophosphatemia
+:hypophosphatemia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "E8331" ;
+                  OpenPVSignal:has_MedDRA_code 10021058 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypophosphataemia" ;
+                  rdfs:label "hypophosphatemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#infections
+:infections rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10021902 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Infections NEC" ;
+            rdfs:label "infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#infectiousPneumonitis
+:infectiousPneumonitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "J158" ;
+                       OpenPVSignal:has_MedDRA_code 10035664 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Pneumonia" ;
+                       rdfs:label "infectious pneumonitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#leukocytopenia
+:leukocytopenia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "D72819" ;
+                OpenPVSignal:has_MedDRA_code 10024384 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Leukopenia" ;
+                rdfs:label "leukocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#lymphopenia
+:lymphopenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D72810" ;
+             OpenPVSignal:has_MedDRA_code 10025327 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Lymphopenia" ;
+             rdfs:label "lymphopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#melena
+:melena rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "K921" ;
+        OpenPVSignal:has_MedDRA_code 10027141 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Melaena" ;
+        rdfs:label "melena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#neutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D709" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#pancreaticNeuroendocrineTumours
+:pancreaticNeuroendocrineTumours rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Indication ;
+                                 OpenPVSignal:has_ICD_code "C25.4" ;
+                                 OpenPVSignal:has_MedDRA_code 10067517 ;
+                                 OpenPVSignal:has_MedDRA_prefered_term "Pancreatic neuroendocrine tumour" ;
+                                 rdfs:label "pancreatic neuroendocrine tumours " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#patientsMedicalHistory
+:patientsMedicalHistory rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001182 ;
+                        OpenPVSignal:has_content "We would like to stress that patients' typology is various and ranges from transplantation to oncology. Many of the patients are taking other drugs and potential and individual risk factors for the development of GI toxicity cannot be gathered from the reports." ;
+                        rdfs:label "patients medical history" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#pepticUlcers
+:pepticUlcers rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10034341 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Peptic ulcer" ;
+              rdfs:label "peptic ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#pneumonitis
+:pneumonitis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "J690" ;
+             OpenPVSignal:has_MedDRA_code 10035742 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Pneumonitis" ;
+             rdfs:label "pneumonitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_statistical_entity :reportsFromAustria ,
+                                                          :reportsFromCanada ,
+                                                          :reportsFromCzechRepublic ,
+                                                          :reportsFromGermany ,
+                                                          :reportsFromItaly ,
+                                                          :reportsFromPatientsThatReceivedEverolimusTherapyForADurationOf1-6Months ,
+                                                          :reportsFromSweden ,
+                                                          :reportsFromUS ,
+                                                          :reportsFromUnitedKingdom ,
+                                                          :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ,
+                                                          :reportsOfEverolimusAndDuodenalUlcers ,
+                                                          :reportsOfEverolimusAndGastricUlcers ,
+                                                          :reportsOfEverolimusAndGiHaemorrhages ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-everolimusSoleSuspect ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-fatalCases ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-neuroendocrineCancer ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-otherTumours ,
+                                                          :reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-renalCancer ,
+                                                          :reportsOfEverolimusAndGihaemorrhages-everolimusTheOnlySuspect ,
+                                                          :reportsOfEverolimusAndGihaemorrhages-fatalCases ,
+                                                          :reportsOfEverolimusAndPepticUlcers ,
+                                                          :reportsWithBevacizumabAsTheSecondarySuspectDrug ,
+                                                          :reportsWithCyclosporineAsConcomitantDrug ,
+                                                          :reportsWithEverolimusAndGIUlcers ,
+                                                          :reportsWithEverolimusAndGIulcers-everolimusSoleSuspect ,
+                                                          :reportsWithEverolimusAndGIulcers-fatalCases ,
+                                                          :reportsWithFatalOutcomeThatContainedSorafenibAndBevacizumabAsco-reported ,
+                                                          :reportsWithSorafenibAsTheSecondarySuspectDrug ,
+                                                          :reports_of_everolimus_and_gi_disorders_after_adjustment_with_age_info ,
+                                                          :reports_of_everolimus_and_gi_haemorrhages_with_age_info ,
+                                                          :reports_of_everolimus_and_haematemesis ,
+                                                          :reports_of_everolimus_and_melaena ,
+                                                          :reports_with_cyclosporine_as_secondary_suspect_drug ,
+                                                          :reports_with_everolimus_and_GI_ulcers_with_info_for_age ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-transplant(kidneyAndliver)> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-everolimusOnlySuspectDrug> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-fatalCases> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_haematemesis/melaena_with_age_info> ;
+          OpenPVSignal:refers_to_adverse_effect :duodenalUlcers ,
+                                                :gastricUlcers ,
+                                                :giHaemorrhage ,
+                                                :haematemesis ,
+                                                :melena ,
+                                                :pepticUlcers ;
+          OpenPVSignal:refers_to_drug :everolimus ;
+          OpenPVSignal:refers_to_primary_suspect_drug :everolimus ;
+          mp:supportedByData :ADRs_of_everolimus ,
+                             :EU_product_labelling_for_everolimus ,
+                             :casesOfGIBleedingAndEverolimus ,
+                             :patientsMedicalHistory ;
+          OpenPVSignal:initially_identified_on "01/06/2012" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#rash
+:rash rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      rdfs:label "rash" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#recommendedInitialDoseForOncology
+:recommendedInitialDoseForOncology rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Dosage ;
+                                   OpenPVSignal:refers_to_drug :everolimus ;
+                                   OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1DayIntervalBetweenAdministration> ;
+                                   mp:referencedBy :Ref.2 ;
+                                   OpenPVSignal:has_dosage_unit "mg" ;
+                                   OpenPVSignal:has_value 10 ;
+                                   OpenPVSignal:refers_to_dose_value "10 mg" ;
+                                   rdfs:label "recommended initial dose for oncology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#recommendedInitialDoseForOrganRejection
+:recommendedInitialDoseForOrganRejection rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Dosage ;
+                                         OpenPVSignal:refers_to_drug :everolimus ;
+                                         OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#12HourIntervalBetweenAdministration> ;
+                                         mp:referencedBy :Ref.1 ;
+                                         OpenPVSignal:has_dosage_unit "mg" ;
+                                         OpenPVSignal:has_value 0.75 ;
+                                         OpenPVSignal:refers_to_dose_value "0,75 mg" ;
+                                         rdfs:label "recommended initial dose for organ rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#renalCancer
+:renalCancer rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "C64.9" ;
+             OpenPVSignal:has_MedDRA_code 10038389 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Renal cancer" ;
+             rdfs:label "renal cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#renalCellCarcinoma
+:renalCellCarcinoma rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "C649" ;
+                    OpenPVSignal:has_MedDRA_code 10067946 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Renal cell carcinoma" ;
+                    rdfs:label "renal cell carcinoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromAustria
+:reportsFromAustria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Austria" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromCanada
+:reportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromCzechRepublic
+:reportsFromCzechRepublic rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Czech_Republic" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports from Czech Republic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                    OpenPVSignal:has_count 11 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromItaly
+:reportsFromItaly rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                  OpenPVSignal:has_count 2 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromPatientsThatReceivedEverolimusTherapyForADurationOf1-6Months
+:reportsFromPatientsThatReceivedEverolimusTherapyForADurationOf1-6Months rdf:type owl:NamedIndividual ,
+                                                                                  OpenPVSignal:Reports_group ;
+                                                                         OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                         OpenPVSignal:time_to_onset <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1_to_six_months> ;
+                                                                         OpenPVSignal:has_count 12 ;
+                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                         rdfs:label "reports from patients that received everolimus therapy for a duration of 1-6 months" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromSweden
+:reportsFromSweden rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Sweden" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from Sweden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromUS
+:reportsFromUS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+               OpenPVSignal:has_count 27 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsFromUnitedKingdom
+:reportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                          OpenPVSignal:has_count 2 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsInVigibaseOfEverolimusAndGastrointestinalDisorders
+:reportsInVigibaseOfEverolimusAndGastrointestinalDisorders rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Reports_group ;
+                                                           OpenPVSignal:refers_to_adverse_effect :gastrointestinal_disorder ;
+                                                           OpenPVSignal:refers_to_drug :everolimus ;
+                                                           OpenPVSignal:has_count 636 ;
+                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                           rdfs:label "reports in vigibase of everolimus and gastrointestinal disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndDuodenalUlcers
+:reportsOfEverolimusAndDuodenalUlcers rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                      OpenPVSignal:refers_to_adverse_effect :duodenalUlcers ;
+                                      OpenPVSignal:refers_to_drug :everolimus ;
+                                      OpenPVSignal:has_count 8 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "reports of everolimus and duodenal ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGastricUlcers
+:reportsOfEverolimusAndGastricUlcers rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                     OpenPVSignal:refers_to_adverse_effect :gastricUlcers ;
+                                     OpenPVSignal:refers_to_drug :everolimus ;
+                                     OpenPVSignal:has_count 4 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports of everolimus and gastric ulcers " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhages
+:reportsOfEverolimusAndGiHaemorrhages rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                      OpenPVSignal:refers_to_adverse_effect :giHaemorrhage ;
+                                      OpenPVSignal:refers_to_drug :everolimus ;
+                                      OpenPVSignal:has_count 27 ;
+                                      OpenPVSignal:has_count_of_men 15 ;
+                                      OpenPVSignal:has_count_of_women 10 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "reports of everolimus and gi haemorrhages" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment
+:reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                                     OpenPVSignal:refers_to_adverse_effect :gastrointestinal_disorder ;
+                                                     OpenPVSignal:refers_to_drug :everolimus ;
+                                                     OpenPVSignal:has_count 47 ;
+                                                     OpenPVSignal:has_count_of_men 24 ;
+                                                     OpenPVSignal:has_count_of_women 19 ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "reports of everolimus and gi disorders after adjustment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-everolimusSoleSuspect
+:reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-everolimusSoleSuspect rdf:type owl:NamedIndividual ,
+                                                                                    OpenPVSignal:Reports_group ;
+                                                                           OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                           OpenPVSignal:refers_to_primary_suspect_drug :everolimus ;
+                                                                           OpenPVSignal:has_count 20 ;
+                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                           rdfs:label "reports of everolimus and gi disorders after adjustment-everolimus sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-fatalCases
+:reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-fatalCases rdf:type owl:NamedIndividual ,
+                                                                         OpenPVSignal:Reports_group ;
+                                                                OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                OpenPVSignal:has_count 13 ;
+                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                                rdfs:label "reports of everolimus and gi disorders after adjustment-fatal cases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-neuroendocrineCancer
+:reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-neuroendocrineCancer rdf:type owl:NamedIndividual ,
+                                                                                   OpenPVSignal:Reports_group ;
+                                                                          OpenPVSignal:concerns_indication_for_use :pancreaticNeuroendocrineTumours ;
+                                                                          OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                          OpenPVSignal:has_count 3 ;
+                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                          rdfs:label "reports of everolimus and gi haemorrhages after adjustment-neuroendocrine cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-otherTumours
+:reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-otherTumours rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Reports_group ;
+                                                                  OpenPVSignal:concerns_indication_for_use :cancer ;
+                                                                  OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                  OpenPVSignal:has_count 18 ;
+                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                  rdfs:label "reports of everolimus and gi haemorrhages after adjustment-other tumours" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-renalCancer
+:reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-renalCancer rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:concerns_indication_for_use :renalCancer ;
+                                                                 OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                 OpenPVSignal:has_count 10 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "reports of everolimus and gi haemorrhages after adjustment-renal cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGihaemorrhages-everolimusTheOnlySuspect
+:reportsOfEverolimusAndGihaemorrhages-everolimusTheOnlySuspect rdf:type owl:NamedIndividual ,
+                                                                        OpenPVSignal:Reports_group ;
+                                                               OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhages ;
+                                                               OpenPVSignal:refers_to_primary_suspect_drug :everolimus ;
+                                                               OpenPVSignal:has_count 10 ;
+                                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                               rdfs:label "reports of everolimus and gi haemorrhages-everolimus the only suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGihaemorrhages-fatalCases
+:reportsOfEverolimusAndGihaemorrhages-fatalCases rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhages ;
+                                                 OpenPVSignal:has_count 9 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                 rdfs:label "reports of everolimus and gi haemorrhages-fatal cases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndPepticUlcers
+:reportsOfEverolimusAndPepticUlcers rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                    OpenPVSignal:refers_to_adverse_effect :pepticUlcers ;
+                                    OpenPVSignal:refers_to_drug :everolimus ;
+                                    OpenPVSignal:has_count 5 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports of everolimus and peptic ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithBevacizumabAsTheSecondarySuspectDrug
+:reportsWithBevacizumabAsTheSecondarySuspectDrug rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                 OpenPVSignal:refers_to_secondary_suspect_drug :bevacizumab ;
+                                                 OpenPVSignal:has_count 3 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "reports with bevacizumab as the secondary suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithCyclosporineAsConcomitantDrug
+:reportsWithCyclosporineAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                          OpenPVSignal:refers_to_concomitant_drug :ciclosporin ;
+                                          OpenPVSignal:has_count 5 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "reports with ciclosporine as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithEverolimusAndGIUlcers
+:reportsWithEverolimusAndGIUlcers rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:refers_to_adverse_effect :gi_ulcer ;
+                                  OpenPVSignal:refers_to_drug :everolimus ;
+                                  OpenPVSignal:has_count 11 ;
+                                  OpenPVSignal:has_count_of_men 5 ;
+                                  OpenPVSignal:has_count_of_women 5 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with everolimus and GI ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithEverolimusAndGIulcers-everolimusSoleSuspect
+:reportsWithEverolimusAndGIulcers-everolimusSoleSuspect rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Reports_group ;
+                                                        OpenPVSignal:is_subgroup_of :reportsWithEverolimusAndGIUlcers ;
+                                                        OpenPVSignal:refers_to_primary_suspect_drug :everolimus ;
+                                                        OpenPVSignal:has_count 5 ;
+                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                        rdfs:label "reports with everolimus and GI ulcers-everolimus sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithEverolimusAndGIulcers-fatalCases
+:reportsWithEverolimusAndGIulcers-fatalCases rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :reportsWithEverolimusAndGIUlcers ;
+                                             OpenPVSignal:has_count 2 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                             rdfs:label "reports with everolimus and GI ulcers-fatal cases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithFatalOutcomeThatContainedSorafenibAndBevacizumabAsco-reported
+:reportsWithFatalOutcomeThatContainedSorafenibAndBevacizumabAsco-reported rdf:type owl:NamedIndividual ,
+                                                                                   OpenPVSignal:Reports_group ;
+                                                                          OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                          OpenPVSignal:refers_to_secondary_suspect_drug :bevacizumab ,
+                                                                                                                        :sorafenib ;
+                                                                          OpenPVSignal:has_content "In five of them (three GI haemorrhages, two GI ulcers) sorafenib or bevacizumab was co-reported with everolimus." ;
+                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                          rdfs:label "reports with fatal outcome that contained sorafenib and bevacizumab as co-reported" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsWithSorafenibAsTheSecondarySuspectDrug
+:reportsWithSorafenibAsTheSecondarySuspectDrug rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                               OpenPVSignal:refers_to_secondary_suspect_drug :sorafenib ;
+                                               OpenPVSignal:has_count 5 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "reports with sorafenib as the secondary suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_gi_disorders_after_adjustment_with_age_info
+:reports_of_everolimus_and_gi_disorders_after_adjustment_with_age_info rdf:type owl:NamedIndividual ,
+                                                                                OpenPVSignal:Reports_group ;
+                                                                       OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                       OpenPVSignal:has_average_age 55 ;
+                                                                       OpenPVSignal:has_count 15 ;
+                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                       rdfs:label "reports of everolimus and gi disorders after adjustment with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_gi_haemorrhages_with_age_info
+:reports_of_everolimus_and_gi_haemorrhages_with_age_info rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhages ;
+                                                         OpenPVSignal:has_average_age 49 ;
+                                                         OpenPVSignal:has_count 10 ;
+                                                         OpenPVSignal:has_max_age 69 ;
+                                                         OpenPVSignal:has_min_age 25 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "reports of everolimus and gi haemorrhages with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_haematemesis
+:reports_of_everolimus_and_haematemesis rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                        OpenPVSignal:refers_to_adverse_effect :haematemesis ;
+                                        OpenPVSignal:has_count 9 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports of everolimus and haematemesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_melaena
+:reports_of_everolimus_and_melaena rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reportsInVigibaseOfEverolimusAndGastrointestinalDisorders ;
+                                   OpenPVSignal:refers_to_adverse_effect :melena ;
+                                   OpenPVSignal:has_count 9 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports of everolimus and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_with_cyclosporine_as_secondary_suspect_drug
+:reports_with_cyclosporine_as_secondary_suspect_drug rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                     OpenPVSignal:refers_to_secondary_suspect_drug :ciclosporin ;
+                                                     OpenPVSignal:has_count 1 ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "reports with ciclosporine as secondary suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_with_everolimus_and_GI_ulcers_with_info_for_age
+:reports_with_everolimus_and_GI_ulcers_with_info_for_age rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:is_subgroup_of :reportsWithEverolimusAndGIUlcers ;
+                                                         OpenPVSignal:has_average_age 73 ;
+                                                         OpenPVSignal:has_count 4 ;
+                                                         OpenPVSignal:has_max_age 79 ;
+                                                         OpenPVSignal:has_min_age 65 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "reports with everolimus and GI ulcers with info for age" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#sorafenib
+:sorafenib rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L01XE05" ;
+           rdfs:label "sorafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#stomatitis
+:stomatitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "K121" ;
+            OpenPVSignal:has_MedDRA_code 10042128 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Stomatitis" ;
+            rdfs:label "stomatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#subependymalGiantCellAstrocytoma
+:subependymalGiantCellAstrocytoma rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Indication ;
+                                  OpenPVSignal:has_MedDRA_code 10073233 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Subependymal giant cell astrocytoma" ;
+                                  rdfs:label "subependymal giant cell astrocytoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#thrombocytopenia
+:thrombocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D696" ;
+                  OpenPVSignal:has_MedDRA_code 10043554 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Thrombocytopenia" ;
+                  rdfs:label "thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#transplantRejection
+:transplantRejection rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "T86.11" ;
+                     OpenPVSignal:has_MedDRA_code 10044439 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Transplant rejection" ;
+                     rdfs:label "transplant rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1DayIntervalBetweenAdministration
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1DayIntervalBetweenAdministration> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://www.w3.org/2006/time#DurationDescription> ;
+                                                                                                                      <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                                                                                                                      <http://www.w3.org/2006/time#numericPosition> 1 ;
+                                                                                                                      rdfs:label "1 day interval between administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1_to_six_months
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#1_to_six_months> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.w3.org/2006/time#DurationDescription> ;
+                                                                                                    OpenPVSignal:has_content "twelve of the patients were treated with everolimus for a duration of one to six months" ;
+                                                                                                    <http://www.w3.org/2006/time#nominalPosition> "months" ;
+                                                                                                    <http://www.w3.org/2006/time#numericDuration> 6 ;
+                                                                                                    <http://www.w3.org/2006/time#numericPosition> 1 ;
+                                                                                                    rdfs:label "1 to 6 months" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#12HourIntervalBetweenAdministration
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#12HourIntervalBetweenAdministration> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                                                                                                                        <http://www.w3.org/2006/time#nominalPosition> "hours" ;
+                                                                                                                        <http://www.w3.org/2006/time#numericPosition> 12 ;
+                                                                                                                        rdfs:label "12 hour interval between administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-transplant(kidneyAndliver)
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-transplant(kidneyAndliver)> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                                                                   OpenPVSignal:concerns_indication_for_use :transplantRejection ;
+                                                                                                                                                                   OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                                                                                                                   OpenPVSignal:has_count 10 ;
+                                                                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                   rdfs:label "reports of everolimus and gi haemorrhages after adjustment-transplant (kidney and liver)" ,
+                                                                                                                                                                              "reportsOfEverolimusAndGiHaemorrhagesAfteradjustment-transplant(kidneyAndliver)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena> rdf:type owl:NamedIndividual ,
+                                                                                                                                        OpenPVSignal:Reports_group ;
+                                                                                                                               OpenPVSignal:is_subgroup_of :reportsOfEverolimusAndGiHaemorrhagesAfterAdjustment ;
+                                                                                                                               OpenPVSignal:refers_to_adverse_effect :haematemesis ,
+                                                                                                                                                                     :melena ;
+                                                                                                                               OpenPVSignal:refers_to_drug :everolimus ;
+                                                                                                                               OpenPVSignal:has_count 9 ;
+                                                                                                                               OpenPVSignal:has_count_of_men 4 ;
+                                                                                                                               OpenPVSignal:has_count_of_women 4 ;
+                                                                                                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                               rdfs:label "reports of everolimus and haematemesis/melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-everolimusOnlySuspectDrug
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-everolimusOnlySuspectDrug> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena> ;
+                                                                                                                                                         OpenPVSignal:refers_to_primary_suspect_drug :everolimus ;
+                                                                                                                                                         OpenPVSignal:has_count 5 ;
+                                                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                         rdfs:label "reports of everolimus and haematemesis/melaena-everolimus only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-fatalCases
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena-fatalCases> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   OpenPVSignal:Reports_group ;
+                                                                                                                                          OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena> ;
+                                                                                                                                          OpenPVSignal:has_count 2 ;
+                                                                                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                          OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                                                                                                          rdfs:label "reports of everolimus and haematemesis/melaena-fatal cases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_haematemesis/melaena_with_age_info
+<http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reports_of_everolimus_and_haematemesis/melaena_with_age_info> rdf:type owl:NamedIndividual ,
+                                                                                                                                                          OpenPVSignal:Reports_group ;
+                                                                                                                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_3_everolimus_gastrointestinal_disorders#reportsOfEverolimusAndhaematemesis/melaena> ;
+                                                                                                                                                 OpenPVSignal:has_average_age 42 ;
+                                                                                                                                                 OpenPVSignal:has_count 1 ;
+                                                                                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                 rdfs:label "reports of everolimus and haematemesis/melaena with age info" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:anemia OpenPVSignal:has_ICD_code "D649" ;
+        OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+        rdfs:label "anemia" ;
+        OpenPVSignal:has_MedDRA_code 10002034 .
+
+
+:carcinoma OpenPVSignal:has_ICD_code "C801" ;
+           OpenPVSignal:has_MedDRA_prefered_term "Neoplasm malignant" ;
+           OpenPVSignal:has_MedDRA_code 10028997 ;
+           rdfs:label "carcinoma" .
+
+
+:diabetes OpenPVSignal:has_ICD_code "E119" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" ;
+          OpenPVSignal:has_MedDRA_code 10012601 ;
+          rdfs:label "diabetes" .
+
+
+:diarrhea OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+:hypercholesterolaemia OpenPVSignal:has_MedDRA_code 10020603 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Hypercholesterolaemia" ;
+                       rdfs:label "hypercholesterolaemia" .
+
+
+:hyperglycemia OpenPVSignal:has_ICD_code "R739" ;
+               OpenPVSignal:has_MedDRA_code 10020635 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperglycaemia" ;
+               rdfs:label "hyperglycemia" .
+
+
+:hypertriglyceridaemia rdfs:label "hypertriglyceridaemia" ;
+                       OpenPVSignal:has_MedDRA_code 10020869 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Hypertriglyceridaemia" .
+
+
+:hypophosphataemia OpenPVSignal:has_MedDRA_prefered_term "Hypophosphataemia" ;
+                   rdfs:label "hypophosphataemia" ;
+                   OpenPVSignal:has_MedDRA_code 10021058 .
+
+
+:tuberousSclerosisComplex rdfs:label "tuberous sclerosis complex" ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Tuberous sclerosis complex" ;
+                          OpenPVSignal:has_MedDRA_code 10080584 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

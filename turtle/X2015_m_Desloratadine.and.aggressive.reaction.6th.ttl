@@ -1,0 +1,1776 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction> rdf:type owl:Ontology ;
+                                                                                 owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                             mp: ;
+                                                                                 rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255496/"^^xsd:anyURI ;
+                                                                                 rdfs:label "Desloratadine and aggressive reaction"^^xsd:Literal ;
+                                                                                 owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#AdultReports
+:AdultReports rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Reports_group ;
+              OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+              OpenPVSignal:has_count 7 ;
+              OpenPVSignal:has_min_age 18 ;
+              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+              rdfs:label "Adult reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Aggression
+:Aggression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Free_text_reporting_element ;
+            OpenPVSignal:refers_to_adverse_effect :aggression ;
+            mp:references :Ref.6 ,
+                          :Ref.7 ,
+                          :Ref.8 ;
+            OpenPVSignal:has_content "Aggression is a wide term and is not a diagnosis in itself. It may instead be a symptom of or related to many different conditions, such as attentiondeficit hyperactivity disorder (ADHD) or dementia, and it may overlap with other terms, such as irritability and emotional lability.6,7 Aggressive behaviour can manifest throughout life and may be part of the natural development process in children. For toddlers and pre-school children aggression generally peaks at 18 to 24 months and slowly decreases by the age of 5.7 The nature of aggressive behaviour is complex and involves genetic and environmental factors, different neural circuits, and several neurotransmitters, including serotonin (5-HT), dopamine, and GABA.8" ;
+            rdfs:label "Aggression pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "Reports in VigiBase® primarily, but not exclusively, support a signal on aggressive reaction associated with desloratadine use in children. The paediatric reports represent a plausible temporal relationship, positive de- and rechallenges and only a few identified possible confounders. Psychiatric and neurologic adverse reactions have been reported for the drug and thus penetration into the brain and the possibility of other clinically relevant CNS effects cannot be excluded. Additional loratadine reports in VigiBase® and the fact that aggression is a known adverse reaction for cetirizine, contribute to suspicions of a possible class effect. Thank you to the national pharmacovigilance centres contributing additional case information upon request. " ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DesloratadinePrescriptionInformation
+:DesloratadinePrescriptionInformation rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Free_text_reporting_element ;
+                                      mp:references :Ref.1 ,
+                                                    :Ref.2 ,
+                                                    :Ref.3 ;
+                                      OpenPVSignal:has_content "This second generation antihistamine was authorized throughout the European Union and the United States in 2001 and is currently available in large parts of the world, including Latin America, Africa and Asia.1,2,3 Desloratadine is the primary active metabolite of loratadine, a widely used antihistamine which was introduced in 1993 and is now available over the counter.4,5 Desloratadine is still subject to medical prescription.1,2  " ;
+                                      rdfs:label "Desloratadine prescription information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Desloratadine_and_aggressive_reaction
+:Desloratadine_and_aggressive_reaction rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                       OpenPVSignal:refers_to_author :Ms_Lovisa_Sandberg ;
+                                       OpenPVSignal:refers_to_signal :pvSignal ;
+                                       mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                       OpenPVSignal:has_creation_date "01/12/2015" ;
+                                       OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                       rdfs:label "Desloratadine and aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.1 ,
+                                 :Ref.11 ,
+                                 :Ref.12 ,
+                                 :Ref.16 ,
+                                 :Ref.2 ;
+                   OpenPVSignal:has_content "VigiBase® paediatric reports on aggressive reaction and desloratadine represent six cases with a supportive temporal relationship and positive dechallenge, and of these, two reported a subsequent positive rechallenge. Four of these cases had no other medication reported while one case reported concomitant use of another antihistamine (eye drops) and a corticosteroid (nasal spray) previously associated with aggression, and another case reported concomitant use over a period of one year of antipsychotic drugs indicated for autism. Two additional paediatric cases reported a time to onset consistent with the other cases, but negative or unknown outcome of dechallenge. One of these cases however reported that the patient was improving upon withdrawal of the drug together with treatment of haloperidol. This case described other reactions, including psychotic reaction and hallucinations, the latter a known adverse reaction  for desloratadine and which may lead to aggression. The remaining two cases involving children were less convincing with long or missing time to onset, negative dechallenge and co-reported drugs previously associated with aggression. The medical histories of the patients were seldom reported and identified possible confounders were few in relation to the number of paediatric reports. The neurological and behavioural development of children may be seen as a confounding factor and differentia- ting coincidental aggressiveness as a natural course of development, from a true causal association is difficult. However, a possible causal relationship is supported by a plausible temporal relationship, positive de- and rechallenge, and complementary adult cases. The adult reports were less convincing in supporting a signal. However, one of the adult cases presented no obvious confounders, a rapid onset of the reaction, positive dechallenge as well as positive rechallenge, and thus this signal is not limited to children. The main proportion of the cases did not indicate a serious reaction; however, aggression may have severe implications. As aggressive behaviour sometimes involves violence, both the patient him/herself and his/her surroundings may be at risk of being physically injured, and aggressive behaviour, even if only verbal, may have consequences on social interactions and the quality of life. Another implication is the legal aspect, in which it may be important to find explanations for aggressive action. Although desloratadine is said not to readily cross the blood-brain barrier, this cannot be completely excluded and there have been reports of CNS adverse reactions from this drug.1,2,16 One example is emotional lability, which may in a wider sense include the term discussed in this signal, found to be reported at greater frequency for desloratadine than for placebo in infants and toddlers.2 The neurobiology of aggression is complex and is supposed to involve many different neural circuits and neurotransmitters and a mechanism can only be speculated. However, penetration into the brain and the possibility of triggering clinically relevant CNS adverse effects in susceptible patients, cannot be ruled out. Worth noting is that half of the paediatric cases had a higher than recommended daily dose, indicating a possible dose-relationship. Two of these cases also reported concomitant use of another antihistamine, which may suggest a possible additive effect. The range of countries reporting this association strengthens the signal in the sense of being broadly observed. Also important to highlight, when this combination was assessed, VigiBase® contained in addition 108 reports (45 paediatric) of an aggressive reaction associated with loratadine, entered between 1992 and 2015 and originating from 13 different countries. This, together with the fact that aggression is described as an adverse reaction for cetirizine11,12, another second-generation antihistamine, points to a possible class effect. " ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo1
+:DoseInfo1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 1 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "1 mg" ;
+           rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo10
+:DoseInfo10 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Dosage ;
+            OpenPVSignal:refers_to_drug :desloratadine ;
+            OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+            OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+            OpenPVSignal:has_value 2.5 ,
+                                   5 ;
+            OpenPVSignal:refers_to_dose_value "2.5 mg" ,
+                                              "5 mg" ;
+            rdfs:label "Dose 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo2
+:DoseInfo2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2.5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+           rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo3
+:DoseInfo3 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2.5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+           rdfs:label "Dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo5
+:DoseInfo5 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2.5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+           rdfs:label "Dose 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo6
+:DoseInfo6 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2.5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+           rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo7
+:DoseInfo7 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "5 mg" ;
+           rdfs:label "Dose 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo8
+:DoseInfo8 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "5 mg" ;
+           rdfs:label "Dose 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#DoseInfo9
+:DoseInfo9 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:refers_to_drug :desloratadine ;
+           OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2.5 ;
+           OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+           OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+           rdfs:label "Dose 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Incorrect_dosage_of_desloratadine
+:Incorrect_dosage_of_desloratadine rdf:type owl:NamedIndividual ,
+                                            obo:OAE_0000673 ;
+                                   OpenPVSignal:refers_to_drug :desloratadine ;
+                                   OpenPVSignal:has_content "Worth noting is that half of the paediatric cases had a higher than recommended daily dose, indicating a possible dose-relationship" ;
+                                   rdfs:label "Incorrect dosage of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Information_about_desloratadine_from_clinical_trials
+:Information_about_desloratadine_from_clinical_trials rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Clinical_trial_information ;
+                                                      OpenPVSignal:refers_to_adverse_effect :emotionalLability ,
+                                                                                            :irritability ;
+                                                      OpenPVSignal:refers_to_drug :desloratadine ;
+                                                      mp:references :Ref.2 ;
+                                                      OpenPVSignal:has_content "In three placebo controlled clinical trials, desloratadine was administered for 15 days to a total of 246 children aged 6 months to 11 years. In infants and toddlers aged 12 months to 23 months emotional lability was reported at a frequency greater than with placebo (3.1%, 0%), as was irritability in infants aged 6 to 11 months (12.1%, 11.3%). " ;
+                                                      rdfs:label "Information about desloratadine from clinical trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ;
+                     OpenPVSignal:has_content "Desloratadine is a non-sedative, selective peripheral histamine (H1) receptor antagonist, indicated for the relief of symptoms associated with allergic rhinitis and urticaria.1 This secondgeneration antihistamine was authorized throughout the European Union and the United States in 2001 and is currently available in large parts of the world, including Latin America, Africa and Asia.1,2,3 Desloratadine is the primary active metabolite of loratadine, a widely used antihistamine which was introduced in 1993 and is now available over the counter.4,5 Desloratadine is still subject to medical prescription.1,2 In the European Union desloratadine is approved for use in adults, adolescents and children over the age of 1 year.1 In the United States the drug is approved for patients of 6 months and older.2 The recommended daily dose for adults and adolescents (12 years of age and over) is 5 mg, for children from 6 to 11 years 2.5 mg, from 1 to 5 years 1.25 mg and from 6 to 11 months 1 mg.1,2 Desloratadine reaches maximum plasma concentration after approximately three hours, and the half-life is about 27 hours. The enzyme responsible for the metabolism is still unknown, so interactions with other medicinal products cannot be excluded.1 The most common adverse reactions reported in clinical trials were fatigue, dry mouth and headache (frequency ≥ 1/100 to < 1/10). Additional psychiatric and nervous system adverse reactions reported during the post-marketing period include hallucinations, dizziness, somnolence, insomnia, psychomotor hyperactivity and seizures (frequency < 1/10,000).1 Aggressive reaction is not listed as an adverse reaction, neither for desloratadine nor loratadine.1,2,4,5 Aggression is a wide term and is not a diagnosis in itself. It may instead be a symptom of or related to many different conditions, such as attentiondeficit hyperactivity disorder (ADHD) or dementia, and it may overlap with other terms, such as irritability and emotional lability.6,7 Aggressive behaviour can manifest throughout life and may be part of the natural development process in children. For toddlers and pre-school children aggression generally peaks at 18 to 24 months and slowly decreases by the age of 5.7 The nature of aggressive behaviour is complex and involves genetic and environmental factors, different neural circuits, and several neurotransmitters, including serotonin (5-HT), dopamine, and GABA.8" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#LiteratureInformation
+:LiteratureInformation rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Literature_information ;
+                       mp:references :Ref.1 ,
+                                     :Ref.10 ,
+                                     :Ref.11 ,
+                                     :Ref.12 ,
+                                     :Ref.13 ,
+                                     :Ref.14 ,
+                                     :Ref.15 ,
+                                     :Ref.16 ,
+                                     :Ref.17 ,
+                                     :Ref.18 ,
+                                     :Ref.19 ,
+                                     :Ref.2 ,
+                                     :Ref.5 ,
+                                     :Ref.8 ;
+                       OpenPVSignal:has_content "Psychiatric and nervous system disorder reactions, including hallucinations, dizziness, somnolence, insomnia, psychomotor hyperactivity and seizures, have been reported in association with desloratadine as adverse reactions during the post-marketing period.1 In three placebocontrolled clinical trials, desloratadine was administered for 15 days to a total of 246 children aged 6 months to 11 years. In infants and toddlers aged 12 months to 23 months emotional lability was reported at a frequency greater than with placebo (3.1%, 0%), as was irritability in infants aged 6 to 11 months (12.1%, 11.3%).2 Nothing is mentioned in the British National Formulary for Children about the use of desloratadine and adverse events related to aggression.10 Aggression has been reported as an adverse event in the post-marketing period for cetirizine, another second-generation antihistamine indicated for allergic rhinitis and chronic idiopathic urticaria.11,12 First-generation antihistamines have more pronounced sedative properties than secondgeneration antihistamines, but have also been associated with agitation and irritability.5,13 These compounds, as compared to second-generation antihistamines, have less H1 receptor selectivity and more easily enter the central nervous system (CNS).13 It is inconclusive whether the limited penetration of second-generation antihistamines into CNS is determined by active efflux from the brain via P-glycoprotein (P-gp) or a restricted penetration through the blood-brain barrier.13,14,15 Cerminara et al. described seizures induced by desloratadine in four children. They speculated that susceptible patients might have a mutation in the gene coding for P-gp, causing an abnormal variant of P-gp, and thus limiting the efflux of desloratadine from the CNS.16 Animal studies have indicated that inactivating the histaminergic (H1) system may reduce aggression in rodents, suggestively through decreased serotonin (5-HT) activity.17,18 However, variations in the histaminergic system and the nature of aggression among species, as well as limitations to animal models8,19 raise uncertainty to whether these results could be fully applied to humans." ;
+                       rdfs:label "Literature information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Mechanism_of_desloratadine
+:Mechanism_of_desloratadine rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Mechanism ;
+                            mp:references :Ref.1 ,
+                                          :Ref.4 ,
+                                          :Ref.5 ;
+                            OpenPVSignal:has_content "Desloratadine is a non-sedative, selective peripheral histamine (H1) receptor antagonist, indicated for the relief of symptoms associated with allergic rhinitis and urticaria.1" ,
+                                                     "Desloratadine is the primary active metabolite of loratadine, a widely used antihistamine which was introduced in 1993 and is now available over the counter.4,5" ,
+                                                     "Desloratadine reaches maximum plasma concentration after approximately three hours, and the half-life is about 27 hours. The enzyme responsible for the metabolism is still unknown, so interactions with other medicinal products cannot be excluded.1" ;
+                            rdfs:label "Mechanism of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Mechanism_of_desloratadine_entering_CNS
+:Mechanism_of_desloratadine_entering_CNS rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Mechanism ;
+                                         mp:references :Ref.13 ,
+                                                       :Ref.14 ,
+                                                       :Ref.15 ;
+                                         OpenPVSignal:has_content "It is inconclusive whether the limited penetration of second-generation antihistamines into CNS is determined by active efflux from the brain via P-glycoprotein (P-gp) or a restricted penetration through the blood-brain barrier.13,14,15" ;
+                                         rdfs:label "Mechanism of desloratadine entering CNS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ms_Lovisa_Sandberg
+:Ms_Lovisa_Sandberg rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Author ;
+                    OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                    OpenPVSignal:has_first_name "Lovisa" ;
+                    OpenPVSignal:has_last_name "Sandberg" ;
+                    rdfs:label "Ms Lovisa Sandberg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#PaediatricReports
+:PaediatricReports rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                   OpenPVSignal:has_count 10 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Paediatric reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#PaediatricReportsWithDesloratadineAsTheOnlySuspectDrug
+:PaediatricReportsWithDesloratadineAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Reports_group ;
+                                                        OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                                                        OpenPVSignal:has_count 6 ;
+                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                        rdfs:label "Paediatric reports with desloratadine as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Paediatric_reports_with_age_info
+:Paediatric_reports_with_age_info rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :PaediatricReports ;
+                                  OpenPVSignal:has_count 8 ;
+                                  OpenPVSignal:has_max_age 8 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Paediatric reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Paediatric_reports_with_recovery
+:Paediatric_reports_with_recovery rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :PaediatricReports ;
+                                  OpenPVSignal:has_count 6 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                  rdfs:label "Paediatric reports with recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 15 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 8 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 8 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 5 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 1 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 4 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 4 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 12 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 8 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 4 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#PossibleMechanismOfAggression
+:PossibleMechanismOfAggression rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect_Mechanism ;
+                               OpenPVSignal:refers_to_adverse_effect :aggression ;
+                               mp:references :Ref.8 ;
+                               OpenPVSignal:has_content "The nature of aggressive behaviour is complex and involves genetic and environmental factors, different neural circuits, and several neurotransmitters, including serotonin (5-HT), dopamine, and GABA.8  " ;
+                               rdfs:label "Possible mechanism of aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#PossibleMechanismOfAggressionDueToDesloratadine
+:PossibleMechanismOfAggressionDueToDesloratadine rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                 OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                                 OpenPVSignal:has_content "The neurobiology of aggression is complex and is supposed to involve many different neural circuits and neurotransmitters and a mechanism can only be speculated. However, penetration into the brain and the possibility of triggering clinically relevant CNS adverse effects in susceptible patients, cannot be ruled out" ;
+                                                 rdfs:label "Possible mechanism of aggression due to desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European public assessment report (EPAR) for desloratadine (Aerius®). URL: http://www. ema.europa.eu/ema/. Accessed: November 2014. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "British Medical Association and the Royal Pharmaceutical Society of Great Britain. British National Formulary for children 2013- 2014. UK: BMJ Publishing Group. 2013. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "US FDA product label for cetirizine (Zyrtec®). URL: http://www.accessdata.fda.gov/scripts/ cder/drugsatfda/. Accessed: November 2014. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "UK EMC Summary of product characteristics (SPC) for cetirizine (Piriteze®). URL: http://www.medicines.org. uk/emc/. Accessed: November 2014. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Yanai K, Rogala B, Chugh K, Paraskakis E, Pampura AN, Boev R. Safety considerations in the management of allergic diseases: focus on antihistamines. Curr Med Res Opin. 2012 Apr;28(4):623-42. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Uesawa Y, Hishinuma S, Shoji M. Molecular determinants responsible for sedative and non-sedative properties of histamine H1- receptor antagonists. J Pharmacol Sci. 2014;124(2):160-8. " ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Conen S, Theunissen EL, Vermeeren A, van Ruitenbeek P, Stiers P, Mehta MA, et al. The role of P-glycoprotein in CNS antihistamine effects. Psychopharmacology (Berl). 2013 Sep;229(1):9-19. " ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Cerminara C, El-Malhany N, Roberto D, Lo Castro A, Curatolo P. Seizures induced by desloratadine, A second-generation antihistamine: clinical observations. Neuropediatrics. 2013;44:222-4. " ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Noguchi S, Inukai T, Kuno T, Tanaka C. The suppression of olfactory bulbectomy-induced muricide by antidepressants and antihistamines via histamine H1 receptor blocking. Physiol Behav. 1992 Jun;51(6):1123-7. " ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Yanai K, Son LZ, Endou M, Sakurai E, Nakagawasai O, Tadano T, et al. Behavioural characterization and amounts of brain monoamines and their metabolites in mice lacking histamine H1 receptors. Neuroscience. 1998 Nov;87(2):479-87. " ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Haas HL, Sergeeva OA, Selbach O. Histamine in the nervous system. Physiol Rev. 2008 Jul;88(3):1183-241. " ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA product label for desloratadine (Clarinex®). URL: http://www.accessdata. fda.gov/scripts/cder/drugsatfda/. Accessed: November 2014. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sweetman SC (ed), Martindale: The Complete Drug Reference. [online] London: Pharmaceutical Press. URL: http://www. medicinescomplete.com. Accessed: November 2014. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA approved drugs information. URL: http://www.accessdata.fda.gov. Accessed March 2015. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK EMC Summaries of product characteristics (SPCs). URL: http://www.medicines.org.uk/. Accessed: February 2015. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Medscape. URL: http://emedicine.medscape.com/article/ 288689-overview. Accessed: March 2015. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Liu J, Lewis G, Evans L. Understanding aggressive behavior across the life span. J Psychiatr Ment Health Nurs. 2013 Mar;20(2):156-68. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Nelson RJ, Trainor BC. Neural mechanisms of aggression. Nat Rev Neurosci. 2007 Jul;8(7):536-46. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vidal France product information for cyamemazine (Tercian®). URL: http://www.vidal.fr/substances/1136/ cyamemazine/. Accessed: March 2015. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_1_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveness ,
+                                               :behaviourDisorder ,
+                                               :excitability ,
+                                               :titubation ;
+         OpenPVSignal:refers_to_concomitant_drug :cyamemazine ,
+                                                 :risperidone ;
+         OpenPVSignal:refers_to_past_diagnosis :autism ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report1 ;
+         OpenPVSignal:time_to_onset :timeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :case_10_info ;
+          OpenPVSignal:refers_to_adverse_effect :aggressiveBehaviour ,
+                                                :insomnia ,
+                                                :psychicDisturbance ;
+          OpenPVSignal:refers_to_concomitant_drug :fluticasone ,
+                                                  :salbutamol ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+          OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report10 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_2_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggression ,
+                                               :irritability ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report2 ;
+         OpenPVSignal:time_to_onset :timeToOnset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_3_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggression ;
+         OpenPVSignal:refers_to_concomitant_drug <http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#brompheniraminemaleate/pseudoephedrineHydrochloride> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report3 ;
+         OpenPVSignal:time_to_onset :timeToOnset3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_4_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveness ,
+                                               :drugEffectLackOf ,
+                                               :irritability ,
+                                               :nightmare ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:time_to_onset :timeToOnset4 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_5_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggression ,
+                                               :sleepiness ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report5 ;
+         OpenPVSignal:time_to_onset :timeToOnset5 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_6_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveBehaviour ,
+                                               :fever ,
+                                               :petitMal ,
+                                               :stress ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report6 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :clarithromycin ,
+                                                       :montelukast ;
+         OpenPVSignal:time_to_onset :timeToOnset6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_7_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :delirium ,
+                                               :hallucinationAuditory ,
+                                               :psychoticReactionNos ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report7 ;
+         OpenPVSignal:time_to_onset :timeToOnset7 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_8_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+         OpenPVSignal:refers_to_concomitant_drug :budesonide ,
+                                                 :olopatadine ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report8 ;
+         OpenPVSignal:time_to_onset :timeToOnset8 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_9_info ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveness ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :desloratadine_usage_for_Report9 ;
+         OpenPVSignal:time_to_onset :timeToOnset9 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromCanada
+:ReportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromEurope
+:ReportsFromEurope rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                   OpenPVSignal:has_count 12 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Europe" ;
+                   rdfs:label "Reports from Europe" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromPharmacists
+:ReportsFromPharmacists rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                        OpenPVSignal:has_count 4 ;
+                        OpenPVSignal:has_reporter_type "pharmacist" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from pharmacists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromPhysicians
+:ReportsFromPhysicians rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                       OpenPVSignal:has_count 7 ;
+                       OpenPVSignal:has_reporter_type "physician" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports from physicians" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromUS
+:ReportsFromUS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+               OpenPVSignal:has_count 3 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.5 ,
+                                 :Ref.9 ;
+                   OpenPVSignal:has_content "As of March 2015 the WHO Global Individual Case Safety Report (ICSR) database, VigiBase®, included 17 ICSRs of the WHO-ART preferred term ‘aggressive reaction’ associated with desloratadine. The first report entered VigiBase® in 2002 and reports have continuously been submitted to VigiBase® up to 2014. The majority of the reports (12) originate from Europe (Austria, Croatia, France, Greece, Germany, the Netherlands, Norway, and Sweden), three reports are from the United States, and two from Canada. The cases represent 6 females and 11 males and patient ages range from 1 to 79 years (median age 12 years). The majority of the cases are reported by physicians (7 reports), pharmacists (4), or consumers/non-health professionals (3). Paediatric reports Ten of the reports involve children, all but two of them being 8 years of age or younger. The characteristics of these cases are presented in Table 1. All paediatric reports are from 2006 or more recent. Three of the reports were classified as serious by the reporter. Six of the reports describe that the patient had recovered or was recovering from the reaction at the time of reporting, all of them upon withdrawal of the drug. Two of the cases describing a positive dechallenge also report a positive rechallenge and one of those describes a repeated positive rechallenge. In the remaining four cases, desloratadine was withdrawn but the patients had not recovered at the time of reporting (3 reports) or the outcome was unknown (1). Time to onset varies from one or a few days up to seven months. One report does not provide precise time to onset information but the duration of desloratadine use is about one year. For the six reports with positive dechallenge, time to onset is “during administration” (1 report), one to two days (2), three days (2) and a few weeks (1). Desloratadine is the sole suspect drug in all of these six cases; however two of them report concomitant medication previously associated with aggressive behaviour (budesonide) or mood changes (cyamemazine).5,9 In the latter case, cyamemazine had been used for one year together with risperidone for autism; after adding desloratadine the reaction was experienced two days later. Only one of the remaining four cases reports co-suspected drugs: montelukast, for which aggressive reaction is a labelled adverse reaction, and chlarithromycin, which has been associated with irritability.5 Chlarithromycin treatment was however stopped about two weeks before reaction onset. Fluticasone, for which aggressive reaction is labelled, is concomitantly used in one case and pseudoephedrine, for which irritability is mentioned as a symptom of overdosage, is concomitantly used in another case.5 One report (case 2) describes an 8 year-old female who experienced aggression and irritability following administration of desloratadine for allergic rhinitis, with a latency of one to two days after start of treatment. Desloratadine was withdrawn after six days and the patient recovered within one day. Concomitant medication was not reported and the patient had no known medical history. The past drug therapy indicated that the patient had experienced aggression after a previous intake of a cetirizine tablet and a loratadine tablet on different occasions. The case was reported by a specialist physician and the reaction was assessed as probably related to desloratadine. Another report (case 4) concerns a 20 month-old female and is reported by the patient’s mother. The child was given desloratadine several times in periods of five to seven days for about 1.5 years, mainly for allergic reactions to insect bites. No other medication was reported. The mother described that the child was always rather irritable and aggressive when taking the drug, and at night she seemed to go through something like a nightmare. The sender of the report assessed the reaction as certainly related to desloratadine, because of positive rechallenge. Adult reports Seven of the reports concern adults. Two of these present with multiple possible confounders or other more likely reasons for the reaction. For another three adult cases the reported information is sparse, and thus the prerequisites to make proper assessments of these cases are limited. One of them however reports a time to onset of one month. One case, reported by a specialist doctor, indicates a possible interaction effect from concomitant use of desloratadine and risperidone. The case describes a 38 year-old male who had used desloratadine for years when adding risperidone for autistic disorder. A few hours after the first dose of risperidone the patient experienced violent thoughts, difficulty in standing, dystonia, sedation, trismus and salivation. After withdrawal of risperidone the reactions abated. The patient had previously experienced violent thoughts while on another antipsychotic drug. The reactions may be explained by risperidone alone in this case, however in the light of the paediatric case 1, which also has risperidone co-reported, the interaction hypothesis may also be worth consideration. The remaining report describes a 32 year-old male presenting with aggressiveness 1-1.5 hours after desloratadine intake. The patient had taken several doses and the reaction is reported to have occurred after each intake. This case also describes a positive dechallenge, with a recovery within 36 hours after drug withdrawal, as well as a positive rechallenge. No concomitant medication was reported. The patient had previously used loratadine and cetirizine without experiencing this reaction." ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content " As of March 2015, the WHO Global Individual Case Safety Report (ICSR) database, VigiBase®, included 17 ICSRs of aggressive reaction associated with desloratadine. Desloratadine is a selective peripheral histamine (H1) receptor antagonist, indicated for the relief of symptoms associated with allergic rhinitis and urticaria in children and adults. Ten of the VigiBase® reports involved children, of which six presented with a supportive temporal relationship and positive dechallenge, and of those, two reported a subsequent positive rechallenge. The adult reports were less convincing in supporting a signal, but one of the cases represented a rapid onset, positive dechallenge as well as positive rechallenge, and thus this signal is not limited to children. Central nervous system (CNS) adverse reactions have previously been reported for desloratadine, hence penetration into the brain and the possibility of other clinically relevant CNS  effects cannot be ruled out. Additional loratadine reports in VigiBase® and the fact that aggression is a known adverse reaction for cetirizine, another second-generation antihistamine, contribute to suspicions of a possible class effect. " ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#aggression
+:aggression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F91.8" ;
+            OpenPVSignal:has_MedDRA_code 10001488 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Aggression" ;
+            rdfs:label "aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#aggressiveBehaviour
+:aggressiveBehaviour rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10001490 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Aggressive behaviour" ;
+                     rdfs:label "aggressive behaviour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#aggressiveReaction
+:aggressiveReaction rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10001493 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Aggressive reaction" ;
+                    rdfs:label "aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#aggressiveness
+:aggressiveness rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "F91.8" ;
+                OpenPVSignal:has_MedDRA_code 10001494 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Aggressiveness" ;
+                rdfs:label "aggressiveness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#allergic_rhinitis
+:allergic_rhinitis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_MedDRA_code 10001723 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Allergic rhinitis" ;
+                   rdfs:label "allergic rhinitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#animal_studies
+:animal_studies rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001125 ;
+                OpenPVSignal:refers_to_adverse_effect :aggression ;
+                mp:references :Ref.17 ,
+                              :Ref.18 ,
+                              :Ref.19 ,
+                              :Ref.8 ;
+                OpenPVSignal:has_content "Animal studies have indicated that inactivating the histaminergic (H1) system may reduce aggression in rodents, suggestively through decreased serotonin (5-HT) activity.17,18 However, variations in the histaminergic system and the nature of aggression among species, as well as limitations to animal models8,19 raise uncertainty to whether these results could be fully applied to humans." ;
+                rdfs:label "animal studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#antihystamines
+:antihystamines rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "R06" ;
+                rdfs:label "antihystamines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#autism
+:autism rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Past_Diagnosis ;
+        OpenPVSignal:has_MedDRA_code 10003805 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Autism" ;
+        rdfs:label "autism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#behaviourDisorder
+:behaviourDisorder rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "F98.9" ;
+                   OpenPVSignal:has_MedDRA_code 10004207 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Behaviour disorder" ;
+                   rdfs:label "behaviour disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#budesonide
+:budesonide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R01AD05" ;
+            rdfs:label "budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_10_info
+:case_10_info rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "Duration of desloratadine use approximately one year" ;
+              rdfs:label "case 10 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_1_info
+:case_1_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Use of concomitant medication for one year" ,
+                                      "symptoms began to decline 7 days after withdrawal, however still after 14 days not fully recovered" ;
+             rdfs:label "case 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_2_info
+:case_2_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "One report (case 2) describes an 8 year-old female who experienced aggression and irritability following administration of desloratadine for allergic rhinitis, with a latency of one to two days after start of treatment. Desloratadine was withdrawn after six days and the patient recovered within one day. Concomitant medication was not reported and the patient had no known medical history. The past drug therapy indicated that the patient had experienced aggression after a previous intake of a cetirizine tablet and a loratadine tablet on different occasions. The case was reported by a specialist physician and the reaction was assessed as probably related to desloratadine." ,
+                                      "drug withdrawn after six days, patient recovered within one day" ;
+             rdfs:label "case 2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_3_info
+:case_3_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Aggressive behaviour after taking amoxicillin" ;
+             rdfs:label "case 3 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_4_info
+:case_4_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Another report (case 4) concerns a 20 month-old female and is reported by the patient’s mother. The child was given desloratadine several times in periods of five to seven days for about 1.5 years, mainly for allergic reactions to insect bites. No other medication was reported. The mother described that the child was always rather irritable and aggressive when taking the drug, and at night she seemed to go through something like a nightmare. The sender of the report assessed the reaction as certainly related to desloratadine, because of positive rechallenge." ,
+                                      "Desloratadine taken several times in periods of 5-7 days for about 1.5 years" ;
+             rdfs:label "case 4 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_5_info
+:case_5_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "One hour time to onset forsleepiness" ;
+             rdfs:label "case 5 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_6_info
+:case_6_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Chlarithromycin treatment stopped two weeks before aggressive behaviour onset" ;
+             rdfs:label "case 6 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_7_info
+:case_7_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "treatment with haloperidol, child’s condition has improved" ;
+             rdfs:label "case 7 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_8_info
+:case_8_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Daily aggressiveness" ;
+             rdfs:label "case 8 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_9_info
+:case_9_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "patient recovered within a week after withdrawal" ;
+             rdfs:label "case 9 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_adult_1_info
+:case_adult_1_info rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content "One case, reported by a specialist doctor, indicates a possible interaction effect from concomitant use of desloratadine and risperidone. The case describes a 38 year-old male who had used desloratadine for years when adding risperidone for autistic disorder. A few hours after the first dose of risperidone the patient experienced violent thoughts, difficulty in standing, dystonia, sedation, trismus and salivation. After withdrawal of risperidone the reactions abated. The patient had previously experienced violent thoughts while on another antipsychotic drug. The reactions may be explained by risperidone alone in this case, however in the light of the paediatric case 1, which also has risperidone co-reported, the interaction hypothesis may also be worth consideration." ;
+                   rdfs:label "case adult 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#case_adult_2_info
+:case_adult_2_info rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content "The remaining report describes a 32 year-old male presenting with aggressiveness 1-1.5 hours after desloratadine intake. The patient had taken several doses and the reaction is reported to have occurred after each intake. This case also describes a positive dechallenge, with a recovery within 36 hours after drug withdrawal, as well as a positive rechallenge. No concomitant medication was reported. The patient had previously used loratadine and cetirizine without experiencing this reaction." ;
+                   rdfs:label "case adult 2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#cerminara_et_al_study
+:cerminara_et_al_study rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001197 ;
+                       OpenPVSignal:refers_to_adverse_effect :seizures ;
+                       OpenPVSignal:refers_to_drug :desloratadine ;
+                       mp:references :Ref.16 ;
+                       OpenPVSignal:has_content "Cerminara et al. described seizures induced by desloratadine in four children. They speculated that susceptible patients might have a mutation in the gene coding for P-gp, causing an abnormal variant of P-gp, and thus limiting the efflux of desloratadine from the CNS.16" ;
+                       rdfs:label "cerminara et al study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#cetirizine
+:cetirizine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :antihystamines ;
+            OpenPVSignal:has_ATC_code "R06AE07" ;
+            rdfs:label "cetirizine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#cetirizine_and_aggression
+:cetirizine_and_aggression rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001197 ;
+                           OpenPVSignal:refers_to_adverse_effect :aggression ;
+                           OpenPVSignal:refers_to_drug :cetirizine ;
+                           mp:references :Ref.11 ,
+                                         :Ref.12 ;
+                           OpenPVSignal:has_content "Aggression has been reported as an adverse event in the post-marketing period for cetirizine, another second-generation antihistamine indicated for allergic rhinitis and chronic idiopathic urticaria.11,12" ;
+                           rdfs:label "cetirizine and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#chlarithromycin_and_irritability
+:chlarithromycin_and_irritability rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ;
+                                  OpenPVSignal:refers_to_adverse_effect :irritability ;
+                                  OpenPVSignal:refers_to_drug :clarithromycin ;
+                                  mp:references :Ref.5 ;
+                                  OpenPVSignal:has_content """Only one of the remaining four cases 
+reports co-suspected drugs: chlarithromycin, which has been 
+associated with irritability.5""" ;
+                                  rdfs:label "chlarithromycin and irritability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#clarithromycin
+:clarithromycin rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "J01FA09 " ;
+                rdfs:label "clarithromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#common_ADR_in_clinical_trials
+:common_ADR_in_clinical_trials rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Clinical_trial_information ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :dryMouth ,
+                                                                     :fatigue ,
+                                                                     :headache ;
+                               OpenPVSignal:refers_to_drug :desloratadine ;
+                               OpenPVSignal:has_content "The most common adverse reactions reported in clinical trials were fatigue, dry mouth and headache (frequency ≥ 1/100 to < 1/10)." ;
+                               rdfs:label "common ADR in clinical trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#concomitant_drugs_as_confounders
+:concomitant_drugs_as_confounders rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ;
+                                  OpenPVSignal:refers_to_adverse_effect :aggressiveBehaviour ,
+                                                                        :mood_changes ;
+                                  OpenPVSignal:refers_to_drug :budesonide ,
+                                                              :cyamemazine ;
+                                  mp:references :Ref.5 ,
+                                                :Ref.9 ;
+                                  OpenPVSignal:has_content "however two of them report concomitant medication previously associated with aggressive behaviour (budesonide) or mood changes (cyamemazine).5,9 In the latter case, cyamemazine had been used for one year together with risperidone for autism; after adding desloratadine the reaction was experienced two days later." ;
+                                  rdfs:label "concomitant drugs as confounders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#crossing_the_blood_brain_barrier
+:crossing_the_blood_brain_barrier rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ;
+                                  OpenPVSignal:refers_to_adverse_effect :emotionalLability ;
+                                  OpenPVSignal:refers_to_drug :desloratadine ;
+                                  mp:references :Ref.1 ,
+                                                :Ref.16 ,
+                                                :Ref.2 ;
+                                  OpenPVSignal:has_content """Although desloratadine is said not to readily cross 
+the blood-brain barrier, this cannot be completely 
+excluded and there have been reports of CNS 
+adverse reactions from this drug.1,2,16 One 
+example is emotional lability, which may in a wider 
+sense include the term discussed in this signal, 
+found to be reported at greater frequency for 
+desloratadine than for placebo in infants and 
+toddlers.2""" ;
+                                  rdfs:label "crossing the blood brain barrier" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#cyamemazine
+:cyamemazine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AA06" ;
+             rdfs:label "cyamemazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#delirium
+:delirium rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F05" ;
+          OpenPVSignal:has_MedDRA_code 10012218 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Delirium" ;
+          rdfs:label "delirium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine
+:desloratadine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :antihystamines ;
+               OpenPVSignal:has_mechanism :Mechanism_of_desloratadine ,
+                                          :Mechanism_of_desloratadine_entering_CNS ,
+                                          :PossibleMechanismOfAggressionDueToDesloratadine ;
+               OpenPVSignal:has_ATC_code "R06AX27" ;
+               rdfs:label "desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report1
+:desloratadine_usage_for_Report1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo1 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report10
+:desloratadine_usage_for_Report10 rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Drug_Usage ;
+                                  OpenPVSignal:refers_to_dosage :DoseInfo10 ;
+                                  OpenPVSignal:refers_to_drug :desloratadine ;
+                                  rdfs:label "usage for report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report2
+:desloratadine_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo2 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report3
+:desloratadine_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo3 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report5
+:desloratadine_usage_for_Report5 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo5 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report6
+:desloratadine_usage_for_Report6 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo6 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report7
+:desloratadine_usage_for_Report7 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo7 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report8
+:desloratadine_usage_for_Report8 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo8 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#desloratadine_usage_for_Report9
+:desloratadine_usage_for_Report9 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseInfo9 ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 rdfs:label "usage for report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dosage_for_adults_and_adolescents
+:dosage_for_adults_and_adolescents rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Dosage ;
+                                   OpenPVSignal:refers_to_drug :desloratadine ;
+                                   OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                                   OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                   OpenPVSignal:has_value 5 ;
+                                   OpenPVSignal:refers_to_dose_value "5 mg" ;
+                                   rdfs:label "dosage for adults and adolescents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dosage_for_chlidren_1-5
+:dosage_for_chlidren_1-5 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Dosage ;
+                         OpenPVSignal:refers_to_drug :desloratadine ;
+                         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                         OpenPVSignal:has_value 1.25 ;
+                         OpenPVSignal:refers_to_dose_value "1.25 mg" ;
+                         rdfs:label "dosage for chlidren 1-5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dosage_for_chlidren_6-11
+:dosage_for_chlidren_6-11 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Dosage ;
+                          OpenPVSignal:refers_to_drug :desloratadine ;
+                          OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                          OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                          OpenPVSignal:has_value 2.5 ;
+                          OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+                          rdfs:label "dosage for chlidren 6-11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dosage_for_chlidren_6-11_months
+:dosage_for_chlidren_6-11_months rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ;
+                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                 OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                                 OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                 OpenPVSignal:has_value 1 ;
+                                 OpenPVSignal:refers_to_dose_value "1 mg" ;
+                                 rdfs:label "dosage for chlidren 6-11 months" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#drugEffectLackOf
+:drugEffectLackOf rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code " T88.7" ;
+                  OpenPVSignal:has_MedDRA_code 10013709 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Drug ineffective" ;
+                  rdfs:label "drug effect lack of" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#dryMouth
+:dryMouth rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R68.2" ;
+          OpenPVSignal:has_MedDRA_code 10013781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+          rdfs:label "dry mouth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#emotionalLability
+:emotionalLability rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10014555 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Emotional lability" ;
+                   rdfs:label "emotional lability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#excitability
+:excitability rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10015622 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Excitability" ;
+              rdfs:label "excitability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#first_generation_antihistamines
+:first_generation_antihistamines rdf:type owl:NamedIndividual ,
+                                          obo:OAE_0001197 ;
+                                 OpenPVSignal:refers_to_adverse_effect :agitation ,
+                                                                       :irritability ;
+                                 OpenPVSignal:refers_to_class :antihystamines ;
+                                 mp:references :Ref.13 ,
+                                               :Ref.5 ;
+                                 OpenPVSignal:has_content """First-generation antihistamines have more 
+pronounced sedative properties than second-generation antihistamines, but have also been 
+associated with agitation and irritability.5,13 These 
+compounds, as compared to second-generation 
+antihistamines, have less H1 receptor selectivity 
+and more easily enter the central nervous system 
+(CNS).13""" ;
+                                 rdfs:label "first generation antihistamines and agitation and irritability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#fluticasone
+:fluticasone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R01AD12" ;
+             rdfs:label "fluticasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#fluticasone_and_aggressive_reaction
+:fluticasone_and_aggressive_reaction rdf:type owl:NamedIndividual ,
+                                              obo:OAE_0001182 ;
+                                     OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+                                     OpenPVSignal:refers_to_drug :fluticasone ;
+                                     OpenPVSignal:has_content """Fluticasone, for which 
+aggressive reaction is labelled, is concomitantly 
+used in one case""" ;
+                                     rdfs:label "fluticasone and aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#hallucinationAuditory
+:hallucinationAuditory rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code " R44.0" ;
+                       OpenPVSignal:has_MedDRA_code 10019070 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Hallucination, auditory" ;
+                       rdfs:label "hallucination auditory" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#hallucinations
+:hallucinations rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R44.3" ;
+                OpenPVSignal:has_MedDRA_code 10019063 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+                rdfs:label "hallucinations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#insomnia
+:insomnia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G47.0" ;
+          OpenPVSignal:has_MedDRA_code 10022437 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Insomnia" ;
+          rdfs:label "insomnia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#irritability
+:irritability rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R45.4" ;
+              OpenPVSignal:has_MedDRA_code 10022998 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Irritability" ;
+              rdfs:label "irritability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#loratadine
+:loratadine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :antihystamines ;
+            OpenPVSignal:has_ATC_code "R06AX13" ;
+            rdfs:label "loratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#montelukast
+:montelukast rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R03DC03 " ;
+             rdfs:label "montelukast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#montelukast_and_aggression
+:montelukast_and_aggression rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001182 ;
+                            OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+                            OpenPVSignal:refers_to_drug :montelukast ;
+                            OpenPVSignal:has_content """Only one of the remaining four cases 
+reports co-suspected drugs: montelukast, for 
+which aggressive reaction is a labelled adverse 
+reaction""" ;
+                            rdfs:label "montelukast and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#mood_changes
+:mood_changes rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10027941 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Mood change" ;
+              rdfs:label "mood changes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#nightmare
+:nightmare rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F51.5" ;
+           OpenPVSignal:has_MedDRA_code 10029412 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Nightmare" ;
+           rdfs:label "nightmare" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#olopatadine
+:olopatadine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "S01GX09 " ;
+             rdfs:label "olopatadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#one_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                  <http://www.w3.org/2006/time#numericPosition> 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#overallReportsInVigibase
+:overallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+                          OpenPVSignal:refers_to_drug :desloratadine ;
+                          OpenPVSignal:has_count 17 ;
+                          OpenPVSignal:has_count_of_men 11 ;
+                          OpenPVSignal:has_count_of_women 6 ;
+                          OpenPVSignal:has_max_age "79.0"^^xsd:float ;
+                          OpenPVSignal:has_median_age "12.0"^^xsd:float ;
+                          OpenPVSignal:has_min_age "1.0"^^xsd:float ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "overall reports in vigibase " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#petitMal
+:petitMal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G40.309" ;
+          OpenPVSignal:has_MedDRA_code 10034759 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Petit mal epilepsy" ;
+          rdfs:label "petit mal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#post_marketing_psychiatric_and_nervous_system_ADR
+:post_marketing_psychiatric_and_nervous_system_ADR rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Warning_Information ;
+                                                   OpenPVSignal:refers_to_adverse_effect :dizziness ,
+                                                                                         :hallucinations ,
+                                                                                         :insomnia ,
+                                                                                         :psychomotorHyperactivity ,
+                                                                                         :seizures ,
+                                                                                         :somnolence ;
+                                                   OpenPVSignal:refers_to_drug :desloratadine ;
+                                                   mp:references :Ref.1 ;
+                                                   OpenPVSignal:has_content "Additional psychiatric and nervous system adverse reactions reported during the post-marketing period include hallucinations, dizziness, somnolence, insomnia, psychomotor hyperactivity and seizures (frequency < 1/10,000).1" ;
+                                                   rdfs:label "post marketing psychiatric and nervous system ADR" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#pseudoephedrine
+:pseudoephedrine rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "R01BA52" ;
+                 rdfs:label "pseudoephedrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#pseudoephedrine_and_irritability
+:pseudoephedrine_and_irritability rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ;
+                                  OpenPVSignal:refers_to_adverse_effect :irritability ;
+                                  OpenPVSignal:refers_to_drug :pseudoephedrine ;
+                                  mp:references :Ref.5 ;
+                                  OpenPVSignal:has_content """pseudoephedrine, for which 
+irritability is mentioned as a symptom of 
+overdosage, is concomitantly used in another 
+case.5""" ;
+                                  rdfs:label "pseudoephedrine and irritability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#psychicDisturbance
+:psychicDisturbance rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10037183 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Psychic disturbance" ;
+                    rdfs:label "psychic disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#psychomotorHyperactivity
+:psychomotorHyperactivity rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "R41.843" ;
+                          OpenPVSignal:has_MedDRA_code 10037211 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Psychomotor hyperactivity" ;
+                          rdfs:label "psychomotor hyperactivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#psychoticReactionNos
+:psychoticReactionNos rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10061920 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Psychotic disorder" ;
+                      rdfs:label "psychotic reaction nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Aggression ,
+                                                   :ConclusionContent ,
+                                                   :DesloratadinePrescriptionInformation ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :AdultReports ,
+                                                          :PaediatricReports ,
+                                                          :PaediatricReportsWithDesloratadineAsTheOnlySuspectDrug ,
+                                                          :Paediatric_reports_with_age_info ,
+                                                          :Paediatric_reports_with_recovery ,
+                                                          :ReportsFromCanada ,
+                                                          :ReportsFromEurope ,
+                                                          :ReportsFromPharmacists ,
+                                                          :ReportsFromPhysicians ,
+                                                          :ReportsFromUS ,
+                                                          :overallReportsInVigibase ,
+                                                          :reports_with_aggression_and_loratadine ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromconsumers/nonProfessionals> ;
+          OpenPVSignal:refers_to_adverse_effect :aggression ;
+          OpenPVSignal:refers_to_drug :desloratadine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+          mp:supportedByData :Information_about_desloratadine_from_clinical_trials ,
+                             :animal_studies ,
+                             :case_adult_1_info ,
+                             :case_adult_2_info ,
+                             :cerminara_et_al_study ,
+                             :cetirizine_and_aggression ,
+                             :chlarithromycin_and_irritability ,
+                             :common_ADR_in_clinical_trials ,
+                             :concomitant_drugs_as_confounders ,
+                             :crossing_the_blood_brain_barrier ,
+                             :first_generation_antihistamines ,
+                             :fluticasone_and_aggressive_reaction ,
+                             :montelukast_and_aggression ,
+                             :post_marketing_psychiatric_and_nervous_system_ADR ,
+                             :pseudoephedrine_and_irritability ;
+          OpenPVSignal:initially_identified_on "01/12/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#reports_with_aggression_and_loratadine
+:reports_with_aggression_and_loratadine rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                        OpenPVSignal:refers_to_drug :loratadine ;
+                                        OpenPVSignal:has_count 108 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with aggression and loratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#risperidone
+:risperidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AX08 " ;
+             rdfs:label "risperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02 " ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#seizures
+:seizures rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R56.8" ;
+          OpenPVSignal:has_MedDRA_code 10039906 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Seizure" ;
+          rdfs:label "seizures" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#sleepiness
+:sleepiness rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10041014 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Sleepiness" ;
+            rdfs:label "sleepiness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#stress
+:stress rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "F43.0" ;
+        OpenPVSignal:has_MedDRA_code 10042209 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Stress" ;
+        rdfs:label "stress" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset1
+:timeToOnset1 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "2 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 2 ;
+              rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset2
+:timeToOnset2 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "1-2 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericDuration> 1 ;
+              <http://www.w3.org/2006/time#numericPosition> 1 ;
+              rdfs:label "time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset3
+:timeToOnset3 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "2 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 2 ;
+              rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset4
+:timeToOnset4 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "During  administration" ;
+              <http://www.w3.org/2006/time#nominalPosition> "hours" ;
+              <http://www.w3.org/2006/time#numericPosition> 0 ;
+              rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset5
+:timeToOnset5 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "3 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 3 ;
+              rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset6
+:timeToOnset6 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "7 months " ;
+              <http://www.w3.org/2006/time#nominalPosition> "months" ;
+              <http://www.w3.org/2006/time#numericPosition> 7 ;
+              rdfs:label "time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset7
+:timeToOnset7 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "5 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 5 ;
+              rdfs:label "time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset8
+:timeToOnset8 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "A few weeks" ;
+              rdfs:label "time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#timeToOnset9
+:timeToOnset9 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "3 days " ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 3 ;
+              rdfs:label "time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#titubation
+:titubation rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10043895 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Titubation" ;
+            rdfs:label "titubation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#urticaria
+:urticaria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_MedDRA_code 10046735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Urticaria" ;
+           rdfs:label "urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#usage_of_desloratadine
+:usage_of_desloratadine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Drug_Usage ;
+                        OpenPVSignal:concerns_indication_for_use :allergic_rhinitis ,
+                                                                 :urticaria ;
+                        OpenPVSignal:refers_to_dosage :dosage_for_adults_and_adolescents ,
+                                                      :dosage_for_chlidren_1-5 ,
+                                                      :dosage_for_chlidren_6-11 ,
+                                                      :dosage_for_chlidren_6-11_months ;
+                        OpenPVSignal:refers_to_drug :desloratadine ;
+                        rdfs:label "usage of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromconsumers/nonProfessionals
+<http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#ReportsFromconsumers/nonProfessionals> rdf:type owl:NamedIndividual ,
+                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                      OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                                                                                                                      OpenPVSignal:has_count 3 ;
+                                                                                                                      OpenPVSignal:has_reporter_type "patient" ;
+                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                      rdfs:label "Reports from consumers/non professionals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#brompheniraminemaleate/pseudoephedrineHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2015_6_desloratadine_aggressive_reaction#brompheniraminemaleate/pseudoephedrineHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                                                             OpenPVSignal:Drug ;
+                                                                                                                                    OpenPVSignal:has_ATC_code "R01BA52 " ,
+                                                                                                                                                              "R06AB01" ,
+                                                                                                                                                              "R06AB51" ;
+                                                                                                                                    rdfs:label "brompheniramine maleate/pseudoephedrine hydrochloride" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

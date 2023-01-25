@@ -1,0 +1,16 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+
+# Test Case: A "Pharmacovigilance Signal" instance has to be supported by at least one "Individual case report" instance
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Signal ;
+sh:property[
+	sh:path OpenPVSignal:is_supported_by_individual_case_report ;	
+	sh:minCount 1;
+	sh:severity sh:Violation ; 
+	sh:message "A PV Signal instance has be supported by at least one Individual case report instance"
+];
+.

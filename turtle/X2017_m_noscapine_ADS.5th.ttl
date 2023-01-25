@@ -1,0 +1,234 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl> rdf:type owl:Ontology ;
+                                                                                              owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                              rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/272293/"^^xsd:anyURI ;
+                                                                                              rdfs:label "Insufficiently labelled ADRs: abdominal pain, chest pain and headache while using noscapine"^^rdfs:Literal ;
+                                                                                              owl:versionInfo "draft-v0.95-20210226"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/mp/Statement
+mp:Statement rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Ms_Ellen_Ederveen
+:Ms_Ellen_Ederveen rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "the Netherlands Pharmacovigilance Centre Lareb" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Ellen" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Ederveen" ;
+                   rdfs:label "Ms Ellen Ederveen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Overall_reports_in_Vigibase_regarding_noscapine_and_adr
+:Overall_reports_in_Vigibase_regarding_noscapine_and_adr rdf:type owl:NamedIndividual ,
+                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :abdominalPain ,
+                                                                                                                                  :chestDiscomfort ,
+                                                                                                                                  :chestPain ,
+                                                                                                                                  :headache ;
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 130 ;
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Denmark" ,
+                                                                                                                           "http://dbpedia.org/resource/Germany" ,
+                                                                                                                           "http://dbpedia.org/resource/Netherlands" ,
+                                                                                                                           "http://dbpedia.org/resource/Norway" ,
+                                                                                                                           "http://dbpedia.org/resource/Sweden" ;
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                         rdfs:label "Overall reports in Vigibase regarding noscapine and adr" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Signal_content
+:Signal_content rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "During the joint UMC/Lareb signal detection sprint in October 2016, focusing on patient reports, noscapine, a drug indicated for cough, and various adverse drug reactions (ADRs) were highlighted in VigiBase, the WHO global database of individual case safety reports.  The most notable ADRs that were reported were abdominal pain, headache, chest pain and chest discomfort, with a total of 130 individual case safety reports as of 1 November, 2016. Of the reports, 99.2% originated from five countries: Sweden, Norway, Germany, Denmark and the Netherlands, although noscapine is marketed in several countries worldwide. In the latter two countries, these ADRs are not sufficiently labelled . Several patients highlighted the severity of the symptoms. For instance, “terrible pain, I was quite sure I had a heart attack or an aneurysm”, “feels like I can hardly breathe”, “terrible abdominal pain, I cried out because of the intense pain”, and “very painful, feels like your belly/stomach is wrung out”. The reported ADRs are not listed in every summary of product characteristics (SmPC) or patient information leaflet (PIL).  Also, the severity of some of these ADRs is not sufficiently described in the label information for all products . Therefore, it is advisable to mention these adverse reactions and to highlight the possible severity in all SmPCs and PILs. The countries with insufficient labelling have been sent a full assessment. Should it be of interest, the full assessment is available upon request." ;
+                rdfs:label "Signal content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Statement_1
+:Statement_1 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :chestPain ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“terrible pain, I was quite sure I had a heart attack or an aneurysm”" ;
+             rdfs:label "Statement 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Statement_2
+:Statement_2 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :chestDiscomfort ,
+                                                                                      :dyspnea ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“feels like I can hardly breathe”" ;
+             rdfs:label "Statement 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Statement_3
+:Statement_3 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :abdominalPain ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“terrible abdominal pain, I cried out because of the intense pain”" ;
+             rdfs:label "Statement 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Statement_4
+:Statement_4 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :abdominalPain ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“very painful, feels like your belly/stomach is wrung out”" ;
+             rdfs:label "Statement 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R10" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10000081 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#chestDiscomfort
+:chestDiscomfort rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R07.89" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10008469 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Chest discomfort" ;
+                 rdfs:label "chest discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#chestPain
+:chestPain rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R07.9" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10008479 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Chest pain" ;
+           rdfs:label "chest pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Therefore, it is advisable to mention these adverse reactions and to highlight the possible severity in all SmPCs and PILs. The countries with insufficient labelling have been sent a full assessment. Should it be of interest, the full assessment is available upon request." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#cough
+:cough rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R05" ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10011224 ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Cough" ;
+       rdfs:label "cough" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#dyspnea
+:dyspnea rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R06.0" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013963 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Dyspnea" ;
+         rdfs:label "dyspnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R51" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10019211 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#noscapine
+:noscapine rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :cough ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "R05DA07" ;
+           rdfs:label "noscapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#pv_signal
+:pv_signal rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Signal_content ,
+                                                                                       :conclusion ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :Overall_reports_in_Vigibase_regarding_noscapine_and_adr ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :abdominalPain ,
+                                                                                    :chestDiscomfort ,
+                                                                                    :chestPain ,
+                                                                                    :headache ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :noscapine ;
+           mp:supportedBy :Statement_1 ,
+                          :Statement_2 ,
+                          :Statement_3 ,
+                          :Statement_4 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "1/9/2017" ;
+           rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#the_Netherlands_Pharmacovigilance_Centre_Lareb
+:the_Netherlands_Pharmacovigilance_Centre_Lareb rdf:type owl:NamedIndividual ,
+                                                         <http://www.w3.org/ns/prov#Organization> ;
+                                                rdfs:label "the Netherlands Pharmacovigilance Centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Insufficiently_labelled_ADRs:_abdominal_pain,_chest_pain_and_headache_while_using_noscapine
+<http://purl.org/OpenPVSignal/Signals/2017_5_noscapine_abdominalPain_chestPain_headache.owl#Insufficiently_labelled_ADRs:_abdominal_pain,_chest_pain_and_headache_while_using_noscapine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Ms_Ellen_Ederveen ;
+                                                                                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pv_signal ;
+                                                                                                                                                                                         mp:publishedBy :Uppsala_Monitoring_Centre ,
+                                                                                                                                                                                                        :the_Netherlands_Pharmacovigilance_Centre_Lareb ;
+                                                                                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "1/9/2017"^^xsd:date ;
+                                                                                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association most probable" ;
+                                                                                                                                                                                         rdfs:label "Insufficiently labelled ADRs: abdominal pain, chest pain and headache while using noscapine" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

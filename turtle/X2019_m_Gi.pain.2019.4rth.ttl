@@ -1,0 +1,1483 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl> rdf:type owl:Ontology ;
+                                                                                                              owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                                              rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/326784"^^xsd:anyURI ;
+                                                                                                              rdfs:label "Combination products containing guaifenesin, paracetamol, and phenylephrine reported with severe upper abdominal pain"^^xsd:Literal ;
+                                                                                                              owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/mp/Statement
+mp:Statement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Annet_van_Erp-van_Boekel
+:Annet_van_Erp-van_Boekel rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Author ;
+                          OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance centre Lareb" ;
+                          OpenPVSignal:has_first_name "Annet" ;
+                          OpenPVSignal:has_last_name "van Erp-van Boekel" ;
+                          rdfs:label "Annet van Erp-van Boekel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Clinical_bioavailability_study
+:Clinical_bioavailability_study rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001197 ,
+                                         OpenPVSignal:Clinical_trial_information ;
+                                OpenPVSignal:refers_to_adverse_effect :gastrointestinal_adverse_event ;
+                                OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                            :paracetamol ,
+                                                            :phenylephrine ;
+                                OpenPVSignal:has_content "In a study investigating the bioavailability of a new oral syrup product containing guaifenesin, paracetamol, and phenylephrine, 45 patients were enrolled. Two patients reported GI adverse events (nothing more was specified) following the use of the test product consisting of the new oral syrup, and four patients reported GI adverse events following the use of the reference product consisting of an established oral liquid containing the same combination of substances. The authors considered the reported GI adverse events in this study as related to the liquid formulation, without any further discussion.10 In the VigiBase case series, the drug formulations used by the patients were liquid, tablet, capsule, and powder for oral solution, but patients in this case series still experienced sudden, severe abdominal pain in temporal association with these products." ;
+                                rdfs:label "Clinical bioavailability study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Conclusion_content
+:Conclusion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Conclusion ;
+                    OpenPVSignal:has_content "The VigiBase reports revealed a pattern where patients described severe upper abdominal pain following the intake of combination products containing guaifenesin, paracetamol, and phenylephrine, many times with a sudden onset and recovery after stopping the drug. The PILs for these products describe abdominal/stomach discomfort or stomach aches/upsets, however in some PILs, the only GI-related adverse reactions listed are nausea and vomiting. Patients might not recognise the descriptions in the PILs as a reflection of their severe experiences of abdominal pain, so consideration should be made to better describe abdominal pains in the information to patients." ;
+                    rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Connection_of_guaifenesin_with_GI_adverse_effects
+:Connection_of_guaifenesin_with_GI_adverse_effects rdf:type owl:NamedIndividual ,
+                                                            obo:OAE_0001197 ;
+                                                   OpenPVSignal:refers_to_adverse_effect :gastrointestinalDiscomfort ,
+                                                                                         :nausea ,
+                                                                                         :vomiting ;
+                                                   OpenPVSignal:refers_to_drug :guaifenesin ;
+                                                   mp:references :Ref.1 ,
+                                                                 :Ref.2 ;
+                                                   OpenPVSignal:has_content "Guaifenesin has been described as inducing gastrointestinal discomfort, nausea and vomiting,2  and these reactions are listed in connection to guaifenesin in the SmPCs for these combination products.1" ;
+                                                   rdfs:label "Connection of guaifenesin with GI adverse effects" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Discussion_content
+:Discussion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Discussion ;
+                    mp:references :Ref.1 ,
+                                  :Ref.2 ,
+                                  :Ref.7 ,
+                                  :Ref.8 ,
+                                  :Ref.9 ;
+                    OpenPVSignal:has_content "It is uncertain which of the substances in the combination product most likely caused the sudden abdominal pain. Guaifenesin has been described as inducing gastrointestinal discomfort, nausea and vomiting,2 and these reactions are listed in connection to guaifenesin in the SmPCs for these combination products.1 It is unclear why guaifenesin would induce sudden gastric pain in some individuals, but it does not seem unreasonable because of its stimulation of mucosa receptors in the gastrointestinal tract.7 Paracetamol overdose can cause abdominal pain as a first sign of liver damage, but in none of the 29 VigiBase cases was an over dosage suggested, however, eight patients used paracetamol concomitantly with the combination product. None of these cases included information on dosages for these co-reported products, so a possibility of overdose cannot be excluded. Phenylephrine hydrochloride acts with alpha-1 receptor stimulation, resulting in vasoconstriction in vessels of the skin, abdominal viscera and kidney, and theoretically abdominal pain could result from a decreased blood flow to the gastrointestinal tract.8 Only a few reports of abdominal pain have been received in VigiBase for phenylephrine as a single substance. One case in the literature describes a 70-year-old woman with henylephrine-associated ischaemic colitis presenting with nausea, vomiting, abdominal pain, diarrhoea, and acute onset of haematochezia following ‘a lot’ of aspirin and phenylephrine use for sinusitis and nasal congestion.9 This case is interesting in the light of the 71-year-old male in the VigiBase case series, who experienced gastrointestinal polyp haemorrhage together with upper abdominal pain following use of the combination product. Further investigation of more serious consequences of phenylephrine use may be warranted. In a study investigating the bioavailability of a new oral syrup product containing guaifenesin, paracetamol, and phenylephrine, 45 patients were enrolled. Two patients reported GI adverse events (nothing more was specified) following the use of the test product consisting of the new oral syrup, and four patients reported GI adverse events following the use of the reference product consisting of an established oral liquid containing the same combination of substances. The authors considered the reported GI adverse events in this study as related to the liquid formulation, without any further discussion.10 In the VigiBase case series, the drug formulations used by the patients were liquid, tablet, capsule, and powder for oral solution, but patients in this case series still experienced sudden, severe abdominal pain in temporal association with these products. There is a possibility that some of the excipients in the products used by the patients in the VigiBase case series would cause abdominal pain. Sorbitol has been reported to be associated with abdominal pain, bloating and diarrhoea11, and was listed as the cause for abdominal pain in the label for one of the Swedish guaifenesin products.12 However, the products used by the patients in the VigiBase series did not always include sorbitol, so this excipient would not be the contender in many of the cases included in this signal. An obvious confounding factor is the underlying disease in these cases, where abdominal pain, nausea and vomiting could occur. However, for many cases, the upper abdominal pain had a sudden onset after drug intake, and there was recovery reported after stopping the drug, suggesting a causal relationship to the combination product." ;
+                    rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Dosage_from_UK
+:Dosage_from_UK rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                mp:references :Ref.1 ;
+                OpenPVSignal:has_content """In the United Kingdom (UK), the strengths are either 100 or 200 mg for guaifenesin; 250, 500,
+1000 mg for paracetamol; and 5, 6.1, 10, 12.2 mg for phenylephrine hydrochloride""" ;
+                rdfs:label "Dosage from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Dr_Kristina_Star
+:Dr_Kristina_Star rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Author ;
+                  OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                  OpenPVSignal:has_first_name "Kristina" ;
+                  OpenPVSignal:has_last_name "Star" ;
+                  rdfs:label "Dr Kristina Star" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForGuaifenesin
+:IC025ForGuaifenesin rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                     OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                     OpenPVSignal:refers_to_drug :guaifenesin ;
+                     OpenPVSignal:refers_to_information_component :ICForGuaifenesin ;
+                     OpenPVSignal:has_value 1 ;
+                     OpenPVSignal:refers_to_number_of_reports 97 ;
+                     rdfs:label "IC025 for Guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForParacetamol
+:IC025ForParacetamol rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                     OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                     OpenPVSignal:refers_to_drug :paracetamol ;
+                     OpenPVSignal:refers_to_information_component :ICForParacetamol ;
+                     OpenPVSignal:has_value 0.35 ;
+                     OpenPVSignal:refers_to_number_of_reports 1208 ;
+                     rdfs:label "IC025 for Paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForPhenylephrine
+:IC025ForPhenylephrine rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                       OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                       OpenPVSignal:refers_to_drug :phenylephrine ;
+                       OpenPVSignal:refers_to_information_component :ICForPhenylephrine ;
+                       OpenPVSignal:has_value -2.25 ;
+                       OpenPVSignal:refers_to_number_of_reports 7 ;
+                       rdfs:label "IC025 for Phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForGuaifenesin
+:ICForGuaifenesin rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                  OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                  OpenPVSignal:refers_to_drug :guaifenesin ;
+                  OpenPVSignal:has_value 1.3 ;
+                  OpenPVSignal:refers_to_number_of_reports 97 ;
+                  rdfs:label "IC for Guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForParacetamol
+:ICForParacetamol rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                  OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                  OpenPVSignal:refers_to_drug :paracetamol ;
+                  OpenPVSignal:has_value 0.44 ;
+                  OpenPVSignal:refers_to_number_of_reports 1208 ;
+                  rdfs:label "IC for Paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForPhenylephrine
+:ICForPhenylephrine rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                    OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                    OpenPVSignal:refers_to_drug :phenylephrine ;
+                    OpenPVSignal:has_value -0.99 ;
+                    OpenPVSignal:refers_to_number_of_reports 7 ;
+                    rdfs:label "IC for Phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Improbable_implication_of_excipients_as_confounders
+:Improbable_implication_of_excipients_as_confounders rdf:type owl:NamedIndividual ,
+                                                              obo:OAE_0001182 ,
+                                                              OpenPVSignal:Warning_Information ;
+                                                     OpenPVSignal:has_potential_confounding_factor :sorbitol ;
+                                                     OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                                                           :bloating ,
+                                                                                           :diarrhea ;
+                                                     OpenPVSignal:has_content "There is a possibility that some of the excipients in the products used by the patients in the VigiBase case series would cause abdominal pain. Sorbitol has been reported to be associated with abdominal pain, bloating and diarrhoea11, and was listed as the cause for abdominal pain in the label for one of the Swedish guaifenesin products.12 However, the products used by the patients in the VigiBase series did not always include sorbitol, so this excipient would not be the contender in many of the cases included in this signal." ;
+                                                     rdfs:label "Improbable implication of excipients as confounders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ;
+                      OpenPVSignal:has_content "Combination products containing guaifenesin, paracetamol, and phenylephrine are approved for symptoms associated with colds, flu, headaches, blocked nose, sore throat, chills, fever, and chesty coughs.1 These products are marketed worldwide and are mostly sold over-the-counter.2 There are several brands on the market with various dosage strengths and formulations, e.g., liquid, tablet, capsule and powder for oral solutions. In the United Kingdom (UK), the strengths are either 100 or 200 mg for guaifenesin; 250, 500, 1000 mg for paracetamol; and 5, 6.1, 10, 12.2 mg for phenylephrine hydrochloride.1 In the United States (US), there is a range of products with other formulations and strengths.3 Products are approved from the age of 12, or of 16 in the UK1, and from six years of age in the US.3 The MedDRA (Medical Dictionary for Regulatory Activities) preferred terms (PT) ‘abdominal pain’ and ‘abdominal pain upper’ include long lists of lowest level terms, such as stomach ache, stomach cramps or stomach pain but these terms in themselves do not cover the severity of the adverse reaction." ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.1 ,
+                                        :Ref.6 ;
+                          OpenPVSignal:has_content "The Summary of Product Characteristics (SmPC) for combination products with guaifenesin, paracetamol, and phenylephrine in the UK list abdominal discomfort, nausea and vomiting in relation to guaifenesin; nausea, vomiting and diarrhoea in relation to phenylephrine; and pallor, nausea, vomiting, anorexia and abdominal pain in the overdose section for paracetamol.1 In some of the Patient Information Leaflets (PILs), the only gastrointestinal related adverse reactions listed are nausea and vomiting, and where abdominal discomfort is mentioned, it is expressed as abdominal/stomach discomfort or stomach aches/upsets.1 Combination products with these substances in the US list upset stomach or stomach pain as signs of liver problems.6" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Mechanism_of_guaifenesin
+:Mechanism_of_guaifenesin rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect_Mechanism ;
+                          mp:references :Ref.7 ;
+                          OpenPVSignal:has_content "It is unclear why guaifenesin would induce sudden gastric pain in some individuals, but it does not seem unreasonable because of its stimulation of mucosa receptors in the gastrointestinal tract." ;
+                          rdfs:label "Mechanism of guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Mechanism_of_phenylephrine
+:Mechanism_of_phenylephrine rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                            mp:references :Ref.8 ;
+                            OpenPVSignal:has_content "Phenylephrine hydrochloride acts with alpha-1 receptor stimulation, resulting in vasoconstriction in vessels of the skin, abdominal viscera and kidney, and theoretically abdominal pain could result from a decreased blood flow to the gastrointestinal tract." ;
+                            rdfs:label "Mechanism of phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 70 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 71 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of product characteristics for guaifenesin;paracetamol;phenylephrine products. Available from: https://www.medicines.org.uk/emc/search?q= guaifenesin%2C+paracetamol%2C+phenyleph rine+hydrochloride. Accessed: 29 October 2018." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Martindale: The complete drug reference. Lemsip Max All in One Cold & Flu. 2018. Available from: https://www.medicinescomplete.com/#/conten t/martindale/999938-n3701- f?hspl=guaifenesin,&hspl=paracetamol,&hspl= phenylephrine%20 hydrochloride. Accessed: 29 October 2018." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Drugs.com. Dosages for Acetaminophen/guaifenesin/phenylephrine. Available from: https://www.drugs.com/dosage/acetaminophe n-guaifenesin-phenylephrine.html. Accessed: 29 October 2018." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Bate A, Lindquist M, Edwards IR, Olsson S, Orre R, Lansner A, et al. A Bayesian neural network method for adverse drug reaction signal generation. Eur J Clin Pharmacol. 1998;54(4):315-321." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Norén GN, Hopstadius J, Bate A. Shrinkage observed-to-expected ratios for robust and transparent large-scale pattern discovery. Stat Methods Med Res. 2013;22(1):57-69." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Drugs.com. Side effects for Acetaminophen/ guaifenesin/phenylephrine. Available from: https:// www.drugs.com/sfx/acetaminophen- guaifenesin- phenylephrine-side-effects.html. Accessed: 29 October 2018." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Albrecht HH, Dicpinigaitis PV, Guenin EP. Role of guaifenesin in the management of chronic bronchitis and upper respiratory tract infections. Multidiscip Respir Med. 2017;12:31." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Martindale: The complete drug reference. Phenylephrine. 2018. Available from: https:// www.medicinescomplete.com/#/content/ martindale/9512-a?hspl=Phenylephrine#2094-g. Accessed: 29 October 2018." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ward PW, Shaneyfelt TM, Roan RM. Acute ischaemic colitis associated with oral phenylephrine decongestant use. BMJ Case Rep. 2014;2014." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :sinusitis ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :diarrhea ,
+                                                :haematochezia ,
+                                                :ischaemicColitis ,
+                                                :nausea ,
+                                                :vomiting ;
+          OpenPVSignal:refers_to_concomitant_drug :aspirin ;
+          OpenPVSignal:refers_to_patient :Patient_1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :phenylephrine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+          mp:references :Ref.9 ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :gastrointestinalPolypHemorrhage ,
+                                                :upperAbdominalPain ;
+          OpenPVSignal:refers_to_concomitant_drug :atenolol ,
+                                                  :gabapentin ,
+                                                  :tamsulosin ;
+          OpenPVSignal:refers_to_patient :Patient_2 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :guaifenesin ,
+                                                      :paracetamol ,
+                                                      :phenylephrine ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsFromConsumers
+:ReportsFromConsumers rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                      OpenPVSignal:has_count 26 ;
+                      OpenPVSignal:has_reporter_type "patient" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from consumers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsFromHCP
+:ReportsFromHCP rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                OpenPVSignal:has_count 2 ;
+                OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from HCP" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsFromPharmacists
+:ReportsFromPharmacists rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:has_reporter_type "pharmacist" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from pharmacists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithDrugWithdrawalAndPositiveDechallenge
+:ReportsWithDrugWithdrawalAndPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                                 OpenPVSignal:has_count 18 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                                 OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                 rdfs:label "Reports with drug withdrawal and positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithDrugWithdrawalButNoEffectObserved
+:ReportsWithDrugWithdrawalButNoEffectObserved rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                              OpenPVSignal:has_count 4 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                              rdfs:label "Reports with drug withdrawal but no effect observed" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithGuaifenesin
+:ReportsWithGuaifenesin rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:refers_to_drug :guaifenesin ;
+                        OpenPVSignal:has_count 5218 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithParacetamol
+:ReportsWithParacetamol rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:refers_to_drug :paracetamol ;
+                        OpenPVSignal:has_count 119001 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithParacetamolAndAbdominalPainUpper
+:ReportsWithParacetamolAndAbdominalPainUpper rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :ReportsWithParacetamol ;
+                                             OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                             OpenPVSignal:has_count 1208 ;
+                                             OpenPVSignal:has_expected_count "892.0"^^xsd:float ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "Reports with paracetamol and abdominal pain upper" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithParacetamolAsConcomitantDrug
+:ReportsWithParacetamolAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                         OpenPVSignal:refers_to_concomitant_drug :paracetamol ;
+                                         OpenPVSignal:has_count 8 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports with paracetamol as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithPhenylephrine
+:ReportsWithPhenylephrine rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_drug :phenylephrine ;
+                          OpenPVSignal:has_count 1914 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports with phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithPhenylephrineAndAbdominalPainUpper
+:ReportsWithPhenylephrineAndAbdominalPainUpper rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :ReportsWithPhenylephrine ;
+                                               OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                               OpenPVSignal:has_count 7 ;
+                                               OpenPVSignal:has_expected_count "14.0"^^xsd:float ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "Reports with phenylephrine and abdominal pain upper" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithSingleSuspectDrug
+:ReportsWithSingleSuspectDrug rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                              OpenPVSignal:refers_to_primary_suspect_drug :guaifenesin ,
+                                                                          :paracetamol ,
+                                                                          :phenylephrine ;
+                              OpenPVSignal:has_count 28 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Reports with single suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Czech_Republic
+:Reports_from_Czech_Republic rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                             OpenPVSignal:has_count 1 ;
+                             OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Czech_Republic" ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "Reports from Czech Republic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Hungary
+:Reports_from_Hungary rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Hungary" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Hungary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Italy
+:Reports_from_Italy rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Latvia
+:Reports_from_Latvia rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                     OpenPVSignal:has_count 1 ;
+                     OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Latvia" ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports from Latvia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Portugal
+:Reports_from_Portugal rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                       OpenPVSignal:has_count 1 ;
+                       OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Portugal" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports from Portugal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_Romania
+:Reports_from_Romania rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Romania" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Romania" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_UK
+:Reports_from_UK rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                 OpenPVSignal:has_count 21 ;
+                 OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_from_USA
+:Reports_from_USA rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                  OpenPVSignal:has_count 2 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "In April 2018, a signal detection screening in VigiBase, the WHO global database of individual case safety reports, was designed to detect safety concerns reported by patients. A case series with upper abdominal pain following the intake of combination products with guaifenesin, paracetamol, and phenylephrine was highlighted as meriting in-depth assessment as the patient descriptions of the event differed from that in the product information. In October 2018, VigiBase contained 197 reports with combination products containing guaifenesin, paracetamol, and phenylephrine, of which gastrointestinal (GI) disorders were the most frequently reported MedDRA system organ class, with ‘abdominal pain upper’ (22 reports), vomiting (16) and nausea (15) listed as the most frequently reported PTs. When searching the MedDRA high level term ‘gastrointestinal and abdominal pains (excl. oral and throat)’ with the combination product, 29 unique reports were retrieved after exclusion of one duplicate report. Summary characteristics are given in Table 1. The patients in this case series described experiences of severe and often sudden abdominal pain in temporal association of starting combination products with guaifenesin, paracetamol, and phenylephrine. In all but one report, the combination product was recorded as the single suspect drug. Patients described their upper abdominal pain with or without nausea, vomiting, diarrhea, malaise and dizziness. Additional co- reported symptoms were general discomfort, other pains or GI symptoms. Co-reported events concerned mere symptoms, except for one case, co-reported with the diagnosis legionella pneumonia, which referred to a published literature case. One 71-year-old male patient reported gastrointestinal polyp haemorrhage together with upper abdominal pain. Concomitant drugs for this patient were tamsulosin, atenolol, and gabapentin. Further details for this case were not registered in VigiBase. Chronic concomitant use of medicines was recorded with the combination product for nine patients, such as levothyroxine, citalopram, fluticasone and the combination product estradiol and norethisterone. Eight patients were recorded with paracetamol concomitantly. One young adult was co-reported with two paracetamol products but information on timing and dosages for paracetamol were missing from these reports. The dosage forms of the suspected combination products for the VigiBase reports were, where it could be determined, liquids (12), tablets (1), capsules (7), and powder for oral solution (1). Dosage strengths recorded in these reports were within normal ranges for adults." ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_with_after_1_day_time_to_onset
+:Reports_with_after_1_day_time_to_onset rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                        OpenPVSignal:time_to_onset :time_to_onset_after_1_day ;
+                                        OpenPVSignal:has_count 6 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Reports with after 1 day time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_with_after_2_days_time_to_onset
+:Reports_with_after_2_days_time_to_onset rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                         OpenPVSignal:time_to_onset :time_to_onset_after_2_days ;
+                                         OpenPVSignal:has_count 1 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports with after 2 days time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_with_co-suspected_drug
+:Reports_with_co-suspected_drug rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                OpenPVSignal:refers_to_secondary_suspect_drug :glycerol ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "Reports with co-suspected drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_with_guaifenesin_and_abdominal_pain_upper
+:Reports_with_guaifenesin_and_abdominal_pain_upper rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of :ReportsWithGuaifenesin ;
+                                                   OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                                   OpenPVSignal:has_count 97 ;
+                                                   OpenPVSignal:has_expected_count "39.0"^^xsd:float ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "Reports with guaifenesin and abdominal pain upper" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Reports_with_same_day_time_to_onset
+:Reports_with_same_day_time_to_onset rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ;
+                                     OpenPVSignal:time_to_onset :time_to_onset_same_day ;
+                                     OpenPVSignal:has_count 17 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Reports with same day time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#SmPC_for_combination_for_paracetamol_in_UK
+:SmPC_for_combination_for_paracetamol_in_UK rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001197 ,
+                                                     OpenPVSignal:Structured_Product_Labels_information ,
+                                                     OpenPVSignal:Warning_Information ;
+                                            OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                                                  :anorexia ,
+                                                                                  :nausea ,
+                                                                                  :pallor ,
+                                                                                  :vomiting ;
+                                            OpenPVSignal:refers_to_drug :paracetamol ;
+                                            mp:references :Ref.1 ;
+                                            OpenPVSignal:has_content "The Summary of Product Characteristics (SmPC) for combination products with guaifenesin, paracetamol, and phenylephrine in the UK list abdominal discomfort, nausea and vomiting in relation to guaifenesin; nausea, vomiting and diarrhoea in relation to phenylephrine; and pallor, nausea, vomiting, anorexia and abdominal pain in the overdose section for paracetamol.1" ;
+                                            rdfs:label "SmPC for combination for paracetamol in UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#SmPC_for_combination_for_phenylephrine_in_UK
+:SmPC_for_combination_for_phenylephrine_in_UK rdf:type owl:NamedIndividual ,
+                                                       obo:OAE_0001197 ,
+                                                       OpenPVSignal:Structured_Product_Labels_information ,
+                                                       OpenPVSignal:Warning_Information ;
+                                              OpenPVSignal:refers_to_adverse_effect :diarrhea ,
+                                                                                    :nausea ,
+                                                                                    :vomiting ;
+                                              OpenPVSignal:refers_to_drug :phenylephrine ;
+                                              mp:references :Ref.1 ;
+                                              OpenPVSignal:has_content "The Summary of Product Characteristics (SmPC) for combination products with guaifenesin, paracetamol, and phenylephrine in the UK list abdominal discomfort, nausea and vomiting in relation to guaifenesin; nausea, vomiting and diarrhoea in relation to phenylephrine; and pallor, nausea, vomiting, anorexia and abdominal pain in the overdose section for paracetamol.1" ;
+                                              rdfs:label "SmPC for combination for phenylephrine in UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Summary_content
+:Summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content "In April 2018, a signal detection screening in VigiBase, the WHO global database of individual case safety reports, was designed to detect safety concerns reported by patients. A case series with upper abdominal pain following intake of combination products containing guaifenesin, paracetamol, and phenylephrine was highlighted as meriting further assessment. The in-depth review of the 29 cases in VigiBase, encompassing all reports with gastrointestinal (GI) related pain, revealed a pattern where patients described severe upper abdominal pain following the intake of these products, frequently with a sudden onset and recovery after stopping the drug. The patient information leaflets (PIL) for these combination products describe abdominal/stomach discomfort or stomach aches/upsets. However, in some of the PILs, the only GI-related adverse reactions listed are nausea and vomiting. Patients might not recognise the descriptions in the PIL as a reflection of their experiences of severe abdominal pain (one patient almost called the ambulance), so consideration should be made to better describe abdominal pain in the information to patients." ;
+                 rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#US_product_info
+:US_product_info rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Structured_Product_Labels_information ,
+                          OpenPVSignal:Warning_Information ;
+                 OpenPVSignal:refers_to_adverse_effect :liverDamage ,
+                                                       :stomachPain ,
+                                                       :upsetStomach ;
+                 OpenPVSignal:refers_to_drug :guaifenesin ,
+                                             :paracetamol ,
+                                             :phenylephrine ;
+                 mp:references :Ref.6 ;
+                 OpenPVSignal:has_content "Combination products with these substances in the US list upset stomach or stomach pain as signs of liver problems.6" ;
+                 rdfs:label "US product info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Underlying_disease
+:Underlying_disease rdf:type owl:NamedIndividual ,
+                             obo:OAE_0001182 ;
+                    OpenPVSignal:has_content "An obvious confounding factor is the underlying disease in these cases, where abdominal pain, nausea and vomiting could occur. However, for many cases, the upper abdominal pain had a sudden onset after drug intake, and there was recovery reported after stopping the drug, suggesting a causal relationship to the combination product." ;
+                    rdfs:label "Underlying disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#abdominalDiscomfort
+:abdominalDiscomfort rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R10.9" ;
+                     OpenPVSignal:has_MedDRA_code 10000059 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Abdominal discomfort" ;
+                     rdfs:label "abdominal discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R109" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R630" ;
+          OpenPVSignal:has_MedDRA_code 10061428 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#aspirin
+:aspirin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "B01AC06" ;
+         rdfs:label "aspirin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#atenolol
+:atenolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AB03" ,
+                                    "C07BB03" ,
+                                    "C07CB03" ,
+                                    "C07CB53" ,
+                                    "C07DB01" ,
+                                    "C07FB03" ;
+          rdfs:label "atenolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#bloating
+:bloating rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R140" ;
+          OpenPVSignal:has_MedDRA_code 10000060 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Abdominal distension" ;
+          rdfs:label "bloating" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#blocked_nose
+:blocked_nose rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_MedDRA_code 10028735 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Nasal congestion" ;
+              rdfs:label "blocked nose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#chills
+:chills rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "R6883" ;
+        OpenPVSignal:has_MedDRA_code 10008531 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Chills" ;
+        rdfs:label "chills" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#cold
+:cold rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Indication ;
+      OpenPVSignal:has_MedDRA_code 10009851 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Cold" ;
+      rdfs:label "cold" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#cough
+:cough rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Indication ;
+       OpenPVSignal:has_ICD_code "R05" ;
+       OpenPVSignal:has_MedDRA_code 10011224 ;
+       OpenPVSignal:has_MedDRA_prefered_term "cough" ;
+       rdfs:label "cough" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Indication ;
+       OpenPVSignal:has_ICD_code "R509" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#flu
+:flu rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Indication ;
+     OpenPVSignal:has_ICD_code "J111" ;
+     OpenPVSignal:has_MedDRA_code 10022000 ;
+     OpenPVSignal:has_MedDRA_prefered_term "Influenza" ;
+     rdfs:label "flu" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#gabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#gastrointestinalDiscomfort
+:gastrointestinalDiscomfort rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "R19.8" ;
+                            OpenPVSignal:has_MedDRA_code 10000059 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Abdominal discomfort" ;
+                            rdfs:label "gastrointestinal discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#gastrointestinalPolypHemorrhage
+:gastrointestinalPolypHemorrhage rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Adverse_Effect ;
+                                 OpenPVSignal:has_ICD_code "K31.7" ;
+                                 OpenPVSignal:has_MedDRA_code 10074437 ;
+                                 OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal polyp haemorrhage" ;
+                                 rdfs:label "gastrointestinal polyp hemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#gastrointestinal_adverse_event
+:gastrointestinal_adverse_event rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_MedDRA_code 10018011 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal symptom NOS" ;
+                                rdfs:label "gastrointestinal adverse event" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#gastrointestinal_and_abdominal_pains
+:gastrointestinal_and_abdominal_pains rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Adverse_Effect ;
+                                      OpenPVSignal:has_MedDRA_code 10017926 ;
+                                      OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal and abdominal pains (excl oral and throat)" ;
+                                      rdfs:label "gastrointestinal and abdominal pains" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#glycerol
+:glycerol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A06AG04" ;
+          rdfs:label "glycerol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#guaifenecin_dosage_1
+:guaifenecin_dosage_1 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :guaifenesin ;
+                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                      OpenPVSignal:has_value 100 ;
+                      OpenPVSignal:refers_to_dose_value "100 mg" ;
+                      rdfs:label "guaifenecin dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#guaifenecin_dosage_2
+:guaifenecin_dosage_2 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :guaifenesin ;
+                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                      OpenPVSignal:has_value 200 ;
+                      OpenPVSignal:refers_to_dose_value "200 mg" ;
+                      rdfs:label "guaifenecin dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#guaifenesin
+:guaifenesin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Mechanism_of_guaifenesin ;
+             OpenPVSignal:has_ATC_code "R05CA03" ;
+             rdfs:label "guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#haematochezia
+:haematochezia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K921" ;
+               OpenPVSignal:has_MedDRA_code 10018836 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Haematochezia" ;
+               rdfs:label "haematochezia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ischaemicColitis
+:ischaemicColitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "K55.9" ;
+                  OpenPVSignal:has_MedDRA_code 10009895 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Colitis ischaemic" ;
+                  rdfs:label "ischaemic colitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#liverDamage
+:liverDamage rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "S36119A" ;
+             OpenPVSignal:has_MedDRA_code 10067125 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Liver injury" ;
+             rdfs:label "liver damage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#nasalCongestion
+:nasalCongestion rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Indication ;
+                 OpenPVSignal:has_ICD_code "R0981" ;
+                 OpenPVSignal:has_MedDRA_code 10028735 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Nasal congestion" ;
+                 rdfs:label "nasal congestion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#pallor
+:pallor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R23.1" ;
+        OpenPVSignal:has_MedDRA_code 10033546 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Pallor" ;
+        rdfs:label "pallor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#paracetamol_dosage_1
+:paracetamol_dosage_1 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :paracetamol ;
+                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                      OpenPVSignal:has_value 250 ;
+                      OpenPVSignal:refers_to_dose_value "250 mg" ;
+                      rdfs:label "paracetamol dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#paracetamol_dosage_2
+:paracetamol_dosage_2 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :paracetamol ;
+                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                      OpenPVSignal:has_value 500 ;
+                      OpenPVSignal:refers_to_dose_value "500 mg" ;
+                      rdfs:label "paracetamol dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#paracetamol_dosage_3
+:paracetamol_dosage_3 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :paracetamol ;
+                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                      OpenPVSignal:has_value 1000 ;
+                      OpenPVSignal:refers_to_dose_value "1000 mg" ;
+                      rdfs:label "paracetamol dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#phenylephrine
+:phenylephrine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_mechanism :Mechanism_of_phenylephrine ;
+               OpenPVSignal:has_ATC_code "C01CA06" ,
+                                         "R01AA04" ,
+                                         "R01AB01" ,
+                                         "R01BA03" ,
+                                         "R01BA53" ,
+                                         "S01FB01" ,
+                                         "S01GA05" ,
+                                         "S01GA55" ;
+               rdfs:label "phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#phenylephrine_dosage_1
+:phenylephrine_dosage_1 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :phenylephrine ;
+                        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                        OpenPVSignal:has_value 5 ;
+                        OpenPVSignal:refers_to_dose_value "5 mg" ;
+                        rdfs:label "phenylephrine dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#phenylephrine_dosage_2
+:phenylephrine_dosage_2 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :phenylephrine ;
+                        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                        OpenPVSignal:has_value 6.1 ;
+                        OpenPVSignal:refers_to_dose_value "6.1 mg" ;
+                        rdfs:label "phenylephrine dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#phenylephrine_dosage_3
+:phenylephrine_dosage_3 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :phenylephrine ;
+                        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                        OpenPVSignal:has_value 10 ;
+                        OpenPVSignal:refers_to_dose_value "10 mg" ;
+                        rdfs:label "phenylephrine dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#phenylephrine_dosage_4
+:phenylephrine_dosage_4 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :phenylephrine ;
+                        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                        OpenPVSignal:has_value 12.2 ;
+                        OpenPVSignal:refers_to_dose_value "12.2 mg" ;
+                        rdfs:label "phenylephrine dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Conclusion_content ,
+                                                   :Introduction_content ,
+                                                   :Reports_in_VigiBase ,
+                                                   :Summary_content ,
+                                                   :δ ,
+                                                   <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patients’_descriptions_of_abdominal_pains> ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                              :Report_2 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForGuaifenesin ,
+                                                          :IC025ForParacetamol ,
+                                                          :IC025ForPhenylephrine ,
+                                                          :ICForGuaifenesin ,
+                                                          :ICForParacetamol ,
+                                                          :ICForPhenylephrine ,
+                                                          :ReportsFromConsumers ,
+                                                          :ReportsFromHCP ,
+                                                          :ReportsFromPharmacists ,
+                                                          :ReportsWithDrugWithdrawalAndPositiveDechallenge ,
+                                                          :ReportsWithDrugWithdrawalButNoEffectObserved ,
+                                                          :ReportsWithGuaifenesin ,
+                                                          :ReportsWithParacetamol ,
+                                                          :ReportsWithParacetamolAndAbdominalPainUpper ,
+                                                          :ReportsWithParacetamolAsConcomitantDrug ,
+                                                          :ReportsWithPhenylephrine ,
+                                                          :ReportsWithPhenylephrineAndAbdominalPainUpper ,
+                                                          :ReportsWithSingleSuspectDrug ,
+                                                          :Reports_from_Czech_Republic ,
+                                                          :Reports_from_Hungary ,
+                                                          :Reports_from_Italy ,
+                                                          :Reports_from_Latvia ,
+                                                          :Reports_from_Portugal ,
+                                                          :Reports_from_Romania ,
+                                                          :Reports_from_UK ,
+                                                          :Reports_from_USA ,
+                                                          :Reports_with_after_1_day_time_to_onset ,
+                                                          :Reports_with_after_2_days_time_to_onset ,
+                                                          :Reports_with_co-suspected_drug ,
+                                                          :Reports_with_guaifenesin_and_abdominal_pain_upper ,
+                                                          :Reports_with_same_day_time_to_onset ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForGuaifenesin;Paracetamol;Phenylephrine> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForGuaifenesin;Paracetamol;Phenylephrine> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndAbdominalPainUpper> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndNausea> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndVomiting> ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :gastrointestinal_and_abdominal_pains ,
+                                                :upperAbdominalPain ;
+          OpenPVSignal:refers_to_drug_drug_interaction <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Combination_of_quaifenesin,_paracetamol,_and_phenylephrine> ;
+          OpenPVSignal:refers_to_primary_suspect_drug :guaifenesin ,
+                                                      :paracetamol ,
+                                                      :phenylephrine ;
+          mp:supportedByData :Clinical_bioavailability_study ,
+                             :Connection_of_guaifenesin_with_GI_adverse_effects ,
+                             :Improbable_implication_of_excipients_as_confounders ,
+                             :SmPC_for_combination_for_paracetamol_in_UK ,
+                             :SmPC_for_combination_for_phenylephrine_in_UK ,
+                             :US_product_info ,
+                             :Underlying_disease ,
+                             :statement_1 ,
+                             :statement_2 ,
+                             :statement_3 ,
+                             :statement_4 ,
+                             :statement_5 ,
+                             :statement_6 ,
+                             <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patient_Information_Leaflets_for_guaifenesin,__paracetamol,_and_phenylephrine> ,
+                             <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#SmPC_for_guaifenesin,_paracetamol_and_phenylephrine_in_UK> ;
+          OpenPVSignal:initially_identified_on "01-08-2020" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#sinusitis
+:sinusitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "J329" ;
+           OpenPVSignal:has_MedDRA_code 10040753 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Sinusitis" ;
+           rdfs:label "sinusitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#sorbitol
+:sorbitol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ,
+                   OpenPVSignal:Potential_Confounder ;
+          OpenPVSignal:has_ATC_code "A06AD18" ,
+                                    "A06AG07" ,
+                                    "B05CX02" ,
+                                    "V04CC01" ;
+          rdfs:label "sorbitol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#soreThroat
+:soreThroat rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "R07.0" ;
+            OpenPVSignal:has_MedDRA_code 10068319 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Oropharyngeal pain" ;
+            rdfs:label "sore throat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_1
+:statement_1 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "”Sharp/cramping pains in stomach. Right in between the ribs. Centre of stomach …. Nearly phoned ambulance. Pain was unbearable at one point.”" ;
+             rdfs:label "statement 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_2
+:statement_2 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "“Sudden severe stomach cramps, dizziness, raised temperature and sudden severe vomiting”" ;
+             rdfs:label "statement 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_3
+:statement_3 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "“…experienced severe stomach pain with 10 minutes [sic] of taking the tablets I then felt sick and vomited twice. I then felt ok apart from my cold symptoms.”" ;
+             rdfs:label "statement 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_4
+:statement_4 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "“…experienced extreme stomach pain and vomiting just minutes after the medicine was taken, lasted about 30 minutes before returning to normal.”" ;
+             rdfs:label "statement 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_5
+:statement_5 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "“Within seconds of taking experienced severe pain in the stomach causing collapse and projectile vomiting. …the pain was so extreme ... collapse to the floor in pain.”" ;
+             rdfs:label "statement 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#statement_6
+:statement_6 rdf:type owl:NamedIndividual ,
+                      mp:Statement ;
+             OpenPVSignal:has_content "“Severe abdominal pain, abdominal cramps and diarrhoea.”" ;
+             rdfs:label "statement 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#stomachAche
+:stomachAche rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R1010" ;
+             OpenPVSignal:has_MedDRA_code 10000087 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain upper" ;
+             rdfs:label "stomach ache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#stomachDiscomfort
+:stomachDiscomfort rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R10.9" ;
+                   OpenPVSignal:has_MedDRA_code 10000059 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Abdominal discomfort" ;
+                   rdfs:label "stomach discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#stomachPain
+:stomachPain rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R1010" ;
+             OpenPVSignal:has_MedDRA_code 10000087 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain upper" ;
+             rdfs:label "stomach pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#tamsulosin
+:tamsulosin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G04CA02" ,
+                                      "G04CA52" ,
+                                      "G04CA53" ;
+            rdfs:label "tamsulosin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#the_Netherlands__Pharmacovigilance_centre_Lareb
+:the_Netherlands__Pharmacovigilance_centre_Lareb rdf:type owl:NamedIndividual ,
+                                                          prov:Organization ;
+                                                 rdfs:label "the Netherlands Pharmacovigilance centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#time_to_onset_after_1_day
+:time_to_onset_after_1_day rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2006/time#DurationDescription> ;
+                           <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                           <http://www.w3.org/2006/time#numericPosition> 1 ;
+                           rdfs:label "time to onset after 1 day" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#time_to_onset_after_2_days
+:time_to_onset_after_2_days rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2006/time#DurationDescription> ;
+                            <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                            <http://www.w3.org/2006/time#numericPosition> 2 ;
+                            rdfs:label "time to onset after 2 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#time_to_onset_same_day
+:time_to_onset_same_day rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2006/time#DurationDescription> ;
+                        <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                        <http://www.w3.org/2006/time#numericPosition> 0 ;
+                        rdfs:label "time to onset same day" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#upperAbdominalPain
+:upperAbdominalPain rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "R1010" ;
+                    OpenPVSignal:has_MedDRA_code 10000087 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain upper" ;
+                    rdfs:label "upper abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#upsetStomach
+:upsetStomach rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K30" ;
+              OpenPVSignal:has_MedDRA_code 10000059 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Abdominal discomfort" ;
+              rdfs:label "upset stomach" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :nasalCongestion ,
+                                                             :sinusitis ;
+                    OpenPVSignal:refers_to_drug :paracetamol ,
+                                                :phenylephrine ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#usage_of_guaifenesin
+:usage_of_guaifenesin rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:refers_to_dosage :guaifenecin_dosage_1 ,
+                                                    :guaifenecin_dosage_2 ;
+                      OpenPVSignal:refers_to_drug :guaifenesin ;
+                      rdfs:label "usage of guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#usage_of_paracetamol
+:usage_of_paracetamol rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:refers_to_dosage :paracetamol_dosage_1 ,
+                                                    :paracetamol_dosage_2 ,
+                                                    :paracetamol_dosage_3 ;
+                      OpenPVSignal:refers_to_drug :paracetamol ;
+                      rdfs:label "usage of paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#usage_of_phenylephrine
+:usage_of_phenylephrine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Drug_Usage ;
+                        OpenPVSignal:refers_to_dosage :phenylephrine_dosage_1 ,
+                                                      :phenylephrine_dosage_2 ,
+                                                      :phenylephrine_dosage_3 ,
+                                                      :phenylephrine_dosage_4 ;
+                        OpenPVSignal:refers_to_drug :phenylephrine ;
+                        rdfs:label "usage of phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ,
+                                    "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#δ
+:δ rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Free_text_reporting_element ;
+   mp:references :Ref.4 ,
+                 :Ref.5 ;
+   OpenPVSignal:has_content "Based on the overall reporting of the MedDRA PT ‘abdominal pain upper’ for combination products containing guaifenesin, paracetamol, and phenylephrine, IC analysis found the association to be disproportionally reported.4,5 Table 2 displays the statistics for PTs ‘abdominal pain upper’ with the combination product and the single substances. ‘Abdominal pain upper’ for the combination product and the single substances was, except for phenylephrine, disproportionally reported in VigiBase." ;
+   rdfs:label "Disproportionality analysis for the combination product and single substances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Combination_of_quaifenesin,_paracetamol,_and_phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Combination_of_quaifenesin,_paracetamol,_and_phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                 OpenPVSignal:Drug-Drug_interaction ;
+                                                                                                                                                                        OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                                    :paracetamol ,
+                                                                                                                                                                                                    :phenylephrine ;
+                                                                                                                                                                        rdfs:label "Combination of quaifenesin, paracetamol, and phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Combination_products_containing_guaifenesin,_paracetamol,_and_phenylephrine_reported_with_severe_upper_abdominal_pain
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Combination_products_containing_guaifenesin,_paracetamol,_and_phenylephrine_reported_with_severe_upper_abdominal_pain> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                            OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                                                                                                                                                   OpenPVSignal:refers_to_author :Annet_van_Erp-van_Boekel ,
+                                                                                                                                                                                                                                                                 :Dr_Kristina_Star ;
+                                                                                                                                                                                                                                   OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                                                                                                                                                                   mp:publishedBy :Uppsala_Monitoring_Centre ,
+                                                                                                                                                                                                                                                  :the_Netherlands__Pharmacovigilance_centre_Lareb ;
+                                                                                                                                                                                                                                   OpenPVSignal:has_creation_date "01-08-2020" ;
+                                                                                                                                                                                                                                   OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                                                                                                                                                                                                                   rdfs:label "Combination products containing guaifenesin, paracetamol, and phenylephrine reported with severe upper abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForGuaifenesin;Paracetamol;Phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#IC025ForGuaifenesin;Paracetamol;Phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                                                           OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                                                                                                                                           OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                       :paracetamol ,
+                                                                                                                                                                                       :phenylephrine ;
+                                                                                                                                                           OpenPVSignal:refers_to_information_component <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForGuaifenesin;Paracetamol;Phenylephrine> ;
+                                                                                                                                                           OpenPVSignal:has_value 2.84 ;
+                                                                                                                                                           OpenPVSignal:refers_to_number_of_reports 22 ;
+                                                                                                                                                           rdfs:label "IC025 for Guaifenesin, Paracetamol, Phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForGuaifenesin;Paracetamol;Phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ICForGuaifenesin;Paracetamol;Phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                                                                                                                                        OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                                                                                                                                        OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                    :paracetamol ,
+                                                                                                                                                                                    :phenylephrine ;
+                                                                                                                                                        OpenPVSignal:has_value 3.51 ;
+                                                                                                                                                        OpenPVSignal:refers_to_number_of_reports 22 ;
+                                                                                                                                                        rdfs:label "IC for Guaifenesin, Paracetamol, Phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#OverallReportsInVigiBaseForguaifenesin,paracetamol,Phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                                                                                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> ;
+                                                                                                                                                                              OpenPVSignal:refers_to_adverse_effect :gastrointestinal_and_abdominal_pains ;
+                                                                                                                                                                              OpenPVSignal:has_count 29 ;
+                                                                                                                                                                              OpenPVSignal:has_count_of_men 6 ;
+                                                                                                                                                                              OpenPVSignal:has_count_of_women 23 ;
+                                                                                                                                                                              OpenPVSignal:has_max_age "71.0"^^xsd:float ;
+                                                                                                                                                                              OpenPVSignal:has_median_age "41.0"^^xsd:float ;
+                                                                                                                                                                              OpenPVSignal:has_min_age "18.0"^^xsd:float ;
+                                                                                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                              rdfs:label "Reports for guaifenesin, paracetamol, phenylephrine and gastrointestinal and abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patient_Information_Leaflets_for_guaifenesin,__paracetamol,_and_phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patient_Information_Leaflets_for_guaifenesin,__paracetamol,_and_phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                    obo:OAE_0001197 ,
+                                                                                                                                                                                                    OpenPVSignal:Structured_Product_Labels_information ,
+                                                                                                                                                                                                    OpenPVSignal:Warning_Information ;
+                                                                                                                                                                                           OpenPVSignal:refers_to_adverse_effect :abdominalDiscomfort ,
+                                                                                                                                                                                                                                 :nausea ,
+                                                                                                                                                                                                                                 :stomachAche ,
+                                                                                                                                                                                                                                 :stomachDiscomfort ,
+                                                                                                                                                                                                                                 :upsetStomach ,
+                                                                                                                                                                                                                                 :vomiting ;
+                                                                                                                                                                                           OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                                                       :paracetamol ,
+                                                                                                                                                                                                                       :phenylephrine ;
+                                                                                                                                                                                           mp:references :Ref.1 ;
+                                                                                                                                                                                           OpenPVSignal:has_content "In some of the Patient Information Leaflets (PILs), the only gastrointestinal related adverse reactions listed are nausea and vomiting, and where abdominal discomfort is mentioned, it is expressed as abdominal/stomach discomfort or stomach aches/upsets.1" ;
+                                                                                                                                                                                           rdfs:label "Patient Information Leaflets for guaifenesin, paracetamol, and phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patients’_descriptions_of_abdominal_pains
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Patients’_descriptions_of_abdominal_pains> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                OpenPVSignal:Free_text_reporting_element ;
+                                                                                                                                                       OpenPVSignal:has_content """The following are some of the free text descriptions
+ 
+from the patients:
+•	”Sharp/cramping pains in stomach. Right in between the ribs. Centre of stomach …. Nearly phoned ambulance. Pain was unbearable at one point.”
+•	“Sudden severe stomach cramps, dizziness, raised temperature and sudden severe vomiting”
+•	“…experienced severe stomach pain with 10 minutes [sic] of taking the tablets I then felt sick and vomited twice. I then felt ok apart from my cold symptoms.”
+•	“…experienced extreme stomach pain and vomiting just minutes after the medicine was taken, lasted about 30 minutes before returning to normal.”
+•	“Within seconds of taking experienced severe pain in the stomach causing collapse and projectile vomiting. …the pain was so extreme ... collapse to the floor in pain.”
+•	“Severe abdominal pain, abdominal cramps and diarrhoea.”""" ;
+                                                                                                                                                       rdfs:label "Patients’ descriptions of abdominal pains" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                                                                              OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                          :paracetamol ,
+                                                                                                                                                                                          :phenylephrine ;
+                                                                                                                                                              OpenPVSignal:has_count 197 ;
+                                                                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                              rdfs:label "Reports with guaifenesin, paracetamol, phenylephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndAbdominalPainUpper
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndAbdominalPainUpper> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                                                                                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> ;
+                                                                                                                                                                                   OpenPVSignal:refers_to_adverse_effect :upperAbdominalPain ;
+                                                                                                                                                                                   OpenPVSignal:has_count 22 ;
+                                                                                                                                                                                   OpenPVSignal:has_expected_count "1.5"^^xsd:float ;
+                                                                                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                   rdfs:label "Reports with guaifenesin, paracetamol, phenylephrine and abdominal pain upper" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndNausea
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndNausea> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                OpenPVSignal:Reports_group ;
+                                                                                                                                                                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> ;
+                                                                                                                                                                       OpenPVSignal:refers_to_adverse_effect :nausea ;
+                                                                                                                                                                       OpenPVSignal:has_count 15 ;
+                                                                                                                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                       rdfs:label "Reports with guaifenesin, paracetamol, phenylephrine and nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndVomiting
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,PhenylephrineAndVomiting> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                                                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#ReportsWithguaifenesin,paracetamol,Phenylephrine> ;
+                                                                                                                                                                         OpenPVSignal:refers_to_adverse_effect :vomiting ;
+                                                                                                                                                                         OpenPVSignal:has_count 16 ;
+                                                                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                         rdfs:label "Reports with guaifenesin, paracetamol, phenylephrine and vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#SmPC_for_guaifenesin,_paracetamol_and_phenylephrine_in_UK
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#SmPC_for_guaifenesin,_paracetamol_and_phenylephrine_in_UK> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                obo:OAE_0001197 ,
+                                                                                                                                                                                OpenPVSignal:Structured_Product_Labels_information ,
+                                                                                                                                                                                OpenPVSignal:Warning_Information ;
+                                                                                                                                                                       OpenPVSignal:refers_to_adverse_effect :abdominalDiscomfort ,
+                                                                                                                                                                                                             :nausea ,
+                                                                                                                                                                                                             :vomiting ;
+                                                                                                                                                                       OpenPVSignal:refers_to_drug :guaifenesin ;
+                                                                                                                                                                       mp:references :Ref.1 ;
+                                                                                                                                                                       OpenPVSignal:has_content "The Summary of Product Characteristics (SmPC) for combination products with guaifenesin, paracetamol, and phenylephrine in the UK list abdominal discomfort, nausea and vomiting in relation to guaifenesin; nausea, vomiting and diarrhoea in relation to phenylephrine; and pallor, nausea, vomiting, anorexia and abdominal pain in the overdose section for paracetamol.1" ;
+                                                                                                                                                                       rdfs:label "SmPC for combination for guaifenesin in UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Usage_of_guaifenesin,_paracetamol,_and_phenylephrine
+<http://purl.org/OpenPVSignal/Signals/2019_4_guaifenesin_paracetamol_phenylephrine_upper_abdominal_pain.owl#Usage_of_guaifenesin,_paracetamol,_and_phenylephrine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                           OpenPVSignal:Drug_Usage ;
+                                                                                                                                                                  OpenPVSignal:concerns_indication_for_use :blocked_nose ,
+                                                                                                                                                                                                           :chills ,
+                                                                                                                                                                                                           :cold ,
+                                                                                                                                                                                                           :cough ,
+                                                                                                                                                                                                           :fever ,
+                                                                                                                                                                                                           :flu ,
+                                                                                                                                                                                                           :headache ,
+                                                                                                                                                                                                           :soreThroat ;
+                                                                                                                                                                  OpenPVSignal:refers_to_drug :guaifenesin ,
+                                                                                                                                                                                              :paracetamol ,
+                                                                                                                                                                                              :phenylephrine ;
+                                                                                                                                                                  mp:references :Ref.1 ;
+                                                                                                                                                                  OpenPVSignal:has_content "Combination products containing guaifenesin, paracetamol, and phenylephrine are approved for symptoms associated with colds, flu, headaches, blocked nose, sore throat, chills, fever, and chesty coughs.1" ;
+                                                                                                                                                                  rdfs:label "Usage of guaifenesin, paracetamol, and phenylephrine" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

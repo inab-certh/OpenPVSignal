@@ -1,0 +1,2156 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure> rdf:type owl:Ontology ;
+                                                                          owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                      mp: ;
+                                                                          rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255512/"^^xsd:anyURI ;
+                                                                          rdfs:label "Febuxostat and cardiac failure"^^xsd:Literal ;
+                                                                          owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/citation
+mp:citation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#age_65_70
+:age_65_70 rdf:type owl:Class ;
+           rdfs:subClassOf obo:PATO_0000011 ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty OpenPVSignal:has_age ;
+                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                  owl:onDatatype xsd:integer ;
+                                                  owl:withRestrictions ( [ xsd:minInclusive 65
+                                                                         ]
+                                                                         [ xsd:maxInclusive 70
+                                                                         ]
+                                                                       )
+                                                ]
+                           ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :Ref.12 ;
+                         OpenPVSignal:has_content """Discussion and Conclusion
+The risk of cardiac failure associated with febuxostat remains uncertain. Of most concern would be its occurrence in persons with concomitant cardiovascular disease prior to febuxostat therapy, including those with controlled cardiac failure.
+
+EMA advised avoiding the drug in patients with CAD and CHF. The basis for the CHF advice is uncertain. The advice is challenging given the common concurrence of ischaemic cardiovascular disease and cardiac failure with gout, some of the latter related to diuretic use and/or renal impairment. MI and ischaemic cardiac disease are the most common antecedents of cardiac failure. Therefore it is difficult to distinguish drug-induced cardiac failure per se such as drug-induced cardiomyopathy from drug-induced cardiac failure on a background of ischaemic heart disease or controlled cardiac failure.
+ 
+A mechanism why febuxostat might be more prone to possibly causing ischaemic cardiac events and now, cardiac failure, in  comparison to allopurinol is speculative, but could  be related to the ability of the latter to reduce the production of oxygen free radicals more effectively than febuxostat.12
+
+There are a significant number of reports in VigiBase suggesting an association of febuxostat with cardiac failure. The drug is known to be associated with  ischaemic  cardiovascular disease. The  reports  of cardiac  failure commonly occurred in older individuals with cardiovascular histories who were therefore vulnerable to further cardiovascular events.
+Sometimes the cardiac failure was reported concomitantly with an ischaemic event, notably MI. Cardiac failure is likely to be another manifestation of the association of adverse cardiovascular associations with this drug and a manifestation of further ischaemia in these patients.
+It is reasonable to believe that there is an association for febuxostat with cardiac failure.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 80 ;
+       OpenPVSignal:refers_to_dose_value "80 mg" ;
+       rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose10
+:Dose10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :febuxostat ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+        OpenPVSignal:has_dosage_unit "mg" ;
+        OpenPVSignal:has_value 40 ;
+        OpenPVSignal:refers_to_dose_value "40 mg" ;
+        rdfs:label "Dose 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose11
+:Dose11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :febuxostat ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+        OpenPVSignal:has_dosage_unit "mg" ;
+        OpenPVSignal:has_value 80 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "80 mg" ;
+        rdfs:label "Dose 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose12
+:Dose12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :febuxostat ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+        OpenPVSignal:has_dosage_unit "mg" ;
+        OpenPVSignal:has_value 80 ;
+        OpenPVSignal:refers_to_dose_value "80 mg" ;
+        rdfs:label "Dose 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose14
+:Dose14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :febuxostat ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+        OpenPVSignal:has_dosage_unit "mg" ;
+        OpenPVSignal:has_value 120 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "120 mg" ;
+        rdfs:label "Dose 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 80 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "80 mg" ;
+       rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose3
+:Dose3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 80 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "80 mg" ;
+       rdfs:label "Dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose4
+:Dose4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 120 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "120 mg" ;
+       rdfs:label "Dose 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose6
+:Dose6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 80 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "80 mg" ;
+       rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dose8
+:Dose8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :febuxostat ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 80 ;
+       OpenPVSignal:refers_to_dose_value "80 mg" ;
+       rdfs:label "Dose 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Dr_Richard_Ray
+:Dr_Richard_Ray rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Author ;
+                OpenPVSignal:has_first_name "Richard" ;
+                OpenPVSignal:has_last_name "Day" ;
+                rdfs:label "Dr Richard Day" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport1
+:DurationOfTreatmentForReport1 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               time:nominalPosition "days" ;
+                               time:numericPosition 51 ;
+                               rdfs:label "Duration of treatment for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport10
+:DurationOfTreatmentForReport10 rdf:type owl:NamedIndividual ,
+                                         time:DurationDescription ;
+                                time:nominalPosition "months" ;
+                                time:numericPosition 6 ;
+                                rdfs:label "Duration of treatment for report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport11
+:DurationOfTreatmentForReport11 rdf:type owl:NamedIndividual ,
+                                         time:DurationDescription ;
+                                time:nominalPosition "days" ;
+                                time:numericPosition 14 ;
+                                rdfs:label "Duration of treatment for report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport12
+:DurationOfTreatmentForReport12 rdf:type owl:NamedIndividual ,
+                                         time:DurationDescription ;
+                                time:nominalPosition "months" ;
+                                time:numericPosition 6 ;
+                                rdfs:label "Duration of treatment for report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport13
+:DurationOfTreatmentForReport13 rdf:type owl:NamedIndividual ,
+                                         time:DurationDescription ;
+                                time:nominalPosition "days" ;
+                                time:numericPosition 7 ;
+                                rdfs:label "Duration of treatment for report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport14
+:DurationOfTreatmentForReport14 rdf:type owl:NamedIndividual ,
+                                         time:DurationDescription ;
+                                time:nominalPosition "days" ;
+                                time:numericPosition 12 ;
+                                rdfs:label "Duration of treatment for report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport2
+:DurationOfTreatmentForReport2 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               time:nominalPosition "days" ;
+                               time:numericPosition 4 ;
+                               rdfs:label "Duration of treatment for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport3
+:DurationOfTreatmentForReport3 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               time:nominalPosition "months" ;
+                               time:numericPosition 3 ;
+                               rdfs:label "Duration of treatment for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport4
+:DurationOfTreatmentForReport4 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               time:nominalPosition "months" ;
+                               time:numericPosition 9 ;
+                               rdfs:label "Duration of treatment for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport6
+:DurationOfTreatmentForReport6 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               OpenPVSignal:has_content "6-7 months" ;
+                               time:nominalPosition "months" ;
+                               time:numericDuration 7 ;
+                               time:numericPosition 6 ;
+                               rdfs:label "Duration of treatment for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport8
+:DurationOfTreatmentForReport8 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               OpenPVSignal:has_content "1-5 days" ;
+                               time:nominalPosition "days" ;
+                               time:numericDuration 5 ;
+                               time:numericPosition 1 ;
+                               rdfs:label "Duration of treatment for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#DurationOfTreatmentForReport9
+:DurationOfTreatmentForReport9 rdf:type owl:NamedIndividual ,
+                                        time:DurationDescription ;
+                               time:nominalPosition "days" ;
+                               time:numericPosition 57 ;
+                               rdfs:label "Duration of treatment for report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#EMADosage1
+:EMADosage1 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Dosage ;
+            OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+            OpenPVSignal:has_dosage_unit "mg" ;
+            OpenPVSignal:has_value 80 ;
+            OpenPVSignal:refers_to_dose_value "80 mg" ;
+            rdfs:label "EMA dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#EMADosage2
+:EMADosage2 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Dosage ;
+            OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+            OpenPVSignal:has_dosage_unit "mg" ;
+            OpenPVSignal:has_value 120 ;
+            OpenPVSignal:refers_to_dose_value "120 mg" ;
+            rdfs:label "EMA dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#FAERSAnalysis
+:FAERSAnalysis rdf:type owl:NamedIndividual ,
+                        obo:OAE_0001197 ;
+               OpenPVSignal:is_supported_by_statistical_entity :IC025OfFAERSAnalysis ,
+                                                               :ICOfFAERSAnalysis ;
+               OpenPVSignal:refers_to_adverse_effect :cardiomyopathy ,
+                                                     :congestive_cardiomyopathy ,
+                                                     :thrombosis ;
+               OpenPVSignal:refers_to_drug :febuxostat ;
+               mp:references :Ref.11 ;
+               OpenPVSignal:has_content """A recent analysis of the US FDA post-marketing adverse event reporting system (FAERS) for cardiovascular thrombotic adverse events occurring in gout patients taking febuxostat revealed 21 cardiovascular thrombotic events. This was out of over 900,000 reports on this drug in FAERS since its registration  through the end of 2011. Using Bayesian statistics the IC and IC025 values suggested a significant association (IC 4.75; IC025 4.09) with cardiovascular thrombotic adverse events. Of the 31 MedDRA preferred terms selected by the investigators to represent cardiovascular thrombotic events, two cases were labelled “congestive cardiomyopathy” and “cardiomyopathy”. Both cases were serious and one patient died as a result of this condition.
+These two cases may not indicate thrombotic conditions. Cardiac failure was not specifically searched for in this study11""" ;
+               rdfs:label "FAERS analysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#FDADosage1
+:FDADosage1 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Dosage ;
+            OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+            OpenPVSignal:has_dosage_unit "mg" ;
+            OpenPVSignal:has_value 40 ;
+            OpenPVSignal:refers_to_dose_value "40 mg" ;
+            rdfs:label "FDA dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#FDADosage2
+:FDADosage2 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Dosage ;
+            OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+            OpenPVSignal:has_dosage_unit "mg" ;
+            OpenPVSignal:has_value 80 ;
+            OpenPVSignal:refers_to_dose_value "80 mg" ;
+            rdfs:label "FDA dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Febuxostat_and_cardiac_failure
+:Febuxostat_and_cardiac_failure rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                OpenPVSignal:refers_to_author :Dr_Richard_Ray ;
+                                OpenPVSignal:refers_to_signal :pvSignal ;
+                                OpenPVSignal:has_creation_date "1/11/2014" ;
+                                OpenPVSignal:has_overall_conclusion "causal association" ;
+                                rdfs:label "Febuxostat and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#IC025OfFAERSAnalysis
+:IC025OfFAERSAnalysis rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                      OpenPVSignal:refers_to_adverse_effect :thrombosis ;
+                      OpenPVSignal:refers_to_drug :febuxostat ;
+                      OpenPVSignal:refers_to_information_component :ICOfFAERSAnalysis ;
+                      OpenPVSignal:has_value 4.09 ;
+                      rdfs:label "IC025 of FAERS analysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#IC025ValueForFebuxostatAndCardiacFailure
+:IC025ValueForFebuxostatAndCardiacFailure rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+                                          OpenPVSignal:refers_to_drug :febuxostat ;
+                                          OpenPVSignal:refers_to_information_component :ICValueForFebuxostatAndCardiacFailure ;
+                                          OpenPVSignal:has_value 1.72 ;
+                                          OpenPVSignal:refers_to_number_of_reports 14 ;
+                                          rdfs:label "IC025 value for febuxostat and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ICOfFAERSAnalysis
+:ICOfFAERSAnalysis rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                   OpenPVSignal:refers_to_adverse_effect :thrombosis ;
+                   OpenPVSignal:refers_to_drug :febuxostat ;
+                   OpenPVSignal:has_value 4.75 ;
+                   rdfs:label "IC of FAERS analysis " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ICValueForFebuxostatAndCardiacFailure
+:ICValueForFebuxostatAndCardiacFailure rdf:type owl:NamedIndividual ,
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                       OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+                                       OpenPVSignal:refers_to_drug :febuxostat ;
+                                       OpenPVSignal:has_value 2.57 ;
+                                       OpenPVSignal:refers_to_number_of_reports 14 ;
+                                       rdfs:label "IC value for febuxostat and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ;
+                     OpenPVSignal:has_content """Febuxostat is an oral, once daily non-purine inhibitor of xanthine oxidase. It was registered by the US Food and Drug Administration (FDA) in 2009 and by the European Medicines Agency (EMA) in 2008.1,2 The drug is available in most markets globally. It is indicated for the treatment of hyperuricemia and gout and is particularly useful in patients who have had serious hypersensitivity reactions to allopurinol.3,4 Hyperuricemia is a common biochemical abnormality that predisposes affected persons to gout. The clinical manifestations of gout result from deposition of monosodium urate or uric acid crystals from supersaturated body fluids.
+Allopurinol is the most commonly prescribed treatment, but has side effects that may be severe and that occur more often in patients with renal insufficiency.
+
+The registration labels for febuxostat in the United States and Europe are slightly different. The FDA has approved a dose of 40 and 80 mg per day respectively while the EMA has approved a daily dose of 80 and 120 mg. The EMA has advised to avoid the drug in patients diagnosed with coronary artery disease (CAD) and congestive heart failure (CHF). Adjustment of the dose in patients with renal impairment is not needed. There is no warning for cardiac failure. Febuxostat is not considered cost-effective in comparison to
+allopuri- nol as first-line therapy but is generally considered equi- valently tolerated and at least similarly effective.5,6, 7,8
+ """ ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.10 ,
+                                      :Ref.11 ,
+                                      :Ref.2 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """Literature and Labelling
+Pivotal randomised controlled trials (RCTs) comparing febuxostat with allopurinol leading to registration along with two extension studies indicated a greater incidence of cardiovascular thromboembolic events (sum of cardiovascular death, non fatal myocardial infarction, and non fatal stroke) for febuxostat.1 EMA advised avoiding the drug in patients with CAD and CHF.2
+The overall cardiovascular risk of the drug is of known regulatory concern, most focus being the risk of drug-induced MI and stroke. The product label from the US approved by FDA states under Warnings & Precautions; Cardiovascular Events “In the randomized controlled studies, there was a higher rate of cardiovas- cular thromboembolic events (cardiovascular deaths, non-fatal myocardial infarctions, and non-fatal strokes) in patients treated with ULORIC (febuxostat) than allo- purinol. A causal relationship with ULORIC has not been established. Monitor for signs and symptoms of myocardial infarction (MI) and stroke.”1
+A large, randomised, controlled comparison in gout patients with increased cardiovascular riskis recruiting in North America. About 7,500 patients will be entered and followed for up to five years and the study is predicted to close out recruitment in 2018. As per Clinicaltrials.gov; “the primary outcome is the time from randomization to the first occurrence of any predefined major adverse cardiovascular event.” The study target is 624 major adverse cardiovascular events (MACE) giving a 90% power to demonstrate non- inferiority to allopurinol for the hazard ratio for MACE less than 1.3 for the upper limit of the confidence interval. Unfortunately, secondary outcomes for this study do not include cardiac failure, cardiac failure aggravated or decompensated heart failure. A positive feature is the targeting of plasma urate to less than 0.36 ug/ml by dose adjustment over the initial weeks while still maintaining the blinding. It is likely that regulatory agencies recommended this study be undertaken. It is hoped that progress with recruitment is satisfactory.9,10 A recent analysis of the US FDA post-marketing adverse event reporting system (FAERS) for cardiovascular thrombotic adverse events occurring in gout patients taking febuxostat revealed 21 cardiovascular thrombotic events. This was out of over 900,000 reports on this drug in FAERS since its registration through the end of 2011. Using Bayesian statistics the IC and IC025 values suggested a significant association (IC 4.75; IC025 4.09) with cardiovascular thrombotic adverse events. Of the 31 MedDRA preferred terms selected by the investigators to represent cardiovascular thrombotic events, two cases were labelled “congestive cardiomyopathy” and “cardiomyopathy”. Both cases were serious and one patient died as a result of this condition. These two cases may not indicate thrombotic conditions. Cardiac failure was not specifically searched for in this study11""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#MechanismOfFebuxostat
+:MechanismOfFebuxostat rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       OpenPVSignal:has_content "Febuxostat is an oral, once daily non-purine inhibitor of xanthine oxidase." ;
+                       rdfs:label "Mechanism of febuxostat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#MedianTimeToOnset
+:MedianTimeToOnset rdf:type owl:NamedIndividual ,
+                            time:DurationDescription ;
+                   time:nominalPosition "days" ;
+                   time:numericPosition 19 ;
+                   rdfs:label "Median time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 68 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 68 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ,
+                    :age_65_70 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 83 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 52 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 83 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 77 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#PossibleMechanismOfFebuxostatTriggeringCardiacFailure
+:PossibleMechanismOfFebuxostatTriggeringCardiacFailure rdf:type owl:NamedIndividual ,
+                                                                OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                       OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+                                                       mp:references :Ref.12 ;
+                                                       OpenPVSignal:has_content "A mechanism why febuxostat might be more prone to possibly causing ischaemic cardiac events and now, cardiac failure, in  comparison to allopurinol is speculative, but could  be related to the ability of the latter to reduce the production of oxygen free radicals more effectively than febuxostat.12" ;
+                                                       rdfs:label "Possible mechanism of febuxostat triggering cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#RCTs
+:RCTs rdf:type owl:NamedIndividual ,
+               obo:OAE_0001197 ,
+               OpenPVSignal:Clinical_trial_information ,
+               OpenPVSignal:Warning_Information ;
+      OpenPVSignal:refers_to_adverse_effect :myocardialInfarction ,
+                                            :stroke ;
+      OpenPVSignal:refers_to_drug :febuxostat ;
+      mp:references :Ref.1 ;
+      OpenPVSignal:has_content "Pivotal randomised controlled trials (RCTs) comparing febuxostat with allopurinol leading to registration along with two extension studies indicated a greater incidence of cardiovascular thromboembolic events (sum of cardiovascular death, non fatal myocardial infarction, and non fatal stroke) for febuxostat.1" ;
+      rdfs:label "RCTs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA label for febuxostat (Uloric). URL: http:// www.accessdata.fda.gov/Accessed: 25 February 2014." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "White WB, Chohan S, Dabholkar A, Hunt B, Jackson R. Cardiovascular safety of febuxostat and allopurinol in patients with gout and cardiovascular comorbidities. Am Heart J. 2012; 164:14-20." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Gandhi P, Gentry WM, Bottorff MB. Cardiovascular thromboembolic events associated with febuxostat: investigation of cases from the FDA adverse event reporting system database. Semin Arthritis Rheum. 2013; 42(6):562-6." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Li H, Horke S, Förstermann U. Oxidative stress in vas- cular disease and its pharmacological prevention. Trends Pharmacol Sci. 2013; 34(6):313-9." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EU SPC for febuxostat (Adenuric). URL:http://www. ema.europa.eu/ Accessed 25 February 2014." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Schlesinger N. Treatment of Chronic Gouty Arthritis: It is not just about urate-lowering therapy. Semin Arthritis Rheum. 2012; 42:155-65." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Chohan S. Safety and efficacy of febuxostat treatment in subjects with gout and severe allopurinol adverse reacti- ons. J Rheumatol. 2011; 38(9):1957-9." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Stevenson M, Pandor A. Febuxostat for the manage- ment of hyperuricaemia in patients with gout: A NICE single technology appraisal. Pharmacoeconomics. 2011; 29(2):133-40." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Khanna D, Fitzgerald JD, Khanna PP, Bae S, Singh MK, Neogi T. 2012 American College of Rheumatology guidelines for management of gout. Part 1: systematic nonpharmacologic and pharmacologic therapeutic approaches to hyperuricemia. Arthritis Care & Research. 2012; 64(10):1431-46." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Faruque L, Ehteshami-Afshar A, Wiebe N, Tjosvold L, Homik J, Tonelli M. A systematic review and meta-analysis on the safety and efficacy of febuxostat versus allopurinol in chronic gout. Semin Arthritis Rheum. 2013; 43(3):367-75." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ye P, Yang S, Zhang W. Efficacy and tolerability of febuxostat in hyperuricemic patients with or without gout: a systematic review and meta-analysis. ClinTher. 2013 35(2)180-9." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Cardiovascular Safety of Febuxostat and Allopurinol in Patients With Gout and Cardiovascular Comorbidities (CARES), US National Institutes of Health ClinicalTrials. URL: http://clinicaltrials.gov/show/ NCT01101035 Accessed: 25 February 2014." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_past_diagnosis :renalFailure ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report1 ;
+         time:hasDurationDescription :DurationOfTreatmentForReport1 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_concomitant_drug :candesartan ,
+                                                  :clonazepam ,
+                                                  :clopidogrel ,
+                                                  :escitalopram ,
+                                                  :esomeprazole ,
+                                                  :flagyl ,
+                                                  :furosemide ,
+                                                  :metoprolol ,
+                                                  :paracetamol ,
+                                                  :simvastatin ,
+                                                  :warfarin ;
+          OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report10 ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :diclofenac ;
+          time:hasDurationDescription :DurationOfTreatmentForReport10 ;
+          OpenPVSignal:refers_to_outcome_after_action "death" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report11 ;
+          time:hasDurationDescription :DurationOfTreatmentForReport11 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_concomitant_drug :amlodipine ,
+                                                  :hydrochlorothiazide ,
+                                                  :metoprolol ,
+                                                  :phenprocoumon ,
+                                                  :ramipril ,
+                                                  :torasemide ;
+          OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report12 ;
+          time:hasDurationDescription :DurationOfTreatmentForReport12 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          time:hasDurationDescription :DurationOfTreatmentForReport13 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_concomitant_drug :citalopram ,
+                                                  :colchicines ,
+                                                  :digoxin ,
+                                                  :furosemide ,
+                                                  :insulin ,
+                                                  :ramipril ,
+                                                  :saxagliptin ,
+                                                  :simvastatin ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#codeinephosphate/paracetamolBisoprolol> ;
+          OpenPVSignal:refers_to_past_diagnosis :diabetes ,
+                                                :heartFailure ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report14 ;
+          time:hasDurationDescription :DurationOfTreatmentForReport14 ;
+          OpenPVSignal:refers_to_outcome_after_action "death" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_past_diagnosis :coronaryArteryDisease ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report2 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :diclofenac ;
+         time:hasDurationDescription :DurationOfTreatmentForReport2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :doxazosin ,
+                                                 :hydrochlorothiazide ,
+                                                 :ibuprofen ,
+                                                 :metformin ,
+                                                 :metoprolol ,
+                                                 :phenprocoumon ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#amlodipine/valsartan> ;
+         OpenPVSignal:refers_to_past_diagnosis :coronaryArteryDisease ,
+                                               :diabetes ,
+                                               :myocardialInfarction ,
+                                               :renalFailure ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report3 ;
+         time:hasDurationDescription :DurationOfTreatmentForReport3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :furosemide ,
+                                                 :spironolactone ;
+         OpenPVSignal:refers_to_past_diagnosis :myocardialInfarction ,
+                                               :renalFailure ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report4 ;
+         time:hasDurationDescription :DurationOfTreatmentForReport4 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report6 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :ibuprofen ;
+         time:hasDurationDescription :DurationOfTreatmentForReport6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :enalapril ,
+                                                 :furosemide ,
+                                                 :metoprolol ,
+                                                 :simvastatin ;
+         OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         OpenPVSignal:refers_to_reported_drug_usage :febuxostat_usage_for_Report8 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :acetylsalicylicAcid ;
+         time:hasDurationDescription :DurationOfTreatmentForReport8 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ,
+                                                 :phenprocoumon ,
+                                                 :ramipril ;
+         OpenPVSignal:refers_to_past_diagnosis :heartFailure ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+         time:hasDurationDescription :DurationOfTreatmentForReport9 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ReportsFromFinland
+:ReportsFromFinland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Finland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Finland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                    OpenPVSignal:has_count 8 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ReportsFromUnitedKingdom
+:ReportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                          OpenPVSignal:has_count 2 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ReportsFromUnitedStates
+:ReportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                         OpenPVSignal:has_count 3 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from United States" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of 3 December 2013, there were 14 Individual Case Safety Reports (ICSRs) of febuxostat associated with cardiac failure in the WHO Global ICSR Database, VigiBase® (Table 1). The association has an IC value of 2.57 and an IC025 value of 1.72. In addition, there were eight reports of cardiac failure congestive, and two of cardiac failure acute. Cardiomyopathy was also reported with febuxostat in four cases, and myocarditis in one. Thus a substantial proportion of reports of cardiac dis- orders with febuxostat were identified as cardiac failure or closely related diagnoses.
+
+Focusing on the 14 cases reported with the MedDRA term ‘cardiac failure’, they were submitted from four different countries; Germany (eight cases), United States (three cases), United Kingdom (two cases) and Finland (one case). The age of the patients was reported in eleven of the ICSRs and ranged from 52 to 83 years with a median age of 72 years. The gender distribution in the reports was nine men and four women, and the sex of one of the patients was not reported. Duration of exposure to febuxostat ranged from four days to nine months. Two of the reports did not offer this information. Time to onset ranged from the same day the drug was started to half a year with a median of 19 days.
+
+Doses reported were 40mg per day (one case), 80 mg per day (eight cases), 120mg per day (two cases), one of the latter being an 83-year- old male patient from United Kingdom who had been taking febuxostat 120mg for 12 days, and had both cardiac and renal failure listed. This patient was one of the three who died with cardiac failure reported as associated with death.
+
+With respect to outcome the patients were reported as recovered or recovering in four cases and not recove- red in two cases. In three of the patients who recovered (case 2, 3 and 11), the patient recovered after the drug was withdrawn. In one of the “not recovered” cases, the patient had stopped taking febuxostat and restarted allopurinol without any improvement. The other “not recovered” patient was still at the hospital at the time of reporting. There were three cases reported as ‘unknown’ with respect to recovery from cardiac fai- lure, and three had no information at all on outcome. One of these patients was however recorded to have died although there is no information on whether this was attributed to the cardiac failure. Finally two It appears that two patients had 40 mg febuxostat per day and two others had the dose increased to 80 mg per day.
+
+For the whole system organ class (SOC), there are as of 3 December 2013, 95 ICSRs submitted to VigiBase with febuxostat associated with cardiac disorders. Of these, there are 12 acute myocardial infarctions (AMIs), 19 MIs and one acute coronary syndrome reported. The distinction made between AMI and MI is uncertain and probably of doubtful significance. Any of these MIs may also present as cardiac failure in the future. There were a substantial number, 20 in fact, of atrial and ventricular arrhythmias, and again cardiac failure in association with an arrhythmia would not be unexpected.
+
+ 
+patients were recorded to have died from decompensated heart failure and heart failure respectively.
+Causality was assessed in nine cases; related or possibly related to febuxostat in six cases and unlikely, not related or unassessable in three. No patients were re-challenged with febuxostat.
+
+Examining the reactions listed along with cardiac failure in the 14 ICSRs, two had a myocardial infarction (MI) listed that could be the antecedent to the cardiac failure. The majority of these patients (seven cases) were taking
+ACE inhibitors, angiotensin II-inhibitors, beta- blockers and/or diuretics that could have preceded the first exposure to febuxostat, indicating previous, probably controlled cardiac failure although these drugs are also indicated for hypertension.
+
+Seven of the 14 cases reported the MedDRA included terms ‘decompensation cardiac’ (three), ‘cardiac failure aggravated’ (three) or
+‘decompensated heart failure’ (one) indicating a previous heart failure. Two of these reports lacked information about concomitant medications indicated for heart failure.
+
+Concomitant pharmacotherapies were reported in nine of the ICSRs. Two cases had antidiabetic drugs and five were taking anticoagulant or antiplatelet medicines. In three of the cases where the patient was taking an anticoagulant drug, atrial fibrillation was listed in the medical history of the patient. In the reports where concomitant drugs had been taken, five of them included a NSAID drug. One of these was listed as acetylsalicylic acid (most likely low dose) well known to induce cardiac failure in those with controlled cardiac failure. Therefore the NSAID history of these patients is critical to understand the antecedents and reasons for the onset of the cardiac failure.
+
+Looking at the eight reports of ‘cardiac failure congestive’, these were all from the United States. Six of the reports were sent by physicians. In one report, the patient started and stopped the drug the same day while in another the patient was treated for four months. The rest had no information on duration of exposure to febuxostat and there were no times to onset reported. No outcomes were reported, although all reactions were listed as serious and there were two deaths. Two cases had myocardial infarctions.
+
+It appears that two patients had 40 mg febuxostat per day and two others had the dose increased to 80 mg per day.
+
+For the whole system organ class (SOC), there are as of 3 December 2013, 95 ICSRs submitted to VigiBase with febuxostat associated with cardiac disorders. Of these, there are 12 acute myocardial infarctions (AMIs), 19 MIs and one acute coronary syndrome reported. The distinction made between AMI and MI is uncertain and probably of doubtful significance. Any of these MIs may also present as cardiac failure in the future. There were a substantial number, 20 in fact, of atrial and ventricular arrhythmias, and again cardiac failure in association with an arrhythmia would not be unexpected.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "There are a significant number of reports in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase® suggesting an association of febuxostat with cardiac failure. The reports of cardiac failure commonly occurred in older individuals with cardiovascular histories who were therefore vulnerable to further cardiovascular events. Sometimes the cardiac failure was reported concomitantly with an ischaemic event, notably myocardial infarction. Cardiac failure is likely to be another manifestation of the association of adverse cardiovascular associations with this drug." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX05" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#acuteCoronarySyndrome
+:acuteCoronarySyndrome rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "I249" ;
+                       OpenPVSignal:has_MedDRA_code 10051592 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Acute coronary syndrome" ;
+                       rdfs:label "acute coronary syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#acuteMyocardialInfarction
+:acuteMyocardialInfarction rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "I219" ;
+                           OpenPVSignal:has_MedDRA_code 10000891 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Acute myocardial infarction" ;
+                           rdfs:label "acute myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#amlodipine
+:amlodipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA01" ,
+                                      "C08GA02" ,
+                                      "C09BB03" ,
+                                      "C09BB04" ,
+                                      "C09BB07" ,
+                                      "C09BX01" ,
+                                      "C09DB02" ,
+                                      "C09DB04" ,
+                                      "C09DB05" ,
+                                      "C09DB06" ,
+                                      "C09DB07" ,
+                                      "C09DX01" ,
+                                      "C09DX03" ,
+                                      "C09XA53" ,
+                                      "C09XA54" ,
+                                      "C10BX03" ,
+                                      "C10BX07" ,
+                                      "C10BX09" ,
+                                      "C10BX11" ;
+            rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#atrialArrhythmia
+:atrialArrhythmia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "I499" ;
+                  OpenPVSignal:has_MedDRA_code 10003656 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Atrial arrhythmia" ;
+                  rdfs:label "atrial arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#candesartan
+:candesartan rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09CA06" ,
+                                       "C09DA06" ,
+                                       "C09DB07" ;
+             rdfs:label "candesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiacFailure
+:cardiacFailure rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I50" ;
+                OpenPVSignal:has_MedDRA_code 10007554 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+                rdfs:label "cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiacFailureAggravated
+:cardiacFailureAggravated rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I50" ;
+                          OpenPVSignal:has_MedDRA_code 10007557 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure aggravated" ;
+                          rdfs:label "cardiac failure aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiacFailureCongestive
+:cardiacFailureCongestive rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I509" ;
+                          OpenPVSignal:has_MedDRA_code 10007559 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure congestive" ;
+                          rdfs:label "cardiac failure congestive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiac_disorders
+:cardiac_disorders rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10007541 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Cardiac disorders" ;
+                   rdfs:label "cardiac disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiac_failure_acute
+:cardiac_failure_acute rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10007556 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure acute" ;
+                       rdfs:label "cardiac failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#cardiomyopathy
+:cardiomyopathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I429" ;
+                OpenPVSignal:has_MedDRA_code 10007636 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiomyopathy" ;
+                rdfs:label "cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#citalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#clonazepam
+:clonazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AE01" ;
+            rdfs:label "clonazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#colchicines
+:colchicines rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "M04AC01" ;
+             rdfs:label "colchicines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#congestiveHeartFailure
+:congestiveHeartFailure rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "I509" ;
+                        OpenPVSignal:has_MedDRA_code 10007559 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure congestive" ;
+                        rdfs:label "congestive heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#congestive_cardiomyopathy
+:congestive_cardiomyopathy rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_MedDRA_code 10056370 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Congestive cardiomyopathy" ;
+                           rdfs:label "congestive cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#coronaryArteryDisease
+:coronaryArteryDisease rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ,
+                                OpenPVSignal:Past_Diagnosis ;
+                       OpenPVSignal:has_ICD_code "I2510" ;
+                       OpenPVSignal:has_MedDRA_code 10011078 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Coronary artery disease" ;
+                       rdfs:label "coronary artery disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#decompensatedHeartFailure
+:decompensatedHeartFailure rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "I50" ;
+                           OpenPVSignal:has_MedDRA_code 10066159 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Decompensated heart failure" ;
+                           rdfs:label "decompensated heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#decompensationCardiac
+:decompensationCardiac rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "I50" ;
+                       OpenPVSignal:has_MedDRA_code 10011949 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Decompensation cardiac" ;
+                       rdfs:label "decompensation cardiac" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#diabetes
+:diabetes rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Past_Diagnosis ;
+          OpenPVSignal:has_MedDRA_code 10012594 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diabetes" ;
+          rdfs:label "diabetes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#diclofenac
+:diclofenac rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D11AX18" ,
+                                      "M01AB05" ,
+                                      "M01AB55" ,
+                                      "M02AA15" ,
+                                      "S01BC03" ,
+                                      "S01CC01" ;
+            rdfs:label "diclofenac" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#digoxin
+:digoxin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C01AA05" ;
+         rdfs:label "digoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#dosage_120_mg
+:dosage_120_mg rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Dosage ;
+               OpenPVSignal:refers_to_drug :febuxostat ;
+               OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+               OpenPVSignal:has_dosage_unit "mg" ;
+               OpenPVSignal:has_value 120 ;
+               OpenPVSignal:refers_to_dose_value "120 mg" ;
+               rdfs:label "dosage 120 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#dosage_40_mg
+:dosage_40_mg rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Dosage ;
+              OpenPVSignal:refers_to_drug :febuxostat ;
+              OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+              OpenPVSignal:has_dosage_unit "mg" ;
+              OpenPVSignal:has_value 40 ;
+              OpenPVSignal:refers_to_dose_value "40 mg" ;
+              rdfs:label "dosage 40 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#dosage_80_mg
+:dosage_80_mg rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Dosage ;
+              OpenPVSignal:refers_to_drug :febuxostat ;
+              OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministration ;
+              OpenPVSignal:has_dosage_unit "mg" ;
+              OpenPVSignal:has_value 80 ;
+              OpenPVSignal:refers_to_dose_value "80 mg" ;
+              rdfs:label "dosage 80 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#doxazosin
+:doxazosin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C02CA04" ;
+           rdfs:label "doxazosin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#enalapril
+:enalapril rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C09AA02" ,
+                                     "C09BA02" ,
+                                     "C09BB02" ,
+                                     "C09BB06" ;
+           rdfs:label "enalapril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#escitalopram
+:escitalopram rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N06AB10" ;
+              rdfs:label "escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#esomeprazole
+:esomeprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "02BC05" ,
+                                        "A02BC05" ;
+              rdfs:label "esomeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat
+:febuxostat rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :MechanismOfFebuxostat ,
+                                       :PossibleMechanismOfFebuxostatTriggeringCardiacFailure ;
+            OpenPVSignal:has_ATC_code "M04AA03" ;
+            rdfs:label "febuxostat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_and_ischaemic_cardiovascular_disease
+:febuxostat_and_ischaemic_cardiovascular_disease rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Warning_Information ;
+                                                 OpenPVSignal:refers_to_adverse_effect :ischaemicCardiovascularDisease ;
+                                                 OpenPVSignal:refers_to_drug :febuxostat ;
+                                                 OpenPVSignal:has_content "The drug is known to beassociated with ischaemic cardiovascular disease." ;
+                                                 rdfs:label "febuxostat and ischaemic cardiovascular disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report1
+:febuxostat_usage_for_Report1 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose1 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report10
+:febuxostat_usage_for_Report10 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose10 ;
+                               OpenPVSignal:refers_to_drug :febuxostat ;
+                               rdfs:label "usage for report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report11
+:febuxostat_usage_for_Report11 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose11 ;
+                               OpenPVSignal:refers_to_drug :febuxostat ;
+                               rdfs:label "usage for report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report12
+:febuxostat_usage_for_Report12 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose12 ;
+                               OpenPVSignal:refers_to_drug :febuxostat ;
+                               rdfs:label "usage for report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report14
+:febuxostat_usage_for_Report14 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose14 ;
+                               OpenPVSignal:refers_to_drug :febuxostat ;
+                               rdfs:label "usage for report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report2
+:febuxostat_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose2 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report3
+:febuxostat_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose3 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report4
+:febuxostat_usage_for_Report4 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose4 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report6
+:febuxostat_usage_for_Report6 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose6 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#febuxostat_usage_for_Report8
+:febuxostat_usage_for_Report8 rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug_Usage ;
+                              OpenPVSignal:refers_to_dosage :Dose8 ;
+                              OpenPVSignal:refers_to_drug :febuxostat ;
+                              rdfs:label "usage for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#flagyl
+:flagyl rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Drug ;
+        OpenPVSignal:has_ATC_code "J01XD01" ;
+        rdfs:label "flagyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#furosemide
+:furosemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA01" ,
+                                      "C03CB01" ,
+                                      "C03EB01" ,
+                                      "G01AE10" ;
+            rdfs:label "furosemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#gout
+:gout rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ,
+               OpenPVSignal:Indication ;
+      OpenPVSignal:has_ICD_code "M109" ;
+      OpenPVSignal:has_MedDRA_code 10018627 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Gout" ;
+      rdfs:label "gout" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#heartFailure
+:heartFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I50" ;
+              OpenPVSignal:has_MedDRA_code 10019279 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Heart failure" ;
+              rdfs:label "heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#hyperuricemia
+:hyperuricemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_ICD_code "E790" ;
+               OpenPVSignal:has_MedDRA_code 10020903 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperuricaemia" ;
+               rdfs:label "hyperuricemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#hyperuricemia_pathobiology
+:hyperuricemia_pathobiology rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Free_text_reporting_element ;
+                            OpenPVSignal:refers_to_adverse_effect :gout ,
+                                                                  :hyperuricemia ;
+                            OpenPVSignal:has_content """Hyperuricemia is a common biochemical abnormality that predisposes affected persons to gout. The clinical manifestations of gout result from deposition of monosodium urate or uric acid crystals from supersaturated body fluids.
+Allopurinol is the most commonly prescribed treatment, but has side effects that may be severe and that occur more often in patients with renal insufficiency.""" ;
+                            rdfs:label "hyperuricemia and gout pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ,
+                                     "G02CC01" ,
+                                     "M01AE01" ,
+                                     "M01AE51" ,
+                                     "M02AA13" ,
+                                     "R02AX02" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#insulin
+:insulin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A10AD" ;
+         rdfs:label "insulin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ischaemicCardiovascularDisease
+:ischaemicCardiovascularDisease rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_ICD_code "I259" ;
+                                OpenPVSignal:has_MedDRA_code 10048858 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Ischaemic cardiomyopathy" ;
+                                rdfs:label "ischaemic cardiovascular disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#labelling_for_febuxostat
+:labelling_for_febuxostat rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Structured_Product_Labels_information ;
+                          OpenPVSignal:refers_to_drug :febuxostat ;
+                          mp:references :Ref.5 ,
+                                        :Ref.6 ,
+                                        :Ref.7 ,
+                                        :Ref.8 ;
+                          OpenPVSignal:has_content "The registration labels for febuxostat in the United States and Europe are slightly different. The FDA has approved a dose of 40 and 80 mg per day respectively while the EMA has approved a daily dose of 80 and 120 mg. The EMA has advised to avoid the drug in patients diagnosed with coronary artery disease (CAD) and congestive heart failure (CHF). Adjustment of the dose in patients with renal impairment is not needed. There is no warning for cardiac failure. Febuxostat is not considered cost-effective in comparison to allopuri- nol as first-line therapy but is generally considered equi- valently tolerated and at least similarly effective.5,6, 7,8" ;
+                          rdfs:label "labelling for febuxostat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ,
+                                     "A10BD02" ,
+                                     "A10BD03" ,
+                                     "A10BD05" ,
+                                     "A10BD07" ,
+                                     "A10BD08" ,
+                                     "A10BD10" ,
+                                     "A10BD11" ,
+                                     "A10BD13" ,
+                                     "A10BD14" ,
+                                     "A10BD15" ,
+                                     "A10BD16" ,
+                                     "A10BD17" ,
+                                     "A10BD18" ,
+                                     "A10BD20" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#myocardialInfarction
+:myocardialInfarction rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ,
+                               OpenPVSignal:Past_Diagnosis ;
+                      OpenPVSignal:has_ICD_code "I219" ;
+                      OpenPVSignal:has_MedDRA_code 10028596 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Myocardial infarction" ;
+                      rdfs:label "myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#myocarditis
+:myocarditis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I51.4" ;
+             OpenPVSignal:has_MedDRA_code 10028606 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Myocarditis" ;
+             rdfs:label "myocarditis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#oneDayIntervalBetweenAdministration
+:oneDayIntervalBetweenAdministration rdf:type owl:NamedIndividual ,
+                                              time:DurationDescription ;
+                                     time:nominalPosition "days" ;
+                                     time:numericPosition 1 ;
+                                     rdfs:label "one day interval between administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#phenprocoumon
+:phenprocoumon rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "B01AA04" ;
+               rdfs:label "phenprocoumon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :hyperuricemia_pathobiology ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025OfFAERSAnalysis ,
+                                                          :IC025ValueForFebuxostatAndCardiacFailure ,
+                                                          :ICOfFAERSAnalysis ,
+                                                          :ICValueForFebuxostatAndCardiacFailure ,
+                                                          :ReportsFromFinland ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromUnitedKingdom ,
+                                                          :ReportsFromUnitedStates ,
+                                                          :reportsForFebuxostatAndAcuteCoronarySyndrome ,
+                                                          :reportsForFebuxostatAndAcuteMyocardialInfarction ,
+                                                          :reportsForFebuxostatAndCardiacDisorders ,
+                                                          :reportsForFebuxostatAndMI ,
+                                                          :reportsInVigibaseForFebuxostatAndCardiacFailure ,
+                                                          :reportsIncludingCardiacFailureAggravated ,
+                                                          :reportsIncludingDecompensatedHeartFailureTerm ,
+                                                          :reportsIncludingDecompensationsCardiacTerm ,
+                                                          :reportsWithCardiomyopathy ,
+                                                          :reportsWithChf ,
+                                                          :reportsWithNonRelatedCausality ,
+                                                          :reportsWithPossibleCausality ,
+                                                          :reportsWithRecoveryAfterPositiveDechallenge ,
+                                                          :reportsWithRecoveryAsOutcome ,
+                                                          :reports_for_cardiac_failure_40_mg ,
+                                                          :reports_for_cardiac_failure_80_mg ,
+                                                          :reports_for_cardiac_failure_MI ,
+                                                          :reports_for_cardiac_failure_congestive_physician ,
+                                                          :reports_for_cardiac_failure_death ,
+                                                          :reports_for_febuxostat_and_atrial_and_ventricular_arrhythmia ,
+                                                          :reports_for_febuxostat_and_cardiac_failure_acute ,
+                                                          :reports_with_40_mg_dose ,
+                                                          :reports_with_age_info ,
+                                                          :reports_with_death_outcome ,
+                                                          :reports_with_dose_120_mg ,
+                                                          :reports_with_dose_80_mg ,
+                                                          :reports_with_hospitalisation ,
+                                                          :reports_with_myocarditis ,
+                                                          :reports_with_negative_dechallenge ,
+                                                          :reports_with_no_recovery_outcome ,
+                                                          :reports_with_unknown_outcome ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+          OpenPVSignal:refers_to_drug :febuxostat ;
+          OpenPVSignal:refers_to_primary_suspect_drug :febuxostat ;
+          mp:supportedByData :FAERSAnalysis ,
+                             :RCTs ,
+                             :febuxostat_and_ischaemic_cardiovascular_disease ,
+                             :labelling_for_febuxostat ,
+                             <http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ContraindicationOfFebuxostatForCAD/CHFPatients> ;
+          OpenPVSignal:initially_identified_on "1/11/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#rangeOfTimeToOnset
+:rangeOfTimeToOnset rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "Time to onset ranged from the same day the drug was started to half a year with a median of 19 days" ;
+                    rdfs:label "range of time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#renalFailure
+:renalFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "N189" ;
+              OpenPVSignal:has_MedDRA_code 10038435 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal failure" ;
+              rdfs:label "renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsForFebuxostatAndAcuteCoronarySyndrome
+:reportsForFebuxostatAndAcuteCoronarySyndrome rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :reportsForFebuxostatAndCardiacDisorders ;
+                                              OpenPVSignal:refers_to_adverse_effect :acuteCoronarySyndrome ;
+                                              OpenPVSignal:refers_to_drug :febuxostat ;
+                                              OpenPVSignal:has_count 1 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "reports for febuxostat and acute coronary syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsForFebuxostatAndAcuteMyocardialInfarction
+:reportsForFebuxostatAndAcuteMyocardialInfarction rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:is_subgroup_of :reportsForFebuxostatAndCardiacDisorders ;
+                                                  OpenPVSignal:refers_to_adverse_effect :acuteMyocardialInfarction ;
+                                                  OpenPVSignal:refers_to_drug :febuxostat ;
+                                                  OpenPVSignal:has_count 12 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports for febuxostat and acute myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsForFebuxostatAndCardiacDisorders
+:reportsForFebuxostatAndCardiacDisorders rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:refers_to_adverse_effect :cardiac_disorders ;
+                                         OpenPVSignal:refers_to_drug :febuxostat ;
+                                         OpenPVSignal:has_count 95 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports for febuxostat and cardiac disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsForFebuxostatAndMI
+:reportsForFebuxostatAndMI rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :reportsForFebuxostatAndCardiacDisorders ;
+                           OpenPVSignal:refers_to_adverse_effect :myocardialInfarction ;
+                           OpenPVSignal:refers_to_drug :febuxostat ;
+                           OpenPVSignal:has_count 19 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports for febuxostat and MI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsInVigibaseForFebuxostatAndCardiacFailure
+:reportsInVigibaseForFebuxostatAndCardiacFailure rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:refers_to_adverse_effect :cardiacFailure ;
+                                                 OpenPVSignal:refers_to_drug :febuxostat ;
+                                                 OpenPVSignal:has_count 14 ;
+                                                 OpenPVSignal:has_count_of_men 9 ;
+                                                 OpenPVSignal:has_count_of_women 4 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "overall reports in vigibase for febuxostat and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsIncludingCardiacFailureAggravated
+:reportsIncludingCardiacFailureAggravated rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                                          OpenPVSignal:refers_to_adverse_effect :cardiacFailureAggravated ;
+                                          OpenPVSignal:has_count 3 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "reports including cardiac failure aggravated " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsIncludingDecompensatedHeartFailureTerm
+:reportsIncludingDecompensatedHeartFailureTerm rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                                               OpenPVSignal:refers_to_adverse_effect :decompensatedHeartFailure ;
+                                               OpenPVSignal:has_count 1 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "reports including decompensated heart failure term" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsIncludingDecompensationsCardiacTerm
+:reportsIncludingDecompensationsCardiacTerm rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                                            OpenPVSignal:refers_to_adverse_effect :decompensationCardiac ;
+                                            OpenPVSignal:has_count 3 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports including decompensations cardiac term" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithCardiomyopathy
+:reportsWithCardiomyopathy rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:refers_to_adverse_effect :cardiomyopathy ;
+                           OpenPVSignal:refers_to_drug :febuxostat ;
+                           OpenPVSignal:has_count 4 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithChf
+:reportsWithChf rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:refers_to_adverse_effect :cardiacFailureCongestive ;
+                OpenPVSignal:refers_to_drug :febuxostat ;
+                OpenPVSignal:has_count 8 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "reports for cardiac failure congestive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithNonRelatedCausality
+:reportsWithNonRelatedCausality rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                                OpenPVSignal:has_count 3 ;
+                                OpenPVSignal:has_evaluation "Unrelated" ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with unlikely causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithPossibleCausality
+:reportsWithPossibleCausality rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                              OpenPVSignal:has_count 6 ;
+                              OpenPVSignal:has_evaluation "Possible" ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports with possible causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithRecoveryAfterPositiveDechallenge
+:reportsWithRecoveryAfterPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :reportsWithRecoveryAsOutcome ;
+                                             OpenPVSignal:has_count 3 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                             OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                             rdfs:label "reports with recovery after positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reportsWithRecoveryAsOutcome
+:reportsWithRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                              OpenPVSignal:has_count 4 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                              rdfs:label "reports with recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_cardiac_failure_40_mg
+:reports_for_cardiac_failure_40_mg rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reportsWithChf ;
+                                   OpenPVSignal:refers_to_dosage :dosage_40_mg ;
+                                   OpenPVSignal:has_count 2 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports for cardiac failure congestive 40 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_cardiac_failure_80_mg
+:reports_for_cardiac_failure_80_mg rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reportsWithChf ;
+                                   OpenPVSignal:refers_to_dosage :dosage_80_mg ;
+                                   OpenPVSignal:has_count 2 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports for cardiac failure congestive 80 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_cardiac_failure_MI
+:reports_for_cardiac_failure_MI rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsWithChf ;
+                                OpenPVSignal:refers_to_adverse_effect :myocardialInfarction ;
+                                OpenPVSignal:has_count 2 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports for cardiac failure congestive MI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_cardiac_failure_congestive_physician
+:reports_for_cardiac_failure_congestive_physician rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:is_subgroup_of :reportsWithChf ;
+                                                  OpenPVSignal:has_count 6 ;
+                                                  OpenPVSignal:has_reporter_type "physician" ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports for cardiac failure congestive physician" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_cardiac_failure_death
+:reports_for_cardiac_failure_death rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reportsWithChf ;
+                                   OpenPVSignal:has_count 2 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                   rdfs:label "reports for cardiac failure congestive death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_febuxostat_and_atrial_and_ventricular_arrhythmia
+:reports_for_febuxostat_and_atrial_and_ventricular_arrhythmia rdf:type owl:NamedIndividual ,
+                                                                       OpenPVSignal:Reports_group ;
+                                                              OpenPVSignal:is_subgroup_of :reportsForFebuxostatAndCardiacDisorders ;
+                                                              OpenPVSignal:refers_to_adverse_effect :atrialArrhythmia ,
+                                                                                                    :ventricularArrhythmia ;
+                                                              OpenPVSignal:refers_to_drug :febuxostat ;
+                                                              OpenPVSignal:has_count 20 ;
+                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                              rdfs:label "reports for febuxostat and atrial and ventricular arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_for_febuxostat_and_cardiac_failure_acute
+:reports_for_febuxostat_and_cardiac_failure_acute rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:refers_to_adverse_effect :cardiac_failure_acute ;
+                                                  OpenPVSignal:refers_to_drug :febuxostat ;
+                                                  OpenPVSignal:has_count 2 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports for febuxostat and cardiac failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_40_mg_dose
+:reports_with_40_mg_dose rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                         OpenPVSignal:refers_to_dosage :dosage_40_mg ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with dose 40 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_age_info
+:reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                       OpenPVSignal:has_count 11 ;
+                       OpenPVSignal:has_max_age 83 ;
+                       OpenPVSignal:has_median_age 72 ;
+                       OpenPVSignal:has_min_age 52 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_death_outcome
+:reports_with_death_outcome rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                            OpenPVSignal:has_count 3 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            OpenPVSignal:refers_to_outcome_after_action "death" ;
+                            rdfs:label "reports with death outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_dose_120_mg
+:reports_with_dose_120_mg rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                          OpenPVSignal:refers_to_dosage :dosage_120_mg ;
+                          OpenPVSignal:has_count 2 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports with dose 120 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_dose_80_mg
+:reports_with_dose_80_mg rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                         OpenPVSignal:refers_to_dosage :dosage_80_mg ;
+                         OpenPVSignal:has_count 8 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with dose 80 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_hospitalisation
+:reports_with_hospitalisation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reports_with_no_recovery_outcome ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "hospitalization for treatment" ;
+                              rdfs:label "reports with hospitalisation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_myocarditis
+:reports_with_myocarditis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :myocarditis ;
+                          OpenPVSignal:refers_to_drug :febuxostat ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports with myocarditis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_negative_dechallenge
+:reports_with_negative_dechallenge rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reports_with_no_recovery_outcome ;
+                                   OpenPVSignal:has_count 1 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                   rdfs:label "reports with negative dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_no_recovery_outcome
+:reports_with_no_recovery_outcome rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                  rdfs:label "reports with no recovery outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#reports_with_unknown_outcome
+:reports_with_unknown_outcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsInVigibaseForFebuxostatAndCardiacFailure ;
+                              OpenPVSignal:has_count 3 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                              rdfs:label "reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#saxagliptin
+:saxagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BD10" ,
+                                       "A10BD21" ,
+                                       "A10BH03" ;
+             rdfs:label "saxagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#spironolactone
+:spironolactone rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "C03DA01" ;
+                rdfs:label "spironolactone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#stroke
+:stroke rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "I63.9" ;
+        OpenPVSignal:has_MedDRA_code 10042244 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Stroke" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#thrombosis
+:thrombosis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10043607 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Thrombosis" ;
+            rdfs:label "thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#torasemide
+:torasemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA04" ;
+            rdfs:label "torasemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#usageOfFebuxostat
+:usageOfFebuxostat rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug_Usage ;
+                   OpenPVSignal:concerns_indication_for_use :gout ,
+                                                            :hyperuricemia ;
+                   OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                   OpenPVSignal:refers_to_drug :febuxostat ;
+                   rdfs:label "usage of febuxostat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ventricularArrhythmia
+:ventricularArrhythmia rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "I499" ;
+                       OpenPVSignal:has_MedDRA_code 10047281 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Ventricular arrhythmia" ;
+                       rdfs:label "ventricular arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ContraindicationOfFebuxostatForCAD/CHFPatients
+<http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#ContraindicationOfFebuxostatForCAD/CHFPatients> rdf:type owl:NamedIndividual ,
+                                                                                                                                 obo:OAE_0001197 ,
+                                                                                                                                 OpenPVSignal:Warning_Information ;
+                                                                                                                        OpenPVSignal:refers_to_adverse_effect :congestiveHeartFailure ,
+                                                                                                                                                              :coronaryArteryDisease ;
+                                                                                                                        OpenPVSignal:refers_to_drug :febuxostat ;
+                                                                                                                        mp:references :Ref.2 ;
+                                                                                                                        mp:citation "The EMA has advised to avoid the drug in patients diagnosed with coronary artery disease (CAD) and congestive heart failure (CHF)." ;
+                                                                                                                        rdfs:label "Contraindication of febuxostat for CAD/CHF patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Response_from_Teijin,_Takeda_and_Menarini
+<http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#Response_from_Teijin,_Takeda_and_Menarini> rdf:type owl:NamedIndividual ,
+                                                                                                                            OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                                                                                                   OpenPVSignal:refers_to_pharmacovigilance_signal_report :Febuxostat_and_cardiac_failure ;
+                                                                                                                   OpenPVSignal:has_content """The MAH of febuxostat (Teijin, Takeda, Menarini) agree with WHO-UMC that heart failure (HF) is a very common morbidity in patients with gout, as about 26% had history of infarction/HF [1]. Patients with gout are also predisposed to HF because:
+
+i.	Of the presence of other cardiovascular (CV) comorbidities/HF risk factors in about 74% of patients [1].
+
+ii.	Gout/hyperuricemia is recognised as an independent risk factor for HF. Accordingly, an analysis on 4989 adults free of HF at baseline, indicated that participants with gout had 2 to 3 fold higher incidence of HF as compared with those without gout. Mortality was also significantly higher in the subgroup of patients with gout and HF [2].
+
+Likewise, data from 734 adults (14-84 years) without prior chronic HF, gout, coronary heart or cerebrovascular disease not taking antihypertensive, antidiabetic, lipid-lowering or serum uric acid (sUA)-lowering drugs, indicated that there is a strong relation between estima- ted cardiac output and sUA (B=-0.219, p<0.001) and between stroke volume and sUA (B=-3.684, p<0.001) [3].
+
+These results were confirmed in a recent meta- analysis [4] showing that hyperuricemia was associated with an increased risk of incident HF (hazard ratio [HR] 1.65, 95% CI 1.41-1.94), risk
+of all-cause mortality (HR 2.15, 95% CI 1.64-
+2.83), CV mortality (HR 1.45, 95% CI 1.18-
+1.78), and the composite of death or cardiac events (HR 1.39, 95% CI 1.18-1.63) in HF
+patients. For every 1 mg/dL increase in sUA, the odds of deve- lopment of HF increased by 19% (HR 1.19, 95% CI 1.17-1.21), and the risk of
+all-cause mortality and the composite endpoint in HF patients increased by 4% (HR 1.04, 95%
+CI 1.02-1.06) and 28% (HR 1.28, 95% CI 0.97-
+1.70	), respectively.
+
+
+Therefore HF is a common event in patients with gout, not only because patients with a positive history are at higher risk to relapse, but patients with gout without history of HF are also at higher risk to develop HF. Interestingly some studies [5] indicated that, among patients hospitalised because of acute HF, the survival of allopurinol-treated patients was lower than results have been submitted to the Food and Drug Administration and EMA, without concerns being raised.
+
+Despite the warning in the EU-labeling not recommending treatment in patients with ischaemic heart diseases or HF, in some of the postmarketing cases the concerned patients had positive history for these conditions; in a few cases the reporter specified that febuxostat had been prescribed regardless the warning because there were no therapeutic alternatives for these patients. Nevertheless all scientific material continues to point out that febuxostat should not be given to these patients.
+Importantly, CV events including HF-related events are part of the continuous safety monitoring that the MAHs conduct for febuxostat. Currently the estimated incidence of postmarketing APTC events is lower than that reported in the literature for allopurinol-treated or untreated patients [8]. Therefore the statement that “febuxostat might cause more ischaemic CV and HF events than allopurinol because of a minor scavenging effect on oxygen radicals” could be argued not only because there is no evidence of a greater rate of CV and HF events under febuxostat, but also because there is evidence that antioxidant properties of febuxostat are actually greater than those of allopurinol [9], even when the sUA lowering activities are comparable [10].
+
+In conclusion, although the most important indications for the causality between CV events in general (including HF-related events) and febuxostat treatment are expected to be collected at the end of the ongoing CV safety studies, this issue is currently under close monitoring and actions will be undertaken by the MAHs and the independent committees if the benefit- risk profile of febuxostat changes.
+ 
+untreated subjects because patients at higher risk (with a more severe hyperuricemia) were more likely treated with allopurinol than patients with milder hyperuricemia (and there is evidence that febuxostat-treated patients present more comorbidities than those treated with allopurinol, see [6, 7] ). Accordingly in 10 of 12 HF cases, where the medical history was reported, patients had CV comorbidities.
+Concomitant medications, such as nonsteroidal anti-inflammatory drugs can contribute to increase the CV risk in these patients.
+
+A specific warning for patients with medical history of heart ischaemia or congestive heart failure (CHF) is present in the European Union. This was inserted in the EU-labeling before the availability of the final results of CONFIRMS and long-term extension (LTE) studies, when a numeric imbalance of primary Antiplatelet Trialists Collaboration (APTC) events was observed between febuxostat and allopurinol. After the final results of these studies the number of APTC events was more balanced, being the incidence rate (IR) in phase 3 0.74/100 patient years (PY) (95% CI 0.36- 1.37) and 0.60/100 PY (95% CI 0.16-1.53),
+andin LTE studies 1.01/100 PY (95% CI 0.67- 1.48) and 0.58/100 PY (95% CI 0.02-3.24), for
+febuxostat and allopurinol, respectively. Importantly, amongst primary APTC events  just 2 events of CHF occurred in patients treated with febuxostat in phase 3 (1 at 80  mg) and LTE studies (1 at 80 mg), respectively. Amongst nonfatal events of CHF collected in phase 3 studies, 7 occurred in the febuxostat and 3 in the allopurinol group, yield- ing similar IRs (0.52 and 0.45 per 100 PY, respectively). Likewise, no difference was detected in nonfatal events of CHF collected in LTE studies as 7 and 1 event were reported, yielding IRs of 0.40 and 0.58 events per 100  PY in the febuxostat and allopurinol groups, respec- tively. Nevertheless, the above- mentioned warning was maintained and a CV safety comparative trial between febuxostat and allopurinol (FAST study) was mandated by the European Medicines Agency (EMA).
+
+Two CV safety trials are ongoing in the United States and Europe. Both trials include hospitalisation for HF as secondary endpoints; therefore, comparative meaningful information on this event will also be collected.
+Importantly, independent committees periodically evaluate the interim results of these studies and decide whether the studies can be continued without an excess risk for participating patients. These committees have not risen concerns to date. Likewise, interim results have been submitted to the Food and Drug Administration and EMA, without concerns being raised. Despite the warning in the EU-labeling not recommending treatment in patients with ischaemic heart diseases or HF, in some of the postmarketing cases the concerned patients had positive history for these conditions; in a few cases the reporter specified that febuxostat had been prescribed regardless the warning because there were no therapeutic alternatives for these patients. Nevertheless all scientific material continues to point out that febuxostat should not be given to these patients. Importantly, CV events including HF-related events are part of the continuous safety monitoring that the MAHs conduct for febuxostat. Currently the estimated incidence of postmarketing APTC events is lower than that reported in the literature for allopurinol-treated or untreated patients [8]. Therefore the statement that “febuxostat might cause more ischaemic CV and HF events than allopurinol because of a minor scavenging effect on oxygen radicals” could be argued not only because there is no evidence of a greater rate of CV and HF events under febuxostat, but also because there is evidence that antioxidant properties of febuxostat are actually greater than those of allopurinol [9], even when the sUA lowering activities are comparable [10]. In conclusion, although the most important indications for the causality between CV events in general (including HF-related events) and febuxostat treatment are expected to be collected at the end of the ongoing CV safety studies, this issue is currently under close monitoring and actions will be undertaken by the MAHs and the independent committees if the benefit- risk profile of febuxostat changes. References 1. Singh JA, Sarkin A, Shieh M, Khanna D, Terkeltaub R, Lee SJ, et al. Health care utilization in patients with gout. Semin Arthritis Rheum 2011; 40(6):501-11. 2. Krishnan E. Gout and the risk for incident heart failure and systolic dysfunction. BMJ Open 2012; 2(1):e000282. 3. Cicero AF, Rosticci M, Parini A, Baronio C, D’Addato S, Borghi C. Serum uric acid is inversely proportional to estimated stroke volume and cardiac output in a large sample of pharmacologically untreated subjects: data from the Brisighella Heart Study. Intern Emerg Med 2013. 4. Huang H, Huang B, Li Y, Huang Y, Li J, Yao H, et al. Uric acid and risk of heart failure: a systematic review and meta-analysis. Eur J Heart Fail 2014; 16(1):15-24. 5. Malek F, Ostadal P, Parenica J, Jarkovsky J, Vitovec J, Widimsky P, et al. Uric acid, allopurinol therapy, and mortality in patients with acute heart failure--results of the Acute HEart FAilure Database registry. J Crit Care 2012; 27(6):737 e11-24. 6. Pandya BJ, Pinsky BW, Rey GG, Singh JA. Serum urate- lowering effectiveness of febuxostat compared with allopurinol and switching to febuxostat from allopuri- nol in the real-world setting. Arthritis & Rheumatism 2011; 63(10, Suppl. S):S350. 7. Singh JA, Pandya BJ, Rey GG, Pinsky BW. Comparative effectiveness of allopurinol and febuxostat in control- ling serum uric acid in a large US commercially insured population. Arthritis Rheum 2011; 63(10 Suppl):S626. Abstract 1604. 8. Wei L, Mackenzie IS, Chen Y, Struthers AD, MacDonald TM. Impact of allopurinol use on urate concentration and cardiovascular outcome. Br J Clin Pharmacol 2011; 71(4):600-7. 9. Sezai A, Soma M, Nakata K, Hata M, Yoshitake I, Wakui S, et al. Comparison of febuxostat and allopurinol for hyperuricemia in cardiac surgery patients (NU-FLASH Trial). Circ J 2013; 77(8):2043-9. 10. Tausche AK, Christoph M, Forkmann M, Richter U, Kopprasch S, Bielitz C, et al. As compared to allopuri- nol, urate-lowering therapy with febuxostat has superior effects on oxidative stress and pulse wave velocity in patients with severe chronic tophaceous gout. Rheumatol Int 2014; 34(1):101-9.""" ;
+                                                                                                                   rdfs:label "Response from Teijin, Takeda and Menarini" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#amlodipine/valsartan
+<http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#amlodipine/valsartan> rdf:type owl:NamedIndividual ,
+                                                                                                       OpenPVSignal:Drug ;
+                                                                                              OpenPVSignal:has_ATC_code "C09DB01" ;
+                                                                                              rdfs:label "amlodipine/valsartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#codeinephosphate/paracetamolBisoprolol
+<http://purl.org/OpenPVSignal/Signals/2014_5_febuxostat_cardiac_failure#codeinephosphate/paracetamolBisoprolol> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Drug ;
+                                                                                                                OpenPVSignal:has_ATC_code "N02AJ06" ;
+                                                                                                                rdfs:label "codeine phosphate / paracetamol bisoprolol" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

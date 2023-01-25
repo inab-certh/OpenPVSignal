@@ -1,0 +1,2532 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl> rdf:type owl:Ontology ;
+                                                                                      owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                      rdfs:comment "OpenPVSignal ontology describes a model able to present pharmacovigilance signal information, originally contained in free-text reports."^^rdfs:Literal ;
+                                                                                      rdfs:isDefinedBy "https://www.who.int/medicines/publications/PharmaNewsletter3_17/en/"^^xsd:anyURI ;
+                                                                                      rdfs:label "Pregabalin and visual colour distortions"^^rdfs:Literal ;
+                                                                                      owl:versionInfo "draft-v0.95-20210312"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2006/time#nominalPosition
+time:nominalPosition rdf:type owl:DatatypeProperty .
+
+
+###  http://www.w3.org/2006/time#numericPosition
+time:numericPosition rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2006/time#DurationDescription
+time:DurationDescription rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Chromatopsia_pathophysiology
+:Chromatopsia_pathophysiology rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Free_text_reporting_element ;
+                              OpenPVSignal:is_part_of :introduction ;
+                              OpenPVSignal:refers_to_adverse_effect :chromatopsia ;
+                              mp:references :Ref.6 ;
+                              OpenPVSignal:has_content "Chromatopsia is a visual defect in which coloured objects appear unnaturally coloured, and colourless objects appear tinged with colour. Chromatopsia may be caused by drugs, disturbance of the optic centres, cataract extraction or dazzling light.6" ;
+                              rdfs:label "Chromatopsia pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Colour_blindness
+:Colour_blindness rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:is_part_of :introduction ;
+                  OpenPVSignal:refers_to_adverse_effect :colourBlindness ;
+                  mp:references :Ref.4 ,
+                                :Ref.5 ;
+                  OpenPVSignal:has_content "Poor or deficient colour vision, often referred to as colour blindness, is an inability to see the difference between certain colours, while still seeing colour. Most people with this condition cannot distinguish between certain shades of red and green. Less commonly, people with poor colour vision cannot distinguish between shades of blue and yellow. Poor colour vision can be inherited (most common) or be acquired. Poor colour vision can be caused by diseases such as sickle cell anaemia, diabetes, macular degeneration, Alzheimer’s disease, glaucoma, Parkinson’s disease, chronic alcoholism and leukaemia. Certain medications such as antibiotics, barbiturates, anti-tuberculosis drugs, high blood pressure medications and several medications to treat nervous disorders may also cause colour blindness. For people without poor or deficient colour vision, the ability to see colours deteriorates slowly with age.4,5" ;
+                  rdfs:label "Colour blindness pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Discussion_and_Conclusion
+:Discussion_and_Conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           OpenPVSignal:has_content "This signal presents a case series of 25 reports concerning pregabalin and colour vision distortions. When information about the latency period is present, it seems that the symptoms develop quite quickly within hours to days after the start of the drug. In seven cases there is a positive dechallenge, indicating that this adverse drug reaction is reversible when the drug is withdrawn. Colour vision distortions can also have other causes, such as sickle cell anaemia, diabetes, macular degeneration, Alzheimer’s disease, glaucoma, Parkinson’s disease, chronic alcoholism and leukaemia. Pregabalin is indicated for use in diabetic pheripheral neuropathy, and in such cases it is possible that the diabetes could be the cause of the colour vision distortion. However, in the case series only one case explicitly states that the indication was diabetic peripheral neuropathy, and in this case the patient recovered after withdrawal of the drug, hence eliminating confounding by indication. In case 5, it is more likely that the patient’s tumour was the cause of the colour vision distortion than the drug. In the literature, colour vision distortions have been described with the use of VGB and tiagabine. It is believed that this effect is mediated by the GABAergic effects of these drugs on the retina. Pregabalin, which is a GABA analogue, could probably cause colour vision distortions through the same mechanisms. With this case series and a mechanism which can explain how pregabalin can cause colour vision distortion, we believe that this association is a signal and that the term colour vision should be included in the label." ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations :OneDayIntervalBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 75 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "75 mg" ;
+       rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose10
+:Dose10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 150 ,
+                               200 ;
+        OpenPVSignal:refers_to_dose_value "150 mg" ,
+                                          "200 mg" ;
+        OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+        rdfs:label "Dose 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose11
+:Dose11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 75 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "75 mg" ;
+        rdfs:label "Dose 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose12
+:Dose12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 50 ;
+        OpenPVSignal:refers_to_dose_value "50 mg" ;
+        rdfs:label "Dose 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose13
+:Dose13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 100 ;
+        OpenPVSignal:refers_to_dose_value "100 mg" ;
+        OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+        rdfs:label "Dose 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose15
+:Dose15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 75 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "75 mg" ;
+        rdfs:label "Dose 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose16
+:Dose16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 75 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "75 mg" ;
+        rdfs:label "Dose 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose18
+:Dose18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 50 ;
+        OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+        OpenPVSignal:refers_to_dose_value "50 mg" ;
+        rdfs:label "Dose 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 75 ;
+       OpenPVSignal:refers_to_dose_value "75 mg" ;
+       rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose5
+:Dose5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 50 ;
+       OpenPVSignal:refers_to_dose_value "50 mg" ;
+       rdfs:label "Dose 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose6
+:Dose6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 50 ;
+       OpenPVSignal:refers_to_dose_value "50 mg" ;
+       rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose7
+:Dose7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations :OneDayIntervalBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 50 ;
+       OpenPVSignal:refers_to_dose_value "50 mg" ;
+       rdfs:label "Dose 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dose9
+:Dose9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 75 ;
+       OpenPVSignal:refers_to_dose_value "75 mg" ;
+       rdfs:label "Dose 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#DoseOfCBZ
+:DoseOfCBZ rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 400 ;
+           OpenPVSignal:refers_to_dose_value "400 mg" ;
+           rdfs:label "Dose of CBZ" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#DoseOfVGB
+:DoseOfVGB rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Dosage ;
+           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+           OpenPVSignal:has_value 2000 ;
+           OpenPVSignal:refers_to_dose_value "2000 mg" ;
+           rdfs:label "Dose of VGB" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Dr_Linka_Harmark
+:Dr_Linka_Harmark rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Author ;
+                  OpenPVSignal:has_affiliation "The Netherlands Pharmacovigilance Centre Lareb" ;
+                  OpenPVSignal:has_first_name "Linda" ;
+                  OpenPVSignal:has_last_name "Harmark" ;
+                  rdfs:label "Dr Linka Harmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#InformationForReport1
+:InformationForReport1 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Case_Report_Information ;
+                       OpenPVSignal:has_content "In case 1, the patient had previously used pregabalin at high doses to treat her trigeminal neuralgia and experienced dizziness, somnolence and intense lethargy which were resolved after discontinuation of pregabalin. No allergy was experienced at that time. The symptoms started with a burning face, and the morning after she had a tendency to vomit, facial rash and swelling of the eyes. Paracetamol/tramadol was withdrawn, since this was the drug she had not previously used. The next day the rash had expanded and she experienced pruritus, she had flashes in her eyes, and intense lights and she could not distinguish items (also reporting that everything looked square). In addition, at an unspecified date the patient could not recognize colours.  " ;
+                       rdfs:label "Information for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#InformationForReport7
+:InformationForReport7 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Case_Report_Information ;
+                       OpenPVSignal:has_content "In case 7, one hour after the first dose the patient developed tunnel vision, impaired colour vision, blurred vision and difficulties in reading. The patient had no medical history of retinal degradation, ophthalmological or neurological diseases and no history of eye diseases " ;
+                       rdfs:label "Information for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#InformationForReport8
+:InformationForReport8 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Case_Report_Information ;
+                       OpenPVSignal:has_content "In case 8, the patient noticed a gradually worsening visual disorder with blurred vision over a few days, peripheral vision impairment, and loss of perception of colour after the dose was increased from 25 mg twice daily (treatment duration unknown) to 75 mg twice daily. Pregabalin was discontinued and the patient recovered. The patient’s medical history included diabetes mellitus, hypertension, peripheral arterial occlusive disease, strabismus and alcohol use.  " ;
+                       rdfs:label "Information for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.1 ,
+                                        :Ref.10 ,
+                                        :Ref.11 ,
+                                        :Ref.12 ,
+                                        :Ref.2 ,
+                                        :Ref.7 ,
+                                        :Ref.8 ,
+                                        :Ref.9 ;
+                          OpenPVSignal:has_content "Colour vision distortions such as colour blindness and chromatopsia are not labelled in the EU summary of product characteristics or Drugs.com.1,2 These ADRs are also not mentioned in the literature7,8 and a PubMed search using the terms “Colour Vision Defects”[Mesh]) AND “Pregabalin”[Mesh] returned no hits. However, colour vision disturbances have been documented with anti-epileptic drugs; primarily, but not exclusively, in anti-epileptic drugs that enhance GABA transmission. In a study, the effects of a single oral dose of vigabatrin (VGB) and carbamazepine (CBZ) on visual function in normal healthy volunteers was investigated. Volunteers were randomly assigned to three groups according to a single-blind, placebocontrolled design. All subjects underwent colour visual evoked potential tests and colour perimetry at baseline and after receiving placebo, VGB (2000 mg) or CBZ (400 mg). Whereas CBZ induced a mild overall impairment of the chromatic and achromatic systems, VGB induced a selective blue impairment. The differential changes the two antiepileptic drugs induced in visual tests presumably depended on their different mechanisms of action. The selective blue impairment in colour visual tests in VGBtreated healthy subjects is consistent with gamma-aminobutyric acid GABA-ergic inhibition also at retinal level.9 A further study investigated colour vision in patients treated with VGB or CBZ monotherapy. There were 32 epilepsy patients treated with VGB monotherapy, 18 patients treated with CBZ monotherapy, and 47 age- matched healthy controls examined. Abnormal colour perception was found in 32% of the epilepsy patients treated with VGB monotherapy and 28% of the epilepsy patients treated with CBZ monotherapy.10 In another study, the effects of the GABA-ergic antiepileptic drug (AED), tiagabine, on colour vision and contrast sensitivity was investigated. Twenty newly-diagnosed patients with partial epilepsy (aged 19-72 years), receiving tiagabine as their initial monotherapy for 5-41 months were examined. Three patients were excluded from the colour vision evaluation for congenital red-green colour vision defects. Seven out of 17 patients (41%) had acquired colour vision deficit. This study suggests that AED therapy with tiagabine, as with other established and newer AEDs may interfere with colour perception.11 In the studies described above, it seems that the GABA-ergic properties of VGB and tiagabine contribute to the colour vision deficiency. VGB is an irreversible inhibitor of GABA-transaminase (GABA-T), the enzyme responsible for the metabolism of the inhibitory neurotransmitter GABA. This inhibition causes increased levels of GABA in the central nervous system. Tiagabine is thought to inhibit GABA uptake into presynaptic neurons, thereby providing more GABA available for binding to receptors on postsynaptic cells. This enhances the activity of GABA, the major inhibitory neurotransmitter in the central nervous system. It is possible that the colour vision distortion seen in patients using pregabalin can be explained by the same mechanism. Pregabalin is a GABA analogue and thereby enhancing GABA activity just as VGB and tiagabine.12" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Mechanism_of_Pregabalin
+:Mechanism_of_Pregabalin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         OpenPVSignal:is_part_of :introduction ;
+                         mp:references :Ref.3 ;
+                         OpenPVSignal:has_content "Pregabalin is a γ-aminobutyric acid (GABA) analogue and exerts its effects by binding to the α2 – δ subunit of voltage gated calcium channels, leading to a decreased synaptic release of neurotransmitters" ;
+                         rdfs:label "Mechanism of Pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Neuropathic_pain
+:Neuropathic_pain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_MedDRA_code 10054095 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Neuropathic pain" ;
+                  rdfs:label "neuropathic pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#OneDayIntervalBetweenAdministrations
+:OneDayIntervalBetweenAdministrations rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      time:nominalPosition "days" ;
+                                      time:numericPosition 1 ;
+                                      rdfs:label "One day interval between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#OverallReportsInVigibaseForPregabalinAndChromatopsia
+:OverallReportsInVigibaseForPregabalinAndChromatopsia rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Reports_group ;
+                                                      OpenPVSignal:refers_to_adverse_effect :chromatopsia ;
+                                                      OpenPVSignal:refers_to_drug :pregabalin ;
+                                                      OpenPVSignal:has_count 13 ;
+                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                      rdfs:label "Overall reports in Vigibase for pregabalin and chromatopsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#OverallReportsInVigibaseForPregabalinAndColourBlindness
+:OverallReportsInVigibaseForPregabalinAndColourBlindness rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:refers_to_adverse_effect :colourBlindness ;
+                                                         OpenPVSignal:refers_to_drug :pregabalin ;
+                                                         OpenPVSignal:has_count 8 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "Overall reports in Vigibase for pregabalin and colour blindness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age "18 or older" ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 31 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 78 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 65 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 75 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 44 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient19
+:Patient19 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 59 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 59 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient20
+:Patient20 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient21
+:Patient21 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 51 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 37 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 63 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 59 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Pregabalin_and_visual_colour_distortions
+:Pregabalin_and_visual_colour_distortions rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                          OpenPVSignal:refers_to_author :Dr_Linka_Harmark ;
+                                          OpenPVSignal:refers_to_signal :pvSignal ;
+                                          mp:publishedBy :the_Netherlands_Pharmacovigilance_Centre_Lareb ,
+                                                         :uppsala_monitoring_centre ;
+                                          OpenPVSignal:has_creation_date "01/05/2017"^^xsd:date ;
+                                          OpenPVSignal:has_overall_conclusion "causal association" ;
+                                          rdfs:label "Pregabalin and visual colour distortions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics
+:Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                        OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                                                        mp:references :Ref.12 ;
+                                                        OpenPVSignal:has_content "it seems that the GABA-ergic properties of VGB and tiagabine contribute to the colour vision deficiency. VGB is an irreversible inhibitor of GABA-transaminase (GABA-T), the enzyme responsible for the metabolism of the inhibitory neurotransmitter GABA. This inhibition causes increased levels of GABA in the central nervous system. Tiagabine is thought to inhibit GABA uptake into presynaptic neurons, thereby providing more GABA available for binding to receptors on postsynaptic cells. This enhances the activity of GABA, the major inhibitory neurotransmitter in the central nervous system. It is possible that the colour vision distortion seen in patients using pregabalin can be explained by the same mechanism. Pregabalin is a GABA analogue and thereby enhancing GABA activity just as VGB and tiagabine." ;
+                                                        rdfs:label "Proposed mechanism for AE mechanism from GABA mimetics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency: Summary of Product Characteristics for pregabalin (Lyrica®). Available from: www.emea.europa.eu. Accessed: 6 December 2016 " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Nousiainen I, Kalviainen R, Mantyjarvi M. Color vision in epilepsy patients treated with vigabatrin or carbamazepine monotherapy. Ophthalmology 2000 May;107(5):884-8. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sorri I, Kalviainen R, Mantyjarvi M. Color vision and contrast sensitivity in epilepsy patients treated with initial tiagabine monotherapy. Epilepsy Res. 2005 Dec;67(3):101-7. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Micromedex® Healthcare Series. Available from: www. micromedexsolutions.com. Accessed: 6 December 2016. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Approval history for pregabalin. Available from: https://www.drugs.com/mtm/pregabalin.html# drug-info-approval. Accessed 6 December 2016. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Taylor CP, Angelotti T, Fauman E. Pharmacology and mechanism of action of pregabalin: the calcium channel alpha2- delta (alpha2-delta) subunit as a target for antiepileptic drug discovery. Epilepsy Res. 2007 Feb;73(2):137-50. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mayo Clinic Poor Colour Vision. Available from: http://www.mayoclinic.org/diseasesconditions/poor-color-vision/symptomscauses/dxc-20263383. Accessed 6 December 2016. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Colour blind awareness. Available from: http://www.colourblindawareness.org. Accessed 6 December 2016 " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "NDI Foundation. Available from: http://www.ndif.org/ terms/4617-chromatopsia Accessed 6 December 2016. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Aronson JK, editor. Meyler’s Side Effects of Drugs. 15th ed. Elsevier; Amsterdam, the Netherlands; 2006. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Fraunfelder FT, Fraunfelder FW, Chambers WA, editors. Drug Induced Ocular Side Effects. 7th ed. Elsevier; 2015. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mecarelli O, Rinalduzzi S, Accornero N. Changes in color vision after a single dose of vigabatrin or carbamazepine in healthy volunteers. Clin Neuropharmacol. 2001 Jan;24(1):23-6. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Repirts_for_tiagabine_and_colour_vision_deficit
+:Repirts_for_tiagabine_and_colour_vision_deficit rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :ReportsForTiagabine ;
+                                                 OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                                                 OpenPVSignal:has_count 7 ;
+                                                 rdfs:label "Reports for tiagabine and colour vision deficit" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :neuralgia ;
+         OpenPVSignal:has_free_text_reporting_element :InformationForReport1 ;
+         OpenPVSignal:refers_to_adverse_effect :burningSensationInFace ,
+                                               :colourBlindness ,
+                                               :eyesSwollen ,
+                                               :flashingVision ,
+                                               :visionAbnormal ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_1 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :methylprednisolone ,
+                                                       <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/tramadol> ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :fibromyalgia ;
+          OpenPVSignal:refers_to_adverse_effect :activitiesOfDailyLivingImpaired ,
+                                                :faceInjury ,
+                                                :impairedDrivingAbility ,
+                                                :migraine ,
+                                                :ocularDiscomfort ,
+                                                :photophobia ,
+                                                :visionBlurred ,
+                                                :visualImpairment ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_10 ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :postHerpeticNeuralgia ;
+          OpenPVSignal:refers_to_adverse_effect :sleepy ,
+                                                :visionColourTinged ;
+          OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                  :atenolol ,
+                                                  :cetirizine ,
+                                                  :clopidogrel ,
+                                                  :isosorbide ,
+                                                  :lansoprazole ,
+                                                  :nicorandil ,
+                                                  :perindopril ,
+                                                  :simvastatin ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_11 ;
+          OpenPVSignal:time_to_onset :TimeToOnset11 ;
+          OpenPVSignal:has_reporter_type "pharmacist" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :neuralgia ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :dizziness ,
+                                                :fatigue ,
+                                                :somnolence ,
+                                                :visionBlurred ;
+          OpenPVSignal:refers_to_concomitant_drug :baclofen ,
+                                                  :celecoxib ,
+                                                  :tizanidine ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_12 ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :fibromyalgia ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :impairedDrivingAbility ,
+                                                :visionBlurred ,
+                                                :visualAcuityReduced ;
+          OpenPVSignal:refers_to_concomitant_drug :calcium ,
+                                                  :cyanocobalamin ,
+                                                  :hydrochlorothiazide ,
+                                                  :levothyroxine ,
+                                                  :morphine ,
+                                                  :sertraline ,
+                                                  :tocopherol ,
+                                                  :vitaminD ,
+                                                  :zolendronicAcid ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_13 ;
+          OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          OpenPVSignal:refers_to_partial_dechallenge_outcome "negative - condition still applied" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :visualAcuityReduced ,
+                                                :visualImpairment ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :painNos ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :eyePain ,
+                                                :visionAbnormal ;
+          OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                  :omeprazole ,
+                                                  :tamsulosin ,
+                                                  :telmisartan ,
+                                                  :torasemide ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_15 ;
+          OpenPVSignal:time_to_onset :TimeToOnset15 ;
+          OpenPVSignal:has_reporter_type "physician" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :activitiesOfDailyLivingImpaired ,
+                                                :chromatopsia ,
+                                                :visualAcuityReduced ,
+                                                :visualFieldDefect ,
+                                                :visualImpairment ;
+          OpenPVSignal:refers_to_concomitant_drug :calcium ,
+                                                  :ibandroninicAcid ,
+                                                  :levothyroxine ,
+                                                  :oxycodone ,
+                                                  :retinol ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#methylprogesteroneacetate/conjugatedEstrogens> ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/hydrocodone> ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_16 ;
+          OpenPVSignal:time_to_onset :TimeToOnset16 ;
+          OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :diabeticNeuropathy ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :photophobia ,
+                                                :tunnelVision ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:has_reporter_type "pharmacist" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :backInjury ;
+          OpenPVSignal:refers_to_adverse_effect :astenophia ,
+                                                :chromatopsia ,
+                                                :visionBlurred ;
+          OpenPVSignal:refers_to_concomitant_drug :diltiazem ,
+                                                  :hydrocodone ,
+                                                  :olmesartan ,
+                                                  :oxycodone ,
+                                                  :tiotropium ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fluticasone/salmeterol> ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_reported_drug_usage :Usage_18 ;
+          OpenPVSignal:time_to_onset :TimeToOnset18 ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report19
+:Report19 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :diabeticNephropathy ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ;
+          OpenPVSignal:refers_to_concomitant_drug :glimepiride ,
+                                                  :metformin ,
+                                                  :modafinil ;
+          OpenPVSignal:refers_to_patient :Patient19 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :fibromyalgia ;
+         OpenPVSignal:refers_to_adverse_effect :blindness ,
+                                               :cataract ,
+                                               :colourBlindness ,
+                                               :foreignBodyInEye ,
+                                               :impairedDrivingAbility ,
+                                               :visualAcuityReduced ,
+                                               :visualImpairment ;
+         OpenPVSignal:refers_to_concomitant_drug :morphine ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/oxycodon> ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_2 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report20
+:Report20 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :ill-definedDisorder ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ;
+          OpenPVSignal:refers_to_patient :Patient20 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:has_reporter_type "physician" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report21
+:Report21 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:concerns_indication_for_use :neckPain ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ;
+          OpenPVSignal:refers_to_concomitant_drug :carisoprodol ,
+                                                  :zolpidem ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/hydrocodone> ;
+          OpenPVSignal:refers_to_patient :Patient21 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :limbInjury ,
+                                                  :nerveInjury ;
+         OpenPVSignal:refers_to_adverse_effect :astigmatism ,
+                                               :colourBlindness ,
+                                               :eyeDisorder ,
+                                               :eyeIrritation ,
+                                               :transientBlindness ,
+                                               :visionBlurred ,
+                                               :visualImpairment ;
+         OpenPVSignal:refers_to_interacting_drug :amitriptyline ,
+                                                 :pregabalin ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :paracetamol ,
+                                                       :prednisone ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :fibromyalgia ;
+         OpenPVSignal:refers_to_adverse_effect :colourBlindness ,
+                                               :scotoma ,
+                                               :visionBlurred ;
+         OpenPVSignal:refers_to_concomitant_drug :alprazolam ,
+                                                 :folicAcid ,
+                                                 :hydrocodone ,
+                                                 :modafinil ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/hydrocodone> ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         OpenPVSignal:refers_to_partial_dechallenge_outcome "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :fibromyalgia ;
+         OpenPVSignal:refers_to_adverse_effect :colourBlindness ,
+                                               :diplopia ,
+                                               :impairedDrivingAbility ,
+                                               :opthalmologicalExaminationAbnormal ;
+         OpenPVSignal:refers_to_concomitant_drug :benzonatate ,
+                                                 :diazepam ,
+                                                 :duloxetine ,
+                                                 :methylphenidate ,
+                                                 :salbutamol ,
+                                                 :sodiumChloride ,
+                                                 :tramadol ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fluticasone/salmeterol> ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_5 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :varenicline ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :nervousness ,
+                                                  :pain ;
+         OpenPVSignal:refers_to_adverse_effect :colourBlindness ,
+                                               :eyePain ,
+                                               :intraocularPressureIncreased ,
+                                               :visualDisturbance ,
+                                               :visualFieldDefect ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_6 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :generalizedAnxietyDisorder ;
+         OpenPVSignal:has_free_text_reporting_element :InformationForReport7 ;
+         OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ,
+                                               :tunnelVision ,
+                                               :visionBlurred ;
+         OpenPVSignal:refers_to_concomitant_drug :esomeprazole ,
+                                                 :levothyroxine ,
+                                                 :lorazepam ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_7 ;
+         OpenPVSignal:time_to_onset :TimeToOnset7 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:concerns_indication_for_use :polyneuropathy ;
+         OpenPVSignal:has_free_text_reporting_element :InformationForReport8 ;
+         OpenPVSignal:refers_to_adverse_effect :blurredVision ,
+                                               :defectiveColourVision ,
+                                               :peripheralVisionDefective ;
+         OpenPVSignal:refers_to_concomitant_drug :ramipril ,
+                                                 :tramadol ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:time_to_onset :TimeToOnset8 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "negative rechallenge - condition not appeared" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                               :diplopia ,
+                                               :visionBlurred ;
+         OpenPVSignal:refers_to_concomitant_drug :ibuprofen ,
+                                                 :prednisone ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/oxycodon> ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+         OpenPVSignal:refers_to_reported_drug_usage :Usage_9 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ReportsForTiagabine
+:ReportsForTiagabine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:concerns_indication_for_use :epilepsy ;
+                     OpenPVSignal:refers_to_drug :tiagabine ;
+                     OpenPVSignal:has_count 17 ;
+                     OpenPVSignal:has_max_age 72 ;
+                     OpenPVSignal:has_min_age 19 ;
+                     rdfs:label "Reports for tiagabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ReportsWithCBZMonotherapy
+:ReportsWithCBZMonotherapy rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:concerns_indication_for_use :epilepsy ;
+                           OpenPVSignal:refers_to_drug :carbamazepine ;
+                           OpenPVSignal:has_count 18 ;
+                           rdfs:label "Reports with CBZ monotherapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ReportsWithVGBMonotherapy
+:ReportsWithVGBMonotherapy rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:concerns_indication_for_use :epilepsy ;
+                           OpenPVSignal:refers_to_drug :vigabatrin ;
+                           OpenPVSignal:has_count 32 ;
+                           rdfs:label "Reports with VGB monotherapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "This drug-ADR combination was identified in a signal detection screening with focus on patient reports in VigiBase, the WHO global database of individual case safety reports. In total, eight reports were identified using the MedDRA preferred term (PT) ‘colour blindness’, and 13 reports using the MedDRA PT ‘chromatopsia’. The reports are presented in Table 1. The presentation of reported ADRs in the table has been restricted to those concerning the eye, and other ADRs that were reported have been omitted. In case 1, the patient had previously used pregabalin at high doses to treat her trigeminal neuralgia and experienced dizziness, somnolence and intense lethargy which were resolved after discontinuation of pregabalin. No allergy was experienced at that time. The symptoms started with a burning face, and the morning after she had a tendency to vomit, facial rash and swelling of the eyes. Paracetamol/tramadol was withdrawn, since this was the drug she had not previously used. The next day the rash had expanded and she experienced pruritus, she had flashes in her eyes, and intense lights and she could not distinguish items (also reporting that everything looked square). In addition, at an unspecified date the patient could not recognize colours. In case 7, one hour after the first dose the patient developed tunnel vision, impaired colour vision, blurred vision and difficulties in reading. The patient had no medical history of retinal degradation, ophthalmological or neurological diseases and no history of eye diseases. In case 8, the patient noticed a gradually worsening visual disorder with blurred vision over a few days, peripheral vision impairment, and loss of perception of colour after the dose was increased from 25 mg twice daily (treatment duration unknown) to 75 mg twice daily. Pregabalin was discontinued and the patient recovered. The patient’s medical history included diabetes mellitus, hypertension, peripheral arterial occlusive disease, strabismus and alcohol use. In three cases (3, 13 and 18) the patient had not recovered at the time of reporting, even though the drug had been withdrawn or the dose had been reduced. It is possible that the report was submitted before the patient had the opportunity to recover. Other explanations might be that in some cases the colour vision distortion is not reversible or that the colour vision distortion in these patients were not caused by pregabalin and therefor did not improve when withdrawing or reducing the dose of the drug." ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Reports_with_CBZ_monotherapy_and_abnormal_colour_perception
+:Reports_with_CBZ_monotherapy_and_abnormal_colour_perception rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :ReportsWithCBZMonotherapy ;
+                                                             OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                                                             OpenPVSignal:has_count 5 ;
+                                                             rdfs:label "Reports with CBZ monotherapy and abnormal colour perception" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Reports_with_VGB_monotherapy_and_abnormal_colour_perception
+:Reports_with_VGB_monotherapy_and_abnormal_colour_perception rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :ReportsWithVGBMonotherapy ;
+                                                             OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                                                             OpenPVSignal:has_count 10 ;
+                                                             rdfs:label "Reports with VGB monotherapy and abnormal colour perception" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TiagabinTherapy
+:TiagabinTherapy rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 OpenPVSignal:has_content "5-41 months" ;
+                 rdfs:label "Tiagabin therapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TiagabineStudy
+:TiagabineStudy rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001197 ;
+                OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                OpenPVSignal:refers_to_drug :tiagabine ;
+                mp:references :Ref.11 ;
+                OpenPVSignal:has_content "In another study, the effects of the GABA-ergic antiepileptic drug (AED), tiagabine, on colour vision and contrast sensitivity was investigated. Twenty newly-diagnosed patients with partial epilepsy (aged 19-72 years), receiving tiagabine as their initial monotherapy for 5-41 months were examined. Three patients were excluded from the colour vision evaluation for congenital red-green colour vision defects. Seven out of 17 patients (41%) had acquired colour vision deficit. This study suggests that AED therapy with tiagabine, as with other established and newer AEDs may interfere with colour perception " ;
+                rdfs:label "Tiagabine study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content """Within a day to
+3 days""" ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset11
+:TimeToOnset11 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "Within a day " ;
+               time:nominalPosition "days" ;
+               time:numericPosition 1 ;
+               rdfs:label "Time to onset 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset15
+:TimeToOnset15 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content """For vision
+abnormal a day,
+for the other
+events a few days""" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 1 ;
+               rdfs:label "Time to onset 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset16
+:TimeToOnset16 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content """Unknown, for
+visual impairment
+7 months""" ;
+               rdfs:label "Time to onset 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset18
+:TimeToOnset18 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "months" ;
+               time:numericPosition 2 ;
+               rdfs:label "Time to onset 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset7
+:TimeToOnset7 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "hours" ;
+              time:numericPosition 1 ;
+              rdfs:label "Time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#TimeToOnset8
+:TimeToOnset8 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Days" ;
+              time:nominalPosition "days" ;
+              rdfs:label "Time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_1
+:Usage_1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose1 ;
+         rdfs:label "Usage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_10
+:Usage_10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose10 ;
+          rdfs:label "Usage 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_11
+:Usage_11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose11 ;
+          rdfs:label "Usage 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_12
+:Usage_12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose12 ;
+          rdfs:label "Usage 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_13
+:Usage_13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose13 ;
+          rdfs:label "Usage 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_15
+:Usage_15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose15 ;
+          rdfs:label "Usage 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_16
+:Usage_16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose16 ;
+          rdfs:label "Usage 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_18
+:Usage_18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:refers_to_dosage :Dose18 ;
+          rdfs:label "Usage 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_2
+:Usage_2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose2 ;
+         rdfs:label "Usage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_5
+:Usage_5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose5 ;
+         rdfs:label "Usage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_6
+:Usage_6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose6 ;
+         rdfs:label "Usage 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_7
+:Usage_7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose7 ;
+         rdfs:label "Usage 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#Usage_9
+:Usage_9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug_Usage ;
+         OpenPVSignal:refers_to_dosage :Dose9 ;
+         rdfs:label "Usage 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "B01AC06" ,
+                                               "N02BA01 " ;
+                     rdfs:label "acetylsalicylic acid" ,
+                                "acetylsalicylic acid " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#activitiesOfDailyLivingImpaired
+:activitiesOfDailyLivingImpaired rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Adverse_Effect ;
+                                 OpenPVSignal:has_ICD_code "Z73.6" ;
+                                 OpenPVSignal:has_MedDRA_code 10050954 ;
+                                 OpenPVSignal:has_MedDRA_prefered_term "Activities of daily living impaired" ;
+                                 rdfs:label "activities of daily living impaired" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#alprazolam
+:alprazolam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05BA12" ;
+            rdfs:label "alprazolam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#alteredVisualDepthPerception
+:alteredVisualDepthPerception rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "H53.8" ;
+                              OpenPVSignal:has_MedDRA_code 10053549 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Altered visual depth perception" ;
+                              rdfs:label "altered visual depth perception" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#amitriptyline
+:amitriptyline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N06AA09" ;
+               rdfs:label "amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#anti-tuberculosisDrugs
+:anti-tuberculosisDrugs rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:DrugClass ;
+                        OpenPVSignal:has_ATC_code "J04A" ;
+                        rdfs:label "anti-tuberculosis drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#antibiotics
+:antibiotics rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:DrugClass ;
+             OpenPVSignal:has_ATC_code "R02AB" ;
+             rdfs:label "antibiotics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#antiepi
+:antiepi rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:DrugClass ;
+         OpenPVSignal:has_ATC_code "N03A" ;
+         rdfs:label "antiepileptics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#astenophia
+:astenophia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "H53.14" ;
+            OpenPVSignal:has_MedDRA_code 10003552 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Asthenopia" ;
+            rdfs:label "asthenopia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#astigmatism
+:astigmatism rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H52.2" ;
+             OpenPVSignal:has_MedDRA_code 10003569 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Astigmatism" ;
+             rdfs:label "astigmatism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#atenolol
+:atenolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AB03" ;
+          rdfs:label "atenolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#backInjury
+:backInjury rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "S39.92XS" ;
+            OpenPVSignal:has_MedDRA_code 10003986 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Back injury" ;
+            rdfs:label "back injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#baclofen
+:baclofen rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "M03BX01 " ;
+          rdfs:label "baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#barbiturates
+:barbiturates rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:DrugClass ;
+              OpenPVSignal:has_ATC_code "N05CA" ;
+              rdfs:label "barbiturates" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#benzonatate
+:benzonatate rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R05DB01" ;
+             rdfs:label "benzonatate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#blindness
+:blindness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H54" ;
+           OpenPVSignal:has_MedDRA_code 10005169 ;
+           OpenPVSignal:has_MedDRA_prefered_term "blindness" ;
+           rdfs:label "blindness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#blurredVision
+:blurredVision rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H53.8" ;
+               OpenPVSignal:has_MedDRA_code 10047513 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Vision blurred" ;
+               rdfs:label "blurred vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#burningSensationInFace
+:burningSensationInFace rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "T20.00XA" ;
+                        OpenPVSignal:has_MedDRA_code 10006787 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Burning sensation in face" ;
+                        rdfs:label "burning sensation in face" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#calcium
+:calcium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A12AA" ;
+         rdfs:label "calcium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#carbamazepine
+:carbamazepine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :antiepi ;
+               OpenPVSignal:has_mechanism :Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics ;
+               OpenPVSignal:has_ATC_code "N03AF01" ;
+               rdfs:label "carbamazepine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#carisoprodol
+:carisoprodol rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "M03BA02 " ;
+              rdfs:label "carisoprodol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#cataract
+:cataract rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "H26.9" ;
+          OpenPVSignal:has_MedDRA_code 10007739 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Cataract" ;
+          rdfs:label "cataract" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#celecoxib
+:celecoxib rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "M01AH01 " ;
+           rdfs:label "celecoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#cetirizine
+:cetirizine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R06AE07 " ;
+            rdfs:label "cetirizine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#chromatopsia
+:chromatopsia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "H53.51" ;
+              OpenPVSignal:has_MedDRA_code 10008795 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Chromatopsia" ;
+              rdfs:label "chromatopsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#colourBlindness
+:colourBlindness rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "H53.5" ;
+                 OpenPVSignal:has_MedDRA_code 10010050 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Colour blindness" ;
+                 rdfs:label "colour blindness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#cyanocobalamin
+:cyanocobalamin rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "B03BA0" ;
+                rdfs:label "cyanocobalamin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#d
+:d rdf:type owl:NamedIndividual ,
+            obo:OAE_0001197 ,
+            OpenPVSignal:Warning_Information ;
+   OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+   OpenPVSignal:refers_to_class :antiepi ;
+   OpenPVSignal:has_content "colour vision disturbances have been documented with anti-epileptic drugs; primarily, but not exclusively, in anti-epileptic drugs that enhance GABA transmission" ;
+   rdfs:label "colour vision disturbances documented with anti-epileptic drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#defectiveColourVision
+:defectiveColourVision rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "H53.5" ;
+                       OpenPVSignal:has_MedDRA_code 10012122 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Defective colour vision" ;
+                       rdfs:label "defective colour vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#diabeticNephropathy
+:diabeticNephropathy rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "E11.21" ;
+                     OpenPVSignal:has_MedDRA_code 10061835 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Diabetic nephropathy" ;
+                     rdfs:label "diabetic nephropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#diabeticNeuropathy
+:diabeticNeuropathy rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "E11.40" ;
+                    OpenPVSignal:has_MedDRA_code 10012680 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Diabetic neuropathy" ;
+                    rdfs:label "diabetic neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#diazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#diltiazem
+:diltiazem rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C05AE03" ;
+           rdfs:label "diltiazem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#diplopia
+:diplopia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code " H53.2" ;
+          OpenPVSignal:has_MedDRA_code 10013036 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diplopia" ;
+          rdfs:label "diplopia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#dryEyes
+:dryEyes rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H04.129" ;
+         OpenPVSignal:has_MedDRA_code 10013774 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dry eye" ;
+         rdfs:label "dry eyes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#duloxetine
+:duloxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX21 " ;
+            rdfs:label "duloxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#epilepsy
+:epilepsy rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "G40" ;
+          OpenPVSignal:has_MedDRA_code 10015037 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Epilepsy" ;
+          rdfs:label "epilepsy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#esomeprazole
+:esomeprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC05" ;
+              rdfs:label "esomeprazole " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#eyeDisorder
+:eyeDisorder rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H57.9" ;
+             OpenPVSignal:has_MedDRA_code 10015916 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Eye disorder" ;
+             rdfs:label "eye disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#eyeIrritation
+:eyeIrritation rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H57.8" ;
+               OpenPVSignal:has_MedDRA_code 10015946 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Eye irritation" ;
+               rdfs:label "eye irritation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#eyePain
+:eyePain rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H57.10" ;
+         OpenPVSignal:has_MedDRA_code 10015958 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Eye pain" ;
+         rdfs:label "eye pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#eyeSwelling
+:eyeSwelling rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H02.84" ;
+             OpenPVSignal:has_MedDRA_code 10015967 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Eye swelling" ;
+             rdfs:label "eye swelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#eyesSwollen
+:eyesSwollen rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H02.843" ;
+             OpenPVSignal:has_MedDRA_code 10016014 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Eyes swollen" ;
+             rdfs:label "eyes swollen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#faceInjury
+:faceInjury rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "S09.93XA" ;
+            OpenPVSignal:has_MedDRA_code 10050392 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Face injury" ;
+            rdfs:label "face injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fibromyalgia
+:fibromyalgia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "M79.7" ;
+              OpenPVSignal:has_MedDRA_code 10048439 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Fibromyalgia" ;
+              rdfs:label "fibromyalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#flashingVision
+:flashingVision rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "H53.19" ;
+                OpenPVSignal:has_MedDRA_code 10016758 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Flashing vision" ;
+                rdfs:label "flashing vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#folicAcid
+:folicAcid rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "B03BB51 " ;
+           rdfs:label "folic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#foreignBodyInEye
+:foreignBodyInEye rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "T15" ;
+                  OpenPVSignal:has_MedDRA_code 10017012 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Foreign body in eye" ;
+                  rdfs:label "foreign body in eye" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#generalizedAnxietyDisorder
+:generalizedAnxietyDisorder rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Indication ;
+                            OpenPVSignal:has_ICD_code "F41.1" ;
+                            OpenPVSignal:has_MedDRA_code 10018075 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Generalized anxiety disorder" ;
+                            rdfs:label "Generalized anxiety disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#glimepiride
+:glimepiride rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BB12 " ;
+             rdfs:label "glimepiride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#highBloodPressureMedications
+:highBloodPressureMedications rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:DrugClass ;
+                              OpenPVSignal:has_ATC_code "C02" ;
+                              rdfs:label "high blood pressure medications" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#hydrocodone
+:hydrocodone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R05DA03" ;
+             rdfs:label "hydrocodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ibandroninicAcid
+:ibandroninicAcid rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "M05BA06" ;
+                  rdfs:label "ibandroninic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ill-definedDisorder
+:ill-definedDisorder rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "R69" ;
+                     OpenPVSignal:has_MedDRA_code 10061520 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Ill-defined disorder" ;
+                     rdfs:label "ill-defined disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#impairedDrivingAbility
+:impairedDrivingAbility rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10049564 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Impaired driving ability" ;
+                        rdfs:label "impaired driving ability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#increasedLacrimation
+:increasedLacrimation rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "H04.209" ;
+                      OpenPVSignal:has_MedDRA_code 10023644 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Lacrimation increased" ;
+                      rdfs:label "increased lacrimation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#intraocularPressureIncreased
+:intraocularPressureIncreased rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "H40.059" ;
+                              OpenPVSignal:has_MedDRA_code 10022806 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Intraocular pressure increased" ;
+                              rdfs:label "intraocular pressure increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ;
+              OpenPVSignal:has_content "Pregabalin has been approved for the European Union (EU) and United States (US) markets since 2004. It is indicated for the treatment of neuropathic pain, postherapeutic neuralgia, diabetic peripheral neuropathy, fibromyalgia, epilepsy and for generalised anxiety disorder.1,2 Pregabalin is a γ-aminobutyric acid (GABA) analogue and exerts its effects by binding to the α2 – δ subunit of voltage gated calcium channels, leading to a decreased synaptic release of neurotransmitters.3 Poor or deficient colour vision, often referred to as colour blindness, is an inability to see the difference between certain colours, while still seeing colour. Most people with this condition cannot distinguish between certain shades of red and green. Less commonly, people with poor colour vision cannot distinguish between shades of blue and yellow. Poor colour vision can be inherited (most common) or be acquired. Poor colour vision can be caused by diseases such as sickle cell anaemia, diabetes, macular degeneration, Alzheimer’s disease, glaucoma, Parkinson’s disease, chronic alcoholism and leukaemia. Certain medications such as antibiotics, barbiturates, anti-tuberculosis drugs, high blood pressure medications and several medications to treat nervous disorders may also cause colour blindness. For people without poor or deficient colour vision, the ability to see colours deteriorates slowly with age.4,5 Chromatopsia is a visual defect in which coloured objects appear unnaturally coloured, and colourless objects appear tinged with colour. Chromatopsia may be caused by drugs, disturbance of the optic centres, cataract extraction or dazzling light.6 Pregabalin is associated with a number of adverse drug reactions (ADRs) affecting the eye, such as blurred vision, diplopia, peripheral vision loss, visual disturbance, eye swelling, visual field defect, reduced visual acuity, eye pain, asthenopia, photopsia, dry eyes, increased lacrimation, eye irritation, vision loss, keratitis, oscillopsia, altered visual depth perception, mydriasis, strabismus and visual brightness.1 However, visual colour distortions such as colour blindness and chromatopsia, have not been described." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#isosorbide
+:isosorbide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01DA08 " ;
+            rdfs:label "isosorbide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#keratitis
+:keratitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H16" ;
+           OpenPVSignal:has_MedDRA_code 10023332 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Keratitis" ;
+           rdfs:label "keratitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#lansoprazole
+:lansoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC03" ;
+              rdfs:label "lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#limbInjury
+:limbInjury rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "S89.92XA" ;
+            OpenPVSignal:has_MedDRA_code 10061225 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Limb injury" ;
+            rdfs:label "limb injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02 " ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#methylphenidate
+:methylphenidate rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06BA04" ;
+                 rdfs:label "methylphenidate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#methylprednisolone
+:methylprednisolone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "D07AA01" ;
+                    rdfs:label "methylprednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#migraine
+:migraine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G43.909" ;
+          OpenPVSignal:has_MedDRA_code 10027599 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Migraine" ;
+          rdfs:label "migraine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#modafinil
+:modafinil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06BA07 " ;
+           rdfs:label "modafinil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AA01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#mydriasis
+:mydriasis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H57.04" ;
+           OpenPVSignal:has_MedDRA_code 10028521 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Mydriasis" ;
+           rdfs:label "mydriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#neckPain
+:neckPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "M54.2" ;
+          OpenPVSignal:has_MedDRA_code 10028836 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Neck pain" ;
+          rdfs:label "neck pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#nerveInjury
+:nerveInjury rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "S14.3XXA" ;
+             OpenPVSignal:has_MedDRA_code 10052897 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Nerve injury" ;
+             rdfs:label "nerve injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#nervousness
+:nervousness rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "R45.0" ;
+             OpenPVSignal:has_MedDRA_code 10029216 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Nervousness" ;
+             rdfs:label "nervousness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#neuralgia
+:neuralgia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "M79.2" ;
+           OpenPVSignal:has_MedDRA_code 10029223 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Neuralgia" ;
+           rdfs:label "neuralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#nicorandil
+:nicorandil rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01DX16" ;
+            rdfs:label "nicorandil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ocularDiscomfort
+:ocularDiscomfort rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "H53.149" ;
+                  OpenPVSignal:has_MedDRA_code 10052143 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Ocular discomfort" ;
+                  rdfs:label "ocular discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#olmesartan
+:olmesartan rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09CA08" ;
+            rdfs:label "olmesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#opthalmologicalExaminationAbnormal
+:opthalmologicalExaminationAbnormal rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Adverse_Effect ;
+                                    OpenPVSignal:has_ICD_code "Z01.01" ;
+                                    OpenPVSignal:has_MedDRA_code 10056836 ;
+                                    OpenPVSignal:has_MedDRA_prefered_term "Ophthalmological examination abnormal" ;
+                                    rdfs:label "ophthalmological examination abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#oscillopsia
+:oscillopsia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H55.00" ;
+             OpenPVSignal:has_MedDRA_code 10052087 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Oscillopsia" ;
+             rdfs:label "oscillopsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#oxycodone
+:oxycodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02AA05 " ;
+           rdfs:label "oxycodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#pain
+:pain rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R52" ;
+      OpenPVSignal:has_MedDRA_code 10033371 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Pain" ;
+      rdfs:label "Pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#painNos
+:painNos rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Indication ;
+         OpenPVSignal:has_ICD_code "R52" ;
+         OpenPVSignal:has_MedDRA_code 10033470 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Pain NOS" ;
+         rdfs:label "pain nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#perindopril
+:perindopril rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09AA04" ;
+             rdfs:label "perindopril " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#peripheralVisionDefective
+:peripheralVisionDefective rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "H53.459" ;
+                           OpenPVSignal:has_MedDRA_code 10047555 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Visual field defect" ;
+                           rdfs:label "peripheral vision defective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#peripheralVisionLoss
+:peripheralVisionLoss rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "H53.459" ;
+                      OpenPVSignal:has_MedDRA_code 10034642 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Peripheral vision defective" ;
+                      rdfs:label "peripheral vision loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#photophobia
+:photophobia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H53.14" ;
+             OpenPVSignal:has_MedDRA_code 10034960 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Photophobia" ;
+             rdfs:label "photophobia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#photopsia
+:photopsia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H53.19" ;
+           OpenPVSignal:has_MedDRA_code 10034962 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Photopsia" ;
+           rdfs:label "photopsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#polyneuropathy
+:polyneuropathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Indication ;
+                OpenPVSignal:has_ICD_code "G62.9" ;
+                OpenPVSignal:has_MedDRA_code 10036105 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy" ;
+                rdfs:label "polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#postHerpeticNeuralgia
+:postHerpeticNeuralgia rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Indication ;
+                       OpenPVSignal:has_ICD_code "B02.29" ;
+                       OpenPVSignal:has_MedDRA_code 10036376 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Post herpetic neuralgia" ;
+                       rdfs:label "post herpetic neuralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#prednisone
+:prednisone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "H02AB07 " ;
+            rdfs:label "prednisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#pregabalin
+:pregabalin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:concerns_indication_for_use :Neuropathic_pain ,
+                                                     :diabeticNeuropathy ,
+                                                     :epilepsy ,
+                                                     :fibromyalgia ,
+                                                     :generalizedAnxietyDisorder ;
+            OpenPVSignal:hasClass :antiepi ;
+            OpenPVSignal:has_mechanism :Mechanism_of_Pregabalin ,
+                                       :Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics ;
+            OpenPVSignal:refers_to_adverse_effect :alteredVisualDepthPerception ,
+                                                  :astenophia ,
+                                                  :blurredVision ,
+                                                  :diplopia ,
+                                                  :dryEyes ,
+                                                  :eyeIrritation ,
+                                                  :eyePain ,
+                                                  :eyeSwelling ,
+                                                  :increasedLacrimation ,
+                                                  :keratitis ,
+                                                  :mydriasis ,
+                                                  :oscillopsia ,
+                                                  :peripheralVisionLoss ,
+                                                  :photopsia ,
+                                                  :reducedVisualAcuity ,
+                                                  :strabismus ,
+                                                  :visionLoss ,
+                                                  :visualDisturbance ,
+                                                  :visualFieldDefect ,
+                                                  :visual_brightness ;
+            OpenPVSignal:has_ATC_code "N03AX16" ;
+            rdfs:label "pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Chromatopsia_pathophysiology ,
+                                                   :Colour_blindness ,
+                                                   :Discussion_and_Conclusion ,
+                                                   :Reports_in_VigiBase ,
+                                                   :introduction ,
+                                                   :summary ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report17 ,
+                                                              :Report18 ,
+                                                              :Report19 ,
+                                                              :Report2 ,
+                                                              :Report20 ,
+                                                              :Report21 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForPregabalinAndChromatopsia ,
+                                                          :OverallReportsInVigibaseForPregabalinAndColourBlindness ,
+                                                          :Repirts_for_tiagabine_and_colour_vision_deficit ,
+                                                          :ReportsForTiagabine ,
+                                                          :ReportsWithCBZMonotherapy ,
+                                                          :ReportsWithVGBMonotherapy ,
+                                                          :Reports_with_CBZ_monotherapy_and_abnormal_colour_perception ,
+                                                          :Reports_with_VGB_monotherapy_and_abnormal_colour_perception ;
+          OpenPVSignal:refers_to_adverse_effect :chromatopsia ,
+                                                :colourBlindness ,
+                                                :defectiveColourVision ,
+                                                :visualDisturbance ;
+          OpenPVSignal:refers_to_drug :pregabalin ;
+          OpenPVSignal:refers_to_primary_suspect_drug :pregabalin ;
+          mp:supportedByData :TiagabineStudy ,
+                             :d ,
+                             :v ,
+                             <http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#VGB/CBZMonotherapyStudy> ;
+          OpenPVSignal:initially_identified_on "01/05/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09BX03" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#reducedVisualAcuity
+:reducedVisualAcuity rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "H53.8" ;
+                     OpenPVSignal:has_MedDRA_code 10047531 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Visual acuity reduced" ;
+                     rdfs:label "reduced visual acuity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#retinol
+:retinol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A11CA01 " ;
+         rdfs:label "retinol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#scotoma
+:scotoma rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H53.413" ;
+         OpenPVSignal:has_MedDRA_code 10047555 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Visual field defect" ;
+         rdfs:label "scotoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA01" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#sleepy
+:sleepy rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R40.0" ;
+        OpenPVSignal:has_MedDRA_code 10041349 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+        rdfs:label "sleepy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#sodiumChloride
+:sodiumChloride rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "B05CB01" ;
+                rdfs:label "sodium chloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40.0" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#strabismus
+:strabismus rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10042159 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Strabismus" ;
+            rdfs:label "strabismus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Twenty-five reports in the WHO global database of individual case safety reports, VigiBase, describe a relationship between the drug pregabalin and changes in colour vision. Based on these reports, it is recommended to add changes in colour vision to the product information leaflet of pregabalin. Poor or deficient colour vision, often referred to as colour blindness, is an inability to distinguish between certain colours, while still seeing colour. Colour blindness can be inherited (most common) or it can be caused by diseases or drugs. Pregabalin (Lyrica®) is a drug that can be used for the treatment of pain due to nerve injury, fibromyalgia, epilepsy and anxiety disorders. On the basis of the 25 reports in VigiBase that were highlighted in the joint UMC/Lareb signal detection sprint that took place in October 2016, it seems that the time to onset is quick, the changes in colour vision seem to occur within hours to days after starting the drug. This adverse reaction also seems to be reversible; in seven cases the patients regained normal colour vision after stopping pregabalin. Although changes in colour vision can have other causes, the relationship with pregabalin is strengthened by the fact that changes in colour vision is a known adverse reaction of other drugs (vigabatrin and tiagabine) which exert their effects in a similar way as pregabalin." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tamsulosin
+:tamsulosin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G04CA02 " ;
+            rdfs:label "tamsulosin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#telmisartan
+:telmisartan rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09CA07" ;
+             rdfs:label "telmisartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#the_Netherlands_Pharmacovigilance_Centre_Lareb
+:the_Netherlands_Pharmacovigilance_Centre_Lareb rdf:type owl:NamedIndividual ,
+                                                         prov:Organization ;
+                                                rdfs:label "the Netherlands Pharmacovigilance Centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tiagabine
+:tiagabine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:hasClass :antiepi ;
+           OpenPVSignal:has_mechanism :Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics ;
+           OpenPVSignal:has_ATC_code "N03AG06" ;
+           rdfs:label "tiagabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tiotropium
+:tiotropium rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03BB04" ;
+            rdfs:label "tiotropium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tizanidine
+:tizanidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M03BX02" ;
+            rdfs:label "tizanidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tocopherol
+:tocopherol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A11HA03 " ;
+            rdfs:label "tocopherol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#torasemide
+:torasemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA04" ;
+            rdfs:label "torasemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#transientBlindness
+:transientBlindness rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "H53.129" ;
+                    OpenPVSignal:has_MedDRA_code 10005184 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Blindness transient" ;
+                    rdfs:label "transient blindness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#tunnelVision
+:tunnelVision rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "H53.483" ;
+              OpenPVSignal:has_MedDRA_code 10045178 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Tunnel vision" ;
+              rdfs:label "tunnel vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#uppsala_monitoring_centre
+:uppsala_monitoring_centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "uppsala monitoring centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#v
+:v rdf:type owl:NamedIndividual ,
+            obo:OAE_0001197 ;
+   OpenPVSignal:refers_to_adverse_effect :carbamazepine ,
+                                         :defectiveColourVision ;
+   OpenPVSignal:refers_to_dosage :DoseOfCBZ ,
+                                 :DoseOfVGB ;
+   OpenPVSignal:refers_to_drug :vigabatrin ;
+   mp:references :Ref.9 ;
+   OpenPVSignal:has_content "In a study, the effects of a single oral dose of vigabatrin (VGB) and carbamazepine (CBZ) on visual function in normal healthy volunteers was investigated. Volunteers were randomly assigned to three groups according to a single-blind, placebo controlled design. All subjects underwent colour visual evoked potential tests and colour perimetry at baseline and after receiving placebo, VGB (2000 mg) or CBZ (400 mg). Whereas CBZ induced a mild overall impairment of the chromatic and achromatic systems, VGB induced a selective blue impairment. The differential changes the two antiepileptic drugs induced in visual tests presumably depended on their different mechanisms of action. The selective blue impairment in colour visual tests in VGB-treated healthy subjects is consistent with gamma-aminobutyric acid GABA-ergic inhibition also at retinal level.9" ;
+   rdfs:label "Study with VGB and CBZ" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#varenicline
+:varenicline rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N07BA03" ;
+             rdfs:label "varenicline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#vigabatrin
+:vigabatrin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :antiepi ;
+            OpenPVSignal:has_mechanism :Proposed_mechanism_for_AE_mechanism_from_GABA_mimetics ;
+            OpenPVSignal:has_ATC_code "N03AG04 " ;
+            rdfs:label "vigabatrin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visionAbnormal
+:visionAbnormal rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "H53.9" ;
+                OpenPVSignal:has_MedDRA_code 10047571 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                rdfs:label "vision abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visionBlurred
+:visionBlurred rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H53.8" ;
+               OpenPVSignal:has_MedDRA_code 10047513 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Vision blurred" ;
+               rdfs:label "vision blurred" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visionColourTinged
+:visionColourTinged rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "H53.59" ;
+                    OpenPVSignal:has_MedDRA_code 10047515 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Vision color tinged" ;
+                    rdfs:label "vision colour tinged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visionLoss
+:visionLoss rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "H54.7" ;
+            OpenPVSignal:has_MedDRA_code 10005169 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Blindness" ;
+            rdfs:label "vision loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visualAcuityReduced
+:visualAcuityReduced rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "H54.7" ;
+                     OpenPVSignal:has_MedDRA_code 10047531 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Visual acuity reduced" ;
+                     rdfs:label "visual acuity reduced" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visualDisturbance
+:visualDisturbance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "H53" ;
+                   OpenPVSignal:has_MedDRA_code 10047571 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                   rdfs:label "visual disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visualFieldDefect
+:visualFieldDefect rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code " H53.4" ;
+                   OpenPVSignal:has_MedDRA_code 10047555 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual field defect" ;
+                   rdfs:label "visual field defect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visualImpairment
+:visualImpairment rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "H54" ;
+                  OpenPVSignal:has_MedDRA_code 10047571 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                  rdfs:label "visual impairment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#visual_brightness
+:visual_brightness rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10049155 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual brightness" ;
+                   rdfs:label "visual brightness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#vitaminD
+:vitaminD rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A11CC" ;
+          rdfs:label "vitamin D" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#zolendronicAcid
+:zolendronicAcid rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "M05BA08 " ;
+                 rdfs:label "zolendronic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#2TimesPerDayAdministration> rdf:type owl:NamedIndividual ,
+                                                                                                                         time:DurationDescription ;
+                                                                                                                time:nominalPosition "hours" ;
+                                                                                                                time:numericPosition 12 ;
+                                                                                                                rdfs:label "2 times per day administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#3TimesPerDayAdministration> rdf:type owl:NamedIndividual ,
+                                                                                                                         time:DurationDescription ;
+                                                                                                                time:nominalPosition "hours" ;
+                                                                                                                time:numericPosition 8 ;
+                                                                                                                rdfs:label "3 times per day administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#VGB/CBZMonotherapyStudy
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#VGB/CBZMonotherapyStudy> rdf:type owl:NamedIndividual ,
+                                                                                                                      obo:OAE_0001197 ,
+                                                                                                                      OpenPVSignal:Clinical_trial_information ;
+                                                                                                             OpenPVSignal:refers_to_adverse_effect :defectiveColourVision ;
+                                                                                                             OpenPVSignal:refers_to_drug :carbamazepine ,
+                                                                                                                                         :vigabatrin ;
+                                                                                                             mp:references :Ref.10 ;
+                                                                                                             OpenPVSignal:has_content "A further study investigated colour vision in patients treated with VGB or CBZ monotherapy. There were 32 epilepsy patients treated with VGB monotherapy, 18 patients treated with CBZ monotherapy, and 47 age- matched healthy controls examined . Abnormal colour perception was found in 32% of the epilepsy patients treated with VGB monotherapy and 28% of the epilepsy patients treated with CBZ monotherapy. " ;
+                                                                                                             rdfs:label "VGB/CBZ monotherapy study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fluticasone/salmeterol
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#fluticasone/salmeterol> rdf:type owl:NamedIndividual ,
+                                                                                                                     OpenPVSignal:Drug ;
+                                                                                                            OpenPVSignal:has_ATC_code "R03AK06 " ;
+                                                                                                            rdfs:label "fluticasone/salmeterol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#methylprogesteroneacetate/conjugatedEstrogens
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#methylprogesteroneacetate/conjugatedEstrogens> rdf:type owl:NamedIndividual ,
+                                                                                                                                            OpenPVSignal:Drug ;
+                                                                                                                                   OpenPVSignal:has_ATC_code "G03FA12" ;
+                                                                                                                                   rdfs:label "methylprogesterone acetate/conjugated estrogens" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/hydrocodone
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/hydrocodone> rdf:type owl:NamedIndividual ,
+                                                                                                                      OpenPVSignal:Drug ;
+                                                                                                             OpenPVSignal:has_ATC_code "N02AA08" ;
+                                                                                                             rdfs:label "paracetamol/ hydrocodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/oxycodon
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/oxycodon> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:Drug ;
+                                                                                                          OpenPVSignal:has_ATC_code "N02AJ17" ;
+                                                                                                          rdfs:label "paracetamol/oxycodon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/tramadol
+<http://purl.org/OpenPVSignal/Signals/2017_3_pregabalin_visualColourDistortions.owl#paracetamol/tramadol> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:Drug ;
+                                                                                                          OpenPVSignal:has_ATC_code "N02AJ13" ;
+                                                                                                          rdfs:label "paracetamol/tramadol" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

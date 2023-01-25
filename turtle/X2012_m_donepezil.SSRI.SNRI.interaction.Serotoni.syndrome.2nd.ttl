@@ -1,0 +1,1352 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome> .
+
+<http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome> rdf:type owl:Ontology ;
+                                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                    mp: ;
+                                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255529/"^^xsd:anyURI ;
+                                                                                        rdfs:label "Donepezil – SSRI and SNRI – interaction and Serotonin syndrome"^^xsd:Literal ;
+                                                                                        owl:versionInfo "draft-v0.95-20211013"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Age_as_confounder
+:Age_as_confounder rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001182 ;
+                   mp:references :Ref.7 ;
+                   OpenPVSignal:has_content "In nine of the cases the age might have been a  contributory factor (varying from 72-85 in all but  one case where age was listed), since the  metabolism slows down with age. This was also  listed as the probable cause of the syndrome in  one of the reports from the USA; “poor drug  excretion and half-life prolongation probably  caused the syndrome”.7" ;
+                   rdfs:label "Age as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Alzheimer
+:Alzheimer rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "G30. 9" ;
+           OpenPVSignal:has_MedDRA_code 10012271 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dementia Alzheimer's type" ;
+           rdfs:label "Dementia Alzheimer's type" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Alzheimer_as_confounder
+:Alzheimer_as_confounder rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001182 ;
+                         OpenPVSignal:refers_to_adverse_effect :Alzheimer ,
+                                                               :serotoninSyndrome ;
+                         mp:references :Ref.10 ,
+                                       :Ref.11 ;
+                         OpenPVSignal:has_content "Alzheimer’s disease has itself shown to affect serotonin receptors.10 It has also been shown that serotonergic transmission is impaired in Alzheimer’s disease. 11" ;
+                         rdfs:label "Alzheimer as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ;
+                         OpenPVSignal:has_content """The reports in VigiBase indicate an interaction between donepezil and SSRIs and SNRIs, causing serotonin syndrome. It is known that drugs that inhibit CYP2D6, could inhibit the metabolism of donepezil, leading to higher concentrations of the drug. There are studies that show an effect of donepezil on serotonin levels and serotonin receptors in mice and rats3,4and so it is possible that donepezil is in itself affecting this substance but it is still unclear exactly what effect the drug has on these systems and on serotonin levels in humans.
+In nine of the cases the age might have been a contributory factor (varying from 72-85 in all but one case where age was listed), since the metabolism slows down with age. This was also listed as the probable cause of the syndrome in one of the reports from the USA; “poor drug excretion and half-life prolongation probably caused the syndrome”.7 With age more drugs are often used together and the possible interaction mechanisms might be more complex. This as well as the fact that Alzheimer’s disease in itself is affecting serotonin levels are factors that might be confounders in these cases.
+The reports in VigiBase could in some cases be the result of a SSRI/SNRI acting alone. It is not possible to say to what extent donepezil was involved in the possible interaction when the patients were already treated with donepezil and a SSRI/SNRI was added followed by the syndrome. However when the patient was already treated with a SSRI/SNRI and donepezil was added followed by the syndrome the same day as in one case or within four or 15 days as in two other""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.5 ,
+                                   :Ref.6 ;
+                     OpenPVSignal:has_content """Donepezil is a specific and reversible inhibitor of acetylcholinesterase, the dominating cholinesterase in the brain1 The pathogenesis of Alzheimer’s disease has been linked to the deficiency of the neurotransmitter acetylcholine and the acetylcholinesterase inhibitors were
+subsequently introduced as treatment for Alzheimer’s. Its efficacy is believed to be attained through the augmentation of acetylcholine- mediated synaptic transmission. It is also shown that this type of drug protects cells from the toxicity of free radicals and β–amyloid-induced
+injury.2 Studies in rats and mice show effects on serotonin or serotonin receptors in brain but the effect in humans remains unclear.3,4 Serotonin syndrome is not listed for donepezil.
+Serotonin syndrome is a potentially life- threatening reaction that may occur in patients using drugs that elevate the serotonin levels. The most common drugs causing this reaction are monoamine oxidase inhibitors (MAO-inhibitors), tri-cyclic antidepressants (TCAs) and selective serotonin reuptake inhibitors (SSRIs), SNRIs and SARIs.5 The excess serotonin activity in receptors in the central nervous system and peripheral serotonin receptors results in myoclonus, hyperreflexia, diaphoresis, mental changes, autonomic symptoms, shivering, tremor and in severe cases neuromuscular rigidity, delirium and life-threatening hyperthermia. Complications are common and include dehydration, infection, respiratory and renal failure and disseminated intravascular coagulation. 5,6 The primary treatment consists of discontinuation of suspected""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.11 ,
+                                      :Ref.4 ;
+                        OpenPVSignal:has_content """In vitro studies have shown that the cytochrome P450 isoenzymes CYP3A4 and to some extent CYP2D6 are involved in the metabolism of donepezil. Interaction studies in vitro have also shown that drugs like ketokonazol and kinidin (inhibitors of CYP3A4 and CYP2D6 respectively) inhibits the metabolism of donepezil. 1 This means that these drugs and other inhibitors of these enzymes could inhibit the metabolism of donepezil and thus lead to higher concentrations of the drug.
+There are no human studies on serotonin or serotonin receptors with donepezil. An in vitro study on rats showed changes in serotonin levels by acute doses of donepezil3 and another study on mice showed that twice daily treatment of donepezil for two weeks significantly increased striatal 5HT2A mRNA levels.4
+Alzheimer’s disease has itself shown to affect serotonin receptors.10 It has also been shown that serotonergic transmission is impaired in Alzheimer’s disease. 11""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#MechanismOfDonepezil
+:MechanismOfDonepezil rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Mechanism ;
+                      mp:references :Ref.1 ;
+                      OpenPVSignal:has_content "Donepezil is a specific and reversible inhibitor of acetylcholinesterase, the dominating cholinesterase in the brain1" ;
+                      rdfs:label "Mechanism of donepezil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 85 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 74 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 78 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 76 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 81 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 79 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 81 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "SPC for donepezil (Aricept).URL: http://emc.medicines.org.uk Accessed: 9 November 2011." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content """Cross AJ, Crow TJ, Ferrier IN, Johnson JA, Bloom SR, Corsellis JA. Serotonin receptor changes in dementia of the alzheimer type Journal of Neurochemistry.
+December 1984; 43(6): 1574-1581.""" ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lorenzi C, Marcone A, Pirovano A, Marino E, Cordici F, Delmonte D et al. Serotonin transporter and saitohin genes in risk of Alzheimer’s disease and frontotemporal lobar dementia: preliminary findings. Neurol Sci. December 2010; 31(6):741-9." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Tabet N. Acetylcholinesterase inhibitors for Alzheimer’s disease: anti- inflammatories in acetylcholine clothing! Age and Ageing, July 2006; 35 (4): 336- 338." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sherman E, Rossi S, Szasz B, Juranyi Z, Fallon S, Pomara N. et al. Changes in cerebral neurotransmitters and metabolites induced by acute donepezil and memantine administrations: A microdialysis study. Brain research bulletin, December 2005; (69): 204-213." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hayslett RL, Tizabi Y, Effects of donepezil, nicotine and haloperidol in the central serotonergic system in mice: Implications for Tourette’s syndrome. Pharmacology, biochemistry and behavior 2005; (81): 879-886." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Slettedal J K, Nilssen D O, MAgelssen M, Løberg E M, Mæhlen J. Brain pathology in fatal serotonin syndrome: Presentation of two cases. Neuropathology 2011; 31: 265-270." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sternbach H. The serotonin syndrome, Am J Psychiatry, June 1991; 148(6): 705- 13." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Yee AH, Eeko F, Wijdicks M. A perfect storm in the emergency department. Neurocrit care, April 2010; 12: 258-260" ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Pearce S, Ahmed N, Veras GM. A case study of Delayed Serotonin syndrome: Lessons learned. The consultant pharmacist 2009; 24(1): 64-68." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FJ Mackay, NR Dunn, Rd Mann, Antidepressants and the serotonin syndrome in general practice British Journal of General Practice, November 1999; 871-874." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.7 ,
+                                 :Ref.8 ;
+                   OpenPVSignal:has_content """Reports in VigiBase
+A total of eleven reports of donepezil and serotonin syndrome exist in VigiBase
+(20 October 2011). The reports showed that different selective serotonin reuptake inhibitors (SSRIs), selective serotonin-norepinephrine reuptake inhibitors (SNRIs) as well as a serotonin antagonist and reuptake inhibitor (SARI) were co reported with donepezil suspected to cause this effect. The majority of the reports contained SSRIs and SNRIs. In order to investigate a possible interacting effect a new search was performed where all other reports containing SSRIs and SNRIs, donepezil and serotonin syndrome were extracted from VigiBase. Table 1 lists the drugs found co-reported as suspected with donepezil to cause serotonin syndrome. In total 27 reports were found, out of which 13 were left when suspected duplicates were removed. These thirteen reports came from six different countries: Australia, France, Germany, Switzerland, United Kingdom and USA. Two of the reports from USA have been published.7,8
+In four cases donepezil was added to an existing treatment with SSRI/SNRI/SARI and in five cases it was instead an SSRI/SNRI/SARI that was added to pre-existing donepezil treatment. There was also one case where the drugs were started on the same day and three cases where there was no information on the administration order of the drugs. In the four cases where donepezil was added to pre-existing treatment the reporter suspected an interaction between donepezil and other drugs in three of the reports. In one of those reports the reporter also hypothesized that an interaction between donepezil, mirtazapine and""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Response_from_MAH
+:Response_from_MAH rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                   OpenPVSignal:refers_to_pharmacovigilance_signal_report <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Donepezil_–_SSRI_and_SNRI_–_interaction_and_Serotonin_syndrome> ;
+                   OpenPVSignal:has_content """Response from Marketing Authorization Holders (MAH) regarding a signal of Donepezil and Serotonin Syndrome
+ 
+
+Background
+Alzheimer disease (AD) is the most common form of dementia, effecting more than 35 million people worldwide. Age is the primary risk factor for AD. The incidence of the disease doubles every five years after 65 years of age with the chance of receiving a diagnosis of AD approximately one in three by the age of 85.1
+Serotonin syndrome is a potentially life- threatening condition that occurs due to excess serotonergic agonism of central nervous system receptors and peripheral serotonergic receptors. Signs of excess serotonin range from mild cases of tremor and diarrhea to life-threatening cases of delirium, neuromuscular rigidity and hyperthermia. The true incidence of serotonin syndrome is unknown. However, it has been noted that the apparent increase in incidence is consistent with the increase in use of proserotonergic agents, including selective serotonin-reuptake inhibitors (SSRIs) and selective serotonin-norepinephrine reuptake inhibitors (SNRIs) and other antidepressant agents.2 Serotonin syndrome is more likely to occur after chronic ingestion of a serotonergic agent, and is most often seen in patients who are on multiple serotonergic agents. However, serotonin syndrome has been reported in patients on a single serotonergic agent at a therapeutic dose.3
+Individuals with AD are known to have a high rate of depression. One study examined the use of 4 drug classes in patients with AD and found that greater than 30% of AD patients were receiving antidepressants.4
+
+Pharmacology
+Donepezil is a potent, selective, reversible, central inhibitor of acetylcholinesterase. A study of donepezil’s effect on the rat cortex found that donepezil elevated extracellular acetylcholinesterase without any effect on the level of serotonin (5-HT).5
+ 
+Donepezil has demonstrable effects on cognitive and global function parameters in patients with Alzheimer’s disease. Steady state is achieved within three weeks and there is little diurnal variability. Elimination is mainly renal and there is no evidence of enterohepatic re-circulation.6
+Donepezil is primarily metabolized by the cytochrome P450 (CYP) isoenzymes 2D6 and 3A47, and has minimal inhibitory activity against these isoenzymes8, and a low potential to interact with drugs that inhibit CYP 2D6 and CYP 3A4, e.g. cimetidine and ketoconazole8,9. In addition a study in healthy volunteers indicated that there were no significant differences in either the PK or tolerability of donepezil HCl or sertraline HCl (a SSRI metabolized by CYP3A4 and CYP 2D pathways) during multiple-dose co-administration at steady-state.10
+
+Clinical Trial Experience
+In the donepezil clinical studies analyzed to date, which have included over 6 million patient days of exposure there have been no reports of a serious adverse event of serotonin syndrome. The majority of these patient days of exposure were in studies that allowed the concomitant use of SSRIs and SNRIs as well as other medications with serotonergic activity. 11 In a recent study of donepezil 23 mg in patients with severe AD, over 27% of the subjects were receiving concomitant antidepressants at baseline.12
+
+Post-marketing Experience
+Aricept (donepezil hydrochloride) was first marketed in the US in 1997 and is now available in over 90 countries with over 6.5 billion patient days of exposure. A review of the post marketing spontaneous and literature reports of serotonin syndrome13 where donepezil was considered as a suspect product indicates that:
+the incidence of such reports was very rare with less than one report received for every three years of marketing (reporting rate of approximately two per ten million years of patient exposure);
+-	all of the patients had other risk factors for serotonin syndrome including the use of one or more known serotonergic agents, and age;
+-	there were no reports of a positive rechallenge and one report of a negative rechallenge;
+-	the reports generally had only minimal information concerning the event, the drug exposure, and/or the patient’s past medical history.
+Therefore while there are cases where a relationship to the donepezil therapy cannot be excluded, there is no single case that suggests donepezil therapy is the precipitating factor in the development of serotonin syndrome.
+
+Conclusion
+The very rare reports of serotonin syndrome in patients who were receiving both a pro- serotonergic agent and donepezil contain multiple confounders. The rate of reporting is consistent with these events being due solely to the SSRI/SNRI given the high concomitant use of such agents in the population receiving donepezil therapy. The currently available data, including the lack of evidence suggesting that donepezil increases serotonin, either directly or through a pharmacokinetic interaction, does not suggest donepezil therapy is associated with an increased risk of serotonin syndrome. Reports of serotonin syndrome will continue to be monitored closely.
+I.	Surick, MD, MPH Eisai Inc. Woodcliff Lake, NJ
+United States, December 2011.
+
+References
+1.	Querfurth, H., LaFerla, F. Alzheimer’s Disease. N Engl J Med 2010;362:329-44.
+2.	Boyer, E., Sharron, M. The Serotonin Syndrome. N Engl J Med 2005;352:1112- 20.
+3.	Selective serotonin reuptake inhibitor poisoning: An evidence-based consensus
+ 
+guideline for out-of-hospital management, Clinical Toxicology, 45:4, 315-332.
+4.	Zhu, C. et al. Utilization of Antihypertensives, Antidepressants, Antipsychotics and Hormones in Alzheimer Disease. Alzheiemer Disease and Associated Disorders. 2011:25(2): 144- 148.
+5.	Giacobini E, Zhu X D, Williams E, Sherman KA. The effect of the selective reversible acetylcholinesterase inhibitor E2020 on extracellular acetylcholine and biogenic amine levels in rat cortex. Neuropharmacology. February 1996; 35(2):205-11.
+6.	Summary of Product Characteristics, June 2011.
+7.	Tiseo PJ, Perdomo CA, Friedhoff LT. Metabolism and elimination of 14C- donepezil in healthy volunteers: a single- dose study. Br J Clin Pharmacol 1998; 46 (Suppl. 1): 19–24.
+8.	Tiseo PJ, Perdomo CA, Friedhoff LT. Concurrent administration of donepezil HCl and cimetidine: assessment of pharmacokinetic changes following single and multiple doses. Br J Clin Pharmacol 1998; 4 6(Suppl. 1): 25–9.
+9.	Tiseo PJ, Perdomo CA, Friedhoff LT. Concurrent administration of donepezil HCl and ketoconazole: assessment of pharmacokinetic changes following single and multiple doses. Br J Clin Pharmacol 1998; 46 (Suppl. 1): 30–4.
+10.	Nagy, C. et al. Concurrent administration of donepezil HCl and sertraline HCl in healthy volunteers: assessment of pharmacokinetic changes and safety following single and multiple oral doses. Br J Clin Pharmacol. November 2004; 58 (s1): 25–33.
+11.	Data available in-house.
+12.	Data available in-house.
+13.	Manufacturer’s International Adverse Event database.
+-""" ;
+                   rdfs:label "Response from MAH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#SARI
+:SARI rdf:type owl:NamedIndividual ,
+               OpenPVSignal:DrugClass ;
+      OpenPVSignal:has_ATC_code "N06AX" ;
+      rdfs:label "SARI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#SSRIs
+:SSRIs rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_ATC_code "N06AB" ;
+       rdfs:label "SSRIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Serotonin_syndrome
+:Serotonin_syndrome rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Free_text_reporting_element ;
+                    OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                    mp:references :Ref.5 ,
+                                  :Ref.6 ;
+                    OpenPVSignal:has_content """Serotonin syndrome is a potentially life-threatening reaction that may occur in patients  using drugs that elevate the serotonin levels. The  most common drugs causing this reaction are  monoamine oxidase inhibitors (MAO-inhibitors),  tri-cyclic antidepressants (TCAs) and selective  serotonin reuptake inhibitors (SSRIs), SNRIs and  SARIs.5 The excess serotonin activity in receptors  in the central nervous system and peripheral  serotonin receptors results in myoclonus,  hyperreflexia, diaphoresis, mental changes,  autonomic symptoms, shivering, tremor and in  severe cases neuromuscular rigidity, delirium and  life-threatening hyperthermia. Complications are  common and include dehydration, infection,  respiratory and renal failure and disseminated  intravascular coagulation. 5,6 The primary  treatment consists of discontinuation of suspected drugs and sometimes administration of serotonin receptor antagonists. The symptoms of the syndrome usually resolve within 24 hours if 
+discontinuing the causative drugs, but confusion may last for days and complications may result in death.6""" ;
+                    rdfs:label "Serotonin syndrome pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Studies_in_rats_and_mice
+:Studies_in_rats_and_mice rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001197 ;
+                          OpenPVSignal:refers_to_drug :donepezil ;
+                          mp:references :Ref.3 ,
+                                        :Ref.4 ;
+                          OpenPVSignal:has_content "An in vitro study on rats showed changes in serotonin levels by acute doses of donepezil3 and another study on mice showed that twice daily treatment of donepezil for two weeks significantly increased striatal 5HT2A mRNA levels.4" ,
+                                                   "Studies in rats and mice show effects on serotonin or serotonin receptors in brain but the effect in humans remains unclear.3,4" ;
+                          rdfs:label "Studies in rats and mice" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Donepezil is a specific and reversible inhibitor of acetylcholinesterase used to treat Alzheimer’s disease. A number of combinations of donepezil and the adverse reaction serotonin syndrome appeared in VigiBase. This is not listed for donepezil. The reports showed that different antidepressants like serotonin reuptake inhibitors SSRIs, selective serotonin-norepinephrine reuptake inhibitors (SNRIs) and a serotonin antagonist and reuptake inhibitor (SARI) were co- reported with donepezil suspected to cause this effect. An extended search was made to investigate a possible interacting effect between donepezil and antidepressants. After removing suspected duplicates 13 reports from six countries remained. In four cases donepezil was added to pre-existing SSRI/SNRI/SARI treatment and in five cases SSRI/SNRI/ SARI was added to pre-existing donepezil treatment. In three of the four cases where donepezil was added to pre-existing treatment the reporters suspected an interaction between donepezil and the other drug/drugs.
+Studies in the brain of mice and rats have shown that donepezil seem to affect serotonin levels and serotonin receptors, however there is limited information in literature about donepezil’s serotonergic effects in human brain. These spontaneous reports from several countries indicate that donepezil might have an effect on serotonin levels in human brain and that there might be an interacting effect of this drug and SSRIs/SNRIs/SARIs.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetForSerotonineSyndromeInTheLiterature
+:TimeToOnsetForSerotonineSyndromeInTheLiterature rdf:type owl:NamedIndividual ,
+                                                          obo:OAE_0001197 ;
+                                                 mp:references :Ref.9 ;
+                                                 OpenPVSignal:has_content "The time to onset of the reaction seem to be plausible when comparing to a post- marketing surveillance study aiming to identify serotonin syndrome cases in United Kingdom in the late nineties. Out of 19 patients identified with serotonin syndrome the time to onset was less than 14 days for all.9" ;
+                                                 rdfs:label "Time to onset for serotonine syndrome in the literature" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient1
+:TimeToOnsetPatient1 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "1 day" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 1 ;
+                     rdfs:label "Time to onset patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient2
+:TimeToOnsetPatient2 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "up to1 month" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "months" ;
+                     <http://www.w3.org/2006/time#numericDuration> 1 ;
+                     <http://www.w3.org/2006/time#numericPosition> 1 ;
+                     rdfs:label "Time to onset patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient3
+:TimeToOnsetPatient3 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "4 days" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 4 ;
+                     rdfs:label "Time to onset patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient5
+:TimeToOnsetPatient5 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "15 days" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 15 ;
+                     rdfs:label "Time to onset patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient6
+:TimeToOnsetPatient6 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "Same day as trazodone was added to preexisting donepezil treatment." ;
+                     rdfs:label "Time to onset patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#TimeToOnsetPatient7
+:TimeToOnsetPatient7 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     OpenPVSignal:has_content "3 days" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 3 ;
+                     rdfs:label "Time to onset patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#acuteOnsetOfChills
+:acuteOnsetOfChills rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10008531 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Chills" ;
+                    rdfs:label "acute onset of chills" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R451" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#alteredMentalStatus
+:alteredMentalStatus rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10048294 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Mental status changes" ;
+                     rdfs:label "allerted mental status" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#citalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#confusion
+:confusion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F448" ;
+           OpenPVSignal:has_MedDRA_code 10010305 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+           rdfs:label "confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#convulsionsNos
+:convulsionsNos rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R569" ;
+                OpenPVSignal:has_MedDRA_code 10039906 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Seizure" ;
+                rdfs:label "convulsions nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#cramping
+:cramping rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10011293 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Cramps" ;
+          rdfs:label "cramping" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#cyamemazine
+:cyamemazine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AA06" ;
+             rdfs:label "cyamemazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#decreasedAlertness
+:decreasedAlertness rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10049875 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Alertness decreased" ;
+                    rdfs:label "decreased alertness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#decreasedAppetite
+:decreasedAppetite rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R630" ;
+                   OpenPVSignal:has_MedDRA_code 10061428 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+                   rdfs:label "decreased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#dehydration
+:dehydration rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "E860" ;
+             OpenPVSignal:has_MedDRA_code 10012174 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Dehydration" ;
+             rdfs:label "dehydration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#delirium
+:delirium rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F05" ;
+          OpenPVSignal:has_MedDRA_code 10012218 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Delirium" ;
+          rdfs:label "delirium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#disorientation
+:disorientation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R411" ;
+                OpenPVSignal:has_MedDRA_code 10013395 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Disorientation" ;
+                rdfs:label "disorientation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#donepezil
+:donepezil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_mechanism :MechanismOfDonepezil ,
+                                      :potential_mechanism_of_interaction ;
+           OpenPVSignal:has_ATC_code "N06DA02" ,
+                                     "N06DA52" ,
+                                     "N06DA53" ;
+           rdfs:label "donepezil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#donepezilUsage
+:donepezilUsage rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug_Usage ;
+                OpenPVSignal:concerns_indication_for_use :Alzheimer ;
+                OpenPVSignal:refers_to_drug :donepezil ;
+                rdfs:label "donepezil usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#duloxetine
+:duloxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX21" ;
+            rdfs:label "duloxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#dyskinesia
+:dyskinesia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G24.01 " ;
+            OpenPVSignal:has_MedDRA_code 10013916 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Dyskinesia" ;
+            rdfs:label "dyskinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#dysphagia
+:dysphagia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "G24" ;
+           OpenPVSignal:has_MedDRA_code 10013950 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dysphagia" ;
+           rdfs:label "dysphagia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#elevationOfBodyTemp
+:elevationOfBodyTemp rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10020843 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Hyperthermia" ;
+                     rdfs:label "elevation of body temperature" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#escitalopram
+:escitalopram rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N06AB10" ;
+              rdfs:label "escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#extrapyramidalSyndrome
+:extrapyramidalSyndrome rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "G259" ;
+                        OpenPVSignal:has_MedDRA_code 10015832 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Extrapyramidal disorder" ;
+                        rdfs:label "extrapyramidal syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#failureToThrive
+:failureToThrive rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R6251" ;
+                 OpenPVSignal:has_MedDRA_code 10016165 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Failure to thrive" ;
+                 rdfs:label "failure to thrive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R509" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#flecainide
+:flecainide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01BC04" ;
+            rdfs:label "flecainide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#fluoxetine
+:fluoxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB03" ,
+                                      "N06CA03" ;
+            rdfs:label "fluoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#gaitInstability
+:gaitInstability rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R26" ;
+                 OpenPVSignal:has_MedDRA_code 10017577 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Gait disturbance" ;
+                 rdfs:label "gait instability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#hallucinations
+:hallucinations rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R443" ;
+                OpenPVSignal:has_MedDRA_code 10019063 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+                rdfs:label "hallucinations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#hyperreflexia
+:hyperreflexia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R29.2" ;
+               OpenPVSignal:has_MedDRA_code 10020745 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperreflexia" ;
+               rdfs:label "hyperreflexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#hypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#hyperthermia
+:hyperthermia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R50.9" ;
+              OpenPVSignal:has_MedDRA_code 10020843 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hyperthermia" ;
+              rdfs:label "hyperthermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#infoForReportTrazodone
+:infoForReportTrazodone rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Case_Report_Information ;
+                        OpenPVSignal:refers_to_patient :Patient6 ;
+                        OpenPVSignal:has_content "In one of these the SARI trazodone was withdrawn but myoclonus persisted for over 24 hours which lead to withdrawal of donepezil as well, two days later. No more information exists on the event but the reporter listed the patient as recovering." ;
+                        rdfs:label "info for report trazodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#maoInhibitors
+:maoInhibitors rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:DrugClass ;
+               OpenPVSignal:has_ATC_code "N06AF " ;
+               rdfs:label "MAO inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#muscleRigidity
+:muscleRigidity rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "M629" ;
+                OpenPVSignal:has_MedDRA_code 10028330 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Muscle rigidity" ;
+                rdfs:label "muscle rigidity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#myoclonus
+:myoclonus rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "G253" ;
+           OpenPVSignal:has_MedDRA_code 10028622 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Myoclonus" ;
+           rdfs:label "myoclonus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#paroxetine
+:paroxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB05" ;
+            rdfs:label "paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport1
+:possibleConfoundersForReport1 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age" ;
+                               rdfs:label "possible confounders for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport11
+:possibleConfoundersForReport11 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "age, paroxetine," ;
+                                rdfs:label "possible confounders for report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport12
+:possibleConfoundersForReport12 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "age" ;
+                                rdfs:label "possible confounders for report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport2
+:possibleConfoundersForReport2 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age" ;
+                               rdfs:label "possible confounders for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport3
+:possibleConfoundersForReport3 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age" ;
+                               rdfs:label "possible confounders for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport5
+:possibleConfoundersForReport5 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age, fluoxetine, diltiazem (CYP2D6 metabolized)" ;
+                               rdfs:label "possible confounders for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport6
+:possibleConfoundersForReport6 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age" ;
+                               rdfs:label "possible confounders for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport7
+:possibleConfoundersForReport7 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age, mirtazapine," ;
+                               rdfs:label "possible confounders for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#possibleConfoundersForReport9
+:possibleConfoundersForReport9 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               OpenPVSignal:has_content "age, urinary tract infection" ;
+                               rdfs:label "possible confounders for report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#potential_mechanism_of_interaction
+:potential_mechanism_of_interaction rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Adverse_Effect_Mechanism ;
+                                    mp:references :Ref.1 ;
+                                    OpenPVSignal:has_content "In vitro studies have shown that the cytochrome  P450 isoenzymes CYP3A4 and to some extent  CYP2D6 are involved in the metabolism of  donepezil. Interaction studies in vitro have also  shown that drugs like ketokonazol and kinidin  (inhibitors of CYP3A4 and CYP2D6 respectively)  inhibits the metabolism of donepezil. 1 This means  that these drugs and other inhibitors of these  enzymes could inhibit the metabolism of donepezil  and thus lead to higher concentrations of the drug." ;
+                                    rdfs:label "potential mechanism of interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :Serotonin_syndrome ,
+                                                   :SummaryContent ,
+                                                   <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Alzheimer's_disease_pathogenesis> ;
+          OpenPVSignal:is_supported_by_individual_case_report :report1 ,
+                                                              :report10 ,
+                                                              :report11 ,
+                                                              :report12 ,
+                                                              :report13 ,
+                                                              :report2 ,
+                                                              :report3 ,
+                                                              :report4 ,
+                                                              :report5 ,
+                                                              :report6 ,
+                                                              :report7 ,
+                                                              :report8 ,
+                                                              :report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :reportWithDechallenge ,
+                                                          :reportsOfDonepezilAndSerotoninSyndrome ,
+                                                          :reportsWithFatalOutcome ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> ;
+          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+          OpenPVSignal:refers_to_class :SSRIs ,
+                                       :snri ;
+          OpenPVSignal:refers_to_drug :donepezil ;
+          mp:supportedBy :LiteratureAndLabelling ;
+          mp:supportedByData :Age_as_confounder ,
+                             :Alzheimer_as_confounder ,
+                             :Studies_in_rats_and_mice ,
+                             :TimeToOnsetForSerotonineSyndromeInTheLiterature ;
+          OpenPVSignal:initially_identified_on "01/04/2012" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#repeatedFingerMovement
+:repeatedFingerMovement rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10042004 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Stereotyped repetitive movements" ;
+                        rdfs:label "repeated finger movement" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report1
+:report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport1 ;
+         OpenPVSignal:refers_to_adverse_effect :hyperreflexia ,
+                                               :serotoninSyndrome ,
+                                               :tremor ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :citalopram ,
+                                                     :donepezil ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :flecainide ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient1 ;
+         rdfs:label "report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report10
+:report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :confusion ,
+                                                :decreasedAppetite ,
+                                                :delirium ,
+                                                :serotoninSyndrome ,
+                                                :urinaryIncontinence ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :citalopram ,
+                                                      :donepezil ;
+          rdfs:label "report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report11
+:report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport11 ;
+          OpenPVSignal:refers_to_adverse_effect :acuteOnsetOfChills ,
+                                                :alteredMentalStatus ,
+                                                :decreasedAppetite ,
+                                                :elevationOfBodyTemp ,
+                                                :serotoninSyndrome ,
+                                                :urinaryIncontinence ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                      :mirtazapine ;
+          rdfs:label "report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report12
+:report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport12 ;
+          OpenPVSignal:refers_to_adverse_effect :diarrhea ,
+                                                :fever ,
+                                                :gaitInstability ,
+                                                :hyperreflexia ,
+                                                :myoclonus ,
+                                                :serotoninSyndrome ,
+                                                :tremor ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :citalopram ,
+                                                      :donepezil ,
+                                                      :risperidone ;
+          rdfs:label "report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report13
+:report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :confusion ,
+                                                :hypertension ,
+                                                :serotoninSyndrome ,
+                                                :sweating ;
+          OpenPVSignal:refers_to_interacting_drug :donepezil ,
+                                                  :paroxetine ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          rdfs:label "report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report2
+:report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport2 ;
+         OpenPVSignal:refers_to_adverse_effect :dyskinesia ,
+                                               :fever ,
+                                               :rhabdomyolysis ,
+                                               :serotoninSyndrome ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :sertraline ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient2 ;
+         rdfs:label "report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report3
+:report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport3 ;
+         OpenPVSignal:refers_to_adverse_effect :agitation ,
+                                               :confusion ,
+                                               :seizureAnoxic ,
+                                               :serotoninSyndrome ,
+                                               :tremor ;
+         OpenPVSignal:refers_to_interacting_drug :donepezil ,
+                                                 :mirtazapine ,
+                                                 :venlafaxine ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient3 ;
+         rdfs:label "report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report4
+:report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :paroxetine ;
+         rdfs:label "report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report5
+:report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport5 ;
+         OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+         OpenPVSignal:refers_to_interacting_drug :donepezil ,
+                                                 :fluoxetine ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :cyamemazine ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient5 ;
+         rdfs:label "report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report6
+:report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport6 ;
+         OpenPVSignal:refers_to_adverse_effect :fatigue ,
+                                               :myoclonus ,
+                                               :serotoninSyndrome ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :trazodone ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient6 ;
+         rdfs:label "report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report7
+:report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport7 ;
+         OpenPVSignal:refers_to_adverse_effect :disorientation ,
+                                               :dysphagia ,
+                                               :extrapyramidalSyndrome ,
+                                               :hallucinations ,
+                                               :repeatedFingerMovement ,
+                                               :rigor ,
+                                               :serotoninSyndrome ,
+                                               :urinaryRetention ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :duloxetine ;
+         OpenPVSignal:time_to_onset :TimeToOnsetPatient7 ;
+         rdfs:label "report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report8
+:report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :confusion ,
+                                               :convulsionsNos ,
+                                               :cramping ,
+                                               :hypertension ,
+                                               :hyperthermia ,
+                                               :muscleRigidity ,
+                                               :serotoninSyndrome ,
+                                               :shortTermMemoryLoss ,
+                                               :tensing ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :venlafaxine ;
+         rdfs:label "report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#report9
+:report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :possibleConfoundersForReport9 ;
+         OpenPVSignal:refers_to_adverse_effect :decreasedAlertness ,
+                                               :dehydration ,
+                                               :failureToThrive ,
+                                               :fever ,
+                                               :serotoninSyndrome ,
+                                               :urinaryTractInfection ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :donepezil ,
+                                                     :escitalopram ;
+         rdfs:label "report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportWithDechallenge
+:reportWithDechallenge rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> ;
+                       OpenPVSignal:has_count 12 ;
+                       OpenPVSignal:refers_to_challenge_type "Dechallenge" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "report with dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfDonepezilAndSerotoninSyndrome
+:reportsOfDonepezilAndSerotoninSyndrome rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> ;
+                                        OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                        OpenPVSignal:refers_to_drug :donepezil ;
+                                        OpenPVSignal:has_count 11 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports of donepezil and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsWithFatalOutcome
+:reportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> ;
+                                OpenPVSignal:has_count 11 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#rhabdomyolysis
+:rhabdomyolysis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "M6282" ;
+                OpenPVSignal:has_MedDRA_code 10039020 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Rhabdomyolysis" ;
+                rdfs:label "rhabdomyolysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#rigor
+:rigor rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_MedDRA_code 10039177 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Rigors" ;
+       rdfs:label "rigor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#risperidone
+:risperidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AX08" ;
+             rdfs:label "risperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#seizureAnoxic
+:seizureAnoxic rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "G40.89" ;
+               OpenPVSignal:has_MedDRA_code 10039907 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Seizure anoxic" ;
+               rdfs:label "seizure anoxic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#serotoninSyndrome
+:serotoninSyndrome rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "T43221A" ;
+                   OpenPVSignal:has_MedDRA_code 10040108 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Serotonin syndrome" ;
+                   rdfs:label "serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#shortTermMemoryLoss
+:shortTermMemoryLoss rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10040602 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Short-term memory loss" ;
+                     rdfs:label "short term memory loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#snri
+:snri rdf:type owl:NamedIndividual ,
+               OpenPVSignal:DrugClass ;
+      OpenPVSignal:has_ATC_code "N06AF/N06AX" ;
+      rdfs:label "SNRIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#sweating
+:sweating rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R61" ;
+          OpenPVSignal:has_MedDRA_code 10020642 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+          rdfs:label "sweating" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#tensing
+:tensing rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10043268 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Tension" ;
+         rdfs:label "tensing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#trazodone
+:trazodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06AX05" ;
+           rdfs:label "trazodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R251" ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#tricyclicAntidepressantsTcas
+:tricyclicAntidepressantsTcas rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:DrugClass ;
+                              OpenPVSignal:has_ATC_code "N06AA" ;
+                              rdfs:label "tricyclic antidepressants tcas" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#urinaryIncontinence
+:urinaryIncontinence rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R39.81" ;
+                     OpenPVSignal:has_MedDRA_code 10046543 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Urinary incontinence" ;
+                     rdfs:label "urinary incontinence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#urinaryRetention
+:urinaryRetention rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R33.9" ;
+                  OpenPVSignal:has_MedDRA_code 10046555 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Urinary retention" ;
+                  rdfs:label "urinary retention" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#urinaryTractInfection
+:urinaryTractInfection rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "N390 " ;
+                       OpenPVSignal:has_MedDRA_code 10046571 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Urinary tract infection" ;
+                       rdfs:label "urinary tract infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Alzheimer's_disease_pathogenesis
+<http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Alzheimer's_disease_pathogenesis> rdf:type owl:NamedIndividual ,
+                                                                                                                                 OpenPVSignal:Free_text_reporting_element ;
+                                                                                                                        OpenPVSignal:refers_to_adverse_effect :Alzheimer ;
+                                                                                                                        mp:references :Ref.2 ;
+                                                                                                                        OpenPVSignal:has_content "The pathogenesis of Alzheimer’s disease has been linked to the deficiency of the neurotransmitter acetylcholine and the acetylcholinesterase inhibitors were subsequently introduced as treatment for Alzheimer’s. Its efficacy is believed to be attained through the augmentation of acetylcholine-mediated synaptic transmission. It is also shown that this type of drug protects cells from the toxicity of free radicals and β–amyloid-induced injury.2" ;
+                                                                                                                        rdfs:label "Alzheimer's disease pathogenesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Donepezil_–_SSRI_and_SNRI_–_interaction_and_Serotonin_syndrome
+<http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#Donepezil_–_SSRI_and_SNRI_–_interaction_and_Serotonin_syndrome> rdf:type owl:NamedIndividual ,
+                                                                                                                                                               OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                                                                      OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                                                                                      OpenPVSignal:has_creation_date "01/04/2012" ;
+                                                                                                                                                      OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                                                                                                                                      rdfs:label "Donepezil – SSRI and SNRI – interaction and Serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome
+<http://purl.org/OpenPVSignal/Signals/2012_2_donepezil_interaction_seretonin_syndrome#reportsOfdonepezil/SNRI/SSRI/SARIAndSerotoninSyndrome> rdf:type owl:NamedIndividual ,
+                                                                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                                                                             OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                                                                                                                             OpenPVSignal:refers_to_class :SARI ,
+                                                                                                                                                                          :SSRIs ,
+                                                                                                                                                                          :snri ;
+                                                                                                                                             OpenPVSignal:has_count 13 ;
+                                                                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                             rdfs:label "reports of donepezil/SNRI/SSRI/SARI and serotonin syndrome" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:confusionalState OpenPVSignal:has_ICD_code "F448" ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+                  OpenPVSignal:has_MedDRA_code 10010305 ;
+                  rdfs:label "confusional state" .
+
+
+:hallucination rdfs:label "hallucination" ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+               OpenPVSignal:has_MedDRA_code 10019063 ;
+               OpenPVSignal:has_ICD_code "R443" .
+
+
+:hypertensionNos OpenPVSignal:has_ICD_code "I10" ;
+                 OpenPVSignal:has_MedDRA_code 10020772 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+                 rdfs:label "hypertension nos" .
+
+
+:sweatingIncreased OpenPVSignal:has_MedDRA_code 10020642 ;
+                   OpenPVSignal:has_ICD_code "R61" ;
+                   rdfs:label "sweating increased" ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" .
+
+
+:tremulousness OpenPVSignal:has_ICD_code "R251" ;
+               rdfs:label "tremulousness" ;
+               OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+               OpenPVSignal:has_MedDRA_code 10044565 .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

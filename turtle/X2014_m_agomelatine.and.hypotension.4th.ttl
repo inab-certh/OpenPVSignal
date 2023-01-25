@@ -1,0 +1,1907 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                   mp: ;
+                                                                       rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255513/"^^xsd:anyURI ;
+                                                                       rdfs:label "Agomelatine and Hypotension"^^xsd:Literal ;
+                                                                       owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_average_age
+OpenPVSignal:has_average_age rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#AgomelatineUsage
+:AgomelatineUsage rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug_Usage ;
+                  OpenPVSignal:concerns_indication_for_use :depression ;
+                  OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                  OpenPVSignal:refers_to_dosage :dosage_of_agomelatine ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  rdfs:label "Agomelatine usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Agomelatine_and_Hypotension
+:Agomelatine_and_Hypotension rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                             OpenPVSignal:refers_to_signal :pvSignal ;
+                             mp:publishedBy :Uppsala_Monitoring_Centre ;
+                             OpenPVSignal:has_creation_date "01/07/2014" ;
+                             OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                             rdfs:label "Agomelatine and Hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#BloodPressureReadings
+:BloodPressureReadings rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Case_Report_Information ;
+                       OpenPVSignal:has_content "Blood pressure readings were provided for four patients regularly treated (90/60 mmHg; 74/40 mmHg; 100/75 mmHg; 110/70 mmHg) and for three patients with an intentional overdose (70/40 mmHg; 70/(not available) mmHg; 106/45 mmHg)." ;
+                       rdfs:label "Blood pressure readings" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#CamposData
+:CamposData rdf:type owl:NamedIndividual ,
+                     obo:OAE_0001197 ;
+            OpenPVSignal:refers_to_adverse_effect :agomelatine ,
+                                                  :bloodPressureDecreased ;
+            mp:references :Ref3 ,
+                          :Ref4 ;
+            OpenPVSignal:has_content "Campos et al studied the effect of exogenous melatonin in normotensive rats: a continuous infusion of melatonin induced a significant decrease in blood pressure as well as a reduction in heart rate, hinting at a blunting of the baroreceptor reflex through the area postrema. Ablation of the area postrema, on the other hand, abolished the melatonin effects." ;
+            rdfs:label "Campos data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ,
+                            OpenPVSignal:Discussion ;
+                   OpenPVSignal:has_content """The combination agomelatine — hypotension does not stand out statistically in VigiBase. However, the published literature on melatonin (and to a significantly lesser extent on melatoninergic drugs) supports a possible, multifactorial involvement of these compounds in the regulation of arterial pressure.
+The analysed ICSRs point at a positive causal relationship based on a consistent time to onset (the two outliers with longer times to onset might be explained by a concurrent reported infection that might have triggered the hypotensive episode in one case and an extensive comedication with missing therapy dates in the other), the high number of positive dechallenges reported and the patient experiencing a positive rechallenge.
+In conclusion, we consider hypotension under agomelatine a signal that should be taken into consideration when prescribing this medication.""" ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#EuropeanSPCForAgomelatine
+:EuropeanSPCForAgomelatine rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Structured_Product_Labels_information ;
+                           OpenPVSignal:refers_to_drug :agomelatine ;
+                           OpenPVSignal:has_content "Hypotension/orthostatic hypotension is not listed in the European SPC for agomelatine. According to the same text, agomelatine had neutral effect on heart rate and blood pressure in clinical trials." ;
+                           rdfs:label "European SPC for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Hypotension_pathobiology
+:Hypotension_pathobiology rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0000005 ;
+                          OpenPVSignal:refers_to_adverse_effect :hypotension ;
+                          OpenPVSignal:has_content "Hypotension is a physiologic state characterized by abnormally low blood pressure. As normal blood pressure varies with age, there is no absolute threshold to define hypotension. In a younger adult hypotension might be defined as systolic pressure <90 mmHg and diastolic pressure <60 mmHg. As blood pressure is influenced by different factors such as cardiac output, vascular resistance and venous return and pressure, any change in one of these variables can lead to fluctuations in blood pressure." ;
+                          rdfs:label "Hypotension pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#IC025ForHypotensionAndAgomelatine
+:IC025ForHypotensionAndAgomelatine rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                   OpenPVSignal:refers_to_adverse_effect :hypotension ;
+                                   OpenPVSignal:refers_to_drug :agomelatine ;
+                                   OpenPVSignal:refers_to_information_component :ICForHypotensionAndAgomelatine ;
+                                   OpenPVSignal:has_value -1.16 ;
+                                   rdfs:label "IC025 for hypotension and agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#IC025ForHypotensionPosturalAndAgomelatine
+:IC025ForHypotensionPosturalAndAgomelatine rdf:type owl:NamedIndividual ,
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                           OpenPVSignal:refers_to_adverse_effect :hypotensionPostural ;
+                                           OpenPVSignal:refers_to_drug :agomelatine ;
+                                           OpenPVSignal:refers_to_information_component :ICForHypotensionPosturalAndAgomelatine ;
+                                           OpenPVSignal:has_value -1.08 ;
+                                           rdfs:label "IC025 for hypotension postural and agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#ICForHypotensionAndAgomelatine
+:ICForHypotensionAndAgomelatine rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                OpenPVSignal:refers_to_adverse_effect :hypotension ;
+                                OpenPVSignal:refers_to_drug :agomelatine ;
+                                OpenPVSignal:has_value -0.4 ;
+                                rdfs:label "IC for hypotension and agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#ICForHypotensionPosturalAndAgomelatine
+:ICForHypotensionPosturalAndAgomelatine rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :hypotensionPostural ;
+                                        OpenPVSignal:refers_to_drug :agomelatine ;
+                                        OpenPVSignal:has_value 0.66 ;
+                                        rdfs:label "IC for hypotension postural and agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref1 ,
+                                   :Ref2 ;
+                     OpenPVSignal:has_content """Introduction
+Agomelatine is a MT1 and MT2 melatonin receptor agonist and a serotonin (5-HT2c) antagonist. It is approved in Europe (2009), Australia and Latin American countries for the treatment of depression in patients over 18 years in a dosage of 25-50 mg orally once daily. It is not recommended in patients under 18 years since safety and efficacy have not been established in this age group. Agomelatine has a positive effect on the resynchronisation of circadian rhythms in animal models of circadian rhythm disruption and has shown efficacy in placebo controlled trials. The results from seven clinical trials involving SSRIs as comparators were less convincing with non- inferiority being shown in four and superiority in two trials.1 No improvement was observed in very elderly patients (>75 years).
+The safety profile of agomelatine requires regular monitoring of liver function in all patients treated. Agomelatine is metabolised mainly by cytochrome P450 1A2 (CYP1A2) (90%) and by CYP2C9/19
+(10%). Caution must therefore be exercised when inhibitors of these two isoenzymes are prescribed concomitantly.1
+Agomelatine is not approved for marketing in the USA.
+Hypotension is a physiologic state characterized by abnormally low blood pressure. As normal blood pressure varies with age, there is no absolute threshold to define hypotension. In a younger adult hypotension might be defined as systolic pressure <90 mmHg and diastolic pressure <60 mmHg. As blood pressure is influenced by different factors such as cardiac output, vascular resistance and venous return and pressure, any change in one of these variables can lead to fluctuations in blood pressure.
+Statistically disproportional reporting has been observed in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase® for syncope under agomelatine treatment. An assessment of these reports revealed that in most cases the reported ADR term syncope did not meet the case definition criteria. These ICSRs however hinted at a possible association between ago- melatine and hypotension and it was decided to investigate this combination despite negative IC values (hypotension IC -0.4, IC025 -1.16 and hypotension postural IC 0.66, IC025 -1.08).
+""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref3 ,
+                                      :Ref4 ;
+                        OpenPVSignal:has_content """Literature and Labelling
+Hypotension/orthostatic hypotension is not listed in the European SPC for agomelatine. According to the same text, agomelatine had neutral effect on heart rate and blood pressure in clinical trials.
+The effect of melatonin and melatoninergic drugs on the cardiovascular system has been investigated in animal models and human studies, but the published data concerning melatoninergic drugs is unfortunately rather scarce compared to data from studies performed with melatonin itself.
+Campos et al studied the effect of exogenous melatonin in normotensive rats: a continuous infusion of melatonin induced a significant decrease in blood pressure as well as a reduction in heart rate, hinting at a blunting of the baroreceptor reflex through the area postrema. Ablation of the area postrema, on the other hand, abolished the melatonin effects.
+Melatonin and piromelatine showed an antihypertensive effect when administered to hypertensive rats3 and slow-release melatonin significantly decreased nocturnal blood pressure in normo- and hypertensive middle aged women.4
+Melatoninergic drugs were developed in the first place to compensate for the short half life of melatonin and to achieve higher receptor affinity. Conclusions derived from studies with melatonin might not be unrestrictedly applicable to all melatonin receptor agonists. In a review of the cardiovascular effects of melatonin receptor agonists Paulis et al postulate different possible mechanisms that could work towards a reduction in blood pressure: activation of MT1 and MT2 receptors is regarded as having chronobiotic as well as sympatholytic effects.""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#MechanismContent
+:MechanismContent rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Mechanism ;
+                  mp:references :Ref1 ;
+                  OpenPVSignal:has_content """Agomelatine has a positive effect on the resynchronisation of circadian rhythms in animal models of circadian rhythm disruption and has shown efficacy in placebo controlled trials. The results from seven clinical trials involving SSRIs as comparators were less convincing with non- inferiority being shown in four and superiority in two trials.1 No improvement was observed in very elderly patients (>75 years). The safety profile of agomelatine requires regular monitoring of liver function in all patients treated. Agomelatine is metabolised mainly by cytochrome P450 1A2 (CYP1A2) (90%) and by CYP2C9/19 (10%). Caution must therefore be exercised when inhibitors of these two isoenzymes are prescribed concomitantly.1 No improvement was observed in very elderly patients (>75 years). 
+The safety profile of agomelatine requires regular monitoring of liver function in all patients treated. Agomelatine is metabolised mainly by cytochrome P450 1A2 (CYP1A2) (90%) and by CYP2C9/19 (10%). Caution must therefore be exercised when inhibitors of these two isoenzymes are prescribed concomitantly.1""" ;
+                  rdfs:label "Mechanism content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 30 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 22 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 65 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 28 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 41 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 43 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 83 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 52 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 41 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 18 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient19
+:Patient19 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 51 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 52 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient20
+:Patient20 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 25 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 59 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 81 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 84 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 50 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Possible_ADR_mechanism_for_melatonin_agonists
+:Possible_ADR_mechanism_for_melatonin_agonists rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Adverse_Effect_Mechanism ;
+                                               OpenPVSignal:refers_to_adverse_effect :bloodPressureDecreased ;
+                                               OpenPVSignal:has_content "activation of MT1 and MT2 receptors is regarded as having chronobiotic as well as sympatholytic effects." ;
+                                               rdfs:label "Possible ADR mechanism for melatonin agonists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#PublishedDataOnAgomelatineAndBloodPressure
+:PublishedDataOnAgomelatineAndBloodPressure rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001197 ;
+                                            OpenPVSignal:refers_to_adverse_effect :bloodPressureDecreased ;
+                                            OpenPVSignal:refers_to_drug :melatonin ;
+                                            mp:references :Ref3 ,
+                                                          :Ref4 ;
+                                            OpenPVSignal:has_content "Melatonin and piromelatine showed an antihypertensive effect when administered to hypertensive rats3 and slow-release melatonin significantly decreased nocturnal blood pressure in normo- and hypertensive middle aged women." ;
+                                            rdfs:label "Published data on agomelatine and blood pressure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Ref1
+:Ref1 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "EU SPC for agomelatine (Valdoxan). URL: http://www ema.europa.eu/ema. Accessed: 7 February 2014." ;
+      rdfs:label "Ref 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Ref2
+:Ref2 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Campos LA, Cipolla-Neto J, Michehm LC. Melatonin modulates baroreflex control via area postrema. Brain and Behaviour.2013;3(2):171-7." ;
+      rdfs:label "Ref 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Ref3
+:Ref3 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Huang L, Zhang C, Hou Y, Laudon M, She M, Yang S. Blood pressure reducing effects of piromelatine and melatonin in spontaneously hypertensive rats. Eur Rev Med Pharmacol. 2013;17(18):2449-56." ;
+      rdfs:label "Ref 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Ref4
+:Ref4 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Cagnacci A, Cannoletta M, Renzi A, Baldassari F, Arangino S, Volpe A. Prolonged melatonin administration decreases nocturnal blood pressure in women. Am J Hypertens. Dec 2005;18(12 pt 1):1614-8." ;
+      rdfs:label "Ref 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Ref5
+:Ref5 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Paulis L, Simko F, Laudon M. Cardiovascular effects of melatonin receptor agonists. Expert Opin Investig Drugs. 2012;21(11):1661-78" ;
+      rdfs:label "Ref 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Reponse_from_Servier
+:Reponse_from_Servier rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                      OpenPVSignal:refers_to_pharmacovigilance_signal_report :Agomelatine_and_Hypotension ;
+                      OpenPVSignal:has_content """Response from Servier 
+Regarding the signal ”hypotension”, all sources were considered and are presented thereafter:
+Pharmacological Data
+During agomelatine safety pharmacology studies, haemodynamic parameters have been investigated in animals:
+In rats, agomelatine (up to 12.5mg/kg i.p.) did not modify mean systolic arterial blood pressure up to 2h following administration (112+4 mmHg and 118+8 mmHg for vehicle and agomelatine- treated rats respectively at 30min).
+In monkeys, up to the cumulative dose of agomelatine of 32mg/kg i.v., mean systemic arterial blood pressure and mean arterial blood flow remained unchanged. Resistance in each vascular bed was unaltered. No safety concerns emerge from these animal studies.
+Agomelatine is acting through melatonergic and 5- HT2C antagonist properties. As concern, additional pharmacological data showed that in animals (1,2,3) and/or humans (4) with hypertension, melatonin or 5HT2c/5HT2B antagonists could induce an antihypertensive effect, however no significant effect on blood pressure was observed under normal conditions (5).
+The analysis was performed in patients included in the agomelatine development program. This overall safety set included 14377 patients: 8693 on agomelatine, 1886 on placebo (and 3798 on comparators). The incidence of emergent hypotension was similar in the agomelatine and placebo groups, 0.40% and 0.58% respectively.
+
+Post-Marketing data
+From Market Authorisation (19-FEB-2009) up to 19-FEB-2014 (PSUR 7 data-lock point), 66 cases were reported: 38 Hypotension, 16 Orthostatic
+ 
+
+hypotension, 11 Blood pressure decreased and 1 Blood pressure ambulatory decreased i.e. a reported incidence of 5.4 / 100 000 patient-years. Out of these 66 cases, 9 occurred in a context of drug overdose with agomelatine. These 9 cases represent 4.3% of the 207 cases of agomelatine overdose received since MA. Eight cases occurred in a context of multiple drug overdose, with at least one concomitant drug known to induce hypotension (venlafaxine, desvenlafaxine, bisoprolol, duloxetine, hydroxyzine, chlorpromazine, verapamil, pentoxifylline, ziprasidone, risperidone, mirtazapine), amongst which one occurred in association with alcohol poisoning.
+
+Clinical Trial Data
+One case occurred after a single intake of 700mg of agomelatine: the patient presented with dizziness, hypotension and vomiting leading to hospitalisation. Agomelatine was maintained at therapeutic dosage and hypotension did not reoccur. The amount of agomelatine varied from 200mg to 3500mg in these cases. Of note, the aglomelatine SmPC refers to an ingestion of 2450mg with out subsequent cardiovascular abnormalities.
+Amongst the 57 remaining cases:
+One case occurred after a single overdose of ivabradine for which hypotension is a listed event \"sensation\" of hypotension was reported in 5 cases in 25 cases of reported hypotension, no BP value was provided. In the 26 cases with BP values, hypotension was considered as non-severe (BP > 100/60 mmHg) in 11 cases. while in the remaining
+ 
+
+ 
+15 severe cases, dizziness (5), fatigue (5),
+syncope (4), presyncope (2) and fall (2), were associated with hypotension and one patient did not experience symptoms. Analysis of the 51 cases of reported hypotension (25 cases without BP value and 26 cases with BP value) is displayed thereafter (Table).
+Out of the 17 cases without alternative causes (absence of relevant medical history, context or concomitant drugs likely to induce hypotension): 4 cases were poorly documented, no BP value was provided in 9 cases and BP was greater or equal to 100/60 mmHg in 4 cases. Overall, the role of agomelatine in these 51 cases was assessed as doubtful. In conclusion, the analysis of post- marketing data showed: A moderate incidence of events: 5.4/100 000 PY, No cases with a \"likely\" or \"possible\" causality assessment. In most cases (34 cases - 67%), confounding factors such as relevant medical history and/or relevant context and/or concomitant treatment(s) known to induce these kinds of events were present.
+
+Thus the review of post-marketing did not raise new safety concerns. In summary, although melatonin or 5HT2C/ 5HT2B antagonists could induce an antihypertensive effect in animals and/or humans with hypertension, no safety concern regarding \"hypotension\" was raised with agomelatine from nonclinical data, clinical data or postmarketing surveillance. Thus the signal \"Hypotension\" was refuted and closed. This event will remain under close monitoring.
+
+References
+1.	Ferreira HS, Oliveira E, Faustino TN, de Castro e Silva E, Fregoneze JB. Effect of the activation of central 5-HT2C receptors by the 5-HT2C agonist mCPP on blood pressure and heart rate in the rat. Brain Research 2005;1040:64-72
+2.	Girouard H, Chulak C, Lejossec M, Lamontagne D, de Champlain J. Vasorelaxant effects of the chronic treatment with melatonin on mesenteric artery and aorta of spontaneously hypertensive rats. J Hypertens 2001;19:1369-77.
+3.	Nava M, Quiroz Y, Vaziri N, Rodriguez-Iturbe B. Melatonin reduces renal interstitial
+ 
+inflammation and improves hypertension in spontaneously hypertensive rats. Am J Physiol Renal Physiol. 2003;284:F447-F454 .
+4.	Scheer FAJL, Van Montfrans GA, van Someren EJW, Mairuhu G, Buijs RM. Daily nighttime melatonin reduces blood pressure in male patients with essential hypertension. Hypertension 2004;43:192-97.
+5.	Van der Helm-van-Mil AHM, Van Someren EJW, Van den Boom R, Van Buchem MA, de Craen AJM, Blauw GJ. No influence of melatonin on cerebral blood flow in
+humans. J Clin Endocr Metab. 2003;88:5989- 94.
+6.	Watts SW, Fink GD. 5-HT2B receptor antagonist LY-272015 is antihypertensive in DOCA-salt- hypertensive rats. Am J Physiol. 1999; 276 (Heart Circ Physiol 45):H944-H952.""" ;
+                      rdfs:label "Reponse from Servier" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :bloodPressureDecreased ,
+                                               :fainting ,
+                                               :sleepiness ,
+                                               :weakness ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :orthostaticHypotension ,
+                                                :syncope ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :adaptationAbnormal ,
+                                                :depression ,
+                                                :hypotension ;
+          OpenPVSignal:refers_to_concomitant_drug :quetiapine ,
+                                                  :ramipril ,
+                                                  :trazodone ,
+                                                  :warfarin ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          OpenPVSignal:refers_to_partial_dechallenge_outcome "unknown" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :dizziness ,
+                                                :hypotension ,
+                                                :weakness ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :allergicReaction ,
+                                                :bloodPressureDecreased ,
+                                                :hyperhidrosis ,
+                                                :itching ,
+                                                :syncope ;
+          OpenPVSignal:refers_to_concomitant_drug :paracetamol ,
+                                                  :pipamperone ,
+                                                  :zopiclone ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :convulsionsGrandMal ,
+                                                :hypokalaemia ,
+                                                :hypotensionOrthostatic ,
+                                                :muscleSoreness ,
+                                                :syncope ;
+          OpenPVSignal:refers_to_concomitant_drug :diazepam ,
+                                                  :promethazine ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :bradycardia ,
+                                                :bradykinesia ,
+                                                :bradyphrenia ,
+                                                :deliberateOverdose ,
+                                                :drynessOral ,
+                                                :hypotension ,
+                                                :sopor ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :delorazepam ,
+                                                        :tizanidine ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :bradycardia ,
+                                                :hypotension ,
+                                                :multipleDrugOverdose ,
+                                                :suicideAttempt ,
+                                                :therapeuticAspiration ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :antidepressants ,
+                                                        :baclofen ,
+                                                        :desvenlafaxine ,
+                                                        :duloxetine ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :bloodPressureLow ,
+                                                :dizziness ,
+                                                :intentionalOverdose ,
+                                                :vomiting ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :decreasedActivity ,
+                                                :hypotension ,
+                                                :intentionalOverdose ,
+                                                :somnolence ,
+                                                :suicideAttempt ,
+                                                :tachycardia ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :mirtazapine ,
+                                                        :risperidone ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report19
+:Report19 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :attemptedSuicide ,
+                                                :hypotension ,
+                                                :multipleDrugOverdoseIntentional ,
+                                                :restlessness ,
+                                                :vomiting ;
+          OpenPVSignal:refers_to_patient :Patient19 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :etofyllineNicotinate ,
+                                                        :pentoxifylline ,
+                                                        :trolnitrate ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hypotension ,
+                                               :somnolence ,
+                                               :syncope ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :prothipendyl ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report20
+:Report20 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :doubleVision ,
+                                                :hypotension ,
+                                                :multipleDrugOverdoseIntentional ,
+                                                :mydriasis ,
+                                                :suicideAttempt ;
+          OpenPVSignal:refers_to_patient :Patient20 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :bisoprolol ,
+                                                        :venlafaxine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+          rdfs:label "Report 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :bloodPressureDropArterial ,
+                                               :flashHot ,
+                                               :paraesthesiaOfLimbs ,
+                                               :sleepDisturbed ,
+                                               :vertigoSubjective ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :dizziness ,
+                                               :fall ,
+                                               :gaitInstability ,
+                                               :hypotension ,
+                                               :weakness ;
+         OpenPVSignal:refers_to_concomitant_drug :diuretics ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :blindnessTransient ,
+                                               :bloodPressureDecreased ,
+                                               :syncope ,
+                                               :tia ,
+                                               :weakness ;
+         OpenPVSignal:refers_to_concomitant_drug :doxepin ,
+                                                 :lamotrigine ,
+                                                 :pantoprazole ,
+                                                 :simvastatin ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :drugInteraction ,
+                                               :fainting ,
+                                               :hypotension ,
+                                               :memoryLossTransient ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :levothyroxine ,
+                                                 :lorazepam ,
+                                                 :ramipril ,
+                                                 :simvastatin ,
+                                                 :zolpidem ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :mirtazapine ,
+                                                       :olanzapine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :fall ,
+                                               :gaitAbnormal ,
+                                               :hyponatraemia ,
+                                               :hypotension ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_process "false"^^xsd:boolean ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hallucinationVisual ,
+                                               :lightheadedness ,
+                                               :orthostaticHypotension ,
+                                               :visualFieldDefect ;
+         OpenPVSignal:refers_to_concomitant_drug :budesonide ,
+                                                 :omeprazole ,
+                                                 :theophylline ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :bloodPressureDecreased ,
+                                               :infection ,
+                                               :lightSensitivityToEye ,
+                                               :muscularWeakness ,
+                                               :syncope ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """Twenty-one ICSRs concerning hypotension/orthostatic hypotension were retrieved from VigiBase as per 8 January 2014 including one duplicate. The ICSRs originate from eight countries (Argentina, Australia, Czech Republic, Germany, Spain, United Kingdom, Italy and Netherlands) and concern 14 women and six men aged between 18 and 84 years (median 50 years). One ICSR describes hypotension in the context of an allergic reaction and six ICSRs describe intentional overdose/suicide attempts. A further report must be looked at with caution as convulsion grand mal is co-reported and the sequence of the events is not clear: convulsions were excluded in the beginning, then reported retrospectively based on myalgia. These eight reports were excluded which leaves 12 reports for analysis (eight women, four men, age 22-84 years). The table lists all 20 reports for completeness (Table 1).
+Agomelatine was the only suspected drug in ten out of twelve ICSRs. Eight out of twelve report a positive dechallenge and one of them a positive rechallenge. In one case the agomelatine dose was reported as reduced but unfortunately the outcome was unknown. Another report lists prothipendyl as a co-suspect drug. This drug was discontinued while maintaining agomelatine and the patient recovered. In another case the conco- mitant diuretic therapy was reduced while maintaining agomelatine at the same dose and this patient recovered as well.
+Time to onset was reported in nine cases (one to five days in six cases, eight days after dose increase in one report, 39 days and 1 year 3 months in two other reports) and remains unknown in three cases. In one case, orthostatic hypotension and other symptoms lasted for twelve hours after each agomelatine intake.
+Blood pressure readings were provided for four patients regularly treated (90/60 mmHg; 74/40 mmHg; 100/75 mmHg; 110/70 mmHg) and for three patients with an intentional overdose (70/40 mmHg; 70/(not available) mmHg; 106/45 mmHg).
+The ICSRs do not provide any information on the time of the day when the reported hypotensive episodes occurred.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Agomelatine is a MT1 and MT2 melatonin receptor agonist prescribed for the treatment of major depressive episodes. Melatonin and to some extent melatoninergic drugs have shown cardiovascular effects in animal models and human studies, probably due to their chronobiotic and sympatholytic effects. Of the 20 reports in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase®, on hypotension under agomelatine from eight different countries, twelve were eligible for assessment. They revealed a consistent pattern of time to onset and recovery on dechallenge with a positive rechallenge in one case. The vast majority of these ICSRs (10 out of
+12) reported no co-suspect medication. A possible
+mechanism of action, together with suggestive and consistent ICSRs, points at a signal.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#adaptationAbnormal
+:adaptationAbnormal rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "F43.23" ;
+                    OpenPVSignal:has_MedDRA_code 10061621 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Adjustment disorder" ;
+                    rdfs:label "adaptation abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#agomelatine
+:agomelatine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :melatonin_receptor_agonist ;
+             OpenPVSignal:has_mechanism :MechanismContent ,
+                                        :Possible_ADR_mechanism_for_melatonin_agonists ;
+             OpenPVSignal:has_ATC_code "N06AX22" ;
+             rdfs:label "agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#allergicReaction
+:allergicReaction rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "T7840XA" ;
+                  OpenPVSignal:has_MedDRA_code 10020751 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypersensitivity" ;
+                  rdfs:label "allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#antidepressants
+:antidepressants rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06A" ;
+                 rdfs:label "antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#antidepressantsInCombinationWithPsycholeptics
+:antidepressantsInCombinationWithPsycholeptics rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Drug ;
+                                               OpenPVSignal:has_ATC_code "N06CA" ;
+                                               rdfs:label "antidepressants in combination with psycholeptics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#attemptedSuicide
+:attemptedSuicide rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "T1491" ;
+                  OpenPVSignal:has_MedDRA_code 10042464 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Suicide attempt" ;
+                  rdfs:label "attempted suicide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#baclofen
+:baclofen rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "M03BX01" ;
+          rdfs:label "baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#blindnessTransient
+:blindnessTransient rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "H53129" ;
+                    OpenPVSignal:has_MedDRA_code 10005184 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Blindness transient" ;
+                    rdfs:label "blindness transient" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bloodPressureDecreased
+:bloodPressureDecreased rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R03.1" ;
+                        OpenPVSignal:has_MedDRA_code 10005734 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Blood pressure decreased" ;
+                        rdfs:label "blood pressure decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bloodPressureDropArterial
+:bloodPressureDropArterial rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "R03.1" ;
+                           OpenPVSignal:has_MedDRA_code 10005734 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Blood pressure decreased" ;
+                           rdfs:label "blood pressure drop arterial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bloodPressureLow
+:bloodPressureLow rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "I959" ;
+                  OpenPVSignal:has_MedDRA_code 10021097 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+                  rdfs:label "blood pressure low" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bradycardia
+:bradycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R001" ;
+             OpenPVSignal:has_MedDRA_code 10006093 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Bradycardia" ;
+             rdfs:label "bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bradykinesia
+:bradykinesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R25.8" ;
+              OpenPVSignal:has_MedDRA_code 10006100 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Bradykinesia" ;
+              rdfs:label "bradykinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#bradyphrenia
+:bradyphrenia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R41.89" ;
+              OpenPVSignal:has_MedDRA_code 10050012 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Bradyphrenia" ;
+              rdfs:label "bradyphrenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#budesonide
+:budesonide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A07EA06" ,
+                                      "D07AC09" ,
+                                      "R01AD05" ,
+                                      "R03AK07" ,
+                                      "R03AK12" ,
+                                      "R03BA02" ;
+            rdfs:label "budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#codeineAndParacetamol
+:codeineAndParacetamol rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug ;
+                       OpenPVSignal:has_ATC_code "N02AJ06" ;
+                       rdfs:label "codeine and paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#convulsionsGrandMal
+:convulsionsGrandMal rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "G40.309" ;
+                     OpenPVSignal:has_MedDRA_code 10018100 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Generalised tonic-clonic seizure" ;
+                     rdfs:label "convulsions grand mal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#decreasedActivity
+:decreasedActivity rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R46.4" ;
+                   OpenPVSignal:has_MedDRA_code 10011953 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Decreased activity" ;
+                   rdfs:label "decreased activity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#deliberateOverdose
+:deliberateOverdose rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "T50992A" ;
+                    OpenPVSignal:has_MedDRA_code 10022523 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                    rdfs:label "deliberate overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#delorazepam
+:delorazepam rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             rdfs:label "delorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "10012378" ;
+            OpenPVSignal:has_MedDRA_code Depression ;
+            OpenPVSignal:has_MedDRA_prefered_term "F33" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#desvenlafaxine
+:desvenlafaxine rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "N06AX23" ;
+                rdfs:label "desvenlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#diazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#dihydrocodeineAndParacetamol
+:dihydrocodeineAndParacetamol rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Drug ;
+                              OpenPVSignal:has_ATC_code "N02AJ01" ;
+                              rdfs:label "dihydrocodeine and paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#diuretics
+:diuretics rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C03" ;
+           rdfs:label "diuretics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#dosage_of_agomelatine
+:dosage_of_agomelatine rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Dosage ;
+                       OpenPVSignal:refers_to_drug :agomelatine ;
+                       OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                       OpenPVSignal:has_content "25-50 mg orally once daily" ;
+                       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                       OpenPVSignal:has_value 25 ,
+                                              50 ;
+                       OpenPVSignal:refers_to_dose_value "25 mg" ,
+                                                         "50 mg" ;
+                       rdfs:label "dosage of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#doubleVision
+:doubleVision rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "Z5181" ;
+              OpenPVSignal:has_MedDRA_code 10013036 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Diplopia" ;
+              rdfs:label "double vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#doxepin
+:doxepin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "N06AA12" ;
+         rdfs:label "doxepin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#drugInteraction
+:drugInteraction rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "T887XXA" ;
+                 OpenPVSignal:has_MedDRA_code 10013710 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Drug interaction" ;
+                 rdfs:label "drug interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#drynessOral
+:drynessOral rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R682" ;
+             OpenPVSignal:has_MedDRA_code 10013781 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+             rdfs:label "dryness oral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#duloxetine
+:duloxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX21" ;
+            rdfs:label "duloxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#etofyllineNicotinate
+:etofyllineNicotinate rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug ;
+                      OpenPVSignal:has_ATC_code "C04AD04" ;
+                      rdfs:label "etofylline nicotinate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#fainting
+:fainting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R55" ;
+          OpenPVSignal:has_MedDRA_code 10042772 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Syncope" ;
+          rdfs:label "fainting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#fall
+:fall rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "W19" ;
+      OpenPVSignal:has_MedDRA_code 10016173 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Fall" ;
+      rdfs:label "fall" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#flashHot
+:flashHot rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R23.2" ;
+          OpenPVSignal:has_MedDRA_code 10060800 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Hot flush" ;
+          rdfs:label "flash hot" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#gaitAbnormal
+:gaitAbnormal rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R26" ;
+              OpenPVSignal:has_MedDRA_code 10017577 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Gait disturbance" ;
+              rdfs:label "gait abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#gaitInstability
+:gaitInstability rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R26" ;
+                 OpenPVSignal:has_MedDRA_code 10017577 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Gait disturbance" ;
+                 rdfs:label "gait instability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hallucinationVisual
+:hallucinationVisual rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R441" ;
+                     OpenPVSignal:has_MedDRA_code 10019075 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Hallucination, visual" ;
+                     rdfs:label "hallucination visual" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hyperhidrosis
+:hyperhidrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R61" ;
+               OpenPVSignal:has_MedDRA_code 10020642 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+               rdfs:label "hyperhidrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hypokalaemia
+:hypokalaemia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "E876" ;
+              OpenPVSignal:has_MedDRA_code 10021015 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypokalaemia" ;
+              rdfs:label "hypokalaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hyponatraemia
+:hyponatraemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "E871" ;
+               OpenPVSignal:has_MedDRA_code 10021036 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyponatraemia" ;
+               rdfs:label "hyponatraemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I959" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hypotensionOrthostatic
+:hypotensionOrthostatic rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "I951" ;
+                        OpenPVSignal:has_MedDRA_code 10031127 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Orthostatic hypotension" ;
+                        rdfs:label "hypotension orthostatic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#hypotensionPostural
+:hypotensionPostural rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "I951" ;
+                     OpenPVSignal:has_MedDRA_code 10031127 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Orthostatic hypotension" ;
+                     rdfs:label "hypotension postural" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#infection
+:infection rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "A499" ;
+           OpenPVSignal:has_MedDRA_code 10021789 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Infection" ;
+           rdfs:label "infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#intentionalOverdose
+:intentionalOverdose rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "T50992A" ;
+                     OpenPVSignal:has_MedDRA_code 10022523 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                     rdfs:label "intentional overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#itching
+:itching rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "L29" ,
+                                   "L299" ;
+         OpenPVSignal:has_MedDRA_code 10037087 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+         rdfs:label "itching" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#lamotrigine
+:lamotrigine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N03AX09" ;
+             rdfs:label "lamotrigine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#lightSensitivityToEye
+:lightSensitivityToEye rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "H53149" ;
+                       OpenPVSignal:has_MedDRA_code 10034960 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Photophobia" ;
+                       rdfs:label "light sensitivity to eye" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#lightheadedness
+:lightheadedness rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R42" ;
+                 OpenPVSignal:has_MedDRA_code 10013573 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+                 rdfs:label "lightheadedness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#melatonin
+:melatonin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CH01" ;
+           rdfs:label "melatonin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#melatonin_receptor_agonist
+:melatonin_receptor_agonist rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:DrugClass ;
+                            OpenPVSignal:has_ATC_code "N05CH" ;
+                            rdfs:label "melatonin receptor agonist" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#memoryLossTransient
+:memoryLossTransient rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R413" ;
+                     OpenPVSignal:has_MedDRA_code 10001949 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Amnesia" ;
+                     rdfs:label "memory loss transient" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#multipleDrugOverdose
+:multipleDrugOverdose rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "T50901A" ;
+                      OpenPVSignal:has_MedDRA_code 10033295 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Overdose" ;
+                      rdfs:label "multiple drug overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#multipleDrugOverdoseIntentional
+:multipleDrugOverdoseIntentional rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Adverse_Effect ;
+                                 OpenPVSignal:has_ICD_code "T50992A" ;
+                                 OpenPVSignal:has_MedDRA_code 10022523 ;
+                                 OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                                 rdfs:label "multiple drug overdose intentional" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#muscleSoreness
+:muscleSoreness rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "M791" ;
+                OpenPVSignal:has_MedDRA_code 10028411 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+                rdfs:label "muscle soreness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#muscularWeakness
+:muscularWeakness rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "M628" ;
+                  OpenPVSignal:has_MedDRA_code 10028372 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Muscular weakness" ;
+                  rdfs:label "muscular weakness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#mydriasis
+:mydriasis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H518" ;
+           OpenPVSignal:has_MedDRA_code 10028521 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Mydriasis" ;
+           rdfs:label "mydriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#olanzapine
+:olanzapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH03" ;
+            rdfs:label "olanzapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ,
+                                      "A02BD01" ,
+                                      "A02BD05" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#one_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#orthostaticHypotension
+:orthostaticHypotension rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "I951" ;
+                        OpenPVSignal:has_MedDRA_code 10031127 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Orthostatic hypotension" ;
+                        rdfs:label "orthostatic hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#otherAntidepressants
+:otherAntidepressants rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug ;
+                      OpenPVSignal:has_ATC_code "N06AX" ;
+                      rdfs:label "other antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#oxycodoneAndParacetamol
+:oxycodoneAndParacetamol rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Drug ;
+                         OpenPVSignal:has_ATC_code "N02AJ17" ;
+                         rdfs:label "oxycodone and paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paraesthesiaOfLimbs
+:paraesthesiaOfLimbs rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R202" ;
+                     OpenPVSignal:has_MedDRA_code 10033775 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Paraesthesia" ;
+                     rdfs:label "paraesthesia of limbs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#pentoxifylline
+:pentoxifylline rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "C04AD03" ,
+                                          "R03DA20" ;
+                rdfs:label "pentoxifylline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#pipamperone
+:pipamperone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AD05" ;
+             rdfs:label "pipamperone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#promethazine
+:promethazine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "D04AA10" ,
+                                        "R06AD02" ,
+                                        "R06AD52" ,
+                                        "V03AB05" ;
+              rdfs:label "promethazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#prothipendyl
+:prothipendyl rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N05AX07" ;
+              rdfs:label "prothipendyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:has_free_text_reporting_element :BloodPressureReadings ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report17 ,
+                                                              :Report18 ,
+                                                              :Report19 ,
+                                                              :Report2 ,
+                                                              :Report20 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForHypotensionAndAgomelatine ,
+                                                          :IC025ForHypotensionPosturalAndAgomelatine ,
+                                                          :ICForHypotensionAndAgomelatine ,
+                                                          :ICForHypotensionPosturalAndAgomelatine ,
+                                                          :reportsForAnalysisWithoutReportsHavingConvulsions ,
+                                                          :reportsInVigibase ,
+                                                          :reportsWhereAgomelatineIsTheOnlySuspect ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithPositiveRechallenge ,
+                                                          :reportsWithSuicidalAttempts ,
+                                                          :reports_with_partial_dechallenge ,
+                                                          :reports_with_time_to_onset_info ;
+          OpenPVSignal:refers_to_adverse_effect :bloodPressureDecreased ,
+                                                :hypotension ;
+          OpenPVSignal:refers_to_drug :agomelatine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          mp:supportedByData :CamposData ,
+                             :EuropeanSPCForAgomelatine ,
+                             :PublishedDataOnAgomelatineAndBloodPressure ;
+          OpenPVSignal:initially_identified_on "01/07/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#quetiapine
+:quetiapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH04" ;
+            rdfs:label "quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsForAnalysisWithoutReportsHavingConvulsions
+:reportsForAnalysisWithoutReportsHavingConvulsions rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                                   OpenPVSignal:has_count 12 ;
+                                                   OpenPVSignal:has_count_of_men 4 ;
+                                                   OpenPVSignal:has_count_of_women 8 ;
+                                                   OpenPVSignal:has_max_age "84.0"^^xsd:float ;
+                                                   OpenPVSignal:has_min_age "22.0"^^xsd:float ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "reports for analysis without reports having convulsions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsInVigibase
+:reportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:refers_to_adverse_effect :hypotension ;
+                   OpenPVSignal:refers_to_drug :agomelatine ;
+                   OpenPVSignal:has_count 20 ;
+                   OpenPVSignal:has_count_of_men 6 ;
+                   OpenPVSignal:has_count_of_women 14 ;
+                   OpenPVSignal:has_max_age "84.0"^^xsd:float ;
+                   OpenPVSignal:has_median_age "50.0"^^xsd:float ;
+                   OpenPVSignal:has_min_age "18.0"^^xsd:float ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsWhereAgomelatineIsTheOnlySuspect
+:reportsWhereAgomelatineIsTheOnlySuspect rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutReportsHavingConvulsions ;
+                                         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+                                         OpenPVSignal:has_count 10 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports where agomelatine is the only suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutReportsHavingConvulsions ;
+                                OpenPVSignal:has_count 8 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsWithPositiveRechallenge
+:reportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsWithPositiveDechallenge ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reportsWithSuicidalAttempts
+:reportsWithSuicidalAttempts rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutReportsHavingConvulsions ;
+                             OpenPVSignal:refers_to_adverse_effect :suicideAttempt ;
+                             OpenPVSignal:has_count 6 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with suicidal attempts" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reports_with_partial_dechallenge
+:reports_with_partial_dechallenge rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutReportsHavingConvulsions ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_partial_dechallenge_outcome "unknown" ;
+                                  rdfs:label "reports with partial dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#reports_with_time_to_onset_info
+:reports_with_time_to_onset_info rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutReportsHavingConvulsions ;
+                                 OpenPVSignal:time_to_onset :timeToOnsetContent ;
+                                 OpenPVSignal:has_count 9 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#restlessness
+:restlessness rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R451" ;
+              OpenPVSignal:has_MedDRA_code 10038743 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Restlessness" ;
+              rdfs:label "restlessness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#risperidone
+:risperidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AX08" ;
+             rdfs:label "risperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#sleepDisturbed
+:sleepDisturbed rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "G47.9" ;
+                OpenPVSignal:has_MedDRA_code 10040984 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Sleep disorder" ;
+                rdfs:label "sleep disturbed" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#sleepiness
+:sleepiness rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "sleepiness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#sopor
+:sopor rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R40" ;
+       OpenPVSignal:has_MedDRA_code 10058709 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Sopor" ;
+       rdfs:label "sopor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#suicideAttempt
+:suicideAttempt rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "T1491" ;
+                OpenPVSignal:has_MedDRA_code 10042464 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Suicide attempt" ;
+                rdfs:label "suicide attempt" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#syncope
+:syncope rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R55" ;
+         OpenPVSignal:has_MedDRA_code 10042772 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Syncope" ;
+         rdfs:label "syncope" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#tachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R000" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#theophylline
+:theophylline rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "R03DA04" ,
+                                        "R03DA20" ,
+                                        "R03DA54" ,
+                                        "R03DA74" ,
+                                        "R03DB04" ;
+              rdfs:label "theophylline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#therapeuticAspiration
+:therapeuticAspiration rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "Y84.4" ;
+                       OpenPVSignal:has_MedDRA_code 10056553 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Therapeutic aspiration" ;
+                       rdfs:label "therapeutic aspiration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#tia
+:tia rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Adverse_Effect ;
+     OpenPVSignal:has_ICD_code "G45.9" ;
+     OpenPVSignal:has_MedDRA_code 10044390 ;
+     OpenPVSignal:has_MedDRA_prefered_term "Transient ischaemic attack" ;
+     rdfs:label "tia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#timeToOnsetContent
+:timeToOnsetContent rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "Time to onset was reported in nine cases (one to five days in six cases, eight days after dose increase in one report, 39 days and 1 year 3 months in two other reports) and remains unknown in three cases. In one case, orthostatic hypotension and other symptoms lasted for twelve hours after each agomelatine intake" ;
+                    rdfs:label "time to onset content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#tizanidine
+:tizanidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M03BX02" ;
+            rdfs:label "tizanidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#tramadolAndParacetamol
+:tramadolAndParacetamol rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Drug ;
+                        OpenPVSignal:has_ATC_code "N02AJ13" ;
+                        rdfs:label "tramadol and paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#trazodone
+:trazodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06AX05" ;
+           rdfs:label "trazodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#trolnitrate
+:trolnitrate rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C01DA09" ;
+             rdfs:label "trolnitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#vertigoSubjective
+:vertigoSubjective rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R42" ;
+                   OpenPVSignal:has_MedDRA_code 10047340 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Vertigo" ;
+                   rdfs:label "vertigo subjective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#visualFieldDefect
+:visualFieldDefect rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "H53459" ;
+                   OpenPVSignal:has_MedDRA_code 10047555 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual field defect" ;
+                   rdfs:label "visual field defect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ,
+                                    "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#weakness
+:weakness rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "weakness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#zopiclone
+:zopiclone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CF01" ;
+           rdfs:label "zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paracetamol,CombinationsWithPsycholeptics
+<http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paracetamol,CombinationsWithPsycholeptics> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Drug ;
+                                                                                                                OpenPVSignal:has_ATC_code "N02BE71" ;
+                                                                                                                rdfs:label "paracetamol, combinations with psycholeptics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paracetamol,Combinationsexcl.Psycholeptics
+<http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#paracetamol,Combinationsexcl.Psycholeptics> rdf:type owl:NamedIndividual ,
+                                                                                                                          OpenPVSignal:Drug ;
+                                                                                                                 OpenPVSignal:has_ATC_code "N02BE51" ;
+                                                                                                                 rdfs:label "paracetamol, combinations excl. psycholeptics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#trolnitrate,Combinations
+<http://purl.org/OpenPVSignal/Signals/2014_4_agomelatine_hypotension#trolnitrate,Combinations> rdf:type owl:NamedIndividual ,
+                                                                                                        OpenPVSignal:Drug ;
+                                                                                               OpenPVSignal:has_ATC_code "C01DA59" ;
+                                                                                               rdfs:label "trolnitrate, combinations" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,728 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl> rdf:type owl:Ontology ;
+                                                                          owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                          rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/325793"^^xsd:anyURI ;
+                                                                          rdfs:label "Desloratadine and the risk of experiencing dry eyes"^^xsd:Literal ;
+                                                                          owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Antihistamines
+:Antihistamines rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "R06A" ;
+                rdfs:label "Antihistamines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Desloratadine_and_the_risk_of_experiencing_dry_eyes
+:Desloratadine_and_the_risk_of_experiencing_dry_eyes rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                     OpenPVSignal:refers_to_author :Dr._Eugène_van_Puijenbroek ,
+                                                                                   :Sarah_Watson ;
+                                                     OpenPVSignal:refers_to_signal :pvSignal ;
+                                                     mp:publishedBy :Uppsala_Monitoring_Centre ,
+                                                                    :the_Netherlands_Pharmacovigilance__Centre_Lareb ;
+                                                     OpenPVSignal:has_creation_date "01/07/2019" ;
+                                                     OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                                     rdfs:label "Desloratadine and the risk of experiencing dry eyes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.8 ;
+                           OpenPVSignal:has_content "It is known that hay fever, which is one of the most common indications of desloratadine, may cause inflammation of the conjunctiva and is an alternative cause to eye discomfort experienced during the pollen season.8 However, the reports with a rapid time to onset after drug administration point to a causal relationship with the drug. The small number of reports in VigiBase might be because it is not a serious reaction and that not all patients would report such complaints. However, dry eyes could be perceived as both painful and incapacitating, affecting both the ability to focus on digital screens and to drive, as has been described in one of the reports in VigiBase. Based on the anticholinergic properties of desloratadine and strengthened by the reports with a short time to onset and both de- and rechallenges in VigiBase, this is likely to be an overlooked anticholinergic adverse drug reaction that should be considered for inclusion in the product labels and patient leaflets." ;
+                           rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Dr._Eugène_van_Puijenbroek
+:Dr._Eugène_van_Puijenbroek rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Author ;
+                            OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance Centre Lareb" ;
+                            OpenPVSignal:has_first_name "Eugene" ;
+                            OpenPVSignal:has_last_name "van Puijenbroek" ;
+                            rdfs:label "Dr. Eugène van Puijenbroek" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#DryEye
+:DryEye rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Free_text_reporting_element ;
+        OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+        mp:references :Ref.2 ;
+        OpenPVSignal:has_content """Dry eye occurs when the surface of the eye is inadequately lubricated due to a decreased quantity and/or quality of tears.
+Symptoms include itching, stinging or burning, excess tears following periods of dryness, pain, and redness in the eye. People with dry eyes may also experience blurred vision.2""" ;
+        rdfs:label "Dry eye pathobiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#IC_for_desloratadine_and_dry_eye
+:IC_for_desloratadine_and_dry_eye rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                  OpenPVSignal:refers_to_drug :desloratadine ;
+                                  OpenPVSignal:refers_to_unconfirmed_adverse_effect :dryEyes ;
+                                  OpenPVSignal:has_expected_count "5.2"^^xsd:float ;
+                                  rdfs:label "IC for desloratadine and dry eye" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ;
+                      OpenPVSignal:has_content """Desloratadine is a long-acting, non-sedating histamine antagonist with selective peripheral H1- receptor antagonist activity. It is indicated in adults and children aged one year and above for allergic rhinitis (among which hay fever is one type) and urticaria. In patients with allergic rhinitis, desloratadine is effective in relieving symptoms such as sneezing, nasal discharge and itching, as well as ocular itching, tearing and redness, and itching of palate.1 Dry eye occurs when the surface of the eye is inadequately lubricated due to a decreased quantity and/or quality of tears.
+Symptoms include itching, stinging or burning, excess tears following periods of dryness, pain, and redness in the eye. People with dry eyes may also experience blurred vision.2""" ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Free_text_reporting_element ;
+                          OpenPVSignal:has_content "There were 13 reports (after removal of a likely duplicate) of the MedDRA preferred term dry eye for desloratadine in VigiBase, the WHO global database of individual case safety reports, as of May 2018. The reports originated from Canada, Finland, Norway, Portugal, Sweden, Switzerland and the USA. Of the 13 reports, nine had desloratadine as the only suspected drug for the reaction. The time to onset was recorded in eight cases; the same day in three reports, “within a few days” in one, “since start of treatment” in one, and 14 days, one month and six months, respectively in the three other reports. The age distribution ranged from two to 75 years, and ten of the reports concerned female patients. Based on the overall reporting of adverse reactions for desloratadine and on the adverse reaction dry eye on its own in VigiBase, 5.2 reports were statistically expected for the drug–adverse drug reaction (ADR) combination based on the disproportionality measure (IC). As there are more reports of desloratadine as well as for dry eyes in general for females, the relatively high number for females in this case series was not unexpected. In six of the reports there was a documented effect upon withdrawal of the drug; the reaction abated in all cases (one when the dose was decreased) and in the two cases where the drug was reintroduced, the reaction reoccurred. In four cases dry mouth/oral dryness was co-reported and other co-reported terms included dry skin, dry nose, chapped lips and vaginal dryness, all of which could indicate that those patients had multiple anticholinergic adverse reactions to the drug. In one of the reports where the reaction occurred on the same day as the drug was introduced, the reaction was experienced within 2- 3 hours and the patient experienced dry eyes, blurred vision and partial visual loss resulting in problems focussing on digital screens and driving their car." ;
+                          rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Literature_and_labelling
+:Literature_and_labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.3 ,
+                                        :Ref.4 ,
+                                        :Ref.5 ,
+                                        :Ref.6 ,
+                                        :Ref.7 ;
+                          OpenPVSignal:has_content "No adverse drug reactions for eyes are listed in the product label for desloratadine, but dry mouth which could indicate anticholinergic properties of the drug, is listed as a common ADR.3,4 Adverse anticholinergic effects include among other reactions: dry mouth, constipation, urinary retention, bowel obstruction, dilated pupils, blurred vision, increased heart rate and decreased sweating.5 The relative anticholinergic effect of different antihistamines has been shown by Orzechowski et al. in guinea pigs where desloratadine showed anticholinergic properties and to a larger extent than both diphenhydramine and loratadine both in vitro and in vivo.6 Additionally, the ability of antihistamines such as desloratadine to interact with human muscarinic receptors was investigated in a study by Wolff et al. where they used in vitro cells stably expressing one of the five human muscarinic receptors (M1-M5). It was shown that desloratadine was a full antagonist at all five receptors, and the study concluded that several marketed antihistamines, of which desloratadine was one, possessed marked anticholinergic activity “with the potential to cause adverse ocular side effects such as dryness”.7" ;
+                          rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Mechanism_of_desloratadine
+:Mechanism_of_desloratadine rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Mechanism ;
+                            mp:references :Ref.1 ;
+                            OpenPVSignal:has_content "Desloratadine is a long-acting, non-sedating histamine antagonist with selective peripheral H1-receptor antagonist activity. It is indicated in adults and children aged one year and above for allergic rhinitis (among which hay fever is one type) and urticaria. In patients with allergic rhinitis, desloratadine is effective in relieving symptoms such as sneezing, nasal discharge and itching, as well as ocular itching, tearing and redness, and itching of palate.1" ;
+                            rdfs:label "Mechanism of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UKeMC SPC for Desloratadine. Available from: https://www.medicines.org.uk/emc/product/4 888/smpc. Access date: Apr 2018." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "National Eye Institute, National Institutes of Health Available from: https://nei.nih.gov/health/dryeye/dryeye. Access date: May 2018." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UKeMC PIL for desloratadine. Available from: https://www.medicines.org.uk/emc/files/pil. 4888.pdf. Access date: Apr 2018." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US DailyMed PIL. Available from: https://dailymed.nlm.nih.gov/dailymed/drug Info.cfm?setid=dbb8e695-f00b-4c67-bd49- 09a1ae5bb669&audience=consumer. Access date: Apr 2018." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Lieberman A. Managing Anticholinergic Side Effects. Prim Care Companion J Clin Psychiatry. 2004; 6(suppl 2): 20–23." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Orzechowski RF1, Currie DS, Valancius CA. Comparative anticholinergic activities of 10 histamine H1 receptor antagonists in two functional models. Eur J Pharmacol. 2005 Jan 4;506(3):257-64. Epub 2004 Nov 30." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wolff S.C, Brubaker K, Navratil T, Fulcher E.H, Lankford J.R and Boyer J.L. Anticholinergic Effects of Antihistamine Drugs Used in the Clinic. Journal of allergy and clinical immunology. 2007 Jan 119 (1), Supplement, page s 153." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kumar N, Feuer W, Lanza N.L and Galor A. Seasonal Variation in Dry Eye. Ophthalmology. 2015, August; 122(8): 1727–1729." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Sarah_Watson
+:Sarah_Watson rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Author ;
+              OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+              OpenPVSignal:has_first_name "Sarah" ;
+              OpenPVSignal:has_last_name "Watson" ;
+              rdfs:label "Sarah Watson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#allergicRhinitis
+:allergicRhinitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "J309" ;
+                  OpenPVSignal:has_MedDRA_code 10039085 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Rhinitis allergic" ;
+                  rdfs:label "allergic rhinitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#anticholinergicEffectsByOrzechowski
+:anticholinergicEffectsByOrzechowski rdf:type owl:NamedIndividual ,
+                                              obo:OAE_0001197 ;
+                                     OpenPVSignal:refers_to_adverse_effect :anticholinergic_effects ;
+                                     OpenPVSignal:refers_to_drug :desloratadine ,
+                                                                 :diphenhydramine ,
+                                                                 :loratadine ;
+                                     mp:references :Ref.6 ;
+                                     OpenPVSignal:has_content "The relative anticholinergic effect of different antihistamines has been shown byOrzechowski et al. in guinea pigs where desloratadine showed anticholinergic properties and to a larger extent than both diphenhydramine and loratadine both in vitro and in vivo.6" ;
+                                     rdfs:label "anticholinergic effects by Orzechowski" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#anticholinergic_effects
+:anticholinergic_effects rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_MedDRA_code 20000048 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Anticholinergic syndrome (SMQ)" ;
+                         rdfs:label "anticholinergic effects" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#anticholinergic_effects_symptoms
+:anticholinergic_effects_symptoms rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :anticholinergic_effects ,
+                                                                        :blurredVision ,
+                                                                        :bowelObstruction ,
+                                                                        :constipation ,
+                                                                        :dilatedPupils ,
+                                                                        :dryMouth ,
+                                                                        :heartRate ,
+                                                                        :sweating ,
+                                                                        :urinaryRetention ;
+                                  mp:references :Ref.5 ;
+                                  OpenPVSignal:has_content "Adverse anticholinergic effects include among other reactions: dry mouth, constipation, urinary retention, bowel obstruction, dilated pupils, blurred vision, increased heart rate and decreased sweating.5" ;
+                                  rdfs:label "anticholinergic effects symptoms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#blurredVision
+:blurredVision rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H538" ;
+               OpenPVSignal:has_MedDRA_code 10047513 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Vision blurred" ;
+               rdfs:label "blurred vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#bowelObstruction
+:bowelObstruction rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "K56609" ;
+                  OpenPVSignal:has_MedDRA_code 10022687 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Intestinal obstruction" ;
+                  rdfs:label "bowel obstruction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#case_1
+:case_1 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:VigiBase_Report ;
+        OpenPVSignal:refers_to_adverse_effect :blurredVision ,
+                                              :dryEyes ,
+                                              :partialVisualLoss ;
+        OpenPVSignal:refers_to_drug :desloratadine ;
+        OpenPVSignal:time_to_onset :time_to_onset_case_1 ;
+        OpenPVSignal:has_content "In one of the reports where the reaction occurred on the same day as the drug was introduced, the reaction was experienced within 2- 3 hours and the patient experienced dry eyes, blurred vision and partial visual loss resulting in problems focussing on digital screens and driving their car." ;
+        rdfs:label "case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#chappedLips
+:chappedLips rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "K13.0" ;
+             OpenPVSignal:has_MedDRA_code 10049047 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Chapped lips" ;
+             rdfs:label "chapped lips" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#confounderHayFever
+:confounderHayFever rdf:type owl:NamedIndividual ,
+                             obo:OAE_0001182 ;
+                    OpenPVSignal:has_potential_confounding_factor :hay_fever ;
+                    OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                    mp:references :Ref.8 ;
+                    OpenPVSignal:has_content "It is known that hay fever, which is one of the most common indications of desloratadine, may cause inflammation of the conjunctiva and is an alternative cause to eye discomfort experienced during the pollen season" ;
+                    rdfs:label "confounder hay fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K59.00" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#desloratadine
+:desloratadine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:concerns_indication_for_use :allergicRhinitis ,
+                                                        :hay_fever ,
+                                                        :urticaria ;
+               OpenPVSignal:hasClass :Antihistamines ;
+               OpenPVSignal:has_mechanism :Mechanism_of_desloratadine ,
+                                          :desloratadineActivatingMuscarinicReceptors ;
+               OpenPVSignal:has_ATC_code "R06AX27" ;
+               rdfs:label "desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#desloratadineActivatingMuscarinicReceptors
+:desloratadineActivatingMuscarinicReceptors rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                                            OpenPVSignal:refers_to_known_adverse_effect :anticholinergic_effects ;
+                                            OpenPVSignal:refers_to_unconfirmed_adverse_effect :dryEyes ;
+                                            mp:references :Ref.7 ;
+                                            OpenPVSignal:has_content "Additionally, the ability of antihistamines such as desloratadine to interact with human muscarinic receptors was investigated in a study by Wolff et al. where they used in vitro cells stably expressing one of the five human muscarinic receptors (M1-M5). It was shown that desloratadine was a full antagonist at all five receptors, and the study concluded that several marketed antihistamines, of which desloratadine was one, possessed marked anticholinergic activity “with the potential to cause adverse ocular side effects such as dryness”.7" ;
+                                            rdfs:label "desloratadine activating Muscarinic receptors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#dilatedPupils
+:dilatedPupils rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H518" ;
+               OpenPVSignal:has_MedDRA_code 10028521 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Mydriasis" ;
+               rdfs:label "dilated pupils" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#diphenhydramine
+:diphenhydramine rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:hasClass :Antihistamines ;
+                 OpenPVSignal:has_ATC_code "D04AA32" ,
+                                           "R06AA02" ;
+                 rdfs:label "diphenhydramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#dryEyes
+:dryEyes rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H04.129" ;
+         OpenPVSignal:has_MedDRA_code 10013774 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dry eye" ;
+         rdfs:label "dry eye" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#dryMouth
+:dryMouth rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R682" ;
+          OpenPVSignal:has_MedDRA_code 10013781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+          rdfs:label "dry mouth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#dryNose
+:dryNose rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "J34.89" ;
+         OpenPVSignal:has_MedDRA_code 10028740 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Nasal dryness" ;
+         rdfs:label "dry nose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#drySkin
+:drySkin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H04.129" ;
+         OpenPVSignal:has_MedDRA_code 10013786 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dry skin" ;
+         rdfs:label "dry skin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#hay_fever
+:hay_fever rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "J30.1" ;
+           OpenPVSignal:has_MedDRA_code 10019170 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hay fever" ;
+           rdfs:label "hay fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#heartRate
+:heartRate rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R00.0" ;
+           OpenPVSignal:has_MedDRA_code 10019303 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Heart rate increased" ;
+           rdfs:label "increased heart rate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#literature
+:literature rdf:type owl:NamedIndividual ,
+                     obo:OAE_0001197 ,
+                     OpenPVSignal:Warning_Information ;
+            OpenPVSignal:refers_to_drug :desloratadine ;
+            OpenPVSignal:refers_to_known_adverse_effect :dryMouth ;
+            mp:references :Ref.3 ,
+                          :Ref.4 ;
+            OpenPVSignal:has_content "No adverse drug reactions for eyes are listed in the product label for desloratadine, but dry mouth which could indicate anticholinergic properties of the drug, is listed as a common ADR." ;
+            rdfs:label "dry mouth common ADR" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#loratadine
+:loratadine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :Antihistamines ;
+            OpenPVSignal:has_ATC_code "R06AX13" ;
+            rdfs:label "loratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#oralDryness
+:oralDryness rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R682" ;
+             OpenPVSignal:has_MedDRA_code 10013781 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+             rdfs:label "oral dryness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#partialVisualLoss
+:partialVisualLoss rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "H54" ;
+                   OpenPVSignal:has_MedDRA_code 10047571 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                   rdfs:label "partial visual loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Discussion_and_conclusion ,
+                                                   :DryEye ,
+                                                   :Introduction_content ,
+                                                   :Literature_and_Labelling ,
+                                                   :summary ;
+          OpenPVSignal:is_supported_by_individual_case_report :case_1 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC_for_desloratadine_and_dry_eye ,
+                                                          :reportsInVigibaseDryEyeAndDesloratadine ,
+                                                          :reportsWithDesloratadineBeingTheOnlySuspectDrug ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithPositiveRechallenge ,
+                                                          :reportsWithTimeToOnset1 ,
+                                                          :reportsWithTimeToOnset2 ,
+                                                          :reportsWithTimeToOnset3 ,
+                                                          :reportsWithTimeToOnset4 ,
+                                                          :reportsWithTimeToOnset5 ,
+                                                          :reportsWithTimeToOnset6 ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithDrymouth/oralDrynessBeingco-reported> ;
+          OpenPVSignal:refers_to_drug :desloratadine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+          OpenPVSignal:refers_to_unconfirmed_adverse_effect :dryEyes ;
+          mp:supportedByData :anticholinergicEffectsByOrzechowski ,
+                             :anticholinergic_effects_symptoms ,
+                             :confounderHayFever ,
+                             :literature ;
+          OpenPVSignal:initially_identified_on "01/07/2019" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsInVigibaseDryEyeAndDesloratadine
+:reportsInVigibaseDryEyeAndDesloratadine rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:refers_to_drug :desloratadine ;
+                                         OpenPVSignal:refers_to_unconfirmed_adverse_effect :dryEyes ;
+                                         OpenPVSignal:has_count 13 ;
+                                         OpenPVSignal:has_count_of_women 10 ;
+                                         OpenPVSignal:has_max_age "75.0"^^xsd:float ;
+                                         OpenPVSignal:has_min_age "2.0"^^xsd:float ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports in vigibase dry eye and desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithDesloratadineBeingTheOnlySuspectDrug
+:reportsWithDesloratadineBeingTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                                                 OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+                                                 OpenPVSignal:has_count 9 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "reports with desloratadine being the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                                OpenPVSignal:has_count 6 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithPositiveRechallenge
+:reportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsWithPositiveDechallenge ;
+                                OpenPVSignal:has_count 2 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "reports with positive rechallenge " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset1
+:reportsWithTimeToOnset1 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset1 ;
+                         OpenPVSignal:has_count 3 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset2
+:reportsWithTimeToOnset2 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset2 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset3
+:reportsWithTimeToOnset3 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset3 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset4
+:reportsWithTimeToOnset4 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset4 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset5
+:reportsWithTimeToOnset5 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset5 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithTimeToOnset6
+:reportsWithTimeToOnset6 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                         OpenPVSignal:time_to_onset :timeToOnset6 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Reports of the antihistamine desloratadine causing dry eyes in several patients worldwide have been shared in VigiBase, the WHO global database of individual case safety reports. Anticholinergic effects of antihistamines as a group are known, but this specific adverse drug reaction is not labelled, and the drug might be overlooked as a potential cause of the reaction." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#sweating
+:sweating rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L74.4" ;
+          OpenPVSignal:has_MedDRA_code 10021013 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Hypohidrosis" ;
+          rdfs:label "decreased sweating" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#the_Netherlands_Pharmacovigilance__Centre_Lareb
+:the_Netherlands_Pharmacovigilance__Centre_Lareb rdf:type owl:NamedIndividual ,
+                                                          prov:Organization ;
+                                                 rdfs:label "the Netherlands Pharmacovigilance Centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset1
+:timeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "same day" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 0 ;
+              rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset2
+:timeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "within a few days" ;
+              rdfs:label "time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset3
+:timeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "since start of treatment" ;
+              rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset4
+:timeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 14 ;
+              rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset5
+:timeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "months" ;
+              time:numericPosition 1 ;
+              rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#timeToOnset6
+:timeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "months" ;
+              time:numericPosition 6 ;
+              rdfs:label "time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#time_to_onset_case_1
+:time_to_onset_case_1 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "hours" ;
+                      time:numericPosition 3 ;
+                      rdfs:label "time to onset case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#urinaryRetention
+:urinaryRetention rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R339" ;
+                  OpenPVSignal:has_MedDRA_code 10046555 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Urinary retention" ;
+                  rdfs:label "urinary retention" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#urticaria
+:urticaria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L509" ;
+           OpenPVSignal:has_MedDRA_code 10046735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Urticaria" ;
+           rdfs:label "urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#usageOfDesloratadine
+:usageOfDesloratadine rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:concerns_indication_for_use :allergicRhinitis ,
+                                                               :urticaria ;
+                      OpenPVSignal:refers_to_drug :desloratadine ;
+                      rdfs:label "usage of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#vaginalDryness
+:vaginalDryness rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "N95.2" ;
+                OpenPVSignal:has_MedDRA_code 10047791 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Vulvovaginal dryness" ;
+                rdfs:label "vaginal dryness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithDrymouth/oralDrynessBeingco-reported
+<http://purl.org/OpenPVSignal/Signals/2019_3_desloratadine_dry_eyes.owl#reportsWithDrymouth/oralDrynessBeingco-reported> rdf:type owl:NamedIndividual ,
+                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                         OpenPVSignal:is_subgroup_of :reportsInVigibaseDryEyeAndDesloratadine ;
+                                                                                                                         OpenPVSignal:refers_to_adverse_effect :chappedLips ,
+                                                                                                                                                               :dryMouth ,
+                                                                                                                                                               :dryNose ,
+                                                                                                                                                               :drySkin ,
+                                                                                                                                                               :oralDryness ,
+                                                                                                                                                               :vaginalDryness ;
+                                                                                                                         OpenPVSignal:has_count 4 ;
+                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                         rdfs:label "reports with dry mouth/oral dryness being co-reported" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

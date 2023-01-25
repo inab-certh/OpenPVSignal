@@ -1,0 +1,698 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure> rdf:type owl:Ontology ;
+                                                                      owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                      rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255517"^^xsd:anyURI ;
+                                                                      rdfs:label "Baclofen and Renal failure"^^xsd:Literal ;
+                                                                      owl:versionInfo "draft-v0.95-20210611"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Baclofen_and_Renal_Failure
+:Baclofen_and_Renal_Failure rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                            OpenPVSignal:refers_to_author :Prof._Michael_Langman ;
+                            OpenPVSignal:refers_to_signal :pvSignal ;
+                            OpenPVSignal:has_creation_date "01/12/2013" ;
+                            OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                            rdfs:label "Baclofen and Renal Failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#British_National_Formulary
+:British_National_Formulary rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001197 ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :cardiovascularDepression ,
+                                                                  :hypotension ,
+                                                                  :respiratoryDepression ,
+                                                                  :urinaryDisturbances ;
+                            OpenPVSignal:refers_to_drug :baclofen ;
+                            mp:references :Ref.4 ;
+                            OpenPVSignal:has_content "The British National Formulary lists many cautions when using baclofen in pre-existing disease such as psychiatric disease, respiratory disorders and bladder outlet obstruction. Recorded adverse effects include hypotension, respiratory or cardiovascular depression, and urinary disturbances.4" ;
+                            rdfs:label "British National Formulary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "The reported cases may suggest a hitherto unrecognised significant adverse effect. Although the data collected are not compelling, a drug effect through intrathecal use seems plausible if inadvertent central spread took place. Oral drug use in patients with compromised renal excretory mechanisms could also result in reduced drug excretion leading to high circulating drug levels and possible adverse effects on cardiovascular control and worsened kidney function." ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.5 ,
+                                 :Ref.6 ,
+                                 :Ref.7 ,
+                                 :Ref.8 ;
+                   OpenPVSignal:has_content """Baclofen is a GABA[B] receptor agonist. Microinjection in rats into the paraventricular nucleus has been found to induce a dose-dependent fall of arterial pressure, accompanied by reduced heart rate and reduced renal sympathetic nerve activity in a rat model which is claimed to simulate chronic heart failure.5 However, a second paper presents data, again in rats, showing that intravenous baclofen, whilst suppressing renal sympathetic activity, appear to prevent ischaemia-reperfusion injury.6 No relevant data from studies in humans could be found in a search of PubMed.
+
+
+Baclofen is normally excreted unchanged in the urine and therefore renal failure which might be present in some patients with chronic neurological disease e.g. cord transection with bladder outlet obstruction, might be expected to lead to raised blood drug levels. Central spread in intrathecal treatment, notably through posture and use of dense preparations, could cause significant amounts of drug to reach the brain. Systemic absorption at other sites could also occur.
+
+Experimental studies in pigs have shown that position and specific gravity (baricity) can affect drug distribution.7 Central effects might also be associated with inadvertent subdural drug administration as opposed to subarachnoid.8 Adverse cardiovascular effects centrally caused might result in renal failure particularly in individuals with compromised homoeostatic processes.
+
+For ICSRs where baclofen is given orally, the case reports do not present compelling data to suggest that renal failure can be precipitated by baclofen. This is not a new drug and its adverse effects might be expected to be well-understood. Animal studies can be taken to suggest that central cardiovascular actions could be compromised by the drug and could predispose to kidney failure, however other studies suggest the converse.5,6 On balance it is plausible that oral baclofen could accumulate in patients with borderline renal function and further depress renal function.
+
+For patients given intrathecal treatment, it could be speculated that extended use of intrathecally administered drugs in patients who are older and/or have multiple coincident illnesses could result in adverse effects not previously recognised. Note that the route of baclofen administration is not explicitly stated in a quarter of the acute renal failure ICSRs but in about a fifth intrathecal treatment was given. Intrathecal use could result in inadvertently high concentrations in central areas, activating mechanisms described in the study by Wang et.al.5 Inadvertent injection into the subdural space could have the same effect.""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#IC025ForBaclofenAndRenalFailure
+:IC025ForBaclofenAndRenalFailure rdf:type owl:NamedIndividual ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                 OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+                                 OpenPVSignal:refers_to_drug :baclofen ;
+                                 OpenPVSignal:refers_to_information_component :IC_value_for_baclofen_and_renal_failure ;
+                                 OpenPVSignal:has_value -0.98 ;
+                                 rdfs:label "IC025 for baclofen and renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#IC025ValueForBaclofenAndRenalFailureChronic
+:IC025ValueForBaclofenAndRenalFailureChronic rdf:type owl:NamedIndividual ,
+                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                             OpenPVSignal:refers_to_adverse_effect :chronic_renal_failure ;
+                                             OpenPVSignal:refers_to_drug :baclofen ;
+                                             OpenPVSignal:refers_to_information_component :ICValueForBaclofenAndRenalFailureChronic ;
+                                             OpenPVSignal:has_value -2.38 ;
+                                             rdfs:label "IC025 value for baclofen and renal failure chronic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#IC025_value_for_baclofen_and_renal_failure_acute
+:IC025_value_for_baclofen_and_renal_failure_acute rdf:type owl:NamedIndividual ,
+                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                  OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ;
+                                                  OpenPVSignal:refers_to_drug :baclofen ;
+                                                  OpenPVSignal:refers_to_information_component :ICValueForBaclofenAndRenalFailureAcute ;
+                                                  OpenPVSignal:has_value -1.44 ;
+                                                  rdfs:label "IC025 value for baclofen and renal failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#ICValueForBaclofenAndRenalFailureAcute
+:ICValueForBaclofenAndRenalFailureAcute rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ;
+                                        OpenPVSignal:refers_to_drug :baclofen ;
+                                        OpenPVSignal:has_value -0.89 ;
+                                        rdfs:label "IC value for baclofen and renal failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#ICValueForBaclofenAndRenalFailureChronic
+:ICValueForBaclofenAndRenalFailureChronic rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                          OpenPVSignal:refers_to_adverse_effect :chronic_renal_failure ;
+                                          OpenPVSignal:refers_to_drug :baclofen ;
+                                          OpenPVSignal:has_value -0.64 ;
+                                          rdfs:label "IC value for baclofen and renal failure chronic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#IC_value_for_baclofen_and_renal_failure
+:IC_value_for_baclofen_and_renal_failure rdf:type owl:NamedIndividual ,
+                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                         OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+                                         OpenPVSignal:refers_to_drug :baclofen ;
+                                         OpenPVSignal:has_value -0.43 ;
+                                         rdfs:label "IC value for baclofen and renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#InVivoExperimentsOpposingTheProposedConnectionbaclofen-renalFailure
+:InVivoExperimentsOpposingTheProposedConnectionbaclofen-renalFailure rdf:type owl:NamedIndividual ,
+                                                                              obo:OAE_0001182 ;
+                                                                     OpenPVSignal:refers_to_drug :baclofen ;
+                                                                     mp:references :Ref.6 ;
+                                                                     OpenPVSignal:has_content "However, a second paper presents data, again in rats, showing that intravenous baclofen, whilst suppressing renal sympathetic activity, appear to prevent ischaemia-reperfusion injury.6 No relevant data from studies in humans could be found in a search of PubMed." ;
+                                                                     rdfs:label "In vivo experiments opposing the proposed connection baclofen-renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Intrathecal_administration
+:Intrathecal_administration rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Drug_Intake_Form ;
+                            OpenPVSignal:refers_to_drug :baclofen ;
+                            OpenPVSignal:refers_to_form_of_intake "intrathecal" ;
+                            rdfs:label "Intrathecal administration for baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ;
+                     OpenPVSignal:has_content "The drug-ADR combination of baclofen and renal failure was highlighted during testing of a new quantitative method for detecting potential signals at the UMC in 2012.1 As of 15 November 2012, 67 Individual Case Safety Reports (ICSRs) had been entered into the WHO Global ICSR Database, VigiBase™, raising a possible relationship between baclofen use and the occurrence of renal failure. The drug is mostly used in treating chronic spasticity, as typically associated with spinal cord damage and multiple sclerosis. Labelled adverse effects include hypotension and cardiovascular depression. Kidney failure is labelled in the US FDA Label for the injection but not for the oral formulation and renal failure is not labelled in the UK Summary of Product Characteristics (SPC).2,3" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#LabellingUKSPC
+:LabellingUKSPC rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001197 ,
+                         OpenPVSignal:Structured_Product_Labels_information ,
+                         OpenPVSignal:Warning_Information ;
+                OpenPVSignal:refers_to_adverse_effect :kidneyFailure ,
+                                                      :renalFailure ;
+                OpenPVSignal:refers_to_drug :baclofen ;
+                mp:references :Ref.2 ,
+                              :Ref.3 ;
+                OpenPVSignal:has_content "Kidney failure is labelled in the US FDA Label for the injection but not for the oral formulation and renal failure is not labelled in the UK Summary of Product Characteristics (SPC)." ;
+                rdfs:label "Labelling US and UK SPC" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.2 ,
+                                      :Ref.4 ;
+                        OpenPVSignal:has_content "The British National Formulary lists many cautions when using baclofen in pre-existing disease such as psychiatric disease, respiratory disorders and bladder outlet obstruction. Recorded adverse effects include hypotension, respiratory or cardiovascular depression, and urinary disturbances.4 The US FDA Label lists renal failure, oliguria, renal calculus as well as hypotension and bradycardia as adverse drug events.2" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Mechanis
+:Mechanis rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Mechanism ;
+          OpenPVSignal:has_content "Baclofen is a GABA[B] receptor agonist." ;
+          rdfs:label "Mechanism of baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Oral_administration_for_baclofen
+:Oral_administration_for_baclofen rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Drug_Intake_Form ;
+                                  OpenPVSignal:refers_to_drug :baclofen ;
+                                  OpenPVSignal:refers_to_form_of_intake "oral" ;
+                                  rdfs:label "Oral administration for baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Prof._Michael_Langman
+:Prof._Michael_Langman rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "United Kingdom" ;
+                       OpenPVSignal:has_first_name "Michel" ;
+                       OpenPVSignal:has_last_name "Langman" ;
+                       rdfs:label "Prof. Michael Langman" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Caster O, Norén GN, Madigan D, Bate A. Large-scale regression-based pattern discovery:the example of screening the WHO global drug safety database. Stat Anal Data Min.2010;3(4):197-208." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA Label for baclofen (Lioresal Intrathecal). URL:http://wwwaccessdata.fda.gov/scripts/cder/drugsa tfda. Accessed: 16 January 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK Summary of Product Characteristics for baclofen (Lioresal). URL:http://www.medicines.org.uk. Accessed: 16 January 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Joint Formulary Committee. British National Formulary. 64th ed. London: BMJ Group andPharmaceutical Press; 2012." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wang RJ, Zeng QH, Wang WZ, Wang W GABA(A) and GABA(B) receptor-mediated inhibition of sympa¬thetic outflow in the paraventricular nucleus is blunted in chronic heart failure. Clin Exp Pharmacol Physiol. 2009;36:516-22.               " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kobuchi S, Tanaka R, Shintani T, Suzuki R, Tsutsui H, Ohkita M, et al. Mechanisms underlying the renopro-tective effect of GABA against ischemia/reperfusion-induced renal injury in rats. Pharmacol Exp Ther. 2011;338:767-74." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Flack SH, Bernards CM. Cerebrospinal fluid and spinal cord distribution of hyperbaric bupivacaine and baclofen during slow intrathecal infusion in pigs. Anesthesiology 2010;112(1):165-73.               " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Epidural Blockade. URL: http://www.nysora.com/regional_anesthesia/neuraxial_techniques/3026-epidural-blockade.html Accessed: 2 January 2013." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content """\"Reports in VigiBase
+
+The 31 ICSRs of acute renal failure (21 male, nine female, one sex not stated) and four of chronic failure (two male and two female) were considered case-by-case. Detail is, as usual, limited. Four ICSRs of acute renal failure are likely duplicates. Patients were generally in the sixth decade of life or older and often, where reported, receiving a wide variety of other medications, including, but not only, cardiovascular, non-steroidal anti-inflammatory and antibiotic medications. Several reports list significant comorbidities such as septicaemia, rhabdomyolysis and multi-organ failure that have to be taken into consideration as possible confounding factors.
+
+
+Six of the acute cases were receiving intrathecal baclofen, 19 oral, five unclear and one \"\"other\"\". The cases with raised creatinine are assumed to not add information. The 32 cases of renal failure of unstated duration did not appear to present any features differing materially from the other 35, but confidence in the reliability of separation between acute and chronic renal disease is likely to be limited.
+
+
+The ICSRs were entered into VigiBase from 1993 to present and from eight countries, Germany, United States, France, Australia, United Kingdom, Ireland, Austria and Canada. The IC values for renal failure acute were: IC -0.89, IC025 -1.44, for renal failure: IC -0.43, IC025 -0.98 and for renal failure chronic: IC -0.64, IC025 -2.38.
+\"""" ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """After the combination baclofen-renal failure was identified as a possible signal, 67 Individual Case Safety Reports (ICSRs) of renal failure [31 acute, 32 chronic or acute (not stated which), and four with chronic renal failure] in patients taking baclofen were considered. Baclofen is excreted by the kidneys and orally administered drug accumulation in patients with pre-existing borderline renal function/compromised vascular systems could affect vascular control and worsen renal function.
+
+With baclofen given intrathecally, the consequences of possible central spread through inadvertent subdural drug delivery, or wash back centrally in subarachnoid injection should be considered, with a direct drug effect on central mechanisms modulating vascular control and leading to renal failure.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#US_FDA_Label
+:US_FDA_Label rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001197 ,
+                       OpenPVSignal:Structured_Product_Labels_information ,
+                       OpenPVSignal:Warning_Information ;
+              OpenPVSignal:refers_to_adverse_effect :bradycardia ,
+                                                    :hypotension ,
+                                                    :oliguria ,
+                                                    :renalCalculus ,
+                                                    :renalFailure ;
+              OpenPVSignal:refers_to_drug :baclofen ;
+              mp:references :Ref.2 ;
+              OpenPVSignal:has_content "The US FDA Label lists renal failure, oliguria, renal calculus as well as hypotension and bradycardia as adverse drug events.2" ;
+              rdfs:label "US FDA Label" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#US_FDA_Label_ADR_for_baclofen
+:US_FDA_Label_ADR_for_baclofen rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :bradycardia ,
+                                                                     :hypotension ,
+                                                                     :oliguria ,
+                                                                     :renalFailure ;
+                               rdfs:label "US FDA Label ADR for baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#acuteRenalFailure
+:acuteRenalFailure rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N179" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" ;
+                   rdfs:label "acute renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#animal_study_favoring_the_associatio
+:animal_study_favoring_the_associatio rdf:type owl:NamedIndividual ,
+                                               obo:OAE_0001197 ;
+                                      OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+                                      OpenPVSignal:refers_to_drug :baclofen ;
+                                      mp:references :Ref.5 ;
+                                      OpenPVSignal:has_content "Animal studies can be taken to suggest that central cardiovascular actions could be compromised by the drug and could predispose to kidney failure, however other studies suggest the converse.5,6" ;
+                                      rdfs:label "animal study favoring the association" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#animal_study_favoring_the_association
+:animal_study_favoring_the_association rdf:type owl:NamedIndividual ,
+                                                obo:OAE_0001182 ;
+                                       OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+                                       OpenPVSignal:refers_to_drug :baclofen ;
+                                       mp:references :Ref.6 ;
+                                       OpenPVSignal:has_content "Animal studies can be taken to suggest that central cardiovascular actions could be compromised by the drug and could predispose to kidney failure, however other studies suggest the converse.5,6" ;
+                                       rdfs:label "animal study rejecting the association" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#baclofen
+:baclofen rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_mechanism :Mechanis ,
+                                     :baclofen_pharmakinetic ,
+                                     :possibleMechanismOfBaclofenPrecipitatingRenalfailure1 ,
+                                     :possibleMechanismOfBaclofenPrecipitatingRenalfailure2 ;
+          OpenPVSignal:refers_to_adverse_effect :cardiovascularDepression ,
+                                                :hypotension ;
+          OpenPVSignal:has_ATC_code "M03BX01" ;
+          rdfs:label "baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#baclofen_pharmakinetic
+:baclofen_pharmakinetic rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        mp:references :Ref.7 ,
+                                      :Ref.8 ;
+                        OpenPVSignal:has_content "Baclofen is normally excreted unchanged in the urine and therefore renal failure which might be present in some patients with chronic neurological disease e.g. cord transection with bladder outlet obstruction, might be expected to lead to raised blood drug levels. Central spread in intrathecal treatment, notably through posture and use of dense preparations, could cause significant amounts of drug to reach the brain. Systemic absorption at other sites could also occur. Experimental studies in pigs have shown that position and specific gravity (baricity) can affect drug distribution.7 Central effects might also be associated with inadvertent subdural drug administration as opposed to subarachnoid.8" ;
+                        rdfs:label "baclofen pharmacokinetic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#bradycardia
+:bradycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R001" ;
+             OpenPVSignal:has_MedDRA_code 10006093 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Bradycardia" ;
+             rdfs:label "bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#cardiovascularDepression
+:cardiovascularDepression rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I50.9" ;
+                          OpenPVSignal:has_MedDRA_code 10065929 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Cardiovascular insufficiency" ;
+                          rdfs:label "cardiovascular depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#chronicHeartFailure
+:chronicHeartFailure rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "I50.9" ;
+                     OpenPVSignal:has_MedDRA_code 10007558 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure chronic" ;
+                     rdfs:label "chronic heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#chronicSpasticity
+:chronicSpasticity rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "M62.838" ;
+                   OpenPVSignal:has_MedDRA_code 10041416 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Spasticity" ;
+                   rdfs:label "chronic spasticity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#chronic_renal_failure
+:chronic_renal_failure rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10009119 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Chronic renal failure" ;
+                       rdfs:label "chronic renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#hypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I959" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#kidneyFailure
+:kidneyFailure rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "N189" ;
+               OpenPVSignal:has_MedDRA_code 10038435 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Renal failure" ;
+               rdfs:label "kidney failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#labelled_AE_of_baclofen_from_British_National_Formulary
+:labelled_AE_of_baclofen_from_British_National_Formulary rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Warning_Information ;
+                                                         OpenPVSignal:refers_to_adverse_effect :cardiovascularDepression ,
+                                                                                               :hypotension ,
+                                                                                               :respiratoryDepression ,
+                                                                                               :urinaryDisturbances ;
+                                                         OpenPVSignal:refers_to_drug :baclofen ;
+                                                         rdfs:label "labelled AE of baclofen from British National Formulary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#multi-organFailure
+:multi-organFailure rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Potential_Confounder ;
+                    OpenPVSignal:has_ICD_code "R6510" ;
+                    OpenPVSignal:has_MedDRA_code 10077361 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Multiple organ dysfunction syndrome" ;
+                    rdfs:label "multi-organ failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#multipleSclerosis
+:multipleSclerosis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "G35" ;
+                   OpenPVSignal:has_MedDRA_code 10028245 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Multiple sclerosis" ;
+                   rdfs:label "multiple sclerosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#oliguria
+:oliguria rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R34" ;
+          OpenPVSignal:has_MedDRA_code 10030302 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Oliguria" ;
+          rdfs:label "oliguria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#possibleConfounders
+:possibleConfounders rdf:type owl:NamedIndividual ,
+                              obo:OAE_0001182 ;
+                     OpenPVSignal:has_potential_confounding_factor :multi-organFailure ,
+                                                                   :rhabdomyolysis ,
+                                                                   :septicaemia ;
+                     OpenPVSignal:has_content "Several reports list significant comorbidities such as septicaemia, rhabdomyolysis and multi-organ failure that have to be taken into consideration as possible confounding factors." ;
+                     rdfs:label "possible confounders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#possibleMechanismOfBaclofenPrecipitatingRenalfailure1
+:possibleMechanismOfBaclofenPrecipitatingRenalfailure1 rdf:type owl:NamedIndividual ,
+                                                                OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                       OpenPVSignal:refers_to_adverse_effect :chronicHeartFailure ,
+                                                                                             :renalFailure ;
+                                                       mp:references :Ref.5 ;
+                                                       OpenPVSignal:has_content "Baclofen is a GABA[B] receptor agonist. Microinjection in rats into the paraventricular nucleus has been found to induce a dose-dependent fall of arterial pressure, accompanied by reduced heart rate and reduced renal sympathetic nerve activity in a rat model which is claimed to simulate chronic heart failure" ;
+                                                       rdfs:label "possible mechanism of baclofen precipitating renal failure1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#possibleMechanismOfBaclofenPrecipitatingRenalfailure2
+:possibleMechanismOfBaclofenPrecipitatingRenalfailure2 rdf:type owl:NamedIndividual ,
+                                                                OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                       mp:references :Ref.5 ;
+                                                       OpenPVSignal:has_content "Intrathecal use could result in inadvertently high concentrations in central areas, activating mechanisms described in the study by Wang et.al.5 Inadvertent injection into the subdural space could have the same effect." ;
+                                                       rdfs:label "possible mechanism of baclofen precipitating renal failure2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :IntroductionContent ,
+                                                   :Reports_in_Vigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForBaclofenAndRenalFailure ,
+                                                          :IC025ValueForBaclofenAndRenalFailureChronic ,
+                                                          :IC025_value_for_baclofen_and_renal_failure_acute ,
+                                                          :ICValueForBaclofenAndRenalFailureAcute ,
+                                                          :ICValueForBaclofenAndRenalFailureChronic ,
+                                                          :IC_value_for_baclofen_and_renal_failure ,
+                                                          :reportsOfAcuteRenalFailureAndBaclofen ,
+                                                          :reportsOfChronicFailure ,
+                                                          :reportsReceivingIntrathecalBaclofen ,
+                                                          :reportsReceivingOralBaclofen ,
+                                                          :reports_withy_renal_failure_and_baclofen ;
+          OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+          OpenPVSignal:refers_to_drug :baclofen ;
+          mp:supportedByData :British_National_Formulary ,
+                             :InVivoExperimentsOpposingTheProposedConnectionbaclofen-renalFailure ,
+                             :LabellingUKSPC ,
+                             :US_FDA_Label ,
+                             :US_FDA_Label_ADR_for_baclofen ,
+                             :animal_study_favoring_the_associatio ,
+                             :animal_study_favoring_the_association ,
+                             :labelled_AE_of_baclofen_from_British_National_Formulary ,
+                             :possibleConfounders ;
+          OpenPVSignal:initially_identified_on "01/12/2013" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#renalCalculus
+:renalCalculus rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "N200" ;
+               OpenPVSignal:has_MedDRA_code 10029148 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Nephrolithiasis" ;
+               rdfs:label "renal calculus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#renalFailure
+:renalFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "N189" ;
+              OpenPVSignal:has_MedDRA_code 10038435 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal failure" ;
+              rdfs:label "renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#reportsOfAcuteRenalFailureAndBaclofen
+:reportsOfAcuteRenalFailureAndBaclofen rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :reports_withy_renal_failure_and_baclofen ;
+                                       OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ;
+                                       OpenPVSignal:refers_to_drug :baclofen ;
+                                       OpenPVSignal:has_count 31 ;
+                                       OpenPVSignal:has_count_of_men 21 ;
+                                       OpenPVSignal:has_count_of_women 9 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports of acute renal failure and baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#reportsOfChronicFailure
+:reportsOfChronicFailure rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reports_withy_renal_failure_and_baclofen ;
+                         OpenPVSignal:refers_to_adverse_effect :chronic_renal_failure ;
+                         OpenPVSignal:refers_to_drug :baclofen ;
+                         OpenPVSignal:has_count 4 ;
+                         OpenPVSignal:has_count_of_men 2 ;
+                         OpenPVSignal:has_count_of_women 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports of chronic renal failure and baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#reportsReceivingIntrathecalBaclofen
+:reportsReceivingIntrathecalBaclofen rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_related_with_drug_intake :Intrathecal_administration ;
+                                     OpenPVSignal:is_subgroup_of :reportsOfAcuteRenalFailureAndBaclofen ;
+                                     OpenPVSignal:has_count 6 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports receiving intrathecal baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#reportsReceivingOralBaclofen
+:reportsReceivingOralBaclofen rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_related_with_drug_intake :Oral_administration_for_baclofen ;
+                              OpenPVSignal:is_subgroup_of :reportsOfAcuteRenalFailureAndBaclofen ;
+                              OpenPVSignal:has_count 19 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports receiving oral baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#reports_withy_renal_failure_and_baclofen
+:reports_withy_renal_failure_and_baclofen rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:refers_to_adverse_effect :renalFailure ;
+                                          OpenPVSignal:refers_to_drug :baclofen ;
+                                          OpenPVSignal:has_count 67 ;
+                                          rdfs:label "reports with renal failure and baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#respiratoryDepression
+:respiratoryDepression rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "R06.03" ;
+                       OpenPVSignal:has_MedDRA_code 10038678 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Respiratory depression" ;
+                       rdfs:label "respiratory depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#rhabdomyolysis
+:rhabdomyolysis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Potential_Confounder ;
+                OpenPVSignal:has_ICD_code "M6282" ;
+                OpenPVSignal:has_MedDRA_code 10039020 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Rhabdomyolysis" ;
+                rdfs:label "rhabdomyolysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#septicaemia
+:septicaemia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Potential_Confounder ;
+             OpenPVSignal:has_ICD_code "A41" ;
+             OpenPVSignal:has_MedDRA_code 10040047 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Sepsis" ;
+             rdfs:label "septicaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#spinalCordInjury
+:spinalCordInjury rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "S14.109A" ;
+                  OpenPVSignal:has_MedDRA_code 10041552 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Spinal cord injury" ;
+                  rdfs:label "spinal cord injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#urinaryDisturbances
+:urinaryDisturbances rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "N39.9" ;
+                     OpenPVSignal:has_MedDRA_code 10000196 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Urinary abnormalities" ;
+                     rdfs:label "urinary disturbances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_baclofen_renal_failure#usage_of_baclofen
+:usage_of_baclofen rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug_Usage ;
+                   OpenPVSignal:concerns_indication_for_use :chronicSpasticity ,
+                                                            :multipleSclerosis ,
+                                                            :spinalCordInjury ;
+                   rdfs:label "usage of baclofen" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

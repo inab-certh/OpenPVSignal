@@ -1,0 +1,1771 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                   rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255518/"^^xsd:anyURI ;
+                                                                   rdfs:label "Tapentadol and Delusion"^^xsd:Literal ;
+                                                                   owl:versionInfo "draft-v0.95-20210614"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#mpreferencedBy
+:mpreferencedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Common_psychiatric_reactions_of_tapentadol
+:Common_psychiatric_reactions_of_tapentadol rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001197 ,
+                                                     OpenPVSignal:Structured_Product_Labels_information ,
+                                                     OpenPVSignal:Warning_Information ;
+                                            OpenPVSignal:refers_to_adverse_effect :abnormalDreams ,
+                                                                                  :agitation ,
+                                                                                  :anxiety ,
+                                                                                  :confusion ,
+                                                                                  :depressedMood ,
+                                                                                  :disorientation ,
+                                                                                  :euphoria ,
+                                                                                  :nervousness ,
+                                                                                  :perceptionDisturbances ,
+                                                                                  :restlessness ,
+                                                                                  :sleepDisorder ;
+                                            OpenPVSignal:refers_to_drug :tapentadol ;
+                                            mp:references :Ref.1 ;
+                                            OpenPVSignal:has_content """in the product information, psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, 
+abnormal dreams and euphoria are described as uncommon.""" ;
+                                            rdfs:label "psychiatric reactions of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Common_reactions_of_tapentadol_in_clinical_trials
+:Common_reactions_of_tapentadol_in_clinical_trials rdf:type owl:NamedIndividual ,
+                                                            obo:OAE_0001197 ,
+                                                            OpenPVSignal:Clinical_trial_information ;
+                                                   OpenPVSignal:refers_to_adverse_effect :anxiety ,
+                                                                                         :constipation ,
+                                                                                         :decreasedAppetite ,
+                                                                                         :depressedMood ,
+                                                                                         :diarrhea ,
+                                                                                         :disturbanceInAttention ,
+                                                                                         :dizziness ,
+                                                                                         :dryMouth ,
+                                                                                         :fatigue ,
+                                                                                         :flushing ,
+                                                                                         :headache ,
+                                                                                         :hyperhidrosis ,
+                                                                                         :involuntary_muscle_contraction ,
+                                                                                         :myalgia ,
+                                                                                         :nausea ,
+                                                                                         :nervousness ,
+                                                                                         :pruritus ,
+                                                                                         :restlessness ,
+                                                                                         :sleepDisorder ,
+                                                                                         :somnolence ,
+                                                                                         :tremor ,
+                                                                                         :vertigo ,
+                                                                                         :vomiting ;
+                                                   OpenPVSignal:refers_to_drug :tapentadol ;
+                                                   mp:references :Ref.1 ;
+                                                   OpenPVSignal:has_content "Very common adverse reactions observed in clinical trials with tapentadol include gastrointestinal effects such as nausea and constipation and nervous system disorders such as dizziness, headache and somnolence. Common reactions include gastrointestinal effects such as vomiting, dry mouth and diarrhoea, nervous system disorders such as disturbance in attention, tremor and involuntary muscle contractions, psychiatric effects such as anxiety, depressed mood, sleep disorder, nervousness, restlessness, skin disorders such as pruritus and hyperhidrosis, fatigue, myalgia, vertigo, flushing and decreased appetite.1" ;
+                                                   rdfs:label "Common reactions of tapentadol in clinical trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Delusional_disorder_pathophysiology
+:Delusional_disorder_pathophysiology rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Free_text_reporting_element ;
+                                     OpenPVSignal:refers_to_adverse_effect :delusionalDisorder ;
+                                     mp:references :Ref.2 ,
+                                                   :Ref.3 ;
+                                     OpenPVSignal:has_content """Delusional disorder is an illness characterized by the presence of non-bizarre delusions in the absence of other mood or psychotic symptoms, according to the Diagnostic Manual of Mental Disorders, Fourth Edition, Text Revision (DSM-IV- TR).2,3 It defines delusions as false beliefs based on incorrect inference about external reality that persist despite the evidence to the contrary and these beliefs are not ordinarily accepted by other members of the person's culture or subculture.
+Non-bizarre refers to the fact that this type of delusion is about situations that could occur in real life, such as being followed, being loved, having an infection, and being deceived by one's spouse.
+Delusional disorder is on a spectrum between more severe psychosis and overvalued ideas.2""" ;
+                                     rdfs:label "Delusional diorder pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """Case reports in VigiBase suggest that there is a signal for the association of tapentadol and delusion. Tapentadol was the only drug suspected in six of the 10 cases. Other suspected drugs included other drugs which might be expected to be used in a pain management situation including oxycodone, cyclobenzaprine, phenobarbital and benzodiazepines and it is possible that these drugs may have made a contribution to the adverse reaction observed.
+Time to onset is suggestive of a signal. It was reported with clarity in only one of the ICSRs and was two days after drug administration began. In six other cases, however, the reaction appeared to have occurred soon after the administration or an increase in the dose of tapentadol, consistent with a drug-induced effect.
+Dechallenge is also possibly suggestive of a signal. The outcome was stated in seven ICSRs. The patients were reported as recovered or recovering in six cases and not recovered in one case. In four of these cases, the patients recovered or were recovering after the drug was reported to have been withdrawn.
+It is not surprising that neuropsychiatric effects may be associated with a drug such as tapentadol which combines both noradrenaline reuptake inhibition and mu-opioid receptor agonist activity. In addition, in the product information, psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, abnormal dreams and euphoria are described as uncommon. The occurrence of delusion as an adverse reaction would not be inconsistent with these observations.
+In VigiBase, many psychiatric reactions have been reported. These include hallucinations (which are perception disturbances) (110 cases), confusion (which includes disorientation) (100 cases), agitation (which includes restlessness) (60 cases), depression (51), anxiety (36), nervousness (22), sleep disorder (12), abnormal dreams (five) and euphoria (five). All of these terms are considered as common or uncommon in the product information and the presence of 10 ICSRs of delusion is consistent with the proposal that delusion is a signal.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Dr._Ian_Boyd
+:Dr._Ian_Boyd rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Author ;
+              OpenPVSignal:has_first_name "Ian" ;
+              OpenPVSignal:has_last_name "Boyd" ;
+              rdfs:label "Dr. Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Evidence_for_Drg-induced_effect
+:Evidence_for_Drg-induced_effect rdf:type owl:NamedIndividual ,
+                                          obo:OAE_0001197 ,
+                                          OpenPVSignal:Case_Report_Information ;
+                                 OpenPVSignal:has_content """In six other cases, however, the reaction appeared to have occurred soon after 
+the administration or an increase in the dose of tapentadol. In one of these cases, the patient experienced delusion soon after an overdose of 26 tablets. Three of the other cases reported the reaction in association with an increase in dose: in one case the dose was increased from 50 mg to 100 mg; in another case the dose was doubled from 100 mg to 200 mg; in the other case the 
+dose was increased but the details were not provided. Another case appeared to describe the reaction soon after the first dose and a further case appeared to describe the reaction soon after the second dose.""" ;
+                                 rdfs:label "Evidence for Drug-induced effect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#IC025ValueForTapentadolAndDelusion
+:IC025ValueForTapentadolAndDelusion rdf:type owl:NamedIndividual ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                    OpenPVSignal:refers_to_adverse_effect :delusion ;
+                                    OpenPVSignal:refers_to_drug :tapentadol ;
+                                    OpenPVSignal:refers_to_information_component :ICValueForTapentadolAndDelusion ;
+                                    OpenPVSignal:has_value 2.02 ;
+                                    OpenPVSignal:refers_to_number_of_reports 10 ;
+                                    rdfs:label "IC025 value for tapentadol and delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#ICValueForTapentadolAndDelusion
+:ICValueForTapentadolAndDelusion rdf:type owl:NamedIndividual ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                 OpenPVSignal:refers_to_adverse_effect :delusion ;
+                                 OpenPVSignal:refers_to_drug :tapentadol ;
+                                 OpenPVSignal:has_value 3.05 ;
+                                 OpenPVSignal:refers_to_number_of_reports 10 ;
+                                 rdfs:label "IC value for tapentadol and delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ;
+                     OpenPVSignal:has_content """Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. It has 18 times less binding affinity than morphine to the human mu-opioid receptor but was only 2-3 times less potent in producing analgesia in animal models (on a dose per body weight basis). This low in vivo potency difference is consistent with its two mechanisms of action. Tapentadol has been shown to inhibit noradrenaline reuptake in the brains of rats resulting in increased noradrenaline concentrations. In preclinical models, the analgesic activity due to the mu-opioid receptor agonist activity of tapentadol can be antagonized by selective mu-opioid receptor antagonists (e.g., naloxone), whereas the noradrenaline reuptake inhibition is sensitive to noradrenaline modulators.1 Tapentadol is indicated for the management of moderate to severe chronic pain unresponsive to non-narcotic analgesia.1
+Very common adverse reactions observed in clinical trials with tapentadol include gastrointestinal effects such as nausea and constipation and nervous system disorders such as dizziness, headache and somnolence. Common reactions include gastrointestinal effects such as vomiting, dry mouth and diarrhoea, nervous system disorders such as disturbance in attention, tremor and involuntary muscle contractions, psychiatric effects such as anxiety, depressed mood, sleep disorder, nervousness, restlessness, skin disorders such as pruritus and hyperhidrosis, fatigue, myalgia, vertigo, flushing and decreased appetite.1
+Delusional disorder is an illness characterized by the presence of non-bizarre delusions in the absence of other mood or psychotic symptoms, according to the Diagnostic Manual of Mental Disorders, Fourth Edition, Text Revision (DSM-IV- TR).2,3 It defines delusions as false beliefs based on incorrect inference about external reality that persist despite the evidence to the contrary and these beliefs are not ordinarily accepted by other members of the person's culture or subculture.
+Non-bizarre refers to the fact that this type of delusion is about situations that could occur in real life, such as being followed, being loved, having an infection, and being deceived by one's spouse.
+Delusional disorder is on a spectrum between more severe psychosis and overvalued ideas.2
+The prevalence of delusional disorder in the United States is estimated in the DSM-IV-TR to be around 0.03%, which is considerably lower than the prevalence of schizophrenia (1%) and mood disorders (5%).2,3,4 Medications known to be associated with delusion include adrenocorticotropic hormones, anabolic steroids, corticosteroids, cimetidine, antibiotics (eg, cephalosporins, penicillin), disulfiram and anticholinergic agents.2""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Known_associations_with_delusion
+:Known_associations_with_delusion rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :delusion ;
+                                  OpenPVSignal:refers_to_drug :adrenocorticotropicHormones ,
+                                                              :anabolicSteroids ,
+                                                              :anticholinergicAgents ,
+                                                              :cephalosporins ,
+                                                              :cimetidine ,
+                                                              :corticosteroids ,
+                                                              :disulfiram ,
+                                                              :penicillinsWithExtendedSpectrum ;
+                                  mp:references :Ref.2 ;
+                                  OpenPVSignal:has_content "Medications known to be associated with delusion include adrenocorticotropic hormones, anabolic steroids, corticosteroids, cimetidine, antibiotics (eg, cephalosporins, penicillin), disulfiram and anticholinergic agents.2" ;
+                                  rdfs:label "Known associations with delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ;
+                        OpenPVSignal:has_content "The product literature does not refer to delusion. However, other psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, abnormal dreams and euphoria are described as uncommon.1 There have been no reports in the literature of delusion in association with tapentadol." ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#MechanismContentForTapentadol
+:MechanismContentForTapentadol rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Mechanism ;
+                               mp:references :Ref.1 ;
+                               OpenPVSignal:has_content "Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. It has 18 times less binding affinity than morphine to the human mu-opioid receptor but was only 2-3 times less potent in producing analgesia in animal models (on a dose per body weight basis). This low in vivo potency difference is consistent with its two mechanisms of action. Tapentadol has been shown to inhibit noradrenaline reuptake in the brains of rats resulting in increased noradrenaline concentrations. In preclinical models, the analgesic activity due to the mu-opioid receptor agonist activity of tapentadol can be antagonized by selective mu-opioid receptor antagonists (e.g., naloxone), whereas the noradrenaline reuptake inhibition is sensitive to noradrenaline modulators.1 " ;
+                               rdfs:label "Mechanism of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 61 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 52 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 28 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 34 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 53 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 88 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Therapeutic Goods Administration. Product Information for Palexia, CSL Limited, 5 November 2012. URL: https://www.ebs.tga.gov.au/ebs/picmi/ picmirepository.nsf/pdf?OpenAgent&id=CP-2011- PI-02119-3. Accessed: 18 February 2013." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Chopra S, Khan RA, Bourgeois JA, DM Hilty. Medscape Reference. Delusional Disorder. URL: http://emedicine.medscape.com/article/292991- overview Accessed: 18 February 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "American Psychiatric Association. Diagnostic and statistical manual of mental disorders (DSM- IV-TR). 4th ed, Text Revision (DSM-IV-TR). Washington, DC: American Psychiatric; 2000." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sadock BJ. Delusional and shared psychotic disorder. Kaplan & Sadock's Synopsis of Psychiatry. 9th ed. 51120." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ,
+                                               :therapeuticResponseIncreased ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :cyclobenzaprine ,
+                                                       <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#paracetamol/oxycodoneHydrochloride> ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arthralgia ,
+                                                :delusion ,
+                                                :hallucination ,
+                                                :intentionalOverdose ,
+                                                :myalgia ;
+          OpenPVSignal:refers_to_concomitant_drug :armodafinil ,
+                                                  :bupropion ,
+                                                  :gabapentin ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#paracetamol/oxycodoneHydrochloride> ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :alprazolam ,
+                                                        :ethanol ,
+                                                        :oxycodone ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ,
+                                               :hallucination ;
+         OpenPVSignal:refers_to_concomitant_drug :morphine ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :confusion ,
+                                               :delusion ,
+                                               :hallucination ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :citalopram ,
+                                                 :etoricoxib ,
+                                                 :insulinAspart ,
+                                                 :lercanidipine ,
+                                                 :levothyroxine ,
+                                                 :metamizole ,
+                                                 :metoprolol ,
+                                                 :simvastatin ,
+                                                 :sitagliptin ,
+                                                 :torasemide ,
+                                                 :xipamide ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ,
+                                               :serotoninSyndrome ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :duloxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :amenorrhoea ,
+                                               :anxiety ,
+                                               :cardiacFailure ,
+                                               :cryingAbnormal ,
+                                               :delusion ,
+                                               :depersonalization ,
+                                               :depression ,
+                                               :euphoria ,
+                                               :personalityDisorder ,
+                                               :tremor ;
+         OpenPVSignal:refers_to_concomitant_drug :alprazolam ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :phenobarbital ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anxiety ,
+                                               :confusion ,
+                                               :delusion ,
+                                               :dizziness ,
+                                               :dryMouth ;
+         OpenPVSignal:refers_to_concomitant_drug :amitriptyline ,
+                                                 :buspirone ,
+                                                 :cyclobenzaprine ,
+                                                 :formoterol ,
+                                                 :lorazepam ,
+                                                 :oxycodone ,
+                                                 :phenobarbital ,
+                                                 :salbutamol ,
+                                                 :tamoxifen ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#paracetamol/oxycodoneHydrochloride> ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :delusion ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of 25 January 2013 there are 10 Individual Case Safety Reports (ICSRs) of delusion in association with tapentadol in the WHO Global ICSR Database, VigiBase™ (Table 1). The association has an IC value of 3.05 with an IC025 value of 2.02. The ICSRs were submitted from the United States (nine cases) and Germany (one case). The patients ranged in age from nine to 88 years with a median of 57 years but only eight cases provided this information. The gender distribution was nine females and one male.
+Tapentadol was the only drug suspected in six cases. Other suspected drugs included other drugs which might be expected to be used in a pain management situation including oxycodone (three cases), cyclobenzaprine (two cases), phenobarbital (one case) and benzodiazepines (three cases). Concomitant (but not suspected) drugs were reported in five cases and also included drugs involved in a pain management setting such as oxycodone, morphine, NSAIDs and benzodiazepines. Tapentadol was reported to have been administered orally, as expected, in all 10 cases. The indication for use was included in seven ICSRs and included treatment for pain in each case.
+Time to onset was reported with clarity in only one of the ICSRs and was two days after drug administration began. In six other cases, however, the reaction appeared to have occurred soon after the administration or an increase in the dose of tapentadol. In one of these cases, the patient experienced delusion soon after an overdose of 26 tablets. Three of the other cases reported the reaction in association with an increase in dose: in
+ 
+one case the dose was increased from 50 mg to 100 mg; in another case the dose was doubled from 100 mg to 200 mg; in the other case the dose was increased but the details were not provided. Another case appeared to describe the reaction soon after the first dose and a further case appeared to describe the reaction soon after the second dose.
+The outcome was stated in seven ICSRs. The patients were reported as recovered or recovering in six cases and not recovered in one case. In four of the six cases, the patient recovered after dechallenge.
+Other reactions were described in seven ICSRs. In six of those ICSRs, other neuropsychiatric effects were described including hallucination (three cases), anxiety and confusion (both two cases).""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. In the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase™, there are currently (25 January 2013) 10 ICSRs of delusion in association with tapentadol. The ICSRs are from the United States and Germany. The association has an IC value of 3.05 with an IC025 value of
+2.02. Tapentadol was the only drug suspected in six cases. The outcome was stated in seven ICSRs. The patients were reported as recovered or recovering in six cases and not recovered in one case. The association of delusion with tapentadol appears to be a signal. The IC value is relatively high. Tapentadol was the only drug suspected in six of the 10 cases, the time to onset is particularly suggestive of a drug-induced effect and the observation of recovery after dechallenge in four of six cases in which recovery was documented is also supportive of the signal. In addition, the observation in the product information that other psychiatric reactions occurred commonly and uncommonly in clinical trials suggests that a mechanism for the development of another psychiatric reaction such as delusion may be possible. The fact that delusion has been reported in VigiBase at a similar level to some of these reactions is also suggestive of a signal.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Tapentadol_and_Delusion
+:Tapentadol_and_Delusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                         OpenPVSignal:refers_to_author :Dr._Ian_Boyd ;
+                         OpenPVSignal:refers_to_signal :pvSignal ;
+                         mp:publishedBy :Uppsala_monitoring_centre ;
+                         OpenPVSignal:has_creation_date "1/10/2013"^^xsd:date ;
+                         OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                         rdfs:label "Tapentadol and Delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Uppsala_monitoring_centre
+:Uppsala_monitoring_centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala monitoring centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#abnormalDreams
+:abnormalDreams rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "F51.8" ;
+                OpenPVSignal:has_MedDRA_code 10000125 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Abnormal dreams" ;
+                rdfs:label "abnormal dreams" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#adrenocorticotropicHormones
+:adrenocorticotropicHormones rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Drug ;
+                             OpenPVSignal:has_ATC_code "H01AA " ;
+                             rdfs:label "adrenocorticotropic hormones" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#aggressiveReaction
+:aggressiveReaction rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10001488 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Aggression" ;
+                    rdfs:label "aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R45.1" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#alprazolam
+:alprazolam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05BA12" ;
+            rdfs:label "alprazolam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#amenorrhoea
+:amenorrhoea rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "N91.2" ;
+             OpenPVSignal:has_MedDRA_code 10001928 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Amenorrhoea" ;
+             rdfs:label "amenorrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#amitriptyline
+:amitriptyline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N06AA09" ,
+                                         "N06CA01" ;
+               rdfs:label "amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#anabolicSteroids
+:anabolicSteroids rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "A14A" ;
+                  rdfs:label "anabolic steroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#anticholinergicAgents
+:anticholinergicAgents rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug ;
+                       OpenPVSignal:has_ATC_code "N04A" ;
+                       rdfs:label "anticholinergic agents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "F41.9" ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#armodafinil
+:armodafinil rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06BA13" ;
+             rdfs:label "armodafinil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#arthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M25.50" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#benzodiazepines
+:benzodiazepines rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_ATC_code "N05BA" ;
+                 rdfs:label "benzodiazepines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#bupropion
+:bupropion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A08AA62" ,
+                                     "N06AX12" ;
+           rdfs:label "bupropion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#buspirone
+:buspirone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BE01" ;
+           rdfs:label "buspirone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#cardiacFailure
+:cardiacFailure rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I50" ;
+                OpenPVSignal:has_MedDRA_code 10007554 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+                rdfs:label "cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#cephalosporins
+:cephalosporins rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "J01DC " ;
+                rdfs:label "cephalosporins" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#chronicPain
+:chronicPain rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "G89.2" ;
+             OpenPVSignal:has_MedDRA_code 10049475 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Chronic pain" ;
+             rdfs:label "chronic pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#cimetidine
+:cimetidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA01" ,
+                                      "A02BA01 " ,
+                                      "A02BA51" ;
+            rdfs:label "cimetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#citalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#confusion
+:confusion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F44.89" ;
+           OpenPVSignal:has_MedDRA_code 10010305 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+           rdfs:label "confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K59.0" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#corticosteroids
+:corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "H02 " ;
+                 rdfs:label "corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#cryingAbnormal
+:cryingAbnormal rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R45.83" ;
+                OpenPVSignal:has_MedDRA_code 10011469 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Crying" ;
+                rdfs:label "crying abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#cyclobenzaprine
+:cyclobenzaprine rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "M03BX08" ;
+                 rdfs:label "cyclobenzaprine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#decreasedAppetite
+:decreasedAppetite rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R63.0" ;
+                   OpenPVSignal:has_MedDRA_code 10061428 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+                   rdfs:label "decreased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#delusion
+:delusion rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F06.2" ;
+          OpenPVSignal:has_MedDRA_code 10012239 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Delusion" ;
+          rdfs:label "delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#delusionalDisorder
+:delusionalDisorder rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "F06.2" ;
+                    OpenPVSignal:has_MedDRA_code 10012255 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Delusional disorder, unspecified type" ;
+                    rdfs:label "delusional disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#depersonalization
+:depersonalization rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "F48.1" ;
+                   OpenPVSignal:has_MedDRA_code 10077805 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Depersonalisation/derealisation disorder" ;
+                   rdfs:label "depersonalization" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#depressedMood
+:depressedMood rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "F43.21" ;
+               OpenPVSignal:has_MedDRA_code 10012374 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Depressed mood" ;
+               rdfs:label "depressed mood" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R19.7" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#disorientation
+:disorientation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R41.0" ;
+                OpenPVSignal:has_MedDRA_code 10013395 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Disorientation" ;
+                rdfs:label "disorientation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#disturbanceInAttention
+:disturbanceInAttention rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R41.840" ;
+                        OpenPVSignal:has_MedDRA_code 10013496 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Disturbance in attention" ;
+                        rdfs:label "disturbance in attention" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#disulfiram
+:disulfiram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N07BB01" ,
+                                      "P03AA04" ,
+                                      "P03AA54" ;
+            rdfs:label "disulfiram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#dryMouth
+:dryMouth rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R68.2" ;
+          OpenPVSignal:has_MedDRA_code 10013781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+          rdfs:label "dry mouth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#duloxetine
+:duloxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX21" ;
+            rdfs:label "duloxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#ethanol
+:ethanol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "D08AX08" ,
+                                   "V03AB16" ,
+                                   "V03AZ01" ;
+         rdfs:label "ethanol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#etoricoxib
+:etoricoxib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M01AH05" ;
+            rdfs:label "etoricoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#euphoria
+:euphoria rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F39" ;
+          OpenPVSignal:has_MedDRA_code 10015535 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Euphoric mood" ;
+          rdfs:label "euphoria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53.83" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#flushing
+:flushing rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R23.2" ;
+          OpenPVSignal:has_MedDRA_code 10016825 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Flushing" ;
+          rdfs:label "flushing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#formoterol
+:formoterol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC13" ,
+                                      "R03AK07" ,
+                                      "R03AK08" ,
+                                      "R03AK09" ,
+                                      "R03AK11" ,
+                                      "R03AL05" ;
+            rdfs:label "formoterol fumarate / budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#gabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#hallucination
+:hallucination rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R44.3" ;
+               OpenPVSignal:has_MedDRA_code 10019063 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+               rdfs:label "hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#hyperhidrosis
+:hyperhidrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R61" ;
+               OpenPVSignal:has_MedDRA_code 10020642 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+               rdfs:label "hyperhidrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#insulinAspart
+:insulinAspart rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A10AB05" ,
+                                         "A10AD05" ,
+                                         "A10AD06" ;
+               rdfs:label "insulin aspart" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#intentionalOverdose
+:intentionalOverdose rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "T50.992A" ;
+                     OpenPVSignal:has_MedDRA_code 10022523 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                     rdfs:label "intentional overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#involuntary_muscle_contraction
+:involuntary_muscle_contraction rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_MedDRA_code 10028293 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Muscle contractions involuntary" ;
+                                rdfs:label "involuntary muscle contractions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#lercanidipine
+:lercanidipine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C08CA13" ,
+                                         "C09BB02" ,
+                                         "C09DB08" ;
+               rdfs:label "lercanidipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#metamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02" ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#mood_disorders
+:mood_disorders rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "F39" ;
+                OpenPVSignal:has_MedDRA_code 10079614 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Mood disorder" ;
+                rdfs:label "mood disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A07DA52" ,
+                                    "N02AA01" ,
+                                    "N02AA51" ,
+                                    "N02AG01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#myalgia
+:myalgia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "M79.1" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#nervousness
+:nervousness rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R45.0" ;
+             OpenPVSignal:has_MedDRA_code 10029216 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Nervousness" ;
+             rdfs:label "nervousness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_drug :tapentadol ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#oxycodone
+:oxycodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02AA05" ,
+                                     "N02AA55" ;
+           rdfs:label "oxycodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#penicillinsWithExtendedSpectrum
+:penicillinsWithExtendedSpectrum rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug ;
+                                 OpenPVSignal:has_ATC_code "J01C" ;
+                                 rdfs:label "penicillins" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#perceptionDisturbances
+:perceptionDisturbances rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R41.842" ;
+                        OpenPVSignal:has_MedDRA_code 10082213 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Perception disturbances NEC" ;
+                        rdfs:label "perception disturbances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#personalityDisorder
+:personalityDisorder rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "F60.9" ;
+                     OpenPVSignal:has_MedDRA_code 10034721 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Personality disorder" ;
+                     rdfs:label "personality disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#phenobarbital
+:phenobarbital rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AA02" ,
+                                         "N05CB01" ;
+               rdfs:label "phenobarbital" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#prevalenceOfDelusionalDisorderInTheUSA
+:prevalenceOfDelusionalDisorderInTheUSA rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Prevalence ;
+                                        OpenPVSignal:refers_to_adverse_effect :delusionalDisorder ;
+                                        mp:references :Ref.2 ,
+                                                      :Ref.3 ,
+                                                      :Ref.4 ;
+                                        OpenPVSignal:has_value 0.0003 ;
+                                        rdfs:label "prevalence of delusional disorder in the USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#prevalenceOfMoodDisordersInTheUSA
+:prevalenceOfMoodDisordersInTheUSA rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Prevalence ;
+                                   OpenPVSignal:refers_to_adverse_effect :mood_disorders ;
+                                   mp:references :Ref.2 ,
+                                                 :Ref.3 ,
+                                                 :Ref.4 ;
+                                   OpenPVSignal:has_value 0.05 ;
+                                   rdfs:label "prevalence of mood disorders in the USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#prevalenceOfSchizophreniaInTheUSA
+:prevalenceOfSchizophreniaInTheUSA rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Prevalence ;
+                                   OpenPVSignal:refers_to_adverse_effect :schizophrenia ;
+                                   mp:references :Ref.2 ,
+                                                 :Ref.3 ,
+                                                 :Ref.4 ;
+                                   OpenPVSignal:has_value 0.01 ;
+                                   rdfs:label "prevalence of schizophrenia in the USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L29.9" ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Delusional_disorder_pathophysiology ,
+                                                   :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :reportsForAbnormalDreams ,
+                                                          :reportsForAnxiety ,
+                                                          :reportsForDepression ,
+                                                          :reportsForNervousness ,
+                                                          :reportsForSleepDisorders ,
+                                                          :reportsForTapentadolInVigibase ,
+                                                          :reportsFromGermany ,
+                                                          :reportsFromUnitedStates ,
+                                                          :reportsInVigibaseForConfusion ,
+                                                          :reportsInVigibaseForHallucinations ,
+                                                          :reportsOfEuphoria ,
+                                                          :reportsWithAgeInformation ,
+                                                          :reportsWithChronicPainAsIndication ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithTapentadolBeingTheOnlySuspectDrug ,
+                                                          :reportsWithTimeToOnset ,
+                                                          :reports_including_anxiety ,
+                                                          :reports_including_confusion ,
+                                                          :reports_including_hallucination ,
+                                                          :reports_with_benzodiazepines_as_co_suspected ,
+                                                          :reports_with_cyclobenzaprine_as_co_suspected ,
+                                                          :reports_with_no_recovery_as_outcome ,
+                                                          :reports_with_oxycodone_as_co_suspected ,
+                                                          :reports_with_phenobarbital_as_co_suspected ,
+                                                          :reprotsForAgitation ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithrecovering/recoveredAsOutcome> ;
+          OpenPVSignal:refers_to_adverse_effect :delusion ;
+          OpenPVSignal:refers_to_drug :tapentadol ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+          mp:supportedByData :Common_psychiatric_reactions_of_tapentadol ,
+                             :Common_reactions_of_tapentadol_in_clinical_trials ,
+                             :Evidence_for_Drg-induced_effect ,
+                             :Known_associations_with_delusion ;
+          OpenPVSignal:initially_identified_on "1/10/2013"^^xsd:date ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForAbnormalDreams
+:reportsForAbnormalDreams rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :abnormalDreams ;
+                          OpenPVSignal:has_count 5 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports for abnormal dreams" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForAnxiety
+:reportsForAnxiety rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:refers_to_adverse_effect :anxiety ;
+                   OpenPVSignal:has_count 36 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports for anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForDepression
+:reportsForDepression rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:refers_to_adverse_effect :depression ;
+                      OpenPVSignal:has_count 51 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports for depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForNervousness
+:reportsForNervousness rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:refers_to_adverse_effect :nervousness ;
+                       OpenPVSignal:has_count 22 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports for nervousness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForSleepDisorders
+:reportsForSleepDisorders rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :sleepDisorder ;
+                          OpenPVSignal:has_count 12 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports for sleep disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsForTapentadolInVigibase
+:reportsForTapentadolInVigibase rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:refers_to_adverse_effect :delusion ;
+                                OpenPVSignal:refers_to_drug :tapentadol ;
+                                OpenPVSignal:refers_to_reported_drug_usage :usage_of_tapentadol ;
+                                OpenPVSignal:has_count 10 ;
+                                OpenPVSignal:has_count_of_men 1 ;
+                                OpenPVSignal:has_count_of_women 9 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports for tapentadol and delusion in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsFromUnitedStates
+:reportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                         OpenPVSignal:has_count 9 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports from united states" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsInVigibaseForConfusion
+:reportsInVigibaseForConfusion rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:refers_to_adverse_effect :confusion ;
+                               OpenPVSignal:has_count 100 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports for confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsInVigibaseForHallucinations
+:reportsInVigibaseForHallucinations rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:refers_to_adverse_effect :hallucination ;
+                                    OpenPVSignal:has_count 110 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports for hallucinations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsOfEuphoria
+:reportsOfEuphoria rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:refers_to_adverse_effect :euphoria ;
+                   OpenPVSignal:has_count 5 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports for euphoria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithAgeInformation
+:reportsWithAgeInformation rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                           OpenPVSignal:has_count 8 ;
+                           OpenPVSignal:has_max_age "88.0"^^xsd:float ;
+                           OpenPVSignal:has_median_age "57.0"^^xsd:float ;
+                           OpenPVSignal:has_min_age "9.0"^^xsd:float ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with age information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithChronicPainAsIndication
+:reportsWithChronicPainAsIndication rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:concerns_indication_for_use :chronicPain ;
+                                    OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                    OpenPVSignal:has_count 7 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports with chronic pain as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithrecovering/recoveredAsOutcome> ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithTapentadolBeingTheOnlySuspectDrug
+:reportsWithTapentadolBeingTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                              OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+                                              OpenPVSignal:has_count 6 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "reports with tapentadol being the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithTimeToOnset
+:reportsWithTimeToOnset rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                        OpenPVSignal:time_to_onset :timeToOnsetInfo ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with time to onset " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_including_anxiety
+:reports_including_anxiety rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                           OpenPVSignal:refers_to_adverse_effect :anxiety ;
+                           OpenPVSignal:has_count 2 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports including anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_including_confusion
+:reports_including_confusion rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                             OpenPVSignal:refers_to_adverse_effect :confusion ;
+                             OpenPVSignal:has_count 2 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports including confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_including_hallucination
+:reports_including_hallucination rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                 OpenPVSignal:refers_to_adverse_effect :hallucination ;
+                                 OpenPVSignal:has_count 3 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports including hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_with_benzodiazepines_as_co_suspected
+:reports_with_benzodiazepines_as_co_suspected rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                              OpenPVSignal:refers_to_class :benzodiazepines ;
+                                              OpenPVSignal:has_count 3 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "reports with benzodiazepines as co suspected" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_with_cyclobenzaprine_as_co_suspected
+:reports_with_cyclobenzaprine_as_co_suspected rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                              OpenPVSignal:refers_to_secondary_suspect_drug :cyclobenzaprine ;
+                                              OpenPVSignal:has_count 2 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "reports with cyclobenzaprine as co suspected" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_with_no_recovery_as_outcome
+:reports_with_no_recovery_as_outcome rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                     OpenPVSignal:has_count 1 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                     rdfs:label "reports with no recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_with_oxycodone_as_co_suspected
+:reports_with_oxycodone_as_co_suspected rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                        OpenPVSignal:refers_to_secondary_suspect_drug :oxycodone ;
+                                        OpenPVSignal:has_count 3 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with oxycodone as co suspected" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reports_with_phenobarbital_as_co_suspected
+:reports_with_phenobarbital_as_co_suspected rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                            OpenPVSignal:refers_to_secondary_suspect_drug :phenobarbital ;
+                                            OpenPVSignal:has_count 1 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports with phenobarbital as co suspected" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reprotsForAgitation
+:reprotsForAgitation rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:refers_to_adverse_effect :agitation ;
+                     OpenPVSignal:has_count 60 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "reports for agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#restlessness
+:restlessness rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R45.1" ;
+              OpenPVSignal:has_MedDRA_code 10038743 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Restlessness" ;
+              rdfs:label "restlessness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ,
+                                      "R03AK04" ,
+                                      "R03AL02" ,
+                                      "R03CC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#schizophrenia
+:schizophrenia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "F20" ;
+               OpenPVSignal:has_MedDRA_code 10039626 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Schizophrenia" ;
+               rdfs:label "schizophrenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#serotoninSyndrome
+:serotoninSyndrome rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "T43.221A" ;
+                   OpenPVSignal:has_MedDRA_code 10040108 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Serotonin syndrome" ;
+                   rdfs:label "serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#sitagliptin
+:sitagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BD07" ,
+                                       "A10BD12" ,
+                                       "A10BH01" ,
+                                       "A10BH51" ;
+             rdfs:label "sitagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#sleepDisorder
+:sleepDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "G47.9" ;
+               OpenPVSignal:has_MedDRA_code 10040984 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Sleep disorder" ;
+               rdfs:label "sleep disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#tamoxifen
+:tamoxifen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L02BA01" ;
+           rdfs:label "tamoxifen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#tapentadol
+:tapentadol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:concerns_indication_for_use :chronicPain ;
+            OpenPVSignal:has_mechanism :MechanismContentForTapentadol ;
+            OpenPVSignal:has_ATC_code "N02AX06" ;
+            rdfs:label "tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#therapeuticResponseIncreased
+:therapeuticResponseIncreased rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_MedDRA_code 10043415 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Therapeutic response increased" ;
+                              rdfs:label "therapeutic response increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#timeToOnsetInfo
+:timeToOnsetInfo rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                 <http://www.w3.org/2006/time#numericPosition> 2 ;
+                 rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#torasemide
+:torasemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA04" ;
+            rdfs:label "torasemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R25.1" ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#usage_of_tapentadol
+:usage_of_tapentadol rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                     OpenPVSignal:refers_to_drug :tapentadol ;
+                     rdfs:label "usage of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#vertigo
+:vertigo rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R42" ;
+         OpenPVSignal:has_MedDRA_code 10047340 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Vertigo" ;
+         rdfs:label "vertigo" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#xipamide
+:xipamide rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C03BA10" ;
+          rdfs:label "xipamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Response_from_Grünenthal_GmbH_and_Janssen_Pharmaceuticals,_inc.
+<http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#Response_from_Grünenthal_GmbH_and_Janssen_Pharmaceuticals,_inc.> rdf:type owl:NamedIndividual ,
+                                                                                                                                           OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                                                                                                                  OpenPVSignal:refers_to_pharmacovigilance_signal_report :Tapentadol_and_Delusion ;
+                                                                                                                                  OpenPVSignal:has_content """Delusional disorders as defined in DSM-IV-TR 
+require the presence of at least one non bizarre 
+delusion persisting for at least one month. It is 
+also important to note that the diagnosis of 
+delusion can only be made in the absence of other 
+relevant psychiatric disorder, such as prominent 
+auditory or visual hallucinations1. 
+The signal of disproportionate reporting on 
+tapentadol and delusion has been a topic of 
+internal review during the routine signal detection
+activities. The integrated analysis included data 
+from the clinical development program, 
+spontaneous reports and literature review with the 
+conclusion that the review of evidence did not 
+support an association between tapentadol 
+administration and delusion. 
+Clinical Experience 
+Perceptional disturbances, with its most prominent 
+manifestation being hallucinations, have been 
+identified as adverse drug reactions (ADRs) during 
+the clinical development program of tapentadol. 
+These are acknowledged class effects of mu-opioid 
+agonist drugs in general. Further recognized 
+neuropsychiatric ADRs include disorientation and 
+confusion. 
+To date, only 0.02% of subjects treated with 
+tapentadol experienced delusion during the clinical
+development program. All these events were non-serious, with mild or moderate intensity, and did 
+not lead to a change of the safety profile of 
+tapentadol. 
+Postmarketing Experience 
+Cases retrieved from the safety database with a 
+cumulative search for the Preferred Term 
+'Delusion' were reviewed in detail. All cases were 
+sparsely documented, especially regarding medical 
+history and the diagnosis, as symptoms or 
+circumstances describing the delusion were not 
+mentioned. 
+More than a third of the cases reported 
+hallucination concurrently. Furthermore the events 
+of disorientation and confusion were reported, 
+which confounded a clear medical assessment. 
+With exception for one case, all other cases were 
+medically confirmed. 
+Overall, there were no cases with sufficient 
+information providing phenomenological evidence 
+regarding the diagnosis and lacking confounders. 
+Discussion 
+The review of post-marketing cases suggests that 
+the distinction between hallucination and 
+delusional disorder is often not made by the 
+reporting health care professional and the terms 
+are used interchangeably in some of the cases. 
+According to the definition of delusional disorder 
+provided in the DSM-VI-TR1 classification, a 
+prominent hallucination would preclude the 
+diagnosis of delusional disorder making the 
+diagnosis of delusional disorder in these cases 
+questionable, although most of the cases were 
+medically confirmed. 
+The rest of the cases lacked information on the 
+symptoms related to the diagnosis of delusional 
+disorder, or there was missing information on 
+important medical history or concomitant 
+treatment. Bearing in mind the challenges of 
+establishing an accurate psychiatric diagnosis, 
+these cases do not provide sufficient information 
+for a reasonable assessment. 
+Although tapentadol as a centrally acting drug 
+already lists neuropsychiatric effects such as 
+anxiety, disorientation, confusion and perception 
+disturbances including hallucinations, delusional 
+disorder is a distinct medical concept. As the 
+diagnosis is clearly distinguished from other 
+psychiatric disorders, particularly hallucinations it 
+cannot automatically be regarded as an expected 
+drug reaction. 
+Conclusion 
+The integrated analysis revealed insufficient 
+evidence for an association between tapentadol 
+and delusion. Therefore, currently delusion is not 
+regarded as a valid safety signal. The topic will 
+however be reviewed on a routine basis to monitor 
+for a change in the level of evidence. 
+Reference 
+1. American Psychiatric Association. Diagnostic 
+and Statistical Manual of Mental Disorders (DSM-IV-TR). Fourth Edition, Text Revision (DSM-IV-TR). 
+Washington, DC: American Psychiatric; 2000.""" ;
+                                                                                                                                  rdfs:label "Response from Grünenthal GmbH and Janssen Pharmaceuticals, inc." .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#paracetamol/oxycodoneHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#paracetamol/oxycodoneHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                              OpenPVSignal:Drug ;
+                                                                                                     OpenPVSignal:has_ATC_code "N02AJ17" ;
+                                                                                                     rdfs:label "paracetamol/ oxycodone hydrochloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithrecovering/recoveredAsOutcome
+<http://purl.org/OpenPVSignal/Signals/2013_5_tapentadol_delusion#reportsWithrecovering/recoveredAsOutcome> rdf:type owl:NamedIndividual ,
+                                                                                                                    OpenPVSignal:Reports_group ;
+                                                                                                           OpenPVSignal:is_subgroup_of :reportsForTapentadolInVigibase ;
+                                                                                                           OpenPVSignal:has_count 6 ;
+                                                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                           OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                                                                           rdfs:label "reports with recovering/recovered as outcome" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:DelusionalDisorder rdfs:label "Delusional disorder" .
+
+
+:decreasedApetite OpenPVSignal:has_ICD_code "R63.0" ;
+                  rdfs:label "decreased apetite" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,985 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl> rdf:type owl:Ontology ;
+                                                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/277447/"^^xsd:anyURI ;
+                                                                                                        rdfs:label "Brivudine and 5-fluorouracil - Persistence of a fatal drug-drug interaction"^^rdfs:Literal ;
+                                                                                                        owl:versionInfo "draft-v0.95-20210510"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ADR_mechanism_for_thymidine_nucleoside_analogues_and_5-FU_products
+:ADR_mechanism_for_thymidine_nucleoside_analogues_and_5-FU_products rdf:type owl:NamedIndividual ,
+                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect_Mechanism> ;
+                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Brivudine ,
+                                                                                                                                   :Capetabine ,
+                                                                                                                                   <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                                                                    mp:references :Ref.6 ,
+                                                                                  :Ref.7 ,
+                                                                                  :Ref.8 ;
+                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The concomitant use of thymidine nucleoside analogues and 5-FU products is known to cause fatal 5-FU toxicity. In the early 1990s, sorivudine, another nucleoside thymidine analogue, was reported to have caused 18 deaths in Japan when used in conjunction with 5-FU; consequently, sorivudine was removed from the market.6 The mechanism of action for this fatal drug interaction is the same for brivudine; bromovinyl uracil, the major metabolite of both drugs, irreversibly binds to and inhibits dihydropyrimidine dehydrogenase (DPD). DPD is an enzyme in the hepatic system responsible for the inactivation of 5-FU.4 In animal studies, this inhibition of DPD by co-administration of sorivudine, has led to a 5.5-fold increase in plasma 5-FU area under the curve (AUC) on the first day and up to eight times increase by day 6, when compared to the administration of 5-FU alone.6 An important additional fact is that DPD is responsible for about 85% of 5-FU metabolism. Its activity is immediately and almost completely suppressed, with the introduction of BVU, and toxicity-averting DPD activity did not return until at least 14 days after the cessation of SRV.  A fourweek period between the use of 5-FU and brivudine or other BVU producing substances should be enough to avoid 5-FU toxicity.7" ;
+                                                                    rdfs:label "ADR mechanism for thymidine nucleoside analogues and 5-FU products" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#AEMPS
+:AEMPS rdf:type owl:NamedIndividual ,
+                <http://purl.obolibrary.org/obo/OAE_0001197> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_5-FU ;
+       mp:references :Ref.21 ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In a recent issue of the WHO Pharmaceuticals Newsletter, the concerns of the Agencia Española de Medicamentos y Productos Sanitarios (AEMPS) in Spain about the continued fatal cases, were reported, alongside reiterated warnings to healthcare professionals.21" ;
+       rdfs:label "AEMPS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Animal_studies
+:Animal_studies rdf:type owl:NamedIndividual ,
+                         <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Sorivudine ,
+                                                                                           <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                mp:references :Ref.6 ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In animal studies, this inhibition of DPD by co-administration of sorivudine, has led to a 5.5-fold increase in plasma 5-FU area under the curve (AUC) on the first day and up to eight times increase by day 6, when compared to the administration of 5-FU alone.6" ;
+                rdfs:label "Animal studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#BoneMarrowAplasia
+:BoneMarrowAplasia rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "D61.9" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10065553 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Bone marrow failure" ;
+                   rdfs:label "Bone marrow aplasia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Brivudine
+:Brivudine rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :thymidine_nucleoside_analogues ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_Brivudine ,
+                                                                         :Mechanism_of_fatal_drug_interaction ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J05AB15" ;
+           rdfs:label "Brivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Brivudine_and_5-fluorouracil_Persistence_of_a_fatal_drug-drug_interaction
+:Brivudine_and_5-fluorouracil_Persistence_of_a_fatal_drug-drug_interaction rdf:type owl:NamedIndividual ,
+                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Raghu_Damaria ,
+                                                                                                                                            :Rebecca_E._Chandler ;
+                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pv_signal ;
+                                                                           mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/12/2018"^^xsd:date ;
+                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                                                           rdfs:label "Brivudine and 5-fluorouracil – Persistence of a fatal drug-drug interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Capetabine
+:Capetabine rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "L01BC06" ;
+            rdfs:label "Capetabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#CaseInfo1
+:CaseInfo1 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "An elderly patient was given a 6-day treatment of brivudine for shingles. Three days later, brivudine treatment was ended, and the patient was administered a 5-FU bolus to manage his colon cancer. Five days later the patient was hospitalised for severe mucositis and developed severe bone marrow aplasia. He died soon after on an unspecified date." ;
+           rdfs:label "Case info 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#CaseInfo2
+:CaseInfo2 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A patient on long-term capecitabine (Xeloda) treatment for breast cancer who developed herpes zoster while on vacation abroad. The local treating physician prescribed brivudine and the patient took both medications together. After returning to her home country she presented to the hospital feeling generally unwell. She was hospitalized and eventually developed massive mucositis with ulcers in the mouth and throat region. The report does not state the outcome. " ;
+           rdfs:label "Case info 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#CaseInfo3
+:CaseInfo3 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A patient was prescribed three cycles of 5- FU treatment following surgery for colon cancer. After the second cycle the patient developed shingles and the treating dermatologist prescribed brivudine (Nervinex). Three days after completing the 7-day course of brivudine, the final cycle of 5- FU was administered; two days later the patient presented feeling very tired and generally unwell. The patient was hospitalised, blood tests showed severe pancytopenia, and 10 days later the patient died. " ;
+           rdfs:label "Case info 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#CaseInfo4
+:CaseInfo4 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A patient was prescribed brivudine (Zostex) only during pauses in her treatment of capecitabine (Xeloda), which she kept at home and would use often because of frequent herpes simplex infections from massive herpes labialis. The patient started treatment with capecitabine in March and the treatment cycle ended on 22 March. During a treatment pause of seven days, the patient started treatment with brivudine, on. On 28 March, brivudine was discontinued, and the patient started the next treatment cycle with capecitabine two days later. On 1 April, the patient started treatment with brivudine. On 2 April, she stopped the treatment with brivudine, after an intake of two tablets. On 5 April, capecitabine was withdrawn, the patient was hospitalised and eventually died due to bone marrow depression." ;
+           rdfs:label "Case info 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Discussion
+:Discussion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Discussion> ;
+            mp:references :Ref.10 ,
+                          :Ref.11 ,
+                          :Ref.12 ,
+                          :Ref.13 ,
+                          :Ref.14 ,
+                          :Ref.15 ,
+                          :Ref.16 ,
+                          :Ref.17 ,
+                          :Ref.18 ,
+                          :Ref.19 ,
+                          :Ref.20 ,
+                          :Ref.21 ,
+                          :Ref.22 ,
+                          :Ref.23 ,
+                          :Ref.24 ,
+                          :Ref.4 ,
+                          :Ref.6 ,
+                          :Ref.7 ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The concomitant use of thymidine nucleoside analogues and 5-FU products is known to cause fatal 5-FU toxicity. In the early 1990s, sorivudine, another nucleoside thymidine analogue, was reported to have caused 18 deaths in Japan when used in conjunction with 5-FU; consequently, sorivudine was removed from the market.6 The mechanism of action for this fatal drug interaction is the same for brivudine; bromovinyl uracil, the major metabolite of both drugs, irreversibly binds to and inhibits dihydropyrimidine dehydrogenase (DPD). DPD is an enzyme in the hepatic system responsible for the inactivation of 5-FU.4 In animal studies, this inhibition of DPD by co-administration of sorivudine, has led to a 5.5-fold increase in plasma 5-FU area under the curve (AUC) on the first day and up to eight times increase by day 6, when compared to the administration of 5-FU alone.6 An important additional fact is that DPD is responsible for about 85% of 5-FU metabolism. Its activity is immediately and almost completely suppressed, with the introduction of BVU, and toxicity-averting DPD activity did not return until at least 14 days after the cessation of SRV.  A fourweek period between the use of 5-FU and brivudine or other BVU producing substances should be enough to avoid 5-FU toxicity.7 In spite of the fact that this drug-drug interaction is well understood and there are warnings on both products, fatalities secondary to the interaction continue to occur. Concerns regarding continuing fatalities have been raised in both Germany and Spain. In Germany, an independent medical journal, Arznei-Telegramm, published a similar analysis of cases involving the brivudine-5FU interaction and recommended that withdrawal of brivudine is the only reliable way to prevent more fatal cases.20 In a recent issue of the WHO Pharmaceuticals Newsletter, the concerns of the Agencia Española de Medicamentos y Productos Sanitarios (AEMPS) in Spain about the continued fatal cases, were reported, alongside reiterated warnings to healthcare professionals.21 Review of our case series revealed some features which could be considered as potential reasons for the persistence of fatalities. In cases 1, 3 and 4, the interacting drugs were not administered concomitantly; however, the time intervals between receipt of each drug were limited to only a few days. The patients in these cases appear to have adhered to the red warning section of the patient leaflet: they did not take brivudine while receiving 5-FU. However, the patients did not follow the non-highlighted, somewhat hidden warning “Do not take Menavir and contact your doctor immediately if you will be receiving therapy with any of the above medicines within four weeks of the end of treatment with Menavir ”. Reasons for failure to heed such a warning may be that, 1) patients limit their focus to the boxed, red section of the package leaflet which does not contain this information, and 2) patients may simply not be aware if they will be receiving chemotherapy within four weeks of stopping brivudine. In cases 2 and 3 scenarios were described in which multiple treating WHO Pharmaceuticals Newsletter No. 6, 2018 • 23 Signal physicians were involved; it appears that the health care providers recommending brivudine were not the oncologists overseeing the chemotherapy care of the patients. Prescribing information for brivudine was found inconsistently upon review of websites in a number of countries in which it is approved (Switzerland, Germany, France and Spain). 10-16 In contrast, information for health care professionals regarding the interaction was easily found within the labelling for the oncology products on the eMC website.17-19 Of particular importance is that, within the last few years, there has been approval of an antidote for fluorouracil and capecitabine toxicity.22 Uridine triacetate was approved by the US FDA in December 2015 as an emergency treatment for unintended overdose of 5-FU or capecitabine . Uridine triacetate is an acetylated form of uridine; following oral administration, it is deacetylated, and uridine competitively inhibits cell damage and death by fluorouracil. In a study of 135 patients at elevated risk for 5-FU toxicity, 96% were alive and fully recovered at 30 days.23 In the United States, under a named patient programme, VISTOGARD is provided to patients at risk of excess 5-FU toxicity due to overdose and to patients exhibiting severe toxicities to 5-FU within 96 hours of 5-FU administration.24" ;
+            rdfs:label "Discussion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Drug_toxicity
+:Drug_toxicity rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013746 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Drug toxicity" ;
+               rdfs:label "drug toxicity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#German_medical_journal_published_analysis
+:German_medical_journal_published_analysis rdf:type owl:NamedIndividual ,
+                                                    <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_5-FU ;
+                                           mp:references :Ref.20 ;
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In Germany, an independent medical journal, Arznei-Telegramm, published a similar analysis of cases involving the brivudine-5FU interaction and recommended that withdrawal of brivudine is the only reliable way to prevent more fatal cases.20" ;
+                                           rdfs:label "German medical journal published analysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Herpes_zoster
+:Herpes_zoster rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :introduction ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> ;
+               mp:references :Ref.1 ,
+                             :Ref.2 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Herpes  zoster (shingles) is a viral disease often presenting as painful rashes primarily affecting the elderly population. It is caused by the reactivation of latent Varicella Zoster Virus (VZV) usually decades after a primary varicella infection. Shingles is the result of reactivated VZV spreading into the corresponding dermatome and neural tissue, forming a unilateral maculopapular rash, with or without vesicles or lesions . The acute neuritis produced by herpes zoster is painful and associated with symptoms such as unusual aching, burning or stabbing pain, itching or tingling. Painful symptoms can be experienced anywhere during the spread of VZV, from before the appearance of a rash to well after vesicular eruption and healing. Post-herpetic neuralgia (PHN) is a syndrome of chronic pain persisting after the resolution of a shingles rash. This chronic pain is debilitating; it can affect quality of life and lead to psychological distress. Elderly patients with advanced cancer and on immunotherapy are at significantly higher risk of shingles . Herpes zoster is generally a self-limited disease. However, systemic antiviral therapy is indicated in patients aged 50 and above, for/with immunodeficiency, malignant primary disease, and in patients with involvement of cranial nerves; prevention and/or reduction of PHN is the focus of therapeutic intervention .1,2" ;
+               rdfs:label "Herpes zoster" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Interaction_between_brivudine_and_5-FU
+:Interaction_between_brivudine_and_5-FU rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug-Drug_interaction> ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                                                   <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                                        rdfs:label "Interaction between brivudine and 5-FU" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Interaction_between_brivudine_and_capecitabine
+:Interaction_between_brivudine_and_capecitabine rdf:type owl:NamedIndividual ,
+                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug-Drug_interaction> ;
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                                                           :Capetabine ;
+                                                rdfs:label "Interaction between brivudine and capecitabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Known_drug-drug_interaction_medication_error
+:Known_drug-drug_interaction_medication_error rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10064376 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Known drug-drug interaction medication error" ;
+                                              rdfs:label "Known drug-drug interaction medication error" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Literature_information> ;
+           mp:references :Ref.10 ,
+                         :Ref.11 ,
+                         :Ref.12 ,
+                         :Ref.13 ,
+                         :Ref.14 ,
+                         :Ref.15 ,
+                         :Ref.16 ,
+                         :Ref.17 ,
+                         :Ref.18 ,
+                         :Ref.19 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Brivudine has not been licensed by the US FDA or the EMA; rather, it has been approved in a number of individual countries worldwide. Prescribing information intended for health care providers for brivudine was found upon review of websites in a number of countries in which it is approved (Switzerland, Germany, France, and Spain).10-13 Product information intended for patient packages is found on the Heads of Medicine Agencies’ (HMA) website for a number of German products (Zostex, Menavir, and Premovir).14-16 Within the patient leaflet for Menavir from the HMA is the following warning (Figure 1) (which is the same for all brivudine products on this website). In another part of the leaflet is the additional information (Figure 2.). Information about the interaction intended for health care providers can be found in the labelling for 5-FU and its prodrug products, Xeloda and Teysuno, which have been authorised within the European Union at the EMA. The summary of product characteristics (SmPC) of both products clearly describe the drug-drug interaction and in Section 4.5 advise on the need to wait four weeks before starting the anti-tumour drugs. It also specifically lists treatment with sorivudine and its analogues, such as brivudine, as contraindicated in Section 4.3.17-19" ;
+           rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Mechanism_of_Brivudine
+:Mechanism_of_Brivudine rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :introduction ;
+                        mp:references :Ref.3 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Brivudine is a nucleoside analogue used in the treatment of herpes zoster, for which it is approved in a number of EU countries. Brivudine owes its effect to preferential phosphorylation by VZV encoded tyrosine kinase (TK) to its 5'-diphosphate form. After further conversion to triphosphate form, it acts as an inhibitor or alternate substrate for the viral DNA polymerase. It has a terminal half-life of 16 hours, and is degraded to its base form, bromovinyl uracil (BVU), by thymidine phosphorylase" ;
+                        rdfs:label "Mechanism of Brivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Mechanism_of_Uridine_Triacetate
+:Mechanism_of_Uridine_Triacetate rdf:type owl:NamedIndividual ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :introduction ;
+                                 mp:references :Ref.23 ;
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Uridine triacetate is an acetylated form of uridine; following oral administration, it is deacetylated, and uridine competitively inhibits cell damage and death by fluorouracil." ;
+                                 rdfs:label "Mechanism of Uridine Triacetate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Mechanism_of_fatal_drug_interaction
+:Mechanism_of_fatal_drug_interaction rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect_Mechanism> ;
+                                     mp:references :Ref.4 ,
+                                                   :Ref.7 ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """The mechanism of action for this fatal drug interaction is the same for brivudine; bromovinyl uracil, the major metabolite of both drugs, irreversibly binds to and inhibits dihydropyrimidine dehydrogenase (DPD). DPD is an enzyme in the hepatic system responsible for the inactivation of 5-FU.4 An important additional fact is that DPD is responsible for about 85% of 5-FU metabolism. Its activity is immediately and almost completely suppressed, with the introduction of BVU, and toxicity-averting DPD activity did not return until at least 14 days after the cessation of SRV. A four-week period between the use of 5-FU and brivudine 
+or other BVU producing substances should be enough to avoid 5-FU toxicity.7""" ;
+                                     rdfs:label "Mechanism of fatal drug interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Mucositis
+:Mucositis rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10028116 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Mucosal inflammation" ;
+           rdfs:label "Mucositis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#OnsetForPatient1
+:OnsetForPatient1 rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "An elderly patient was given a 6-day treatment of brivudine for shingles. Three days later, brivudine treatment was ended, and the patient was administered a 5-FU bolus to manage his colon cancer. Five days later the patient was hospitalised for severe mucositis and developed severe bone marrow aplasia. He died soon after on an unspecified date." ;
+                  <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                  <http://www.w3.org/2006/time#numericPosition> 5 ;
+                  rdfs:label "Onset for patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#OnsetForPatient2
+:OnsetForPatient2 rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "After returning to her home country she presented to the hospital feeling generally unwell. She was hospitalized and eventually developed massive mucositis with ulcers in the mouth and throat region. The report does not state the outcome. " ;
+                  rdfs:label "Onset for patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#OnsetForPatient3
+:OnsetForPatient3 rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "After the second cycle the patient developed shingles and the treating dermatologist prescribed brivudine (Nervinex). Three days after completing the 7-day course of brivudine, the final cycle of 5- FU was administered; two days later the patient presented feeling very tired and generally unwell. The patient was hospitalised, blood tests showed severe pancytopenia, and 10 days later the patient died" ;
+                  <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                  <http://www.w3.org/2006/time#numericPosition> 2 ;
+                  rdfs:label "Onset for patient 3 " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#OnsetForPatient4
+:OnsetForPatient4 rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "On 1 April, the patient started treatment with brivudine. On 2 April, she stopped the treatment with brivudine, after an intake of two tablets. On 5 April, capecitabine was withdrawn, the patient was hospitalised and eventually died due to bone marrow depression. " ;
+                  <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                  <http://www.w3.org/2006/time#numericPosition> 3 ;
+                  rdfs:label "Onset for patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Overall_reports_in_VigiBase
+:Overall_reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Brivudine ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Medication_errors_(SMQ)> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 30 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                             rdfs:label "Overall reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Pancytopenia
+:Pancytopenia rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "D61.81" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10033661 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Pancytopenia" ;
+              rdfs:label "Pancytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Patient_3
+:Patient_3 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Raghu_Damaria
+:Raghu_Damaria rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Raghu" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Damaria" ;
+               rdfs:label "Raghu Damaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Rebecca_E._Chandler
+:Rebecca_E._Chandler rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Rebecca" ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Chandler" ;
+                     rdfs:label "Rebecca E. Chandler" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Schmader, Kenneth E., and Robert H. Dworkin. “The Epidemiology and Natural History of Herpes Zoster and Postherpetic Neuralgia.” Herpes Zoster: Postherpetic Neuralgia and Other Complications, 6 Apr. 2017, pp. 25–44., doi:10.1007/978-3-319- 44348- 5_4. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Fachinformation Zostex® 125 Mg Tabletten | Gelbe Liste.” Gelbe Liste Online, 15 Sept. 2015, www.gelbe-liste.de/produkte/Zostex- 125-mg- Tabletten_355583/fachinformation. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Brivudine Tablet 125 Mg (Estado Del Vaticano).” Brivudine Tablet 125 Mg De Estado Del Vaticano, 3 Dec. 2010, www.vademecum.es/equivalencia-listabrivudine+tablet+125+mgestado+del+vaticano- j05ab15-va_ " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Brivudine.” VIDAL - Brivudine, 16 Jan. 2013, www. vidal.fr/substances/23135/brivudine/ " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "HCI Solutions SA. “Brivex®.” Brivex ®, 27 Oct. 2017, compendium.ch/mpro/mnr/9962/html/ fr?Platform=Desktop. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Heads of Medicines Agency, Premovir 125mg , 2015, mri.medagencies.org/download/DE_H_0341_ 001_ FinalPI_3of3.pdf. Accessed 5 April 2018. " ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Heads of Medicines Agency, Menavir 125mg, 2015, https://mri.ctsmrp.eu/Human/Downloads/ DE_H_0343_001_FinalPI_1of3.pdf. Accessed 5 April 2018.WHO Pharmaceuticals Newsletter No. 6, 2018  24 Signal " ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Heads of Medicines Agency, zostex 125mg, 2015, https:// mri.cts-mrp.eu/ Human/Downloads/ DE_H_0343_001_FinalPI_2of3.pdf. Accessed 5 April 2018 " ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Fluorouracil Injection 25 Mg/Ml, Solution for Injection.” Fluorouracil Injection 25 Mg/Ml, Solution for Injection - Summary of Product Characteristics (SmPC) - (EMC), 22 Sept. 2014, www.medicines.org.uk/emc/product/2234. " ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Xeloda 150mg and 500mg Film-Coated Tablets.” Xeloda 150mg and 500mg FilmCoated Tablets - Summary of Product Characteristics (SmPC) - (EMC), 18 July 2017, www.medicines.org.uk/emc/ product/1319. " ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Teysuno 15mg/4.35mg/11.8mg Hard Capsules.” Teysuno 15mg/4.35mg/11.8mg Hard Capsules - Summary of Product Characteristics (SmPC) - (EMC), 11 Oct. 2017, http://www.medicines.org.uk/ emc/product/4000. " ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Centers for Disease Control and Prevention. Epidemiology and Prevention of VaccinePreventable Diseases. Hamborsky J, Kroger A, Wolfe S, eds. 13th ed. Washington D.C. Public Health Foundation, 2015. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“WARNINGS ABOUT BRIVUDINE (ZOSTEX): No Protection from Fatal Interactions.” Arznei- Telegramm, 1 Sept. 2012, http://www.arzneitelegramm.de/journal/j_1209_a.php3 " ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "WHO Pharmaceuticals Newsletter No.5, 2017, pp.10: World Health Organization; 2017. Licence: CC BY-NC-SA 3.0 IGO. " ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Wilkinson E. An antidote to fluorouracil and capecitabine toxicity. Lancet Oncol. 2016 Oct;17(10):e429. " ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.23
+:Ref.23 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Lyseng-Williamson, Katherine A.“Uridine Triacetate in the Emergency Treatment of Fluorouracil or Capecitabine Overdose or Toxicity: a Guide to Its Use.” Drugs & Therapy Perspectives, vol. 33, no. 2, 2016, pp. 56–61., doi:10.1007/s40267-016-0367-5. " ;
+        rdfs:label "Ref.23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.24
+:Ref.24 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "“Wellstat Announces FDAApprovalof VISTOGARD® (Uridine Triacetate), the First Antidote to Treat Over | Vistogard®(Uridine Triacetate) Oral Granules.” Vistogard, 10 Dec. 2015, www.vistogard.com/ Professional/Resources/PressReleases/Wellstat- Announces-FDA-Approvalof-VISTOGARD-Uri. " ;
+        rdfs:label "Ref.24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Andrei, G., et al. “Comparative Activity of Selected Antiviral Compounds against Clinical Isolates of Varicella-Zoster Virus.” European Journal of Clinical Microbiology & Infectious Diseases, vol. 14, no. 4, 1995, pp. 318–329., doi:10.1007/bf02116525. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Pharmaceutical Affairs Bureau, Japanese Ministry of Health and Welfare (1994). A report on investigation of side effects of sorivudine: Deaths caused by interaction between sorivudine and 5-FU prodrugs (in Japanese). " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Haruhiro Okuda, Kenichiro Ogura, Atsushi Kato, Hiroaki Takubo and Tadashi Watabe ”A Possible Mechanism of Eighteen Patient Deaths Caused by Interactions of Sorivudine, a New Antiviral Drug, with Oral 5-Fluorouracil Prodrug.” Journal of Pharmacology and Experimental Therapeutics November 1, 1998, 287 (2) 791-799. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Yan, Jieming, et al. “The Effect of Sorivudine on Dihydropyrimidine Dehydrogenase Activity in Patients with Acute Herpes Zoster*.” Clinical Pharmacology & Therapeutics, vol. 61, no. 5, 1997, pp. 563–573., doi:10.1016/s0009-9236(97)90136-3. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Gross, G. “Letter to the Editor.” Journal of Clinical Virology, vol. 27, no. 3, 2003, pp. 308–309., doi:10.1016/s1386- 6532(03)00125-2. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Gross, Gerd. “Brivudin.” Drugs, vol. 64, no. 18, 2004, pp. 2098–2099., doi:10.2165/00003495-200464180- 00013. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Wutzler, Peter. “Brivudin.” Drugs, vol. 64, no. 18, 2004, pp. 2098–2099., doi:10.2165/00003495- 200464180-00012. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Report_Case_1
+:Report_Case_1 rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :colonCancer ,
+                                                                                           <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :CaseInfo1 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :BoneMarrowAplasia ,
+                                                                                        :Mucositis ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                          <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient1 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetForPatient1 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "death" ;
+               rdfs:label "Report Case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Report_Case_2
+:Report_Case_2 rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :breastCancer ,
+                                                                                           <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :CaseInfo2 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Mucositis ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                          :Capetabine ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient2 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetForPatient2 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "unknown" ;
+               rdfs:label "Report Case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Report_Case_3
+:Report_Case_3 rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :colonCancer ,
+                                                                                           <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :CaseInfo3 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Pancytopenia ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                          <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "death" ;
+               rdfs:label "Report Case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Report_Case_4
+:Report_Case_4 rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :herpesLabialis ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :CaseInfo4 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :boneMarrowDepression ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Brivudine ,
+                                                                                          :Capetabine ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient4 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetForPatient4 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "death" ;
+               rdfs:label "Report Case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsFromAustria
+:ReportsFromAustria rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Austria" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                    rdfs:label "Reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 15 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Germany" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsFromItaly
+:ReportsFromItaly rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 2 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Italy" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                  rdfs:label "Reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 11 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Spain" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Switzerland" ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsWith5-FU
+:ReportsWith5-FU rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ,
+                                                                                :Reports_with_drug-drug_interaction ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_5-FU ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 8 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                 rdfs:label "Reports with brivudine and 5-FU" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsWithCapecitabine
+:ReportsWithCapecitabine rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ,
+                                                                                        :Reports_with_drug-drug_interaction ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_capecitabine ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 14 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                         rdfs:label "Reports with brivudine and capecitabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#ReportsWithFatalOutcome
+:ReportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Reports_with_drug-drug_interaction ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 15 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "death" ;
+                         rdfs:label "Reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The medication error focused screening of VigiBase highlighted a series of 30 reports from Germany (15), Spain (11), Italy (2), Austria (1), and Switzerland (1) reporting brivudine with MedDRA terms within the SMQ Medication Errors . Of particular interest were 22 reports in which a drug-drug interaction was described between brivudine and 5-FU (8 reports) or its prodrug, capecitabine (14 reports); 15 of which resulted in death. Cases of this interaction were first received into VigiBase in 2008 (4 reports, 3 of which were fatal); the most recent was in 2017 (4 reports, 3 fatal).  A number of example cases illustrate how the medication error by using brivudine and 5-FU together can occur: Case 1: An elderly patient was given a 6-day treatment of brivudine for shingles. Three days later, brivudine treatment was ended, and the patient was administered a 5-FU bolus to manage his colon cancer. Five days later the patient was hospitalised for severe mucositis and developed severe bone marrow aplasia. He died soon after on an unspecified date. Case 2: A patient on long-term capecitabine (Xeloda) treatment for breast cancer who developed herpes zoster while on vacation abroad. The local treating physician prescribed brivudine and the patient took both medications together. After returning to her home country she presented to the hospital feeling generally unwell. She was hospitalized and eventually developed massive mucositis with ulcers in the mouth and throat region. The report does not state the outcome. Case 3: A patient was prescribed three cycles of 5- FU treatment following surgery for colon cancer. After the second cycle the patient developed shingles and the treating dermatologist prescribed brivudine (Nervinex). Three days after completing the 7-day course of brivudine, the final cycle of 5- FU was administered; two days later the patient presented feeling very tired and generally unwell. The patient was hospitalised, blood tests showed severe pancytopenia, and 10 days later the patient died. Case 4: A patient was prescribed brivudine (Zostex) only during pauses in her treatment of capecitabine (Xeloda), which she kept at home and would use often because of frequent herpes simplex infections from massive herpes labialis. The patient started treatment with capecitabine in March and the treatment cycle ended on 22 March. During a treatment pause of seven days, the patient started treatment with brivudine, onWHO Pharmaceuticals Newsletter No. 6, 2018 • 21 Signal 27 March. On 28 March, brivudine was discontinued, and the patient started the next treatment cycle with capecitabine two days later. On 1 April, the patient started treatment with brivudine. On 2 April, she stopped the treatment with brivudine, after an intake of two tablets. On 5 April, capecitabine was withdrawn, the patient was hospitalised and eventually died due to bone marrow depression." ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Reports_with_drug-drug_interaction
+:Reports_with_drug-drug_interaction rdf:type owl:NamedIndividual ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_VigiBase ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :Known_drug-drug_interaction_medication_error ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 22 ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                    rdfs:label "Reports with drug-drug interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#SmPC_for_5-FU_and_capecitabine
+:SmPC_for_5-FU_and_capecitabine rdf:type owl:NamedIndividual ,
+                                         <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Capetabine ,
+                                                                                               <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_5-FU ,
+                                                                                                                :Interaction_between_brivudine_and_capecitabine ;
+                                mp:references :Ref.17 ,
+                                              :Ref.18 ,
+                                              :Ref.19 ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Information about the interaction intended for health care providers can be found in the labelling for 5-FU and its prodrug products, Xeloda and Teysuno, which have been authorised within the European Union at the EMA. The summary of product characteristics (SmPC) of both products clearly describe the drug-drug interaction and in Section 4.5 advise on the need to wait four weeks before starting the anti-tumour drugs. It also specifically lists treatment with sorivudine and its analogues, such as brivudine, as contraindicated in Section 4.3.17-19" ;
+                                rdfs:label "SmPC for 5-FU and capecitabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Sorivudine
+:Sorivudine rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :thymidine_nucleoside_analogues ;
+            rdfs:label "Sorivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Sorivudine_in_Japan
+:Sorivudine_in_Japan rdf:type owl:NamedIndividual ,
+                              <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Drug_toxicity ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :Sorivudine ,
+                                                                                                <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                     mp:references :Ref.6 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """In the early 1990s, sorivudine, another nucleoside thymidine analogue, was 
+reported to have caused 18 deaths in Japan when used in conjunction with 5-FU; consequently, sorivudine was removed from the market.6""" ;
+                     rdfs:label "Sorivudine in Japan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Study_for_5-FU_toxicity
+:Study_for_5-FU_toxicity rdf:type owl:NamedIndividual ,
+                                  <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Drug_toxicity ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :UridineTriacetate ,
+                                                                                        <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                         mp:references :Ref.23 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """In a study of 135 patients at elevated risk for 5-FU toxicity, 96% were alive and 
+fully recovered at 30 days.23""" ;
+                         rdfs:label "Study for 5-FU toxicity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Upsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Upsalla Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#UridineTriacetate
+:UridineTriacetate rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_Uridine_Triacetate ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "A16AX13" ;
+                   rdfs:label "Uridine triacetate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#VISTOGARD
+:VISTOGARD rdf:type owl:NamedIndividual ,
+                    <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :UridineTriacetate ;
+           mp:references :Ref.22 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Of particular importance is that, within the last few years, there has been approval of an antidote for fluorouracil and capecitabine toxicity.22 Uridine triacetate was approved by the US FDA in December 2015 as an emergency treatment for unintended overdose of 5-FU or capecitabine." ;
+           rdfs:label "Antidote approval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#VISTOGARD_programme
+:VISTOGARD_programme rdf:type owl:NamedIndividual ,
+                              <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Drug_toxicity ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :UridineTriacetate ,
+                                                                                    <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                     mp:references :Ref.24 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In the United States, under a named patient programme, VISTOGARD is provided to patients at risk of excess 5-FU toxicity due to overdose and to patients exhibiting severe toxicities to 5-FU within 96 hours of 5-FU administration.24" ;
+                     rdfs:label "VISTOGARD programme" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Website_information_for_brivudine
+:Website_information_for_brivudine rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Brivudine ;
+                                   mp:references :Ref.10 ,
+                                                 :Ref.11 ,
+                                                 :Ref.12 ,
+                                                 :Ref.13 ,
+                                                 :Ref.14 ,
+                                                 :Ref.15 ,
+                                                 :Ref.16 ;
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Prescribing information intended for health care providers for brivudine was found upon review of websites in a number of countries in which it is approved (Switzerland, Germany, France, and Spain).10-13 Product information intended for patient packages is found on the Heads of Medicine Agencies’ (HMA) website for a number of German products (Zostex, Menavir, and Premovir).14-16 Within the patient leaflet for Menavir from the HMA is the following warning (Figure 1) (which is the same for all brivudine products on this website). In another part of the leaflet is the additional information (Figure 2.)." ;
+                                   rdfs:label "Website information for brivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#boneMarrowDepression
+:boneMarrowDepression rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10065553 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Bone marrow failure" ;
+                      rdfs:label "Bone marrow depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#breastCancer
+:breastCancer rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "C50" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10006187 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Breast cancer" ;
+              rdfs:label "breast cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#colonCancer
+:colonCancer rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "C18" ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10009944 ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> """	
+Colon cancer""" ;
+             rdfs:label "colon cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Given the spectrum of cases from a number of European countries, as well as communications from the German and Spanish authorities, a regulatory review of the adequacy of current risk minimisation measures could be considered, including the wording of current product information; a discussion could take place on the benefit/harm profile of this product given the availability of other antiviral products to treat herpes zoster; and information regarding the availability of a potentially life-saving antidote for this drug-drug interaction should be better disseminated." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#eMC_website
+:eMC_website rdf:type owl:NamedIndividual ,
+                      <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Brivudine ;
+             mp:references :Ref.17 ,
+                           :Ref.18 ,
+                           :Ref.19 ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "6 In contrast, information for health care professionals regarding the interaction was easily found within the labelling for the oncology products on the eMC website.17-19" ;
+             rdfs:label "eMC website" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#herpesLabialis
+:herpesLabialis rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "B00.1" ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10019942 ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Herpes labialis" ;
+                rdfs:label "herpes labialis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ,
+                            :Ref.7 ,
+                            :Ref.8 ,
+                            :Ref.9 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Herpes zoster (shingles) is a viral disease often presenting as painful rashes primarily affecting the elderly population. It is caused by the reactivation of latent Varicella Zoster Virus (VZV) usually decades after a primary varicella infection. Shingles is the result of reactivated VZV spreading into the corresponding dermatome and neural tissue, forming a unilateral maculopapular rash, with or without vesicles or lesions . The acute neuritis produced by herpes zoster is painful and associated with symptoms such as unusual aching, burning or stabbing pain, itching or tingling. Painful symptoms can be experienced anywhere during the spread of VZV, from before the appearance of a rash to well after vesicular eruption and healing. Post-herpetic neuralgia (PHN) is a syndrome of chronic pain persisting after the resolution of a shingles rash. This chronic pain is debilitating; it can affect quality of life and lead to psychological distress. Elderly patients with advanced cancer and on immunotherapy are at significantly higher risk of shingles . Herpes zoster is generally a self-limited disease. However, systemic antiviral therapy is indicated in patients aged 50 and above, for/with immunodeficiency, malignant primary disease, and in patients with involvement of cranial nerves; prevention and/or reduction of PHN is the focus of therapeutic intervention .1,2 Brivudine is a nucleoside analogue used in the treatment of herpes zoster, for which it is approved in a number of EU countries. Brivudine owes its effect to preferential phosphorylation by VZV encoded tyrosine kinase (TK) to its 5'-diphosphate form. After further conversion to triphosphate form, it acts as an inhibitor or alternate substrate for the viral DNA polymerase. It has a terminal half-life of 16 hours, and is degraded to its base form, bromovinyl uracil (BVU), by thymidine phosphorylase .3 Brivudine is also characterized by a well described fatal drug interaction with a commonly prescribed antitumour drug, 5- fluorouracil (5-FU). This drug interaction and possible mechanisms of action have been described well for many years in medical literature.4-9 In a recent screening of VigiBase, the WHO global database of ICSRs focusing on medication errors, brivudine was highlighted with the MedDRA preferred term “drug-drug interaction medication error”. An alarming number of cases had fatal outcomes and the most recent case was from 2017.  The purpose of this communication is to highlight the continued appearance of fatal cases due to medication error with use of brivudine and 5-FU." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#pv_signal
+:pv_signal rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Herpes_zoster ,
+                                                                                       :Reports_in_VigiBase ,
+                                                                                       :conclusion ,
+                                                                                       :introduction ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_individual_case_report> :Report_Case_1 ,
+                                                                                                  :Report_Case_2 ,
+                                                                                                  :Report_Case_3 ,
+                                                                                                  :Report_Case_4 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :Overall_reports_in_VigiBase ,
+                                                                                              :ReportsFromAustria ,
+                                                                                              :ReportsFromGermany ,
+                                                                                              :ReportsFromItaly ,
+                                                                                              :ReportsFromSpain ,
+                                                                                              :ReportsFromSwitzerland ,
+                                                                                              :ReportsWith5-FU ,
+                                                                                              :ReportsWithCapecitabine ,
+                                                                                              :ReportsWithFatalOutcome ,
+                                                                                              :Reports_with_drug-drug_interaction ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :BoneMarrowAplasia ,
+                                                                                    :Mucositis ,
+                                                                                    :Pancytopenia ,
+                                                                                    :boneMarrowDepression ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Brivudine ,
+                                                                          <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug_drug_interaction> :Interaction_between_brivudine_and_5-FU ,
+                                                                                           :Interaction_between_brivudine_and_capecitabine ;
+           mp:supportedBy :Sorivudine ,
+                          :VISTOGARD ,
+                          :reasonsForPoorAdherenceOfPatientsToWarningInfo ;
+           mp:supportedByData :AEMPS ,
+                              :Animal_studies ,
+                              :German_medical_journal_published_analysis ,
+                              :SmPC_for_5-FU_and_capecitabine ,
+                              :Sorivudine_in_Japan ,
+                              :Study_for_5-FU_toxicity ,
+                              :VISTOGARD ,
+                              :VISTOGARD_programme ,
+                              :Website_information_for_brivudine ,
+                              :eMC_website ,
+                              :reasonsForPoorAdherenceOfPatientsToWarningInfo ,
+                              :thymidine_nucleoside_analogues_and_5-FU ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/12/2018" ;
+           rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#reasonsForPoorAdherenceOfPatientsToWarningInfo
+:reasonsForPoorAdherenceOfPatientsToWarningInfo rdf:type owl:NamedIndividual ,
+                                                         <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :Discussion ;
+                                                mp:references :Ref.10 ,
+                                                              :Ref.11 ,
+                                                              :Ref.12 ,
+                                                              :Ref.13 ,
+                                                              :Ref.14 ,
+                                                              :Ref.15 ,
+                                                              :Ref.16 ,
+                                                              :Ref.17 ,
+                                                              :Ref.18 ,
+                                                              :Ref.19 ;
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Reasons for failure to heed such a warning may be that, 1) patients limit their focus to the boxed, red section of the package leaflet which does not contain this information, and 2) patients may simply not be aware if they will be receiving chemotherapy within four weeks of stopping brivudine. In cases 2 and 3 scenarios were described in which multiple treating physicians were involved; it appears that the health care providers recommending brivudine were not the oncologists overseeing the chemotherapy care of the patients. Prescribing information for brivudine was found inconsistently upon review of websites in a number of countries in which it is approved (Switzerland, Germany, France and Spain). 10-16 In contrast, information for health care professionals regarding the interaction was easily found within the labelling for the oncology products on the eMC website.17-19" ;
+                                                rdfs:label "reasons for poor adherence of patients to warning info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#thymidine_nucleoside_analogues
+:thymidine_nucleoside_analogues rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J05AB" ;
+                                rdfs:label "thymidine nucleoside analogues" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#thymidine_nucleoside_analogues_and_5-FU
+:thymidine_nucleoside_analogues_and_5-FU rdf:type owl:NamedIndividual ,
+                                                  <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Drug_toxicity ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :thymidine_nucleoside_analogues ,
+                                                                                                                    <http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> ;
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The concomitant use of thymidine nucleoside analogues and 5-FU products is known to cause fatal 5-FU toxicity." ;
+                                         rdfs:label "thymidine nucleoside analogues and 5-FU" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU
+<http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#5-FU> rdf:type owl:NamedIndividual ,
+                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_fatal_drug_interaction ;
+                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "L01BC02" ;
+                                                                                                            rdfs:label "5-FU" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)
+<http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#HerpesZoster(Shingles)> rdf:type owl:NamedIndividual ,
+                                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "B02" ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10019974 ;
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Herpes zoster" ;
+                                                                                                                              rdfs:label "Herpes zoster (Shingles)" ,
+                                                                                                                                         "HerpesZoster(Shingles)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Medication_errors_(SMQ)
+<http://purl.org/OpenPVSignal/Signals/2018_6_brivudine_5-fluorouracil_fatal_drug-drug_interaction.owl#Medication_errors_(SMQ)> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 20000224 ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Medication errors (SMQ)" ;
+                                                                                                                               rdfs:label "Medication errors (SMQ)" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

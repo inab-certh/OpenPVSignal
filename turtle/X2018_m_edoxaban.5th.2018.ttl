@@ -1,0 +1,434 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl> rdf:type owl:Ontology ;
+                                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/275697"^^xsd:anyURI ;
+                                                                                        rdfs:label "Edoxaban - Incorrect dose administered"^^rdfs:Literal ;
+                                                                                        owl:versionInfo "draft-v0.95-20210611"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Alem_Zekarias
+:Alem_Zekarias rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Uppsala Monitoring Centre" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Alem" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Zekarias" ;
+               rdfs:label "Alem Zekarias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#CerebralBleeding
+:CerebralBleeding rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I619" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10071793 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Cerebral bleeding" ;
+                  rdfs:label "Cerebral Bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#DeepVeinThrombosis
+:DeepVeinThrombosis rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I82409" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10051055 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Deep vein thrombosis" ;
+                    rdfs:label "Deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Direct_thrombin_inhibitors
+:Direct_thrombin_inhibitors rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "B01AE" ;
+                            rdfs:label "Direct thrombin inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Edoxaban_-_Incorrect_dose_administered
+:Edoxaban_-_Incorrect_dose_administered rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Alem_Zekarias ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :PV_signal ;
+                                        mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "1/11/2018" ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                        rdfs:label "Edoxaban - Incorrect dose administered" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#GastricBleeding
+:GastricBleeding rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "K922" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10018230 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "GI bleed" ;
+                 rdfs:label "Gastric Bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Higher_Dose_of_edoxaban
+:Higher_Dose_of_edoxaban rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The recommended dose differs according to the indication but ranges between 30 mg and 60 mg once a day" ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg"^^xsd:string ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 60 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "60 mg" ;
+                         rdfs:label "Higher Dose of edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Hypertension
+:Hypertension rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I10" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10020772 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Hypertension" ;
+              rdfs:label "Hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#IncorrectDoseAdministered
+:IncorrectDoseAdministered rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "Y63" ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10064355 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Incorrect dose administered" ;
+                           rdfs:label "Incorrect dose administered" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Literature_information> ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "It is stated in both the Summary of Product Characteristics and in the product information leaflet that different dose adjustments for edoxaban are needed/recommended.1,2" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Lower_Dose_of_edoxaban
+:Lower_Dose_of_edoxaban rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interacting_drug> :ciclosporin ,
+                                                                                                   :dronedarone ,
+                                                                                                   :erythromycin ,
+                                                                                                   :ketoconazole ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In patients with body weight lower than 60 kg, or taking P-glycoprotein inhibiting drugs, such as ciclosporin, dronedarone, erythromycin, ketoconazole, or suffering from moderate or severe renal impairment, the dose should be reduced to 30 mg daily." ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg"^^xsd:string ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 30 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "30 mg" ;
+                        rdfs:label "Lower Dose of edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Mechanism_of_edoxaban
+:Mechanism_of_edoxaban rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                       mp:references :Ref.1 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Edoxaban is an anti-coagulant drug indicated to prevent thromboembolic disease in patients diagnosed with atrial fibrillation, including one or more risk factors such as history of stroke or transient ischaemic attack, age 75 years or older, diabetes mellitus or hypertension. The drug is also approved for treatment of deep vein thrombosis and pulmonary embolism." ;
+                       rdfs:label "Mechanism of edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Overall_reports_in_Vigibase_for_edoxaban_and_incorrect_dosage_administration
+:Overall_reports_in_Vigibase_for_edoxaban_and_incorrect_dosage_administration rdf:type owl:NamedIndividual ,
+                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :IncorrectDoseAdministered ;
+                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 36 ;
+                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                              rdfs:label "Overall reports in Vigibase for edoxaban and incorrect dosage administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#PV_signal
+:PV_signal rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Reports_in_Vigibase ,
+                                                                                       :conclusion ,
+                                                                                       :introduction ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_individual_case_report> :Report_1 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :Overall_reports_in_Vigibase_for_edoxaban_and_incorrect_dosage_administration ,
+                                                                                              :Reports_for_edoxaban_and_Incorrect_dosage_administration_in_Vigibase_with_age ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :CerebralBleeding ,
+                                                                                    :GastricBleeding ,
+                                                                                    :UrethralBleeding ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :IncorrectDoseAdministered ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :Time_to_onset_1 ;
+           mp:supportedByData :SmPC_and_PIL_for_edoxaban ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "1/11/2018" ;
+           rdfs:label "PV signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 83 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Summary of Product Characteristics for Edoxaban. Available from: https://www2.medicines.org.uk/ emc/medicine/30513. Accessed: February 2018." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Product Information Leaflet for Edoxaban®. Available from: https://www2.medicines.org.uk/ emc/medicine/30504. Accessed: February 2018" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :CerebralBleeding ,
+                                                                                   :ventricularBleeding ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :IncorrectDoseAdministered ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :edoxaban ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :edoxaban_usage_for_Report_1_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :Time_to_onset_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "death" ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Reports_for_edoxaban_and_Incorrect_dosage_administration_in_Vigibase_with_age
+:Reports_for_edoxaban_and_Incorrect_dosage_administration_in_Vigibase_with_age rdf:type owl:NamedIndividual ,
+                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :Overall_reports_in_Vigibase_for_edoxaban_and_incorrect_dosage_administration ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 16 ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_min_age> 67 ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                               rdfs:label "Reports for edoxaban and Incorrect dosage administration in Vigibase with age" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Thirty-six individual case safety reports have been submitted to the VigiBase, the WHO global database for individual case safety reports, up until February 2018 describing patients given the wrong dose of edoxaban. An age was provided in 16 of the 36 cases, and these patients were 67 years or older. The reports describe patients having been given a dose that was inappropriate to either their medical condition, body weight or health condition. The consequences of such errors included cerebral bleeding, gastric bleeding and urethral bleeding. In most of the cases the drug was either withdrawn and changed to another anticoagulant or the edoxaban dose was decreased. In one fatal case, an 83-year-old female who was taking a dose of 60 mg edoxaban for an unknown indication experienced cerebral mass bleeding with ventricular bleeding a year after she started taking edoxaban. The cause of death was reported as cerebral bleeding." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#SmPC_and_PIL_for_edoxaban
+:SmPC_and_PIL_for_edoxaban rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                           mp:references :Ref.1 ,
+                                         :Ref.2 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "It is stated in both the Summary of Product Characteristics and in the product information leaflet that different dose adjustments for edoxaban are needed/recommended.1,2" ;
+                           rdfs:label "SmPC and PIL for edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Time_to_onset_1
+:Time_to_onset_1 rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 <http://www.w3.org/2006/time#nominalPosition> "years" ;
+                 <http://www.w3.org/2006/time#numericPosition> 1 ;
+                 rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#UrethralBleeding
+:UrethralBleeding rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "N368" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10049710 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Urethral haemorrhage" ;
+                  rdfs:label "Urethral Bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#Usage_of_edoxaban
+:Usage_of_edoxaban rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :DeepVeinThrombosis ,
+                                                                                               :Hypertension ,
+                                                                                               :atrial_fibrillation ,
+                                                                                               :diabetes_mellitus ,
+                                                                                               :pulmonaryEmbolism ,
+                                                                                               :stroke ,
+                                                                                               :thromboembolicDisease ,
+                                                                                               :transient_ischemic_attack ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :Higher_Dose_of_edoxaban ,
+                                                                                    :Lower_Dose_of_edoxaban ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                   rdfs:label "Usage of edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#atrial_fibrillation
+:atrial_fibrillation rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I48. 0" ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10003658 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Atrial fibrillation" ;
+                     rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#ciclosporin
+:ciclosporin rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "L04AD01" ;
+             rdfs:label "ciclosporin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Despite the prescribing information, we have noted reports in VigiBase with inappropriate prescription leading to severe and serious outcomes." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#diabetes_mellitus
+:diabetes_mellitus rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10012601 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Diabetes mellitus" ;
+                   rdfs:label "diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#dosage_for_report_1
+:dosage_for_report_1 rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg"^^xsd:string ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 60 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "60 mg" ;
+                     rdfs:label "dosage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#dronedarone
+:dronedarone rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "C01BD07" ;
+             rdfs:label "dronedarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#edoxaban
+:edoxaban rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_edoxaban ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "‎B01AF03‎" ;
+          rdfs:label "edoxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#edoxaban_usage_for_Report_1_1
+:edoxaban_usage_for_Report_1_1 rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :dosage_for_report_1 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :edoxaban ;
+                               rdfs:label "usage of edoxaban for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#erythromycin
+:erythromycin rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "J01FA01 " ;
+              rdfs:label "erythromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Edoxaban is an anti-coagulant drug indicated to prevent thromboembolic disease in patients diagnosed with atrial fibrillation, including one or more risk factors such as history of stroke or transient ischaemic attack, age 75 years or older, diabetes mellitus or hypertension. The drug is also approved for treatment of deep vein thrombosis and pulmonary embolism.1  The recommended dose differs according to the indication but ranges between 30 mg and 60 mg once a day. In patients with body weight lower than 60 kg, or taking P-glycoprotein inhibiting drugs , such as ciclosporin, dronedarone, erythromycin, ketoconazole, or suffering from moderate or severe renal impairment, the dose should be reduced to 30 mg daily" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#ketoconazole
+:ketoconazole rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "D01AC08" ;
+              rdfs:label "ketoconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#pulmonaryEmbolism
+:pulmonaryEmbolism rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I26" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10037377 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "pulmonary embolism" ;
+                   rdfs:label "pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#stroke
+:stroke rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I639" ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10042244 ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "stroke" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#thromboembolicDisease
+:thromboembolicDisease rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I749" ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10043566 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "thromboembolic disease" ;
+                       rdfs:label "thromboembolic disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#transient_ischemic_attack
+:transient_ischemic_attack rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G45. 9" ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10072760 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Transient ischemic attack" ;
+                           rdfs:label "transient ischemic attack" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_edoxaban_incorrect_dose_administered.owl#ventricularBleeding
+:ventricularBleeding rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I615" ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10022840 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Intraventricular haemorrhage" ;
+                     rdfs:label "ventricular bleeding" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

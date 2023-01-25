@@ -1,0 +1,1335 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis> rdf:type owl:Ontology ;
+                                                                  owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                              mp: ;
+                                                                  rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255501/"^^xsd:anyURI ;
+                                                                  rdfs:label "Vemurafenib and Sepsis"^^xsd:Literal ;
+                                                                  owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/citation
+mp:citation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisBRAF_V600E_mutation_positive
+:BRAF_V600E_mutation_positive rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Indication ;
+                              OpenPVSignal:has_MedDRA_code 10075676 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "BRAF V600E mutation positive" ;
+                              rdfs:label "BRAF V600E mutation positive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "Although metastatic melanoma is in itself a risk factor for sepsis, and a number of the patients in this case series had additional factors that predispose to infection, the ICSRs in Vigibase® concerning vemurafenib and sepsis, together with a possible mechanism, suggest a signal for this combination." ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.10 ,
+                                 :Ref.11 ,
+                                 :Ref.9 ;
+                   OpenPVSignal:has_content """Patients with metastatic malignant disease, such as metastatic melanoma, are at increased risk of sepsis: contributing factors include procedural interventions that breech epithelial barriers (e.g. surgical tumour removal; insertion of intravenous catheters for delivery of chemotherapeutic medicines), blockage of normally patent structures by metastatic tumours (e.g. urinary tract infection secondary to an obstructed ureter; cholangitis secondary to an obstructed gall bladder; pneumonia secondary to an obstructed bronchus) and increased exposure to pathogens during hospitalization. Other host factors that may contribute to sepsis in patients with metastatic malignant melanoma include diminished nutritional status and the use of medications that impair the immune response (e.g. corticosteroids; some chemotherapeutic agents).
+Among the 22 cases in this series, six patients had co-morbidities that clearly predisposed them to sepsis: three patients were reported to be neutropenic at the time of developing sepsis (one of whom was also reported to have had an intestinal perforation), one further patient developed sepsis in association with intestinal perforation, one patient developed pneumonia and sepsis secondary to bronchial obstruction from lung metastases and one patient with an indwelling urinary catheter and staghorn renal calculus developed sepsis in association with a urinary tract infection. Given the nature of the underlying indication for treatment, it is possible that the two further patients who developed sepsis in association with pneumonia and one patient who developed sepsis in association with cholecystitis may have developed these infections as a result of lung and liver metastases, respectively.
+Four cases had co-reported events (colitis, viral enteritis, exfoliative dermatitis and nasopharyngitis) that suggest the source of sepsis, although the onset dates for these events were not provided and the sequence is unclear. Five well documented reports did not identify an obvious source of infection but, again given the underlying indication for treatment, these patients do have an increased risk of infection associated with metastatic cancer.
+Although dechallenge is essentially meaningless in the context of sepsis (because recovery is determined by the integrity of host defences and the use of appropriate antimicrobial therapy), it is interesting to note that two patients who recovered from the initial sepsis developed subsequent infections while continuing treatment with vemurafenib (in one case at a lower dose).
+Vemurafenib was the sole suspected drug in 19 of the ICSRs and was the only reported drug in ten of the ICSRs. Concomitant drugs were reported in 11 patients: two patients were reported to be taking prednisone which may impair the host response to infection; four patients were on proton pump inhibitors, two patients were taking mesalazine, and one patient was taking metamizole (which is associated with agranulocytosis).
+When cases with predisposing factors in addition to metastatic melanoma are excluded (neutropenia, intestinal perforation, metastatic obstruction of bronchus, underlying urinary tract pathology), the remaining cases demonstrate a consistent time-to-onset ranging from 11 to 70 days with a median of 17 days.
+The question raised by these cases is whether or not vemurafenib further increases the risk of sepsis in patients with metastatic melanoma who are already at risk of developing serious infections. Vemurafenib acts in the RAS-RAF-MEK-ERK intracellular signalling pathway. The RAF-MEK-ERK components of this pathway are involved in Neutrophil Extracellular Trap (NET) formation.9 NETs are extracellular chromatin fibres, decorated with granules containing antimicrobial peptides and enzymes, which are released by activated neutrophils to trap and disarm bacteria.10 Excessive NET formation may play a role in sepsis.11 Inhibition of the RAS-RAF-MEK-ERK pathway by vemurafenib may thus have an effect on NET formation in patients taking this medicine, potentially making them more susceptible to infection.""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDosage2
+:Dosage2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg" ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dose_value "1920 mg" ;
+         rdfs:label "Dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDosage3
+:Dosage3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg" ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dose_value "1920 mg" ;
+         rdfs:label "Dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDosage4
+:Dosage4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg" ;
+         OpenPVSignal:has_value 3840 ;
+         OpenPVSignal:refers_to_dechallenge_process "false"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "3840 mg" ;
+         rdfs:label "Dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDosage5
+:Dosage5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg" ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dose_value "1920 mg" ;
+         rdfs:label "Dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDosageOfVemurafenib
+:DosageOfVemurafenib rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                     OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis#12HoursIntervalsBetweenAdministrations> ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 960 ;
+                     OpenPVSignal:refers_to_dose_value "960 mg" ;
+                     rdfs:label "Dosage of Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisDr_Geraldine_Hill
+:Dr_Geraldine_Hill rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Author ;
+                   OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                   OpenPVSignal:has_first_name "Geraldine" ;
+                   OpenPVSignal:has_last_name "Hill" ;
+                   rdfs:label "Dr Geraldine Hill" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisGram-negative_sepsis
+:Gram-negative_sepsis rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10082456 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Gram-negative sepsis" ;
+                      rdfs:label "Gram-negative sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisInfoForReport1
+:InfoForReport1 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content """A 73 year-old woman with extensive metastases (liver, adrenals, lymph) developed E. coli sepsis and hemiparesis while taking Vemurafenib. The exact time-to-onset was not reported, but she had previously experienced fatigue, asthenia and epidermoid cysts on a higher dose (not stated).
+The dose was halved approximately five months prior to the onset of sepsis (which developed approximately seven months after the drug was started). Vemurafenib was the only suspected drug; the other reported medicine, ibandronic acid, is not known to be associated with sepsis. She recovered following treatment with antibiotics.""" ;
+                rdfs:label "Info for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisInfoForReport2
+:InfoForReport2 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "A male of unknown age with cerebral metastases developed sepsis of unknown origin (cultures negative; x-ray and CT scan provided no clues as to the source of infection), associated with keratoconjunctivitis, 11 days after starting vemurafenib 1920 mg per day. Vemurafenib was stopped for two days then reintroduced at half the dose. He recovered, but subsequently developed another episode of sepsis of unknown origin, 56 days after treatment initiation, from which he also recovered with appropriate treatment. Both episodes resolved while treatment with vemurafenib continued. Vemurafenib was the only reported drug." ;
+                rdfs:label "Info for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisInfoForReport3
+:InfoForReport3 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "A 47 year-old woman developed sepsis 19 days after starting vemurafenib 1920 mg per day. She recovered quickly with antibiotic treatment and vemurafenib therapy was continued. She subsequently developed cellulitis, 111 days after treatment initiation, which was resolving at the time of reporting while continuing on vemurafenib. Concurrent medicines were metoclopramide and ramipril; vemurafenib was the only suspected drug." ;
+                rdfs:label "Info for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisInfoForReport4
+:InfoForReport4 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "A 63 year-old male developed Gram-negative sepsis 15 days after starting vemurafenib 3840 mg per day. Vemurafenib was the only suspected and only reported drug. At the time of reporting, the patient was recovering and treatment with vemurafenib continued unchanged." ;
+                rdfs:label "Info for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisInfoForReport5
+:InfoForReport5 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "A 72 year-old male developed sepsis 70 days after starting vemurafenib 1920 mg per day. The patient died. Vemurafenib was the only suspected and only reported drug." ;
+                rdfs:label "Info for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisIntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ;
+                     OpenPVSignal:has_content """Vemurafenib is a serine-threonine protein kinase inhibitor that inhibits the kinase activity of mutated B-Raf protein. The Ras-Raf-MEK-ERK mitogen activated protein kinase (MAPK) cascade is an important cytoplasmic signalling pathway involved in the regulation of normal somatic cell proliferation. Mutations in the genes encoding components of this pathway have been associated with a number of human cancers.1 An activating mutation in the BRAF gene, which encodes the serine-threonine protein kinase B-Raf, has been found to be present in 40-60 percent of melanomas, most commonly the BRAF V600E mutation.2 Vemurafenib is indicated for the treatment of metastatic or unresectable melanomas that carry the BRAF V600E mutation. The recommended dose is 960 mg twice daily and it is currently available in 240 mg tablets.3
+Sepsis is defined as a systemic response to microbes that traverse the epithelial barriers and invade underlying tissues; it is characterized by fever or hypothermia, leukocytosis or leukopenia, tachypnoea and tachycardia; together these clinical signs are known as the systemic inflammatory response syndrome, which may also occur in response to a non-infectious cause. Sepsis represents the early stage of a continuum: when associated with organ dysfunction distant to the site of infection, it is defined as severe sepsis and may be associated with hypotension and hypoperfusion; if perfusion cannot be restored with fluid infusions, the condition is defined as septic shock.4 The incidence of sepsis and its associated mortality increases with increasing age and with underlying co-morbidities. Individuals who are immunocompromised due to underlying disease (e.g. metastatic cancer, HIV infection, chronic illness) or medication (cancer chemotherapy, corticosteroids) are at greater risk of sepsis, but immunocompetent individuals are also at risk (e.g. following surgical procedures that breach epithelial barriers). Individuals with a foreign or pathological locus on which infection may seed (e.g. artificial heart valve, indwelling catheter or urinary calculus) are also at risk. Investigations are directed at isolating the causative microorganism from blood or a localized site of infection, and include blood cultures and radiological examinations to identify the source. Treatment requires removal of the source of infection (e.g. removal of indwelling intravenous or urinary catheters, drainage of abscess), circulatory and respiratory support as necessary and correction of metabolic disturbances, in addition to aggressive empirical antimicrobial chemotherapy, which may be tailored to the specific organism once identified""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisLabelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ;
+           OpenPVSignal:refers_to_adverse_effect :folliculitis ;
+           OpenPVSignal:refers_to_drug :vemurafenib ;
+           mp:references :Ref.5 ,
+                         :Ref.6 ;
+           OpenPVSignal:has_content "Folliculitis (infection of the hair follicles of the skin) is the only infection labelled on both the UK Summary of Product Characteristics5 and the US FDA product label6. No other infections are included in the labelling information ." ;
+           rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.5 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ;
+                        OpenPVSignal:has_content """Folliculitis (infection of the hair follicles of the skin) is the only infection labelled on both the UK Summary of Product Characteristics5 and the US FDA product label6. No other infections are included in the labelling information.
+UMC previously signalled granulocytopenia in association with vemurafenib7,8, a condition of impaired immunity that predisposes individuals to sepsis; neutropenia has since been added to the product label.""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisMechanism_of_Vemurafenib
+:Mechanism_of_Vemurafenib rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ;
+                          OpenPVSignal:has_content "Vemurafenib is a serine-threonine protein kinase inhibitor that inhibits the kinase activity of mutated B-Raf protein. The Ras-Raf-MEK-ERK mitogen activated protein kinase (MAPK) cascade is an important cytoplasmic signalling pathway involved in the regulation of normal somatic cell proliferation. Mutations in the genes encoding components of this pathway have been associated with a number of human cancers.1 An activating mutation in the BRAF gene, which encodes the serine-threonine protein kinase B-Raf, has been found to be present in 40-60 percent of melanomas, most commonly the BRAF V600E mutation.2" ;
+                          rdfs:label "Mechanism of Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisOverallReportsInVigibaseForVemurafenibAndSepsis
+:OverallReportsInVigibaseForVemurafenibAndSepsis rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:refers_to_adverse_effect :sepsis ;
+                                                 OpenPVSignal:refers_to_drug :vemurafenib ;
+                                                 OpenPVSignal:has_count 22 ;
+                                                 OpenPVSignal:has_count_of_men 16 ;
+                                                 OpenPVSignal:has_count_of_women 6 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "Overall reports in Vigibase for  Vemurafenib and Sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPatient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 73 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPatient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPatient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 47 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPatient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 63 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPatient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPotentialMechanismOfSepsisTriggeredByVemurafenib
+:PotentialMechanismOfSepsisTriggeredByVemurafenib rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                  OpenPVSignal:refers_to_adverse_effect :sepsis ;
+                                                  mp:references :Ref.10 ,
+                                                                :Ref.11 ,
+                                                                :Ref.9 ;
+                                                  OpenPVSignal:has_content "Vemurafenib acts in the RAS-RAF-MEK-ERK intracellular signalling pathway. The RAF-MEK-ERK components of this pathway are involved in Neutrophil Extracellular Trap (NET) formation.9 NETs are extracellular chromatin fibres, decorated with granules containing antimicrobial peptides and enzymes, which are released by activated neutrophils to trap and disarm bacteria.10 Excessive NET formation may play a role in sepsis.11 Inhibition of the RAS-RAF-MEK-ERK pathway by vemurafenib may thus have an effect on NET formation in patients taking this medicine, potentially making them more susceptible to infection." ;
+                                                  rdfs:label "Potential mechanism of sepsis triggered by Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisPreDisposingFactors
+:PreDisposingFactors rdf:type owl:NamedIndividual ,
+                              obo:OAE_0001182 ;
+                     OpenPVSignal:refers_to_adverse_effect :Urinary_tract_infection ,
+                                                           :cholecystitis ,
+                                                           :intestinalPerforation ,
+                                                           :metastaticMelanoma ,
+                                                           :neutropenia ,
+                                                           :pneumonia ,
+                                                           :sepsis ;
+                     OpenPVSignal:has_content "Given the nature of the underlying indication for treatment, it is possible that the two further patients who developed sepsis in association with pneumonia and one patient who developed sepsis in association with cholecystitis may have developed these infections as a result of lung and liver metastases, respectively. " ,
+                                              "predisposing factors in addition to metastatic melanoma are excluded (neutropenia, intestinal perforation, metastatic obstruction of bronchus, underlying urinary tract pathology)" ;
+                     rdfs:label "Pre disposing factors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Davies H, Bignell GR, Cox C, Stephens P, Edkins S, Clegg S, et al. Mutations of the BRAF gene in human cancer. Nature 2002;417(6892):949-54." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Brinkmann V, Reichard U, Goosmann C, Fauler B, Uhlemann Y, Weiss DS, et al. Neutrophil extracellular traps kill bacteria. Science 2004;303(5663):1532-5." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Clark SR, Ma AC, Tavener SA, McDonald B, Goodarzi Z, Kelly MM, et al. Platelet TLR4 activates neutrophil extracellular traps to ensnare bacteria in septic blood. Nature medicine 2007;13(4):463- 9." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Roberts PJ, Der CJ. Targeting the Raf-MEK- ERK mitogen-activated protein kinase cascade for the treatment of cancer. Oncogene 2007;26(22):3291-310." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Food and Drug Administration. Zelboraf Label (July 2013) http://www.accessdata.fda.gov/drugsatfda_docs/ label/2013/202429s002s003lbl.pdf Accessed" ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Munford RS. Severe Sepsis and Septic Shock. In: Fauci AS, Braunwald E, Kasper DL, Hauser SL, Longo DL, Jameson JL, et al., editors. Harrison’s Principles of Internal Medicine. 17th ed: McGraw- Hill, 2008:1673-80." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium UK. Zelboraf 240 mg film-coated tablets http://www.medicines.org.uk/ emc/medicine/26056 Accessed 18 Aug 2014." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Food and Drug Administration. Zelboraf Label (Aug 2014) http://www.accessdata.fda.gov/ drugsatfda_docs/ label/2014/202429s004lbl.pdf Accessed 18 Aug 2014." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hill G, Meyboom R. Vemurafenib and Granulocytopenia. SIGNAL (restricted document) 2013(3):37-40." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hill G, Meyboom R. Vemurafenib and Granulocytopenia. WHO Pharmaceuticals Newsletter 2014(1):30-33." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisRef.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hakkim A, Fuchs TA, Martinez NE, Hess S, Prinz H, Zychlinsky A, et al. Activation of the Raf- MEK-ERK pathway is required for neutrophil extracellular trap formation. Nat Chem Biol 2011;7(2):75-77." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReport1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForReport1 ;
+         OpenPVSignal:refers_to_adverse_effect :asthenia ,
+                                               :epidermoidCysts ,
+                                               :fatigue ,
+                                               :hemiparesis ,
+                                               :sepsis ;
+         OpenPVSignal:refers_to_concomitant_drug :ibandronicAcid ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReport2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForReport2 ;
+         OpenPVSignal:refers_to_adverse_effect :keratoconjunctivitis ,
+                                               :sepsis ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ,
+                                    :Time_to_onset_2b ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReport3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForReport3 ;
+         OpenPVSignal:refers_to_adverse_effect :cellulitis ,
+                                               :sepsis ;
+         OpenPVSignal:refers_to_concomitant_drug :metoclopramide ,
+                                                 :ramipril ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report3 ;
+         OpenPVSignal:time_to_onset :TimeToOnset3a ,
+                                    :TimeToOnset3b ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReport4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForReport4 ;
+         OpenPVSignal:refers_to_adverse_effect :Gram-negative_sepsis ,
+                                               :sepsis ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report4 ;
+         OpenPVSignal:time_to_onset :TimeToOnset4 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReport5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForReport5 ;
+         OpenPVSignal:refers_to_adverse_effect :sepsis ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report5 ;
+         OpenPVSignal:time_to_onset :TimeToOnset5 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromAustria
+:ReportsFromAustria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Austria" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromItaly
+:ReportsFromItaly rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                  OpenPVSignal:has_count 2 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromUnitedKingdom
+:ReportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                          OpenPVSignal:has_count 2 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsFromUnitedStates
+:ReportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                         OpenPVSignal:has_count 10 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from United States" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """At the time of assessment (August 2014), there were 22 case reports in the WHO Global ICSR Database, Vigibase®, for the combination vemurafenib and sepsis. No duplicates were identified among these 22 reports.
+The reports came from seven countries: United States (10), Germany (3), Australia, Italy and United Kingdom (2 each), and Austria and Switzerland (1 each). All of the ICSRs were serious and 12 reports were fatal.
+The cases concerned 16 males and 6 females. Age was reported for 18 cases and ranged from 47 to 89 years (median age 63.5 years). The indication for treatment was reported as melanoma for 16 cases but was not stated for the remaining 6 cases. The time-to-onset was reported for 10 cases and ranged from 6 to 132 days, with a median of 17 days. The outcome for sepsis was reported for 18 cases: recovered (6), recovering (1), not recovered (1), died (9), died - reaction may be contributory (1). The outcome was reported as unknown for three cases and was not stated for one case. Three of the patients who recovered continued to take vemurafenib at the same dose, one of whom subsequently developed cellulitis, which was recovering at the time of reporting. A further patient, who continued vemurafenib at a lower dose after developing sepsis, developed a second episode of sepsis; the medication was continued and the infection resolved. Vemurafenib was the sole suspected drug in 19 of the ICSRs and was the only reported drug in ten of the ICSRs. Of the 22 ICSRs, eight reports were poorly documented. One of these reports concerned a patient with a past medical history of leukaemia and COPD. A further four of these reports concerned patients with co-reported events that suggest a possible source of the sepsis; however, onset dates were not provided so it is not possible to determine the sequence of events. These co- reported events include colitis, cytomegalovirus enteritis, exfoliative dermatitis/blisters/generalized erythema and nasopharyngitis/blisters/erythema.
+Of the remaining 14 ICSRs, three patients were reported to have neutropenia, one of whom was also reported to have an intestinal perforation. A further six patients had identifiable sources of infection: one patient with Chronic Hepatitis B developed cholecystitis while on vemurafenib, another patient suffered intestinal perforation, three patients were reported to have pneumonia, one of whom was also reported to have a bronchial obstruction secondary to lung metastases. One patient, with an indwelling suprapubic catheter as a result of Multiple Sclerosis and a known staghorn renal calculus, developed sepsis secondary to a urinary tract infection.
+The remaining five patients are summarized below:
+A 73 year-old woman with extensive metastases (liver, adrenals, lymph) developed E. coli sepsis and hemiparesis while taking Vemurafenib. The exact time-to-onset was not reported, but she had previously experienced fatigue, asthenia and epidermoid cysts on a higher dose (not stated).
+The dose was halved approximately five months prior to the onset of sepsis (which developed approximately seven months after the drug was started). Vemurafenib was the only suspected drug; the other reported medicine, ibandronic acid, is not known to be associated with sepsis. She recovered following treatment with antibiotics.
+A male of unknown age with cerebral metastases developed sepsis of unknown origin (cultures negative; x-ray and CT scan provided no clues as to the source of infection), associated with keratoconjunctivitis, 11 days after starting vemurafenib 1920 mg per day. Vemurafenib was stopped for two days then reintroduced at half the dose. He recovered, but subsequently developed another episode of sepsis of unknown origin, 56 days after treatment initiation, from which he also recovered with appropriate treatment. Both episodes resolved while treatment with vemurafenib continued. Vemurafenib was the only reported drug.
+A 47 year-old woman developed sepsis 19 days after starting vemurafenib 1920 mg per day. She recovered quickly with antibiotic treatment and vemurafenib therapy was continued. She subsequently developed cellulitis, 111 days after treatment initiation, which was resolving at the time of reporting while continuing on vemurafenib. Concurrent medicines were metoclopramide and ramipril; vemurafenib was the only suspected drug.
+A 63 year-old male developed Gram-negative sepsis 15 days after starting vemurafenib 3840 mg per day. Vemurafenib was the only suspected and only reported drug. At the time of reporting, the patient was recovering and treatment with vemurafenib continued unchanged.
+A 72 year-old male developed sepsis 70 days after starting vemurafenib 1920 mg per day. The patient died. Vemurafenib was the only suspected and only reported drug.
+""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsOfPatientsThatUnderwentPartialRechallengeAndDevelopedSepsis
+:ReportsOfPatientsThatUnderwentPartialRechallengeAndDevelopedSepsis rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Reports_group ;
+                                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                                                    OpenPVSignal:has_count 1 ;
+                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                    rdfs:label "Reports of patients that underwent partial rechallenge and developed sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsOfSeriousCharacter
+:ReportsOfSeriousCharacter rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                           OpenPVSignal:has_count 22 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports of serious character" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsRecovering
+:ReportsRecovering rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                   rdfs:label "Reports with recovering" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithAgeInformation
+:ReportsWithAgeInformation rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                           OpenPVSignal:has_count 18 ;
+                           OpenPVSignal:has_max_age "89.0"^^xsd:float ;
+                           OpenPVSignal:has_median_age "63.5"^^xsd:float ;
+                           OpenPVSignal:has_min_age "47.0"^^xsd:float ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports with age information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithCholecystitis
+:ReportsWithCholecystitis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                          OpenPVSignal:refers_to_adverse_effect :cholecystitis ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports with cholecystitis " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithFatalOutcome
+:ReportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                         OpenPVSignal:has_count 12 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "Reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithIntestinalPerforation
+:ReportsWithIntestinalPerforation rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                  OpenPVSignal:refers_to_adverse_effect :intestinalPerforation ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Reports with intestinal perforation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithMelanomaAsIndication
+:ReportsWithMelanomaAsIndication rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:concerns_indication_for_use :metastaticMelanoma ;
+                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                 OpenPVSignal:has_count 16 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "Reports with melanoma as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithNeutropenia
+:ReportsWithNeutropenia rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                        OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                        OpenPVSignal:has_count 3 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithNoRecovery
+:ReportsWithNoRecovery rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                       OpenPVSignal:has_count 1 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                       rdfs:label "Reports with no recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithOutcomeThatWasUnknown
+:ReportsWithOutcomeThatWasUnknown rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                  OpenPVSignal:has_count 3 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                  rdfs:label "Reports with outcome that was unknown" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithPatientsThatRecoveredButRemainedOnVemurafenibRegiment
+:ReportsWithPatientsThatRecoveredButRemainedOnVemurafenibRegiment rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Reports_group ;
+                                                                  OpenPVSignal:is_subgroup_of :ReportsWithRecovery ;
+                                                                  OpenPVSignal:has_count 3 ;
+                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                  OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                                                                  rdfs:label "Reports with patients that recovered but remained on vemurafenib regiment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithPneumonia
+:ReportsWithPneumonia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                      OpenPVSignal:refers_to_adverse_effect :pneumonia ;
+                      OpenPVSignal:has_count 3 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports with pneumonia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithRecovery
+:ReportsWithRecovery rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                     OpenPVSignal:has_count 6 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                     rdfs:label "Reports with recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithUrinaryTractInfectionDueToMedicalDevice
+:ReportsWithUrinaryTractInfectionDueToMedicalDevice rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                                    OpenPVSignal:refers_to_adverse_effect :Urinary_tract_infection ;
+                                                    OpenPVSignal:has_count 1 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "Reports with urinary tract infection due to medical device" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithVemurafenibAsTheSoleSuspectedDrug
+:ReportsWithVemurafenibAsTheSoleSuspectedDrug rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                              OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                                              OpenPVSignal:has_count 19 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports with Vemurafenib as the sole suspected drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReportsWithVemurafenibBeingTheOnlyReportedDrug
+:ReportsWithVemurafenibBeingTheOnlyReportedDrug rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                                OpenPVSignal:has_count 10 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "Reports with Vemurafenib being the only reported drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReports_with_mesalazine
+:Reports_with_mesalazine rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                         OpenPVSignal:refers_to_concomitant_drug :mesalazine ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with mesalazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReports_with_metamizole
+:Reports_with_metamizole rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                         OpenPVSignal:refers_to_concomitant_drug :metamizole ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReports_with_prednisone
+:Reports_with_prednisone rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                         OpenPVSignal:refers_to_concomitant_drug :predmisone ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with prednisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReports_with_proton_pump_inhibitor
+:Reports_with_proton_pump_inhibitor rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                    OpenPVSignal:refers_to_class :protonPumpInhibitors ;
+                                    OpenPVSignal:has_count 4 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with proton pump inhibitor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisReports_with_time_to_onset_info
+:Reports_with_time_to_onset_info rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForVemurafenibAndSepsis ;
+                                 OpenPVSignal:time_to_onset :time_to_onset_info ;
+                                 OpenPVSignal:has_count 10 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "Reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisResponse_from_Roche
+:Response_from_Roche rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Vemurafenib_and_Sepsis ;
+                     OpenPVSignal:has_content """Response from Roche
+The WHO Uppsala Monitoring Centre (UMC) notified Roche about a safety signal of sepsis for vemurafenib based on 22 case reports in the WHO Database, Vigibase® as of August 2014.
+To date, sepsis is not considered an adverse drug reaction (ADR) for vemurafenib. The relevant ADRs that are listed in the current vemurafenib label are neutropenia and folliculitis.
+A review of the Roche global safety database (through 26 August 2014) revealed 33 medically confirmed cases of sepsis based on a diagnostic criteria1 and includes the 5 unique cases referenced in the WHO report. Of these 33 cases, 28 of them presented with confounding factors that could account for the septic event, including co-morbid conditions (e.g. bowel perforation, urinary tract infection in elderly patients, diabetes, bowel fistula, hemochromatosis, neutropenia) as well as concomitant treatments or procedures (corticosteroids, indwelling catheter, and surgery). Cancer by itself is a risk for sepsis, and is the most common co-morbid medical condition in patients with sepsis.2 The remaining five cases with no confounders are summarized in Table 1 below.
+Our data showed that the incidence of sepsis was highest among male patients aged 60 years old and above, which is similar to that cited in the literature for cancer patients3. There was no obvious pattern in terms of clinical presentation, with causative pathogens ranging from bacterial, fungal, and viral; the event severity was also varied, ranging from sepsis to severe sepsis, and septic shock; and significantly, there was no consistency observed in the latency period, with time to onset ranging from 5 days to 682 days (median latency is 42 days). In addition, there were no reported cases of sepsis from the Phase III controlled trial, NO25026 (n=336).
+Using MarketScan®, a US commercial claims database, the incidence of sepsis among metastatic melanoma patients demonstrated a rate of 23.6 per 1,000 person years. In contrast, the crude reporting rate for the 33 cases in the Roche global safety database was 2.2 per 1,000 person years (estimated exposure of 24,479 patients with an average treatment duration of 8. months) which is significantly lower than the rate of sepsis in metastatic melanoma patients in the claims database, and also lower than the incidence rate cited in the literature for cancer patients in general (14.65 cases per 1,000 person years)3.
+The hypothesis for a plausible MOA cited by WHO,
+i.e. effect on neutrophil extracellular trap (NET) formation through inhibition of the RAS-RAF-MEK- ERK pathway by vemurafenib is not strengthened by our analysis. Although vemurafenib inhibits signalling downstream of mutant RAF, it is known to increase signalling downstream of wild type RAF4 ; in addition there are literature reports showing the opposite effect of the hypothesis, that excessive NET formation is linked to sepsis5,6; plus host defense mechanisms other than NET formation exist, i.e. phagocytosis.
+Roche acknowledges this signal considering the potential risk for this event in this patient population together with the known ADR of neutropenia, and will continue to monitor infections, including sepsis. We thank the WHO for this opportunity to comment on this article.
+
+References
+1.	SCCM/ESICM/ACCP/ATS/SIS. International Sepsis Definition Conference. Intensive Care Med (2003) 29 530:538. 2001
+2.	Martin GS, Mannino DM, Eaton S, et al. The epidemiology of sepsis in the United States from 1979 through 2000.N Engl J Med 2003; 348:1546–1554
+3.	Danai, P, Moss M, et al. The Epidemiology of Sepsis in Patients with Malignancy. Chest 2006; 129: 1432-1440
+4.	Poulikakos PI, Zhang C, et al. RAF inhibitors transactivate RAF and ERK signalling in cells with wild-type BRAF Nature 2010; 464:427-3
+5.	Ma AC, Kubes P. Platelets, Neutrophils, and Neutrophil Extracellular Traps (NETs) in Sepsis. J Thromb Haemost 2008; 6: 415–20
+6.	Camicia G et al. Neutrophil extracellular traps: a 2-faced host defense mechanism. Med Clin Barc. 2013 Jan 19; 140(2):70-5""" ;
+                     rdfs:label "Response from Roche" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisSepsis_pathophysiology
+:Sepsis_pathophysiology rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Free_text_reporting_element ;
+                        OpenPVSignal:refers_to_adverse_effect :sepsis ;
+                        mp:references :Ref.4 ;
+                        OpenPVSignal:has_content "Sepsis is defined as a systemic response to microbes that traverse the epithelial barriers and invade underlying tissues; it is characterized by fever or hypothermia, leukocytosis or leukopenia, tachypnoea and tachycardia; together these clinical signs are known as the systemic inflammatory response syndrome, which may also occur in response to a non-infectious cause. Sepsis represents the early stage of a continuum: when associated with organ dysfunction distant to the site of infection, it is defined as severe sepsis and may be associated with hypotension and hypoperfusion; if perfusion cannot be restored with fluid infusions, the condition is defined as septic shock.4 The incidence of sepsis and its associated mortality increases with increasing age and with underlying co-morbidities. Individuals who are immunocompromised due to underlying disease (e.g. metastatic cancer, HIV infection, chronic illness) or medication (cancer chemotherapy, corticosteroids) are at greater risk of sepsis, but immunocompetent individuals are also at risk (e.g. following surgical procedures that breach epithelial barriers). Individuals with a foreign or pathological locus on which infection may seed (e.g. artificial heart valve, indwelling catheter or urinary calculus) are also at risk. Investigations are directed at isolating the causative microorganism from blood or a localized site of infection, and include blood cultures and radiological examinations to identify the source. Treatment requires removal of the source of infection (e.g. removal of indwelling intravenous or urinary catheters, drainage of abscess), circulatory and respiratory support as necessary and correction of metabolic disturbances, in addition to aggressive empirical antimicrobial chemotherapy, which may be tailored to the specific organism once identified." ;
+                        rdfs:label "Sepsis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisSummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Vemurafenib is a protein kinase inhibitor with activity against mutated B-Raf protein, which is used in the treatment of metastatic or unresectable malignant melanoma that carries the BRAF V600E mutation. The WHO Global ICSR Database, Vigibase®, contains 22 ICSRs in which vemurafenib is associated with sepsis. Metastatic malignancy is, in itself, a risk factor for sepsis and a number of the ICSRs in the case series include additional risk factors for infection. However, evidence to support a signal includes: a consistent time-to-onset (where stated) among cases without additional risk factors; reports from seven countries and vemurafenib was the only suspected drug in most of cases. In addition, vemurafenib acts in the RAF-MEK-ERK intracellular signalling pathway and this same pathway is involved in neutrophil extracellular trap (NET) formation, a significant host defence mechanism against invading pathogens." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "The dose was halved approximately five months prior to the onset of sepsis (which developed approximately seven months after the drug was started). " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 7 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 11 ;
+              rdfs:label "Time to onset 2a" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset3a
+:TimeToOnset3a rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "days" ;
+               time:numericPosition 19 ;
+               rdfs:label "Time to onset 3a" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset3b
+:TimeToOnset3b rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "days" ;
+               time:numericPosition 111 ;
+               rdfs:label "Time to onset 3b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset4
+:TimeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 15 ;
+              rdfs:label "Time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTimeToOnset5
+:TimeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 70 ;
+              rdfs:label "Time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisTime_to_onset_2b
+:Time_to_onset_2b rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 56 ;
+                  rdfs:label "Time to onset 2b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisUrinary_tract_infection
+:Urinary_tract_infection rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_MedDRA_code 10046571 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Urinary tract infection" ;
+                         rdfs:label "urinary tract infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisVemurafenibAndNeutropenia
+:VemurafenibAndNeutropenia rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_drug :vemurafenib ;
+                           mp:citation "UMC previously signalled granulocytopenia in association with vemurafenib7,8, a condition of impaired immunity that predisposes individuals to sepsis; neutropenia has since been added to the product label." ;
+                           rdfs:label "Vemurafenib and neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisVemurafenib_and_Sepsis
+:Vemurafenib_and_Sepsis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                        OpenPVSignal:refers_to_author :Dr_Geraldine_Hill ;
+                        OpenPVSignal:refers_to_signal :pvSignal ;
+                        OpenPVSignal:has_creation_date "01/02/2005" ;
+                        OpenPVSignal:has_overall_conclusion "causal association" ;
+                        rdfs:label "Vemurafenib and Sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisasthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53.1" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsiscellulitis
+:cellulitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10007882 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Cellulitis" ;
+            rdfs:label "cellulitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsischolecystitis
+:cholecystitis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10008612 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Cholecystitis" ;
+               rdfs:label "cholecystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsiscolitis
+:colitis rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "K52.9" ;
+         OpenPVSignal:has_MedDRA_code 10009887 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Colitis" ;
+         rdfs:label "colitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisepidermoidCysts
+:epidermoidCysts rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "L72.0" ;
+                 OpenPVSignal:has_MedDRA_code 10012426 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Dermal cyst" ;
+                 rdfs:label "epidermal cyst" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisexfoliativeDermatitis
+:exfoliativeDermatitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "L26" ;
+                       OpenPVSignal:has_MedDRA_code 10012455 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Dermatitis exfoliative" ;
+                       rdfs:label "exfoliative dermatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisfatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53.83" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisfever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_MedDRA_code 10016558 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Fever" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisfolliculitis
+:folliculitis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10016936 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Folliculitis" ;
+              rdfs:label "folliculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisgranulocytopenia
+:granulocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10018687 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Granulocytopenia" ;
+                  rdfs:label "granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisgranulocytopenia_and_vemurafenib
+:granulocytopenia_and_vemurafenib rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :granulocytopenia ;
+                                  OpenPVSignal:refers_to_drug :vemurafenib ;
+                                  mp:references :Ref.7 ,
+                                                :Ref.8 ;
+                                  OpenPVSignal:has_content "UMC previously signalled granulocytopenia in association with vemurafenib7,8, a condition of impaired immunity that predisposes individuals to sepsis; neutropenia has since been added to the product label." ;
+                                  rdfs:label "granulocytopenia and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsishemiparesis
+:hemiparesis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I69.959" ;
+             OpenPVSignal:has_MedDRA_code 10019465 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hemiparesis" ;
+             rdfs:label "Hemiparesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsishypothermia
+:hypothermia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10021113 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypothermia" ;
+             rdfs:label "hypothermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisibandronicAcid
+:ibandronicAcid rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "M05BA06 " ;
+                rdfs:label "ibandronic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisintestinalPerforation
+:intestinalPerforation rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "K63.1" ;
+                       OpenPVSignal:has_MedDRA_code 10022694 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Intestinal perforation" ;
+                       rdfs:label "intestinal perforation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsiskeratoconjunctivitis
+:keratoconjunctivitis rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "H10. 33" ;
+                      OpenPVSignal:has_MedDRA_code 10023348 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Keratoconjunctivitis" ;
+                      rdfs:label "keratoconjunctivitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisleukocytosis
+:leukocytosis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10024378 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Leukocytosis" ;
+              rdfs:label "leukocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisleukopenia
+:leukopenia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10024384 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Leukopenia" ;
+            rdfs:label "leukopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsismesalazine
+:mesalazine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A07EC02 " ;
+            rdfs:label "mesalazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsismetamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02 " ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsismetastaticMelanoma
+:metastaticMelanoma rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "C43.9" ;
+                    OpenPVSignal:has_MedDRA_code 10027480 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Metastatic malignant melanoma" ;
+                    rdfs:label "metastatic melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsismetastatic_melanoma_and_sepsis
+:metastatic_melanoma_and_sepsis rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001182 ;
+                                OpenPVSignal:refers_to_adverse_effect :metastaticMelanoma ,
+                                                                      :sepsis ;
+                                OpenPVSignal:has_content "Patients with metastatic malignant disease, such as metastatic melanoma, are at increased risk of sepsis: contributing factors include procedural interventions that breech epithelial barriers (e.g. surgical tumour removal; insertion of intravenous catheters for delivery of chemotherapeutic medicines), blockage of normally patent structures by metastatic tumours (e.g. urinary tract infection secondary to an obstructed ureter; cholangitis secondary to an obstructed gall bladder; pneumonia secondary to an obstructed bronchus) and increased exposure to pathogens during hospitalization. Other host factors that may contribute to sepsis in patients with metastatic malignant melanoma include diminished nutritional status and the use of medications that impair the immune response (e.g. corticosteroids; some chemotherapeutic agents)." ;
+                                rdfs:label "metastatic melanoma and sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsismetoclopramide
+:metoclopramide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A03FA01 " ;
+                rdfs:label "metoclopramide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisnasopharyngitis
+:nasopharyngitis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "J00" ;
+                 OpenPVSignal:has_MedDRA_code 10028810 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Nasopharyngitis" ;
+                 rdfs:label "nasopharyngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisneutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D70.9" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisone_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsispneumonia
+:pneumonia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "J18.9" ;
+           OpenPVSignal:has_MedDRA_code 10035664 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Pneumonia" ;
+           rdfs:label "pneumonia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsispredmisone
+:predmisone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "H02AB07" ;
+            rdfs:label "prednisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisprotonPumpInhibitors
+:protonPumpInhibitors rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:DrugClass ;
+                      OpenPVSignal:has_ATC_code "A02BC" ;
+                      rdfs:label "proton pump inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsispvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :Sepsis_pathophysiology ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForVemurafenibAndSepsis ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromAustria ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromItaly ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsFromUnitedKingdom ,
+                                                          :ReportsFromUnitedStates ,
+                                                          :ReportsOfPatientsThatUnderwentPartialRechallengeAndDevelopedSepsis ,
+                                                          :ReportsOfSeriousCharacter ,
+                                                          :ReportsRecovering ,
+                                                          :ReportsWithAgeInformation ,
+                                                          :ReportsWithCholecystitis ,
+                                                          :ReportsWithFatalOutcome ,
+                                                          :ReportsWithIntestinalPerforation ,
+                                                          :ReportsWithMelanomaAsIndication ,
+                                                          :ReportsWithNeutropenia ,
+                                                          :ReportsWithNoRecovery ,
+                                                          :ReportsWithOutcomeThatWasUnknown ,
+                                                          :ReportsWithPatientsThatRecoveredButRemainedOnVemurafenibRegiment ,
+                                                          :ReportsWithPneumonia ,
+                                                          :ReportsWithRecovery ,
+                                                          :ReportsWithUrinaryTractInfectionDueToMedicalDevice ,
+                                                          :ReportsWithVemurafenibAsTheSoleSuspectedDrug ,
+                                                          :ReportsWithVemurafenibBeingTheOnlyReportedDrug ,
+                                                          :Reports_with_mesalazine ,
+                                                          :Reports_with_metamizole ,
+                                                          :Reports_with_prednisone ,
+                                                          :Reports_with_proton_pump_inhibitor ,
+                                                          :Reports_with_time_to_onset_info ;
+          OpenPVSignal:refers_to_adverse_effect :sepsis ;
+          OpenPVSignal:refers_to_drug :vemurafenib ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          mp:supportedByData :Labelling ,
+                             :PreDisposingFactors ,
+                             :VemurafenibAndNeutropenia ,
+                             :granulocytopenia_and_vemurafenib ,
+                             :metastatic_melanoma_and_sepsis ,
+                             :suggested_source_of_sepsis ;
+          OpenPVSignal:initially_identified_on "01/02/2005" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05 " ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsissepsis
+:sepsis rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:refers_to_adverse_effect :fever ,
+                                              :hypothermia ,
+                                              :leukocytosis ,
+                                              :leukopenia ,
+                                              :tachycardia ,
+                                              :tachypnoea ;
+        OpenPVSignal:has_ICD_code "A41.9" ;
+        OpenPVSignal:has_MedDRA_code 10040047 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Sepsis" ;
+        rdfs:label "Sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsissuggested_source_of_sepsis
+:suggested_source_of_sepsis rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001182 ;
+                            OpenPVSignal:refers_to_adverse_effect :colitis ,
+                                                                  :exfoliativeDermatitis ,
+                                                                  :nasopharyngitis ,
+                                                                  :sepsis ,
+                                                                  :viral_enteritis ;
+                            OpenPVSignal:has_content "Four cases had co-reported events (colitis, viral enteritis, exfoliative dermatitis and nasopharyngitis) that suggest the source of sepsis, although the onset dates for these events were not provided and the sequence is unclear." ;
+                            rdfs:label "suggested source of sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsistachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsistachypnoea
+:tachypnoea rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10043089 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Tachypnoea" ;
+            rdfs:label "tachypnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsistime_to_onset_info
+:time_to_onset_info rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "The time-to-onset was reported for 10 cases and ranged from 6 to 132 days, with a median of 17 days." ;
+                    rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisusage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :metastaticMelanoma ;
+                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisusage_of_vemurafenib
+:usage_of_vemurafenib rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:concerns_indication_for_use :BRAF_V600E_mutation_positive ,
+                                                               :metastaticMelanoma ;
+                      OpenPVSignal:refers_to_dosage :DosageOfVemurafenib ;
+                      OpenPVSignal:refers_to_drug :vemurafenib ;
+                      rdfs:label "usage of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisvemurafenib
+:vemurafenib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Mechanism_of_Vemurafenib ,
+                                        :PotentialMechanismOfSepsisTriggeredByVemurafenib ;
+             OpenPVSignal:has_ATC_code "L01XE15 " ;
+             rdfs:label "vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisvemurafenib_usage_for_Report2
+:vemurafenib_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use :metastaticMelanoma ;
+                               OpenPVSignal:refers_to_dosage :Dosage2 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisvemurafenib_usage_for_Report3
+:vemurafenib_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dosage3 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisvemurafenib_usage_for_Report4
+:vemurafenib_usage_for_Report4 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dosage4 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisvemurafenib_usage_for_Report5
+:vemurafenib_usage_for_Report5 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dosage5 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsisviral_enteritis
+:viral_enteritis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10017918 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Gastroenteritis viral" ;
+                 rdfs:label "viral enteritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis#12HoursIntervalsBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2015_2_vemurafenib_sepsis#12HoursIntervalsBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                                 time:DurationDescription ;
+                                                                                                        time:nominalPosition "hours" ;
+                                                                                                        time:numericPosition 12 ;
+                                                                                                        rdfs:label "12 hours intervals between administrations" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

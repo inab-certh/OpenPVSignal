@@ -1,0 +1,485 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl> rdf:type owl:Ontology ;
+                                                                         owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                         rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/272293/"^^xsd:anyURI ;
+                                                                         rdfs:label "Amitriptyline and dry eyes - an ADR overlooked in labelling"^^rdfs:Literal ;
+                                                                         owl:versionInfo "draft-v0.95-20210301"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#CornealScar
+:CornealScar rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H17" ;
+             OpenPVSignal:has_MedDRA_code 10011044 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Corneal scar" ;
+             rdfs:label "corneal scar" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#CornealUlcerations
+:CornealUlcerations rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "H16.019" ;
+                    OpenPVSignal:has_MedDRA_code 10048492 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Corneal ulcer" ;
+                    rdfs:label "corneal ulcerations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ;
+                           OpenPVSignal:has_content "One reason, why this adverse reaction may have been overlooked in the labelling, could be that it is well known to many health-care professionals as being a consequence of the anticholinergic effect of amitriptyline, especially since ‘anticholinergic effect’ itself is labelled. However, as it would be far from obvious to patients, it would be useful to update the patient information leaflet and summary of product characteristics of amitriptyline to explicitly list eye dryness as an adverse effect." ;
+                           rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Dr_Henric_Taavola
+:Dr_Henric_Taavola rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Author ;
+                   OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                   OpenPVSignal:has_first_name "Henric" ;
+                   OpenPVSignal:has_last_name "Taavola" ;
+                   rdfs:label "Dr Henric Taavola" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#EyeDisorders
+:EyeDisorders rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "H57.9" ;
+              OpenPVSignal:has_MedDRA_code 10015919 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Eye disorders" ;
+              rdfs:label "eye disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Lareb
+:Lareb rdf:type owl:NamedIndividual ,
+                prov:Organization ;
+       rdfs:label "Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Mechanism_of_amitriptyline
+:Mechanism_of_amitriptyline rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                            OpenPVSignal:refers_to_adverse_effect :anticholinergicEffects ,
+                                                                  :dryEyes ;
+                            mp:references :Ref.1 ;
+                            OpenPVSignal:has_content "It has anticholinergic effects, inhibiting the neurotransmitter acetylcholine present in the central and peripheral nervous systems. This inhibition has effects on several autonomous functions such as decreased saliva production, decreased mucus production in the nose and throat, decreased sweating, increased body temperature, dilation of the pupils and reduced bowel movements. As well as these effects, there is also the reduced production of tears, causing the eyes to feel dry" ;
+                            rdfs:label "Mechanism of amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#OverallReportsInVigibaseForAmitriptylineAndDryEyes
+:OverallReportsInVigibaseForAmitriptylineAndDryEyes rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseFornon-selectiveMonoamineReuptakeInhibitors ;
+                                                    OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                                    OpenPVSignal:refers_to_drug :amitriptyline ;
+                                                    OpenPVSignal:has_count 40 ;
+                                                    OpenPVSignal:has_count_of_men 2 ;
+                                                    OpenPVSignal:has_count_of_women 37 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "Overall reports in vigibase for amitriptyline and dry eyes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#OverallReportsInVigibaseFornon-selectiveMonoamineReuptakeInhibitors
+:OverallReportsInVigibaseFornon-selectiveMonoamineReuptakeInhibitors rdf:type owl:NamedIndividual ,
+                                                                              OpenPVSignal:Reports_group ;
+                                                                     OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                                                     OpenPVSignal:refers_to_class :tricyclic_antidepressants ;
+                                                                     OpenPVSignal:has_count 60 ;
+                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                     rdfs:label "Overall reports in vigibase for non-selective monoamine reuptake inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#PV_Signal
+:PV_Signal rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Signal ;
+           OpenPVSignal:Free_text_reporting_element :Discussion_and_conclusion ,
+                                                    :df ,
+                                                    :introduction ;
+           OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                               :Report_2 ,
+                                                               :Report_3 ;
+           OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForAmitriptylineAndDryEyes ,
+                                                           :OverallReportsInVigibaseFornon-selectiveMonoamineReuptakeInhibitors ,
+                                                           :ReportsFromNewZealand ,
+                                                           :ReportsFromOtherEuropeanCountries ,
+                                                           :ReportsFromUSA ,
+                                                           :reportsWithAmitriptylineTheOnlySuspectDrug ,
+                                                           :reportsWithPositiveDechallenge ,
+                                                           :reportsWithPositiveRechallenge ;
+           OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+           OpenPVSignal:refers_to_drug :amitriptyline ;
+           mp:supportedByData :Swedish_labels_for_clomipramine_and_maprotiline ,
+                              :official_labelling_in_US_and_UK_for_amitriptyline ;
+           OpenPVSignal:initially_identified_on "01/09/2017" ;
+           rdfs:label "PV signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Rang HP, Dale MM. Rang and Dale’s Pharmacology. 6th ed. Edinburgh: Churchill Livingstone; 2007. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US DailyMed: Product label for amitriptyline. Available from: https://dailymed.nlm.nih.gov/ dailymed/drugInfo.cfm?setid=61d2da8d-b435- 4ada-a013-401786f7cace. Accessed: 24 January 2017. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of pro- duct characteristics for amitriptyline. Available from: https://www. medicines.org.uk/emc/medicine/25741. Accessed: 24 January 2017. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FASS. Summary of Product Characteristics for klomipramin (synonym for clomipramine, Anafranil®). Available from: http://www. fass.se/LIF/product?userType=0&nplId= 19741004000068. Accessed: 24 January 2017." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FASS. Summary of Product Characteristics for maprotilin (synonym for maprotiline, Ludiomil®). Available from: http://www. fass.se/LIF/product?userType=0&nplId= 19790406000046. Accessed: 24 January 2017 " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :CornealUlcerations ,
+                                                :EyeDisorders ,
+                                                :VisualAcuityReduced ,
+                                                :dryEyes ;
+          OpenPVSignal:refers_to_patient :Patient1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :amitriptyline ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+          OpenPVSignal:refers_to_primary_suspect_drug :Patient2 ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Report_3
+:Report_3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+          OpenPVSignal:refers_to_patient :Patient3 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :amitriptyline ;
+          rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#ReportsFromNewZealand
+:ReportsFromNewZealand rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                       OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                       OpenPVSignal:refers_to_drug :amitriptyline ;
+                       OpenPVSignal:has_count 1 ;
+                       OpenPVSignal:refers_to_country "http://dbpedia.org/resource/New_Zealand" ;
+                       rdfs:label "Reports from New Zealand" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#ReportsFromOtherEuropeanCountries
+:ReportsFromOtherEuropeanCountries rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                                   OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                   OpenPVSignal:refers_to_drug :amitriptyline ;
+                                   OpenPVSignal:has_count 19 ;
+                                   rdfs:label "Reports from other European countries" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#ReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                OpenPVSignal:refers_to_drug :amitriptyline ;
+                OpenPVSignal:has_count 20 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Swedish_labels_for_clomipramine_and_maprotiline
+:Swedish_labels_for_clomipramine_and_maprotiline rdf:type owl:NamedIndividual ,
+                                                          obo:OAE_0001197 ,
+                                                          OpenPVSignal:Structured_Product_Labels_information ;
+                                                 OpenPVSignal:refers_to_adverse_effect :CornealScar ,
+                                                                                       :reduced_tear_production ;
+                                                 OpenPVSignal:refers_to_drug :chlomipramine ,
+                                                                             :maprotiline ;
+                                                 mp:references :Ref.4 ,
+                                                               :Ref.5 ;
+                                                 OpenPVSignal:has_content "For the similar drugs clomipramine and maprotiline, the Swedish labels, under the section “Warnings and precautions”, state that contact lens wearers can sustain injuries to the cornea due to the reduced production of tears. However, there is no direct mention of dry eyes or reduced tear flow in the section for adverse reactions.4,5" ;
+                                                 OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Sweden" ;
+                                                 rdfs:label "Swedish labels for clomipramine and maprotiline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#VisualAcuityReduced
+:VisualAcuityReduced rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "H54.7" ;
+                     OpenPVSignal:has_MedDRA_code 10047531 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Visual acuity reduced" ;
+                     rdfs:label "visual acuity reduced" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#amitriptyline
+:amitriptyline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:concerns_indication_for_use :anxiety ,
+                                                        :chronicPain ,
+                                                        :depression ;
+               OpenPVSignal:hasClass :tricyclic_antidepressants ;
+               OpenPVSignal:has_mechanism :Mechanism_of_amitriptyline ;
+               OpenPVSignal:has_ATC_code "N06AA09" ;
+               rdfs:label "amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#anticholinergicEffects
+:anticholinergicEffects rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "T44.3X1A" ;
+                        OpenPVSignal:has_MedDRA_code 10002757 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Anticholinergic syndrome" ;
+                        rdfs:label "anticholinergic effects" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Indication ;
+         OpenPVSignal:has_ICD_code "F41" ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#chlomipramine
+:chlomipramine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :tricyclic_antidepressants ;
+               OpenPVSignal:has_ATC_code "N06AA04 " ;
+               rdfs:label "clomipramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#chronicPain
+:chronicPain rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "R52.1" ;
+             OpenPVSignal:has_MedDRA_code 10049475 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Chronic pain" ;
+             rdfs:label "chronic pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "F32" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#df
+:df rdf:type owl:NamedIndividual ,
+             OpenPVSignal:Free_text_reporting_element ;
+    OpenPVSignal:has_content """During the joint UMC/Lareb signal detection sprint focusing on patient reports, the adverse reaction ‘dry eyes’ was highlighted for the drug amitriptyline in the WHO global database of individual case safety reports, VigiBase. As of January 2017, there were 40 reports on this drug and adverse drug reaction (ADR) combination in VigiBase, and if the search is extended to all similar drugs with the same ATC code (N06AA non-selective monoamine reuptake inhibitors) the number increases to 60.
+Of the 40 reports of dry eyes in relation to amitriptyline in VigiBase, 37 concern female patients, two male patients, while one lacks information on patient sex. Half of the reports come from the United States, one from New Zealand and the remainder from various European countries. Among the 40 reports for the combination, 14 have amitriptyline as the only suspected drug, nine reports have a positive dechallenge and one report has a positive rechallenge. One report told the story of a patient sustaining a corneal ulceration due to eye dryness, a marked reduction in visual acuity and longstanding eye-problems. Another patient described the eye dryness as painful. There was also a case where a pre-existing problem with dry eyes was aggravated by the use of amitriptyline.""" ;
+    rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#dfds
+:dfds rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Literature_information ;
+      OpenPVSignal:has_content "The official labelling in the United States and the United Kingdom both mention the anticholinergic effects of amitriptyline in general along with some examples, but neither of them mention dry eyes or reduced tear production.2,3 For the similar drugs clomipramine and maprotiline, the Swedish labels, under the section “Warnings and precautions”, state that contact lens wearers can sustain injuries to the cornea due to the reduced production of tears. However, there is no direct mention of dry eyes or reduced tear flow in the section for adverse reactions.4,5" ;
+      rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#dryEyes
+:dryEyes rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H04.1" ;
+         OpenPVSignal:has_MedDRA_code 10013774 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dry eye" ;
+         rdfs:label "dry eyes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              OpenPVSignal:has_content "Amitriptyline belongs to the class of tricyclic antidepressants and is used for the treatment of depression, anxiety and chronic pain. It has anticholinergic effects, inhibiting the neurotransmitter acetylcholine present in the central and peripheral nervous systems. This inhibition has effects on several autonomous functions such as decreased saliva production, decreased mucus production in the nose and throat, decreased sweating, increased body temperature, dilation of the pupils and reduced bowel movements. As well as these effects, there is also the reduced production of tears, causing the eyes to feel dry.1" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#maprotiline
+:maprotiline rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :tricyclic_antidepressants ;
+             OpenPVSignal:has_ATC_code "N06AA21 " ;
+             rdfs:label "maprotiline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#official_labelling_in_US_and_UK_for_amitriptyline
+:official_labelling_in_US_and_UK_for_amitriptyline rdf:type owl:NamedIndividual ,
+                                                            obo:OAE_0001197 ,
+                                                            OpenPVSignal:Structured_Product_Labels_information ,
+                                                            OpenPVSignal:Warning_Information ;
+                                                   OpenPVSignal:refers_to_adverse_effect :anticholinergicEffects ;
+                                                   OpenPVSignal:refers_to_drug :amitriptyline ;
+                                                   mp:references :Ref.2 ,
+                                                                 :Ref.3 ;
+                                                   OpenPVSignal:has_content "The official labelling in the United States and the United Kingdom both mention the anticholinergic effects of amitriptyline in general along with some examples, but neither of them mention dry eyes or reduced tear production.2,3" ;
+                                                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ,
+                                                                                  "http://dbpedia.org/resource/United_States" ;
+                                                   rdfs:label "official labelling in US and UK for amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#reduced_tear_production
+:reduced_tear_production rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_MedDRA_code 10038215 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Reduced tear production" ;
+                         rdfs:label "reduced tear production" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#reportsWithAmitriptylineTheOnlySuspectDrug
+:reportsWithAmitriptylineTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                                            OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :amitriptyline ;
+                                            OpenPVSignal:has_count 14 ;
+                                            rdfs:label "Reports with amitriptyline the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                                OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                OpenPVSignal:refers_to_drug :amitriptyline ;
+                                OpenPVSignal:has_count 9 ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#reportsWithPositiveRechallenge
+:reportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForAmitriptylineAndDryEyes ;
+                                OpenPVSignal:refers_to_adverse_effect :dryEyes ;
+                                OpenPVSignal:refers_to_drug :amitriptyline ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "Reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#tricyclic_antidepressants
+:tricyclic_antidepressants rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:DrugClass ;
+                           OpenPVSignal:has_ATC_code "N06AA" ;
+                           rdfs:comment "tricyclic antidepressants" ;
+                           rdfs:label "Non-selective monoamine reuptake inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Amitriptyline_and_dry_eyes_–_an_ADR_overlooked_in_labelling
+<http://purl.org/OpenPVSignal/Signals/2017_5_amitriptyline_dryEyes.owl#Amitriptyline_and_dry_eyes_–_an_ADR_overlooked_in_labelling> rdf:type owl:NamedIndividual ,
+                                                                                                                                             OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                                                    OpenPVSignal:refers_to_author :Dr_Henric_Taavola ;
+                                                                                                                                    OpenPVSignal:refers_to_signal :PV_Signal ;
+                                                                                                                                    mp:publishedBy :Lareb ,
+                                                                                                                                                   :Uppsala_Monitoring_Centre ;
+                                                                                                                                    OpenPVSignal:has_creation_date "01/09/2017"^^xsd:date ;
+                                                                                                                                    OpenPVSignal:has_overall_conclusion "causal association" ;
+                                                                                                                                    rdfs:label "Amitriptyline and dry eyes – an ADR overlooked in labelling" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

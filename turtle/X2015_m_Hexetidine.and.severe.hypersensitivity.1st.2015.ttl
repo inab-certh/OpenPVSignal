@@ -1,0 +1,1297 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity> rdf:type owl:Ontology ;
+                                                                                  owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                              mp: ;
+                                                                                  rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255502/"^^xsd:anyURI ;
+                                                                                  rdfs:label "Hexetidine and severe hypersensitivity"^^xsd:Literal ;
+                                                                                  owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/citation
+mp:citation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityAzorubin
+:Azorubin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Free_text_reporting_element ;
+          OpenPVSignal:refers_to_drug :azorubin ;
+          OpenPVSignal:has_content "Commercial hexetidine solutions contain azorubin (E122), known as a potential allergen. Salicylate intolerance is considered a risk factor for allergic reactions to azorubin. While E122 is banned in the USA, it is allowed in Europe as a food colorant and as an additive to medicinal products which must be listed in the product information leaflet." ;
+          rdfs:label "Azorubin info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityAzorubinAndAllergicReactions
+:AzorubinAndAllergicReactions rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :allergicReaction ;
+                              OpenPVSignal:refers_to_drug :azorubin ;
+                              OpenPVSignal:has_content "the Irish SPC mentions allergic reactions to azorubin (E122) under precautions but lists only mild irritations of the buccal mucosa in the adverse reaction section" ;
+                              rdfs:label "Azorubin and allergic reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityAzorubinAndMildIrritationsOfBuccalMucosa
+:AzorubinAndMildIrritationsOfBuccalMucosa rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Warning_Information ;
+                                          OpenPVSignal:refers_to_adverse_effect :mouthOedema ;
+                                          OpenPVSignal:refers_to_drug :hexetidine ;
+                                          mp:citation "The Swiss SPC mentions allergic reactions especially in patients with salicylate intolerance, but none lists anaphylactic reactions.6 " ;
+                                          rdfs:label "Hexetidine and mild irritations of buccal mucosa" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityDiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """The available information on hexetidine and E122, the significant number of reports listing hexetidine as only or only suspected drug, the range, severity and consistent pattern of adverse reactions reported, the plausible time to onset and positive dechallenge (and rechallenge in one case) support the causal association between hexetidine preparations and severe hypersensitivity reactions. Three reports list co-administered medications also known to elicit allergic reactions; these might also have contributed to the reactions reported.
+Given the available information from VigiBase®, it is not possible to determine if the reactions were elicited by hexetidine itself or E122. Individuals with a history of salicylate intolerance seem to be at a higher risk of developing an allergic reaction to products containing azorubin. The information currently available to prescribers and patients does not list severe, potentially life-threatening hypersensitivity reactions adequately.The available information on hexetidine and E122, the significant number of reports listing hexetidine as only or only suspected drug, the range, severity and consistent pattern of adverse reactions reported, the plausible time to onset and positive dechallenge (and rechallenge in one case) support the causal association between hexetidine preparations and severe hypersensitivity reactions. Three reports list co-administered medications also known to elicit allergic reactions; these might also have contributed to the reactions reported.
+Given the available information from VigiBase®, it is not possible to determine if the reactions were elicited by hexetidine itself or E122. Individuals with a history of salicylate intolerance seem to be at a higher risk of developing an allergic reaction to products containing azorubin. The information currently available to prescribers and patients does not list severe, potentially life-threatening hypersensitivity reactions adequately.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityDr_Pia-Caduff_janosa
+:Dr_Pia-Caduff_janosa rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Author ;
+                      OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                      OpenPVSignal:has_first_name "Pia" ;
+                      OpenPVSignal:has_last_name "Caduff-Janosa" ;
+                      rdfs:label "Dr Pia-Caduff janosa" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityHexetidine_and_Severe_Hypersensitivity_reactions
+:Hexetidine_and_Severe_Hypersensitivity_reactions rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                  OpenPVSignal:refers_to_author :Dr_Pia-Caduff_janosa ;
+                                                  OpenPVSignal:refers_to_signal :pvSignal ;
+                                                  mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                  OpenPVSignal:has_creation_date "01/02/2015" ;
+                                                  OpenPVSignal:has_overall_conclusion "causal association" ;
+                                                  rdfs:label "Hexetidine and Severe Hypersensitivity reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityHexetidine_and_allergic_reaction
+:Hexetidine_and_allergic_reaction rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :allergicReaction ;
+                                  OpenPVSignal:refers_to_drug :hexetidine ;
+                                  mp:references :Ref.6 ;
+                                  OpenPVSignal:has_content "The Swiss SPC mentions allergic reactions especially in patients with salicylate intolerance, but none lists anaphylactic reactions.6" ;
+                                  rdfs:label "Hexetidine and allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityHypersensitivityTriggeredByChlorhexidine
+:HypersensitivityTriggeredByChlorhexidine rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Warning_Information ;
+                                          OpenPVSignal:refers_to_adverse_effect :hypersensitivity ;
+                                          OpenPVSignal:refers_to_drug :chlorhexidine ;
+                                          OpenPVSignal:has_content "Hexetidine is not as widely used as chlorhexidine, an antiseptic well known to induce severe allergic reactions and no cross-sensitivity between the two substances has been documented: hexetidine has been recommended as a therapeutic alternative for patients sensitized to chlorhexidine." ;
+                                          rdfs:label "Hypersensitivity triggered by chlorhexidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityHypersensitivity_background
+:Hypersensitivity_background rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Free_text_reporting_element ;
+                             OpenPVSignal:refers_to_adverse_effect :hypersensitivity ;
+                             mp:references :Ref.1 ,
+                                           :Ref.2 ;
+                             OpenPVSignal:has_content "Hypersensitivity (or allergic/anaphylactic) reactions are caused by interactions between immunologically active antigens and humoral antibodies or sensitized lymphocytes causing a wide range of minor to life-threatening symptoms. Life-threatening reactions that compromise respiratory and circulatory functions are described as anaphylaxis. The Gell and Coombs classification describes Type I (immediate type) reactions as IgE mediated with release of potent vasoactive and inflammatory mediators that cause vasodilation, increased capillary permeability, spasms of smooth muscles and inflammatory tissues reactions within hours.1 Anaphylactoid reactions are not IgE mediated but present the same clinical picture.2" ;
+                             rdfs:label "Hypersensitivity background" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIC025ForAllergicReaction
+:IC025ForAllergicReaction rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                          OpenPVSignal:refers_to_adverse_effect :allergicReaction ;
+                          OpenPVSignal:refers_to_drug :hexetidine ;
+                          OpenPVSignal:refers_to_information_component :ICForAllergicReaction ;
+                          OpenPVSignal:has_value 0.57 ;
+                          rdfs:label "IC025 for allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIC025ForAnaphylacticShock
+:IC025ForAnaphylacticShock rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                           OpenPVSignal:refers_to_adverse_effect :anaphylactic_shock ;
+                           OpenPVSignal:refers_to_drug :hexetidine ;
+                           OpenPVSignal:refers_to_information_component :ICForAnaphylacticShock ;
+                           OpenPVSignal:has_value -1.67 ;
+                           rdfs:label "IC025 for anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIC025ForOedema
+:IC025ForOedema rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                OpenPVSignal:refers_to_adverse_effect :mouthOedema ;
+                OpenPVSignal:refers_to_drug :hexetidine ;
+                OpenPVSignal:refers_to_information_component :ICForOedema ;
+                OpenPVSignal:has_value 2.91 ;
+                rdfs:label "IC025 for mouth oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIC025_for_anaphylactic_reaction
+:IC025_for_anaphylactic_reaction rdf:type owl:NamedIndividual ,
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                 OpenPVSignal:refers_to_adverse_effect :anaphylactic_reaction ;
+                                 OpenPVSignal:refers_to_drug :hexetidine ;
+                                 OpenPVSignal:refers_to_information_component :IC_for_anaphylactic_reaction ;
+                                 OpenPVSignal:has_value -1.40 ;
+                                 rdfs:label "IC025 for anaphylactic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityICForAllergicReaction
+:ICForAllergicReaction rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                       OpenPVSignal:refers_to_adverse_effect :allergicReaction ;
+                       OpenPVSignal:refers_to_drug :hexetidine ;
+                       OpenPVSignal:has_value 1.74 ;
+                       rdfs:label "IC for allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityICForAnaphylacticShock
+:ICForAnaphylacticShock rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                        OpenPVSignal:refers_to_adverse_effect :anaphylactic_shock ;
+                        OpenPVSignal:refers_to_drug :hexetidine ;
+                        OpenPVSignal:has_value 0.92 ;
+                        rdfs:label "IC for anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityICForOedema
+:ICForOedema rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+             OpenPVSignal:refers_to_adverse_effect :mouthOedema ;
+             OpenPVSignal:refers_to_drug :hexetidine ;
+             OpenPVSignal:has_value 3.76 ;
+             rdfs:label "IC for mouth oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIC_for_anaphylactic_reaction
+:IC_for_anaphylactic_reaction rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                              OpenPVSignal:refers_to_adverse_effect :anaphylactic_reaction ;
+                              OpenPVSignal:refers_to_drug :hexetidine ;
+                              OpenPVSignal:has_value 1.19 ;
+                              rdfs:label "IC for anaphylactic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityIntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ;
+                     OpenPVSignal:has_content """Hexetidine is a local broad spectrum antimicrobial active against gram positive and negative bacteria, as well as yeasts and fungi, and it is indicated for the treatment of minor mouth infections and pre- and post-dental surgery. The product is available over the counter and is also used for simple mouth hygiene without a specific infection. The recommended dosage is 15 ml 2-3 times daily as mouth rinse and/or gargling solution.1 Hexetidine containing vaginal suppositories for vaginal antisepsis are also available on the market.
+Hexetidine is not as widely used as chlorhexidine, an antiseptic well known to induce severe allergic reactions and no cross-sensitivity between the two substances has been documented: hexetidine has been recommended as a therapeutic alternative for patients sensitized to chlorhexidine.
+Commercial hexetidine solutions contain azorubin (E122), known as a potential allergen. Salicylate intolerance is considered a risk factor for allergic reactions to azorubin. While E122 is banned in the USA, it is allowed in Europe as a food colorant and as an additive to medicinal products which must be listed in the product information leaflet.
+A disproportionate reporting on mouth oedema under hexetidine therapy has been noticed in the WHO Global ICSR Database, VigiBase® and as the retrieved reports listed additional, more severe allergic symptoms, the search was widened to include all reports pointing to a potential allergic reaction.
+
+Hypersensitivity (or allergic/anaphylactic) reactions are caused by interactions between immunologically active antigens and humoral antibodies or sensitized lymphocytes causing a wide range of minor to life-threatening symptoms. Life-threatening reactions that compromise respiratory and circulatory functions are described as anaphylaxis. The Gell and Coombs classification describes Type I (immediate type) reactions as IgE mediated with release of potent vasoactive and inflammatory mediators that cause vasodilation, increased capillary permeability, spasms of smooth muscles and inflammatory tissues reactions within hours.1 Anaphylactoid reactions are not IgE mediated but present the same clinical picture.2
+""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.4 ,
+                                      :Ref.5 ,
+                                      :Ref.6 ;
+                        OpenPVSignal:has_content """Literature on hexetidine is scarce and refers mostly to efficacy comparisons with other agents. One report of contact dermatitis has been published in 1982 but no other case reports on hypersensitivity reactions could be found.4
+The marketing authorizations for hexetidine containing products go back to the 1960s and the available summaries of product characteristics (SPCs) vary in their information content on adverse reactions, warnings and precautions. The UK SPC mentions hypersensitivity and angioedema, the Irish SPC mentions allergic reactions to azorubin (E122) under precautions but lists only mild irritations of the buccal mucosa in the adverse reaction section.5 The Swiss SPC mentions allergic reactions especially in patients with salicylate intolerance, but none lists anaphylactic reactions.6""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityMechanismContent
+:MechanismContent rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Mechanism ;
+                  mp:references :Ref.1 ;
+                  OpenPVSignal:has_content "Hexetidine is a local broad spectrum antimicrobial active against gram positive and negative bacteria, as well as yeasts and fungi, and it is indicated for the treatment of minor mouth infections and pre- and post-dental surgery." ;
+                  rdfs:label "Mechanism of hexetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityPatient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityPatient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "MHRA, SPC for hexetidine (Oraldene). URL: http://www.mhra.gov.uk/home/groups/spcpil/ documents/spcpil/con1384326269327.pdf Accessed: 17 July 2014." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Gell PGH, Coombs RRA, eds. Clinical aspects of immunology. 1st ed. Oxford, England: Blackwell; 1963." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Luskin AT, Luskin SS, Anaphylaxis and anaphylactoid reactions: Diagnosis and management. Am J Ther. 1996 Jul;3(7):515- 20." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Merk H, Ebert L, Goerz G, Allergic contact dermatitis due to the fungicide hexetidine. Contact Dermatitis. 1982 May;8(3):216." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Irish Medicines Board, SPC for hexetidine (Oraldene). URL: https://www.hpra.ie/img/ uploaded/swedocuments/LicenseSPC_PA0823- 026-001_18062013164055. pdf Accessed: 17 July 2014." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Swissmedic, SPC for hexetidine (Hextril). URL: http://www.swissmedicinfo.ch/default.aspx Accessed 17 July 2014." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityReport_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :informationAboutReportsWithFatalOutcome ;
+          OpenPVSignal:refers_to_adverse_effect :hypersensitivity ;
+          OpenPVSignal:refers_to_patient :Patient_1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :hexetidine ;
+          OpenPVSignal:refers_to_outcome_after_action "death" ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityReport_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :info_for_report_2 ;
+          OpenPVSignal:refers_to_adverse_effect :anaphylactic_shock ,
+                                                :circulatoryArrest ,
+                                                :hypersensitivity ,
+                                                :respiratoryFailure ;
+          OpenPVSignal:refers_to_patient :Patient_2 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :hexetidine ;
+          OpenPVSignal:refers_to_outcome_after_action "death" ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """We searched VigiBase® for reports on the preferred terms mouth oedema (IC 3.76, IC025 2.91), allergic reaction (IC 1.74, IC025 0.57), anaphylactic reaction (IC 1.19, IC025 -1.40), and anaphylactic shock (IC 0.92, IC025 -1.67) in July 2014 and retrieved 27 reports for analysis. One of the reports, from a consumer, mentioned that the partner had also experienced the same symptoms but this second patient was excluded from the analysis because no more information was available.
+All reports concern the preparation for topical oral use, none referred to the vaginal suppositories.
+The reports have been submitted by 10 different countries: Germany (12 reports), UK and Switzerland (three each), France and Ireland (two each). Norway, the Philippines, Denmark, Italy and the Russian Federation contributed one report each.
+Gender (19 women and eight men), was available for all reports. The patients’ age was stated in 22 reports, ranging from 24 to 74 years (median 43 years), and was evenly distributed among age groups. The indication for use was stated only in 10 reports (angina 1, gingivitis 2, throat pain 3, oral hygiene 1, gum bleeding 2 and acute laryngitis 1). In a further report we can conclude from the narrative that the medication was used in the post-operative setting.
+Hexetidine was the only reported medication in 18 reports and the only suspected medication in a further six. Three reports listed co-suspected medications such as amoxicillin (1), paracetamol, helicidine and other cold remedies (1), ibuprofen, benzocaine, paracetamol, dextromethorphan, and doxylamine (1) - all known to elicit allergic reactions - as well as ephedrine (1). Concomitant but not suspected medications were reported in six reports.
+A single, local reaction (lip swelling) is reported only twice; the vast majority (26) of ICSRs list angioedema (face, larynx and throat), respiratory and/or circulatory symptoms in addition to allergic reaction and mouth oedema. Dyspnoea is co- reported in 11 cases, swelling of the glottic region in 12 cases.
+The time to onset was reported in all but six reports and was listed as 0-1 day in 18 cases, 3 days, 7 days and 30 days (1 report each). This pattern is compatible with allergic reactions of the immediate type.
+One patient experienced a positive de- and rechallenge. Dechallenge was positive in 14 reports, negative in one and not applicable in two cases in which the patients died. In three cases a dechallenge occurred but no information on outcome is reported and six further reports do not state whether the medication was discontinued or not.
+The outcome was reported as recovered in 16 cases, fatal in two, not recovered in one case and unknown in the remaining eight cases.
+Of the two reports with fatal outcome one describes a woman who died of unexplained reasons while under therapy with hexetidine. She had a medical history of surgery in the pharyngeal region as well as of aspirin allergy. The second report refers to a man who experienced anaphylactic shock, respiratory failure and circulatory arrest while taking not only hexetidine but also several other drugs that could not be excluded as causative agents.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityReports_with_lip_swelling
+:Reports_with_lip_swelling rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                           OpenPVSignal:refers_to_adverse_effect :lipSwelling ;
+                           OpenPVSignal:has_count 2 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports with lip swelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitySmPCs_for_hexetidine
+:SmPCs_for_hexetidine rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Structured_Product_Labels_information ;
+                      OpenPVSignal:refers_to_drug :hexetidine ;
+                      mp:references :Ref.5 ,
+                                    :Ref.6 ;
+                      OpenPVSignal:has_content "The UK SPC mentions hypersensitivity and angioedema, the Irish SPC mentions allergic reactions to azorubin (E122) under precautions but lists only mild irritations of the buccal mucosa in the adverse reaction section.5  The Swiss SPC mentions allergic reactions especially in patients with salicylate intolerance, but none lists anaphylactic reactions.6" ;
+                      rdfs:label "SmPCs for hexetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitySummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Hexetidine is a topical antiseptic used in the treatment of bacterial, fungal and yeast infections of the oral (and vaginal) mucosa, first approved for marketing in the 1960s in Europe, and currently holding a marketing authorization in Europe and Australia (export authorization only) but not in the USA. The different products are available over the counter and contain azorubin (E122), a known allergen to which individuals with a history of salicylate intolerance are especially sensitive. Disproportional reporting on mouth oedema under hexetidine was noticed in the WHO Global ICSR Database, VigiBase® and a broader analysis of reports referring to hypersensitivity reactions was performed. We analysed 27 reports on allergic reactions and conclude that the hexetidine containing products on the market have a substantial potential of inducing also life- threatening allergic reactions of the immediate type, and that healthcare professionals and patients need to be aware of this." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityUppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityUsageOfHexetidine
+:UsageOfHexetidine rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug_Usage ;
+                   OpenPVSignal:concerns_indication_for_use :mouthInfections ,
+                                                            :mouth_hygiene ,
+                                                            :post-dentalSurgery ;
+                   OpenPVSignal:is_related_with_drug_intake <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#mouth_risnse/gargling_solution> ;
+                   OpenPVSignal:refers_to_drug :hexetidine ;
+                   rdfs:label "Usage of hexetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityacute_laryngitis
+:acute_laryngitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_MedDRA_code 10000823 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Acute laryngitis" ;
+                  rdfs:label "acute laryngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityallergicReaction
+:allergicReaction rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "T78.40XA" ;
+                  OpenPVSignal:has_MedDRA_code 10001718 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Allergic reaction" ;
+                  rdfs:label "allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityamoxicillin
+:amoxicillin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "J01CA04 " ;
+             rdfs:label "amoxicillin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityanaphylactic_reaction
+:anaphylactic_reaction rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10002198 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Anaphylactic reaction" ;
+                       rdfs:label "anaphylactic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityanaphylactic_shock
+:anaphylactic_shock rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10002199 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Anaphylactic shock" ;
+                    rdfs:label "anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityangina
+:angina rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "I20.9" ;
+        OpenPVSignal:has_MedDRA_code 10002383 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+        rdfs:label "Angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityangioedema
+:angioedema rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "T78.3XXA" ;
+            OpenPVSignal:has_MedDRA_code 10002424 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Angioedema" ;
+            rdfs:label "angioedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityazorubin
+:azorubin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          rdfs:label "azorubin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitybenzocaine
+:benzocaine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D04AB04" ;
+            rdfs:label "benzocaine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitychlorhexidine
+:chlorhexidine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "D08AC02" ;
+               rdfs:label "chlorhexidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitycirculatoryArrest
+:circulatoryArrest rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I46.9" ;
+                   OpenPVSignal:has_MedDRA_code 10009192 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Circulatory collapse" ;
+                   rdfs:label "circulatory arrest" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitycosuspected_drugs
+:cosuspected_drugs rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001182 ;
+                   OpenPVSignal:has_content "Three reports listed co-suspected medications such as amoxicillin (1), paracetamol, helicidine and other cold remedies (1), ibuprofen, benzocaine, paracetamol, dextromethorphan, and doxylamine (1) - all known to elicit allergic reactions - as well as ephedrine (1)." ;
+                   rdfs:label "cosuspected drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitydermatitis
+:dermatitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10012442 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Dermatitis contact" ;
+            rdfs:label "contact dermatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitydextromethorphan
+:dextromethorphan rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "R05DA09" ;
+                  rdfs:label "dextromethorphan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitydoxylamine
+:doxylamine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R06AA09 " ;
+            rdfs:label "doxylamine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitydyspnoea
+:dyspnoea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R06.00" ;
+          OpenPVSignal:has_MedDRA_code 10013968 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+          rdfs:label "dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityephedrine
+:ephedrine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01CA26 " ;
+           rdfs:label "ephedrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitygingivitis
+:gingivitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "K05" ;
+            OpenPVSignal:has_MedDRA_code 10018292 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Gingivitis" ;
+            rdfs:label "Gingivitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitygumBleeding
+:gumBleeding rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_MedDRA_code 10018771 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Gum bleeding" ;
+             rdfs:label "gum bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityhelicidine
+:helicidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R05DB" ;
+            rdfs:label "helicidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityhexetidine
+:hexetidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :MechanismContent ;
+            OpenPVSignal:has_ATC_code "A01AB12" ;
+            rdfs:label "hexetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityhypersensitivity
+:hypersensitivity rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:refers_to_adverse_effect :increased_capillary_permeability ,
+                                                        :inflammatory_reaction ,
+                                                        :spasms_of_smooth_muscles ,
+                                                        :vasodilation ;
+                  OpenPVSignal:has_ICD_code "T78.40XA" ;
+                  OpenPVSignal:has_MedDRA_code 10020751 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypersensitivity" ;
+                  rdfs:label "hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "M01AE01 " ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityincreased_capillary_permeability
+:increased_capillary_permeability rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Adverse_Effect ;
+                                  OpenPVSignal:has_MedDRA_code 10021658 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Increased capillary fragility" ;
+                                  rdfs:label "increased capillary fragility" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityinflammatory_reaction
+:inflammatory_reaction rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10021995 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Inflammatory reaction" ;
+                       rdfs:label "inflammatory reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityinfo_for_report_2
+:info_for_report_2 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Case_Report_Information ;
+                   OpenPVSignal:has_content "The second report refers to a man who experienced anaphylactic shock, respiratory failure and circulatory arrest while taking not only hexetidine but also several other drugs that could not be excluded as causative agents." ;
+                   rdfs:label "info for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityinformationAboutReportsWithFatalOutcome
+:informationAboutReportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Case_Report_Information ;
+                                         OpenPVSignal:has_content "Of the two reports with fatal outcome one describes a woman who died of unexplained reasons while under therapy with hexetidine. She had a medical history of surgery in the pharyngeal region as well as of aspirin allergy." ;
+                                         rdfs:label "info for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitylipSwelling
+:lipSwelling rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code " R22.0" ;
+             OpenPVSignal:has_MedDRA_code 10024570 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Lip swelling" ;
+             rdfs:label "lip swelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitymouthInfections
+:mouthInfections rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Indication ;
+                 OpenPVSignal:has_ICD_code "K12.2" ;
+                 OpenPVSignal:has_MedDRA_code 10048685 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Oral infection" ;
+                 rdfs:label "mouth infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitymouthOedema
+:mouthOedema rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R22.0" ;
+             OpenPVSignal:has_MedDRA_code 10030110 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Oedema mouth" ;
+             rdfs:label "mouth oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitymouth_hygiene
+:mouth_hygiene rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_MedDRA_code 10063390 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Oral hygiene" ;
+               rdfs:label "oral hygiene" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityonset_0-1
+:onset_0-1 rdf:type owl:NamedIndividual ,
+                    time:DurationDescription ;
+           OpenPVSignal:has_content "0-1 day" ;
+           time:nominalPosition "days" ;
+           time:numericDuration 1 ;
+           time:numericPosition 0 ;
+           rdfs:label "onset 0-1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityonset_3
+:onset_3 rdf:type owl:NamedIndividual ,
+                  time:DurationDescription ;
+         time:nominalPosition "days" ;
+         time:numericPosition 3 ;
+         rdfs:label "onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityonset_30
+:onset_30 rdf:type owl:NamedIndividual ,
+                   time:DurationDescription ;
+          time:nominalPosition "days" ;
+          time:numericPosition 30 ;
+          rdfs:label "onset 30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityonset_7
+:onset_7 rdf:type owl:NamedIndividual ,
+                  time:DurationDescription ;
+         time:nominalPosition "days" ;
+         time:numericPosition 7 ;
+         rdfs:label "onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityparacetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01 " ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitypost-dentalSurgery
+:post-dentalSurgery rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "Z48.814" ;
+                    OpenPVSignal:has_MedDRA_code 10061812 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Dental operation" ;
+                    rdfs:label "pre- and post-dental surgery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitypvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Azorubin ,
+                                                   :DiscussionAndConclusion ,
+                                                   :Hypersensitivity_background ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                              :Report_2 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForAllergicReaction ,
+                                                          :IC025ForAnaphylacticShock ,
+                                                          :IC025ForOedema ,
+                                                          :IC025_for_anaphylactic_reaction ,
+                                                          :ICForAllergicReaction ,
+                                                          :ICForAnaphylacticShock ,
+                                                          :ICForOedema ,
+                                                          :IC_for_anaphylactic_reaction ,
+                                                          :Reports_with_lip_swelling ,
+                                                          :reportsFromDenmark ,
+                                                          :reportsFromFrance ,
+                                                          :reportsFromGermany ,
+                                                          :reportsFromIreland ,
+                                                          :reportsFromItaly ,
+                                                          :reportsFromNorway ,
+                                                          :reportsFromPhillipines ,
+                                                          :reportsFromRussianFederation ,
+                                                          :reportsFromSwitzerland ,
+                                                          :reportsFromUK ,
+                                                          :reportsOnAcuteLaryngitis ,
+                                                          :reportsOnGumBleeding ,
+                                                          :reportsWithAgeInfo ,
+                                                          :reportsWithAngina ,
+                                                          :reportsWithConcomitantDrugs ,
+                                                          :reportsWithDechallengeButUnknownOutcome ,
+                                                          :reportsWithDyspnoea ,
+                                                          :reportsWithFatalOutcome ,
+                                                          :reportsWithGingivitis ,
+                                                          :reportsWithHexetidineBeingTheOnlyReportedDrug ,
+                                                          :reportsWithHexetidineBeingTheOnlySuspectedDrug ,
+                                                          :reportsWithNegativeDechallenge ,
+                                                          :reportsWithOralHygiene ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithRecoveredAsOutcome ,
+                                                          :reportsWithSwellingOfTheGlotticRegion ,
+                                                          :reportsWithThroatPain ,
+                                                          :reportsWithTimeToOnset0-1 ,
+                                                          :reportsWithTimeToOnset3 ,
+                                                          :reportsWithTimeToOnset30 ,
+                                                          :reportsWithTimeToOnset7 ,
+                                                          :reportsWithUnknownOutcome ,
+                                                          :reportsWithco-suspectedMedications ,
+                                                          :reportsWithoutAnyInformationOnDechallenge ,
+                                                          :reports_with_amoxicillin ,
+                                                          :reports_with_ephedrine ,
+                                                          :reports_with_paracetamol_and_helicidine ,
+                                                          :reports_with_positive_dechallenge_and_rechallenge ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#reports_with_ibuprofen,_benzocaine,_paracetamol,_dextromethorphanand_doxylamine> ;
+          OpenPVSignal:refers_to_adverse_effect :allergicReaction ,
+                                                :anaphylactic_reaction ,
+                                                :anaphylactic_shock ,
+                                                :hypersensitivity ,
+                                                :mouthOedema ;
+          OpenPVSignal:refers_to_drug :hexetidine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :hexetidine ;
+          mp:supportedByData :AzorubinAndAllergicReactions ,
+                             :AzorubinAndMildIrritationsOfBuccalMucosa ,
+                             :Hexetidine_and_allergic_reaction ,
+                             :HypersensitivityTriggeredByChlorhexidine ,
+                             :SmPCs_for_hexetidine ,
+                             :cosuspected_drugs ,
+                             :report_of_contact_dermatitis ,
+                             :salicylate_intolerance ,
+                             <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#HexetidineAndhypersensitivity/angioedema> ;
+          OpenPVSignal:initially_identified_on "01/02/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityrecommended_dosage_of_hexetidine
+:recommended_dosage_of_hexetidine rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Dosage ;
+                                  OpenPVSignal:refers_to_drug :hexetidine ;
+                                  OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#12HoursBetweenAdministrations> ,
+                                                                                          <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#8HoursBetweenAdministrations> ;
+                                  OpenPVSignal:has_content "The recommended dosage is 15 ml 2-3 times daily as mouth rinse and/or gargling solution." ;
+                                  OpenPVSignal:has_dosage_unit "mL" ;
+                                  OpenPVSignal:has_value 15 ;
+                                  OpenPVSignal:refers_to_dose_value "15 ml" ;
+                                  rdfs:label "recommended dosage of hexetidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreport_of_contact_dermatitis
+:report_of_contact_dermatitis rdf:type owl:NamedIndividual ,
+                                       obo:OAE_0001125 ;
+                              OpenPVSignal:refers_to_adverse_effect :dermatitis ,
+                                                                    :hexetidine ;
+                              mp:references :Ref.4 ;
+                              OpenPVSignal:has_content "One report of contact dermatitis has been published in 1982 but no other case reports on hypersensitivity reactions could be found.4" ;
+                              rdfs:label "report of contact dermatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromDenmark
+:reportsFromDenmark rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Denmark" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Denmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromFrance
+:reportsFromFrance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/France" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from France" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                    OpenPVSignal:has_count 12 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromIreland
+:reportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromItaly
+:reportsFromItaly rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromNorway
+:reportsFromNorway rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Norway" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from Norway" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromPhillipines
+:reportsFromPhillipines rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Philippines" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from Phillipines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromRussianFederation
+:reportsFromRussianFederation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Russia" ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports from Russian Federation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromSwitzerland
+:reportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                        OpenPVSignal:has_count 3 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsFromUK
+:reportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+               OpenPVSignal:has_count 3 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsOnAcuteLaryngitis
+:reportsOnAcuteLaryngitis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:concerns_indication_for_use :acute_laryngitis ;
+                          OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports with acute laryngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsOnGumBleeding
+:reportsOnGumBleeding rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:concerns_indication_for_use :gumBleeding ;
+                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports with gum bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithAgeInfo
+:reportsWithAgeInfo rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                    OpenPVSignal:has_count 22 ;
+                    OpenPVSignal:has_max_age "74.0"^^xsd:float ;
+                    OpenPVSignal:has_median_age "43.0"^^xsd:float ;
+                    OpenPVSignal:has_min_age "24.0"^^xsd:float ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithAngina
+:reportsWithAngina rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:concerns_indication_for_use :angina ;
+                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports with angina" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithConcomitantDrugs
+:reportsWithConcomitantDrugs rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                             OpenPVSignal:has_count 6 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with concomitant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithDechallengeButUnknownOutcome
+:reportsWithDechallengeButUnknownOutcome rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                         OpenPVSignal:has_count 3 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+                                         rdfs:label "reports with dechallenge but unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithDyspnoea
+:reportsWithDyspnoea rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                     OpenPVSignal:refers_to_adverse_effect :dyspnoea ;
+                     OpenPVSignal:has_count 11 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "reports with dyspnoea " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithFatalOutcome
+:reportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithGingivitis
+:reportsWithGingivitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:concerns_indication_for_use :gingivitis ;
+                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                       OpenPVSignal:has_count 2 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with gingivitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithHexetidineBeingTheOnlyReportedDrug
+:reportsWithHexetidineBeingTheOnlyReportedDrug rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :reportsWithHexetidineBeingTheOnlySuspectedDrug ;
+                                               OpenPVSignal:has_count 18 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "reports with hexetidine being the only reported drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithHexetidineBeingTheOnlySuspectedDrug
+:reportsWithHexetidineBeingTheOnlySuspectedDrug rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                                OpenPVSignal:refers_to_primary_suspect_drug :hexetidine ;
+                                                OpenPVSignal:has_count 24 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "reports with hexetidine being the only suspected drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithNegativeDechallenge
+:reportsWithNegativeDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                rdfs:label "reports with negative dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithOralHygiene
+:reportsWithOralHygiene rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:concerns_indication_for_use :mouth_hygiene ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with oral hygiene" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                OpenPVSignal:has_count 14 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithRecoveredAsOutcome
+:reportsWithRecoveredAsOutcome rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                               OpenPVSignal:has_count 16 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                               rdfs:label "reports with recovered as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithSwellingOfTheGlotticRegion
+:reportsWithSwellingOfTheGlotticRegion rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                       OpenPVSignal:refers_to_adverse_effect :swellingOfTheGlotticRegion ;
+                                       OpenPVSignal:has_count 12 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with swelling of the glottic region" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithThroatPain
+:reportsWithThroatPain rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:concerns_indication_for_use :throatPain ;
+                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                       OpenPVSignal:has_count 3 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with throat pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithTimeToOnset0-1
+:reportsWithTimeToOnset0-1 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                           OpenPVSignal:time_to_onset :onset_0-1 ;
+                           OpenPVSignal:has_count 18 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with time to onset 0-1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithTimeToOnset3
+:reportsWithTimeToOnset3 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                         OpenPVSignal:time_to_onset :onset_3 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithTimeToOnset30
+:reportsWithTimeToOnset30 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                          OpenPVSignal:time_to_onset :onset_30 ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports with time to onset 30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithTimeToOnset7
+:reportsWithTimeToOnset7 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                         OpenPVSignal:time_to_onset :onset_7 ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithUnknownOutcome
+:reportsWithUnknownOutcome rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                           OpenPVSignal:has_count 8 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                           rdfs:label "reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithco-suspectedMedications
+:reportsWithco-suspectedMedications rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                    OpenPVSignal:has_count 3 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports with co-suspected medications" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreportsWithoutAnyInformationOnDechallenge
+:reportsWithoutAnyInformationOnDechallenge rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                           OpenPVSignal:has_count 6 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "reports without any information on dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreports_with_amoxicillin
+:reports_with_amoxicillin rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                          OpenPVSignal:refers_to_secondary_suspect_drug :amoxicillin ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "reports with amoxicillin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreports_with_ephedrine
+:reports_with_ephedrine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                        OpenPVSignal:refers_to_secondary_suspect_drug :ephedrine ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with ephedrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreports_with_paracetamol_and_helicidine
+:reports_with_paracetamol_and_helicidine rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                         OpenPVSignal:refers_to_secondary_suspect_drug :helicidine ,
+                                                                                       :paracetamol ;
+                                         OpenPVSignal:has_count 1 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports with paracetamol and helicidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityreports_with_positive_dechallenge_and_rechallenge
+:reports_with_positive_dechallenge_and_rechallenge rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                                   OpenPVSignal:has_count 1 ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                                   OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                                   rdfs:label "reports with positive dechallenge and rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityrespiratoryFailure
+:respiratoryFailure rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "J96.00" ;
+                    OpenPVSignal:has_MedDRA_code 10038695 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Respiratory failure" ;
+                    rdfs:label "respiratory failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitysalicylate_intolerance
+:salicylate_intolerance rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001182 ;
+                        OpenPVSignal:has_content "Individuals with a history of salicylate intolerance seem to be at a higher risk of developing an allergic reaction to products containing azorubin." ,
+                                                 "Salicylate intolerance is considered a risk factor for allergic reactions to azorubin." ;
+                        rdfs:label "salicylate intolerance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityspasms_of_smooth_muscles
+:spasms_of_smooth_muscles rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10028333 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Muscle spasm" ;
+                          rdfs:label "spasms of smooth muscles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityswellingOfTheGlotticRegion
+:swellingOfTheGlotticRegion rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code " J38.7" ;
+                            OpenPVSignal:has_MedDRA_code 10018393 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Glottic oedema" ;
+                            rdfs:label "swelling of the glottic region" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivitythroatPain
+:throatPain rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_MedDRA_code 10043523 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Throat pain" ;
+            rdfs:label "throat pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivityvasodilation
+:vasodilation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10058794 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Vasodilation procedure" ;
+              rdfs:label "vasodilation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#12HoursBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#12HoursBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                                        time:DurationDescription ;
+                                                                                                               time:nominalPosition "hours" ;
+                                                                                                               time:numericPosition 12 ;
+                                                                                                               rdfs:label "12 hours between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#8HoursBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#8HoursBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                                       time:DurationDescription ;
+                                                                                                              time:nominalPosition "hours" ;
+                                                                                                              time:numericPosition 8 ;
+                                                                                                              rdfs:label "8 hours between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#HexetidineAndhypersensitivity/angioedema
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#HexetidineAndhypersensitivity/angioedema> rdf:type owl:NamedIndividual ,
+                                                                                                                                   OpenPVSignal:Warning_Information ;
+                                                                                                                          OpenPVSignal:refers_to_adverse_effect :angioedema ,
+                                                                                                                                                                :hypersensitivity ;
+                                                                                                                          OpenPVSignal:refers_to_drug :hexetidine ;
+                                                                                                                          mp:references :Ref.5 ;
+                                                                                                                          mp:citation "The UK SPC mentions hypersensitivity and angioedema, " ;
+                                                                                                                          rdfs:label "Hexetidine and hypersensitivity/angioedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#mouth_risnse/gargling_solution
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#mouth_risnse/gargling_solution> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Drug_Intake_Form ;
+                                                                                                                OpenPVSignal:refers_to_form_of_intake "other" ;
+                                                                                                                rdfs:label "mouth risnse/gargling solution" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                                                                   OpenPVSignal:is_related_with_drug_intake <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#mouth_risnse/gargling_solution> ;
+                                                                                                                                                                   OpenPVSignal:refers_to_adverse_effect :allergicReaction ,
+                                                                                                                                                                                                         :anaphylactic_reaction ,
+                                                                                                                                                                                                         :anaphylactic_shock ,
+                                                                                                                                                                                                         :mouthOedema ;
+                                                                                                                                                                   OpenPVSignal:refers_to_drug :hexetidine ;
+                                                                                                                                                                   OpenPVSignal:has_count 27 ;
+                                                                                                                                                                   OpenPVSignal:has_count_of_men 8 ;
+                                                                                                                                                                   OpenPVSignal:has_count_of_women 19 ;
+                                                                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                   rdfs:label "overall reports in vigibase for hexetidine and oedema, allergic reaction, anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#reports_with_ibuprofen,_benzocaine,_paracetamol,_dextromethorphanand_doxylamine
+<http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#reports_with_ibuprofen,_benzocaine,_paracetamol,_dextromethorphanand_doxylamine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                          OpenPVSignal:Reports_group ;
+                                                                                                                                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_1_hexetidine_severe_hypersensitivity#overallReportsInVigibaseForHexetidineAndoedema,Allergicreaction,AnaphylacticShock> ;
+                                                                                                                                                                 OpenPVSignal:refers_to_secondary_suspect_drug :benzocaine ,
+                                                                                                                                                                                                               :dextromethorphan ,
+                                                                                                                                                                                                               :doxylamine ,
+                                                                                                                                                                                                               :ibuprofen ,
+                                                                                                                                                                                                               :paracetamol ;
+                                                                                                                                                                 OpenPVSignal:has_count 1 ;
+                                                                                                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                 rdfs:label "reports with ibuprofen, benzocaine, paracetamol, dextromethorphan and doxylamine" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

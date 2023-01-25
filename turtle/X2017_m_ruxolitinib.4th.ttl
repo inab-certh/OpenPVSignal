@@ -1,0 +1,1082 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl> rdf:type owl:Ontology ;
+                                                                                     owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                 mp: ;
+                                                                                     rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/258800/"^^xsd:anyURI ;
+                                                                                     rdfs:label "Ruxolitinib and peripheral neuropathy"^^rdfs:Literal ;
+                                                                                     owl:versionInfo "draft-v0.95-20211008"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Bezafibrate_as_a_possible_cause_of_peripheral_neuropathy
+:Bezafibrate_as_a_possible_cause_of_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                   obo:OAE_0001182 ,
+                                                                   OpenPVSignal:Warning_Information ;
+                                                          OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                          OpenPVSignal:refers_to_drug :bezafibrate ;
+                                                          mp:references :Ref.10 ;
+                                                          OpenPVSignal:has_content "In four cases HMG-CoA-reductase inhibitors (simvastatin and atorvastatin), and in one bezafibrate, were reported as concomitant drugs. These are known to possibly cause peripheral neuropathy in rare cases.9,10" ;
+                                                          rdfs:label "Bezafibrate as a possible cause of peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Chemotherapy
+:Chemotherapy rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:DrugClass ,
+                       OpenPVSignal:Potential_Confounder ;
+              OpenPVSignal:has_ATC_code "L01" ;
+              rdfs:label "Chemotherapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Clinical_trial_data_for_ruxolitinib_and_peripheral_neuropathy
+:Clinical_trial_data_for_ruxolitinib_and_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                        obo:OAE_0001197 ,
+                                                                        OpenPVSignal:Clinical_trial_information ;
+                                                               OpenPVSignal:is_part_of :Discussion_and_conclusion ;
+                                                               OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                                               mp:references :Ref.12 ,
+                                                                             :Ref.13 ;
+                                                               OpenPVSignal:has_content "In clinical trials there was at least one case of peripheral neuropathy potentially related to ruxolitinib among the 39 patients in the essential thrombocythemia cohort in an ongoing phase 2 study. " ;
+                                                               OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                               rdfs:label "Clinical trial data for ruxolitinib and peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Clinical_trial_info_for_ruxolitinib
+:Clinical_trial_info_for_ruxolitinib rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Clinical_trial_information ,
+                                              OpenPVSignal:Warning_Information ;
+                                     OpenPVSignal:refers_to_adverse_effect :bacterialInfection ,
+                                                                           :bruising ,
+                                                                           :constipation ,
+                                                                           :dizziness ,
+                                                                           :fungalInfection ,
+                                                                           :headache ,
+                                                                           :herpesZoster ,
+                                                                           :multifocalLeukoencephalopathy ,
+                                                                           :mycobacterial_infection ,
+                                                                           :viralInfection ;
+                                     OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                     mp:references :Ref.1 ,
+                                                   :Ref.4 ;
+                                     OpenPVSignal:has_content "The most commonly reported adverse reactions in clinical trials were haematological, and the most frequent non-haematological reactions were bruising, dizziness, headache, constipation and herpes zoster. Serious bacterial, mycobacterial, fungal and viral infections, including progressive multifocal leukoencephalopathy, have occurred during treatment with ruxolitinib, and physicians are advised to carefully observe patients receiving ruxolitinib for signs and symptoms of infections, and to initiate appropriate treatment promptly.1,4" ;
+                                     rdfs:label "Clinical trial info for ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ConfoundingCasesThatAreAgainstCausality
+:ConfoundingCasesThatAreAgainstCausality rdf:type owl:NamedIndividual ,
+                                                  obo:OAE_0001182 ;
+                                         OpenPVSignal:has_potential_confounding_factor :Chemotherapy ,
+                                                                                       :thalidomide ;
+                                         OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                         OpenPVSignal:has_content "In the present case series, there were two cases with obvious indications of significant confounding, namely the case where the patient experienced peripheral neuropathy while using thalidomide and the case where the patient was on chemotherapy when the peripheral neuropathy occurred " ;
+                                         rdfs:label "Confounding cases that are against causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.11 ,
+                                         :Ref.12 ,
+                                         :Ref.13 ,
+                                         :Ref.14 ,
+                                         :Ref.15 ,
+                                         :Ref.16 ,
+                                         :Ref.5 ;
+                           OpenPVSignal:has_content "Peripheral neuropathy is a common adverse effect of several chemotherapeutic agents such as taxanes, platinum agents, vinca alkaloids, thalidomide, and bortezomib, a proteasome inhibitor. No single mechanism explaining the peripheral neuropathy has been identified and the precise pathophysiology remains complex.11 A number of mechanisms for drug-induced peripheral neuropathy have been postulated, including immune-based demyelination.5 In clinical trials there was at least one case of peripheral neuropathy potentially related to ruxolitinib among the 39 patients in the essential thrombocythemia cohort in an ongoing phase 2 study.12,13 Of these 37 cases on ruxolitinib suspected to cause peripheral neuropathy in VigiBase, it is not possible to draw any conclusions regarding a possible mechanism, but it should be noted that other immunomodulatory drugs such as TNFα blocking molecules may cause peripheral neuropathy via demyelination.5 For some other JAK inhibitors, peripheral neuropathy has been commonly observed. At one institution, treatment-emergent peripheral neuropathy was documented in 44 of 100 myelofibrosis patients treated with the JAK1/2 inhibitor momelotinib,14 and with XL019, a selective JAK2 inhibitor, peripheral neuropathy was observed in seven out of nine patients in a phase 1 trial.15 This substance was also used in a study of 30 patients with myelofibrosis where central and/or peripheral neurotoxicity (including later onset of classical “glove and stocking” sensory peripheral neuropathy) developed in all patients, leading to termination of the study.16 In the present case series, there were two cases with obvious indications of significant confounding, namely the case where the patient experienced peripheral neuropathy while using thalidomide and the case where the patient was on chemotherapy when the peripheral neuropathy occurred. Among the other 35 reports there were medicines with known potential to cause peripheral neuropathy listed in eight reports. In none of them, however, were these drugs reported as suspected, and five of these drugs were lipid lowering agents, commonly used in this elderly population. In light of a possible class effect and a possible mechanism, these cases constitute a signal of peripheral neuropathy induced by ruxolitinib, and this merits further investigation to assess the need for updating relevant product information." ;
+                           rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#HMG-CoA_reductase_inhibitors_as_a_possible_cause_of_peripheral_neuropathy
+:HMG-CoA_reductase_inhibitors_as_a_possible_cause_of_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                                    obo:OAE_0001182 ,
+                                                                                    OpenPVSignal:Warning_Information ;
+                                                                           OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                                           OpenPVSignal:refers_to_drug :atorvastatin ,
+                                                                                                       :simvastatin ;
+                                                                           mp:references :Ref.9 ;
+                                                                           OpenPVSignal:has_content "In four cases HMG-CoA-reductase inhibitors (simvastatin and atorvastatin), and in one bezafibrate, were reported as concomitant drugs. These are known to possibly cause peripheral neuropathy in rare cases.9,10" ;
+                                                                           rdfs:label "HMG-CoA reductase inhibitors as a possible cause of peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Hydroxycarbamide_as_a_common_cause_of_peripheral_neuropathy
+:Hydroxycarbamide_as_a_common_cause_of_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                      obo:OAE_0001182 ,
+                                                                      OpenPVSignal:Warning_Information ;
+                                                             OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                             OpenPVSignal:refers_to_drug :hydroxycarbamide ;
+                                                             mp:references :Ref.7 ;
+                                                             OpenPVSignal:has_content "A review of concomitant drugs identified three cases where drugs known to be a common cause of peripheral neuropathy were reported (hydroxycarbamide in two reports and tacrolimus in one).7,8" ;
+                                                             rdfs:label "Hydroxycarbamide as a common cause of peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ImmunomodulatoryDrugsAndPeripheranNeuropathy
+:ImmunomodulatoryDrugsAndPeripheranNeuropathy rdf:type owl:NamedIndividual ,
+                                                       obo:OAE_0001197 ;
+                                              OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                              OpenPVSignal:refers_to_class :Immunosuppressants ,
+                                                                           :TNFaBlockers ;
+                                              mp:references :Ref.5 ;
+                                              OpenPVSignal:has_content "Of these 37 cases on ruxolitinib suspected to cause peripheral neuropathy in VigiBase, it is not possible to draw any conclusions regarding a possible mechanism, but it should be noted that other immunomodulatory drugs such as TNFα blocking molecules may cause peripheral neuropathy via demyelination. " ;
+                                              rdfs:label "Immunomodulatory drugs and peripheran neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Immunostimulants
+:Immunostimulants rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:DrugClass ;
+                  OpenPVSignal:has_ATC_code "L03" ;
+                  rdfs:label "Immunostimulants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Immunosuppressants
+:Immunosuppressants rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:DrugClass ;
+                    OpenPVSignal:has_ATC_code "L04" ;
+                    rdfs:label "Immunosuppressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#JAKInhibitors
+:JAKInhibitors rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:DrugClass ;
+               rdfs:label "JAK inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#JAKInhibitorsAndPeripheralNeuropathy
+:JAKInhibitorsAndPeripheralNeuropathy rdf:type owl:NamedIndividual ,
+                                               obo:OAE_0001197 ,
+                                               OpenPVSignal:Clinical_trial_information ;
+                                      OpenPVSignal:concerns_indication_for_use :myelofibrosis ;
+                                      OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                      OpenPVSignal:refers_to_class :JAKInhibitors ;
+                                      mp:references :Ref.14 ,
+                                                    :Ref.15 ,
+                                                    :Ref.16 ;
+                                      OpenPVSignal:has_content "For some other JAK inhibitors, peripheral neuropathy has been commonly observed. At one institution, treatment-emergent peripheral neuropathy was documented in 44 of 100 myelofibrosis patients treated with the JAK1/2 inhibitor momelotinib,14 and with XL019, a selective JAK2 inhibitor, peripheral neuropathy was observed in seven out of nine patients in a phase 1 trial.15 This substance was also used in a study of 30 patients with myelofibrosis where central and/or peripheral neurotoxicity (including later onset of classical “glove and stocking” sensory peripheral neuropathy) developed in all patients, leading to termination of the study ." ;
+                                      rdfs:label "JAK inhibitors and peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Litrerature_and_Labelling
+:Litrerature_and_Labelling rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Literature_information ;
+                           mp:references :Ref.1 ,
+                                         :Ref.4 ;
+                           OpenPVSignal:has_content "Neuropathy is not described in current ruxolitinib drug labels1,4 and no literature reports on peripheral neuropathy have been found for ruxolitinib." ;
+                           rdfs:label "Litrerature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Mechanism_of_ruxolitinib
+:Mechanism_of_ruxolitinib rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ,
+                                        :Ref.3 ;
+                          OpenPVSignal:has_content "Ruxolitinib (INCB018424) is a selective inhibitor of the Janus Associated Kinases (JAKs) 1 and 2. These mediate the signalling of a number of cytokines and growth factors that are important for haematopoiesis and immune function1 Ruxolitinib has significant clinical benefits in patients with myelofibrosis by reducing spleen size, ameliorating debilitating myelofibrosis-related symptoms, and improving overall survival.2 Ruxolitinib has also been demonstrated to be superior to standard therapy in controlling the hematocrit, reducing the spleen volume, and improving symptoms associated with polycythemia vera.3" ;
+                          rdfs:label "Mechanism of ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Mr_Thomas_Bradley
+:Mr_Thomas_Bradley rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Author ;
+                   OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                   OpenPVSignal:has_first_name "Thomas" ;
+                   OpenPVSignal:has_last_name "Bradley" ;
+                   rdfs:label "Mr Thomas Bradley" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Neuropathy_and_ruxolitinib
+:Neuropathy_and_ruxolitinib rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001182 ;
+                            OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                            OpenPVSignal:refers_to_drug :ruxolitinib ;
+                            mp:references :Ref.1 ,
+                                          :Ref.4 ;
+                            OpenPVSignal:has_content "Neuropathy is not described in current ruxolitinib drug labels1,4 and no literature reports on peripheral neuropathy have been found for ruxolitinib." ;
+                            rdfs:label "Neuropathy and ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#OverallReportsInVigibase
+:OverallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :axonalNeuropathy ,
+                                                                :neuropathyPeripheral ;
+                          OpenPVSignal:refers_to_drug :ruxolitinib ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :ruxolitinib ;
+                          OpenPVSignal:time_to_onset :Time_to_Onset_for_ruxolitinib ;
+                          OpenPVSignal:has_count 37 ;
+                          OpenPVSignal:has_count_of_men 17 ;
+                          OpenPVSignal:has_count_of_women 19 ;
+                          OpenPVSignal:has_max_age 91 ;
+                          OpenPVSignal:has_median_age "72.0"^^xsd:float ;
+                          OpenPVSignal:has_min_age 49 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#PeripheralNeuropathyAndChemotherapeutics
+:PeripheralNeuropathyAndChemotherapeutics rdf:type owl:NamedIndividual ,
+                                                   obo:OAE_0001197 ;
+                                          OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                          OpenPVSignal:refers_to_class :TNFaBlockers ,
+                                                                       :platinumAgents ,
+                                                                       :taxanes ,
+                                                                       :vincaAlkaloids ;
+                                          OpenPVSignal:refers_to_drug :bortezomib ,
+                                                                      :thalidomide ;
+                                          mp:references :Ref.11 ,
+                                                        :Ref.5 ;
+                                          OpenPVSignal:has_content "Peripheral neuropathy is a common adverse effect of several chemotherapeutic agents such as taxanes, platinum agents, vinca alkaloids, thalidomide, and bortezomib, a proteasome inhibitor.  No single mechanism explaining the peripheral neuropathy has been identified and the precise pathophysiology remains complex.11 A number of mechanisms for drug-induced peripheral neuropathy have been postulated, including immune-based demyelination.5" ;
+                                          rdfs:label "Peripheral Neuropathy and chemotherapeutics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Peripheral_neuropathy_information
+:Peripheral_neuropathy_information rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Free_text_reporting_element ;
+                                   OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                   mp:references :Ref.5 ;
+                                   OpenPVSignal:has_content "Peripheral neuropathy may be caused by a number of drugs and is one of the main reasons for patients to prematurely terminate antineoplastic treatment. Drug- induced peripheral neuropathies are often characterized by the development of a subacute or chronic, symmetrical polyneuropathy with a predominant sensory involvement.5" ;
+                                   rdfs:label "Peripheral neuropathy information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Proposed_mechanism_of_ruxolitinib_causing_peripheral_neuropathy
+:Proposed_mechanism_of_ruxolitinib_causing_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                 OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                                 mp:references :Ref.5 ;
+                                                                 OpenPVSignal:has_content "Molecular mechanisms of drug-induced peripheral neuropathies have been addressed in several studies and a number of mechanisms have been postulated, including cytotoxic inflammatory changes, mitochondrial toxicity and enhanced oxidative stress, microtubular function disruption, voltage-gated ion channel dysfunction, functional impairment of ion channels of the transient receptor potential family, induction of neuronal apoptosis in dorsal root ganglia, demyelination, and reduction of VEGF neuro-protective action" ;
+                                                                 rdfs:label "Proposed mechanism of ruxolitinib causing peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency: Summary of Product Characteristics for ruxolitinib (Jakavi®). Available from: http://www.ema. europa.eu/docs/en_GB/document_library/ EPAR_-_Product_Information/human/ 002464/WC500133223.pdf. Accessed: 9 November 2016." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for bezafibrate (Bezalip®). Available from: http://www.medicines.org.uk/emc/ medicine/20856. Accessed: 9 November 2016. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Addington J, Freimer M. Chemotherapy-induced peripheral neuropathy: an update on the current understanding. F1000Research. 2016;5:F1000 Faculty Rev-1466. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "ClinicalTrials.gov: An Open-Label Study to Determine the Safety and Efficacy of INCB018424 in Patients with Advanced Polycythemia Vera or Essential Thrombocythemia Refractory to Hydroxyurea (Identifier NCT00726232). Available from: https://clinicaltrials.gov/ct2/show/ NCT00726232. Accessed: 1 December 2016. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Verstovsek S, Passamonti F, Rambaldi A, Barosi G, Rosen PJ, Levy R, et al. Durable Responses with the JAK1/ JAK2 Inhibitor, INCB018424, In Patients with Polycythemia Vera (PV) and Essential Thrombocythemia (ET) Refractory or Intolerant to Hydroxyurea (HU). Blood (ASH Annual Meeting Abstracts) 2010;116(21):313. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Abdelrahman RA, Begna KH, Al-Kali A, Hogan WJ, Litzow MR., Pardanani A, et al. Momelotinib treatment-emergent neuropathy: prevalence, risk factors and outcome in 100 patients with myelofibrosis. Br J Haematol. 2015;169:77-80. " ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Shah NP, Olszynski P, Sokol L, Verstovsek S, Hoffman R, List AF, et al. A phase I study of XL019, a selective JAK2 inhibitor, in patients with primary myelofibrosis, post-polycythemia vera, or post-essential thrombocythemia myelofibrosis. Blood (ASH Annual Meeting Abstracts) 2008;112(11):98. " ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Verstovsek S, Tam CS, Wadleigh M, Sokol L, Smith CC, Bui LA, et al. Phase I evaluation of XL019, an oral, potent, and selective JAK2 inhibitor. Leuk Res. 2014 Mar;38(3):316-22 " ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Verstovsek S, Mesa RA, Gotlib J, Levy RS, Gupta V, Dipersio JF, et al. A double-blind, placebo-controlled trial of ruxolitinib for myelofibrosis. N Engl J Med. 2012;366:799- 807. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vannucchi AM, Kiladjian JJ, Griesshammer M, Masszi T, Durrant S, Passamonti F, et al. Ruxolitinib versus standard therapy for the treatment of polycythemia vera. N Engl J Med. 2015;372:426-35. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Dailymed: Product label for ruxolitinib (Jakafi®). Available from https://dailymed.nlm.nih.gov/dailymed/ fda/fdaDrugXsl.cfm?setid=f1c82580-87ae- 11e0-bc84-0002a5d5c51b&type=display. Accessed: 9 November 2016. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Diezi M, Buclin T, Kuntzer T. Toxic and drug-induced peripheral neuropathies: updates on causes, mechanisms and management. Curr Opin Neurol. 2013 Oct;26(5):481-8. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for atorvastatin (Lipitor®). Available from: https://www.medicines.org.uk/emc/ medicine/28526. Accessed: 9 November 2016. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for hydroxycarbamide (Hydrea®). Available from: https://www.medicines.org.uk/emc/ medicine/19081. Accessed: 9 November 2016. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for tacrolimus (Prograf®). Available from: https://www.medicines.org.uk/emc/ medicine/11102. Accessed: 9 November 2016. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for simvastatin (Zocor®). Available from: http://www.medicines.org.uk/emc/ medicine/1201. Accessed: 9 November 2016. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportWithBortezomibAndRuxolitinib
+:ReportWithBortezomibAndRuxolitinib rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:refers_to_concomitant_drug :bortezomib ;
+                                    OpenPVSignal:refers_to_primary_suspect_drug :ruxolitinib ;
+                                    OpenPVSignal:has_count 1 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Report with Bortezomib and ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsForRuxolitinibAndAxonalNeuropathy
+:ReportsForRuxolitinibAndAxonalNeuropathy rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:refers_to_adverse_effect :axonalNeuropathy ;
+                                          OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                          OpenPVSignal:has_count 5 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "Reports for ruxolitinib and axonal neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsForRuxolitinibAndNeuropathyPeripheral
+:ReportsForRuxolitinibAndNeuropathyPeripheral rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                              OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                              OpenPVSignal:has_count 32 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports for ruxolitinib and neuropathy peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromAustria
+:ReportsFromAustria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Austria" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromFrance
+:ReportsFromFrance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/France" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from France" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromGreece
+:ReportsFromGreece rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Greece" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Greece" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromIreland
+:ReportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromItaly
+:ReportsFromItaly rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromSlovenia
+:ReportsFromSlovenia rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                     OpenPVSignal:has_count 1 ;
+                     OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Slovenia" ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports from Slovenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromUK
+:ReportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+               OpenPVSignal:has_count 1 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                OpenPVSignal:has_count 28 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsThatHadReporterAPhysician
+:ReportsThatHadReporterAPhysician rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                  OpenPVSignal:has_count 20 ;
+                                  OpenPVSignal:has_reporter_type "physician" ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Reports that had reporter a physician" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWhereRuxolitinibWasUsedForLymphaticDisorder
+:ReportsWhereRuxolitinibWasUsedForLymphaticDisorder rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:concerns_indication_for_use :lymphaticDisorder ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                    OpenPVSignal:has_count 1 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "Reports where ruxolitinib was used for lymphatic disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWhereRuxolitinibWasUsedForMyelofibrosis
+:ReportsWhereRuxolitinibWasUsedForMyelofibrosis rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:concerns_indication_for_use :myelofibrosis ;
+                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                OpenPVSignal:has_count 29 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "Reports where ruxolitinib was used for myelofibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWhereRuxolitinibWasUsedForPolycythaemia
+:ReportsWhereRuxolitinibWasUsedForPolycythaemia rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:concerns_indication_for_use :polycythemia_vera ;
+                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                OpenPVSignal:has_count 3 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "Reports where ruxolitinib was used for polycythaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithBezafibrateAsConcomitantDrug
+:ReportsWithBezafibrateAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :bezafibrate ;
+                                         OpenPVSignal:refers_to_concomitant_drug :bezafibrate ;
+                                         OpenPVSignal:has_count 1 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports with bezafibrate as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithHMG-coAReductaseInhibitorsAsConcomitantDrug
+:ReportsWithHMG-coAReductaseInhibitorsAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Reports_group ;
+                                                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                        OpenPVSignal:refers_to_concomitant_drug :atorvastatin ,
+                                                                                                :simvastatin ;
+                                                        OpenPVSignal:has_count 4 ;
+                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                        rdfs:label "Reports with HMG-coA reductase inhibitors as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithHydroxycarbamideAsConcomitantDrug
+:ReportsWithHydroxycarbamideAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                              OpenPVSignal:refers_to_concomitant_drug :hydroxycarbamide ;
+                                              OpenPVSignal:has_count 2 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports with hydroxycarbamide as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithNegativeDechellenge
+:ReportsWithNegativeDechellenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                rdfs:label "Reports with negative dechellenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithNegativePartialDechallengeAndNoRecovery
+:ReportsWithNegativePartialDechallengeAndNoRecovery rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                    OpenPVSignal:has_count 2 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                                    OpenPVSignal:refers_to_partial_dechallenge_outcome "negative - condition still applied" ;
+                                                    rdfs:label "Reports with negative partial dechallenge and no recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithNoRecoveryAsOutcome
+:ReportsWithNoRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                OpenPVSignal:has_count 5 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                rdfs:label "Reports with no recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithPositiveDechallenge
+:ReportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                OpenPVSignal:has_count 3 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithPositivePartialDechallenge
+:ReportsWithPositivePartialDechallenge rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                       OpenPVSignal:has_count 1 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                       rdfs:label "Reports with positive partial dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithPrechallengesWithThalidomide
+:ReportsWithPrechallengesWithThalidomide rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                         OpenPVSignal:refers_to_concomitant_drug :thalidomide ;
+                                         OpenPVSignal:has_count 1 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports with concomitant thalidomide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ReportsWithTacrolimusAsConcomitantDrug
+:ReportsWithTacrolimusAsConcomitantDrug rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                        OpenPVSignal:refers_to_concomitant_drug :tacrolimus ;
+                                        OpenPVSignal:has_count 1 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Reports with tacrolimus as concomitant drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.10 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content "As of 21 March 2016, VigiBase, the WHO global database of individual case safety reports, had five reports where ruxolitinib was reported as suspected of causing axonal neuropathy (MedDRA preferred term), and 32 reports of neuropathy peripheral (MedDRA preferred term). Most of these reports originated from the United States (28); others came from Austria (2), France (2), Ireland (1), Greece (1), Italy (1), Slovenia (1) and the United Kingdom (1). In all 37 reports ruxolitinib was reported as the sole suspect drug. In 29 of them ruxolitinib was used for the indication myelofibrosis, in three cases the indication was polycythaemia, in one case the indication was lymphatic disorder and in four the indication was unknown. Twenty of the 37 cases were reported by a physician. Among the 36 reports where information on gender was provided, 19 patients were female and 17 patients male. The median age was 72 years (range 49 to 91 years). Time to onset ranged from seven days up to three years. Information on outcome was provided in 15 reports and included five with no recovery where the action for ruxolitinib is unknown. In two cases there was no recovery after a dose reduction of ruxolitinib and in one the patient was recovering after dose reduction. The remaining cases included four negative dechallenges and three positive dechallenges. One positive dechallenge case had the restart of ruxolitinib in a lower dose, with an unknown outcome. In another positive dechallenge case, atorvastatin, which is a rare cause of peripheral neuropathy,6 was withdrawn at the same time as ruxolitinib. A review of concomitant drugs identified three cases where drugs known to be a common cause of peripheral neuropathy were reported (hydroxycarbamide in two reports and tacrolimus in one).7,8 In four cases HMG-CoAreductase inhibitors (simvastatin and atorvastatin), and in one bezafibrate, were reported as concomitant drugs. These are known to possibly cause peripheral neuropathy in rare cases.9,10 Reviewing the medical history identified two cases where the patient had previously used drugs known to cause peripheral neuropathy, namely hydroxycarbamide in one report and thalidomide in the other. In the second case, it its known that the patient experienced peripheral neuropathy while using thalidomide but information is lacking on action taken with thalidomide and outcome of neuropathy. Another case mentions that the patient was on chemotherapy (bortezomib) when the peripheral neuropathy occurred and that ruxolitinib was used before and after the chemotherapy." ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Response_from_Novartis
+:Response_from_Novartis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                        OpenPVSignal:refers_to_pharmacovigilance_signal_report :Ruxolitinib_and_peripheral_neuropathy ;
+                        OpenPVSignal:has_content "Background This document provides Novartis’ comment on the draft of “Ruxolitinib and peripheral neuropathy” which concluded that a causal association between ruxolitinib and peripheral neuropathy may exist and which will be published in Signal from UMC – WHO Collaborating Centre for International Drug Monitoring. Peripheral neuropathy was fully evaluated as a potential signal in the Jakavi® (ruxolitinib) PSUR 5 (23 Aug 2014 – 22 Feb 2015) based on a literature report1 describing treatment-emergent peripheral neuropathy (TE-PN) with momelotinib (a JAK-1/2 inhibitor that also targets TYK22 ). As a result of evaluating peripheral neuropathy and discussing it with health authorities, it was ultimately concluded that at this time, peripheral neuropathy does not constitute an important potential risk and should be continued to be monitored as part of routine pharmacovigilance activities for ruxolitinib. The evaluation of ruxolitinib does not support the hypothesis that peripheral neuropathy is class-related, as the kinase selectivity and pharmacological profile of other JAK inhibitors differs from that of ruxolitinib, e.g. due to inhibition of non-JAK family kinases. For instance, momelotinib, originally described as a selective JAK1/2 inhibitor, is also a potent TBK1/IKKε inhibitor (IC50=58 nM and 42 nM, respectively).3 In contrast, ruxolitinib fails to inhibit TBK1 or IKKε in this assay (IC50 >1 μM for both). Two other JAK inhibitors were associated with neurotoxicity which resulted in termination of further clinical development. The first one, XL019, a highly selective JAK2 inhibitor was associated with central and/or peripheral neurotoxicity in all patients. Since neurotoxicity, particularly CNS neurotoxicity has been rare or absent in studies of other JAK2 inhibitors and its almost universal occurrence with XL019, suggests likely an undefined, off target effect.4 Another potent selective JAK 1/2 inhibitor, AZD 1480, was associated with low grade neurotoxicity that was considered unacceptable in long term therapy.5 In addition, there was a single literature report of a distal symmetric polyneuropathy in a patient treated with tofacitinib (Xeljanz®), a JAK1/3 inhibitor for rheumatoid arthritis.6 Epidemiology Neurological manifestations including peripheral neuropathy have been reported with myeloproliferative neoplasms. Peripheral neuropathy in patients with polycythemia vera was explained with the underlying mechanism of hypoxia due to increased blood viscosity and abnormal platelet aggregation associated with the disease.7,8,9 In a report from Kawasaki Y et al.10 neurological disturbance of the lower extremities was seen in a patient due to extramedullary hematopoietic mass complicated with primary myelofibrosis. In a study that reviewed 28 patients with a PV diagnosis, 11 experienced paresthesia. In 13 (46%) patients, clinical examination revealed features suggesting polyneuropathy. Nerve conduction indexes were abnormal in 20 (71%) patients, suggesting the presence of a predominantly sensory axonal polyneuropathy. No literature reports of peripheral neuropathy linked to ruxolitinib were retrieved. Data from interventional trials There were no clear differences in the incidence rates of peripheral neuropathy (narrow SMQ) observed in the randomized periods in the two phase III studies in myelofibrosis (Study CINCB18424-351 and Study CINC424A2352) and polycythemia vera (CINC424B2301 and CINC424B2401). In MF, the incidence was 3% in ruxolitinib arm vs 2.2% in control arms. In PV, in the incidence was 2.7% in ruxolitinib arm vs. 3.2% in control arm. In longer term follow-up in both MF and PV, exposure-adjusted analysis showed no disproportionate increase in frequency with prolonged exposure. Data from the safety database Novartis global safety database was searched cumulatively through 22 Feb 2017, with the following PTs: Neuropathy peripheral/Polyneuropathy/Peripheral motor neuropathy/Peripheral sensorimotor neuropathy/Peripheral sensory neuropathy/Axonal neuropathy and retrieved 103 cases (with 107 events). Of these, in 42 cases, the event was confounded by medical conditions (such as pre-existing neuropathy, diabetes mellitus, thyroid disorder) and concomitant medications (such as statins, thalidomide and its anologues) which are either associated with or can lead to neuropathy. In five cases, due to implausible temporal relationship or negative rechallenge, the role of ruxolitinib in relation to the events was unlikely. In 55 cases, limited information precluded complete medical assessment. In the remaining case, due to positive dechallenge and absence of strong explanation, the role of ruxolitinib in polyneuropathy was considered possible. Disproportionality analysis Traditional safety signal detection activities for all marketed products (both, multinational and mono-national) are supported by a data mining tool, the Empirica Signal System™ (ESS) applied to the Novartis safety database. The disproportionality analyses use the MGPS (Multi-Item Gamma Poisson Shrinker) statistical algorithm and statistical hits are considered when the lower limit of the confidence interval (EB05) is greater than 2. Quantitative analysis using Novartis safety database in the Empirica signal system was performed for peripheral neuropathy and did not reveal a technical signal (defined as EB05>2), with a maximal EB05 of 1.487 through March 2017. Conclusions At this time, it is not possible for the sponsor to conclude that peripheral neuropathy is caused by JAK inhibition based on the currently available clinical trial and postmarketing safety data coupled with the known mechanistic data of ruxolitinib. However, the MAH agrees with UMC and will continue monitoring peripheral neuropathy by applying routine pharmacovigilance as well as data mining technologies. The safety topic will be presented again, should future data indicate causality. References 1. Abdelrahman RA, Begna KH, Al-Kali A, Hogan WJ, Litzow MR, Pardanani A, et al (2015). Momelotinib treatment-emergent neuropathy: prevalence, risk factors and outcome in 100 patients with myelofibrosis. Br J Haematol. 2015 Apr; 169(1):77-80. 2. Tyner JW, Bumm TG, Deininger J, Wood L, Aichberger KJ, Loriaux MM, et al (2010). CYT387, a novel JAK2 inhibitor, induces hematologic responsesnand normalizes inflammatory cytokines in murine myeloproliferative neoplasms. Blood. 2010 Jun 24;115(25):5232-40. 3. Zhu Z, Aref AR, Cohoon TJ, Barbie TU, Imamura Y, Yang S et al (2014). Inhibition of KRAS-driven tumorigenicity by interruption of an autocrine cytokine circuit. Cancer Discov. 2014 Apr; 4(4):452-65. 4. Verstovsek S, Tam CS, Wadleigh M, Sokol L, Smith CC, Bui LA et al (2014). Phase I evaluation of XL019, an oral, potent, and selective JAK2 inhibitor. Leuk Res. 2014 Mar;38(3):316-22. 5. Verstovsek S, Hoffman R, Mascarenhas J, Soria JC, Bahleda R, McCoon P et al (2015). A phase I, open-label, multi-center study of the JAK2 inhibitor AZD1480 in patients with myelofibrosis. Leuk Res. 2015 Feb;39(2):157-63. 6. Zeidler C, von Köckritz A, Luger TA, Ständer S, Husstedt IW, Tsianakas (2015) A J Eur Acad Dermatol Venereol. 2015 Mar. Tofacitinib, a novel JAK3 inhibitor, as a potential cause of distal symmetric polyneuropathy. 7. Wollina U (2015). Burning feet in polycythemia vera peripheral sensorimotor axonal neuropathy with erythromelalgia. Int J Gen Med. 2015 Feb 2; 8:69-71. 8. Poza JJ, Cobo AM, Martí-Massó JF. Peripheral neuropathy associated with polycythemia vera. Neurologia. 1996 Oct;11(8):276-9. 9. Mihalj M, Titlić M, Bonacin D, Dogaš Z. Sensomotor axonal peripheral neuropathy as a first complication of polycythemia rubra vera: A report of 3 cases. Am J Case Rep. 2013;14:385-7. 10. Kawasaki Y, Nakazora T, Suzukawa M, Tominaga T, Wang ZK, Shinohara K (2010). Neurological disturbance of the lower extremities by anextramedullary hematopoietic mass complicated with primary myelofibrosis. The Japanese journal of clinical hematology. 2010 May;51(5):349-52." ;
+                        rdfs:label "Response from Novartis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Ruxolitinib_and_peripheral_neuropathy
+:Ruxolitinib_and_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                       OpenPVSignal:refers_to_author :Mr_Thomas_Bradley ;
+                                       OpenPVSignal:refers_to_signal :pvSignal ;
+                                       mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                       OpenPVSignal:has_creation_date "01/07/2017"^^xsd:date ;
+                                       OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                       rdfs:label "Ruxolitinib and peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#TNFaBlockers
+:TNFaBlockers rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:DrugClass ;
+              OpenPVSignal:has_ATC_code "L04AB" ;
+              rdfs:label "TNFa blockers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Tacrolimus_as_a_common_cause_of_peripheral_neuropathy
+:Tacrolimus_as_a_common_cause_of_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                obo:OAE_0001182 ,
+                                                                OpenPVSignal:Warning_Information ;
+                                                       OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                       OpenPVSignal:refers_to_drug :tacrolimus ;
+                                                       mp:references :Ref.8 ;
+                                                       OpenPVSignal:has_content "A review of concomitant drugs identified three cases where drugs known to be a common cause of peripheral neuropathy were reported (hydroxycarbamide in two reports and tacrolimus in one).7,8" ;
+                                                       rdfs:label "Tacrolimus as a common cause of peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Thalidomide_as_a_common_cause_of_peripheral_neuropathy
+:Thalidomide_as_a_common_cause_of_peripheral_neuropathy rdf:type owl:NamedIndividual ,
+                                                                 obo:OAE_0001182 ,
+                                                                 OpenPVSignal:Warning_Information ;
+                                                        OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                                        OpenPVSignal:refers_to_drug :thalidomide ;
+                                                        rdfs:label "Thalidomide as a common cause of peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Time_to_Onset_for_ruxolitinib
+:Time_to_Onset_for_ruxolitinib rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2006/time#DurationDescription> ;
+                               OpenPVSignal:refers_to_adverse_effect :axonalNeuropathy ,
+                                                                     :neuropathyPeripheral ;
+                               OpenPVSignal:refers_to_drug :ruxolitinib ;
+                               OpenPVSignal:has_content "Time to onset ranged from seven days up to three years" ;
+                               rdfs:label "Time to Onset for ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#Usage_of_ruxolitinib_for_myelofibrosis
+:Usage_of_ruxolitinib_for_myelofibrosis rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Drug_Usage ;
+                                        OpenPVSignal:concerns_indication_for_use :myelofibrosis ;
+                                        OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                        mp:references :Ref.2 ;
+                                        OpenPVSignal:has_content "s in patients with myelofibrosis by reducing spleen size, ameliorating debilitating myelofibrosis-related symptoms, and improving overall survival.2" ;
+                                        rdfs:label "Usage of ruxolitinib for myelofibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#atorvastatin
+:atorvastatin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "C10AA05" ;
+              rdfs:label "atorvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#axonalNeuropathy
+:axonalNeuropathy rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "G62.9" ;
+                  OpenPVSignal:has_MedDRA_code 10003882 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Axonal neuropathy" ;
+                  rdfs:label "axonal neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#bacterialInfection
+:bacterialInfection rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "A49.9" ;
+                    OpenPVSignal:has_MedDRA_code 10060945 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Bacterial infection" ;
+                    rdfs:label "bacterial infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#bezafibrate
+:bezafibrate rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AB02" ;
+             rdfs:label "bezafibrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#bortezomib
+:bortezomib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "L01XX32" ;
+            rdfs:label "bortezomib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#bruising
+:bruising rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10006504 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Bruising" ;
+          rdfs:label "bruising" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K59.00" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#fungalInfection
+:fungalInfection rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "B37.9" ;
+                 OpenPVSignal:has_MedDRA_code 10017533 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Fungal infection" ;
+                 rdfs:label "fungal infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#haematocritIncreased
+:haematocritIncreased rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Indication ;
+                      OpenPVSignal:has_MedDRA_code 10057763 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hematocrit abnormal" ;
+                      rdfs:label "haematocrit abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#herpesZoster
+:herpesZoster rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "B02" ;
+              OpenPVSignal:has_MedDRA_code 10019974 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Herpes zoster" ;
+              rdfs:label "herpes zoster" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#hydroxycarbamide
+:hydroxycarbamide rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "L01XX05" ;
+                  rdfs:label "hydroxycarbamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ;
+              OpenPVSignal:has_content "Ruxolitinib (INCB018424) is a selective inhibitor of the Janus Associated Kinases (JAKs) 1 and 2. These mediate the signalling of a number of cytokines and growth factors that are important for haematopoiesis and immune function.1 Ruxolitinib has significant clinical benefits in patients with myelofibrosis by reducing spleen size, ameliorating debilitating myelofibrosisrelated symptoms, and improving overall survival.2 Ruxolitinib has also been demonstrated to be superior to standard therapy in controlling the hematocrit, reducing the spleen volume, and improving symptoms associated with polycythemia vera.3 In the United States, ruxolitinib is at present approved for treatment of patients with intermediate or high-risk myelofibrosis, including primary myelofibrosis, post- polycythemia vera myelofibrosis and post-essential thrombocythemia myelofibrosis, as well as in patients with polycythemia vera who have had an inadequate response to, or are intolerant of, hydroxyurea.4 In Europe also, ruxolitinib is authorized for myelofibrosis and polycythaemia vera, specifically for the treatment of disease-related splenomegaly or symptoms in adult patients with primary myelofibrosis (also known as chronic idiopathic myelofibrosis), post-polycythaemia vera myelofibrosis or post-essential thrombocythaemia myelofibrosis, as well as for the treatment of adult patients with polycythaemia vera who are resistant to or intolerant of hydroxyurea.1 The most commonly reported adverse reactions in clinical trials were haematological, and the most frequent non-haematological reactions were bruising, dizziness, headache, constipation and herpes zoster. Serious bacterial, mycobacterial, fungal and viral infections, including progressive multifocal leukoencephalopathy, have occurred during treatment with ruxolitinib, and physicians are advised to carefully observe patients receiving ruxolitinib for signs and symptoms of infections, and to initiate appropriate treatment promptly.1,4 Peripheral neuropathy may be caused by a number of drugs and is one of the main reasons for patients to prematurely terminate antineoplastic treatment. Drug- induced peripheral neuropathies are often characterized by the development of a subacute or chronic, symmetrical polyneuropathy with a predominant sensory involvement.5 Molecular mechanisms of drug-induced peripheral neuropathies have been addressed in several studies and a number of mechanisms have been postulated, including cytotoxic inflammatory changes, mitochondrial toxicity and enhanced oxidative stress, microtubular function disruption, voltage-gated ion channel dysfunction, functional impairment of ion channels of the transient receptor potential family, induction of neuronal apoptosis in dorsal root ganglia, demyelination, and reduction of VEGF neuro-protective action.5 During a UMC signal detection screening in March 2016 which focused on recently approved drugs and adverse events reported with a serious outcome, the safety issue concerning axonal neuropathy in relation to ruxolitinib was observed. For this review the scope was widened to peripheral neuropathy." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#lymphaticDisorder
+:lymphaticDisorder rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "I89.9" ;
+                   OpenPVSignal:has_MedDRA_code 10052314 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Lymphatic disorder" ;
+                   rdfs:label "lymphatic disorder " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#multifocalLeukoencephalopathy
+:multifocalLeukoencephalopathy rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect ;
+                               OpenPVSignal:has_ICD_code "A81.2" ;
+                               OpenPVSignal:has_MedDRA_code 10024382 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Leukoencephalopathy" ;
+                               rdfs:label "multifocal leukoencephalopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#mycobacterial_infection
+:mycobacterial_infection rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_MedDRA_code 10062207 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Mycobacterial infection" ;
+                         rdfs:label "mycobacterial infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#myelofibrosis
+:myelofibrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_ICD_code "D75.81" ;
+               OpenPVSignal:has_MedDRA_code 10028537 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Myelofibrosis" ;
+               rdfs:label "myelofibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#neuropathyPeripheral
+:neuropathyPeripheral rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "G90.09" ;
+                      OpenPVSignal:has_MedDRA_code 10029331 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Neuropathy peripheral" ;
+                      rdfs:label "neuropathy peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#platinumAgents
+:platinumAgents rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "L01XA" ;
+                rdfs:label "platinum agents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#polycythemia_vera
+:polycythemia_vera rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "D45" ;
+                   OpenPVSignal:has_MedDRA_code 10036057 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Polycythaemia vera" ;
+                   rdfs:label "polycythemia vera" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#post-essentialThrombocythemiaMyelofibrosis
+:post-essentialThrombocythemiaMyelofibrosis rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Indication ;
+                                            OpenPVSignal:has_MedDRA_code 10074690 ;
+                                            OpenPVSignal:has_MedDRA_prefered_term "Post essential thrombocythemia myelofibrosis" ;
+                                            rdfs:label "post-essential thrombocythemia myelofibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Discussion_and_conclusion ,
+                                                   :Peripheral_neuropathy_information ,
+                                                   :Reports_in_VigiBase ,
+                                                   :introduction ,
+                                                   :summary ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibase ,
+                                                          :ReportWithBortezomibAndRuxolitinib ,
+                                                          :ReportsForRuxolitinibAndAxonalNeuropathy ,
+                                                          :ReportsForRuxolitinibAndNeuropathyPeripheral ,
+                                                          :ReportsFromAustria ,
+                                                          :ReportsFromFrance ,
+                                                          :ReportsFromGreece ,
+                                                          :ReportsFromIreland ,
+                                                          :ReportsFromItaly ,
+                                                          :ReportsFromSlovenia ,
+                                                          :ReportsFromUK ,
+                                                          :ReportsFromUSA ,
+                                                          :ReportsThatHadReporterAPhysician ,
+                                                          :ReportsWhereRuxolitinibWasUsedForLymphaticDisorder ,
+                                                          :ReportsWhereRuxolitinibWasUsedForMyelofibrosis ,
+                                                          :ReportsWhereRuxolitinibWasUsedForPolycythaemia ,
+                                                          :ReportsWithBezafibrateAsConcomitantDrug ,
+                                                          :ReportsWithHMG-coAReductaseInhibitorsAsConcomitantDrug ,
+                                                          :ReportsWithHydroxycarbamideAsConcomitantDrug ,
+                                                          :ReportsWithNegativeDechellenge ,
+                                                          :ReportsWithNegativePartialDechallengeAndNoRecovery ,
+                                                          :ReportsWithNoRecoveryAsOutcome ,
+                                                          :ReportsWithPositiveDechallenge ,
+                                                          :ReportsWithPositivePartialDechallenge ,
+                                                          :ReportsWithPrechallengesWithThalidomide ,
+                                                          :ReportsWithTacrolimusAsConcomitantDrug ;
+          OpenPVSignal:refers_to_adverse_effect :axonalNeuropathy ,
+                                                :neuropathyPeripheral ;
+          OpenPVSignal:refers_to_drug :ruxolitinib ;
+          OpenPVSignal:refers_to_primary_suspect_drug :ruxolitinib ;
+          mp:supportedByData :Bezafibrate_as_a_possible_cause_of_peripheral_neuropathy ,
+                             :Clinical_trial_data_for_ruxolitinib_and_peripheral_neuropathy ,
+                             :Clinical_trial_info_for_ruxolitinib ,
+                             :ConfoundingCasesThatAreAgainstCausality ,
+                             :HMG-CoA_reductase_inhibitors_as_a_possible_cause_of_peripheral_neuropathy ,
+                             :Hydroxycarbamide_as_a_common_cause_of_peripheral_neuropathy ,
+                             :ImmunomodulatoryDrugsAndPeripheranNeuropathy ,
+                             :JAKInhibitorsAndPeripheralNeuropathy ,
+                             :Neuropathy_and_ruxolitinib ,
+                             :PeripheralNeuropathyAndChemotherapeutics ,
+                             :Tacrolimus_as_a_common_cause_of_peripheral_neuropathy ,
+                             :Thalidomide_as_a_common_cause_of_peripheral_neuropathy ;
+          OpenPVSignal:initially_identified_on "01/07/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#ruxolitinib
+:ruxolitinib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :JAKInhibitors ;
+             OpenPVSignal:has_mechanism :Mechanism_of_ruxolitinib ,
+                                        :Proposed_mechanism_of_ruxolitinib_causing_peripheral_neuropathy ;
+             OpenPVSignal:has_ATC_code "L01XE18" ;
+             rdfs:label "ruxolitinib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA01" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#splenomegaly
+:splenomegaly rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "R16.1" ;
+              OpenPVSignal:has_MedDRA_code 10041660 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Splenomegaly" ;
+              rdfs:label "splenomegaly" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Ruxolitinib is a selective Janus Associated Kinase (JAK) 1 and 2 inhibitor, which is at present indicated for myelofibrosis and polycythaemia vera. During a UMC signal detection screening in March 2016 the safety issue concerning axonal neuropathy in relation to ruxolitinib was noted. Literature shows that in patients treated with other JAK inhibitors peripheral neuropathy has been observed. In this review of 37 cases of ruxolitinib associated axonal and peripheral neuropathy reported to VigiBase, the WHO global database of individual case safety reports, we concluded that a causal association between ruxolitinib and peripheral neuropathy may exist, and represents a signal worth communicating so that stakeholders may act upon it." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#tacrolimus
+:tacrolimus rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "L04AD02" ;
+            rdfs:label "tacrolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#taxanes
+:taxanes rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:DrugClass ;
+         OpenPVSignal:has_ATC_code "L01CD" ;
+         rdfs:label "taxanes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#thalidomide
+:thalidomide rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ,
+                      OpenPVSignal:Potential_Confounder ;
+             OpenPVSignal:has_ATC_code "L04AX02" ;
+             rdfs:label "thalidomide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#usage_of_ruxolitinib_for_hematocrit_abnormal
+:usage_of_ruxolitinib_for_hematocrit_abnormal rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Drug_Usage ;
+                                              OpenPVSignal:concerns_indication_for_use :haematocritIncreased ;
+                                              OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                              rdfs:label "usage of ruxolitinib for hematocrit abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#usage_of_ruxolitinib_for_lymphatic_disorder
+:usage_of_ruxolitinib_for_lymphatic_disorder rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Drug_Usage ;
+                                             OpenPVSignal:refers_to_adverse_effect :lymphaticDisorder ;
+                                             OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                             rdfs:label "usage of ruxolitinib for lymphatic disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#usage_of_ruxolitinib_for_polucythaemia
+:usage_of_ruxolitinib_for_polucythaemia rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Drug_Usage ;
+                                        OpenPVSignal:concerns_indication_for_use :polycythemia_vera ;
+                                        OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                        rdfs:label "usage of ruxolitinib for polucythaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#usage_of_ruxolitinib_for_speenomegaly
+:usage_of_ruxolitinib_for_speenomegaly rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Drug_Usage ;
+                                       OpenPVSignal:concerns_indication_for_use :splenomegaly ;
+                                       OpenPVSignal:refers_to_drug :ruxolitinib ;
+                                       rdfs:label "usage of ruxolitinib for speenomegaly" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#vincaAlkaloids
+:vincaAlkaloids rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "L01CA" ;
+                rdfs:label "vinca alkaloids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#viralInfection
+:viralInfection rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "B97.89" ;
+                OpenPVSignal:has_MedDRA_code 10047461 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Viral infection" ;
+                rdfs:label "viral infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_4_ruxolitinib_peripheral_neuropathy.owl#δ
+:δ rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Drug_Usage ;
+   OpenPVSignal:concerns_indication_for_use :post-essentialThrombocythemiaMyelofibrosis ;
+   OpenPVSignal:refers_to_drug :ruxolitinib ;
+   rdfs:label "usage of ruxolitinib for post-essential thrombocythemia myelofibrosis" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

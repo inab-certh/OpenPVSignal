@@ -1,0 +1,679 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl> rdf:type owl:Ontology ;
+                                                                                                          owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                                          rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/274266/"^^xsd:anyURI ;
+                                                                                                          rdfs:label "Agomelatine - Inappropriate schedule of drug administration"^^rdfs:Literal ;
+                                                                                                          owl:versionInfo "draft-v0.95-20210510"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/atTime
+mp:atTime rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Administration_interval
+:Administration_interval rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2006/time#DurationDescription> ;
+                         <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                         <http://www.w3.org/2006/time#numericPosition> 1 ;
+                         rdfs:label "Administration interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agitation
+:Agitation rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R45.1" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10001497 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> """	
+Agitation""" ;
+           rdfs:label "Agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine
+:Agomelatine rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Major_Depression ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Agomelatine_Mechanism ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N06AX22 " ;
+             rdfs:label "Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineAdjustedDosage
+:AgomelatineAdjustedDosage rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 50 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "50 mg" ;
+                           mp:atTime "bedtime" ;
+                           rdfs:label "Agomelatine adjusted dosage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineDosage1ForReport1
+:AgomelatineDosage1ForReport1 rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 25 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_process> "true"^^xsd:boolean ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "25 mg" ;
+                              mp:atTime "morning" ;
+                              rdfs:label "Agomelatine dosage 1 for Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineDosage1ForReport2
+:AgomelatineDosage1ForReport2 rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 25 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "25 mg" ;
+                              mp:atTime "morning" ;
+                              rdfs:label "Agomelatine dosage 1 for Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineDosage1ForReport3
+:AgomelatineDosage1ForReport3 rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :Agomelatine ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 25 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "25 mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_partial_dechallenge_process> "true"^^xsd:boolean ;
+                              rdfs:label "Agomelatine dosage 1 for Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineDosage1ForReport4
+:AgomelatineDosage1ForReport4 rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              mp:atTime "morning" ;
+                              rdfs:label "Agomelatine dosage 1 for Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineDosage2ForReport3
+:AgomelatineDosage2ForReport3 rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Agomelatine was reduced to 12.5 mg per day taken in the early afternoon. As the patient still experienced mild tiredness, the drug was stopped in December 2014 and the patient recovered" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 12.5 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_process> "true"^^xsd:boolean ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "12.5 mg " ;
+                              mp:atTime "afternoon" ;
+                              rdfs:label "Agomelatine dosage 2 for Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#AgomelatineRecommendedDosage
+:AgomelatineRecommendedDosage rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> :Administration_interval ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_dosage_unit> "mg" ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 25 ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "25 mg" ;
+                              mp:atTime "bedtime" ;
+                              rdfs:label "Agomelatine recommended dosage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_Intake_form
+:Agomelatine_Intake_form rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Intake_Form> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "oral" ;
+                         rdfs:label "Agomelatine form of intake" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_Mechanism
+:Agomelatine_Mechanism rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                       mp:references :Ref.1 ,
+                                     :Ref.2 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Agomelatine is a MT1 and MT2 melatonin receptor agonist, and a serotonin (5-HT2c) antagonist." ;
+                       rdfs:label "Agomelatine Mechanism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_dosage_for_Reports_with_available_information
+:Agomelatine_dosage_for_Reports_with_available_information rdf:type owl:NamedIndividual ,
+                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                                                           mp:atTime "afternoon" ,
+                                                                     "morning" ;
+                                                           rdfs:label "Agomelatine dosage for Reports with available information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_usage_for_Report1
+:Agomelatine_usage_for_Report1 rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :AgomelatineDosage1ForReport1 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                               rdfs:label "Agomelatine usage for Report1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_usage_for_Report2
+:Agomelatine_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :AgomelatineDosage1ForReport2 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                               rdfs:label "Agomelatine usage for Report2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_usage_for_Report3
+:Agomelatine_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :AgomelatineDosage1ForReport3 ,
+                                                                                                :AgomelatineDosage2ForReport3 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                               rdfs:label "Agomelatine usage for Report3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_usage_for_Report4
+:Agomelatine_usage_for_Report4 rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :AgomelatineDosage1ForReport4 ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                               rdfs:label "Agomelatine usage for Report4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_usage_for_Reports_with_available_information
+:Agomelatine_usage_for_Reports_with_available_information rdf:type owl:NamedIndividual ,
+                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :Agomelatine_dosage_for_Reports_with_available_information ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                                                          rdfs:label "Agomelatine usage for Reports with available information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Alem_Zekarias
+:Alem_Zekarias rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Uppsala Monitoring Centre" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Alem" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Zekarias" ;
+               rdfs:label "Alem Zekarias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Antidepressants
+:Antidepressants rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N06A" ;
+                 rdfs:label "Antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#BackPain
+:BackPain rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "M54.5" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10003988 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Back pain" ;
+          rdfs:label "Back Pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Burnout
+:Burnout rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "Z73.0" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10065369 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Burnout syndrome" ;
+         rdfs:label "Burnout syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#ChestPain
+:ChestPain rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R07.9" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10008479 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Chest pain" ;
+           rdfs:label "Chest Pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Depression
+:Depression rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F33" ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10012378 ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Depression" ;
+            rdfs:label "Depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Dizziness
+:Dizziness rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R42" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013573 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Dizziness" ;
+           rdfs:label "Dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#InappropriateScheduleOfDrugAdministration
+:InappropriateScheduleOfDrugAdministration rdf:type owl:NamedIndividual ,
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10081572 ;
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Inappropriate schedule of drug administration" ;
+                                           rdfs:label "Inappropriate schedule of drug administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Individual_Case_Safety_Reports
+:Individual_Case_Safety_Reports rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                mp:references :Ref.1 ,
+                                              :Ref.2 ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A 48-year old man with medical history of depression had taken agomelatine 25 mg daily in the morning since April 2013. After three weeks, he experienced back and chest pain, episodes of migraine and dizziness. The events affected his daily activities including his ability to drive. In July 2013, the drug was discontinued, and the events resolved. A 45-year old man with burnout symptoms had been taking agomelatine 25 mg daily in the morning since October 2012. After his first intake of the drug, he started to feel tired and later had a car accident due to microsleep. A 72-year old man treated with agomelatine since June 2014 for insomnia started to feel agitated and restless one month into the treatment. Agomelatine was reduced to 12.5 mg per day taken in the early afternoon. As the patient still experienced mild tiredness, the drug was stopped in December 2014 and the patient recovered. A positive rechallenge occurred three months later. Agomelatine was withdrawn in mid-April 2015 and the patient recovered within a week. A fourth report mentioned both an inappropriate administration schedule (as the drug was taken in the morning) and off-label use, as the patient was 80-years old.1,2" ;
+                                rdfs:label "Individual Case Safety Reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Insomnia
+:Insomnia rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G47.0" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10022437 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Insomnia" ;
+          rdfs:label "Insomnia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Major_Depression
+:Major_Depression rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F33" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10057840 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Major depression" ;
+                  rdfs:label "Major Depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Malaise
+:Malaise rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R53.8" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10025482 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Malaise" ;
+         rdfs:label "Malaise" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Migraine
+:Migraine rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G43" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10027599 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Migraine" ;
+          rdfs:label "Migraine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Off_label_use
+:Off_label_use rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10053762 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Off label use" ;
+               rdfs:label "Off label use" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#OnsetTimeForReport1
+:OnsetTimeForReport1 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 21 ;
+                     rdfs:label "Onset time for Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#OnsetTimeForReport2
+:OnsetTimeForReport2 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "After his first intake of the drug, he started to feel tired and later had a car accident due to microsleep" ;
+                     rdfs:label "Onset time for Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#OnsetTimeForReport3
+:OnsetTimeForReport3 rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2006/time#DurationDescription> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A 72-year old man treated with agomelatine since June 2014 for insomnia started to feel agitated and restless one month into the treatment" ;
+                     <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                     <http://www.w3.org/2006/time#numericPosition> 30 ;
+                     rdfs:label "Onset time for Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#OverallReportsInVigibase
+:OverallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 7 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                          rdfs:label "Overall reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 48 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 45 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 72 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 80 ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Summary of
+Product Characteristics for valdoxan. Available
+from: https://
+www2.medicines.org.uk/emc/medicine/21830.
+Accessed: January 2018.""" ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """European Medicines Agency: Product Information Leaflet for valdoxan. Available
+from: https://www2.
+medicines.org.uk/emc/medicine/21841.
+Accessed: January 2018""" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Depression ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :BackPain ,
+                                                                                  :ChestPain ,
+                                                                                  :Dizziness ,
+                                                                                  :Migraine ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient1 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Agomelatine ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :Agomelatine_usage_for_Report1 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetTimeForReport1 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Burnout ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Tiredness ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient2 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Agomelatine ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :Agomelatine_usage_for_Report2 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetTimeForReport2 ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Insomnia ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Agitation ,
+                                                                                  :Restlessness ,
+                                                                                  :Tiredness ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient3 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Agomelatine ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :Agomelatine_usage_for_Report3 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :OnsetTimeForReport3 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "recovery after drug withdrawal" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_partial_dechallenge_outcome> "negative - condition still applied" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_rechallenge_outcome> "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Dizziness ,
+                                                                                  :SlowingOfMovement ,
+                                                                                  :Tiredness ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ,
+                                                                                    :Off_label_use ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient4 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Agomelatine ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :Agomelatine_usage_for_Report4 ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Reports
+:Reports rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Burnout ,
+                                                                                     :Depression ,
+                                                                                     :Insomnia ,
+                                                                                     :Malaise ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibase ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Dizziness ,
+                                                                                  :SlowingOfMovement ,
+                                                                                  :Tiredness ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 3 ;
+         rdfs:label "Reports with available information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#ReportsFromBelgium
+:ReportsFromBelgium rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibase ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Belgium"^^rdfs:Literal ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                    rdfs:label "Reports from Belgium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibase ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 4 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Germany"^^rdfs:Literal ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#ReportsFromGreece
+:ReportsFromGreece rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibase ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Greece"^^rdfs:Literal ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                   rdfs:label "Reports from Greece" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibase ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Switzerland"^^rdfs:Literal ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In VigiBase, the WHO global database of individual case safety reports, as of January 2018 there are seven reports on agomelatine and inappropriate schedule of drug administration, leading to adverse drug reactions (ADRs). The reports were submitted from Germany (four reports), Belgium, Greece and Switzerland (one report each). In three reports, in which the indications were insomnia, malaise, depression and burnout syndrome, the patients had taken the drug in the morning or in the early afternoon instead of at bedtime as recommended. In addition, one of these patients was 80 years old. These patients developed dizziness, tiredness and presented with slowing of movement which affected daily life. Four out of seven reports are briefly discussed below, as the remaining three do not provide any information on the time of intake." ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Restlessness
+:Restlessness rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R45.1" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10038743 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Restlessness" ;
+              rdfs:label "Restlessness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#SlowingOfMovement
+:SlowingOfMovement rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R46.4" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10083339 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Slow movement" ;
+                   rdfs:label "Slowing of movement" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Summary_of_Product_Characteristics
+:Summary_of_Product_Characteristics rdf:type owl:NamedIndividual ,
+                                             <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Literature_information> ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                                    mp:references :Ref.1 ,
+                                                  :Ref.2 ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The Summary of Product Characteristics for agomelatine states that the drug should be taken at bedtime independent of dose due to its neurological effects.1,2" ;
+                                    rdfs:label "Summary of Product Characteristics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Tiredness
+:Tiredness rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R53.8" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10043890 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Tiredness" ;
+           rdfs:label "Tiredness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Usage_of_agomelatine
+:Usage_of_agomelatine rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Depression ,
+                                                                                                  :Major_Depression ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_drug_intake> :Agomelatine_Intake_form ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :AgomelatineAdjustedDosage ,
+                                                                                       :AgomelatineRecommendedDosage ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+                      rdfs:label "Usage of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Several cases in VigiBase document that intake at a different time of the day can lead to significant ADRs." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Agomelatine is a MT1 and MT2 melatonin receptor agonist, and a serotonin (5-HT2c) antagonist. It is approved in Europe, Australia and Latin America for the treatment of major depression in adults. The efficacy and safety of agomelatine have been established in elderly depressed patients over 75 years of age, but clinical data showed no effect. Therefore, agomelatine should not be used by patients older than 75 years. The recommended dose is 25 mg once daily taken orally at bedtime. If there is no improvement of symptoms after a couple of weeks, the dose may be increased to 50 mg once daily, i.e. two 25 mg tablets taken at the same time at bedtime.1,2" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#pv_signal
+:pv_signal rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Individual_Case_Safety_Reports ,
+                                                                                       :Reports_in_VigiBase ,
+                                                                                       :conclusion ,
+                                                                                       :introduction ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_individual_case_report> :Ref.1 ,
+                                                                                                  :Ref.2 ,
+                                                                                                  :Report1 ,
+                                                                                                  :Report2 ,
+                                                                                                  :Report3 ,
+                                                                                                  :Report4 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :OverallReportsInVigibase ,
+                                                                                              :Reports ,
+                                                                                              :ReportsFromBelgium ,
+                                                                                              :ReportsFromGermany ,
+                                                                                              :ReportsFromGreece ,
+                                                                                              :ReportsFromSwitzerland ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Agitation ,
+                                                                                    :BackPain ,
+                                                                                    :ChestPain ,
+                                                                                    :Dizziness ,
+                                                                                    :InappropriateScheduleOfDrugAdministration ,
+                                                                                    :Migraine ,
+                                                                                    :Restlessness ,
+                                                                                    :SlowingOfMovement ,
+                                                                                    :Tiredness ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Agomelatine ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :InappropriateScheduleOfDrugAdministration ;
+           mp:supportedByData :Summary_of_Product_Characteristics ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/08/2018" ;
+           rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_–_Inappropriate_schedule_of_drug_administration
+<http://purl.org/OpenPVSignal/Signals/2018_4_agomelatine_inappropriate_schedule_drug_administration.owl#Agomelatine_–_Inappropriate_schedule_of_drug_administration> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Alem_Zekarias ;
+                                                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pv_signal ;
+                                                                                                                                                                     mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/08/2018"^^xsd:date ;
+                                                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                                                                                                                                                     rdfs:label "Agomelatine – Inappropriate schedule of drug administration" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

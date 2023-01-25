@@ -1,0 +1,3024 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis> rdf:type owl:Ontology ;
+                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                    mp: ;
+                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255515/"^^xsd:anyURI ;
+                                                                        rdfs:label "Vemurafenib and Pancreatitis"^^xsd:Literal ;
+                                                                        owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2006/time#numericPosition
+time:numericPosition rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#BRAF_V600E_mutation_positive
+:BRAF_V600E_mutation_positive rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Indication ;
+                              OpenPVSignal:has_MedDRA_code 10075676 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "BRAF V600E mutation positive" ;
+                              rdfs:label "BRAF V600E mutation positive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.10 ,
+                                 :Ref.17 ,
+                                 :Ref.18 ,
+                                 :Ref.19 ,
+                                 :Ref.20 ,
+                                 :Ref.21 ,
+                                 :Ref.22 ,
+                                 :Ref.7 ;
+                   OpenPVSignal:has_content """There are several factors that point towards a causal association between vemurafenib and pancreatitis. Firstly, the evidence of recurring patterns in the reports. Without considering the reports that present underlying conditions such as diabetes,16 pancreatic metastases or cholecystolithiasis, which can act as con- founders, there are several cases that bear similarities in time to onset: cases 3, 7, 9, 11, 14. The dose was also consistent in these (1920 mg per day), except for case 14 where it was unknown. Although patient 3 was undergoing anti-hypertensive therapy with lisinopril, this drug is considered to have a very rare potential to induce pancreatitis, according to the UK SPC. Drug withdrawal led to recovery in ICSRs 3, 7 and 11.
+Secondly, the interruption of the RAS-RAF-MEK- ERK cascade by vemurafenib results in the activation of caspase-9; this enzyme has been found to promote apoptosis.17 Caspase-induced apoptosis has been pro- posed as one of the pathophysiological mechanisms for acute pancreatitis.7 Alternatively, low dose vemurafenib can result in paradoxical induction of ERK,18 which could activate TNF-α dependant transcription factors17 such as NF-κB that may be linked to acinar cell apo- ptosis and ultimately acute pancreatitis,.7,19
+In relation to a possible mechanism, it is useful to consider drugs that share similar pharmacodynamic properties with vemurafenib. At least two other kinase inhibitors are known to cause pancreatitis: dabrafenib and sorafenib. The frequency with which sorafenib can induce pancreatitis has been defined as “uncommon” in both the UK SPC and US FDA leaflet, while dabrafenib, according to the US FDA label, induced pancreatitis in less than 10% of the patients.
+Protein kinase inhibitors interfere with the downstream effects of growth factors, such as VEGF; this inhibition has been linked by some authors to acute pancreatitis of ischemic origin.20 Sorafenib, a multi kinase inhibitor, acts on a broader spectrum of kinases than vemurafenib, there- fore it is possible that an alternative mechanism may be involved in the development of pancreatitis; however, dabrafenib acts more closely to vemurafenib21 hence it is plausible that these drugs share a common mechanism in the development of pancreatitis. It should be borne in mind the pathophysiology of pancreatitis is not yet well understood.7,10
+It is not possible to rule out obesity as a cause of gallstone-induced pancreatitis, but most ICSRs lack data on essential parameters for a simple assessment, such as BMI calculation.
+The elevation of enzymes in cases 1a, 2a, 3a, followed a similar temporal development to the pancreatitis cases, in terms of time to onset, thus the role of vemurafenib cannot be excluded.
+Evidence to support a signal include: (i) the temporal association between drug administration and the onset of the reaction is consistent through several cases, (ii) similar drug mechanisms induce the same adverse reaction, (iii) five patients recovered after drug withdrawal. It should also be noted that the malignancy does not commonly metastasize to the pancreas22 and no evidence of pancreatic metastasis was reported in the majority of the cases. Hence, it is plausible to hypothesize a causal relationship between vemurafenib and the onset of pancreatitis in genetically predisposed individuals, at a dosage of 1920 mg per day.""" ;
+                   rdfs:label "Discussion and Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Daniele_Sartori
+:Daniele_Sartori rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Author ;
+                 OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                 OpenPVSignal:has_first_name "Daniele" ;
+                 OpenPVSignal:has_last_name "Sartori" ;
+                 rdfs:label "Daniele Sartori" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#DoseOfVemurafenib
+:DoseOfVemurafenib rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :vemurafenib ;
+                   OpenPVSignal:has_content "240 mg, 3-8 tablets per day" ;
+                   rdfs:label "Dose of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Gamma-glutamyltransferase_decreased
+:Gamma-glutamyltransferase_decreased rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Adverse_Effect ;
+                                     OpenPVSignal:has_MedDRA_code 10017693 ;
+                                     OpenPVSignal:has_MedDRA_prefered_term "Gamma-glutamyltransferase increased" ;
+                                     rdfs:label "gamma-glutamyltransferase increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#IC025ValueOfVemurafenibAndPancreatitis
+:IC025ValueOfVemurafenibAndPancreatitis rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                        OpenPVSignal:refers_to_drug :vemurafenib ;
+                                        OpenPVSignal:refers_to_information_component :ICValueOfVemurafenibAndPancreatitis ;
+                                        OpenPVSignal:has_content "0.72" ;
+                                        OpenPVSignal:refers_to_number_of_reports 20 ;
+                                        rdfs:label "IC025 value of vemurafenib and pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ICValueOfVemurafenibAndPancreatitis
+:ICValueOfVemurafenibAndPancreatitis rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                     OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                                     OpenPVSignal:has_content "1.42" ;
+                                     OpenPVSignal:refers_to_number_of_reports 20 ;
+                                     rdfs:label "IC value of vemurafenib and pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.14 ,
+                                      :Ref.15 ,
+                                      :Ref.3 ;
+                        OpenPVSignal:has_content "Neither the European Medicines Agency (EMA) Summary of Products Characteristis (SPC) nor US FDA labels indicate pancreatitis as a potential adverse reaction; moreover, there was no mention of either increased amylase or increased lipase enzymes. Gamma-glutamyltransferases, potential indicators of pancreatic inflammation, but more commonly associated with hepatobiliary problems, were found to be increased in phase III studies.3,14 There is one case report in the literature of a 49- year-old male with stage IV melanoma who developed pancreatitis two weeks after starting treatment with vemurafenib. He recovered following withdrawal of the drug, but pancreatitis recurred on rechallenge. His symptoms disappeared after permanent discontinuation of vemurafenib. All other possible causes were ruled out.15" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#MechanismOfAEByVemurafenib
+:MechanismOfAEByVemurafenib rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                            OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                            mp:references :Ref.17 ,
+                                          :Ref.18 ,
+                                          :Ref.19 ,
+                                          :Ref.7 ;
+                            OpenPVSignal:has_content "Secondly, the interruption of the RAS-RAF-MEK- ERK cascade by vemurafenib results in the activation of caspase-9; this enzyme has been found to promote apoptosis.17 Caspase-induced apoptosis has been pro- posed as one of the pathophysiological mechanisms for acute pancreatitis.7 Alternatively, low dose vemurafenib can result in paradoxical induction of ERK,18 which could activate TNF-α dependant transcription factors17 such as NF-κB that may be linked to acinar cell apo- ptosis and ultimately acute pancreatitis,.7,19" ;
+                            rdfs:label "Mechanism of AE by vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#MechanismOfAction
+:MechanismOfAction rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Mechanism ;
+                   mp:references :Ref.1 ,
+                                 :Ref.2 ,
+                                 :Ref.3 ;
+                   OpenPVSignal:has_content "Vemurafenib (Zelboraf®), a serine threonine protein kinase inhibitor, received FDA approval in August 2011 for use in the treatment of metastatic or unresectable malignant melanoma that is positive for the BRAF V600E mutation. The drug is active in the RAS-RAF-MEK-ERK pathway, which is involved in the regulation of cell proliferation, survival, differentiation and apoptosis. Vemurafenib competes with adenosine-triphosphate (ATP) to reversibly and selectively inhibit the V600E mutated BRAF kinase, by preventing its phosphorylation mediated activation.1  The drug is administered orally as 240 mg tablets,2 usually 3-8 tablets per day. Vemurafenib is metabolized by CYP3A4 and mostly excreted in the faeces (94%), up to 5% of its metabolites can be found in plasma.3" ;
+                   rdfs:label "Mechanism of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Pathogeneis_of_pancreatitis
+:Pathogeneis_of_pancreatitis rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect_Mechanism ;
+                             OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                             OpenPVSignal:has_content "It is accepted that the initial inflammatory response involves the destruction of acinar cells through apoptotic or necrotic mechanisms with consequent leakage of pancreatic digestive enzymes, effectively leading to an autodigestion of the organ." ;
+                             rdfs:label "Pathogeneis of pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 76 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 60 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 59 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 75 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 80 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 67 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 70 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 21 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 35 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 35 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#PhaseIIIStudies
+:PhaseIIIStudies rdf:type owl:NamedIndividual ,
+                          obo:OAE_0001197 ;
+                 OpenPVSignal:refers_to_adverse_effect :Gamma-glutamyltransferase_decreased ;
+                 OpenPVSignal:refers_to_drug :vemurafenib ;
+                 mp:references :Ref.14 ,
+                               :Ref.3 ;
+                 OpenPVSignal:has_content "Gamma-glutamyltransferases, potential indicators of pancreatic inflammation, but more commonly associated with hepatobiliary problems, were found to be increased in phase III studies" ;
+                 rdfs:label "PhaseIII studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Roberts PJ, Der CJ. Targeting the Raf-MEK-ERK mit- ogen-activated protein kinase cascade for the treatment of cancer. Oncogene. 2007 May 14;26(22):3291-310." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Wang GJ, Gao CF, Wei D, Wang C, Ding SQ. Acute pancreatitis: Etiology and common pathogenesis World J Gastroenterol. 2009; 15(12): 1427-30." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Balani AR, Grendell JH. Drug-induced pancreatitis: incidence, management and prevention. Drug Saf. 2008; 31(10):823-37." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Urbánek K, Vinklerová I, Krystyník O, Procházka V. Acute pancreatitis induced by drugs. Acute Pancreatitis, 2012-01-18 N1 26183 UR. January 18, 2012" ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Tatley M. Drug-Induced Pancreatitis: An Unlucky DIP. URL: www.medsafe.govt.nz/profs/PUarticles/pancreati- tis.htm. Accessed: 25 September 2013." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Canadian Product Monograph for Vemurafenib. URL: http://webprod5.hc-sc.gc.ca/dpd-bdpp/item- iteme. do?pm-mp=00017920.Accessed: 25 September 2013." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Muluneh B, Buie LW, Collichio F. Vemurafenib- associated pancreatitis: case report. Pharmacotherapy. 2013 Apr; 33(4):e43-4." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Garg R, Chen W, Pendergrass M. Acute pancreatitis in type 2 diabetes treated with exenatide or sitagliptin. Diabetes Care. 2010 Nov; 33(11):2349-54." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "McCubrey JA, Steelman L, Chappell WH, Abrams SL, Wong EWT, Chang F et al. Roles of the Raf/MEK/ ERK pathway in cell growth, malignant transforma- tion and drug resistance. Biochim Biophys Acta. 2007 Aug;1773(8):1263-84." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Poulikakos IP, Zhang C, Bollag G, Shokat KM, Rosen N. RAF inhibitors transactivate RAF dimmers and ERK signaling in cells with wild-type BRAF. Nature. 2010 March 18; 464(7287):427-30." ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Rakonczay Jr Z, Hegyi P, Takàcs T, McCarrol J, Saluja AK. The role of NF-κB activation in the pathogenesis of acute pancreatitis. Gut 2008;57:259-67." ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ravnan MC, Mazen S, Matalka, MBA. Vemurafenib in Patients With BRAF V600E Mutation-Positive Advanced Melanoma. Clin Ther. 2012 Jul;34(7):1474-86." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Pezzilli R, Corinaldesi R, Morselli-Labate AM. Tyrosine kinase inhibitors and acute pancreatitis. JOP. J Pancrease (Online) 2010 May 5;11(3):291-3." ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Menzies AM, Long GV, Murali R. Dabrafenib and its potential for the treatment of metastatic melanoma. Drug Des Devel Ther. 2012;6:391-405." ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Zbytek B, Carlson JA, Granese J, Ross J, Mihm MC Jr, Slominski A. Current concepts of metastasis in mela- noma. Expert Rev Dermatol. 2008 October; 3(5):569-85." ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Food and Drug Administration. Zelboraf Label (September 2013) URL: http://www.accessdata.fda.gov/ drugsatfda_docs/label/2013/202429s002s003lbl.p df. Accessed: 21 September 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Chapman PB, Hauschild A, Robert C, Haanen JB, Ascierto P, Larkin J et al. Improved Survival with Vemurafenib in Melanoma with BRAF V600E Mutation. N Engl J Med. 2011 Jun 30; 364(26):2507-16." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Summary of Products Characteristics for Zelboraf (Ustekinumab 240 mg film-coated tablets). URL: http:// www.medicines.org.uk/emc/medicine/26056. Accessed: 21 September 2013." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Flaherty KT, Robert C, Hersey P, Nathan P, Garbe C, Milhem M et al. Improved Survival with MEK Inhibition in BRAF-Mutated Melanoma. N Engl J Med. 2012 Jul 12; 367(2):107-14." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Bhatia M, Wong FL, Cao Y, Lau HY, Huang J, Puneet P et al. Pathophysiology of acute pancreatitis. Pancreatology. 2005; 5(2-3):132-44. Epub 2005 Apr 21." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vege SS, Yadav D, Chari ST. Pancreatitis. In: GI Epidemiology, 1st ed, Talley NJ, Locke GR, Saito YA (Eds), Blackwell Publishing, Malden, MA 2007." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sekimoto M, Takada T, Kawarada Y, Hirata K, Mayumi T, Yoshida M et al. JPN Guidelines for the management of acute pancreatitis: epidemiology, etiology, natural history, and outcome predictors in acute pancreatitis. J Hepatobiliary Pancreat Surg. 2006;13(1):10-24." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :weight_for_cas_1 ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ,
+                                               :pleuralEffusion ,
+                                               :pleuriticPain ,
+                                               :squamousCellCarcinomaOfSkin ;
+         OpenPVSignal:refers_to_concomitant_drug :venlafaxine ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset1 ;
+         time:hasDurationDescription :durationOfTreatment1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :gastroenteritisViral ,
+                                                :guillain-barréSyndrome ,
+                                                :hepatitis ,
+                                                :pancreatitis ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :weight_for_case_11 ;
+          OpenPVSignal:refers_to_adverse_effect :pancreatitisAcute ;
+          OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                  :iodine ,
+                                                  :levothyroxine ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:time_to_onset :timeToOnset11 ;
+          time:hasDurationDescription :durationOfTreatment11 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :brainMetastases ,
+                                                :pancreatitis ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:time_to_onset :timeToOnset12 ;
+          OpenPVSignal:refers_to_outcome_after_action "irrelevant death" ;
+          OpenPVSignal:refers_to_partial_dechallenge_outcome "unknown" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :gastroenteritisViral ,
+                                                :guillain-barréSyndrome ,
+                                                :hepaticFunctionAbnormal ,
+                                                :hepatitis ,
+                                                :pancreatitis ,
+                                                :paralysisFacial ,
+                                                :paraneoplasticSyndrome ,
+                                                :polyneuropathyChronic ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :erysipelas ,
+                                                :pancreatitis ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:time_to_onset :timeToOnset14 ;
+          time:hasDurationDescription :durationOfTreatment14 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ,
+                                                :cholecystitis ,
+                                                :pancreatitisNecrotizing ;
+          OpenPVSignal:refers_to_concomitant_drug :candesartan ,
+                                                  :fentanyl ,
+                                                  :finasteride ,
+                                                  :metamizole ,
+                                                  :timolol ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sodiumbicarbonate/potassiumchloride/Sodiumchloride/macrogol3350> ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:time_to_onset :timeToOnset15 ;
+          time:hasDurationDescription :durationOfTreatment15 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :acetylsalicylicAcid ,
+                                                        :benorilate ,
+                                                        :domperidone ,
+                                                        :levothyroxine ,
+                                                        :pantoprazole ,
+                                                        :sodiumPicosulfate ,
+                                                        <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sodiumbicarbonate/potassiumchloride/Sodiumchloride/macrogol3350> ;
+          OpenPVSignal:time_to_onset :timeToOnset16 ;
+          time:hasDurationDescription :durationOfTreatment16 ;
+          OpenPVSignal:has_evaluation "Unrelated" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :pancreatitis ;
+          OpenPVSignal:refers_to_concomitant_drug :acetyll-caretene ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#codeinephosphate/paracetamol> ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :weight_for_case_18 ;
+          OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+          OpenPVSignal:refers_to_concomitant_drug :lisinopril ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :piperacillinSodium ;
+          OpenPVSignal:time_to_onset :timeToOnset18 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "irrelevant death" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :weight_for_cas_2 ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset2 ;
+         time:hasDurationDescription :durationOfTreatment2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :weight_for_cas_3 ;
+         OpenPVSignal:refers_to_adverse_effect :lipaseIncreased ,
+                                               :pancreatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :diltiazem ,
+                                                 :lisinopril ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset3 ;
+         time:hasDurationDescription :durationOfTreatment3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset4 ;
+         time:hasDurationDescription :durationOfTreatment4 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :arthralgia ,
+                                               :fatigue ,
+                                               :myalgia ,
+                                               :nausea ,
+                                               :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :weight_for_cas_6 ;
+         OpenPVSignal:refers_to_adverse_effect :arthralgia ,
+                                               :diarrhoea ,
+                                               :pancreatitis ,
+                                               :pyrexia ,
+                                               :rash ,
+                                               :renalFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :clonidine ,
+                                                 :docusate ,
+                                                 :glipizide ,
+                                                 :hydrochlorothiazide ,
+                                                 :metformin ,
+                                                 :metoprolol ,
+                                                 :omeprazole ,
+                                                 :potassium ,
+                                                 :valaciclovir ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valsartan/amlodipineBesilate> ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :weight_for_cas_7 ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset7 ;
+         time:hasDurationDescription :durationOfTreatment7 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_partial_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :lipaseIncreased ,
+                                               :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         time:hasDurationDescription :durationOfTreatment8 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:time_to_onset :timeToOnset9 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Reported_common_ADR_of_vemurafenib
+:Reported_common_ADR_of_vemurafenib rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Clinical_trial_information ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                                                          :arthralgia ,
+                                                                          :cutaneousSquamousCellCarcinoma ,
+                                                                          :diarrhoea ,
+                                                                          :fatigue ,
+                                                                          :headache ,
+                                                                          :hyperkeratosis ,
+                                                                          :keratoacanthoma ,
+                                                                          :nausea ,
+                                                                          :photosensitivity ,
+                                                                          :pruritus ,
+                                                                          :rash ,
+                                                                          :vomiting ;
+                                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                                    mp:references :Ref.4 ,
+                                                  :Ref.6 ;
+                                    OpenPVSignal:has_content "Reported common adverse reactions during randomized clinical trials were: arthralgia, rash, fatigue, photosensitivity, cutaneous squamous cell carcinoma, keratoacanthoma, nausea, alopecia, pruritus, hyperkeratosis, diarrhoea, headache, and vomiting.4,6" ;
+                                    rdfs:label "Reported common ADR of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                      OpenPVSignal:has_count 3 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromAustria
+:ReportsFromAustria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Austria" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromCroatia
+:ReportsFromCroatia rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Croatia" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Croatia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromHungary
+:ReportsFromHungary rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Hungary" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Hungary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsFromUnitedStates
+:ReportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                         OpenPVSignal:has_count 9 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from United States" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """Reports in VigiBase
+A total of 20 Individual Case Safety Reports (ICSRs) of vemurafenib associated with pancreatitis were retrieved from the WHO Global ICSR Database, VigiBase® on 23 September 2013. This combination has been identified as statistically disproportionate with an IC of 1.42 and an IC025 of 0.72. After the exclusion of two duplicates, 18 ICSRs were reviewed case by case (Table 1, page 52). The additional search terms amylase increased and lipase increased yielded a further five cases, two of which had already been captured using the pancreatitis search term, bringing the total number of cases for the assessment. The lipase and amylase results have been summarized in Table 2. All patients were either affected by malignant melanoma or metastatic malignant melanoma.
+The 18 ICSRs reporting pancreatitis came from the United States (nine), Australia (three), Germany (two), Austria (one), Switzerland (one), Croatia (one) and Hungary (one). Sex was provided for all cases, 11 of the patients were males. Age was not specified in eight of the cases; of the remaining 10 for which age was provided, three of the patients were between 18-44, three ranged from 45 to 64, three were 65-75 and two were more than 75 years old. Dose regimens were specified in 12 cases, the most common being 1920 mg per day (eight cases). Vemurafenib was the only suspected drug in 16 cases and the only reported drug in 10 cases. Co-suspected drugs were reported in only two ICSRs and those are listed, along with other concomitants, in Table 1. In only three cases concomitants for which pancreatitis is listed in the Summary of Product Characteristics were identified: case 3 and 18 (lisinopril) and case 6 (valsartan/amlodipine besilate and hydrochlorothiazide). However, in case 18, a list of more than 20 drugs was reported but no dates of treatment were provided.
+The patient’s weight alone was reported in six cases: 64 kg (case 1), 90 kg (case 2), 166 kg
+(case 3), 99 kg (case 6), 66 kg (case 7), 72 kg (case 18). Sufficient information to calculate Body Mass Index was provided in only one case, (case 11, BMI 28). History of alcohol abuse and gallstones was not reported for any of the patients.
+Time to onset was clearly reported in 11 cases and ranged between three days to five months. In one occasion (case 12) the exact start date was not reported although the starting month is known
+ 
+and so is the month of reaction onset. In the remaining six cases, there are no specified dates or only the starting day was reported.
+Amylase values were included in four cases, one of which was confounded by metastases, and ranged roughly between 3 and 16 times the upper limit of normal.
+Lipase values were included in three reports and ranged from 10 to 30 times the upper limit of normal.
+In case 3a (Table 2), the MAH reported an “analysis of similar events” related to lipase increased values. It was stated that three cases were found in the MAH database, one of which was assessed as related to vemurafenib while two were not (due to a prior history of pancreatitis).
+In five of 18 cases, a positive dechallenge could be seen. In 10 of the 18 cases the drug was withdrawn; five recovered or were recovering, one recovered with sequelae, one did not recover (in this case the medication was reintroduced but no outcome information was provided), one died (cause of death was said to be disease progression) and in two patients the outcome of the dechallenge was unknown. One of the five patients that recovered was re-exposed at a lower dose and there was no recurrence of pancreatitis.
+In one case the dose was lowered and the outcome of pancreatitis was unknown. Of the seven remaining patients no information was provided on the action taken in relation to vemurafenib: the outcome was reported as recovered for two patients, not recovered for one patient and unknown for the remaining four.
+Co-morbidities included: pancreatic metastases (case 4), diabetes (case 6 – formally not reported, but patient undergoing diabetes type II therapy, case 18), polyneuropathy, lung metastasis and anaemia (case 11), brain metastasis (case 12), hypertension (case 6, 15, 18).
+Causality was assessed as “possible” by the reporters in five cases, two of which were reported by the manufacturer, it was assesed as“certain” in one case and “related” in another two. Where co- suspected drugs were specified, causality was considered as “unlikely”.""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportsWith1920Mg
+:ReportsWith1920Mg rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                   OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#1920_mg_dose> ;
+                   OpenPVSignal:has_count 8 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports with 1920 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Response_from_Roche
+:Response_from_Roche rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Vemurafenib_and_Pancreatitis ;
+                     OpenPVSignal:has_content "Thank you for providing Roche an opportunity to read and comment on the signal of Pancreatitis. As early as July 2012, an assessment was conducted by Roche following identification by both Roche and the EMA Pharmacovigilance Risk Assessment Committee of pancreatitis as a potential signal. At that time, eighteen (18) reports of pancreatitis had been received when the estimated exposure worldwide to vemurafenib was 4,500 corresponding to a reporting rate of 0.40%. Of the 18 reports, 12 cases were from clini- cal studies. Overall, these 12 cases did not suggest a particular pattern of time to onset or duration. Four cases were reported in the first week (day 1, 2, 3, and 6) and the rest were distributed across a wide range of time points up to 2 years after start of vemurafenib treatment. Similarly, the duration of the AE ranged from 3 to 158 days. The remaining 6 cases were from spontaneous reports with very limited data available. Case analysis also revealed one or more confounding factors in the 18 cases such as concomitant medications, history of pre-existing pancreatitis, hyperlipidemia, gallstones, and metastases to the pancreas. The review concluded that there was no definitive evidence to show a causal association between vemurafenib and pancreatitis based on the safety information of the 18 case reports. In addition the incidence of pancreatitis seen was within the rate observed among malignant melanoma patients from other databases (Surveillance Epidemiology and End Results (SEER), US Healthcare Claims). This review was presented within the Periodic Safety Update Report covering the period 17 February 2012 to 16 August 2012. A second assessment on this signal was again undertaken in February to March of this year. Cumulative review of information from pre-clinical, published literature, and the Roche safety database (cut-off date of 04 March 2013) was performed. In this assessment, the Roche global safety database was searched using the Standard MedDRA Query (SMQ) for acute pancreatitis. Overall, 31 cases were retrieved of which 24 cases were reported as pancreatitis and 7 cases were reported as abnormal pancreatic enzymes. Each case was then medically reviewed to assess causal relation- ship. Causality assessment was mainly based on onset latency, absence of major confounding factors and positive rechallenge (if documented). Of the 31 cases, 13 cases were assessed as probable pancreatitis based on a predefined case definition, of which only 5 were assessed to have a likely causal association to vemurafenib. This review was submitted with the Periodic Safety Update Report covering the period 17 August 2013 to 16 February 2013. Roche also followed up with the authors of the Literature article that the WHO has referenced in their article: Vemurafenib associated pancreatitis: case report. Muluneh, B., Buie, L W and Collichio, F. Feb 22, 2013, Pharmacotherapy. In our conference call with one of the authors, it was confirmed that although the patient was hospitalized for this event, the diagnosis of acute pancreatitis was not supported by CT or ultrasound and that the positive rechallenge diagnosis was not confirmed by either imaging or pancreatic enzymes and was based on an episode of “epigastric pain”. In addition, the number of reported cases of pancreatitis was compared to the background incidence of pancreatitis among patients with distantly metas- tatic melanoma from 3 databases. Using a conservative analysis, whereby all the 24 reports of pancreatitis (as of 04 March 2013) are considered, and with an estimated exposure worldwide to Zelboraf at 14,283 patients (as of February 2013), this corresponds to a reporting rate of 0.16%. This is in the same range as the incidence seen in the General Practice Research Database, MarketScan and SEER (GPRD database: 0.18%, MarketScan: 0.6% and SEER data (men and women combined): 1.3% (95% CI: 0.4 – 2.3). The second review also concluded that there was no strong evidence to suggest a causal association between vemurafenib and acute pancreatitis. Roche continues to closely monitor the event of pancreatitis." ;
+                     rdfs:label "Response from Roche" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SmPC_for_hydrochlorothiazide
+:SmPC_for_hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Structured_Product_Labels_information ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                              OpenPVSignal:refers_to_drug :hydrochlorothiazide ;
+                              rdfs:label "SmPC for hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SmPC_for_lisinopril
+:SmPC_for_lisinopril rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Structured_Product_Labels_information ,
+                              OpenPVSignal:Warning_Information ;
+                     OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                     OpenPVSignal:refers_to_drug :lisinopril ;
+                     rdfs:label "SmPC for lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Vemurafenib is a serine threonine protein kinase inhibitor, which inhibits the kinase activity of mutated B-Raf protein. The drug received FDA approval in August 2011 for use in the treatment of metastatic or unresectable malignant melanoma that is positive for the BRAF V600E mutation. This molecule interferes with the RAS-RAF-MEK-ERK pathway, which is involved in the regulation of cell proliferation, survival, differentiation and apoptosis. As of September 2013, 20 Individual Case Safety Reports (ICSRs) have been submitted from seven different countries to the WHO Global ICSR Database, VigiBase®, in which vemurafenib is associated with pancreatitis. Several reports showed similarities in terms of dosage administered, time to onset, laboratory values, outcome and in many cases vemurafenib was the only drug reported. In the following assessment the evidence for a possible link between vemurafenib and pancreatitis, a serious and potentially life-threatening condition was examined. In addition to the cases identified during the routine screening of VigiBase, we also examined reports for vemurafenib that included related terms for increased amylase and lipase enzymes, which may also indicate pancreatitis.
+Evidence to support a signal between vemurafenib and pancreatitis included: an analogy with other kinase and BRAF inhibitors suggesting a plausible mechanism of action, coherence in laboratory findings (increased lipase and amylase values) that indicate pancreatic sufferance, consistency in terms of posology and temporal response after drug intake.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Vemurafenib_and_Pancreatitis
+:Vemurafenib_and_Pancreatitis rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                              OpenPVSignal:refers_to_author :Daniele_Sartori ;
+                              OpenPVSignal:refers_to_signal :pvSignal ;
+                              mp:publishedBy :Uppsala_Monitoring_Centre ;
+                              OpenPVSignal:has_creation_date "01/05/2014" ;
+                              OpenPVSignal:has_overall_conclusion "causal association" ;
+                              rdfs:label "Vemurafenib and Pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R109" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#acetyll-caretene
+:acetyll-caretene rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "N06BX12" ;
+                  rdfs:label "acetyl l carnitine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#aciclovir
+:aciclovir rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AB01" ;
+           rdfs:label "aciclovir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#acutePancreatitis
+:acutePancreatitis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "K859" ;
+                   OpenPVSignal:has_MedDRA_code 10033647 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis acute" ;
+                   rdfs:label "acute pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#acuteRenalFailure
+:acuteRenalFailure rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N179" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" ;
+                   rdfs:label "acute renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#alcoholAbuse
+:alcoholAbuse rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "F101 " ;
+              OpenPVSignal:has_MedDRA_code 10001584 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Alcohol abuse" ;
+              rdfs:label "alcohol abuse" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#alopecia
+:alopecia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L659" ;
+          OpenPVSignal:has_MedDRA_code 10001760 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Alopecia" ;
+          rdfs:label "alopecia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#amylaseIncreased
+:amylaseIncreased rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R748" ;
+                  OpenPVSignal:has_MedDRA_code 10002016 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Amylase increased" ;
+                  rdfs:label "amylase increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#animal_studies
+:animal_studies rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001182 ;
+                mp:references :Ref.5 ;
+                OpenPVSignal:has_content "Animal studies on vemurafenib did not reveal pancreatitis.5" ;
+                rdfs:label "animal studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#arthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M2550" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#benorilate
+:benorilate rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BA10" ;
+            rdfs:label "benorilate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#brainMetastases
+:brainMetastases rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "C7949" ;
+                 OpenPVSignal:has_MedDRA_code 10006128 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Brain metastases" ;
+                 rdfs:label "brain metastases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#calcium
+:calcium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A11AA02" ,
+                                   "A11GB01" ,
+                                   "M05BB01" ,
+                                   "M05BB02" ,
+                                   "M05BB04" ,
+                                   "M05BB05" ,
+                                   "M05BB08" ;
+         rdfs:label "calcium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#candesartan
+:candesartan rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09CA06" ,
+                                       "C09DA06" ,
+                                       "C09DB07" ;
+             rdfs:label "candesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#casesOfSeverePancreatitis
+:casesOfSeverePancreatitis rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Statistical_Entity ;
+                           OpenPVSignal:refers_to_adverse_effect :pancreatitisAcute ;
+                           OpenPVSignal:has_content "0.25" ;
+                           rdfs:label "cases of severe pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#cholecystitis
+:cholecystitis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K810" ;
+               OpenPVSignal:has_MedDRA_code 10008612 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Cholecystitis" ;
+               rdfs:label "cholecystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#clonidine
+:clonidine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C02AC01" ,
+                                     "C02LC01" ,
+                                     "C02LC51" ,
+                                     "N02CX02" ,
+                                     "S01EA04" ;
+           rdfs:label "clonidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#concomitant_drugs
+:concomitant_drugs rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001182 ;
+                   OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                   OpenPVSignal:refers_to_drug :hydrochlorothiazide ,
+                                               :lisinopril ,
+                                               <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valsartan/amlodipineBesilate> ;
+                   OpenPVSignal:has_content "In only three cases concomitants for which pancreatitis is listed in the Summary of Product Characteristics were identified: case 3 and 18 (lisinopril) and case 6 (valsartan/amlodipine besilate and hydrochlorothiazide)." ;
+                   rdfs:label "concomitant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#contributingFactorTopancreatitis-alcoholAbuse
+:contributingFactorTopancreatitis-alcoholAbuse rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Statistical_Entity ;
+                                               OpenPVSignal:refers_to_adverse_effect :alcoholAbuse ,
+                                                                                     :pancreatitis ;
+                                               OpenPVSignal:has_content "0.36" ;
+                                               rdfs:label "contributing factor to pancreatitis-alcohol abuse" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#contributingFactorTopancreatitis-gallstones
+:contributingFactorTopancreatitis-gallstones rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Statistical_Entity ;
+                                             OpenPVSignal:refers_to_adverse_effect :gallstones ,
+                                                                                   :pancreatitis ;
+                                             OpenPVSignal:has_content "0.38" ;
+                                             rdfs:label "contributing factor to pancreatitis-gallstones" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#cutaneousSquamousCellCarcinoma
+:cutaneousSquamousCellCarcinoma rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_MedDRA_code 10041823 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Squamous cell carcinoma" ;
+                                rdfs:label "cutaneous squamous cell carcinoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#dabrafenib
+:dabrafenib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "L01XE23" ;
+            rdfs:label "dabrafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#dexamethasone
+:dexamethasone rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A01AC02" ,
+                                         "C05AA09" ,
+                                         "D07AB19" ,
+                                         "D07CB04" ,
+                                         "D07XB05" ,
+                                         "D10AA03" ,
+                                         "H02AB02" ,
+                                         "R01AD03" ,
+                                         "R01AD53" ,
+                                         "S01BA01" ,
+                                         "S01CA01" ,
+                                         "S01CB01" ,
+                                         "S02BA06" ,
+                                         "S02CA06" ,
+                                         "S03BA01" ,
+                                         "S03CA01" ;
+               rdfs:label "dexamethasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#diltiazem
+:diltiazem rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C05AE03" ,
+                                     "C08DB01" ;
+           rdfs:label "diltiazem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#docusate
+:docusate rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A06AA02" ;
+          rdfs:label "docusate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#domperidone
+:domperidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A03FA03" ;
+             rdfs:label "domperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#drugInducedPancreatitis
+:drugInducedPancreatitis rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Incidence ;
+                         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                         OpenPVSignal:has_content "0.1-2%" ;
+                         rdfs:label "drug induced pancreatitis incidence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#drugUsageOfVemurafenib
+:drugUsageOfVemurafenib rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Drug_Usage ;
+                        OpenPVSignal:concerns_indication_for_use :BRAF_V600E_mutation_positive ,
+                                                                 :malignantMelanoma ;
+                        OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                        OpenPVSignal:refers_to_dosage :DoseOfVemurafenib ;
+                        OpenPVSignal:refers_to_drug :vemurafenib ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ;
+                        rdfs:label "drug usage of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment1
+:durationOfTreatment1 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "126 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 126 ;
+                      rdfs:label "duration of treatment 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment11
+:durationOfTreatment11 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "3 days" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 3 ;
+                       rdfs:label "duration of treatment 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment14
+:durationOfTreatment14 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "> 4 days" ;
+                       rdfs:label "duration of treatment 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment15
+:durationOfTreatment15 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "30 days" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 30 ;
+                       rdfs:label "duration of treatment 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment16
+:durationOfTreatment16 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "156 days" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 156 ;
+                       rdfs:label "duration of treatment 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment2
+:durationOfTreatment2 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "18 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 18 ;
+                      rdfs:label "duration of treatment 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment3
+:durationOfTreatment3 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "4 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 4 ;
+                      rdfs:label "duration of treatment 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment4
+:durationOfTreatment4 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "64 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 64 ;
+                      rdfs:label "duration of treatment 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment7
+:durationOfTreatment7 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "5 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 5 ;
+                      rdfs:label "duration of treatment 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatment8
+:durationOfTreatment8 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "370 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 370 ;
+                      rdfs:label "duration of treatment 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#erysipelas
+:erysipelas rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "A46" ;
+            OpenPVSignal:has_MedDRA_code 10015145 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Erysipelas" ;
+            rdfs:label "erysipelas" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#etoricoxib
+:etoricoxib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M01AH05" ;
+            rdfs:label "etoricoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ,
+                                   "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#fentanyl
+:fentanyl rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AH01" ,
+                                    "N01AH51" ,
+                                    "N02AB03" ;
+          rdfs:label "fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#finasteride
+:finasteride rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "D11AX10" ,
+                                       "G04CA51" ,
+                                       "G04CB01" ;
+             rdfs:label "finasteride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#gallstones
+:gallstones rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "K8020" ;
+            OpenPVSignal:has_MedDRA_code 10017650 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Gallstones" ;
+            rdfs:label "gallstones" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#gastroenteritisViral
+:gastroenteritisViral rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "A084" ;
+                      OpenPVSignal:has_MedDRA_code 10017918 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Gastroenteritis viral" ;
+                      rdfs:label "gastroenteritis viral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#gentamicin
+:gentamicin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D06AX07" ,
+                                      "J01GB03" ,
+                                      "S01AA11" ,
+                                      "S02AA14" ,
+                                      "S03AA06" ;
+            rdfs:label "gentamicin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#glipizide
+:glipizide rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BB07" ;
+           rdfs:label "glipizide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#guillain-barréSyndrome
+:guillain-barréSyndrome rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10018766 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Guillain Barre syndrome" ;
+                        rdfs:label "Guillain Barre syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hepaticFunctionAbnormal
+:hepaticFunctionAbnormal rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "R945" ;
+                         OpenPVSignal:has_MedDRA_code 10019670 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic function abnormal" ;
+                         rdfs:label "hepatic function abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hepatitis
+:hepatitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "B199" ;
+           OpenPVSignal:has_MedDRA_code 10019717 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hepatitis" ;
+           rdfs:label "hepatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hyperkeratosis
+:hyperkeratosis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "L859" ;
+                OpenPVSignal:has_MedDRA_code 10020649 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperkeratosis" ;
+                rdfs:label "hyperkeratosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020775 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension arterial" ;
+              rdfs:label "hypertension arterial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hysterectomy
+:hysterectomy rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "Z90710" ;
+              OpenPVSignal:has_MedDRA_code 10021151 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hysterectomy" ;
+              rdfs:label "hysterectomy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#hysterectomyNos
+:hysterectomyNos rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "Z90710" ;
+                 OpenPVSignal:has_MedDRA_code 10021151 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Hysterectomy" ;
+                 rdfs:label "hysterectomy nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ,
+                                     "G02CC01" ,
+                                     "M01AE01" ,
+                                     "M01AE51" ,
+                                     "M02AA13" ,
+                                     "R02AX02" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#incidenceOfChronicPancreatitis
+:incidenceOfChronicPancreatitis rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Incidence ;
+                                OpenPVSignal:refers_to_adverse_effect :pancreatitis_chronic ;
+                                OpenPVSignal:has_content "3-13%" ;
+                                rdfs:label "incidence of chronic pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#incidenceOfPancreatitis
+:incidenceOfPancreatitis rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Incidence ;
+                         OpenPVSignal:refers_to_adverse_effect :pancreatitisAcute ;
+                         OpenPVSignal:has_content "4.9 to 35 per 100,000 people" ;
+                         rdfs:label "incidence of pancreatitis " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#introduction_content
+:introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.10 ,
+                                    :Ref.11 ,
+                                    :Ref.12 ,
+                                    :Ref.13 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ,
+                                    :Ref.4 ,
+                                    :Ref.5 ,
+                                    :Ref.6 ,
+                                    :Ref.7 ,
+                                    :Ref.8 ,
+                                    :Ref.9 ;
+                      OpenPVSignal:has_content "Vemurafenib (Zelboraf®), a serine threonine protein kinase inhibitor, received FDA approval in August 2011 for use in the treatment of metastatic or unresectable malignant melanoma that is positive for the BRAF V600E mutation. The drug is active in the RAS-RAF-MEK-ERK pathway, which is involved in the regulation of cell proliferation, survival, differentiation and apoptosis. Vemurafenib competes with adenosine-triphosphate (ATP) to reversibly and selectively inhibit the V600E mutated BRAF kinase, by preventing its phosphorylation mediated activation.1 The drug is administered orally as 240 mg tablets,2 usually 3-8 tablets per day. Vemurafenib is metabolized by CYP3A4 and mostly excreted in the faeces (94%), up to 5% of its metabolites can be found in plasma.3 Compared to dacarbazine, the only other FDA approved drug for the treatment of metastatic melanoma, vemurafenib was found to halt the progression of stage III and stage IV previously untreated V600E mutation positive melanomas for a median of 5.4 months versus 1.6 months.4 Animal studies on vemurafenib did not reveal pancreatitis.5 Reported common adverse reactions during randomized clinical trials were: arthralgia, rash, fatigue, photosensitivity, cutaneous squamous cell carcinoma, keratoacanthoma, nausea, alopecia, pruritus, hyperkeratosis, diarrhoea, headache, and vomiting.4,6 Acute pancreatitis is a clinical condition, the annual incidence of which is 4.9 to 35 per 100,000 people, characterized by inflammatory symptoms of individual degrees of manifestation; it can be self-limiting to the point of not requiring treatment but may also be severe (25% of the cases), leading to death due to multi-organ failure (30- 50% mortality associated with severe pancreatitis;7,8 the majority of cases follow an acute course, but 3 to 13% of the cases become chronic).9 The pathophysiological mechanisms leading to acute pancreatitis have yet to be fully understood. It is accepted that the initial inflammatory response involves the destruction of acinar cells through apoptotic or necrotic mechanisms with consequent leakage of pancreatic digestive enzymes, effectively leading to an autodigestion of the organ. A number of factors may contribute to the development of pancreatitis, including but not limited to gallstones (38% of the cases), alcohol abuse (36%), infectious or toxic causes. 7,10 Laboratory tests for the diagnosis of pancreatitis involve amylase and lipase measurements. Drug induced pancreatitis inci- dence is estimated to be 0.1-2%.11 Time to onset for drug induced pancreatitis varies greatly as it could range from one day to several months.12,13" ;
+                      rdfs:label "introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#iodine
+:iodine rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Drug ;
+        OpenPVSignal:has_ATC_code "D08AG03" ;
+        rdfs:label "iodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#keratoacanthoma
+:keratoacanthoma rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "L858" ;
+                 OpenPVSignal:has_MedDRA_code 10023347 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Keratoacanthoma" ;
+                 rdfs:label "keratoacanthoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#lacosamide
+:lacosamide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX18" ;
+            rdfs:label "lacosamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#levetiracetam
+:levetiracetam rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AX14" ;
+               rdfs:label "levetiracetam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#lipaseIncreased
+:lipaseIncreased rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R748" ;
+                 OpenPVSignal:has_MedDRA_code 10024574 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Lipase increased" ;
+                 rdfs:label "lipase increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#lisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03" ,
+                                      "C09BA03" ,
+                                      "C09BB03" ,
+                                      "C10BX07" ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#literature_report
+:literature_report rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001197 ;
+                   OpenPVSignal:concerns_indication_for_use :malignantMelanoma ;
+                   OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                   OpenPVSignal:refers_to_drug :vemurafenib ;
+                   mp:references :Ref.15 ;
+                   OpenPVSignal:has_content "There is one case report in the literature of a 49- year-old male with stage IV melanoma who developed pancreatitis two weeks after starting treatment with vemurafenib. He recovered following withdrawal of the drug, but pancreatitis recurred on rechallenge. His symptoms disappeared after permanent discontinuation of vemurafenib. All other possible causes were ruled out.15" ;
+                   rdfs:label "literature report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#malignantMelanoma
+:malignantMelanoma rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "C43.9" ;
+                   OpenPVSignal:has_MedDRA_code 10025650 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Malignant melanoma" ;
+                   rdfs:label "Malignant melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#metamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02" ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ,
+                                     "A10BD02" ,
+                                     "A10BD03" ,
+                                     "A10BD05" ,
+                                     "A10BD07" ,
+                                     "A10BD08" ,
+                                     "A10BD10" ,
+                                     "A10BD11" ,
+                                     "A10BD13" ,
+                                     "A10BD14" ,
+                                     "A10BD15" ,
+                                     "A10BD16" ,
+                                     "A10BD17" ,
+                                     "A10BD18" ,
+                                     "A10BD20" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#mortalityRateInCasesOfPancreatitis
+:mortalityRateInCasesOfPancreatitis rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Statistical_Entity ;
+                                    OpenPVSignal:refers_to_adverse_effect :acutePancreatitis ;
+                                    OpenPVSignal:has_content "0.5" ;
+                                    rdfs:label "mortality rate in cases of pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#myalgia
+:myalgia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "M791" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#no_pancreatic_metastasis
+:no_pancreatic_metastasis rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001197 ;
+                          mp:references :Ref.22 ;
+                          OpenPVSignal:has_content "It should also be noted that the malignancy does not commonly metastasize to the pancreas22 and no evidence of pancreatic metastasis was reported in the majority of the cases." ;
+                          rdfs:label "no pancreatic metastasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ,
+                                      "A02BD01" ,
+                                      "A02BD05" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#one_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pancreatitis
+:pancreatitis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K85" ;
+              OpenPVSignal:has_MedDRA_code 10033645 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis" ;
+              rdfs:label "pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pancreatitisAcute
+:pancreatitisAcute rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "K859" ;
+                   OpenPVSignal:has_MedDRA_code 10033647 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis acute" ;
+                   rdfs:label "pancreatitis acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pancreatitisNecrotizing
+:pancreatitisNecrotizing rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "K8592" ;
+                         OpenPVSignal:has_MedDRA_code 10033654 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis necrotising" ;
+                         rdfs:label "pancreatitis necrotizing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pancreatitis_chronic
+:pancreatitis_chronic rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10033649 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis chronic" ;
+                      rdfs:label "pancreatitis chronic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pancreatitis_pathophysiology
+:pancreatitis_pathophysiology rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Free_text_reporting_element ;
+                              OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                              mp:references :Ref.10 ,
+                                            :Ref.12 ,
+                                            :Ref.13 ,
+                                            :Ref.7 ,
+                                            :Ref.8 ,
+                                            :Ref.9 ;
+                              OpenPVSignal:has_content "Acute pancreatitis is a clinical condition, the annual incidence of which is 4.9 to 35 per 100,000 people, characterized by inflammatory symptoms of individual degrees of manifestation; it can be self-limiting to the point of not requiring treatment but may also be severe (25% of the cases), leading to death due to multi-organ failure (30- 50% mortality associated with severe pancreatitis;7,8 the majority of cases follow an acute course, but 3 to 13% of the cases become chronic).9 The pathophysiological mechanisms leading to acute pancreatitis have yet to be fully understood. It is accepted that the initial inflammatory response involves the destruction of acinar cells through apoptotic or necrotic mechanisms with consequent leakage of pancreatic digestive enzymes, effectively leading to an autodigestion of the organ. A number of factors may contribute to the development of pancreatitis, including but not limited to gallstones (38% of the cases), alcohol abuse (36%), infectious or toxic causes. 7,10 Laboratory tests for the diagnosis of pancreatitis involve amylase and lipase measurements. Drug induced pancreatitis inci- dence is estimated to be 0.1-2%.11 Time to onset for drug induced pancreatitis varies greatly as it could range from one day to several months.12,13" ;
+                              rdfs:label "pancreatitis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#paralysisFacial
+:paralysisFacial rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "G510" ;
+                 OpenPVSignal:has_MedDRA_code 10016062 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Facial paralysis" ;
+                 rdfs:label "paralysis facial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#paraneoplasticSyndrome
+:paraneoplasticSyndrome rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "G130" ;
+                        OpenPVSignal:has_MedDRA_code 10059420 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Paraneoplastic syndrome" ;
+                        rdfs:label "paraneoplastic syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#photosensitivity
+:photosensitivity rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "L568" ;
+                  OpenPVSignal:has_MedDRA_code 10034972 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Photosensitivity reaction" ;
+                  rdfs:label "photosensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#piperacillinSodium
+:piperacillinSodium rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "J01CG02" ,
+                                              "J01CR05" ;
+                    rdfs:label "piperacillin sodium / tazobactam sodium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pleuralEffusion
+:pleuralEffusion rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "J90" ;
+                 OpenPVSignal:has_MedDRA_code 10035598 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pleural effusion" ;
+                 rdfs:label "pleural effusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pleuriticPain
+:pleuriticPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code " R091" ;
+               OpenPVSignal:has_MedDRA_code 10035623 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Pleuritic pain" ;
+               rdfs:label "pleuritic pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#polyneuropathyChronic
+:polyneuropathyChronic rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "G629" ;
+                       OpenPVSignal:has_MedDRA_code 10064135 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy chronic" ;
+                       rdfs:label "polyneuropathy chronic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#potassium
+:potassium rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "B05XA17" ,
+                                     "C03AB01" ,
+                                     "C03AB02" ,
+                                     "C03AB03" ,
+                                     "C03AB04" ,
+                                     "C03AB05" ,
+                                     "C03AB06" ,
+                                     "C03AB07" ,
+                                     "C03AB08" ,
+                                     "C03AB09" ,
+                                     "C03BB02" ,
+                                     "C03BB03" ,
+                                     "C03BB04" ,
+                                     "C03BB05" ,
+                                     "C03BB07" ,
+                                     "C03CB01" ,
+                                     "C03CB02" ;
+           OpenPVSignal:has_MedDRA_code 10005721 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Blood potassium" ;
+           rdfs:label "potassium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pregabalin
+:pregabalin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX16" ;
+            rdfs:label "pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L299" ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :introduction_content ,
+                                                   :pancreatitis_pathophysiology ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report17 ,
+                                                              :Report18 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ,
+                                                              <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient1> ,
+                                                              <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient2> ,
+                                                              <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient3> ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ValueOfVemurafenibAndPancreatitis ,
+                                                          :ICValueOfVemurafenibAndPancreatitis ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromAustria ,
+                                                          :ReportsFromCroatia ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromHungary ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsFromUnitedStates ,
+                                                          :ReportsWith1920Mg ,
+                                                          :casesOfSeverePancreatitis ,
+                                                          :contributingFactorTopancreatitis-alcoholAbuse ,
+                                                          :contributingFactorTopancreatitis-gallstones ,
+                                                          :drugInducedPancreatitis ,
+                                                          :incidenceOfChronicPancreatitis ,
+                                                          :incidenceOfPancreatitis ,
+                                                          :mortalityRateInCasesOfPancreatitis ,
+                                                          :reportsForAnalysisWithoutDuplicates ,
+                                                          :reportsInVigibaseForVemurafenibAndPancreatitis ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithVemurafenibBeingTheOnlyDrug ,
+                                                          :reportsWithVemurafenibBeingTheOnlySuspectDrug ,
+                                                          :reports_with_18-44 ,
+                                                          :reports_with_45-64 ,
+                                                          :reports_with_65-75 ,
+                                                          :reports_with_certain_causality ,
+                                                          :reports_with_over_75 ,
+                                                          :reports_with_possible_causality ,
+                                                          :reports_with_related_causality ;
+          OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+          OpenPVSignal:refers_to_drug :vemurafenib ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          mp:supportedByData :PhaseIIIStudies ,
+                             :Reported_common_ADR_of_vemurafenib ,
+                             :SmPC_for_hydrochlorothiazide ,
+                             :SmPC_for_lisinopril ,
+                             :animal_studies ,
+                             :concomitant_drugs ,
+                             :literature_report ,
+                             :no_pancreatic_metastasis ,
+                             <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SmPC_for_valsartan_/_amlodipine_besilate> ,
+                             <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#dabrafenib/sorafenibADRs> ;
+          OpenPVSignal:initially_identified_on "01/05/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#pyrexia
+:pyrexia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R509" ;
+         OpenPVSignal:has_MedDRA_code 10037660 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+         rdfs:label "pyrexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#rash
+:rash rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      rdfs:label "rash" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#renalFailure
+:renalFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "N189" ;
+              OpenPVSignal:has_MedDRA_code 10038435 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal failure" ;
+              rdfs:label "renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reportsForAnalysisWithoutDuplicates
+:reportsForAnalysisWithoutDuplicates rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:concerns_indication_for_use :malignantMelanoma ;
+                                     OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                                     OpenPVSignal:has_count 18 ;
+                                     OpenPVSignal:has_count_of_men 11 ;
+                                     OpenPVSignal:has_count_of_women 7 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "overall reports for analysis without duplicates" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reportsInVigibaseForVemurafenibAndPancreatitis
+:reportsInVigibaseForVemurafenibAndPancreatitis rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:has_count 20 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "reports in vigibase for vemurafenib and pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                OpenPVSignal:has_count 5 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reportsWithVemurafenibBeingTheOnlyDrug
+:reportsWithVemurafenibBeingTheOnlyDrug rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                        OpenPVSignal:refers_to_drug :vemurafenib ;
+                                        OpenPVSignal:has_count 10 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with vemurafenib being the only drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reportsWithVemurafenibBeingTheOnlySuspectDrug
+:reportsWithVemurafenibBeingTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                                               OpenPVSignal:has_count 16 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "reports with vemurafenib being the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_18-44
+:reports_with_18-44 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:has_max_age 44 ;
+                    OpenPVSignal:has_min_age 18 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports with 18-44" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_45-64
+:reports_with_45-64 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:has_max_age 64 ;
+                    OpenPVSignal:has_min_age 45 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports with 45-64" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_65-75
+:reports_with_65-75 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:has_max_age 75 ;
+                    OpenPVSignal:has_min_age 65 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports with 65-75" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_certain_causality
+:reports_with_certain_causality rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:has_evaluation "Certain" ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with certain causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_over_75
+:reports_with_over_75 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:has_min_age 76 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports with over 75" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_possible_causality
+:reports_with_possible_causality rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                 OpenPVSignal:has_count 5 ;
+                                 OpenPVSignal:has_evaluation "Possible" ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with possible causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#reports_with_related_causality
+:reports_with_related_causality rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsForAnalysisWithoutDuplicates ;
+                                OpenPVSignal:has_count 2 ;
+                                OpenPVSignal:has_evaluation "Certain" ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with related causality" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#smoker
+:smoker rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Past_Diagnosis ;
+        OpenPVSignal:has_ICD_code "Z720" ;
+        OpenPVSignal:has_MedDRA_code 10057581 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tobacco user" ;
+        rdfs:label "smoker" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sodiumPicosulfate
+:sodiumPicosulfate rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug ;
+                   OpenPVSignal:has_ATC_code "A06AB08" ;
+                   rdfs:label "sodium picosulfate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sorafenib
+:sorafenib rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L01XE05" ;
+           rdfs:label "sorafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#squamousCellCarcinomaOfSkin
+:squamousCellCarcinomaOfSkin rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect ;
+                             OpenPVSignal:has_ICD_code "C4492" ;
+                             OpenPVSignal:has_MedDRA_code 10041834 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Squamous cell carcinoma of skin" ;
+                             rdfs:label "squamous cell carcinoma of skin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset1
+:timeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "81 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 81 ;
+              rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset11
+:timeToOnset11 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "3 days" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 3 ;
+               rdfs:label "time to onset 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset12
+:timeToOnset12 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "1-60 days" ;
+               time:nominalPosition "days" ;
+               time:numericDuration 59 ;
+               time:numericPosition 1 ;
+               rdfs:label "time to onset 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset14
+:timeToOnset14 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "4 days" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 4 ;
+               rdfs:label "time to onset 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset15
+:timeToOnset15 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "29 days" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 29 ;
+               rdfs:label "time to onset 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset16
+:timeToOnset16 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "156 days" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 156 ;
+               rdfs:label "time to onset 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset18
+:timeToOnset18 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "41 days" ;
+               time:nominalPosition "days" ;
+               time:numericPosition 41 ;
+               rdfs:label "time to onset 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset2
+:timeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "15 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 15 ;
+              rdfs:label "time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset3
+:timeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "4 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 4 ;
+              rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset4
+:timeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "59 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 59 ;
+              rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset7
+:timeToOnset7 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "5 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 5 ;
+              rdfs:label "time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnset9
+:timeToOnset9 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "5 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 5 ;
+              rdfs:label "time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timolol
+:timolol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C07AA06" ,
+                                   "C07BA06" ,
+                                   "C07DA06" ,
+                                   "S01ED01" ,
+                                   "S01ED51" ;
+         rdfs:label "timolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ,
+                                    "N02AX52" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valaciclovir
+:valaciclovir rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J05AB11" ,
+                                        "R03DA20" ;
+              rdfs:label "valaciclovir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#vemurafenib
+:vemurafenib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfAEByVemurafenib ,
+                                        :MechanismOfAction ;
+             OpenPVSignal:has_ATC_code "L01XE15" ;
+             rdfs:label "vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ,
+                                    "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_cas_1
+:weight_for_cas_1 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "64 kg" ;
+                  rdfs:label "weight for case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_cas_2
+:weight_for_cas_2 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "90 kg" ;
+                  rdfs:label "weight for case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_cas_3
+:weight_for_cas_3 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "166 kg" ;
+                  rdfs:label "weight for case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_cas_6
+:weight_for_cas_6 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "99 kg" ;
+                  rdfs:label "weight for case 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_cas_7
+:weight_for_cas_7 rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Case_Report_Information ;
+                  OpenPVSignal:has_content "66 kg" ;
+                  rdfs:label "weight for case 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_case_11
+:weight_for_case_11 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Case_Report_Information ;
+                    OpenPVSignal:has_content "Sufficient information to calculate Body Mass Index was provided in only one case, (case 11, BMI 28)." ;
+                    rdfs:label "weight for case 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#weight_for_case_18
+:weight_for_case_18 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Case_Report_Information ;
+                    OpenPVSignal:has_content "72 kg" ;
+                    rdfs:label "weight for case 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#zopiclone
+:zopiclone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CF01" ;
+           rdfs:label "zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#1920_mg_dose
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#1920_mg_dose> rdf:type owl:NamedIndividual ,
+                                                                                             OpenPVSignal:Dosage ;
+                                                                                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                                                                                    OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                                                                                    OpenPVSignal:has_dosage_unit "mg" ;
+                                                                                    OpenPVSignal:has_value 1920 ;
+                                                                                    OpenPVSignal:refers_to_dose_value "1920 mg" ;
+                                                                                    rdfs:label "1920 mg dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient1
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient1> rdf:type owl:NamedIndividual ,
+                                                                                                       OpenPVSignal:Patient ;
+                                                                                              OpenPVSignal:has_age 44 ;
+                                                                                              OpenPVSignal:has_gender "male" ;
+                                                                                              rdfs:label "Lipase/Amylase Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient2
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient2> rdf:type owl:NamedIndividual ,
+                                                                                                       OpenPVSignal:Patient ;
+                                                                                              OpenPVSignal:has_age 46 ;
+                                                                                              OpenPVSignal:has_gender "female" ;
+                                                                                              rdfs:label "Lipase/Amylase Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient3
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient3> rdf:type owl:NamedIndividual ,
+                                                                                                       OpenPVSignal:Patient ;
+                                                                                              OpenPVSignal:has_age 63 ;
+                                                                                              OpenPVSignal:has_gender "female" ;
+                                                                                              rdfs:label "Lipase/Amylase Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient1
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient1> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:VigiBase_Report ;
+                                                                                                       OpenPVSignal:refers_to_adverse_effect :amylaseIncreased ,
+                                                                                                                                             :lipaseIncreased ;
+                                                                                                       OpenPVSignal:refers_to_concomitant_drug :calcium ,
+                                                                                                                                               :dexamethasone ,
+                                                                                                                                               :lacosamide ,
+                                                                                                                                               :levetiracetam ,
+                                                                                                                                               :lorazepam ,
+                                                                                                                                               :metamizole ,
+                                                                                                                                               :mirtazapine ,
+                                                                                                                                               :pantoprazole ,
+                                                                                                                                               :tramadol ;
+                                                                                                       OpenPVSignal:refers_to_patient <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient1> ;
+                                                                                                       OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                                                                                                       OpenPVSignal:time_to_onset <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient1> ;
+                                                                                                       time:hasDurationDescription <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient1> ;
+                                                                                                       OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                                                                                                       OpenPVSignal:refers_to_partial_dechallenge_outcome "positive - condition not applied" ;
+                                                                                                       rdfs:label "Report for Lipase/Amylase Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient2
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient2> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:VigiBase_Report ;
+                                                                                                       OpenPVSignal:refers_to_adverse_effect :amylaseIncreased ,
+                                                                                                                                             :lipaseIncreased ;
+                                                                                                       OpenPVSignal:refers_to_past_diagnosis :hypertension ,
+                                                                                                                                             :hysterectomyNos ,
+                                                                                                                                             :smoker ;
+                                                                                                       OpenPVSignal:refers_to_patient <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient2> ,
+                                                                                                                                      <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient2> ;
+                                                                                                       OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                                                                                                       time:hasDurationDescription <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient2> ;
+                                                                                                       OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+                                                                                                       OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                                                                                       rdfs:label "Report for Lipase/Amylase Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient3
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#ReportForLipase/AmylasePatient3> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:VigiBase_Report ;
+                                                                                                       OpenPVSignal:refers_to_adverse_effect :amylaseIncreased ,
+                                                                                                                                             :lipaseIncreased ;
+                                                                                                       OpenPVSignal:refers_to_concomitant_drug :aciclovir ,
+                                                                                                                                               :dexamethasone ,
+                                                                                                                                               :etoricoxib ,
+                                                                                                                                               :gentamicin ,
+                                                                                                                                               :ibuprofen ,
+                                                                                                                                               :lorazepam ,
+                                                                                                                                               :metamizole ,
+                                                                                                                                               :pantoprazole ,
+                                                                                                                                               :pregabalin ,
+                                                                                                                                               :zopiclone ,
+                                                                                                                                               <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#bethamethasonevalerate/FusidicAcid> ;
+                                                                                                       OpenPVSignal:refers_to_patient <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#Lipase/AmylasePatient3> ,
+                                                                                                                                      <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient3> ;
+                                                                                                       OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                                                                                                       time:hasDurationDescription <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient3> ;
+                                                                                                       OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                                                                                       OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                                                                                                       rdfs:label "Report for Lipase/Amylase Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SmPC_for_valsartan_/_amlodipine_besilate
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#SmPC_for_valsartan_/_amlodipine_besilate> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Structured_Product_Labels_information ,
+                                                                                                                         OpenPVSignal:Warning_Information ;
+                                                                                                                OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                                                                                                OpenPVSignal:refers_to_drug <http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valsartan/amlodipineBesilate> ;
+                                                                                                                rdfs:label "SmPC for valsartan / amlodipine besilate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#bethamethasonevalerate/FusidicAcid
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#bethamethasonevalerate/FusidicAcid> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:Drug ;
+                                                                                                          OpenPVSignal:has_ATC_code "D07XC01" ,
+                                                                                                                                    "J01XC01" ;
+                                                                                                          rdfs:label "bethamethasone valerate / fusidic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#codeinephosphate/paracetamol
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#codeinephosphate/paracetamol> rdf:type owl:NamedIndividual ,
+                                                                                                             OpenPVSignal:Drug ;
+                                                                                                    OpenPVSignal:has_ATC_code "N02AJ06" ;
+                                                                                                    rdfs:label "codeine phosphate / paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#dabrafenib/sorafenibADRs
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#dabrafenib/sorafenibADRs> rdf:type owl:NamedIndividual ,
+                                                                                                         obo:OAE_0001197 ;
+                                                                                                OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                                                                                OpenPVSignal:refers_to_drug :dabrafenib ,
+                                                                                                                            :sorafenib ;
+                                                                                                mp:references :Ref.10 ,
+                                                                                                              :Ref.7 ;
+                                                                                                OpenPVSignal:has_content """At least two other kinase inhibitors are known to cause pancreatitis: dabrafenib and sorafenib. The frequency with which sorafenib can induce pancreatitis has been defined as “uncommon” in both the UK SPC and US FDA leaflet, while dabrafenib, according to the US FDA label, induced pancreatitis in less than 10% of the patients.
+Protein kinase inhibitors interfere with the downstream effects of growth factors, such as VEGF; this inhibition has been linked by some authors to acute pancreatitis of ischemic origin.20 Sorafenib, a multi kinase inhibitor, acts on a broader spectrum of kinases than vemurafenib, there- fore it is possible that an alternative mechanism may be involved in the development of pancreatitis; however, dabrafenib acts more closely to vemurafenib21 hence it is plausible that these drugs share a common mechanism in the development of pancreatitis. It should be borne in mind the pathophysiology of pancreatitis is not yet well understood.7,10""" ;
+                                                                                                rdfs:label "dabrafenib/sorafenib ADRs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient1
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient1> rdf:type owl:NamedIndividual ,
+                                                                                                                             time:DurationDescription ;
+                                                                                                                    OpenPVSignal:has_content "6 days" ;
+                                                                                                                    time:nominalPosition "days" ;
+                                                                                                                    time:numericPosition 6 ;
+                                                                                                                    rdfs:label "duration of treatment for lipase/amylase patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient2
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient2> rdf:type owl:NamedIndividual ,
+                                                                                                                             time:DurationDescription ;
+                                                                                                                    OpenPVSignal:has_content "7 days" ;
+                                                                                                                    time:nominalPosition "days" ;
+                                                                                                                    time:numericPosition 7 ;
+                                                                                                                    rdfs:label "duration of treatment for lipase/amylase patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient3
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#durationOfTreatmentForlipase/amylasePatient3> rdf:type owl:NamedIndividual ,
+                                                                                                                             time:DurationDescription ;
+                                                                                                                    OpenPVSignal:has_content "26 days" ;
+                                                                                                                    time:nominalPosition "days" ;
+                                                                                                                    time:numericPosition 26 ;
+                                                                                                                    rdfs:label "duration of treatment for lipase/amylase patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sodiumbicarbonate/potassiumchloride/Sodiumchloride/macrogol3350
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#sodiumbicarbonate/potassiumchloride/Sodiumchloride/macrogol3350> rdf:type owl:NamedIndividual ,
+                                                                                                                                                OpenPVSignal:Drug ;
+                                                                                                                                       OpenPVSignal:has_ATC_code "A06AD15" ,
+                                                                                                                                                                 "A12BA01" ,
+                                                                                                                                                                 "A12CA01" ,
+                                                                                                                                                                 "B05CB04" ;
+                                                                                                                                       rdfs:label "Sodium bicarbonate/potassium chloride/ Sodium chloride/Macrogol 3350" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient1
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient1> rdf:type owl:NamedIndividual ,
+                                                                                                                     time:DurationDescription ;
+                                                                                                            OpenPVSignal:has_content "6 days" ;
+                                                                                                            time:nominalPosition "days" ;
+                                                                                                            time:numericPosition 6 ;
+                                                                                                            rdfs:label "time to onset for lipase/amylase patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient2
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient2> rdf:type owl:NamedIndividual ,
+                                                                                                                     time:DurationDescription ;
+                                                                                                            OpenPVSignal:has_content "7 days" ;
+                                                                                                            time:nominalPosition "days" ;
+                                                                                                            time:numericPosition 7 ;
+                                                                                                            rdfs:label "time to onset for lipase/amylase patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient3
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#timeToOnsetForlipase/amylasePatient3> rdf:type owl:NamedIndividual ,
+                                                                                                                     time:DurationDescription ;
+                                                                                                            OpenPVSignal:has_content "26 days" ;
+                                                                                                            time:nominalPosition "days" ;
+                                                                                                            time:numericPosition 26 ;
+                                                                                                            rdfs:label "time to onset for lipase/amylase patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valsartan/amlodipineBesilate
+<http://purl.org/OpenPVSignal/Signals/2014_2_vemurafenib_pancreatitis#valsartan/amlodipineBesilate> rdf:type owl:NamedIndividual ,
+                                                                                                             OpenPVSignal:Drug ;
+                                                                                                    OpenPVSignal:has_ATC_code "C09DB01" ;
+                                                                                                    rdfs:label "valsartan / amlodipine besilate" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AbdominalPain OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "Abdominal pain" ;
+               OpenPVSignal:has_ICD_code "R109" ;
+               OpenPVSignal:has_MedDRA_code 10000081 .
+
+
+:AcutePancreatitis OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis acute" ;
+                   rdfs:label "Acute pancreatitis" ;
+                   OpenPVSignal:has_ICD_code "K859" ;
+                   OpenPVSignal:has_MedDRA_code 10033647 .
+
+
+:AcuteRenalFailure OpenPVSignal:has_ICD_code "N179" ;
+                   rdfs:label "Acute renal failure" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" .
+
+
+:AlcoholAbuse OpenPVSignal:has_MedDRA_code 10001584 ;
+              rdfs:label "Alcohol abuse" ;
+              OpenPVSignal:has_ICD_code "F101 " ;
+              OpenPVSignal:has_MedDRA_prefered_term "Alcohol abuse" .
+
+
+:Alopecia OpenPVSignal:has_MedDRA_prefered_term "Alopecia" ;
+          OpenPVSignal:has_MedDRA_code 10001760 ;
+          OpenPVSignal:has_ICD_code "L659" ;
+          rdfs:label "Alopecia" .
+
+
+:AmylaseIncreased OpenPVSignal:has_ICD_code "R748" ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Amylase increased" ;
+                  OpenPVSignal:has_MedDRA_code 10002016 ;
+                  rdfs:label "Amylase increased" .
+
+
+:Anemia OpenPVSignal:has_ICD_code "D649" ;
+        OpenPVSignal:has_MedDRA_code 10002034 ;
+        rdfs:label "Anemia" ;
+        OpenPVSignal:has_MedDRA_prefered_term "Anaemia" .
+
+
+:Apoptosis rdfs:label "Apoptosis" ;
+           OpenPVSignal:has_MedDRA_prefered_term "Apoptosis" ;
+           OpenPVSignal:has_MedDRA_code 10059512 .
+
+
+:Arthralgia OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            rdfs:label "Arthralgia" ;
+            OpenPVSignal:has_ICD_code "M2550" .
+
+
+:BodyMassIndex OpenPVSignal:has_MedDRA_prefered_term "Body mass index" ;
+               OpenPVSignal:has_ICD_code "Z684 " ;
+               rdfs:label "Body mass index" ;
+               OpenPVSignal:has_MedDRA_code 10005894 .
+
+
+:BrainMetastases OpenPVSignal:has_ICD_code "C7949" ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Metastases to central nervous system" ;
+                 OpenPVSignal:has_MedDRA_code 10059282 ;
+                 rdfs:label "Brain metastases" .
+
+
+:Carcinoma OpenPVSignal:has_MedDRA_prefered_term "Neoplasm malignant" ;
+           OpenPVSignal:has_ICD_code "C801" ;
+           OpenPVSignal:has_MedDRA_code 10028997 ;
+           rdfs:label "Carcinoma" .
+
+
+:Cholecystitis OpenPVSignal:has_ICD_code "K810" ;
+               OpenPVSignal:has_MedDRA_prefered_term "Cholecystitis" ;
+               rdfs:label "Cholecystitis" ;
+               OpenPVSignal:has_MedDRA_code 10008612 .
+
+
+:Cholecystolithiasis rdfs:label "Cholecystolithiasis" ;
+                     OpenPVSignal:has_ICD_code "K8020" ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cholelithiasis" ;
+                     OpenPVSignal:has_MedDRA_code 10008629 .
+
+
+:Diabetes OpenPVSignal:has_ICD_code "E119" ;
+          rdfs:label "Diabetes" ;
+          OpenPVSignal:has_MedDRA_code 10012601 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" .
+
+
+:Diarrhea OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          rdfs:label "Diarrhea" .
+
+
+:DiseaseProgression OpenPVSignal:has_MedDRA_code 10061818 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Disease progression" ;
+                    rdfs:label "Disease progression" .
+
+
+:Effusion OpenPVSignal:has_MedDRA_code 10063045 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Effusion" ;
+          OpenPVSignal:has_ICD_code "J90" ;
+          rdfs:label "Effusion" .
+
+
+:Erysipelas OpenPVSignal:has_ICD_code "A46" ;
+            rdfs:label "Erysipelas" ;
+            OpenPVSignal:has_MedDRA_prefered_term "Erysipelas" ;
+            OpenPVSignal:has_MedDRA_code 10015145 .
+
+
+:Fatigue OpenPVSignal:has_ICD_code "R5383" ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         rdfs:label "Fatigue" .
+
+
+:Gallstones OpenPVSignal:has_MedDRA_prefered_term "Cholelithiasis" ;
+            OpenPVSignal:has_ICD_code "K8020" ;
+            OpenPVSignal:has_MedDRA_code 10008629 ;
+            rdfs:label "Gallstones" .
+
+
+:Gastroenteritis OpenPVSignal:has_MedDRA_prefered_term "Gastroenteritis" ;
+                 OpenPVSignal:has_MedDRA_code 10017888 ;
+                 OpenPVSignal:has_ICD_code "K529" ;
+                 rdfs:label "Gastroenteritis" .
+
+
+:GastroenteritisViral OpenPVSignal:has_ICD_code "A084" ;
+                      rdfs:label "Gastroenteritis viral" ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Gastroenteritis viral" ;
+                      OpenPVSignal:has_MedDRA_code 10017918 .
+
+
+:Headache OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "Headache" .
+
+
+:HepaticFunctionAbnormal rdfs:label "Hepatic function abnormal" ;
+                         OpenPVSignal:has_ICD_code "R945" ;
+                         OpenPVSignal:has_MedDRA_code 10019670 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic function abnormal" .
+
+
+:Hepatitis OpenPVSignal:has_MedDRA_code 10019717 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hepatitis" ;
+           OpenPVSignal:has_ICD_code "B199" ;
+           rdfs:label "Hepatitis" .
+
+
+:Hyperkeratosis rdfs:label "Hyperkeratosis" ;
+                OpenPVSignal:has_ICD_code "L859" ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperkeratosis" ;
+                OpenPVSignal:has_MedDRA_code 10020649 .
+
+
+:Hypertension OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "Hypertension" .
+
+
+:HypertensionArterial rdfs:label "Hypertension arterial" ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+                      OpenPVSignal:has_MedDRA_code 10020772 ;
+                      OpenPVSignal:has_ICD_code "I10" .
+
+
+:Hypertensive OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "Hypertensive" ;
+              OpenPVSignal:has_ICD_code "I10" .
+
+
+:Hysterectomy OpenPVSignal:has_ICD_code "Z90710" ;
+              rdfs:label "Hysterectomy" ;
+              OpenPVSignal:has_MedDRA_code 10021151 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hysterectomy" .
+
+
+:HysterectomyNOS OpenPVSignal:has_MedDRA_prefered_term "Hysterectomy" ;
+                 OpenPVSignal:has_MedDRA_code 10021151 ;
+                 OpenPVSignal:has_ICD_code "Z90710" ;
+                 rdfs:label "Hysterectomy NOS" .
+
+
+:Inflammation rdfs:label "Inflammation" ;
+              OpenPVSignal:has_MedDRA_code 10061218 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Inflammation" .
+
+
+:Keratoacanthoma OpenPVSignal:has_ICD_code "L858" ;
+                 rdfs:label "Keratoacanthoma" ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Keratoacanthoma" ;
+                 OpenPVSignal:has_MedDRA_code 10023347 .
+
+
+:Lipase OpenPVSignal:has_MedDRA_code 10050659 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Lipase" ;
+        rdfs:label "Lipase" .
+
+
+:LipaseIncreased OpenPVSignal:has_ICD_code "R748" ;
+                 rdfs:label "Lipase increased" ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Lipase increased" ;
+                 OpenPVSignal:has_MedDRA_code 10024574 .
+
+
+:Mass rdfs:label "Mass" ;
+      OpenPVSignal:has_MedDRA_code 10026865 ;
+      OpenPVSignal:has_ICD_code "R222" ;
+      OpenPVSignal:has_MedDRA_prefered_term "Mass" .
+
+
+:Metastasis OpenPVSignal:has_ICD_code "C799" ;
+            rdfs:label "Metastasis" ;
+            OpenPVSignal:has_MedDRA_code 10062194 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Metastasis" .
+
+
+:Multi-organFailure rdfs:label "Multi-organ failure" ;
+                    OpenPVSignal:has_MedDRA_code 10077361 ;
+                    OpenPVSignal:has_ICD_code "R6510" ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Multiple organ dysfunction syndrome" .
+
+
+:Myalgia OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "Myalgia" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_ICD_code "M791" .
+
+
+:Nausea OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "Nausea" ;
+        OpenPVSignal:has_ICD_code "R11" .
+
+
+:Obesity rdfs:label "Obesity" ;
+         OpenPVSignal:has_ICD_code "E669" ;
+         OpenPVSignal:has_MedDRA_prefered_term "Obesity" ;
+         OpenPVSignal:has_MedDRA_code 10029883 .
+
+
+:OrganFailure OpenPVSignal:has_ICD_code "R6510" ;
+              OpenPVSignal:has_MedDRA_code 10053159 ;
+              rdfs:label "Organ failure" ;
+              OpenPVSignal:has_MedDRA_prefered_term "Organ failure" .
+
+
+:Pain OpenPVSignal:has_MedDRA_code 10033371 ;
+      rdfs:label "Pain" ;
+      OpenPVSignal:has_ICD_code "G891" ;
+      OpenPVSignal:has_MedDRA_prefered_term "Pain" .
+
+
+:PancreaticInflammation OpenPVSignal:has_ICD_code "K85" ;
+                        OpenPVSignal:has_MedDRA_code 10033645 ;
+                        rdfs:label "Pancreatic inflammation" ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis" .
+
+
+:Pancreatitis OpenPVSignal:has_ICD_code "K85" ;
+              OpenPVSignal:has_MedDRA_code 10033645 ;
+              rdfs:label "Pancreatitis" ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis" .
+
+
+:PancreatitisAcute OpenPVSignal:has_ICD_code "K859" ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis acute" ;
+                   OpenPVSignal:has_MedDRA_code 10033647 ;
+                   rdfs:label "Pancreatitis acute" .
+
+
+:PancreatitisNecrotizing OpenPVSignal:has_ICD_code "K8592" ;
+                         rdfs:label "Pancreatitis necrotizing" ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis necrotising" ;
+                         OpenPVSignal:has_MedDRA_code 10033654 .
+
+
+:Paracetamol rdfs:label "Paracetamol" ;
+             OpenPVSignal:has_MedDRA_code 10060090 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Analgesic drug level" .
+
+
+:Paralysis OpenPVSignal:has_MedDRA_prefered_term "Paralysis" ;
+           rdfs:label "Paralysis" ;
+           OpenPVSignal:has_ICD_code "G839" ;
+           OpenPVSignal:has_MedDRA_code 10033799 .
+
+
+:ParalysisFacial OpenPVSignal:has_MedDRA_prefered_term "Facial paralysis" ;
+                 rdfs:label "Paralysis facial" ;
+                 OpenPVSignal:has_ICD_code "G510" ;
+                 OpenPVSignal:has_MedDRA_code 10016062 .
+
+
+:ParaneoplasticSyndrome OpenPVSignal:has_MedDRA_code 10059420 ;
+                        OpenPVSignal:has_ICD_code "G130" ;
+                        rdfs:label "Paraneoplastic syndrome" ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Paraneoplastic syndrome" .
+
+
+:Phosphate OpenPVSignal:has_MedDRA_code 10005717 ;
+           rdfs:label "Phosphate" ;
+           OpenPVSignal:has_MedDRA_prefered_term "Blood phosphorus" .
+
+
+:Photosensitivity OpenPVSignal:has_MedDRA_code 10034972 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Photosensitivity reaction" ;
+                  OpenPVSignal:has_ICD_code "L568" ;
+                  rdfs:label "Photosensitivity" .
+
+
+:PleuralEffusion OpenPVSignal:has_MedDRA_prefered_term "Pleural effusion" ;
+                 OpenPVSignal:has_ICD_code "J90" ;
+                 OpenPVSignal:has_MedDRA_code 10035598 ;
+                 rdfs:label "Pleural effusion" .
+
+
+:PleuriticPain OpenPVSignal:has_MedDRA_code 10035623 ;
+               rdfs:label "Pleuritic pain" ;
+               OpenPVSignal:has_ICD_code " R091" ;
+               OpenPVSignal:has_MedDRA_prefered_term "Pleuritic pain" .
+
+
+:Polyneuropathy rdfs:label "Polyneuropathy" ;
+                OpenPVSignal:has_MedDRA_code 10036105 ;
+                OpenPVSignal:has_ICD_code "G629" ;
+                OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy" .
+
+
+:PolyneuropathyChronic OpenPVSignal:has_ICD_code "G629" ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy chronic" ;
+                       OpenPVSignal:has_MedDRA_code 10064135 ;
+                       rdfs:label "Polyneuropathy chronic" .
+
+
+:Potassium rdfs:label "Potassium" ;
+           OpenPVSignal:has_MedDRA_prefered_term "Blood potassium" ;
+           OpenPVSignal:has_MedDRA_code 10005721 .
+
+
+:Protein OpenPVSignal:has_MedDRA_code 10050537 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Protein total" ;
+         rdfs:label "Protein" .
+
+
+:Pruritus OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_ICD_code "L299" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "Pruritus" .
+
+
+:Ptosis OpenPVSignal:has_ICD_code "H02409" ;
+        rdfs:label "Ptosis" ;
+        OpenPVSignal:has_MedDRA_code 10015995 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Eyelid ptosis" .
+
+
+:Pyrexia OpenPVSignal:has_ICD_code "R509" ;
+         rdfs:label "Pyrexia" ;
+         OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+         OpenPVSignal:has_MedDRA_code 10037660 .
+
+
+:Rash rdfs:label "Rash" ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 .
+
+
+:RenalFailure OpenPVSignal:has_MedDRA_code 10038435 ;
+              OpenPVSignal:has_ICD_code "N189" ;
+              rdfs:label "Renal failure" ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal failure" .
+
+
+:Smoker OpenPVSignal:has_MedDRA_prefered_term "Tobacco user" ;
+        rdfs:label "Smoker" ;
+        OpenPVSignal:has_MedDRA_code 10057581 ;
+        OpenPVSignal:has_ICD_code "Z720" .
+
+
+:Sodium OpenPVSignal:has_MedDRA_prefered_term "Blood sodium" ;
+        rdfs:label "Sodium" ;
+        OpenPVSignal:has_MedDRA_code 10005799 .
+
+
+:SquamousCellCarcinoma OpenPVSignal:has_ICD_code "C4492" ;
+                       rdfs:label "Squamous cell carcinoma" ;
+                       OpenPVSignal:has_MedDRA_code 10041823 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Squamous cell carcinoma" .
+
+
+:SquamousCellCarcinomaOfSkin OpenPVSignal:has_MedDRA_code 10041834 ;
+                             OpenPVSignal:has_ICD_code "C4492" ;
+                             rdfs:label "Squamous cell carcinoma of skin" ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Squamous cell carcinoma of skin" .
+
+
+:ToxicityToVariousAgents OpenPVSignal:has_MedDRA_prefered_term "Toxicity to various agents" ;
+                         rdfs:label "Toxicity to various agents" ;
+                         OpenPVSignal:has_MedDRA_code 10070863 .
+
+
+:Vomiting OpenPVSignal:has_ICD_code "R1110" ;
+          rdfs:label "Vomiting" ;
+          OpenPVSignal:has_ICD_code "R11" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          OpenPVSignal:has_MedDRA_code 10047700 .
+
+
+:Weight OpenPVSignal:has_ICD_code "R636" ;
+        OpenPVSignal:has_MedDRA_prefered_term "Weight" ;
+        rdfs:label "Weight" ;
+        OpenPVSignal:has_MedDRA_code 10047890 .
+
+
+:Withdrawn OpenPVSignal:has_MedDRA_code 10041243 ;
+           OpenPVSignal:has_ICD_code "F606" ;
+           rdfs:label "Withdrawn" ;
+           OpenPVSignal:has_MedDRA_prefered_term "Social avoidant behaviour" .
+
+
+:diarrhea OpenPVSignal:has_MedDRA_code 10012735 ;
+          rdfs:label "diarrhea" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          OpenPVSignal:has_ICD_code "R197" .
+
+
+:hypertensionArterial OpenPVSignal:has_ICD_code "I10" ;
+                      OpenPVSignal:has_MedDRA_code 10020772 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+                      rdfs:label "hypertension arterial" .
+
+
+:hypertensive rdfs:label "hypertensive" ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" .
+
+
+:pancreaticInflammation rdfs:label "pancreatic inflammation" ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis" ;
+                        OpenPVSignal:has_MedDRA_code 10033645 ;
+                        OpenPVSignal:has_ICD_code "K85" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

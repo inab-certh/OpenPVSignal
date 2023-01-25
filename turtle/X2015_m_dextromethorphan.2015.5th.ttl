@@ -1,0 +1,340 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders> rdf:type owl:Ontology ;
+                                                                                               owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                           mp: ;
+                                                                                               rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255497/"^^xsd:anyURI ;
+                                                                                               rdfs:label "Dextromethorphan and serious neurological disorders in children"^^xsd:Literal ;
+                                                                                               owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Conclusion_content
+:Conclusion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Conclusion ,
+                             OpenPVSignal:Discussion ;
+                    OpenPVSignal:has_content "Nonetheless, reports on dextromethorphan associated with serious ADRs within the SOC Neurological disorders for children below the age of 6 have continued to be reported to VigiBase® after 2009 (the latest submitted in 2014). The majority of these reports are not co-reported with accidental intake of the drug or overdose. Continuous reporting of serious neurological ADRs associated with off-label use of dextromethorphan in young children suggests that the risk-benefit balance for dextromethorphan is not clear to parents. Further revisions of the patient information leaflets are advised to clearly highlight the risk of serious neurological reactions in young children." ;
+                    rdfs:label "Discussion and Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Cough
+:Cough rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Indication ;
+       OpenPVSignal:has_ICD_code "R05" ;
+       OpenPVSignal:has_MedDRA_code 10011224 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Cough" ;
+       rdfs:label "cough" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Dextromethorphane_and_serious_neurological_disorders_in_children
+:Dextromethorphane_and_serious_neurological_disorders_in_children rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                  OpenPVSignal:refers_to_author :Ms_Lovisa_Sandberg ,
+                                                                                                :Ms_Sarah_Watson ;
+                                                                  OpenPVSignal:refers_to_signal :pv_signal ;
+                                                                  mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                                  OpenPVSignal:has_creation_date "01/10/2015" ;
+                                                                  OpenPVSignal:has_overall_conclusion "causal association" ;
+                                                                  rdfs:label "Dextromethorphane and serious neurological disorders in children" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Literature_and_labelling
+:Literature_and_labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.1 ,
+                                        :Ref.3 ;
+                          OpenPVSignal:has_content "In the summary of product characteristics (SmPC) for several products containing multiple ingredients including dextromethorphan, coma is listed in the section for overdoses but for drugs containing only dextromethorphan in the United Kingdom, coma is not listed as a possible ADR other than as a contraindication in patients using MAO-inhibitors.1 In 2008/2009 the MHRA and the CHM in the United Kingdom advised that children under 6 years should not be given over-the-counter cough and cold medicines containing dextromethorphan.3" ;
+                          rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Ms_Lovisa_Sandberg
+:Ms_Lovisa_Sandberg rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Author ;
+                    OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                    OpenPVSignal:has_first_name "Sarah" ;
+                    OpenPVSignal:has_last_name "Watson" ;
+                    rdfs:label "Ms Sarah Watson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Ms_Sarah_Watson
+:Ms_Sarah_Watson rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Author ;
+                 OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                 OpenPVSignal:has_first_name "Lovisa" ;
+                 OpenPVSignal:has_last_name "Sandberg" ;
+                 rdfs:label "Ms Lovisa Sandberg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK EMC Summary of product characteristics for dextromethorphan. URL: http://www. medicines.org.uk/ Accessed: February 2015. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA product label for dextromethorphan. URL: http://www.accessdata.fda.gov/scripts/ cder/drugsatfda/index.cfm Accessed: February 2015. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "BMJ Group. BNF for children 2013-2014. London: Pharmaceutical Press; 2013. P.862. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:refers_to_drug :dextromethorphan ;
+                     OpenPVSignal:has_content "Widening the search in VigiBase® to include reports on the whole WHO-ART System Organ Class (SOC) Neurological disorders revealed several serious ADRs. As of February 2015 there were 110 reports for children under the age of 6 years for the whole SOC . The reports originate from Asia, Europe, Latin and North America . Among the reported terms were ataxia, convulsions, dyskinesia and coma . There were 29 reports for the WHO-ART High Level Term (HLT) ataxia  and 10 reports for the HLT coma  (all reports of coma were for children of 2 years of age or less). For all children (younger than 18 years) there were 51 reports for the HLT ataxia , and 19 reports with the HLT coma ." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#UK_SmPC
+:UK_SmPC rdf:type owl:NamedIndividual ,
+                  obo:OAE_0001197 ,
+                  OpenPVSignal:Structured_Product_Labels_information ;
+         OpenPVSignal:refers_to_drug :dextromethorphan ;
+         mp:references :Ref.1 ;
+         OpenPVSignal:has_content "In the summary of product characteristics (SmPC) for several products containing multiple ingredients including dextromethorphan, coma is listed in the section for overdoses but for drugs containing only dextromethorphan in the United Kingdom, coma is not listed as a possible ADR other than as a contraindication in patients using MAO-inhibitors.1" ,
+                                  "It is approved for children and adults above 6 years of age in the United Kingdom and above 4 years of age in the United States.1,2 Most dextromethorphan containing products in the United Kingdom are however indicated from the age of 12.1" ;
+         rdfs:label "UK SmPC" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#USA_FDA
+:USA_FDA rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Structured_Product_Labels_information ;
+         OpenPVSignal:refers_to_drug :dextromethorphan ;
+         mp:references :Ref.2 ;
+         OpenPVSignal:has_content "It is approved for children and adults above 6 years of age in the United Kingdom and above 4 years of age in the United States.1,2" ;
+         rdfs:label "USA FDA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#Usage_of_dextromethorphan
+:Usage_of_dextromethorphan rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Drug_Usage ;
+                           OpenPVSignal:concerns_indication_for_use :Cough ,
+                                                                    :cold ,
+                                                                    :flu ;
+                           OpenPVSignal:refers_to_drug :dextromethorphan ;
+                           rdfs:label "Usage of dextromethorphan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ataxia
+:ataxia rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R27.0" ;
+        OpenPVSignal:has_MedDRA_code 10003591 ;
+        OpenPVSignal:has_MedDRA_prefered_term "ataxia" ;
+        rdfs:label "ataxia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#cold
+:cold rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Indication ;
+      OpenPVSignal:has_MedDRA_code 10009851 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Cold" ;
+      rdfs:label "cold" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#coma
+:coma rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R40.20" ;
+      OpenPVSignal:has_MedDRA_code 10010071 ;
+      OpenPVSignal:has_MedDRA_prefered_term "coma " ;
+      rdfs:label "coma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#convulsions
+:convulsions rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R56.9" ;
+             OpenPVSignal:has_MedDRA_code 10010904 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Convulsion" ;
+             rdfs:label "convulsions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#dextromethorphan
+:dextromethorphan rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "R05DA09 " ;
+                  rdfs:label "dextromethorphan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#dyskinesia
+:dyskinesia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G24.01" ;
+            OpenPVSignal:has_MedDRA_code 10013916 ;
+            OpenPVSignal:has_MedDRA_prefered_term "dyskinesia" ;
+            rdfs:label "dyskinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#flu
+:flu rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Indication ;
+     OpenPVSignal:has_ICD_code "J11.1" ;
+     OpenPVSignal:has_MedDRA_code 10016790 ;
+     OpenPVSignal:has_MedDRA_prefered_term "Flu" ;
+     rdfs:label "flu" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ;
+              OpenPVSignal:has_content "In the screening of paediatric individual case safety reports (ICSRs) from the WHO Global ICSR database, VigiBase® the adverse drug reaction (ADR) ataxia was highlighted for the drug dextromethorphan. The substance is used in many cough, cold and flu products sold over the counter globally.  It is approved for children and adults above 6 years of age in the United Kingdom and above 4 years of age in the United States.1,2 Most dextromethorphan containing products in the United Kingdom are however indicated from the age of 12.1" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#neurological_disorders
+:neurological_disorders rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10029305 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Neurological disorders NEC" ;
+                        rdfs:label "neurological disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#pv_signal
+:pv_signal rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Signal ;
+           OpenPVSignal:Free_text_reporting_element :Conclusion_content ,
+                                                    :Reports_in_Vigibase ,
+                                                    :introduction ;
+           OpenPVSignal:is_supported_by_statistical_entity <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndAtaxia(HLT)> ,
+                                                           <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndComa(HLT)> ,
+                                                           <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForDextromethorphanAndNeurologicaDisorders(SOC)> ,
+                                                           <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndAtaxia(HLT)> ,
+                                                           <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndComa(HLT)> ;
+           OpenPVSignal:refers_to_adverse_effect :ataxia ,
+                                                 :coma ,
+                                                 :convulsions ,
+                                                 :dyskinesia ,
+                                                 :neurological_disorders ;
+           OpenPVSignal:refers_to_drug :dextromethorphan ;
+           OpenPVSignal:refers_to_primary_suspect_drug :dextromethorphan ;
+           mp:supportedByData :UK_SmPC ,
+                              :USA_FDA ;
+           OpenPVSignal:initially_identified_on "01/10/2015" ;
+           rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndAtaxia(HLT)
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndAtaxia(HLT)> rdf:type owl:NamedIndividual ,
+                                                                                                                                           OpenPVSignal:Reports_group ;
+                                                                                                                                  OpenPVSignal:refers_to_adverse_effect :ataxia ;
+                                                                                                                                  OpenPVSignal:refers_to_drug :dextromethorphan ;
+                                                                                                                                  OpenPVSignal:has_count 51 ;
+                                                                                                                                  OpenPVSignal:has_max_age "18.0"^^xsd:float ;
+                                                                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                  rdfs:label "Reports for all children  and ataxia (HLT)" ,
+                                                                                                                                             "ReportsForAllChildrenAndAtaxia(HLT)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndComa(HLT)
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForAllChildrenAndComa(HLT)> rdf:type owl:NamedIndividual ,
+                                                                                                                                         OpenPVSignal:Reports_group ;
+                                                                                                                                OpenPVSignal:refers_to_adverse_effect :coma ;
+                                                                                                                                OpenPVSignal:refers_to_drug :dextromethorphan ;
+                                                                                                                                OpenPVSignal:has_count 19 ;
+                                                                                                                                OpenPVSignal:has_max_age "18.0"^^xsd:float ;
+                                                                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                rdfs:label "Reports for all children and coma (HLT)" ,
+                                                                                                                                           "ReportsForAllChildrenAndComa(HLT)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForDextromethorphanAndNeurologicaDisorders(SOC)
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForDextromethorphanAndNeurologicaDisorders(SOC)> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              OpenPVSignal:Reports_group ;
+                                                                                                                                                     OpenPVSignal:refers_to_adverse_effect :ataxia ,
+                                                                                                                                                                                           :coma ,
+                                                                                                                                                                                           :convulsions ,
+                                                                                                                                                                                           :dyskinesia ,
+                                                                                                                                                                                           :neurological_disorders ;
+                                                                                                                                                     OpenPVSignal:refers_to_drug :dextromethorphan ;
+                                                                                                                                                     OpenPVSignal:has_count 110 ;
+                                                                                                                                                     OpenPVSignal:has_max_age 6 ;
+                                                                                                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                     rdfs:label "Reports for dextromethorphan and neurologica disorders (SOC)" ,
+                                                                                                                                                                "ReportsForDextromethorphanAndNeurologicaDisorders(SOC)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndAtaxia(HLT)
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndAtaxia(HLT)> rdf:type owl:NamedIndividual ,
+                                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForDextromethorphanAndNeurologicaDisorders(SOC)> ;
+                                                                                                                                    OpenPVSignal:refers_to_adverse_effect :ataxia ;
+                                                                                                                                    OpenPVSignal:has_count 29 ;
+                                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                    rdfs:label "Reports for small children and ataxia (HLT)" ,
+                                                                                                                                               "ReportsForSmallChildrenAndAtaxia(HLT)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndComa(HLT)
+<http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForSmallChildrenAndComa(HLT)> rdf:type owl:NamedIndividual ,
+                                                                                                                                           OpenPVSignal:Reports_group ;
+                                                                                                                                  OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_5_dextromethorphan_serious_neurological_disorders#ReportsForDextromethorphanAndNeurologicaDisorders(SOC)> ;
+                                                                                                                                  OpenPVSignal:refers_to_adverse_effect :coma ;
+                                                                                                                                  OpenPVSignal:has_count 10 ;
+                                                                                                                                  OpenPVSignal:has_max_age "2.0"^^xsd:float ;
+                                                                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                  rdfs:label "Reports for small children and coma (HLT)" ,
+                                                                                                                                             "ReportsForSmallChildrenAndComa(HLT)" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,1308 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation> rdf:type owl:Ontology ;
+                                                                              owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                          mp: ;
+                                                                              rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255500/"^^xsd:anyURI ;
+                                                                              rdfs:label "Prucalopride and Suicidal ideation"^^xsd:Literal ;
+                                                                              owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Anxiety_and_depression_reported_in_Clinical_trials_of_prucalopride
+:Anxiety_and_depression_reported_in_Clinical_trials_of_prucalopride rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Clinical_trial_information ;
+                                                                    OpenPVSignal:refers_to_drug :prucalopride ;
+                                                                    OpenPVSignal:has_content "However, anxiety has been reported in many clinical studies and some cases were reported as serious events. The open-label studies recorded anxiety in 1.9%  of the patients treated with the 2 mg dose, and similar results were found with 4 mg dose. In these studies, depression was elicited at a higher incidence than anxiety (3.5% versus 1.9%) with the 2 mg dose.”2" ;
+                                                                    OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                                    rdfs:label "Anxiety and depression reported in Clinical trials of prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#ChronicConstipation
+:ChronicConstipation rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_MedDRA_code 10063582 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Constipation chronic" ;
+                     rdfs:label "chronic constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#CisaprideAndQTProlongation
+:CisaprideAndQTProlongation rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :qtProlongation ;
+                            OpenPVSignal:refers_to_drug :cisapride ;
+                            rdfs:label "Cisapride and QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#CisaprideRemoval
+:CisaprideRemoval rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+                  OpenPVSignal:refers_to_drug :cisapride ;
+                  OpenPVSignal:has_content "The first approved agent was cisapride which has subsequently been removed from both the US and EU markets secondary to cardiovascular events, specifically QT-prolongation." ;
+                  rdfs:label "Cisapride removal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Clinical_trial_information_for_prucalopride
+:Clinical_trial_information_for_prucalopride rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Clinical_trial_information ;
+                                             OpenPVSignal:refers_to_drug :prucalopride ;
+                                             OpenPVSignal:has_content "There were two deaths in the double-blind placebo controlled trials and four deaths in open-label studies " ;
+                                             OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                             rdfs:label "Clinical trial information for prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#CommitteeForMedicinalProductsForHumanUse
+:CommitteeForMedicinalProductsForHumanUse rdf:type owl:NamedIndividual ,
+                                                   obo:OAE_0001125 ;
+                                          OpenPVSignal:refers_to_drug :prucalopride ;
+                                          mp:references :Ref.1 ;
+                                          OpenPVSignal:has_content "In the Committee for Medicinal Products for Human Use approval assessment report, it is noted that in single dose toxicity studies performed on mice that there were CNS effects seen “at very high doses” However, there was no discussion in the report regarding events from the Psychiatric disorders SOC.  There were two deaths in the double-blind placebo controlled trials and four deaths in open-label studies. The report notes only that none of the deaths were considered related to treatment by the investigator. Neither suicidal ideation nor other CNS events are included in the risk management plan for prucalopride.1" ;
+                                          rdfs:label "Committee for Medicinal Products for Human Use " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Constipation
+:Constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "K59.0" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """The signal for a possible association between prucalopride and suicidal ideation is based upon only three cases. It is notable that in none of the cases are there any past histories of depression or concomitant medication use implying a history of psychiatric disorders. Furthermore, the time to onset is relatively short for two of the cases, within hours to days. All cases had documentation of resolution of symptoms after drug withdrawal.
+The highly selective nature of prucalopride has been the focal point of the development of this agent given the limitations of its predecessors. To this end, multiple preclinical investigations into the cardiac effects have been completed and showed a lack of interaction with the hERG potassium channel and 5-HT1D and 5-HT2B receptors. Both approval reports from the EU and Canada thoroughly described this data. However, there is an inconsistency in the presentation of data regarding potential psychiatric effects between the EU and the Canadian reports. As a result, there is no labelling for such events in the EU SmPC (or inclusion of these events into the Risk Management Plan) but the inclusion of the events of anxiety, confusional state, and depression in the Canadian label.
+It is clear that prucalopride represents therapeutic alternative with an improved safety profile and that the signal for an association with suicidal ideation is weak at the current time. However, the potential for psychiatric adverse events should be acknowledged in the EU as has been done in Canada. Furthermore, with the identification of these case reports of suicidal ideation, a possible recommendation would be for increased surveillance for such events related to suicide. Additionally, the potential for a relationship between adverse events with prucalopride and certain 5-HT4 polymorphisms should be explored.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Dr_Rebecca_Chandler
+:Dr_Rebecca_Chandler rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Author ;
+                     OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                     OpenPVSignal:has_first_name "Rebecca" ;
+                     OpenPVSignal:has_last_name "Chandler" ;
+                     rdfs:label "Dr Rebecca Chandler" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#European_SmPC_for_prucalopride
+:European_SmPC_for_prucalopride rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Structured_Product_Labels_information ;
+                                OpenPVSignal:refers_to_drug :prucalopride ;
+                                mp:references :Ref.8 ;
+                                OpenPVSignal:has_content "The European Summary of Product Characteristics (SmPC) for prucalopride notes the most commonly occurring events to be headache, nausea, diarrhoea, abdominal pain. Other commonly occurring events were dizziness, fatigue, pollakiuria, vomiting, dyspepsia, rectal haemorrhage, flatulence, and abnormal bowel sounds. Uncommon events included palpitations, anorexia, and tremors.8" ;
+                                rdfs:label "European SmPC for prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#InfoForCase3
+:InfoForCase3 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              mp:references :Ref.14 ;
+              OpenPVSignal:has_content "One of the reported cases was the subject of a published case report.14 It describes a 61 year old female who was in reportedly good health and not taking any other medications. She was initiated on prucalopride 2 mg per day for the treatment of chronic constipation. Within a few hours after oral administration, she experienced suicidal ideation, visual hallucinations, disorientation, and a loss of balance and memory. The drug was withdrawn and symptoms resolved within 24 hours. She had never previously experienced similar symptoms." ;
+              rdfs:label "Info for case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.10 ,
+                                   :Ref.11 ,
+                                   :Ref.12 ,
+                                   :Ref.13 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content """Prucalopride was licensed for use by the European Medicines Agency in July 2009 and in Canada in December 2011 with an indication for use in the 
+symptomatic treatment of chronic constipation in women in whom laxatives fail to provide adequate relief.1,2
+Serotonin or 5-hydroxytryptamine (5-HT) acts as a neurotransmitter and paracrine agent that mediates a wide variety of functions, including cognitive and emotional processes, regulation of sleep and food intake, as well as cardiovascular and gastrointestinal mechanisms. To date 14 different 5-HT receptors, classified into seven subclasses, have been identified.3
+Prucalopride is a dihydro-benzofurancarboxamide derivative which is highly selective and has high affinity for serotoninergic 5-HT4 receptors. 5-HT4 receptors are located both in the central nervous system (CNS) and in the peripheral tissues, specifically the gastrointestinal tract. Activation of 5-HT4 in the gastrointestinal tract promotes gastrointestinal motility and mucosal secretion.
+Experimental models both in vitro and in vivo have demonstrated that prucalopride facilitates gastrointestinal motility by promoting longitudinal smooth muscle contractility while suppressing the resistance to propulsion due to circular smooth muscle contraction.4
+The highly selective nature of prucalopride for the 5-HT4 receptor represents an advantage over previous prokinetic non-selective 5-HT4 agonists, such as cisapride and tegaserod. Both of these agents have appreciable affinity for other receptors, channels or transporters [e.g. cisapride: human ether-a-go-go-related gene (hERG)/K+ channel and tegaserod: 5-HT1D and 5-HT2B receptors] which resulted in adverse event profiles (QT prolongation and cardiovascular ischemic events, respectively) which limited their clinical success.5-7
+The European Summary of Product Characteristics (SmPC) for prucalopride notes the most commonly occurring events to be headache, nausea, diarrhoea, abdominal pain. Other commonly occurring events were dizziness, fatigue, pollakiuria, vomiting, dyspepsia, rectal haemorrhage, flatulence, and abnormal bowel sounds. Uncommon events included palpitations, anorexia, and tremors.8 The labelling for Health Canada in contrast notes the following events from the Psychiatric disorders SOC: anxiety, confusional state, and depression.9
+Suicidal ideation is defined as thoughts about self- harm, with deliberate consideration or planning of possible techniques of causing one’s own death.10 Suicidal ideation is more common than suicide attempts or completed suicide.11 A 1995 study found that 3.3 percent of patients in an urban primary care outpatient clinic reported suicidal ideation.12 Risk factors for suicidal behaviours include female gender, younger age, fewer years of education, unmarried status and the presence of a mental disorder, with psychiatric comorbidity significantly increasing risk.13 In addition, some prescription drugs, such as selective serotonin re- uptake inhibitors, can have suicidal ideation as a side effect.""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.11 ,
+                                      :Ref.15 ,
+                                      :Ref.16 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ;
+                        OpenPVSignal:has_content """Three 5-HT4 receptor agonists have been variously approved for use as prokinetic agents. The first approved agent was cisapride which has subsequently been removed from both the US and EU markets secondary to cardiovascular events, specifically QT-prolongation.
+A second agent, tegaserod, was initially licensed in the US for the treatment of irritable bowel syndrome, but an observed increased risk in myocardial infarctions and strokes led to its withdrawal five years after approval. Tegaserod was never approved for use in the EU. In the refusal assessment report from the EMA’s Committee for Human Medicinal Products (CHMP), it is noted that findings in mice safety pharmacology studies suggest certain CNS related effects, such as increased activity, abnormal gait, and hypothermia at doses 10 to 100-fold higher than therapeutically relevant. Furthermore, it is reported that 2.1% of all tegaserod subjects reported adverse events in the Psychiatric disorders SOC (compared to 1.6% in placebo subjects). There were a total of six deaths in subjects taking tegaserod during clinical development, two of which were reported as suicide (12,032 total subjects in the safety database received tegaserod); no deaths were felt by the investigator to be related to study drug.
+CNS/psychiatric events were considered to be an outstanding safety issue.15
+Prucalopride is the third 5-HT4 receptor agonist. It has not been approved for licensure in the US; however, it was approved for use in chronic constipation in the EU in 2009 and in Canada in 2011. In the Committee for Medicinal Products for Human Use approval assessment report, it is noted that in single dose toxicity studies performed on mice that there were CNS effects seen “at very high doses” However, there was no discussion in the report regarding events from the Psychiatric disorders SOC. There were two deaths in the double-blind placebo controlled trials and four deaths in open-label studies. The report notes only that none of the deaths were considered related to treatment by the investigator. Neither suicidal ideation nor other CNS events are included in the risk management plan for prucalopride.1 In contrast, the Summary Basis of Decision for Health Canada notes that prucalopride: “…may act on receptors in the brain having the following 5- hydroxytryptamine (5-HT) receptors: 5-HT1; 5- HT2; and 5-HT3; that could be involved in anxiety and depression. It is unclear whether 5-HT4 may be related to depression and anxiety. However, anxiety has been reported in many clinical studies and some cases were reported as serious events. The open-label studies recorded anxiety in 1.9%  of the patients treated with the 2 mg dose, and similar results were found with 4 mg dose. In these studies, depression was elicited at a higher incidence than anxiety (3.5% versus 1.9%) with the 2 mg dose.”2. The 5-HT4 receptor (5-HT4-R) is located both in the CNS and in the peripheral tissues. In the human brain, 5-HT4-Rs have been localized in the basal ganglia, the hippocampal formation and the cortical mantle.3 It could be hypothesized that prucalopride, acting upon the 5-HT4 receptors in the basal ganglia could lead to a syndrome of dysphoria and suicidal ideation, as substantia nigra hyperactivity has been implicated in schizophrenia.11 Also, available evidence for another serotonin receptor agonist, metoclopromide, suggest that different polymorphisms in 5-HT4 receptor HTR4 genes are associated with adverse events and clinical effectiveness. There is the potential that only patients with certain genetic variations in the 5- HT4 receptor are susceptible to neuropsychiatric side effects.16 
+Three 5-HT4 receptor agonists have been variously approved for use as prokinetic agents. The first approved agent was cisapride which has subsequently been removed from both the US and EU markets secondary to cardiovascular events, specifically QT-prolongation.
+A second agent, tegaserod, was initially licensed in the US for the treatment of irritable bowel syndrome, but an observed increased risk in myocardial infarctions and strokes led to its withdrawal five years after approval. Tegaserod was never approved for use in the EU. In the refusal assessment report from the EMA’s Committee for Human Medicinal Products (CHMP), it is noted that findings in mice safety pharmacology studies suggest certain CNS related effects, such as increased activity, abnormal gait, and hypothermia at doses 10 to 100-fold higher than therapeutically relevant. Furthermore, it is reported that 2.1% of all tegaserod subjects reported adverse events in the Psychiatric disorders SOC (compared to 1.6% in placebo subjects). There were a total of six deaths in subjects taking tegaserod during clinical development, two of which were reported as suicide (12,032 total subjects in the safety database received tegaserod); no deaths were felt by the investigator to be related to study drug.
+CNS/psychiatric events were considered to be an outstanding safety issue.15
+Prucalopride is the third 5-HT4 receptor agonist. It has not been approved for licensure in the US; however, it was approved for use in chronic constipation in the EU in 2009 and in Canada in 2011. In the Committee for Medicinal Products for Human Use approval assessment report, it is noted that in single dose toxicity studies performed on mice that there were CNS effects seen “at very high doses” However, there was no discussion in the report regarding events from the Psychiatric disorders SOC. There were two deaths in the double-blind placebo controlled trials and four deaths in open-label studies. The report notes only that none of the deaths were considered related to treatment by the investigator. Neither suicidal ideation nor other CNS events are included in the risk management plan for prucalopride.1 In contrast, the Summary Basis of Decision for Health Canada notes that prucalopride: “…may act on receptors in the brain having the following 5- hydroxytryptamine (5-HT) receptors: 5-HT1; 5- HT2; and 5-HT3; that could be involved in anxiety and depression. It is unclear whether 5-HT4 may be related to depression and anxiety. However, anxiety has been reported in many clinical studies and some cases were reported as serious events. The open-label studies recorded anxiety in 1.9%  of the patients treated with the 2 mg dose, and similar results were found with 4 mg dose. In these studies, depression was elicited at a higher incidence than anxiety (3.5% versus 1.9%) with the 2 mg dose.”2 The 5-HT4 receptor (5-HT4-R) is located both in the CNS and in the peripheral tissues. In the human brain, 5-HT4-Rs have been localized in the basal ganglia, the hippocampal formation and the cortical mantle.3 It could be hypothesized that prucalopride, acting upon the 5-HT4 receptors in the basal ganglia could lead to a syndrome of dysphoria and suicidal ideation, as substantia nigra hyperactivity has been implicated in schizophrenia.11 Also, available evidence for another serotonin receptor agonist, metoclopromide, suggest that different polymorphisms in 5-HT4 receptor HTR4 genes are associated with adverse events and clinical effectiveness. There is the potential that only patients with certain genetic variations in the 5- HT4 receptor are susceptible to neuropsychiatric side effects.16""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Mechanism_of_prucalopride
+:Mechanism_of_prucalopride rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Mechanism ;
+                           mp:references :Ref.3 ,
+                                         :Ref.4 ;
+                           OpenPVSignal:has_content """\"Serotonin or 5-hydroxytryptamine (5-HT) acts as a neurotransmitter and paracrine agent that mediates a wide variety of functions, including cognitive and emotional processes, regulation of sleep and food intake, as well as cardiovascular and gastrointestinal mechanisms. To date 14 different 5-HT receptors, classified into seven subclasses, have been identified.3
+Prucalopride is a dihydro-benzofurancarboxamide derivative which is highly selective and has high affinity for serotoninergic 5-HT4 receptors. 5-HT4 receptors are located both in the central nervous system (CNS) and in the peripheral tissues, specifically the gastrointestinal tract. Activation of 5-HT4 in the gastrointestinal tract promotes gastrointestinal motility and mucosal secretion.
+Experimental m\"Serotonin or 5-hydroxytryptamine (5-HT) acts as a neurotransmitter and paracrine agent that mediates a wide variety of functions, including cognitive and emotional processes, regulation of sleep and food intake, as well as cardiovascular and gastrointestinal mechanisms. To date 14 different 5-HT receptors, classified into seven subclasses, have been identified.3
+Prucalopride is a dihydro-benzofurancarboxamide derivative which is highly selective and has high affinity for serotoninergic 5-HT4 receptors. 5-HT4 receptors are located both in the central nervous system (CNS) and in the peripheral tissues, specifically the gastrointestinal tract. Activation of 5-HT4 in the gastrointestinal tract promotes gastrointestinal motility and mucosal secretion.
+Experimental models both in vitro and in vivo have demonstrated that prucalopride facilitates gastrointestinal motility by promoting longitudinal smooth muscle contractility while suppressing the resistance to propulsion due to circular smooth muscle contraction.4\"
+odels both in vitro and in vivo have demonstrated that prucalopride facilitates gastrointestinal motility by promoting longitudinal smooth muscle contractility while suppressing the resistance to propulsion due to circular smooth muscle contraction.4\"""" ;
+                           rdfs:label "Mechanism of prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Mr_Alessio_Gasparotto
+:Mr_Alessio_Gasparotto rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                       OpenPVSignal:has_first_name "Alessio" ;
+                       OpenPVSignal:has_last_name "Gasparotto" ;
+                       rdfs:label "Mr Alessio Gasparotto" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride
+:OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Reports_group ;
+                                                            OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+                                                            OpenPVSignal:refers_to_drug :prucalopride ;
+                                                            OpenPVSignal:has_count 3 ;
+                                                            OpenPVSignal:has_reporter_type "health care professional" ;
+                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                            OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                                            rdfs:label "Overall reports in Vigibase for suicidal ideation and prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndTegaserod
+:OverallReportsInVigibaseForSuicidalIdeationAndTegaserod rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+                                                         OpenPVSignal:refers_to_drug :tegaserod ;
+                                                         OpenPVSignal:has_count 27 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "Overall reports in Vigibase for suicidal ideation and tegaserod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndTegaserodWithPositiveDechallenge
+:OverallReportsInVigibaseForSuicidalIdeationAndTegaserodWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                                                                         OpenPVSignal:Reports_group ;
+                                                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndTegaserod ;
+                                                                                OpenPVSignal:has_count 5 ;
+                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                                                                rdfs:label "Overall reports in Vigibase for suicidal ideation and tegaserod with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Canada
+:OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Canada rdf:type owl:NamedIndividual ,
+                                                                         OpenPVSignal:Reports_group ;
+                                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndTegaserod ;
+                                                                OpenPVSignal:has_count 2 ;
+                                                                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                rdfs:label "Overall reports in Vigibase for suicidal ideation and tegaserod-Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Mexico
+:OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Mexico rdf:type owl:NamedIndividual ,
+                                                                         OpenPVSignal:Reports_group ;
+                                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndTegaserod ;
+                                                                OpenPVSignal:has_count 1 ;
+                                                                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Mexico" ;
+                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                rdfs:label "Overall reports in Vigibase for suicidal ideation and tegaserod-Mexico" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-USA
+:OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-USA rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndTegaserod ;
+                                                             OpenPVSignal:has_count 24 ;
+                                                             OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                             rdfs:label "Overall reports in Vigibase for suicidal ideation and tegaserod-USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 61 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Potential_AE_mechanism_through_HT4_receptors
+:Potential_AE_mechanism_through_HT4_receptors rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Adverse_Effect_Mechanism ;
+                                              OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+                                              mp:references :Ref.11 ,
+                                                            :Ref.16 ,
+                                                            :Ref.3 ;
+                                              OpenPVSignal:has_content "The 5-HT4 receptor (5-HT4-R) is located both in the CNS and in the peripheral tissues. In the human brain, 5-HT4-Rs have been localized in the basal ganglia, the hippocampal formation and the cortical mantle.3 It could be hypothesized that prucalopride, acting upon the 5-HT4 receptors in the basal ganglia could lead to a syndrome of dysphoria and suicidal ideation, as substantia nigra hyperactivity has been implicated in schizophrenia.11 Also, available evidence for another serotonin receptor agonist, metoclopromide, suggest that different polymorphisms in 5-HT4 receptor HTR4 genes are associated with adverse events and clinical effectiveness. There is the potential that only patients with certain genetic variations in the 5- HT4 receptor are susceptible to neuropsychiatric side effects.16" ;
+                                              rdfs:label "Potential AE mechanism through HT4 receptors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndAbdominalPain
+:PrucaloprideAndAbdominalPain rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :abdominalPain ;
+                              OpenPVSignal:refers_to_drug :prucalopride ;
+                              rdfs:label "Prucalopride and abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndAbnormalBowelSounds
+:PrucaloprideAndAbnormalBowelSounds rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :abnormalBowelSounds ;
+                                    OpenPVSignal:refers_to_drug :prucalopride ;
+                                    rdfs:label "Prucalopride and abnormal bowel sounds" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndAnorexia
+:PrucaloprideAndAnorexia rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Warning_Information ;
+                         OpenPVSignal:refers_to_adverse_effect :anorexia ;
+                         OpenPVSignal:refers_to_drug :prucalopride ;
+                         rdfs:label "Prucalopride and anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndAnxiety
+:PrucaloprideAndAnxiety rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :anxiety ;
+                        OpenPVSignal:refers_to_drug :prucalopride ;
+                        rdfs:label "Prucalopride and anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndConfusionalState
+:PrucaloprideAndConfusionalState rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :confusionalState ;
+                                 OpenPVSignal:refers_to_drug :prucalopride ;
+                                 rdfs:label "Prucalopride and confusional state" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndDepression
+:PrucaloprideAndDepression rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_adverse_effect :depression ;
+                           OpenPVSignal:refers_to_drug :prucalopride ;
+                           rdfs:label "Prucalopride and depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndDiarrhoea
+:PrucaloprideAndDiarrhoea rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :diarrhoea ;
+                          OpenPVSignal:refers_to_drug :prucalopride ;
+                          rdfs:label "Prucalopride and diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndDizziness
+:PrucaloprideAndDizziness rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :dizziness ;
+                          OpenPVSignal:refers_to_drug :prucalopride ;
+                          rdfs:label "Prucalopride and dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndDyspepsia
+:PrucaloprideAndDyspepsia rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :dyspepsia ;
+                          OpenPVSignal:refers_to_drug :prucalopride ;
+                          rdfs:label "Prucalopride and dyspepsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndFatigue
+:PrucaloprideAndFatigue rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :fatigue ;
+                        OpenPVSignal:refers_to_drug :prucalopride ;
+                        rdfs:label "Prucalopride and fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndFlatulence
+:PrucaloprideAndFlatulence rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_adverse_effect :flatulence ;
+                           OpenPVSignal:refers_to_drug :prucalopride ;
+                           rdfs:label "Prucalopride and flatulence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndHeadache
+:PrucaloprideAndHeadache rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Warning_Information ;
+                         OpenPVSignal:refers_to_adverse_effect :headache ;
+                         OpenPVSignal:refers_to_drug :prucalopride ;
+                         rdfs:label "Prucalopride and headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndNausea
+:PrucaloprideAndNausea rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Warning_Information ;
+                       OpenPVSignal:refers_to_adverse_effect :nausea ;
+                       OpenPVSignal:refers_to_drug :prucalopride ;
+                       rdfs:label "Prucalopride and nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndPalpitations
+:PrucaloprideAndPalpitations rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Warning_Information ;
+                             OpenPVSignal:refers_to_adverse_effect :palpitations ;
+                             OpenPVSignal:refers_to_drug :prucalopride ;
+                             rdfs:label "Prucalopride and palpitations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndPollakiuria
+:PrucaloprideAndPollakiuria rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :pollakiuria ;
+                            OpenPVSignal:refers_to_drug :prucalopride ;
+                            rdfs:label "Prucalopride and pollakiuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndRectalHaemorrhage
+:PrucaloprideAndRectalHaemorrhage rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :rectalHaemorrhage ;
+                                  OpenPVSignal:refers_to_drug :prucalopride ;
+                                  rdfs:label "Prucalopride and rectal haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndTremors
+:PrucaloprideAndTremors rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :tremors ;
+                        OpenPVSignal:refers_to_drug :prucalopride ;
+                        rdfs:label "Prucalopride and tremors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#PrucaloprideAndVomiting
+:PrucaloprideAndVomiting rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Warning_Information ;
+                         OpenPVSignal:refers_to_adverse_effect :vomiting ;
+                         OpenPVSignal:refers_to_drug :prucalopride ;
+                         rdfs:label "Prucalopride and vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Prucalopride_and_Suicidal_ideation
+:Prucalopride_and_Suicidal_ideation rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                    OpenPVSignal:refers_to_author :Dr_Rebecca_Chandler ,
+                                                                  :Mr_Alessio_Gasparotto ;
+                                    OpenPVSignal:refers_to_signal :pvSignal ;
+                                    mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                    OpenPVSignal:has_creation_date "1/6/2015" ;
+                                    OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                    rdfs:label "Prucalopride and Suicidal ideation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#ReceptorOfCisapridePharmacologicalFunction
+:ReceptorOfCisapridePharmacologicalFunction rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                                            OpenPVSignal:refers_to_adverse_effect :qtProlongation ;
+                                            mp:references :Ref.5 ,
+                                                          :Ref.6 ,
+                                                          :Ref.7 ;
+                                            OpenPVSignal:has_content "The highly selective nature of prucalopride for the 5-HT4 receptor represents an advantage over previous prokinetic non-selective 5-HT4 agonists, such as cisapride and tegaserod. Both of these agents have appreciable affinity for other receptors, channels or transporters [e.g. cisapride: human ether-a-go-go-related gene (hERG)/K+ channel and tegaserod: 5-HT1D and 5-HT2B receptors] which resulted in adverse event profiles (QT prolongation and cardiovascular ischemic events, respectively) which limited their clinical success.5-7" ;
+                                            rdfs:label "Receptor of cisapride pharmacological function" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#ReceptorOfTegaserodPharmacologicalFunction
+:ReceptorOfTegaserodPharmacologicalFunction rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                                            OpenPVSignal:refers_to_adverse_effect :cardiovascularIschemicEvents ;
+                                            mp:references :Ref.5 ,
+                                                          :Ref.6 ,
+                                                          :Ref.7 ;
+                                            OpenPVSignal:has_content "The highly selective nature of prucalopride for the 5-HT4 receptor represents an advantage over previous prokinetic non-selective 5-HT4 agonists, such as cisapride and tegaserod. Both of these agents have appreciable affinity for other receptors, channels or transporters [e.g. cisapride: human ether-a-go-go-related gene (hERG)/K+ channel and tegaserod: 5-HT1D and 5-HT2B receptors] which resulted in adverse event profiles (QT prolongation and cardiovascular ischemic events, respectively) which limited their clinical success.5-7" ;
+                                            rdfs:label "Receptor of tegaserod pharmacological function" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Approval assessment report for Resolor (prucalopride). URL: http://www.ema.europa. eu/docs/en_GB/docu-ment_library/EPAR_-_Public_assessment_report/ human/001012/WC500053997.pdf. Accessed: 4 February 2015." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). Washington, DC. ISBN 978-0-89042-555-8." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Marzuk PM. Suicidal behavior and HIV illnesses. Int Rev Psychiatry. 1991;3:365-71." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Zimmerman M, Lish JD, Lush DT, Faber NJ, Plescia G, Kuzma MA. Suicidal ideation among urban medical outpatients. J Gen Intern Med. 1995;10:573-6." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Nock MK, Borges G, Bromet EJ, Alonso J, Angermeyer M, BeautraisA et al. Cross- national prevalence and risk factors for suicidal ideation, plans and attempts. Brit J Psychiatr. Feb 2008;192(2):98-105." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Carovale C, Pellegrino P, Perrone V, Antoniazzi S, Pozzi M, Nisic A et al. Neurological and psychiatric adverse events with prucalopride: case report and possible mechanisms. J Clin Pharm Ther. 2013;83:524-5." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Refusal assessment report for Zelnorm (tegaserod). URL: http://www.ema.europa. eu/docs/en_GB/docu-ment_library/EPAR_-_Public_assessment_report/ human/000621/WC500058849.pdf. Accessed: 04 February 2015." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Parkman HP, Mishra A, Jacobs M et al. Clinical response and side effects of methoclopromide: associations with clinical, demographic, and pharmacogenetic parameters. J Clin Gastroenterol. 2012;46:494-503." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Summary Basis of Decision for Resotran (prucalopride). URL: http://www.hc-sc.gc.ca/ dhp-mps/prodpharma/sbd-smd/drug- med/sbd_smd_2012_resotran_141157- eng.php#a334. Accessed: 10 February 2015." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hoyer D, Clarke DE, Fozard JR, Hartig PR, Martin GR, Mylecharane EJ et al. International Union of Pharmacology classification of receptors for 5-hydroxy-tryptamine (serotonin). Pharmacol Rev. 1994;46:157- 203." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wong BS, Manabe N, Camilleri C. Role of prucalopride, a serotonin (5-HT4) receptor agonist, for the treatment of chronic constipation. Clin Exp Gastroentrol. 2019;3:49-56." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mohammad S, Zhou Z, Gong Q, January CT. Blockage of the HERG human cardiac K+ channel by the gastrointestinal prokinetic agent cisapride. Am J Physiol Hear Circ Physiol. 1997;273(5):H2534-8." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wysowski DK, Corken A, Gallo-Torres H, Talarico L, Rodriguez EM. Postmarketing reports of QT prolongation and ventricular arrhythmia in association with cisapride and FDA regulatory actions. Am J Gastroentrol. 2001;96(6):1698-703." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "De Maeyer JH, Lefebvre RA, Schuurkes JA. 5- HT4 receptor agonists: similar but not the same. Neurogastroenterol Motil. 2008;20(2):99-112." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium UK. Resolor (prucalopride). URL: http://www.ema.europa. eu/docs/en_GB/document_library/EPAR_-_Product_Information/ human/001012/WC500053998.pdf. Accessed: 4 February 2015." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Product Information for Resotran (prucalopride). URL: http://webprod5.hc- sc.gc.ca/dpd-bdpp/info. do?code=86259&lang=eng. Accessed: 4 February 2015." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :off-labelUse ,
+                                               :suicidalIdeation ;
+         OpenPVSignal:refers_to_concomitant_drug :betaBlockingAgents ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :prucalopride ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :depression ,
+                                               :suicidalIdeation ,
+                                               :thoughtsOfSelfHarm ;
+         OpenPVSignal:refers_to_concomitant_drug :fluocinonide ,
+                                                 :hyoscine ,
+                                                 :levothyroxine ,
+                                                 :mebeverine ,
+                                                 :morphine ,
+                                                 :omeprazole ,
+                                                 :paracetamol ,
+                                                 :pregabalin ,
+                                                 :propantheline ,
+                                                 :tramadol ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :prucalopride ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :InfoForCase3 ;
+         OpenPVSignal:refers_to_adverse_effect :amnesia ,
+                                               :balanceDifficulty ,
+                                               :disorientation ,
+                                               :hallucinationVisual ,
+                                               :prostration ,
+                                               :suicidalIdeation ;
+         OpenPVSignal:refers_to_concomitant_drug :brotizolam ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :prucalopride ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_3 ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Reported_suicides_for_tegaserod
+:Reported_suicides_for_tegaserod rdf:type owl:NamedIndividual ,
+                                          obo:OAE_0001197 ;
+                                 OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+                                 OpenPVSignal:refers_to_drug :tegaserod ;
+                                 mp:references :Ref.15 ;
+                                 OpenPVSignal:has_content "Furthermore, it is reported that 2.1% of all tegaserod subjects reported adverse events in the Psychiatric disorders SOC (compared to 1.6% in placebo subjects). There were a total of six deaths in subjects taking tegaserod during clinical development, two of which were reported as suicide (12,032 total subjects in the safety database received tegaserod); no deaths were felt by the investigator to be related to study drug. CNS/psychiatric events were considered to be an outstanding safety issue.15" ;
+                                 rdfs:label "Reported suicides for tegaserod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.14 ;
+                   OpenPVSignal:has_content """There were a total of four case reports in the WHO Global Individual Case Safety Report (ICSR) database, VigiBase® as of December 2014 which reported suicidal ideation in association with prucalopride.
+The four case reports were submitted from three countries: Germany, the United Kingdom, and Italy. All case reports were received from health- care professionals. One of the reports was determined to be a duplicate. Two of the reports described events occurring in females, ages 44 and 61; one report described events occurring in a male whose age was not reported. Time to onset was reported in all cases and ranged from “hours after the first dose” to 16 days after initiation of prucalopride. Prucalopride was withdrawn and the outcome was reported as recovered in all of the cases.
+One of the reported cases was the subject of a published case report.14 It describes a 61 year old female who was in reportedly good health and not taking any other medications. She was initiated on prucalopride 2 mg per day for the treatment of chronic constipation. Within a few hours after oral administration, she experienced suicidal ideation, visual hallucinations, disorientation, and a loss of balance and memory. The drug was withdrawn and symptoms resolved within 24 hours. She had never previously experienced similar symptoms.
+There were an additional 27 case reports of suicide ideation with another 5-HT4 agonist, tegaserod.
+There were a total of 24 cases from the USA, two from Canada, and one from Mexico. Several of the 27 cases report depression and are complicated by the use of multiple concomitant medications.
+However, five of these reports document a positive dechallenge.
+There were a total of four case reports in the WHO Global Individual Case Safety Report (ICSR) database, VigiBase® as of December 2014 which reported suicidal ideation in association with prucalopride.
+The four case reports were submitted from three countries: Germany, the United Kingdom, and Italy. All case reports were received from health- care professionals. One of the reports was determined to be a duplicate. Two of the reports described events occurring in females, ages 44 and 61; one report described events occurring in a male whose age was not reported. Time to onset was reported in all cases and ranged from “hours after the first dose” to 16 days after initiation of prucalopride. Prucalopride was withdrawn and the outcome was reported as recovered in all of the cases.
+One of the reported cases was the subject of a published case report.14 It describes a 61 year old female who was in reportedly good health and not taking any other medications. She was initiated on prucalopride 2 mg per day for the treatment of chronic constipation. Within a few hours after oral administration, she experienced suicidal ideation, visual hallucinations, disorientation, and a loss of balance and memory. The drug was withdrawn and symptoms resolved within 24 hours. She had never previously experienced similar symptoms.
+There were an additional 27 case reports of suicide ideation with another 5-HT4 agonist, tegaserod.
+There were a total of 24 cases from the USA, two from Canada, and one from Mexico. Several of the 27 cases report depression and are complicated by the use of multiple concomitant medications.
+However, five of these reports document a positive dechallenge.""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Response_from_Shire
+:Response_from_Shire rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Prucalopride_and_Suicidal_ideation ;
+                     OpenPVSignal:has_content """Response from Shire
+
+Suicide-related events include passive and active thinking, planning, and finally taking action to commit suicide. Passive death thoughts are common in the general population. In a cross- national (17 countries) sample, Nock et al estimated the lifetime prevalence of suicidal ideation at 9.2% (1).
+For prucalopride there was no signal for suicide- related events in the developmental clinical trials of this product for chronic constipation.
+The Shire global safety database contains the same postmarketing reports tabulated by the authors and, except for one duplicate, no other report of suicide-related events.
+In review of the three postmarketing cases in the database, the first case involved a male of unknown age and was derived from sparse documentation which included no information on medical history or concurrent disorders. The second case involved a 44-year old female who was concomitantly treated with tramadol, a medication with a known association with suicidal events and depression (2,3).
+The third and most recent case was presented as a published case report where suicidal thoughts were reported amongst a plethora of other events including balance difficulty, prostration, visual hallucinations, amnesia and disorientation.
+Interestingly, the publication failed to mention this patient’s concomitant treatment with brotizolam, a benzodiazepine. The constellation of events described is considered to be clinically compatible with a paradoxical benzodiazepine reaction given that such reactions may typically include hallucinations, inconsolable crying, agitation, restlessness, disorientation, aggressive behaviour and/other psychological phenomena (4).
+Additionally, benzodiazepine use has been identified in at least one published study as among a number of variables associated with suicide in older adults (5).
+In summary, suicide-related events did not constitute a signal during clinical development of prucalopride. In the postmarketing review, 2 of the 3 case reports of suicidal ideation were confounded by potentially relevant concomitant medication exposures, and the third case report was poorly documented. Based on the information available at this time, Shire does not believe there is sufficient evidence to support a causal association of suicidal ideation with the use of prucalopride.
+
+
+For Shire,
+Anders Lindholm MD, PhD
+Therapeutic Area Head, Pharmacovigilance & Risk Management, Shire
+References
+
+1.	Nock MK; Borges, G; Bromet EJ, et al. Cross- National Prevalence and Risk Factors for Suicidal Ideation, Plans, and Attempts. Br J Psychiatry 2008;192:98-105.
+2.	“FDA Warns of Suicide Risk for Tramadol.” http://www.medscape.com/viewarticle/ 722488 (accessed 23-Mar-15)
+3.	“Ultram (tramadol hydrochloride), Ultracet (tramadol hydrochloride/acetaminophen): Label Change.” http:// www.fda.gov/Safety/ MedWatch/SafetyInformation/ SafetyAlertsforHumanMedicalProducts/ucm21 3264.htm (accessed 23-Mar-15)
+4.	Young Hee Shin, Myung Hee Kim, Jung Jin Lee, Soo Joo Choi, Mi Sook Gwak, Ae Ryoung Lee, et al. The effect of midazolam dose and age on the paradoxical midazolam reaction in Korean pediatric patients. Korean J Anesthesiol 2013 July 65(1): 9-13
+5.	Voaklander DC, Rowe BH, Dryden DM, Pahal J, Saar P, Kelly KD. Medical illness, medication use and suicide in seniors: a population-based case-control study. J Epidemiol Community Health. 2008 Feb;62(2):138-46.""" ;
+                     rdfs:label "Response from Shire" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#SummaryBasisOfDecisionForHealthCanada
+:SummaryBasisOfDecisionForHealthCanada rdf:type owl:NamedIndividual ,
+                                                obo:OAE_0001197 ;
+                                       OpenPVSignal:refers_to_drug :prucalopride ;
+                                       mp:references :Ref.2 ;
+                                       OpenPVSignal:has_content "In contrast, the Summary Basis of Decision for Health Canada notes that prucalopride: “…may act on receptors in the brain having the following 5- hydroxytryptamine (5-HT) receptors: 5-HT1; 5- HT2; and 5-HT3; that could be involved in anxiety and depression. It is unclear whether 5-HT4 may be related to depression and anxiety. However, anxiety has been reported in many clinical studies and some cases were reported as serious events. The open-label studies recorded anxiety in 1.9% of the patients treated with the 2 mg dose, and similar results were found with 4 mg dose. In these studies, depression was elicited at a higher incidence than anxiety (3.5% versus 1.9%) with the 2 mg dose.”2" ;
+                                       rdfs:label "Summary Basis of Decision for Health Canada " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Summary_content
+:Summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content "Suicidal ideation has been identified in association with the gastrointestinal prokinetic agent, prucalopride, as a potential signal from the WHO Global Individual Case Safety Report database, VigiBase®. Prucalopride is the third 5-HT4 receptor agonist licensed as a prokinetic agent but its highly selective nature represents an advantage over the previously licensed products cisapride and tegaserod which have both been withdrawn due to adverse cardiac effects. While the total number of case reports for suicidal ideation and prucalopride is small, there is evidence of psychiatric events, specifically anxiety, confusional state, and depression, from clinical trial data as well as a notable number of reports of suicidal ideation for tegaserod. Of potential concern is the inconsistency in the labelling for CNS events between the EU and Canada, the two regions in which prucalopride has been approved. The potential for psychiatric adverse events should be acknowledged in the EU as has been done in Canada. Furthermore, with the identification of these case reports of suicidal ideation, a possible recommendation would be for increased surveillance for such events related to suicide. Additionally, the potential for a relationship between adverse events with prucalopride and certain 5-HT4 polymorphisms should be explored." ;
+                 rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#TegaserodAndCardiovascularIschemicEvents
+:TegaserodAndCardiovascularIschemicEvents rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Warning_Information ;
+                                          OpenPVSignal:refers_to_adverse_effect :cardiovascularIschemicEvents ;
+                                          OpenPVSignal:refers_to_drug :tegaserod ;
+                                          rdfs:label "Tegaserod and cardiovascular ischemic events" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#TegaserodRemoval
+:TegaserodRemoval rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+                  OpenPVSignal:refers_to_drug :tegaserod ;
+                  mp:references :Ref.15 ;
+                  OpenPVSignal:has_content """A second agent, tegaserod, was initially licensed in the US for the treatment of irritable bowel syndrome, but an observed increased risk in myocardial infarctions and strokes led to its withdrawal five years after approval. Tegaserod was never approved for use in the EU. In the refusal assessment report from the EMA’s Committee for Human Medicinal Products (CHMP), it is noted that findings in mice safety pharmacology studies suggest certain CNS related effects, such as increased activity, abnormal gait, and hypothermia at doses 10 to 100-fold higher than therapeutically relevant. Furthermore, it is reported that 2.1% of all tegaserod subjects reported adverse events in the Psychiatric disorders SOC (compared to 1.6% in placebo subjects). There were a total of six deaths in subjects taking tegaserod during clinical development, two of which were reported as suicide (12,032 total subjects in the safety database received tegaserod); no deaths were felt by the investigator to be related to study drug.
+CNS/psychiatric events were considered to be an outstanding safety issue.15""" ;
+                  rdfs:label "Tegaserod removal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "3-4 days" ;
+              time:nominalPosition "days" ;
+              time:numericDuration 1 ;
+              time:numericPosition 3 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#TimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 16 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#TimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Hours after first dose" ;
+              time:nominalPosition "hours" ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#abnormalBowelSounds
+:abnormalBowelSounds rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10000119 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Abnormal bowel sounds" ;
+                     rdfs:label "abnormal bowel sounds" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#amnesia
+:amnesia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10001949 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Amnesia" ;
+         rdfs:label "amnesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10002646 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Anorexia" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#balanceDifficulty
+:balanceDifficulty rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10004070 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Balance difficulty" ;
+                   rdfs:label "balance difficulty" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#betaBlockingAgents
+:betaBlockingAgents rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "C07" ;
+                    rdfs:label "beta blocking agents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#brotizolam
+:brotizolam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05CD09" ,
+                                      "N05CD09 " ;
+            rdfs:label "brotizolam " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#cardiovascularIschemicEvents
+:cardiovascularIschemicEvents rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_MedDRA_code 10066619 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Acute heart ischemia" ;
+                              rdfs:label "cardiovascular ischemic events" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#cisapride
+:cisapride rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_mechanism :ReceptorOfCisapridePharmacologicalFunction ;
+           OpenPVSignal:has_ATC_code "A03FA02 " ;
+           rdfs:label "cisapride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#confusionalState
+:confusionalState rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10010305 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+                  rdfs:label "confusional state" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#disorientation
+:disorientation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R41.1" ;
+                OpenPVSignal:has_MedDRA_code 10013395 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Disorientation" ;
+                rdfs:label "disorientation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#dyspepsia
+:dyspepsia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10013946 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dyspepsia" ;
+           rdfs:label "dyspepsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#fdf
+:fdf rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Free_text_reporting_element ;
+     OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+     mp:references :Ref.10 ,
+                   :Ref.11 ,
+                   :Ref.12 ,
+                   :Ref.13 ;
+     OpenPVSignal:has_content "Suicidal ideation is defined as thoughts about self- harm, with deliberate consideration or planning of possible techniques of causing one’s own death.10 Suicidal ideation is more common than suicide attempts or completed suicide.11 A 1995 study found that 3.3 percent of patients in an urban primary care outpatient clinic reported suicidal ideation.12 Risk factors for suicidal behaviours include female gender, younger age, fewer years of education, unmarried status and the presence of a mental disorder, with psychiatric comorbidity significantly increasing risk.13 In addition, some prescription drugs, such as selective serotonin re- uptake inhibitors, can have suicidal ideation as a side effect." ;
+     rdfs:label "Suicidal ideation pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#flatulence
+:flatulence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R14.3" ;
+            OpenPVSignal:has_MedDRA_code 10016766 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Flatulence" ;
+            rdfs:label "flatulence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#fluocinonide
+:fluocinonide rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "D07AC08 " ;
+              rdfs:label "fluocinonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#hallucinationVisual
+:hallucinationVisual rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R44.1" ;
+                     OpenPVSignal:has_MedDRA_code 10019075 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Hallucination, visual" ;
+                     rdfs:label "hallucination visual" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#hyoscine
+:hyoscine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A03BB01" ;
+          rdfs:label "hyoscine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#labelling_of_prucalopride_for_Health_Canada
+:labelling_of_prucalopride_for_Health_Canada rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Structured_Product_Labels_information ;
+                                             OpenPVSignal:refers_to_drug :prucalopride ;
+                                             mp:references :Ref.9 ;
+                                             OpenPVSignal:has_content """The labelling for Health Canada in contrast notes the following events from 
+the Psychiatric disorders SOC: anxiety, confusional state, and depression.9""" ;
+                                             rdfs:label "labelling of prucalopride for Health Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#mebeverine
+:mebeverine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A03AA04" ;
+            rdfs:label "mebeverine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#metoclopromide
+:metoclopromide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_mechanism :Potential_AE_mechanism_through_HT4_receptors ;
+                OpenPVSignal:has_ATC_code "A03FA01" ;
+                rdfs:label "metoclopromide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AA01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#off-labelUse
+:off-labelUse rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I45.81" ;
+              OpenPVSignal:has_MedDRA_code 10053762 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Off label use" ;
+              rdfs:label "off-label use" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ,
+                                      "A02BC01 " ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#oneDayIntervalBetweenAdministrations
+:oneDayIntervalBetweenAdministrations rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      time:nominalPosition "days" ;
+                                      time:numericPosition 1 ;
+                                      rdfs:label "one day interval between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#outcomes_from_reports
+:outcomes_from_reports rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001197 ;
+                       OpenPVSignal:has_content "It is notable that in none of the cases are there any past histories of depression or concomitant medication use implying a history of psychiatric disorders. Furthermore, the time to onset is relatively short for two of the cases, within hours to days. All cases had documentation of resolution of symptoms after drug withdrawal." ;
+                       rdfs:label "outcomes from reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#palpitations
+:palpitations rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R00.2" ;
+              OpenPVSignal:has_MedDRA_code 10033557 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+              rdfs:label "palpitations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#pollakiuria
+:pollakiuria rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10036018 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Pollakiuria" ;
+             rdfs:label "pollakiuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#pregabalin
+:pregabalin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX16" ,
+                                      "N03AX16 " ;
+            rdfs:label "pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#propantheline
+:propantheline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A03AB05" ;
+               rdfs:label "propantheline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#prostration
+:prostration rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10036985 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Prostration" ;
+             rdfs:label "prostration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#prucalopride
+:prucalopride rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :Mechanism_of_prucalopride ,
+                                         :Potential_AE_mechanism_through_HT4_receptors ;
+              OpenPVSignal:has_ATC_code "A06AX05 " ;
+              rdfs:label "prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :CisaprideRemoval ,
+                                                   :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :Summary_content ,
+                                                   :TegaserodRemoval ,
+                                                   :fdf ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride ,
+                                                          :OverallReportsInVigibaseForSuicidalIdeationAndTegaserod ,
+                                                          :OverallReportsInVigibaseForSuicidalIdeationAndTegaserodWithPositiveDechallenge ,
+                                                          :OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Canada ,
+                                                          :OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-Mexico ,
+                                                          :OverallReportsInVigibaseForSuicidalIdeationAndtegaserod-USA ,
+                                                          :reports_from_Germany ,
+                                                          :reports_from_Italy ,
+                                                          :reports_from_UK ;
+          OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+          OpenPVSignal:refers_to_drug :prucalopride ;
+          OpenPVSignal:refers_to_primary_suspect_drug :prucalopride ;
+          mp:supportedByData :Anxiety_and_depression_reported_in_Clinical_trials_of_prucalopride ,
+                             :CisaprideAndQTProlongation ,
+                             :Clinical_trial_information_for_prucalopride ,
+                             :CommitteeForMedicinalProductsForHumanUse ,
+                             :European_SmPC_for_prucalopride ,
+                             :PrucaloprideAndAbdominalPain ,
+                             :PrucaloprideAndAbnormalBowelSounds ,
+                             :PrucaloprideAndAnorexia ,
+                             :PrucaloprideAndAnxiety ,
+                             :PrucaloprideAndConfusionalState ,
+                             :PrucaloprideAndDepression ,
+                             :PrucaloprideAndDiarrhoea ,
+                             :PrucaloprideAndDizziness ,
+                             :PrucaloprideAndDyspepsia ,
+                             :PrucaloprideAndFatigue ,
+                             :PrucaloprideAndFlatulence ,
+                             :PrucaloprideAndHeadache ,
+                             :PrucaloprideAndNausea ,
+                             :PrucaloprideAndPalpitations ,
+                             :PrucaloprideAndPollakiuria ,
+                             :PrucaloprideAndRectalHaemorrhage ,
+                             :PrucaloprideAndTremors ,
+                             :PrucaloprideAndVomiting ,
+                             :Reported_suicides_for_tegaserod ,
+                             :SummaryBasisOfDecisionForHealthCanada ,
+                             :TegaserodAndCardiovascularIschemicEvents ,
+                             :labelling_of_prucalopride_for_Health_Canada ,
+                             :outcomes_from_reports ;
+          OpenPVSignal:initially_identified_on "1/6/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#qtProlongation
+:qtProlongation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I67.9" ;
+                OpenPVSignal:has_MedDRA_code 10037705 ;
+                OpenPVSignal:has_MedDRA_prefered_term "QT prolonged" ;
+                rdfs:label "qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#rectalHaemorrhage
+:rectalHaemorrhage rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10038063 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Rectal haemorrhage" ;
+                   rdfs:label "rectal haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#reports_from_Germany
+:reports_from_Germany rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#reports_from_Italy
+:reports_from_Italy rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#reports_from_UK
+:reports_from_UK rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForSuicidalIdeationAndPrucalopride ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#suicidalIdeation
+:suicidalIdeation rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10042458 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Suicidal ideation" ;
+                  rdfs:label "suicidal ideation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#tegaserod
+:tegaserod rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_mechanism :ReceptorOfTegaserodPharmacologicalFunction ;
+           OpenPVSignal:has_ATC_code "A06AX06 " ;
+           rdfs:label "tegaserod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#thoughtsOfSelfHarm
+:thoughtsOfSelfHarm rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10043498 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Thoughts of self harm" ;
+                    rdfs:label "thoughts of self harm" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#tremors
+:tremors rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10044565 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+         rdfs:label "tremors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :ChronicConstipation ;
+                    OpenPVSignal:refers_to_drug :prucalopride ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#usage_for_report_2
+:usage_for_report_2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :Constipation ;
+                    OpenPVSignal:refers_to_drug :prucalopride ;
+                    rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#usage_for_report_3
+:usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :ChronicConstipation ;
+                    OpenPVSignal:refers_to_drug :prucalopride ;
+                    rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#usage_of_prucalopride
+:usage_of_prucalopride rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug_Usage ;
+                       OpenPVSignal:concerns_indication_for_use :ChronicConstipation ;
+                       OpenPVSignal:refers_to_drug :prucalopride ;
+                       mp:references :Ref.1 ,
+                                     :Ref.2 ;
+                       rdfs:label "usage of prucalopride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_3_prucalopride_suicidal_ideation#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,1693 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia> rdf:type owl:Ontology ;
+                                                                       owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                   mp: ;
+                                                                       rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255496/"^^xsd:anyURI ;
+                                                                       rdfs:label "Atomoxetine and neutropenia in paediatric patients"^^xsd:Literal ;
+                                                                       owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ADHD
+:ADHD rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Indication ;
+      OpenPVSignal:has_ICD_code "F90.0" ;
+      OpenPVSignal:has_MedDRA_code 10083622 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Attention deficit hyperactivity disorder" ;
+      rdfs:label "ADHD" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndDecreasedAppetite
+:AtomoxetineAndDecreasedAppetite rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :decreasedAppetite ;
+                                 OpenPVSignal:refers_to_drug :atomoxetine ;
+                                 rdfs:label "Atomoxetine and decreased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndDecreasedWeight
+:AtomoxetineAndDecreasedWeight rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :decreasedWeight ;
+                               OpenPVSignal:refers_to_drug :atomoxetine ;
+                               rdfs:label "Atomoxetine and decreased weight" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndGastrointestinalReactions
+:AtomoxetineAndGastrointestinalReactions rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Warning_Information ;
+                                         OpenPVSignal:refers_to_adverse_effect :gastrointestinalReactions ;
+                                         OpenPVSignal:refers_to_drug :atomoxetine ;
+                                         rdfs:label "Atomoxetine and gastrointestinal reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndIncreasedBloodPressure
+:AtomoxetineAndIncreasedBloodPressure rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Warning_Information ;
+                                      OpenPVSignal:refers_to_adverse_effect :increasedBloodPressure ;
+                                      OpenPVSignal:refers_to_drug :atomoxetine ;
+                                      rdfs:label "Atomoxetine and increased blood pressure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndIncreasedHeartRate
+:AtomoxetineAndIncreasedHeartRate rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :heartRate ;
+                                  OpenPVSignal:refers_to_drug :atomoxetine ;
+                                  rdfs:label "Atomoxetine and increased heart rate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#AtomoxetineAndSkinReactions
+:AtomoxetineAndSkinReactions rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Warning_Information ;
+                             OpenPVSignal:refers_to_adverse_effect :skinReactions ;
+                             OpenPVSignal:refers_to_drug :atomoxetine ;
+                             rdfs:label "Atomoxetine and skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Atomoxetine_and_neutropenia_in_paediatric_patients
+:Atomoxetine_and_neutropenia_in_paediatric_patients rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                    OpenPVSignal:refers_to_author :Dr_Ian_Boyd ;
+                                                    OpenPVSignal:refers_to_signal :pvClinical ;
+                                                    OpenPVSignal:has_creation_date "01/12/2015" ;
+                                                    OpenPVSignal:has_overall_conclusion "causal association" ;
+                                                    rdfs:label "Atomoxetine and neutropenia in paediatric patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "In summary, there are 25 reports from children and adolescents associating neutropenia with the use of atomoxetine. Atomoxetine was the only drug suspected in 20 of the 25 cases. The fact there was a positive dechallenge in seven of the 10 reports where recovery was documented is suggestive of a drug-induced effect. The clustering of five cases with an onset between 14 and 27 days is consistent with drug-induced neutropenia. However, the possible association of atomoxetine with neutropenia appears predominantly in the adolescent and paediatric population. " ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ConcomitantDrugs
+:ConcomitantDrugs rdf:type owl:NamedIndividual ,
+                           obo:OAE_0001182 ;
+                  OpenPVSignal:has_content "Three of these drugs, olanzapine, risperidone and valproic acid, refer to neutropenia in their product information and these drugs may each be a possible cause in the three cases where these drugs are suspect (Cases 5, 7 and 24).  " ;
+                  rdfs:label "Concomitant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.3 ;
+                   OpenPVSignal:has_content "Case reports in VigiBase® suggest that there is a possible signal for the association of atomoxetine and neutropenia in children and adolescents. Atomoxetine was the only drug suspected in 20 of the 25 cases. In three of the remaining five cases, there were co-suspected drugs for which neutropenia is labelled. Time to onset was reported in 11 of the reports and ranged from 14 days to 10 months. The median time was 50 days and there was a clustering of five cases between 14 and 27 days. This is consistent with drug- induced neutropenia. The outcome of the neutropenia was indicated in 15 reports. The patients were reported as recovered or recovering in 10 cases and not recovered in the remaining five cases. In the cases where recovery was reported, the drug was withdrawn in seven cases, the dose was increased in one case and the fate of the drug was unknown in the remaining two cases. In the five cases where the patient had not recovered, the drug had been discontinued in four cases and the fate of the drug was unknown in the remaining case. The seven cases with a positive dechallenge is supportive of a drug-induced effect. The reports without recovery may simply represent cases that have been reported before the reaction had resolved. Drug-induced neutropenia usually resolves after 10 days.3 The possible association of atomoxetine with neutropenia appears predominantly in the adolescent and paediatric population. After the elimination of duplicates, there is a total of 33 reports of neutropenia in association with atomoxetine in the total population. Twenty-five of these reports were reported in the adolescent and paediatric age groups which represents 75.8% of all the reports. While it may be considered that atomoxetine is used preferentially in the younger age groups, overall reporting in VigiBase® indicates that of the 16,504 reports submitted, the age group from 2 to 17 years represents 60% of the total reports." ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#DosageOfAtomoxetine
+:DosageOfAtomoxetine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :atomoxetine ;
+                     OpenPVSignal:has_content "Dosage ranged from 18 mg to 100 mg including some cases in which the dose was escalated." ;
+                     rdfs:label "Dosage of atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Dr_Ian_Boyd
+:Dr_Ian_Boyd rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Author ;
+             OpenPVSignal:has_first_name "Ian" ;
+             OpenPVSignal:has_last_name "Boyd" ;
+             rdfs:label "Dr Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ;
+                     OpenPVSignal:has_content "Atomoxetine is a relatively potent inhibitor of the presynaptic noradrenaline transporter, a moderate inhibitor of 5HT uptake, and a weak inhibitor of dopamine uptake with minimal affinity for the other noradrenergic receptors. Atomoxetine has moderate affinity for 5HT2 and GABAA receptors but poor affinity for most other receptors. It is indicated for the treatment of attention deficit hyperactivity disorder (ADHD) as defined by DSMIV criteria in children 6 years of age and older, adolescents and adults. The most frequent adverse reactions reported during clinical trials of atomoxetine in children and adolescents including gastrointestinal reactions, increased blood pressure and heart rate, decreased appetite, decreased weight and skin reactions. The product information does not refer to blood disorders.1 Neutropenia is a high level term in WHO-ART with preferred terms consisting of neutropenia, granulocytopoenia and leukopenia. The preferred term, neutropenia, which is the subject of this signal, is defined as a decrease to less than 1.5 x 109/L of segmented polymorphonuclear and band cells. Neutropenia is considered as ‘‘severe’’ below 0.5 x 109/L.2 " ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#LabellingInformation
+:LabellingInformation rdf:type owl:NamedIndividual ,
+                               obo:OAE_0001125 ;
+                      OpenPVSignal:refers_to_drug :atomoxetine ;
+                      mp:references :Ref.1 ;
+                      OpenPVSignal:has_content " The product literature does not refer to neutropenia nor does it mention other blood disorders.1 No reports of neutropenia in association with atomoxetine could be found in the literature.  " ;
+                      rdfs:label "Product literature for atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#LiteratureInformation
+:LiteratureInformation rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Literature_information ;
+                       mp:references :Ref.1 ;
+                       OpenPVSignal:has_content "The product literature does not refer to neutropenia nor does it mention other blood disorders.1 No reports of neutropenia in association with atomoxetine could be found in the literature." ;
+                       rdfs:label "Literature information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#MechanismOfAtomoxetine
+:MechanismOfAtomoxetine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        mp:references :Ref.1 ;
+                        OpenPVSignal:has_content "Atomoxetine is a relatively potent inhibitor of the presynaptic noradrenaline transporter, a moderate inhibitor of 5HT uptake, and a weak inhibitor of dopamine uptake with minimal affinity for the other noradrenergic receptors. Atomoxetine has moderate affinity for 5HT2 and GABAA receptors but poor affinity for most other receptors . " ;
+                        rdfs:label "Mechanism of atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#MedianTimeToOnsetInfo
+:MedianTimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 50 ;
+                       rdfs:label "Median time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#NeutropeniaInAdolescentsThatAreOnAtomoxetineTherapy
+:NeutropeniaInAdolescentsThatAreOnAtomoxetineTherapy rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Statistical_Entity ;
+                                                     OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                                                     OpenPVSignal:has_value 0.758 ;
+                                                     rdfs:label "Neutropenia in adolescents that are on atomoxetine therapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Neutropenia_info
+:Neutropenia_info rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                  mp:references :Ref.2 ;
+                  OpenPVSignal:has_content "Neutropenia is a high level term in WHO-ART with preferred terms consisting of neutropenia, granulocytopoenia and leukopenia. The preferred term, neutropenia, which is the subject of this signal, is defined as a decrease to less than 1.5 x 109/L of segmented polymorphonuclear and band cells. Neutropenia is considered as ‘‘severe’’ below 0.5 x 109/L.2" ;
+                  rdfs:label "Neutropenia info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#OverallReportsInVigibase
+:OverallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                          OpenPVSignal:refers_to_drug :atomoxetine ;
+                          OpenPVSignal:has_count 35 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Overall reports in vigibase " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 14 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 16 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 10 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 12 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 12 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 6 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient19
+:Patient19 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 7 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 12 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient20
+:Patient20 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 10 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient21
+:Patient21 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient22
+:Patient22 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 11 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient23
+:Patient23 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 15 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient24
+:Patient24 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 14 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient25
+:Patient25 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 12 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient26
+:Patient26 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 15 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient27
+:Patient27 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 10 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 12 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 11 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 14 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 14 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 13 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 17 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 9 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Therapeutic Goods Administration. Product Information for Strattera. URL: https://www.ebs.tga.gov.au/ebs/picmi/ picmirepository.nsf/pdf ?OpenAgent&id=CP- 2010-PI-04269-3. Accessed: 30 January 2015. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Council for International Organizations of Medical Sciences (CIOMS). Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use. CIOMS, Geneva, 1999. URL: http://www.cioms.ch/publications/ reporting_adverse_drug.pdf. Accessed: 30 January 2015. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Longo DL, Fauci AS, Kasper DL, Hauser SL, Jameson JL, Loscalzo J, eds. Harrison’s Principles of Internal Medicine, 18th ed. McGraw Hill, New York, 2011.  " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :boneMarrowAplasia ,
+                                               :fatigue ,
+                                               :hepatitis ,
+                                               :neutropenia ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :sertraline ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :methylphenidate ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ,
+                                                :thrombocytopenia ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :agitation ,
+                                                :anorexia ,
+                                                :fatigue ,
+                                                :hallucination ,
+                                                :neutropenia ,
+                                                :weightDecrease ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ,
+                                                :weightDecrease ;
+          OpenPVSignal:refers_to_concomitant_drug :risperidone ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+          OpenPVSignal:refers_to_concomitant_drug :salbutamol ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ,
+                                                :rash ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report19
+:Report19 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ,
+                                                :peripheralIschaemia ;
+          OpenPVSignal:refers_to_concomitant_drug :methylphenidate ;
+          OpenPVSignal:refers_to_patient :Patient19 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                               :leukopenia ,
+                                               :lymphocytesAtypical ,
+                                               :neutropenia ;
+         OpenPVSignal:refers_to_concomitant_drug :pipamperone ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report20
+:Report20 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient20 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report21
+:Report21 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+          OpenPVSignal:refers_to_concomitant_drug :methylphenidate ,
+                                                  :salbutamol ;
+          OpenPVSignal:refers_to_patient :Patient21 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report22
+:Report22 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :alkalinePhosphataseIncreased ,
+                                                :hypotensionPostural ,
+                                                :neutropenia ,
+                                                :urticaria ;
+          OpenPVSignal:refers_to_patient :Patient22 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report23
+:Report23 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+          OpenPVSignal:refers_to_concomitant_drug :methylphenidate ;
+          OpenPVSignal:refers_to_patient :Patient23 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report24
+:Report24 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :bilirubinaemia ,
+                                                :epilepsy ,
+                                                :lymphopenia ,
+                                                :neutropenia ,
+                                                :thrombocytopenia ,
+                                                :weightDecrease ;
+          OpenPVSignal:refers_to_concomitant_drug :valproicAcid ;
+          OpenPVSignal:refers_to_patient :Patient24 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :valproicAcid ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report25
+:Report25 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+          OpenPVSignal:refers_to_concomitant_drug :melatonin ,
+                                                  :methylphenidate ;
+          OpenPVSignal:refers_to_patient :Patient25 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report26
+:Report26 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :leukopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_patient :Patient26 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report27
+:Report27 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :altIncreased ,
+                                                :anaemia ,
+                                                :astIncreased ,
+                                                :bloodDisorder ,
+                                                :epstein-barrVirusInfection ,
+                                                :hepaticFunctionAbnormal ,
+                                                :hepatomegaly ,
+                                                :monocytopenia ,
+                                                :neutropenia ,
+                                                :thrombocytopenia ;
+          OpenPVSignal:refers_to_patient :Patient27 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :fluoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                               :neutropenia ,
+                                               :weightDecrease ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :risperidone ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :educationalProblem ,
+                                               :hepaticFibrosis ,
+                                               :hepatitisCholestatic ,
+                                               :hepatitisViral ,
+                                               :neutropenia ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :sertraline ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :alkalinePhosphataseIncreased ,
+                                               :altIncreased ,
+                                               :astIncreased ,
+                                               :bloodCalciumAbnormal ,
+                                               :lymphocytosis ,
+                                               :monocytosis ,
+                                               :neutropenia ,
+                                               :proteinTotalAbnormal ;
+         OpenPVSignal:refers_to_concomitant_drug :aripiprazole ,
+                                                 :escitalopram ,
+                                                 :guaifenesin ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :olanzapine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :lymphocytosis ,
+                                               :neutropenia ;
+         OpenPVSignal:refers_to_concomitant_drug :sertraline ,
+                                                 :valproicAcid ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :flatulence ,
+                                               :gastroenteritis ,
+                                               :haematemesis ,
+                                               :hypotension ,
+                                               :intestinalObstruction ,
+                                               :leukopenia ,
+                                               :neutropenia ,
+                                               :peripheralIschaemia ,
+                                               :systemicInflammatoryResponseSyndrome ,
+                                               :tachycardia ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsForAdults
+:ReportsForAdults rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                  OpenPVSignal:has_count 7 ;
+                  OpenPVSignal:has_max_age "65.0"^^xsd:float ;
+                  OpenPVSignal:has_min_age 22 ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports for adults" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromCanada
+:ReportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromFinland
+:ReportsFromFinland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                    OpenPVSignal:has_count 4 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Finland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Finland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromIreland
+:ReportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromUK
+:ReportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+               OpenPVSignal:has_count 9 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsFromUS
+:ReportsFromUS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+               OpenPVSignal:has_count 7 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "As of 4 February 2015, there are a total of 35 individual case safety reports (ICSRs) of neutropenia in association with atomoxetine in the WHO Global ICSR database, VigiBase®. Out of  these reports, after the elimination of duplicates,  there are 25 cases of neutropenia in children and  adolescents up to 17 years of age (Table 1). Of  the remaining reports, ages range from 22 years  to 65 years in seven cases and the remaining case  has reported age unknown. The reports from  children and adolescents were submitted from the  United Kingdom (9 reports), United States (7),  Finland (4), Canada (2), Germany, Ireland and  Switzerland (1 each). The patients ranged in age  from 6 to 17 years with a median of 12 years.  There were 23 males and 2 females. Atomoxetine was the only drug suspected in 20 of  the 25 cases. There were other drugs also  suspected in the remaining five cases and they  included drugs for treatment of psychotic disorders  (olanzapine, risperidone) in two cases, an  antidepressant (fluoxetine) in one case, an  anticonvulsant (valproic acid) in one case and  another drug for the treatment of ADHD  (methylphenidate) in the remaining case. Three of  these drugs, olanzapine, risperidone and valproic  acid, refer to neutropenia in their product  information and these drugs may each be a  possible cause in the three cases where these  drugs are suspect (Cases 5, 7 and 24).  Concomitant drugs were reported in 10 of the 25  cases and showed a similar trend to that observed  with the co-suspected drugs with use of  antipsychotic, anticonvulsant, and antidepressant  drugs along with the use of other treatments for  ADHD. Time to onset was reported in 11 of the reports  and ranged from 14 days to 10 months. The  median time was 50 days and there was a  clustering of five cases between 14 and 27 days. The outcome of the neutropenia was indicated in  15 reports. The patients were reported as  recovered or recovering in 10 cases and not  recovered in the remaining five cases. In the cases  where recovery was reported, the drug was  withdrawn in seven cases, the dose was increased  in one case and the fate of the drug was unknown  in the remaining two cases. In the five cases  where the patient had not recovered, the drug had  been discontinued in four cases and the fate of the  drug was unknown in the remaining case. The indication for use was stated in 15 reports and  was ADHD in all 15 cases. Dosage ranged from 18  mg to 100 mg including some cases in which the  dose was escalated. Other reactions were reported in 19 of the 25  reports. Other blood disorders were reported in 15  of these cases and these were mostly other white  cell disorders, particularly leucopoenia, in 14 cases  although thrombocytopenia was reported in five  cases and red cell disorders in three cases. Hepatic  reactions were reported in five cases and weight  decrease was reported in four cases." ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithAtomoxetineAsTheOnlySuspectDrug
+:ReportsWithAtomoxetineAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+                                            OpenPVSignal:has_count 20 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "Reports with Atomoxetine as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithDoseIncrease
+:ReportsWithDoseIncrease rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                         rdfs:label "Reports with dose increase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoRecoveryAsOutcome
+:ReportsWithNoRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                                OpenPVSignal:has_count 5 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                rdfs:label "Reports with no recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoRecoveryAsOutcomeAndDechallenge
+:ReportsWithNoRecoveryAsOutcomeAndDechallenge rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :ReportsWithNoRecoveryAsOutcome ;
+                                              OpenPVSignal:has_count 4 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                              rdfs:label "Reports with no recovery as outcome and dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithPositiveDechallenge
+:ReportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                                OpenPVSignal:has_count 7 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithRecoveryAsOutcome
+:ReportsWithRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                              OpenPVSignal:has_count 2 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                              rdfs:label "Reports with recovery without further info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithTimeToOnsetInfo
+:ReportsWithTimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                            OpenPVSignal:time_to_onset :TimeToOnsetInfo ;
+                            OpenPVSignal:has_count 11 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "Reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Reports_with_ADHD_as_indication
+:Reports_with_ADHD_as_indication rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:concerns_indication_for_use :ADHD ;
+                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+                                 OpenPVSignal:has_count 15 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "Reports with ADHD as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Atomoxetine is a relatively potent inhibitor of the presynaptic noradrenaline transporter, a moderate inhibitor of 5HT uptake, and a weak inhibitor of dopamine uptake with minimal affinity for the other noradrenergic receptors. It is indicated for the treatment of attention deficit hyperactivity disorder (ADHD) as defined by DSM-IV criteria in children 6 years of age and older, adolescents and adults. After the elimination of duplicates, there are currently (4 February 2015) 25 individual case safety reports (ICSRs) in the WHO Global ICSR database, VigiBase® of neutropenia in association with atomoxetine in children and adolescents. The reports are from Canada, Finland, Germany, Ireland, Switzerland, the United Kingdom and the United States. Atomoxetine was the only drug suspected in 20 of the 25 cases. The outcome of the neutropenia was indicated in 15 reports. The patients were reported as recovered or recovering in 10 cases and not recovered in the remaining five cases. In the cases where recovery was reported, the drug was withdrawn in seven cases, the dose increased in one case and the fate of the drug was unknown in the remaining two cases. Time to onset showed a clustering around 14-27 days. Case reports in VigiBase® suggest that there is a possible signal for the association of atomoxetine and neutropenia. The fact there was a positive dechallenge in seven of the 10 reports where recovery was documented is suggestive of a druginduced effect. This is supported by the time to onset of 14-27 days which is consistent with druginduced neutropenia. However, the possible association of atomoxetine with neutropenia appears predominantly in the adolescent and paediatric population." ;
+                rdfs:label "Summary content " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#TimeToOnsetAssessment
+:TimeToOnsetAssessment rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001197 ;
+                       OpenPVSignal:has_content "Time to onset was reported in 11 of the reports and ranged from 14 days to 10 months. The median time was 50 days and there was a clustering of five cases between 14 and 27 days. This is consistent with drug- induced neutropenia. The outcome of the neutropenia was indicated in 15 reports.  " ;
+                       rdfs:label "Time to onset assessment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#TimeToOnsetInfo
+:TimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 OpenPVSignal:has_content "Time to onset was reported in 11 of the reports and ranged from 14 days to 10 months. The median time was 50 days and there was a clustering of five cases between 14 and 27 days." ;
+                 rdfs:label "Time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#UseOfAtomoxetineFromYoungerAgeGroups
+:UseOfAtomoxetineFromYoungerAgeGroups rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Statistical_Entity ;
+                                      OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                                      OpenPVSignal:has_value 0.6 ;
+                                      rdfs:label "Use of atomoxetine from younger age groups" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R45.1" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#alkalinePhosphataseIncreased
+:alkalinePhosphataseIncreased rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "R74.8" ;
+                              OpenPVSignal:has_MedDRA_code 10059570 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Blood alkaline phosphatase increased" ;
+                              rdfs:label "alkaline phosphatase increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#alopecia
+:alopecia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L65.9" ;
+          OpenPVSignal:has_MedDRA_code 10001760 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Alopecia" ;
+          rdfs:label "alopecia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#altIncreased
+:altIncreased rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R74.0" ;
+              OpenPVSignal:has_MedDRA_code 10001845 ;
+              OpenPVSignal:has_MedDRA_prefered_term "ALT increased" ;
+              rdfs:label "alt increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D64.9" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R63.0" ;
+          OpenPVSignal:has_MedDRA_code 10002646 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Anorexia" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#aripiprazole
+:aripiprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N05AX12" ;
+              rdfs:label "aripiprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#astIncreased
+:astIncreased rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R74.0" ;
+              OpenPVSignal:has_MedDRA_code 10003481 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Aspartate aminotransferase increased" ;
+              rdfs:label "ast increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#atomoxetine
+:atomoxetine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfAtomoxetine ;
+             OpenPVSignal:has_ATC_code "N06BA09" ;
+             rdfs:label "atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#bilirubinaemia
+:bilirubinaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "E80.7" ;
+                OpenPVSignal:has_MedDRA_code 10004702 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Bilirubinaemia" ;
+                rdfs:label "bilirubinaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#bloodCalciumAbnormal
+:bloodCalciumAbnormal rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "E83.50" ;
+                      OpenPVSignal:has_MedDRA_code 10005393 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Blood calcium abnormal" ;
+                      rdfs:label "blood calcium abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#bloodDisorder
+:bloodDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "D75.9" ;
+               OpenPVSignal:has_MedDRA_code 10061590 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Blood disorder" ;
+               rdfs:label "blood disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#boneMarrowAplasia
+:boneMarrowAplasia rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "D61.89" ;
+                   OpenPVSignal:has_MedDRA_code 10002962 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Aplasia bone marrow" ;
+                   rdfs:label "bone marrow aplasia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#d
+:d rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Clinical_trial_information ,
+            OpenPVSignal:Warning_Information ;
+   OpenPVSignal:refers_to_drug :atomoxetine ;
+   mp:references :Ref.1 ;
+   OpenPVSignal:has_content "The most frequent adverse reactions reported during clinical trials of atomoxetine in children and adolescents including gastrointestinal reactions, increased blood pressure and heart rate, decreased appetite, decreased weight and skin reactions. The product information does not refer to blood disorders.1" ;
+   rdfs:label "clinical trials info for atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#decreasedAppetite
+:decreasedAppetite rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R63.0" ;
+                   OpenPVSignal:has_MedDRA_code 10061428 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+                   rdfs:label "decreased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#decreasedWeight
+:decreasedWeight rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R63.4" ;
+                 OpenPVSignal:has_MedDRA_code 10047895 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Weight decreased" ;
+                 rdfs:label "decreased weight" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#educationalProblem
+:educationalProblem rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "Z55.9" ;
+                    OpenPVSignal:has_MedDRA_code 10014270 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Educational problem" ;
+                    rdfs:label "educational problem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#epilepsy
+:epilepsy rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G40" ;
+          OpenPVSignal:has_MedDRA_code 10015037 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Epilepsy" ;
+          rdfs:label "epilepsy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#epstein-barrVirusInfection
+:epstein-barrVirusInfection rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "B27.90" ;
+                            OpenPVSignal:has_MedDRA_code 10015108 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Epstein-Barr virus infection" ;
+                            rdfs:label "epstein-barr virus infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#escitalopram
+:escitalopram rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N06AB10" ;
+              rdfs:label "escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#flatulence
+:flatulence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R14.3" ;
+            OpenPVSignal:has_MedDRA_code 10016766 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Flatulence" ;
+            rdfs:label "flatulence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#fluoxetine
+:fluoxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB03" ;
+            rdfs:label "fluoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#gastroenteritis
+:gastroenteritis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code " K52.9" ;
+                 OpenPVSignal:has_MedDRA_code 10017888 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Gastroenteritis" ;
+                 rdfs:label "gastroenteritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#gastrointestinalReactions
+:gastrointestinalReactions rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "T78.1" ;
+                           OpenPVSignal:has_MedDRA_code 10017944 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal disorder" ;
+                           rdfs:label "gastrointestinal reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#granulocytopenia
+:granulocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10018687 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Granulocytopenia" ;
+                  rdfs:label "granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#guaifenesin
+:guaifenesin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R05CA03" ;
+             rdfs:label "guaifenesin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#haematemesis
+:haematemesis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K92.0" ;
+              OpenPVSignal:has_MedDRA_code 10018830 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Haematemesis" ;
+              rdfs:label "haematemesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hallucination
+:hallucination rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R44.3" ;
+               OpenPVSignal:has_MedDRA_code 10019063 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+               rdfs:label "hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#heartRate
+:heartRate rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R00.0" ;
+           OpenPVSignal:has_MedDRA_code 10019303 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Heart rate increased" ;
+           rdfs:label "Heart rate increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepaticFibrosis
+:hepaticFibrosis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "K74.0" ;
+                 OpenPVSignal:has_MedDRA_code 10019668 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Hepatic fibrosis" ;
+                 rdfs:label "hepatic fibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepaticFunctionAbnormal
+:hepaticFunctionAbnormal rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "R94.5" ;
+                         OpenPVSignal:has_MedDRA_code 10019670 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic function abnormal" ;
+                         rdfs:label "hepatic function abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepatitis
+:hepatitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "B19.9" ;
+           OpenPVSignal:has_MedDRA_code 10019717 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hepatitis" ;
+           rdfs:label "hepatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepatitisCholestatic
+:hepatitisCholestatic rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "K71.0" ;
+                      OpenPVSignal:has_MedDRA_code 10019754 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hepatitis cholestatic" ;
+                      rdfs:label "hepatitis cholestatic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepatitisViral
+:hepatitisViral rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "B19.9" ;
+                OpenPVSignal:has_MedDRA_code 10019799 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hepatitis viral" ;
+                rdfs:label "hepatitis viral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hepatomegaly
+:hepatomegaly rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R16.0" ;
+              OpenPVSignal:has_MedDRA_code 10019842 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hepatomegaly" ;
+              rdfs:label "hepatomegaly" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I95.9" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#hypotensionPostural
+:hypotensionPostural rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "I95.1" ;
+                     OpenPVSignal:has_MedDRA_code 10021104 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Hypotension postural" ;
+                     rdfs:label "hypotension postural" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#increasedBloodPressure
+:increasedBloodPressure rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R03.0" ;
+                        OpenPVSignal:has_MedDRA_code 10005750 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Blood pressure increased" ;
+                        rdfs:label "increased blood pressure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#intestinalObstruction
+:intestinalObstruction rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "K56.609" ;
+                       OpenPVSignal:has_MedDRA_code 10022687 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Intestinal obstruction" ;
+                       rdfs:label "intestinal obstruction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#leukopenia
+:leukopenia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "D72.819" ;
+            OpenPVSignal:has_MedDRA_code 10024384 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Leukopenia" ;
+            rdfs:label "leukopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#lymphocytesAtypical
+:lymphocytesAtypical rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "D72.9" ;
+                     OpenPVSignal:has_MedDRA_code 10025264 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Lymphocytes atypical" ;
+                     rdfs:label "lymphocytes atypical" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#lymphocytosis
+:lymphocytosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "D72.820" ;
+               OpenPVSignal:has_MedDRA_code 10025280 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Lymphocytosis" ;
+               rdfs:label "lymphocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#lymphopenia
+:lymphopenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D72.810" ;
+             OpenPVSignal:has_MedDRA_code 10025327 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Lymphopenia" ;
+             rdfs:label "lymphopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#melatonin
+:melatonin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CH01" ;
+           rdfs:label "melatonin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#methylphenidate
+:methylphenidate rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06BA04" ;
+                 rdfs:label "methylphenidate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#monocytopenia
+:monocytopenia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "D72.818" ;
+               OpenPVSignal:has_MedDRA_code 10027905 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Monocytopenia" ;
+               rdfs:label "monocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#monocytosis
+:monocytosis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D72.821" ;
+             OpenPVSignal:has_MedDRA_code 10027906 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Monocytosis" ;
+             rdfs:label "monocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#neutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:refers_to_adverse_effect :granulocytopenia ,
+                                                   :leukopenia ;
+             OpenPVSignal:has_ICD_code "D70.9" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#olanzapine
+:olanzapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH03" ;
+            rdfs:label "olanzapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#peripheralIschaemia
+:peripheralIschaemia rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "I73.9" ;
+                     OpenPVSignal:has_MedDRA_code 10034576 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Peripheral ischaemia" ;
+                     rdfs:label "peripheral ischaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#pipamperone
+:pipamperone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AD05" ;
+             rdfs:label "pipamperone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#proteinTotalAbnormal
+:proteinTotalAbnormal rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "R77.9" ;
+                      OpenPVSignal:has_MedDRA_code 10037012 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Protein total abnormal" ;
+                      rdfs:label "protein total abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#pvClinical
+:pvClinical rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Signal ;
+            OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                     :DiscussionContent ,
+                                                     :IntroductionContent ,
+                                                     :Neutropenia_info ,
+                                                     :ReportsInVigibase ,
+                                                     :SummaryContent ;
+            OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                                :Report10 ,
+                                                                :Report11 ,
+                                                                :Report12 ,
+                                                                :Report13 ,
+                                                                :Report14 ,
+                                                                :Report15 ,
+                                                                :Report16 ,
+                                                                :Report17 ,
+                                                                :Report18 ,
+                                                                :Report19 ,
+                                                                :Report2 ,
+                                                                :Report20 ,
+                                                                :Report21 ,
+                                                                :Report22 ,
+                                                                :Report23 ,
+                                                                :Report24 ,
+                                                                :Report25 ,
+                                                                :Report26 ,
+                                                                :Report27 ,
+                                                                :Report3 ,
+                                                                :Report4 ,
+                                                                :Report5 ,
+                                                                :Report6 ,
+                                                                :Report7 ,
+                                                                :Report8 ,
+                                                                :Report9 ;
+            OpenPVSignal:is_supported_by_statistical_entity :NeutropeniaInAdolescentsThatAreOnAtomoxetineTherapy ,
+                                                            :OverallReportsInVigibase ,
+                                                            :ReportsForAdults ,
+                                                            :ReportsFromCanada ,
+                                                            :ReportsFromFinland ,
+                                                            :ReportsFromGermany ,
+                                                            :ReportsFromIreland ,
+                                                            :ReportsFromSwitzerland ,
+                                                            :ReportsFromUK ,
+                                                            :ReportsFromUS ,
+                                                            :ReportsWithAtomoxetineAsTheOnlySuspectDrug ,
+                                                            :ReportsWithDoseIncrease ,
+                                                            :ReportsWithNoRecoveryAsOutcome ,
+                                                            :ReportsWithNoRecoveryAsOutcomeAndDechallenge ,
+                                                            :ReportsWithPositiveDechallenge ,
+                                                            :ReportsWithRecoveryAsOutcome ,
+                                                            :ReportsWithTimeToOnsetInfo ,
+                                                            :Reports_with_ADHD_as_indication ,
+                                                            :UseOfAtomoxetineFromYoungerAgeGroups ,
+                                                            :reportsWithNoInfoForAge ,
+                                                            <http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> ;
+            OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+            OpenPVSignal:refers_to_drug :atomoxetine ;
+            OpenPVSignal:refers_to_primary_suspect_drug :atomoxetine ;
+            mp:supportedByData :AtomoxetineAndDecreasedAppetite ,
+                               :AtomoxetineAndDecreasedWeight ,
+                               :AtomoxetineAndGastrointestinalReactions ,
+                               :AtomoxetineAndIncreasedBloodPressure ,
+                               :AtomoxetineAndIncreasedHeartRate ,
+                               :AtomoxetineAndSkinReactions ,
+                               :ConcomitantDrugs ,
+                               :LabellingInformation ,
+                               :TimeToOnsetAssessment ,
+                               :d ;
+            OpenPVSignal:initially_identified_on "01/12/2015" ;
+            rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#rash
+:rash rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      rdfs:label "rash" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#reportsWithNoInfoForAge
+:reportsWithNoInfoForAge rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with no info for age" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#risperidone
+:risperidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AX08" ;
+             rdfs:label "risperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#skinReactions
+:skinReactions rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "T78.40XA" ;
+               OpenPVSignal:has_MedDRA_code 10040914 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Skin reaction" ;
+               rdfs:label "skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#systemicInflammatoryResponseSyndrome
+:systemicInflammatoryResponseSyndrome rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Adverse_Effect ;
+                                      OpenPVSignal:has_ICD_code "R65.11" ;
+                                      OpenPVSignal:has_MedDRA_code 10051379 ;
+                                      OpenPVSignal:has_MedDRA_prefered_term "Systemic inflammatory response syndrome" ;
+                                      rdfs:label "systemic inflammatory response syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#tachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R00.0" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#thrombocytopenia
+:thrombocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D69.6" ;
+                  OpenPVSignal:has_MedDRA_code 10043554 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Thrombocytopenia" ;
+                  rdfs:label "thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#urticaria
+:urticaria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "L50.9" ;
+           OpenPVSignal:has_MedDRA_code 10046735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Urticaria" ;
+           rdfs:label "urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#usage_of_atomoxetine
+:usage_of_atomoxetine rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:concerns_indication_for_use :ADHD ;
+                      OpenPVSignal:refers_to_drug :atomoxetine ;
+                      rdfs:label "usage of atomoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#valproicAcid
+:valproicAcid rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N03AG01" ;
+              rdfs:label "valproic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#weightDecrease
+:weightDecrease rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10047895 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Weight decreased" ;
+                rdfs:label "weight decrease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents
+<http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#ReportsWithNoDuplicatesForchilden/adolescents> rdf:type owl:NamedIndividual ,
+                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibase ;
+                                                                                                                    OpenPVSignal:refers_to_dosage :DosageOfAtomoxetine ;
+                                                                                                                    OpenPVSignal:has_count 25 ;
+                                                                                                                    OpenPVSignal:has_count_of_men 23 ;
+                                                                                                                    OpenPVSignal:has_count_of_women 2 ;
+                                                                                                                    OpenPVSignal:has_max_age "17.0"^^xsd:float ;
+                                                                                                                    OpenPVSignal:has_median_age "12.0"^^xsd:float ;
+                                                                                                                    OpenPVSignal:has_min_age 6 ;
+                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                    rdfs:label "Reports for childen/adolescents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Response_from_Eli_Lilly_&_Company
+<http://purl.org/OpenPVSignal/Signals/2015_6_atomoxetine_neutropenia#Response_from_Eli_Lilly_&_Company> rdf:type owl:NamedIndividual ,
+                                                                                                                 OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                                                                                        OpenPVSignal:refers_to_pharmacovigilance_signal_report :Atomoxetine_and_neutropenia_in_paediatric_patients ;
+                                                                                                        OpenPVSignal:has_content "Thank you for the opportunity to provide our comments on the possible signal that has been generated from the UMC’s VigiBase® safety database and the thorough assessment conducted by Dr Boyd. Eli Lilly & Company (Lilly) routinely queries reported adverse events in Lilly’s internal safety database and the FDA Adverse Event Reporting System for early signs of potential adverse drug reactions in patients treated with Lilly drugs. Lilly recognizes the importance of early signal detection and also acknowledges that database queries are only one method that can be employed. Additionally, Lilly’s review of the reported adverse events involves medical assessment of the narratives where information provided and not captured in the standard fields often helps to refine the assessment. Consistent with the UMC, Lilly recognizes that signals are uncertain and preliminary in nature (UMC, Signals selected by UMC and the clinical review panel: How the process works). This is because, for any given adverse event report considered in generating a signal, there is no certainty that the adverse event was caused by the suspected drug. Rather, the adverse event could have resulted from the underlying condition being treated, a comorbid condition, a concomitant medication, or may simply be the result of chance. Lilly has completed two reviews of blood dyscrasias including neutropenia which involved assessment of individual case narratives, as well as all available information from other data sources. The first review was conducted in 2006 and covered the period from 26 November 2002 to 26 November 2005, with a second review completed in 2014. As both reviews revealed similar findings and conclusions, we are providing the high level results of the second review as an illustrative example of the evaluations undertaken. Of note, the results of the last review were submitted to the EU Regulatory Agencies in 2014 and no further questions were raised or further actions deemed necessary at that time. In the second assessment, cases reported between 26 May 2008 and 26 May 2013 and coded to the MedDRA preferred term “neutropenia” were reviewed. Time to onset ranged from approximately 2 months to 11 months, and did not reflect a pattern indicative of a treatmentemergent trend. Thirteen neutropenia cases were identified, but 7 (54%) of those cases either did not provide adequate information to assess the event or presented medical history, historical, or concurrent use of other medication that may provide an alternative explanation for the onset of neutropenia, for example, medical conditions that reduce cell line counts such as human immunodeficiency virus, a family history of autoimmune disorders, or use of medications such as risperidone or valproate. Of the remaining 6 cases, which involved adolescent patients, 5 described neutropenia and 1 neutropenia/ leukopenia. Of the 6 patients, 4 patients discontinued atomoxetine treatment while 2 patients continued atomoxetine. Although in 3 of the 4 patients who discontinued atomoxetine the event resolved, these cases did not provide sufficient information, for example, medical history, concomitant medication use, and/or the patient’s baseline laboratory values to permit adequate medical assessment. Importantly, without baseline measurements, it is impossible to know whether the condition existed before the patients began taking atomoxetine. Based on the evaluations summarised above, Lilly has concluded from its previous reviews that there is not sufficient evidence to support a causal association or increased risk between atomoxetine treatment and neutropenia in the treated population. Available information would indicate that the events reported are either incidental findings or may possibly be related to other causes including pre-existing conditions or concomitant medications, as mentioned above, though more information in these cases is needed. In addition, as Dr Boyd mentioned in his article, no reports of neutropenia in association with atomoxetine could be found in the literature. Case reports and other sources of information that include suspected neutropenia adverse events in atomoxetinetreated patients will be reviewed by Lilly and continue to be monitored through routine pharmacovigilance." ;
+                                                                                                        rdfs:label "Response from Eli Lilly & Company" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

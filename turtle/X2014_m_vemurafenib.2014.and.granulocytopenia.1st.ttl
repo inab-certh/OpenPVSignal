@@ -1,0 +1,1105 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia> rdf:type owl:Ontology ;
+                                                                            owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                        mp: ;
+                                                                            rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255516/"^^xsd:anyURI ;
+                                                                            rdfs:label "Vemurafenib and Granulocytopenia"^^xsd:Literal ;
+                                                                            owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#BRAF_V600E_mutation
+:BRAF_V600E_mutation rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_MedDRA_code 10075676 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "BRAF V600E mutation positive" ;
+                     rdfs:label "BRAF V600E mutation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "The reports in VigiBase support a causal relationship between vemurafenib and granulocytopenia. Evidence for a signal includes: the relatively consistent time to onset, the high proportion of cases with a positive dechallenge and the consistency of reports from several countries. In addition, the hypothesized mechanism of action strengthens the signal and this possible association merits further investigation." ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Discussion_content
+:Discussion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Discussion ;
+                    mp:references :Ref.15 ,
+                                  :Ref.16 ,
+                                  :Ref.17 ,
+                                  :Ref.18 ,
+                                  :Ref.19 ,
+                                  :Ref.20 ,
+                                  :Ref.21 ,
+                                  :Ref.3 ;
+                    OpenPVSignal:has_content "Vemurafenib is not known to be haematotoxic. VigiBase contains 33 ICSRs with the term granulocytopenia (which includes the term neutropenia) or the related terms leucopenia or agranulocytosis (severe granulocytopenia) in association with vemurafenib. Vemurafenib was the only suspected drug in 29 cases. Dates were often missing for concomitant medications, nine cases involved the use of concomitant drugs that have been associated either rarely or very rarely with leucopenia, neutropenia and/or agranulocytosis. Sudden profound granulocytopenia, as was noted in several of the reported cases, is suggestive of a drug reaction. Pharmacokinetic information for vemurafenib indicates that steady-state concentration is achieved in 15-22 days.3 The relatively consistent time to onset, from the second to fifth week in the majority of cases in which this information was reported, suggests that a common mechanism may be involved and that it appears to occur as blood concentrations approach steady-state. Additionally, 14 ICSRs reported a positive dechallenge; in three of these cases, vemurafenib was reintroduced at a lower dose with no subsequent report of granulocytopenia, suggesting that such a mechanism may be dose-dependent. Vemurafenib acts in the Ras-Raf-MEK-ERK MAPK pathway; this same pathway is involved in haematopoiesis, where it plays an important role in regulating myeloid, erythroid and megakaryocyte differentiation.15,16 It is therefore plausible that vemurafenib may have an effect on haematopoiesis. Neutropenia has been reported with other protein kinase inhibitors. The product label for sorafenib, a multi-kinase inhibitor with potent activity against B-Raf, lists neutropenia as a common adverse effect but the drug also inhibits other kinases that are known to be involved in haematopoiesis.17,18 Vemurafenib is a potent and selective inhibitor of mutated B-Raf but it has also been shown to activate wild-type B-Raf (which is thought to account for the relatively common development of squamous cell carcinomas in patients treated with vemurafenib) and other intracellular signalling kinases.19,20,21 It is possible that vemurafenib may inhibit kinases that are involved in haematopoiesis resulting in granulocytopenia." ;
+                    rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Dr.GeraldineHill
+:Dr.GeraldineHill rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Author ;
+                  OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                  OpenPVSignal:has_first_name "Geraldine" ;
+                  OpenPVSignal:has_last_name "Hill" ;
+                  rdfs:label "Dr. Geraldine Hill" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Dr.RonMeyboom
+:Dr.RonMeyboom rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Author ;
+               OpenPVSignal:has_affiliation "The Netherlands" ;
+               OpenPVSignal:has_first_name "Ron" ;
+               OpenPVSignal:has_last_name "Meyboom" ;
+               rdfs:label "Dr. Ron Meyboom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#IC025ValueForVemurafenibAndAgranulocytosis
+:IC025ValueForVemurafenibAndAgranulocytosis rdf:type owl:NamedIndividual ,
+                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                            OpenPVSignal:refers_to_adverse_effect :agranulocytosis ;
+                                            OpenPVSignal:refers_to_drug :vemurafenib ;
+                                            OpenPVSignal:refers_to_information_component :ICValueForVemurafenibAndAgranulocytosis ;
+                                            OpenPVSignal:has_value -0.76 ;
+                                            rdfs:label "IC025 value for vemurafenib and agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#IC025ValueForVemurafenibAndGranulocytopenia
+:IC025ValueForVemurafenibAndGranulocytopenia rdf:type owl:NamedIndividual ,
+                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                             OpenPVSignal:refers_to_adverse_effect :granulocytopenia ;
+                                             OpenPVSignal:refers_to_drug :vemurafenib ;
+                                             OpenPVSignal:refers_to_information_component :ICValueForVemurafenibAndGranulocytopenia ;
+                                             OpenPVSignal:has_value 0.30 ;
+                                             rdfs:label "IC025 value for vemurafenib and granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#IC025ValueForVemurafenibAndLeucopenia
+:IC025ValueForVemurafenibAndLeucopenia rdf:type owl:NamedIndividual ,
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                       OpenPVSignal:refers_to_adverse_effect :leucopenia ;
+                                       OpenPVSignal:refers_to_drug :vemurafenib ;
+                                       OpenPVSignal:refers_to_information_component :ICValueForVemurafenibAndLeucopenia ;
+                                       OpenPVSignal:has_value -0.05 ;
+                                       rdfs:label "IC025 value for vemurafenib and leucopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ICValueForVemurafenibAndAgranulocytosis
+:ICValueForVemurafenibAndAgranulocytosis rdf:type owl:NamedIndividual ,
+                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                         OpenPVSignal:refers_to_adverse_effect :agranulocytosis ;
+                                         OpenPVSignal:refers_to_drug :vemurafenib ;
+                                         OpenPVSignal:has_value 0.50 ;
+                                         rdfs:label "IC value for vemurafenib and agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ICValueForVemurafenibAndGranulocytopenia
+:ICValueForVemurafenibAndGranulocytopenia rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                          OpenPVSignal:refers_to_adverse_effect :granulocytopenia ;
+                                          OpenPVSignal:refers_to_drug :vemurafenib ;
+                                          OpenPVSignal:has_value 1.02 ;
+                                          rdfs:label "IC value for vemurafenib and granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ICValueForVemurafenibAndLeucopenia
+:ICValueForVemurafenibAndLeucopenia rdf:type owl:NamedIndividual ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                    OpenPVSignal:refers_to_adverse_effect :leucopenia ;
+                                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                                    OpenPVSignal:has_value 0.72 ;
+                                    rdfs:label "IC value for vemurafenib and leucopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ,
+                                    :Ref.4 ,
+                                    :Ref.5 ,
+                                    :Ref.6 ;
+                      OpenPVSignal:has_content "Vemurafenib is a first-in-class serine-threonine protein kinase inhibitor, which inhibits the kinase activity of mutated B-Raf protein. The Ras-Raf-MEK-ERK mitogen activated protein kinase (MAPK) cascade is an important cytoplasmic signalling pathway involved in the regulation of normal somatic cell proliferation. Mutations in the genes encoding components of this pathway have been associated with a number of human cancers.1 An activating mutation in the BRAF gene, which encodes the serine-threonine protein kinase B-Raf, has been found to be present in 40-60 percent of melanomas, most commonly the BRAF V600E mutation.2 Vemurafenib received FDA approval in August 2011 for use in the treatment of metastatic or unresectable melanomas that carry the BRAF V600E mutation; vemurafenib is available as 240 mg oral tablets; the recommended dose is 960 mg twice daily.3 Granulocytopenia is defined as a reduced number of blood granulocytes, which include neutrophils, basophils and eosinophils, but the term is often used synonymously with neutropenia, in which only the neutrophil count is reduced. A normal absolute neutrophil count (ANC) is 2.0 — 7.0x109 /L. Neutropenia is graded from 1 to 4, according to the level of the ANC: grade 1 neutropenia has an ANC >1.5 — <2.0x109 /L; grade 4 neutropenia implies an ANC <0.5x109 /L and at this life-threatening level the term agranulocytosis is also used. The risk of serious bacterial or fungal infection increases with the degree and duration of neutropenia. Neutropenia blunts the inflammatory response to infection and patients with neutropenia may present with fever as the only sign of infection; such patients are said to have febrile neutropenia, which should be treated as a medical emergency.4 There are many possible causes of acquired neutropenia but they generally fall into three categories: infection, drug induced or immune-mediated. Some drug-induced neutropenias may in fact be immune-mediated (e.g cephalosporins, penicillins, sulfonamides and phenothiazines), while others have direct toxic effects on haematopoietic progenitor cells (e.g. chloramphenicol).5 Agranulocytosis is attributable to drugs in more than 70 percent of cases, most commonly antithyroid drugs, clozapine, ticlopidine, sulfasalazine, dipyrone, trimethoprim/ sulfamethoxazole, carbamazepine and rituximab.6" ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.11 ,
+                                      :Ref.12 ,
+                                      :Ref.14 ,
+                                      :Ref.3 ;
+                        OpenPVSignal:has_content """Haematopoietic side-effects have not been reported with vemurafenib in either the US FDA product label or the UK SPC.3,11 Neutropenia was not reported in phase 1 or 2 clinical trials of vemurafenib, but two cases of neutropenia were observed among 336 patients in the vemurafenib arm of the phase 3 clinical trial of vemurafenib vs. dacarbazine.12,14
+""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#MechanismOfVemurafenib
+:MechanismOfVemurafenib rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ;
+                        OpenPVSignal:has_content "Vemurafenib is a first-in-class serine-threonine protein kinase inhibitor, which inhibits the kinase activity of mutated B-Raf protein. The Ras-Raf- MEK-ERK mitogen activated protein kinase (MAPK) cascade is an important cytoplasmic signalling pathway involved in the regulation of normal somatic cell proliferation. Mutations in the genes encoding components of this pathway have been associated with a number of human cancers.1 An activating mutation in the BRAF gene, which encodes the serine-threonine protein kinase B-Raf, has been found to be present in 40-60 percent of melanomas, most commonly the BRAF V600E mutation.2" ;
+                        rdfs:label "Mechanism of Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#NeutropeniaAndPKI
+:NeutropeniaAndPKI rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001197 ;
+                   OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                   OpenPVSignal:refers_to_drug :sorafenib ;
+                   mp:references :Ref.17 ,
+                                 :Ref.18 ;
+                   OpenPVSignal:has_content "The product label for sorafenib, a multi-kinase inhibitor with potent activity against B-Raf, lists neutropenia as a common adverse effect but the drug also inhibits other kinases that are known to be involved in haematopoiesis.17,18" ;
+                   rdfs:label "Neutropenia and sorafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#REPORTSAnalyzedFromVigiBase
+:REPORTSAnalyzedFromVigiBase rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                                   :granulocytopenia ,
+                                                                   :leucopenia ;
+                             OpenPVSignal:refers_to_drug :vemurafenib ;
+                             OpenPVSignal:has_count 33 ;
+                             OpenPVSignal:has_count_of_men 14 ;
+                             OpenPVSignal:has_count_of_women 19 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "Overall reports from VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Davies H, Bignell GR, Cox C, Stephens P, Edkins S, Clegg S, et al. Mutations of the BRAF gene in human cancer. Nature 2002;417(6892):949-54." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Electronic Medicines Compendium UK. URL: http:// www.medicines.org.uk/emc/. Accessed 10 July 2013." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Electronic Medicines Compendium UK. Zelboraf 240 mg film-coated tablets.URL:http://www.medicines.org.uk/emc/medicine/2605 6/SPC/Zelboraf+240+mg+Film-coated+Tablets/ Accessed 29 July 2013." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Chapman PB, Hauschild A, Robert C, Haanen JB, Ascierto P, Larkin J, et al. Improved survival with vemurafenib in melanoma with BRAF V600E mutation. The New England journal of medicine 2011;364(26):2507-16." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Flaherty KT, Puzanov I, Kim KB, Ribas A, McArthur GA, Sosman JA, et al. Inhibition of mutated, activated BRAF in metastatic melanoma. The New England journal of medicine 2010;363(9):809-19." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sosman JA, Kim KB, Schuchter L, Gonzalez R, Pavlick AC, Weber JS, et al. Survival in BRAFV600-mutant advanced melanoma treated with vemurafenib. The New England journal of medicine 2012;366(8):707-14." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Chung E, Kondo M. Role of Ras/Raf/MEK/ERK signaling in physiological hematopoiesis and leukemia development. Immunologic research 2011;49(1-3):248-68." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Geest CR, Coffer PJ. MAPK signaling pathways in the regulation of hematopoiesis. Journal of Leukocyte Biology 2009;86(2):237-50." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Toffalini F, Demoulin JB. New insights into the mechanisms of hematopoietic cell transformation by activated receptor tyrosine kinases. Blood 2010;116(14):2429-37." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "US Food and Drug Administration. Nexavar Label (June 2013).URL:http://www.accessdata.fda.gov/drugsatfda_docs/l abel/2013/021923s014lbl.pdf.Accessed 14 August 2013." ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Su F, Viros A, Milagre C, Trunzer K, Bollag G, Spleiss O, et al. RAS mutations in cutaneous squamous-cell carcinomas in patients treated with BRAF inhibitors. The New England journal of medicine 2012;366(3):207-15." ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Roberts PJ, Der CJ. Targeting the Raf-MEK- ERK mitogen-activated protein kinase cascade for the treatment of cancer. Oncogene 2007;26(22):3291-310." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Poulikakos PI, Zhang C, Bollag G, Shokat KM, Rosen N. RAF inhibitors transactivate RAF dimers and ERK signalling in cells with wild-type BRAF. Nature 2010;464(7287):427-30." ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Bollag G, Hirth P, Tsai J, Zhang J, Ibrahim PN, Cho H, et al. Clinical efficacy of a RAF inhibitor needs broad target blockade in BRAF-mutant melanoma. Nature 2010;467(7315):596-9." ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Food and Drug Administration. Zelboraf Label (July 2013).URL: http://www.accessdata.fda.gov/drugsatfda_ docs/label/2013/202429s002s003lbl.pdf.Accessed 29 July 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Crawford J, Dale DC, Lyman GH. Chemotherapy-induced neutropenia: risks, consequences, and new directions for its management. Cancer 2004;100(2):228-37." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Godwin JE. Neutropenia. Medscape Reference. URL:http://emedicine.medscape.com/article/2048 21-overview. Accessed 2 August 2013." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Andersohn F, Konzen C, Garbe E. Systematic review: agranulocytosis induced by nonchemotherapy drugs. Annals of internal medicine 2007;146(9):657-65." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Medsafe New Zealand. Muphoran label. URL:http://www.medsafe.govt.nz/profs/datasheet/m/M uphoraninj. pdf. Accessed 30 August 2013." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Food and Drug Administration. URL: http://www.accessdata.fda.gov/scripts/cder/drugs atfda/index.cfm. Accessed 28 August 2013." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "SwissMedic. Product Information Metamizole. URL: http://wwwswissmedicinfo.ch/.Accessed 30 August 2013." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ReportsFromAustria
+:ReportsFromAustria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Austria" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Austria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                OpenPVSignal:has_count 22 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ReportsFromUnitedKingdom
+:ReportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                          OpenPVSignal:has_count 6 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.10 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content """Routine screening of the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase™, identified granulocytopenia as a potential signal associated with vemurafenib. The related terms leucopenia and agranulocytosis were also examined. The IC values (IC025) for these combinations were 1.02 (0.30) for
+granulocytopenia, 0.72 (-0.05) for leucopenia and
+0.50 (-0.76) for agranulocytosis.
+After excluding two probable duplicates, a total of 33 ICSRs (as of 29 March 2013) containing the
+terms granulocytopenia (19), leucopenia (15) and agranulocytosis (6), in which vemurafenib was indicated as the suspected drug, were reviewed. Additional information was requested from the national pharmacovigilance centres for selected cases.
+Twenty-four ICSRs contained the terms granulocytopenia and/or agranulocytosis. An additional nine ICSRs contained only the term leucopenia and, because the term leucopenia could be used in the context of lymphopenia, we looked for further evidence suggestive of granulocytopenia in these cases. Three ICSRs co- reported infection (urinary tract infection, pneumonia and infection not further specified) and one case reported an extremely low white cell count, such that granulocytopenia was implied; the white cell count was not provided for the remaining five ICSRs. In three of the nine cases, leucopenia was associated with thrombocytopenia.
+All of the ICSRs containing the WHO-ART term granulocytopenia had originally been reported as neutropenia (18) or neutrophil count abnormal (1). For the six ICSRs containing the WHO-ART term agranulocytosis, the original reported terms included: febrile neutropenia (4), netropenic sepsis (1) and agranulocytosis (1).
+The ICSRs came from five countries: United States (22), United Kingdom (6), Austria (3), Switzerland
+(1) and Germany (1). Seven of the cases from the United States were found to have occurred in other countries and were recorded as 'foreign source': the country was identified in four of these reports (Australia, France, Israel and Poland), bringing the total number of countries identified to nine. At least 12 of the reports originated from clinical trials. Age was reported in 14 ICSRs and ranged from 27 to 81 years; there were more females (19) than males (14).
+The dose was reported for 20 cases: the total daily dose ranged from 960 mg to 7680 mg. Two-thirds of the ICSRs reported a dose of 960 mg twice daily. Time to onset was available for 16 ICSRs and ranged from 9 to 84 days; onset occurred during the second to fifth week after treatment initiation in over 75 percent of the reports. Positive dechallenge could be identified in 14 ICSRs; re- exposure at a lower dose occurred in three cases but the outcome was not reported.
+Vemurafenib was the only reported medicine in 19 of the ICSRs and was the only suspected drug in a further 10 ICSRs. In four ICSRs other suspected drugs were reported, including fotemustine7, clobazam, levetiracetam, fluconazole8 and metamizole9, all of which are known to be associated with leucopenia, neutropenia and/or agranulocytosis. Nine of the ICSRs in which vemurafenib was the only suspected drug included at least one concomitant medicine that has been associated with leucopenia, neutropenia and/or agranulocytosis (according to the UK SPC10). Dates of administration for the concomitant medicines were provided in only four of these cases; three of the cases included concomitant medicines with start dates that suggested the drug could also be implicated in the granulocytopenia.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Reports_with_dose_info
+:Reports_with_dose_info rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                        OpenPVSignal:refers_to_dosage :doseFromCasesAnalyzed ;
+                        OpenPVSignal:has_count 20 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with dose info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Response_from_Roche
+:Response_from_Roche rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :VemurafenibAndGranulocytopenia ;
+                     OpenPVSignal:has_content """Response from Roche
+Roche would like to thank the WHO for the opportunity to review and comment on the \"Vemurafenib and Granulocytopenia\" draft document. Roche, through its routine signal detection activities, has recently identified neutropenia as a potential signal and it is currently being assessed. A comprehensive review of the safety data on this adverse event is being done.
+In the WHO report, based on the verbatim terms reported in the 33 ICSRs in the WHO VigiBase, it appears that the event of concern is neutropenia rather than the WHO-ART coded terms of granulocytopenia and/or agranulocytosis; no cases of low basophil or eosinophil count have been reported. Further, it would appear based on these spontaneous reports that only insufficient data is available for most of these 33 cases, preventing us from reaching a definitive conclusion regarding causality with vemurafenib. It should be noted that the reporters' designation of drug-suspect versus attribution to concomitant medication is not always clearly defined. It has been recognized that newly marketed pharmaceutical products are often reported spontaneously as being suspect for an adverse event even in the presence of obvious confounding factors including co-medications. A related issue is that the concomitant medications may not be initially reported in a spontaneous report of a newly marketed product and may become known only after follow-up queries requesting additional information have been received. Thus, based on what is presented in the WHO report there still remain a number of open questions on possible confounders in many of these cases. Thus, this possible signal needs further medical evaluation of each of the individual cases.
+ 
+
+
+Furthermore, it is Roche's opinion based on the data presented in the WHO report that at this time there are a few challenges in establishing a causal relationship between Zelboraf and the safety signal under discussion:
+•	There does not appear to be
+convincing evidence to support a consistent time to onset for most of the 33 cases
+•	We do not have sufficient information regarding the overall severity and patient outcomes for this laboratory adverse event
+•	Insufficient data is available at this time regarding cases with a true \"positive dechallenge\"
+•	The proposed MOA is hypothetical
+
+
+In determining causality, each of these cases needs to be thoroughly reviewed and assessed individually as well as in aggregate. Therefore, Roche suggests that the conclusion of the WHO report should indicate the limitations in the data presented, as proposed in the following sentence: \"This signal is still uncertain and preliminary in nature at this time but currently under further investigation by the manufacturer; the assessment may change over time one way or another as more information becomes available\"
+As Roche's assessment has not yet been completed on this laboratory abnormality of neutropenia, Roche cannot further comment on this potential signal for the moment, but following completion of our assessment, we will communicate and formally share our findings with you, the regulatory authorities, and other appropriate recipients.""" ;
+                     rdfs:label "Response from Roche" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Routine screening of the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase™, identified granulocytopenia as a potential signal associated with vemurafenib. The related terms leucopenia and agranulocytosis were also examined.
+As of 29 March 2013, 35 ICSRs of granulocytopenia and/or the related terms leucopenia and agranulocytosis in connection with vemurafenib treatment had been reported to VigiBase. The IC values (IC025) for these combinations were: 1.02 (0.30) for
+granulocytopenia, 0.72 (-0.05) for leucopenia and
+0.50 (-0.76) for agranulocytosis.
+In 29 cases, vemurafenib was the only suspected drug and in 14 cases the patient was reported as recovered or recovering after ceasing the medication. The time to onset, where provided, is consistent across most of the cases (occurring during the second to fifth week of treatment) suggesting a common mechanism. Vemurafenib target a mutated B-Raf protein in one of the intracellular mitogen activated protein kinase pathways which is present in over half of all melanomas. This same MAPK pathway is also involved in haematopoiesis, and it is possible that vemurafenib may interfere with haematopoietic cell differentiation in susceptible patients. The case reports in VigiBase support a signal of granulocytopenia associated with vemurafenib.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#VemurafenibAndGranulocytopenia
+:VemurafenibAndGranulocytopenia rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                OpenPVSignal:refers_to_author :Dr.GeraldineHill ,
+                                                              :Dr.RonMeyboom ;
+                                OpenPVSignal:refers_to_signal :pvSignal ;
+                                mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                OpenPVSignal:has_creation_date "01/03/2014" ;
+                                OpenPVSignal:has_overall_conclusion "causal association" ;
+                                rdfs:label "Vemurafenib and granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#VemurafenibDosage
+:VemurafenibDosage rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :vemurafenib ;
+                   OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#12HourIntervalsBetweenAdministrations> ;
+                   OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                   OpenPVSignal:has_value 960 ;
+                   OpenPVSignal:refers_to_dose_value "960 mg" ;
+                   rdfs:label "Vemurafenib dosage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#agranulocytosis
+:agranulocytosis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "D70.1" ;
+                 OpenPVSignal:has_MedDRA_code 10001507 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Agranulocytosis" ;
+                 rdfs:label "agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#antithyroidDrugs
+:antithyroidDrugs rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "H03B" ;
+                  rdfs:label "antithyroid drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#carbamazepine
+:carbamazepine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AF01" ;
+               rdfs:label "carbamazepine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#cephalosporins
+:cephalosporins rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "J01D " ;
+                rdfs:label "cephalosporins" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#chloramphenicol
+:chloramphenicol rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "D06AX02" ,
+                                           "D10AF03" ,
+                                           "G01AA05" ,
+                                           "J01BA01" ,
+                                           "S01AA01" ,
+                                           "S02AA01" ,
+                                           "S03AA08" ;
+                 rdfs:label "chloramphenicol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#clinicalTrialInfo
+:clinicalTrialInfo rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001125 ,
+                            OpenPVSignal:Clinical_trial_information ;
+                   OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                   OpenPVSignal:refers_to_drug :vemurafenib ;
+                   mp:references :Ref.12 ,
+                                 :Ref.14 ;
+                   OpenPVSignal:has_content "Neutropenia was not reported in phase 1 or 2 clinical trials of vemurafenib, but two cases of neutropenia were observed among 336 patients in the vemurafenib arm of the phase 3 clinical trial of vemurafenib vs dacarbazine.12,14" ;
+                   rdfs:label "clinical trial info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#clobazam
+:clobazam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA09" ;
+          rdfs:label "clobazam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#clozapine
+:clozapine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05AH02" ;
+           rdfs:label "clozapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#dipyrone
+:dipyrone rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02BB02" ;
+          rdfs:label "dipyrone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#doseFromCasesAnalyzed
+:doseFromCasesAnalyzed rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Dosage ;
+                       OpenPVSignal:has_content "The dose was reported for 20 cases: the total daily dose ranged from 960 mg to 7680 mg. Two-thirds of the ICSRs reported a dose of 960 mg twice daily." ;
+                       rdfs:label "dose from cases analyzed" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#drug-induced_agranulocytosis
+:drug-induced_agranulocytosis rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :agranulocytosis ;
+                              OpenPVSignal:refers_to_drug :antithyroidDrugs ,
+                                                          :carbamazepine ,
+                                                          :clozapine ,
+                                                          :dipyrone ,
+                                                          :rituximab ,
+                                                          :sulfasalazine ,
+                                                          :ticlopidine ,
+                                                          :trimethoprim ;
+                              mp:references :Ref.6 ;
+                              OpenPVSignal:has_content "Agranulocytosis is attributable to drugs in more than 70 percent of cases, most commonly antithyroid drugs, clozapine, ticlopidine, sulfasalazine, dipyrone, trimethoprim/ sulfamethoxazole, carbamazepine and rituximab.6" ;
+                              rdfs:label "drug-induced agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#drug-induced_neutropenia
+:drug-induced_neutropenia rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                          OpenPVSignal:refers_to_drug :cephalosporins ,
+                                                      :chloramphenicol ,
+                                                      :penicillins ,
+                                                      :phenothiazinesWithAliphaticside-chain ,
+                                                      :sulfonamides ;
+                          mp:references :Ref.5 ;
+                          OpenPVSignal:has_content "Some drug-induced neutropenias may in fact be immune-mediated (e.g cephalosporins, penicillins, sulfonamides and phenothiazines), while others have direct toxic effects on haematopoietic progenitor cells (e.g. chloramphenicol).5" ;
+                          rdfs:label "drug-induced neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#febrileNeutropenia
+:febrileNeutropenia rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "D709" ;
+                    OpenPVSignal:has_MedDRA_code 10016288 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Febrile neutropenia" ;
+                    rdfs:label "febrile neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#fluconazole
+:fluconazole rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "D01AC15" ,
+                                       "J01RA07" ,
+                                       "J02AC01" ;
+             rdfs:label "fluconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#fotemustine
+:fotemustine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "L01AD05" ,
+                                       "L01AD05 " ;
+             rdfs:label "fotemustine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#granulocytopenia
+:granulocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D701" ;
+                  OpenPVSignal:has_MedDRA_code 10018687 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Granulocytopenia" ;
+                  rdfs:label "granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#granulocytopenia_pathophysiology
+:granulocytopenia_pathophysiology rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Free_text_reporting_element ;
+                                  OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                                        :granulocytopenia ,
+                                                                        :neutropenia ;
+                                  mp:references :Ref.4 ,
+                                                :Ref.5 ,
+                                                :Ref.6 ;
+                                  OpenPVSignal:has_content "Granulocytopenia is defined as a reduced number of blood granulocytes, which include neutrophils, basophils and eosinophils, but the term is often used synonymously with neutropenia, in which only the neutrophil count is reduced. A normal absolute neutrophil count (ANC) is 2.0 — 7.0x109 /L. Neutropenia is graded from 1 to 4, according to the level of the ANC: grade 1 neutropenia has an ANC >1.5 — <2.0x109 /L; grade 4 neutropenia implies an ANC <0.5x109 /L and at this life-threatening level the term agranulocytosis is also used. The risk of serious bacterial or fungal infection increases with the degree and duration of neutropenia. Neutropenia blunts the inflammatory response to infection and patients with neutropenia may present with fever as the only sign of infection; such patients are said to have febrile neutropenia, which should be treated as a medical emergency.4 There are many possible causes of acquired neutropenia but they generally fall into three categories: infection, drug induced or immune-mediated. Some drug-induced neutropenias may in fact be immune-mediated (e.g cephalosporins, penicillins, sulfonamides and phenothiazines), while others have direct toxic effects on haematopoietic progenitor cells (e.g. chloramphenicol).5 Agranulocytosis is attributable to drugs in more than 70 percent of cases, most commonly antithyroid drugs, clozapine, ticlopidine, sulfasalazine, dipyrone, trimethoprim/ sulfamethoxazole, carbamazepine and rituximab.6" ;
+                                  rdfs:label "granulocytopenia pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#labelling_for_vemurafenib
+:labelling_for_vemurafenib rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Structured_Product_Labels_information ;
+                           OpenPVSignal:refers_to_drug :vemurafenib ;
+                           mp:references :Ref.11 ,
+                                         :Ref.3 ;
+                           OpenPVSignal:has_content "Haematopoietic side-effects have not been reported with vemurafenib in either the US FDA product label or the UK SPC.3,11" ;
+                           rdfs:label "labelling for vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#leucopenia
+:leucopenia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "D72819" ;
+            OpenPVSignal:has_MedDRA_code 10024384 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Leukopenia" ;
+            rdfs:label "leucopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#levetiracetam
+:levetiracetam rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AX14" ;
+               rdfs:label "levetiracetam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#metamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02" ,
+                                      "N02BB52" ,
+                                      "N02BB72" ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#metastaticMelanoma
+:metastaticMelanoma rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_MedDRA_code 10027481 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Metastatic melanoma" ;
+                    rdfs:label "metastatic melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#netropenicSepsis
+:netropenicSepsis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10049151 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Neutropenic sepsis" ;
+                  rdfs:label "neutropenic sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#neutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D709" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#neutrophilCountAbnormal
+:neutrophilCountAbnormal rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "D70.9" ;
+                         OpenPVSignal:has_MedDRA_code 10061313 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Neutrophil count abnormal" ;
+                         rdfs:label "neutrophil count abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#other_concomitant_drugs_associated_with_ADRs
+:other_concomitant_drugs_associated_with_ADRs rdf:type owl:NamedIndividual ,
+                                                       obo:OAE_0001182 ;
+                                              OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                                                    :leucopenia ,
+                                                                                    :neutropenia ;
+                                              mp:references :Ref.10 ;
+                                              OpenPVSignal:has_content "Nine of the ICSRs in which vemurafenib was the only suspected drug included at least one concomitant medicine that has been associated with leucopenia, neutropenia and/or agranulocytosis (according to the UK SPC10). Dates of administration for the concomitant medicines were provided in only four of these cases; three of the cases included concomitant medicines with start dates that suggested the drug could also be implicated in the granulocytopenia." ;
+                                              rdfs:label "other concomitant drugs associated with ADRs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#other_suspected_drugs_associated_with_ADRs
+:other_suspected_drugs_associated_with_ADRs rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001182 ;
+                                            OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                                                  :leucopenia ,
+                                                                                  :neutropenia ;
+                                            OpenPVSignal:refers_to_secondary_suspect_drug :clobazam ,
+                                                                                          :fluconazole ,
+                                                                                          :fotemustine ,
+                                                                                          :levetiracetam ,
+                                                                                          :metamizole ;
+                                            mp:references :Ref.7 ,
+                                                          :Ref.8 ,
+                                                          :Ref.9 ;
+                                            OpenPVSignal:has_content "In four ICSRs other suspected drugs were reported, including fotemustine7, clobazam, levetiracetam, fluconazole8 and metamizole9, all of which are known to be associated with leucopenia, neutropenia and/or agranulocytosis." ;
+                                            rdfs:label "other suspected drugs associated with ADRs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#penicillins
+:penicillins rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "J01C " ;
+             rdfs:label "penicillins" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#phenothiazinesWithAliphaticside-chain
+:phenothiazinesWithAliphaticside-chain rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Drug ;
+                                       OpenPVSignal:has_ATC_code "N05AA" ,
+                                                                 "N05AB" ,
+                                                                 "N05AC" ;
+                                       rdfs:label "phenothiazines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#proposedMechanismOfVemurafenibTriggeringTheAE
+:proposedMechanismOfVemurafenibTriggeringTheAE rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Adverse_Effect_Mechanism ;
+                                               OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                                                     :granulocytopenia ,
+                                                                                     :leucopenia ,
+                                                                                     :neutropenia ;
+                                               mp:references :Ref.15 ,
+                                                             :Ref.16 ,
+                                                             :Ref.19 ,
+                                                             :Ref.20 ,
+                                                             :Ref.21 ;
+                                               OpenPVSignal:has_content "Vemurafenib acts in the Ras-Raf-MEK-ERK MAPK pathway; this same pathway is involved in haematopoiesis, where it plays an important role in regulating myeloid, erythroid and megakaryocyte differentiation.15,16 It is therefore plausible that vemurafenib may have an effect on haematopoiesis." ,
+                                                                        "Vemurafenib is a potent and selective inhibitor of mutated B-Raf but it has also been shown to activate wild-type B-Raf (which is thought to account for the relatively common development of squamous cell carcinomas in patients treated with vemurafenib) and other intracellular signalling kinases.19,20,21 It is possible that vemurafenib may inhibit kinases that are involved in haematopoiesis resulting in granulocytopenia." ;
+                                               rdfs:label "proposed mechanism of vemurafenib triggering the AE" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :Discussion_content ,
+                                                   :Introduction_content ,
+                                                   :Reports_in_Vigibase ,
+                                                   :SummaryContent ,
+                                                   :granulocytopenia_pathophysiology ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ValueForVemurafenibAndAgranulocytosis ,
+                                                          :IC025ValueForVemurafenibAndGranulocytopenia ,
+                                                          :IC025ValueForVemurafenibAndLeucopenia ,
+                                                          :ICValueForVemurafenibAndAgranulocytosis ,
+                                                          :ICValueForVemurafenibAndGranulocytopenia ,
+                                                          :ICValueForVemurafenibAndLeucopenia ,
+                                                          :REPORTSAnalyzedFromVigiBase ,
+                                                          :ReportsFromAustria ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsFromUSA ,
+                                                          :ReportsFromUnitedKingdom ,
+                                                          :Reports_with_dose_info ,
+                                                          :reportsWithAgeData ,
+                                                          :reportsWithAgranulocytosis ,
+                                                          :reportsWithFebrileNeutropenia ,
+                                                          :reportsWithGranulocytopenia ,
+                                                          :reportsWithLeucopenia ,
+                                                          :reportsWithNetropenicSepsis ,
+                                                          :reportsWithNeutropenia ,
+                                                          :reportsWithNeutrophilCountAbnormal ,
+                                                          :reportsWithPartialNegativeRechallenge ,
+                                                          :reportsWithPartialRechallenge ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithTimeToOnsetInfo ,
+                                                          :reportsWithVemurafenibAsTheOnlyReportedMedicine ,
+                                                          :reportsWithVemurafenibAsTheOnlySuspectMedicine ;
+          OpenPVSignal:refers_to_adverse_effect :agranulocytosis ,
+                                                :granulocytopenia ,
+                                                :leucopenia ,
+                                                :neutropenia ;
+          OpenPVSignal:refers_to_drug :vemurafenib ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          mp:supportedByData :NeutropeniaAndPKI ,
+                             :clinicalTrialInfo ,
+                             :drug-induced_agranulocytosis ,
+                             :drug-induced_neutropenia ,
+                             :labelling_for_vemurafenib ,
+                             :other_concomitant_drugs_associated_with_ADRs ,
+                             :other_suspected_drugs_associated_with_ADRs ;
+          OpenPVSignal:initially_identified_on "01/03/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithAgeData
+:reportsWithAgeData rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                    OpenPVSignal:has_count 14 ;
+                    OpenPVSignal:has_max_age "81.0"^^xsd:float ;
+                    OpenPVSignal:has_min_age "27.0"^^xsd:float ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports with age data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithAgranulocytosis
+:reportsWithAgranulocytosis rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                            OpenPVSignal:refers_to_adverse_effect :agranulocytosis ;
+                            OpenPVSignal:refers_to_drug :vemurafenib ;
+                            OpenPVSignal:has_count 6 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithFebrileNeutropenia
+:reportsWithFebrileNeutropenia rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :reportsWithAgranulocytosis ;
+                               OpenPVSignal:refers_to_adverse_effect :febrileNeutropenia ;
+                               OpenPVSignal:has_count 4 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports with febrile neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithGranulocytopenia
+:reportsWithGranulocytopenia rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                             OpenPVSignal:refers_to_adverse_effect :granulocytopenia ;
+                             OpenPVSignal:refers_to_drug :vemurafenib ;
+                             OpenPVSignal:has_count 19 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with granulocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithLeucopenia
+:reportsWithLeucopenia rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                       OpenPVSignal:refers_to_adverse_effect :leucopenia ;
+                       OpenPVSignal:refers_to_drug :vemurafenib ;
+                       OpenPVSignal:has_count 15 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with leucopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithNetropenicSepsis
+:reportsWithNetropenicSepsis rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :reportsWithAgranulocytosis ;
+                             OpenPVSignal:refers_to_adverse_effect :netropenicSepsis ;
+                             OpenPVSignal:has_count 1 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with netropenic sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithNeutropenia
+:reportsWithNeutropenia rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsWithGranulocytopenia ;
+                        OpenPVSignal:refers_to_adverse_effect :neutropenia ;
+                        OpenPVSignal:has_count 18 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithNeutrophilCountAbnormal
+:reportsWithNeutrophilCountAbnormal rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :reportsWithGranulocytopenia ;
+                                    OpenPVSignal:refers_to_adverse_effect :neutrophilCountAbnormal ;
+                                    OpenPVSignal:has_count 1 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports with neutrophil count abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithPartialNegativeRechallenge
+:reportsWithPartialNegativeRechallenge rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                                       OpenPVSignal:has_count 3 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with partial negative rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithPartialRechallenge
+:reportsWithPartialRechallenge rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                               OpenPVSignal:has_count 3 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               OpenPVSignal:refers_to_partial_rechallenge_outcome "unknown" ;
+                               rdfs:label "reports with partial rechallenge " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                                OpenPVSignal:has_count 14 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithTimeToOnsetInfo
+:reportsWithTimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                            OpenPVSignal:time_to_onset :timeToOnsetForReports ;
+                            OpenPVSignal:has_count 16 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithVemurafenibAsTheOnlyReportedMedicine
+:reportsWithVemurafenibAsTheOnlyReportedMedicine rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                                                 OpenPVSignal:has_count 19 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "reports with vemurafenib as the only reported medicine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#reportsWithVemurafenibAsTheOnlySuspectMedicine
+:reportsWithVemurafenibAsTheOnlySuspectMedicine rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :REPORTSAnalyzedFromVigiBase ;
+                                                OpenPVSignal:has_count 10 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "reports with vemurafenib as the only suspect medicine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#rituximab
+:rituximab rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L01XC02" ;
+           rdfs:label "rituximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#sorafenib
+:sorafenib rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L01XE05" ;
+           rdfs:label "sorafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#sulfasalazine
+:sulfasalazine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A07EC01" ,
+                                         "G01AE10" ;
+               rdfs:label "sulfasalazine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#sulfonamides
+:sulfonamides rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "D06BA " ;
+              rdfs:label "sulfonamides" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#ticlopidine
+:ticlopidine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC05" ;
+             rdfs:label "ticlopidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#timeToOnsetForReports
+:timeToOnsetForReports rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "Time to onset was available for 16 ICSRs and ranged from 9 to 84 days; onset occurred during the second to fifth week after treatment initiation in over 75 percent of the reports." ;
+                       rdfs:label "time to onset for reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#trimethoprim
+:trimethoprim rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J01EE01" ;
+              rdfs:label "trimethoprim / sulfamethoxazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#usageOfVemurafenib
+:usageOfVemurafenib rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :BRAF_V600E_mutation ,
+                                                             :metastaticMelanoma ;
+                    OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                    mp:references :Ref.3 ;
+                    OpenPVSignal:has_content "Vemurafenib received FDA approval in August 2011 for use in the treatment of metastatic or unresectable melanomas that carry the BRAF V600E mutation; vemurafenib is available as 240 mg oral tablets; the recommended dose is 960 mg twice daily.3" ;
+                    rdfs:label "usage of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#vemurafenib
+:vemurafenib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfVemurafenib ,
+                                        :proposedMechanismOfVemurafenibTriggeringTheAE ;
+             OpenPVSignal:has_ATC_code "L01XE15" ;
+             rdfs:label "vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#12HourIntervalsBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2014_1_vemurafenib_granulocytopenia#12HourIntervalsBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                                          time:DurationDescription ;
+                                                                                                                 time:nominalPosition "hours" ;
+                                                                                                                 time:numericPosition 12 ;
+                                                                                                                 rdfs:label "12 hour intervals between administrations" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

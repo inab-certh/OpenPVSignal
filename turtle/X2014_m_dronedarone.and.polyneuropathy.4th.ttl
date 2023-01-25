@@ -1,0 +1,1183 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy> rdf:type owl:Ontology ;
+                                                                          owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                      mp: ;
+                                                                          rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255513/"^^xsd:anyURI ;
+                                                                          rdfs:label "Dronedarone and Polyneuropathy"^^xsd:Literal ;
+                                                                          owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :ref2 ;
+                         OpenPVSignal:has_content """The spontaneous reports in VigiBase point overall towards a causal association between dronedarone and polyneuropathy despite confounders such as previous neurotoxic treatment in one case and co- medication with statins in two cases. The four reported dechallenges led to recovery and in the only case where drug continuation was reported, the patient did not recover from polyneuropathy. Dates for start of treatment and onset of polyneuropathy are incompletely reported.
+Dronedarone is, however, the only drug suspected
+by the reporters to have caused the ADR.
+Dronedarone is structurally closely related to amiodarone, a drug for which neuropathy is a well- documented adverse reaction. While the addition of a methylsulfonamide group might have significantly reduced the neurotoxic potential of the drug as the results of the DIONYSOS study
+seem to indicate,2 it cannot be safely assumed
+that this structural change has completely eliminated neurotoxicity and a class effect seems therefore possible.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Dronedarone_and_polyneuropathy
+:Dronedarone_and_polyneuropathy rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                OpenPVSignal:refers_to_signal :pvSignal ;
+                                mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                OpenPVSignal:has_creation_date "01/07/2014" ;
+                                OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                rdfs:label "Dronedarone and polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#IC025ForDronedaroneAndPolyneuropathy
+:IC025ForDronedaroneAndPolyneuropathy rdf:type owl:NamedIndividual ,
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                      OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                                      OpenPVSignal:refers_to_drug :dronedarone ;
+                                      OpenPVSignal:refers_to_information_component :ICForDronedaroneAndPolyneuropathy ;
+                                      OpenPVSignal:has_value 0.95 ;
+                                      rdfs:label "IC025 for dronedarone and polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ICForDronedaroneAndPolyneuropathy
+:ICForDronedaroneAndPolyneuropathy rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                   OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                                   OpenPVSignal:refers_to_drug :dronedarone ;
+                                   OpenPVSignal:has_value 2.2 ;
+                                   rdfs:label "IC for dronedarone and polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Incoordination
+:Incoordination rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10021649 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Incoordination" ;
+                rdfs:label "incoordination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :ref1 ,
+                                   :ref2 ;
+                     OpenPVSignal:has_content """Introduction
+Dronedarone is an anti-arrhythmic medicine, prescribed for maintaining sinus rhythm after successful cardioversion in patients with paroxysmal or persistent atrial fibrillation.
+Regulatory authorities restricted the indication for treatment in September 2011 due to an increased risk of liver failure and lung toxicity as well as of serious cardiovascular events.
+The clinical Phase 3b trial PALLAS had been suspended due to an increase in cardiovascular events with dronedarone (significant increase in major cardiovascular events defined as a composite of stroke, myocardial infarction, systemic embolism, and cardiovascular death) compared to the placebo group. Dronedarone should only be prescribed after alternative treatment options have been considered. Neither the European Medicines Agency Summary of Product Characteristics (EMA SPC) nor the US FDA label list polyneuropathy. Only taste disturbances are mentioned from the System Organ Class Nervous System Disorders.1,2
+The exact mechanism of action of dronedarone hydrochloride, a non-iodinated amiodarone analogue, is unknown. Dronedarone exerts antiarrhythmic effects similar to all four Vaughan- Williams4 classes; however, the relationship to the clinical effect is unknown. Like amiodarone, dronedarone inhibits the calcium, sodium, and potassium channels and is an alpha- and beta- adrenergic receptor antagonist. Unlike amiodarone, dronedarone has minimal to no inhibitory effect on the alpha- and beta-thyroid receptors. Peripheral neuropathy has been reported to occur in up to 10% of patients taking amiodarone.
+Axonal, demyelinating and mixed type neuropathy have been reported with no apparent correlation to daily or total dose or treatment duration.
+Histologically, lysosomal inclusions in peripheral nerve tissues have been documented and seem to be a characteristic finding. Compared to amiodarone, dronedarone is non-iodinated and in order to reduce the neurotoxic potential a methylsulfonamide group was added to reduce lipophilicity.
+Peripheral neuropathy is characterized by sensory loss, muscle weakness and atrophy as well as decreased deep tendon reflexes. It can affect one single nerve (mononeuropathy) or many nerves at the same time (polyneuropathy). Polyneuropathy can be caused by nutritional deficiencies and metabolic disorders, and occurs with diseases such as diabetes mellitus, porphyria, sarcoidosis and in uraemia. It can present as paraneoplastic syndrome as seen with multiple myeloma.
+Polyneuropathy can be of autoimmune origin, as in Guillain-Barre syndrome. It is commonly associated with alcohol abuse and can be drug induced (sulphonamides, oncologic drugs such as vinca alcaloides and heavy metal complexes as well as antiretrovirals).
+""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ;
+           OpenPVSignal:refers_to_adverse_effect :tasteDisturbances ;
+           OpenPVSignal:refers_to_drug :dronedarone ;
+           mp:references :ref1 ,
+                         :ref2 ;
+           OpenPVSignal:has_content "Neither the European Medicines Agency Summary of Product Characteristics (EMA SPC) nor the US FDA label list polyneuropathy." ,
+                                    "Neither the European Medicines Agency Summary of Product Characteristics (EMA SPC) nor the US FDA label list polyneuropathy. Only taste disturbances are mentioned from the System Organ Class Nervous System Disorders.1,2" ;
+           rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :ref1 ,
+                                      :ref2 ;
+                        OpenPVSignal:has_content """Neither the US FDA label nor the EU SPC for dro- nedarone lists neuropathy or polyneuropathy.1,2
+Only a few case reports on neuropathy under dronedarone treatment have been published so far. The German arzneitelegramm published a case report of polyneuropathy and visual disturbance in 2012; a 50-year-old man developed polyneuropathy with stocking-like loss of sensibility in the left foot as well as visual problems after taking dronedarone for just under one year. The patient had not yet recovered one year after discontinuing the medication.
+At the 2011 International Conference of the American Thoracic Society, Di Trapani and Freeman presented a case of dronedarone induced neurotoxicity involving the central nervous system; a 75-year-old woman developed encephalopathy, tremor, myoclonic jerking and incoordination under dronedarone. A most extensive diagnostic work up yielded no explanation. The symptoms improved after discontinuation of dronedarone. A further case report published in 2013 in the International Journal of Cardiology, concerns a 74- year-old man who developed optic neuropathy under dronedarone. While the pain subsided after discontinuation of dronedarone, the visual loss is is still persisting.""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#MechanismContent
+:MechanismContent rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Mechanism ;
+                  OpenPVSignal:has_content "Compared to amiodarone, dronedarone is non-iodinated and in order to reduce the neurotoxic potential a methylsulfonamide group was added to reduce lipophilicity." ,
+                                           "Dronedarone is an anti-arrhythmic medicine, prescribed for maintaining sinus rhythm after successful cardioversion in patients with paroxysmal or persistent atrial fibrillation." ,
+                                           "The exact mechanism of action of dronedarone hydrochloride, a non-iodinated amiodarone analogue, is unknown. Dronedarone exerts antiarrhythmic effects similar to all four Vaughan- Williams4 classes; however, the relationship to the clinical effect is unknown. Like amiodarone, dronedarone inhibits the calcium, sodium, and potassium channels and is an alpha- and beta- adrenergic receptor antagonist. Unlike amiodarone, dronedarone has minimal to no inhibitory effect on the alpha- and beta-thyroid receptors." ;
+                  rdfs:label "Mechanism content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Onset1
+:Onset1 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        time:nominalPosition "weeks" ;
+        time:numericPosition 5 ;
+        rdfs:label "Onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Onset2
+:Onset2 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        time:nominalPosition "months" ;
+        time:numericPosition 7 ;
+        rdfs:label "Onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Onset7
+:Onset7 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        time:nominalPosition "years" ;
+        time:numericPosition 2.5 ;
+        rdfs:label "Onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#PALLASTrial
+:PALLASTrial rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Clinical_trial_information ,
+                      OpenPVSignal:Warning_Information ;
+             OpenPVSignal:refers_to_adverse_effect :cardiovascularDeath ,
+                                                   :embolism ,
+                                                   :myocardialInfarction ,
+                                                   :stroke ;
+             OpenPVSignal:refers_to_drug :dronedarone ;
+             OpenPVSignal:has_content "The clinical Phase 3b trial PALLAS had been suspended due to an increase in cardiovascular events with dronedarone (significant increase in major cardiovascular events defined as a composite of stroke, myocardial infarction, systemic embolism, and cardiovascular death) compared to the placebo group" ;
+             rdfs:label "PALLAS trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 76 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 82 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 92 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 71 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#PeripheralNeuropathy
+:PeripheralNeuropathy rdf:type owl:NamedIndividual ,
+                               obo:OAE_0000005 ;
+                      OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ,
+                                                            :polyneuropathy ;
+                      OpenPVSignal:has_content """Peripheral neuropathy is characterized by sensory loss, muscle weakness and atrophy as well as decreased deep tendon reflexes. It can affect one single nerve (mononeuropathy) or many nerves at the same time (polyneuropathy). Polyneuropathy can be caused by nutritional deficiencies and metabolic disorders, and occurs with diseases such as diabetes mellitus, porphyria, sarcoidosis and in uraemia. It can present as paraneoplastic syndrome as seen with multiple myeloma.
+Polyneuropathy can be of autoimmune origin, as in Guillain-Barre syndrome. It is commonly associated with alcohol abuse and can be drug induced (sulphonamides, oncologic drugs such as vinca alcaloides and heavy metal complexes as well as antiretrovirals).""" ;
+                      rdfs:label "Peripheral neuropathy pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Reponse_from_Sanofi
+:Reponse_from_Sanofi rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Dronedarone_and_polyneuropathy ;
+                     OpenPVSignal:has_content """Response from Sanofi
+
+ 
+Dronedarone is similar to amiodarone in its molecular structure with an important difference consisting in the presence of methylsulfonamide group to reduce solubility in fats (lipophilicity) and thus reduce neurotoxic effects. Amiodarone may induce peripheral sensorimotor neuropathy and/or myopathy (uncommon, i.e. reported as
+>0.1% and <1%); both these conditions may be severe although recovery usually occurs within several months after amiodarone withdrawal, but may sometimes be incomplete. Visual impairment has been documented as well, which in some cases has progressed to permanent blindness. Vision disorders have been reported in 4-9% of patients on amiodarone . Most publications on optic neuropathy are case reports. Theoretically, dronedarone might share the latter class effect, therefore since its launch on the market, close surveillance of neuropathy ADRs has been performed by the Marketing Authorization Holder (MAH) via routine pharmacovigilance, namely in subsequent 6- month Periodic Safety Update Reports (PSURs).
+
+The Risk Management Plan updates coincidence with the release of PSURs, refer to as a potential pharmacological class effect encouraging regular data review by the MAH. From periodic analyses of the cases reporting neuropathy (NOS) ADRs, the MAH has not confirmed an evidence of a causal link between dronedarone and neurologic disorders including neuropathy NOS or optic neuropathy. In the Assessment Report to the most recently submitted PSUR7 (September 2013), EMA endorsed the MAH conclusion on the topic.
+
+From launch of dronedarone to 31 October 2013, the MAH has collected worldwide 4 solicited cases including: polyneuropathy (n=2), neuropathy peripheral (n=1), peripheral sensory neuropathy (n=1) ; 21 unsolicited cases including: polyneuropathy (n=8 ), peripheral neuropathy (n = 6), neuritis Peripheral (n = 1), neuropathy (n = 1), neuromyopathy (n = 1), axonal neuropathy (n = 1), acute polyneuropathy (n = 1), neuritis (n = 1), peripheral sensory neuropathy (n = 1) and 4 consumer cases including: neuropathy peripheral (n=3 ) and polyneuropathy (n=1 ) .
+Among 29 case reports, 14 cases were serious. The reports concern 16 men and 12 women (gender was unspecified in 1 case), aged between 50 and 92 years (median 75 years, age was not stated in 7 reports). The onset dates were reported in 13 reports, from 1 day to 2.3 years with median of 42 days. In 6 out of 9 case reports, the dechallenge was positive. No rechallenge was reported. The analysis of the 29 showed:
+ 
+
+•	In 1 case, incompatible chronology was reported as the event was reported 4 months after stopping dronedarone
+•	In 3 cases, dronedarone was continued and the patients recovered
+•	In 2 cases, alternative explanations were provided (mild Guillain-Barré syndrome in 1 case and previous chemotherapy with FU and cisplatin in the other case)
+•	In 8 cases, possible confounding factors were reported such as, underlying diabetes mellitus in 1 case , cervical spondylosis in 1 case , concomitant use of statin or mirtazapine in 3 cases, and in 3 cases, previous episode with amiodarone and recurrence under dronedarone)
+•	In 15 cases, the case documentation elements were not sufficient in order to allow drawing a clear conclusion:
+•	Missing neurological investigation results to rule out alternative explanations in 6 cases
+•	Missing medical history, past and concomitant drugs or action taken on dronedarone in 7 cases
+•	No objective diagnostic conclusion in 2 cases
+From launch of dronedarone to 31 October 2013, the MAH has also collected the cases related to optic neuropathy (NOS) worldwide 3 solicited cases including: optic ischaemic neuropathy (n=1), visual impairment (n=2) and 39 unsolicited cases including: visual impairment (n=25), visual field defect (n=1), visual acuity reduced (n=2), scotoma (n=2), papilloedema (n=6), optic neuropathy (n=1), optic neuritis (n=3), optic nerve injury (n=1), optic ischaemic neuropathy (n=1), hemianopia (n=1), demyelination (n=1), colour vision tests abnormal (n=1), blindness unilateral (n=2), blindness (n=1), Basedow's disease (n=1) and and maurosis fugax (n=1).
+
+Overall, in all cases, alternative explanation or confounding factors were provided. In 2 cases, the causal role of dronedarone appeared possible as described below:
+•	One case of optic neuritis was reported in 60- year-old male patient, 3 weeks after starting dronedarone. Dronedarone was withdrawn and the patient was recovering. The case is missing details on neurological examination at the time of reaction onset, information on potential previous use of amiodarone and differential diagnosis to rule out systemic disease, viral, and mainly ischaemic origin (the most frequent cause in elderly) was not available.
+ 
+•	One case of optic nerve atrophy and papilloedema reported in a 74-year-old male patient (previous amiodarone use was denied). Dronedarone was discontinued and at 1-year follow-up the patient was not recovered based on ophthalmological exams (NOS). For proper medical assessment this case is missing information on neurological and ophthalmological investigation results at baseline, furthermore, poor blood flow causing ischemic optic neuropathy may have contributed for the development of optic atrophy. To be noted that optic nerve atrophy may be secondary to prolonged papilloedema.
+
+In addition to the case reports review, epidemiology study (DRONE C06714) was performed by MAH in context of pharmacovigilance activities to assess the risk of optic neuritis, peripheral neuropathy, and muscular disorders in patients treated with dronedarone compared with amiodarone and other antiarrhythmics using the MarketScan. The results showed no evidence that dronedarone was associated with significantly higher risks of optic neuritis, peripheral neuropathy, or rhabdomyolysis/myopathy compared to other
+ 
+antiarrhythmics. Final report was submitted in the previous RMP version .
+Worldwide use of dronedarone yielding low number of cases is to be noted. Due to these confounding factors combined with lack of relevant information further discussion of the data was not possible.
+Available clinical MAH data are not supportive of dronedarone-induced neuropathy (NOS).
+In placebo-controlled clinical trial program in the pooled population, the incidence of patients with peripheral neuropathies were analyzed using the SMQ 'Peripheral neuropathy' was (<0.1%) in both the dronedarone 400 mg BID and the placebo groups: Vision disorders were reported in 1.3% of patients in dronedarone 400 mg BID and 1.1% of patients in placebo groups.
+In the DIONYSOS study, no peripheral neuropathy was reported. No differences between dronedarone 400mg BID and placebo concerning vision disorders.
+Based on available up-to-date information the MAH concludes that there is insufficient evidence to support a causal association between dronedarone and neuropathy(NOS) including optic neuropathy.""" ;
+                     rdfs:label "Response from Sanofi" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :furosemide ,
+                                                 :metoprolol ,
+                                                 :warfarin ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :gout ,
+                                               :immuneResponsivenessDecreased ,
+                                               :infectionBacterial ,
+                                               :muscleAtrophy ,
+                                               :neuropathyPeripheral ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :furosemide ,
+                                                 :perindopril ,
+                                                 :phenprocoumon ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hypoaesthesia ,
+                                               :polyneuropathy ,
+                                               :visualDisturbance ;
+         OpenPVSignal:refers_to_concomitant_drug :lercanipidine ,
+                                                 :metoprolol ,
+                                                 :phenprocoumon ,
+                                                 :pravastatin ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :gaitDisturbance ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :creatinineClearanceDecreased ,
+                                               :formication ,
+                                               :paraesthesia ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ,
+                                                 :dabigatran ,
+                                                 :metoprolol ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase6 ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                               :gaitDisturbance ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :phenprocoumon ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase7 ;
+         OpenPVSignal:refers_to_adverse_effect :asthenia ,
+                                               :coordinationAbnormal ,
+                                               :gaitDisturbance ,
+                                               :hypoaesthesia ,
+                                               :paralysis ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :certoparin ,
+                                                 :clopidogrel ,
+                                                 :ezetimibe ,
+                                                 :fluvastatin ,
+                                                 :hydrochlorothiazide ,
+                                                 :isosorbideDinitrate ,
+                                                 :metoprolol ,
+                                                 :pantoprazole ,
+                                                 :phenprocoumon ,
+                                                 :ramipril ,
+                                                 :simvastatin ,
+                                                 :torasemide ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset7 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ReportsInGermany
+:ReportsInGermany rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :reportsInVigibaseForAnalysis ;
+                  OpenPVSignal:has_count 6 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports in Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ReportsInSweden
+:ReportsInSweden rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :reportsInVigibaseForAnalysis ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Sweden" ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports in Sweden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """Eight Individual Case Safety Reports (ICSRs) were retrieved from the WHO Global ICSR Database, VigiBaseTM. One is a duplicate, which leaves seven ICSRs for assessment. One ICSR is from Sweden, the other six were reported from Germany. The reports concern six men and one woman, aged between 71 and 92 years (median 80 years, age was not stated in two reports).
+As treatment and onset dates are missing in many reports, a time to onset can be calculated only for case 1 (five weeks), case 2 (seven months) and case 7 (2.5 years). In four out of seven ICSRs the dechallenge was positive. Cases 1 and 4 lack this information and in case 7 the medication was continued and the outcome reported as not recovered. No rechallenge was reported.
+In two out of seven ICSRs no concomitant therapy associated with neuropathy or paraesthesia was reported. Five patients were concomitantly treated with at least one drug that has been associated with paresthesia and two of these patients also with statins, which are known to very rarely cause neuropathy. However, no therapy dates are given for any concomitant medication and none was taken into consideration as co-suspected by the reporter.
+One patient was reported to have a pre-existing diabetic neuropathy that worsened after administration of dronedarone and went back to baseline after discontinuation (case 6). Case 7 reports that the patient had been treated with oxaliplatin, 5FU and folinic acid two years previously and had experienced paraesthesia after every administration. The extensive neurological examinations performed were not conclusive and it is possible that the adverse drug reactions (ADRs) reported in 2012 were still related to the previous chemotherapy.
+IC 2.2 and IC0 25 0.95 indicate a disproportional reporting of this association in VigiBase.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Dronedarone is a benzofurane antiarrhythmic drug indicated for the second line treatment of atrial fibrillation after successful conversion to sinus rhythm. Risk minimizing action was taken by regulatory authorities in 2011, due to serious cardiovascular adverse events as well as hepato- and pulmonary toxicity. Dronedarone is structurally closely related to amiodarone, a drug commonly associated with neuropathy.
+Polyneuropathy in association with dronedarone has been disproportionately reported in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBaseTM with an IC value of 2.2 and an IC025 of 0.95. Eight ICSRs have been retrieved and assessed. Even though some reports lack information on treatment dates and others are confounded by concomitant medication with neurotoxic potential, overall they point towards a possible causal relationship. This is further supported by the statistical disproportional reporting rate in VigiBase as well as a plausible potential mechanism of action.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#UsageOfDronedarone
+:UsageOfDronedarone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :atrialFibrillation ;
+                    OpenPVSignal:refers_to_drug :dronedarone ;
+                    rdfs:label "Usage of dronedarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#amiodarone
+:amiodarone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01BD01" ;
+            rdfs:label "amiodarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#amiodaroneAndPeripheralNeuropathy
+:amiodaroneAndPeripheralNeuropathy rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Warning_Information ;
+                                   OpenPVSignal:refers_to_adverse_effect :neuropathyPeripheral ;
+                                   OpenPVSignal:refers_to_drug :amiodarone ;
+                                   rdfs:label "amiodarone and peripheral neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#arzneitelegramm
+:arzneitelegramm rdf:type owl:NamedIndividual ,
+                          obo:OAE_0001197 ;
+                 OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                 OpenPVSignal:refers_to_drug :dronedarone ;
+                 OpenPVSignal:has_content "The German arzneitelegramm published a case report of polyneuropathy and visual disturbance in 2012; a 50-year-old man developed polyneuropathy with stocking-like loss of sensibility in the left foot as well as visual problems after taking dronedarone for just under one year. The patient had not yet recovered one year after discontinuing the medication." ;
+                 rdfs:label "arzneitelegramm" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#atrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "I4891" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#cardiovascularDeath
+:cardiovascularDeath rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10049993 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cardiac death" ;
+                     rdfs:label "cardiovascular death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#certoparin
+:certoparin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AB01 " ;
+            rdfs:label "certoparin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#coordinationAbnormal
+:coordinationAbnormal rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "R27.8" ;
+                      OpenPVSignal:has_MedDRA_code 10010947 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Coordination abnormal" ;
+                      rdfs:label "coordination abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#creatinineClearanceDecreased
+:creatinineClearanceDecreased rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "R944" ;
+                              OpenPVSignal:has_MedDRA_code 10011372 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Creatinine renal clearance decreased" ;
+                              rdfs:label "creatinine clearance decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#dabigatran
+:dabigatran rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AE07" ;
+            rdfs:label "dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#diabetesMellitus
+:diabetesMellitus rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                  OpenPVSignal:has_ICD_code "E119" ;
+                  OpenPVSignal:has_MedDRA_code 10012601 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" ;
+                  rdfs:label "diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#dronedarone
+:dronedarone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismContent ;
+             OpenPVSignal:has_ATC_code "C01BD07" ;
+             rdfs:label "dronedarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#embolism
+:embolism rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "I74.9" ;
+          OpenPVSignal:has_MedDRA_code 10061169 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Embolism" ;
+          rdfs:label "embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#encephalopathy
+:encephalopathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10014625 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Encephalopathy" ;
+                rdfs:label "encephalopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ezetimibe
+:ezetimibe rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C10AX09" ,
+                                     "C10BA02" ,
+                                     "C10BA05" ,
+                                     "C10BA06" ;
+           rdfs:label "ezetimibe" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#fluvastatin
+:fluvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA04" ;
+             rdfs:label "fluvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#formication
+:formication rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R20.2" ;
+             OpenPVSignal:has_MedDRA_code 10017062 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Formication" ;
+             rdfs:label "formication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#furosemide
+:furosemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA01" ,
+                                      "C03CB01" ,
+                                      "C03EB01" ,
+                                      "G01AE10" ;
+            rdfs:label "furosemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#gaitDisturbance
+:gaitDisturbance rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R26" ;
+                 OpenPVSignal:has_MedDRA_code 10017577 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Gait disturbance" ;
+                 rdfs:label "gait disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#gout
+:gout rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "M109" ;
+      OpenPVSignal:has_MedDRA_code 10018627 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Gout" ;
+      rdfs:label "gout" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#hypoaesthesia
+:hypoaesthesia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R201" ;
+               OpenPVSignal:has_MedDRA_code 10020937 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypoaesthesia" ;
+               rdfs:label "hypoaesthesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#immuneResponsivenessDecreased
+:immuneResponsivenessDecreased rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect ;
+                               OpenPVSignal:has_ICD_code "D83.1" ;
+                               OpenPVSignal:has_MedDRA_code 10011968 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Decreased immune responsiveness" ;
+                               rdfs:label "immune responsiveness decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#infectionBacterial
+:infectionBacterial rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "S05" ;
+                    OpenPVSignal:has_MedDRA_code 10060945 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Bacterial infection" ;
+                    rdfs:label "infection bacterial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#infoForCase6
+:infoForCase6 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "One patient was reported to have a pre-existing diabetic neuropathy that worsened after administration of dronedarone and went back to baseline after discontinuation " ;
+              rdfs:label "info for case 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#infoForCase7
+:infoForCase7 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "Case 7 reports that the patient had been treated with oxaliplatin, 5FU and folinic acid two years previously and had experienced paraesthesia after every administration. The extensive neurological examinations performed were not conclusive and it is possible that the adverse drug reactions (ADRs) reported in 2012 were still related to the previous chemotherapy." ;
+              rdfs:label "info for case 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#internationalJournalOfCardiology
+:internationalJournalOfCardiology rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ;
+                                  OpenPVSignal:refers_to_adverse_effect :optic_neuropathy ;
+                                  OpenPVSignal:refers_to_drug :dronedarone ;
+                                  OpenPVSignal:has_content "A further case report published in 2013 in the International Journal of Cardiology, concerns a 74- year-old man who developed optic neuropathy under dronedarone. While the pain subsided after discontinuation of dronedarone, the visual loss is is still persisting." ;
+                                  rdfs:label "international journal of cardiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#isosorbideDinitrate
+:isosorbideDinitrate rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C01DA08" ,
+                                               "C01DA58" ,
+                                               "C05AE02" ;
+                     rdfs:label "isosorbide dinitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#lercanipidine
+:lercanipidine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C08CA13" ;
+               rdfs:label "lercanipidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#multipleMyeloma
+:multipleMyeloma rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                 OpenPVSignal:has_ICD_code "C900" ;
+                 OpenPVSignal:has_MedDRA_code 10035226 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Plasma cell myeloma" ;
+                 rdfs:label "multiple myeloma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#muscleAtrophy
+:muscleAtrophy rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "M6250" ;
+               OpenPVSignal:has_MedDRA_code 10028289 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Muscle atrophy" ;
+               rdfs:label "muscle atrophy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#myocardialInfarction
+:myocardialInfarction rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I219" ;
+                      OpenPVSignal:has_MedDRA_code 10028596 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Myocardial infarction" ;
+                      rdfs:label "myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#myoclonic_jerking
+:myoclonic_jerking rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10028621 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Myoclonic jerks" ;
+                   rdfs:label "myoclonic jerking" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#neuropathyPeripheral
+:neuropathyPeripheral rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "G9009" ;
+                      OpenPVSignal:has_MedDRA_code 10029331 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Neuropathy peripheral" ;
+                      rdfs:label "neuropathy peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#neurotoxicity
+:neurotoxicity rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10029350 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Neurotoxicity" ;
+               rdfs:label "neurotoxicity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#optic_neuropathy
+:optic_neuropathy rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10061323 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Optic neuropathy" ;
+                  rdfs:label "optic neuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#paraesthesia
+:paraesthesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R202" ;
+              OpenPVSignal:has_MedDRA_code 10033775 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Paraesthesia" ;
+              rdfs:label "paraesthesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#paralysis
+:paralysis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "G83.9" ;
+           OpenPVSignal:has_MedDRA_code 10033799 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Paralysis" ;
+           rdfs:label "paralysis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#perindopril
+:perindopril rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09AA04" ,
+                                       "C09BA04" ,
+                                       "C09BB04" ,
+                                       "C09BX01" ,
+                                       "C09BX02" ,
+                                       "C10BX11" ;
+             rdfs:label "perindopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#phenprocoumon
+:phenprocoumon rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "B01AA04" ;
+               rdfs:label "phenprocoumon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#polyneuropathy
+:polyneuropathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "G629" ;
+                OpenPVSignal:has_MedDRA_code 10036105 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy" ;
+                rdfs:label "polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#porphyria
+:porphyria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+           OpenPVSignal:has_ICD_code "E80.20" ;
+           OpenPVSignal:has_MedDRA_code 10036181 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Porphyria" ;
+           rdfs:label "porphyria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#pravastatin
+:pravastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA03" ,
+                                       "C10BA03" ,
+                                       "C10BX02" ;
+             rdfs:label "pravastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForDronedaroneAndPolyneuropathy ,
+                                                          :ICForDronedaroneAndPolyneuropathy ,
+                                                          :ReportsInGermany ,
+                                                          :ReportsInSweden ,
+                                                          :reportsInVigibaseForAnalysis ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithConcomitantTreatmentAsscociatedByneuropathy/paraesthesia> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithoutConcomitantTreatmentAsscociatedByneuropathy/paraesthesia> ;
+          OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+          OpenPVSignal:refers_to_drug :dronedarone ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          mp:supportedByData :Labelling ,
+                             :PALLASTrial ,
+                             :amiodaroneAndPeripheralNeuropathy ,
+                             :arzneitelegramm ,
+                             :internationalJournalOfCardiology ,
+                             <http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#DiTrapani/Freeman> ;
+          OpenPVSignal:initially_identified_on "01/07/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref1
+:ref1 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "MedWatch: the FDA Safety Information and Adverse Event Reporting Program. URL: http://www.fda.gov/ Safety/MedWatch/SafetyInformation/ucm24376 2.htm. Accessed: 6 August 2013." ;
+      rdfs:label "ref1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref10
+:ref10 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Selvaraj V, Johnsson KG. Dronedarone- induced optic neuropathy. Int J Cardiol. 2013 July 15;167(1): e8-e9." ;
+       rdfs:label "ref10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref2
+:ref2 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "European Medicines Agency - assessment report for Multaq.URL: http://www.ema.europa.eu/docs/ en_GB/document_library/EPAR_-_Assessment_ Report_Vanation/human/001043/WC50012161 0.pdf. Accessed: 6 August 2013." ;
+      rdfs:label "ref2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref3
+:ref3 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Connolly SJ, Camm AJ, Halperin JL, Joyner C, Alings M, Amerena J et al. Dronedarone in High- Risk Permanent Atrial Fibrillation. N Engl J Med. 2011 December 15; 365(24):2268-76." ;
+      rdfs:label "ref3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref4
+:ref4 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Aenesthesia UK: Vaughan-Williams classification of anti-arrhythmic drugs. URL: http://www.frca.co.uk/article. aspx?articleid=100703. Accessed: 6 August 2013" ;
+      rdfs:label "ref4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref5
+:ref5 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Hyun Mo Kang, Yoon Sae Kang, Seok Hyun Kim, Jae Kyu Seong, Dae Young Kang, Heon Young Lee et al. Amiodarone-induced hepatitis and polyneuropathy. Korean J of Intern Med. 2007 September; 22(3): 225-9." ;
+      rdfs:label "ref5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref6
+:ref6 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Jacobs JM, Costa-Jussa FR. The pathology of amiodarone neurotoxicity. II. Peripheral neuropathy in man. Brain 1985 September;108(Pt3):753-69." ;
+      rdfs:label "ref6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref7
+:ref7 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Zimetbaum PJ. Dronedarone for atrial fibrillation – an odyssey. N Engl J Med. 2009 March 30;360(18):1811-3." ;
+      rdfs:label "ref7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref8
+:ref8 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Polyneuropathy and visual disturbances on dronedarone (MULTAQ). Arznei-telegramm 2012 May; 43:47." ;
+      rdfs:label "ref8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#ref9
+:ref9 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "ATS Journals. Dronedarone-induced neurotoxicity. URL: http://www atsjournals.org/doi/abs/10.1164/ ajrccm- conference.2011.183.1_MeetingAbstracts.A3880 Accessed: 6 August 2013." ;
+      rdfs:label "ref9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsInVigibaseForAnalysis
+:reportsInVigibaseForAnalysis rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+                              OpenPVSignal:refers_to_drug :dronedarone ;
+                              OpenPVSignal:has_count 7 ;
+                              OpenPVSignal:has_count_of_men 6 ;
+                              OpenPVSignal:has_count_of_women 1 ;
+                              OpenPVSignal:has_max_age "92.0"^^xsd:float ;
+                              OpenPVSignal:has_median_age "80.0"^^xsd:float ;
+                              OpenPVSignal:has_min_age "71.0"^^xsd:float ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsInVigibaseForAnalysis ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#sarcoidosis
+:sarcoidosis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+             OpenPVSignal:has_ICD_code "D86.9" ;
+             OpenPVSignal:has_MedDRA_code 10039486 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Sarcoidosis" ;
+             rdfs:label "sarcoidosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#stroke
+:stroke rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10042244 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Stroke" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#tasteDisturbances
+:tasteDisturbances rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10043132 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Taste disturbance" ;
+                   rdfs:label "taste disturbances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#torasemide
+:torasemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA04" ;
+            rdfs:label "torasemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#uraemia
+:uraemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:refers_to_adverse_effect :polyneuropathy ;
+         OpenPVSignal:has_MedDRA_code 10046320 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Uraemia" ;
+         rdfs:label "uraemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#visualDisturbance
+:visualDisturbance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "H54" ;
+                   OpenPVSignal:has_MedDRA_code 10047571 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                   rdfs:label "visual disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#DiTrapani/Freeman
+<http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#DiTrapani/Freeman> rdf:type owl:NamedIndividual ,
+                                                                                                    obo:OAE_0001197 ;
+                                                                                           OpenPVSignal:refers_to_adverse_effect :Incoordination ,
+                                                                                                                                 :encephalopathy ,
+                                                                                                                                 :myoclonic_jerking ,
+                                                                                                                                 :neurotoxicity ,
+                                                                                                                                 :tremor ;
+                                                                                           OpenPVSignal:refers_to_drug :dronedarone ;
+                                                                                           OpenPVSignal:has_content "At the 2011 International Conference of the American Thoracic Society, Di Trapani and Freeman presented a case of dronedarone induced neurotoxicity involving the central nervous system; a 75-year-old woman developed encephalopathy, tremor, myoclonic jerking and incoordination under dronedarone. A most extensive diagnostic work up yielded no explanation. The symptoms improved after discontinuation of dronedarone" ;
+                                                                                           rdfs:label "Di Trapani/Freeman" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithConcomitantTreatmentAsscociatedByneuropathy/paraesthesia
+<http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithConcomitantTreatmentAsscociatedByneuropathy/paraesthesia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                                                                             OpenPVSignal:is_subgroup_of :reportsInVigibaseForAnalysis ;
+                                                                                                                                             OpenPVSignal:has_count 5 ;
+                                                                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                             rdfs:label "reports with concomitant treatment asscociated by neuropathy/paraesthesia " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithoutConcomitantTreatmentAsscociatedByneuropathy/paraesthesia
+<http://purl.org/OpenPVSignal/Signals/2014_4_dronedarone_polyneuropathy#reportsWithoutConcomitantTreatmentAsscociatedByneuropathy/paraesthesia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                         OpenPVSignal:Reports_group ;
+                                                                                                                                                OpenPVSignal:is_subgroup_of :reportsInVigibaseForAnalysis ;
+                                                                                                                                                OpenPVSignal:has_count 2 ;
+                                                                                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                rdfs:label "reports without concomitant treatment asscociated by neuropathy/paraesthesia " .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

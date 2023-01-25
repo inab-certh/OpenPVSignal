@@ -1,0 +1,21 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Test Case: A "Warning Information" instance has to refer to a "Drug" and an "ADR" instance
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Warning_information ;
+sh:and (
+	[ sh:property[
+		sh:path OpenPVSignal:refers_to_adverse_effect ;	
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path OpenPVSignal:refers_to_drug;
+		sh:minCount 1;
+		]
+	]).

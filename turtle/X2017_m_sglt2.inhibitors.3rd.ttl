@@ -1,0 +1,652 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl> rdf:type owl:Ontology ;
+                                                                                      owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                  mp: ;
+                                                                                      rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/258799/"^^xsd:anyURI ;
+                                                                                      rdfs:label "SGLT-2 inhibitors and genital pruritus"^^rdfs:Literal ;
+                                                                                      owl:versionInfo "draft-v0.95-20211008"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#DiabetesMellitus
+:DiabetesMellitus rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "E11" ;
+                  OpenPVSignal:has_MedDRA_code 10012601 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" ;
+                  rdfs:label "diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           OpenPVSignal:has_content "aim of communication is to highlight that some events can be characterised as nonserious in the clinical trial setting but may manifest in the post marketing period as severe events which have a large enough impact on the quality of life for the patient that discontinuing the medication is necessary. Additionally, more guidance by drug developers or regulators on how to manage these effects may be necessary to ensure that patients who receive benefit from taking the medications are able to remain compliant with them." ;
+                           rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Dr_Rebecca_E_Chandler
+:Dr_Rebecca_E_Chandler rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                       OpenPVSignal:has_first_name "Rebecca" ;
+                       OpenPVSignal:has_last_name "Chandler" ;
+                       rdfs:label "Dr Rebecca E Chandler" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          OpenPVSignal:has_content "The summary of product characteristics for each of these products notes that most genital infections were mild to moderate and only rarely resulted in discontinuation. The patient information leaflet notes only that genital infections are common to very common and manifest with irritation, itching, unusual discharge or odour. There is no information provided to the patient to seek medical consultation for treatment of these infections." ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Mechanism_of_SGLT-2_inhibitors
+:Mechanism_of_SGLT-2_inhibitors rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Mechanism ;
+                                OpenPVSignal:is_part_of :introduction ;
+                                mp:references :Ref.1 ;
+                                OpenPVSignal:has_content "SLGT-2i work by inhibiting glucose reabsorption in the kidney and thereby promoting urinary excretion of glucose. Studies have revealed that SGLT-2i have beneficial effects on blood glucose levels, but also they reduce blood pressure and induce weight loss. Given that the action of these agents is independent of both insulin secretion and insulin action, another benefit of these agents is a lower risk of hypoglycaemia." ;
+                                rdfs:label "Mechanism of SGLT-2 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Mechanism_of_genital_infections
+:Mechanism_of_genital_infections rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Adverse_Effect_Mechanism ;
+                                 OpenPVSignal:refers_to_adverse_effect :genitalFungalInfections ,
+                                                                       :genital_infection ,
+                                                                       :mycoticBalanitis ,
+                                                                       :mycoticVulvovaginitis ;
+                                 mp:references :Ref.2 ,
+                                               :Ref.3 ,
+                                               :Ref.4 ;
+                                 OpenPVSignal:has_content "Given their mechanism of action, one of the major safety concerns for the SLGT-2i is an increased risk of genital infections caused by high levels of glucose in the urine. This safety concern is common enough that it was observed in clinical trials and has been fairly well characterised. Genital infections are largely fungal in nature, manifesting as mycotic vulvovaginitis in females and mycotic balanitis in males. Such infections have been estimated to affect 5-10% of patients using SGLT-2i and are more common in premenopausal women, patients with a history of genital infections, and obese patients. There was no evidence of a relationship between the incidence of genital infections and the amount of glycosuria observed in the clinical trials. Furthermore, rates of infections are highest in the first few months of treatment.2-4" ;
+                                 rdfs:label "Mechanism of genital infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#No_causality_established_by_prior_clinical_trials_for_SGLT2_and_genital_infections
+:No_causality_established_by_prior_clinical_trials_for_SGLT2_and_genital_infections rdf:type owl:NamedIndividual ,
+                                                                                             obo:OAE_0001182 ;
+                                                                                    OpenPVSignal:refers_to_adverse_effect :genitalFungalInfections ;
+                                                                                    mp:references :Ref.2 ,
+                                                                                                  :Ref.3 ,
+                                                                                                  :Ref.4 ;
+                                                                                    OpenPVSignal:has_content "There was no evidence of a relationship between the incidence of genital infections and the amount of glycosuria observed in the clinical trials" ;
+                                                                                    rdfs:label "No causality established by prior clinical trials for SGLT2 and genital infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#OverallReportsInVigibaseForPruritusGenital
+:OverallReportsInVigibaseForPruritusGenital rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:refers_to_adverse_effect :pruritusGenital ;
+                                            OpenPVSignal:refers_to_class :dd ;
+                                            OpenPVSignal:has_count 99 ;
+                                            OpenPVSignal:has_count_of_men 28 ;
+                                            OpenPVSignal:has_count_of_women 67 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "Overall reports in Vigibase for pruritus genital" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#PIL_for_SGLT2_inhibitors
+:PIL_for_SGLT2_inhibitors rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001197 ,
+                                   OpenPVSignal:Structured_Product_Labels_information ;
+                          OpenPVSignal:refers_to_adverse_effect :discharge ,
+                                                                :genital_infection ,
+                                                                :irritation ,
+                                                                :itching ,
+                                                                :odour ;
+                          OpenPVSignal:refers_to_drug :canagliflozin ,
+                                                      :dapagliflozin ,
+                                                      :empagliflozin ;
+                          OpenPVSignal:has_content "The patient information leaflet notes only that genital infections are common to very common and manifest with irritation, itching, unusual discharge or odour. There is no information provided to the patient to seek medical consultation for treatment of these infections." ;
+                          rdfs:label "PIL for SGLT2 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 71 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Patient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 60 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Percentage_of_diabetic_patients_experiencing_genital_fungal_infections
+:Percentage_of_diabetic_patients_experiencing_genital_fungal_infections rdf:type owl:NamedIndividual ,
+                                                                                 OpenPVSignal:Statistical_Entity ;
+                                                                        mp:references :Ref.2 ,
+                                                                                      :Ref.3 ,
+                                                                                      :Ref.4 ;
+                                                                        OpenPVSignal:has_content "5-10%" ;
+                                                                        mp:citation "Such infections have been estimated to affect 5-10% of patients using SGLT-2i and are more common in premenopausal women, patients with a history of genital infections, and obese patients . There was no evidence of a relationship between the incidence of genital infections and the amount of glycosuria observed in the clinical trials . Furthermore, rates of infections are highest in the first few months of treatment" ;
+                                                                        rdfs:label "Percentage of diabetic patients experiencing genital fungal infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "1. Ferrannini E, Solini A. SGLT2 inhibition in diabetes mellitus: rationale and clinical prospects. Nat Rev Endocrinol. 2012;8:495- 502. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "2. European Medicines Agency: Summary of Product Characteristics for dapagliflozin. (Forxiga®). Available from: http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_-_Product_Information/ human/002322/WC500136026.pdf. Accessed: February 2017. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "3. European Medicines Agency: Summary of Product Characteristics for canagliflozin (Ivokana®). Available from: http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_-_Product_Information/ human/002649/WC500156456.pdf Accessed February 2017. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "4. European Medicines Agency: Summary of Product Characteristics for empagliflozin. (Jardiance®). Available from: http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_-_Product_Information/ human/002677/WC500168592.pdf. Accessed: February 2017. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :case_1_info ;
+          OpenPVSignal:refers_to_adverse_effect :blistering ,
+                                                :cystitis ,
+                                                :genitalBurningSensation ,
+                                                :hypoglycaemia ,
+                                                :itching ,
+                                                :thrush ;
+          OpenPVSignal:refers_to_patient :Patient_1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :empagliflozin ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :case_2_info ;
+          OpenPVSignal:refers_to_adverse_effect :candidal_mycosis ,
+                                                :genitalFungalInfections ,
+                                                :itching ;
+          OpenPVSignal:refers_to_patient :Patient_2 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dapagliflozin ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsForCanagliflozin
+:ReportsForCanagliflozin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                         OpenPVSignal:refers_to_primary_suspect_drug :canagliflozin ;
+                         OpenPVSignal:has_count 31 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports for canagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsForDapagliflozin
+:ReportsForDapagliflozin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                         OpenPVSignal:refers_to_primary_suspect_drug :dapagliflozin ;
+                         OpenPVSignal:has_count 48 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports for dapagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsForEmpagliflozin
+:ReportsForEmpagliflozin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                         OpenPVSignal:refers_to_primary_suspect_drug :empagliflozin ;
+                         OpenPVSignal:has_count 20 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports for empagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromAmericas
+:ReportsFromAmericas rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                     OpenPVSignal:has_count 40 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Americas" ;
+                     rdfs:label "Reports from Americas" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromAsia
+:ReportsFromAsia rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                 OpenPVSignal:has_count 23 ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Asia" ;
+                 rdfs:label "Reports from Asia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromEurope
+:ReportsFromEurope rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                   OpenPVSignal:has_count 36 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Europe" ;
+                   rdfs:label "Reports from Europe" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromPhysicians
+:ReportsFromPhysicians rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                       OpenPVSignal:has_count 25 ;
+                       OpenPVSignal:has_reporter_type "physician" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports from physicians" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsWhereTheDrugWasDiscontinued
+:ReportsWhereTheDrugWasDiscontinued rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                                    OpenPVSignal:has_count 54 ;
+                                    OpenPVSignal:refers_to_challenge_type "Dechallenge" ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports where the drug was discontinued" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsWithDysuria
+:ReportsWithDysuria rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                    OpenPVSignal:refers_to_adverse_effect :dysuria ;
+                    OpenPVSignal:has_count 5 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with dysuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsWithGenitalBurningSensation
+:ReportsWithGenitalBurningSensation rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                                    OpenPVSignal:refers_to_adverse_effect :genitalBurningSensation ;
+                                    OpenPVSignal:has_count 9 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with genital burning sensation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsWithPollakiuria
+:ReportsWithPollakiuria rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                        OpenPVSignal:refers_to_adverse_effect :pollakiuria ;
+                        OpenPVSignal:has_count 7 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with pollakiuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "During a joint UMC/Lareb signal detection sprint with a focus on patient reports, a total of 99 individual case safety reports which included the MedDRA preferred term (PT) 'pruritus genital' for dapagliflozin, canagliflozin and empagliflozin were identified in VigiBase, the WHO global database of individual case safety reports as of 6 November 2016. Forty-eight reports of pruritus genital (48.5%) have been received for dapagliflozin, 31 (31.3%) for canagliflozin and 20 (20.2%) for empagliflozin. 67.7% of the reports have been described events in females, 28.3% of the reports for males. 40.4% of the reports originated from the Americas, 36.4% from Europe, and 23.2% from Asia. The most commonly co-reported MedDRA PT were genital burning sensation (9.1%), pollakiuria (7.1%) and dysuria (5.1%). Twenty-three of the reports were received from consumers or non-health professionals (eight of which were classified as “serious”) and 25 were received from physicians (none of which were classified as “serious”). Furthermore, fifty-four (54.5%) of the reports documented that the drug was discontinued secondary to the reported adverse drug reactions." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#SGLT-2_inhibitors_and_genital_pruritus
+:SGLT-2_inhibitors_and_genital_pruritus rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                        OpenPVSignal:refers_to_author :Dr_Rebecca_E_Chandler ;
+                                        OpenPVSignal:refers_to_signal :pvSignal ;
+                                        mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                        OpenPVSignal:has_creation_date "01/07/2017"^^xsd:date ;
+                                        OpenPVSignal:has_overall_conclusion "causal association" ;
+                                        rdfs:label "SGLT-2 inhibitors and genital pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#SmPC_for_SGLT2_inhibitors
+:SmPC_for_SGLT2_inhibitors rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001197 ,
+                                    OpenPVSignal:Structured_Product_Labels_information ;
+                           OpenPVSignal:refers_to_adverse_effect :genital_infection ;
+                           OpenPVSignal:refers_to_drug :canagliflozin ,
+                                                       :dapagliflozin ,
+                                                       :empagliflozin ;
+                           OpenPVSignal:has_content "The summary of product characteristics for each of these products notes that most genital infections were mild to moderate and only rarely resulted in discontinuation." ;
+                           rdfs:label "SmPC for SGLT2 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#blistering
+:blistering rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10005214 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Blistering" ;
+            rdfs:label "blistering" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#canagliflozin
+:canagliflozin rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :dd ;
+               OpenPVSignal:has_mechanism :Mechanism_of_SGLT-2_inhibitors ,
+                                          :Mechanism_of_genital_infections ;
+               OpenPVSignal:has_ATC_code "A10BK02 " ;
+               rdfs:label "canagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#candidal_mycosis
+:candidal_mycosis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10007152 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Candidiasis" ;
+                  rdfs:label "candidal mycosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#case_1_info
+:case_1_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "A 71 year old female with a history of type 2 diabetes and hypertension was initiated on empagliflozin. The patient was treated for cystitis approximately one month after starting therapy. Also, the patient experienced non-serious events of thrush, burning in the urogenital area, redness in the urogenital area, blistering in the urogenital area and hypoglycaemia. In the course of five days the itching increased up to intolerability. Therapy for the event of cystitis was antibiotics and antifungal cream; therapy of the symptoms in the urogenital area included unspecified ointments without success and a mild-cortisone containing ointment which helped slightly. Empagliflozin was discontinued." ;
+             rdfs:label "case 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#case_2_info
+:case_2_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "A 60 year old female experienced severe itching, soreness, and reddening of the genital area and an inability to sit while on therapy with dapagliflozin. The patient was diagnosed with candidal mycosis and treated with antifungal cream. The cream did not bring improvement and the patient discontinued dapagliflozin “on her own” in response to the events." ;
+             rdfs:label "case 2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#cystitis
+:cystitis rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10011781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Cystitis" ;
+          rdfs:label "cystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#dapagliflozin
+:dapagliflozin rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :dd ;
+               OpenPVSignal:has_mechanism :Mechanism_of_SGLT-2_inhibitors ,
+                                          :Mechanism_of_genital_infections ;
+               OpenPVSignal:has_ATC_code "A10BK01" ;
+               rdfs:label "dapagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#dd
+:dd rdf:type owl:NamedIndividual ,
+             OpenPVSignal:DrugClass ;
+    OpenPVSignal:has_mechanism :Mechanism_of_SGLT-2_inhibitors ,
+                               :Mechanism_of_genital_infections ;
+    OpenPVSignal:has_ATC_code "A10BK" ;
+    rdfs:label "SGLT2 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#discharge
+:discharge rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10080907 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Discharge" ;
+           rdfs:label "discharge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#dysuria
+:dysuria rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R30.0" ;
+         OpenPVSignal:has_MedDRA_code 10013990 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dysuria" ;
+         rdfs:label "dysuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#empagliflozin
+:empagliflozin rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :dd ;
+               OpenPVSignal:has_mechanism :Mechanism_of_SGLT-2_inhibitors ,
+                                          :Mechanism_of_genital_infections ;
+               OpenPVSignal:has_ATC_code "A10BK03" ;
+               rdfs:label "empagliflozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#genitalBurningSensation
+:genitalBurningSensation rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "N89.8" ;
+                         OpenPVSignal:has_MedDRA_code 10054815 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Genital burning sensation" ;
+                         rdfs:label "genital burning sensation " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#genitalFungalInfections
+:genitalFungalInfections rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code " B37. 9 " ;
+                         OpenPVSignal:has_MedDRA_code 10061180 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Genital infection fungal" ;
+                         rdfs:label "genital fungal infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#genital_infection
+:genital_infection rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10048461 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Genital infection" ;
+                   rdfs:label "genital infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#hypoglycaemia
+:hypoglycaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10020993 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypoglycaemia" ;
+               rdfs:label "hypoglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ;
+              OpenPVSignal:has_content "Sodium glucose cotransporter-2 inhibitors (SGLT-2i) are members of a relatively new class of oral antidiabetic agents. Three medicines in this class, dapagliflozin, canagliflozin and empagliflozin, are currently marketed for use in the treatment of type 2 diabetes mellitus as monotherapy or in combination with other agents.  SLGT-2i work by inhibiting glucose reabsorption in the kidney and thereby promoting urinary excretion of glucose. Studies have revealed that SGLT-2i have beneficial effects on blood glucose levels, but also they reduce blood pressure and induce weight loss. Given that the action of these agents is independent of both insulin secretion and insulin action, another benefit of these agents is a lower risk of hypoglycaemia. 1 Given their mechanism of action, one of the major safety concerns for the SLGT-2i is an increased risk of genital infections caused by high levels of glucose in the urine. This safety concern is common enough that it was observed in clinical trials and has been fairly well characterised.  Genital infections are largely fungal in nature, manifesting as mycotic vulvovaginitis in females and mycotic balanitis in males. Such infections have been estimated to affect 5-10% of patients using SGLT-2i and are more common in premenopausal women, patients with a history of genital infections, and obese patients . There was no evidence of a relationship between the incidence of genital infections and the amount of glycosuria observed in the clinical trials. Furthermore, rates of infections are highest in the first few months of treatment.2-4" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#irritation
+:irritation rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10023017 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Irritation skin" ;
+            rdfs:label "irritation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#itching
+:itching rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10023084 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Itching" ;
+         rdfs:label "itching" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#mycoticBalanitis
+:mycoticBalanitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "B37.42" ;
+                  OpenPVSignal:has_MedDRA_code 10079521 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Fungal balanitis" ;
+                  rdfs:label "mycotic balanitis " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#mycoticVulvovaginitis
+:mycoticVulvovaginitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "B37.3" ;
+                       OpenPVSignal:has_MedDRA_code 10078899 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Fungal vulvovaginitis" ;
+                       rdfs:label "mycotic vulvovaginitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#odour
+:odour rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_MedDRA_code 10080408 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Genital odour" ;
+       rdfs:label "odour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#pollakiuria
+:pollakiuria rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code " R35.0" ;
+             OpenPVSignal:has_MedDRA_code 10036018 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Pollakiuria" ;
+             rdfs:label "pollakiuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#pruritusGenital
+:pruritusGenital rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "L29.8" ;
+                 OpenPVSignal:has_MedDRA_code 10037093 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pruritus genital" ;
+                 rdfs:label "pruritus genital" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Discussion_and_conclusion ,
+                                                   :Reports_in_Vigibase ,
+                                                   :introduction ,
+                                                   :summary ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                              :Report_2 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForPruritusGenital ,
+                                                          :Percentage_of_diabetic_patients_experiencing_genital_fungal_infections ,
+                                                          :ReportsForCanagliflozin ,
+                                                          :ReportsForDapagliflozin ,
+                                                          :ReportsForEmpagliflozin ,
+                                                          :ReportsFromAmericas ,
+                                                          :ReportsFromAsia ,
+                                                          :ReportsFromEurope ,
+                                                          :ReportsFromPhysicians ,
+                                                          :ReportsWhereTheDrugWasDiscontinued ,
+                                                          :ReportsWithDysuria ,
+                                                          :ReportsWithGenitalBurningSensation ,
+                                                          :ReportsWithPollakiuria ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromnon-healthprofessionals/consumers> ;
+          OpenPVSignal:refers_to_adverse_effect :genitalFungalInfections ,
+                                                :genital_infection ,
+                                                :pruritusGenital ;
+          OpenPVSignal:refers_to_class :dd ;
+          OpenPVSignal:refers_to_primary_suspect_drug :canagliflozin ,
+                                                      :dapagliflozin ,
+                                                      :empagliflozin ;
+          mp:supportedByData :No_causality_established_by_prior_clinical_trials_for_SGLT2_and_genital_infections ,
+                             :PIL_for_SGLT2_inhibitors ,
+                             :SmPC_for_SGLT2_inhibitors ;
+          OpenPVSignal:initially_identified_on "01/07/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Sodium glucose cotransporter-2 inhibitors (SGLT- 2i) are members of a relatively new class of oral antidiabetic agents which are used in the treatment of type 2 diabetes mellitus as monotherapy or in combination with other agents. Itching in the genital area is a common non-serious adverse reaction for these types of drugs which was known at the time of approval. A joint UMC/Lareb signal detection sprint performed in October 2016, highlighted reports from patients that were retrieved from VigiBase, the WHO global database of individual case safety reports, which revealed that often patients stop taking these medications because of this adverse event. A 71 year old female with a history of type 2 diabetes and hypertension was initiated on empagliflozin. The patient was treated for cystitis approximately one month after starting therapy. Also, the patient experienced non-serious events of thrush, burning in the urogenital area, redness in the urogenital area, blistering in the urogenital area and hypoglycaemia. In the course of five days the itching increased up to intolerability. Therapy for the event of cystitis was antibiotics and antifungal cream; therapy of the symptoms in the urogenital area included unspecified ointments without success and a mild-cortisone containing ointment which helped slightly. Empagliflozin was discontinued. A 60 year old female experienced severe itching, soreness, and reddening of the genital area and an inability to sit while on therapy with dapagliflozin. The patient was diagnosed with candidal mycosis and treated with antifungal cream. The cream did not bring improvement and the patient discontinued dapagliflozin “on her own” in response to the events." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#thrush
+:thrush rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10043649 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Thrush" ;
+        rdfs:label "thrush" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_adverse_effect :DiabetesMellitus ;
+                    OpenPVSignal:refers_to_drug :empagliflozin ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromnon-healthprofessionals/consumers
+<http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#ReportsFromnon-healthprofessionals/consumers> rdf:type owl:NamedIndividual ,
+                                                                                                                                           OpenPVSignal:Reports_group ;
+                                                                                                                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForPruritusGenital ;
+                                                                                                                                  OpenPVSignal:has_count 23 ;
+                                                                                                                                  OpenPVSignal:has_reporter_type "other" ,
+                                                                                                                                                                 "patient" ;
+                                                                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                  rdfs:label "Reports from non-health professionals/consumers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Usage_of_Sodium-glucose_co-transporter_2_(SGLT2)_inhibitors
+<http://purl.org/OpenPVSignal/Signals/2017_3_SGLT-2_inhibitors_genital_pruritus.owl#Usage_of_Sodium-glucose_co-transporter_2_(SGLT2)_inhibitors> rdf:type owl:NamedIndividual ,
+                                                                                                                                                          OpenPVSignal:Drug_Usage ;
+                                                                                                                                                 OpenPVSignal:concerns_indication_for_use :DiabetesMellitus ;
+                                                                                                                                                 OpenPVSignal:refers_to_class :dd ;
+                                                                                                                                                 OpenPVSignal:refers_to_drug :canagliflozin ,
+                                                                                                                                                                             :dapagliflozin ,
+                                                                                                                                                                             :empagliflozin ;
+                                                                                                                                                 rdfs:label "Usage of Sodium-glucose co-transporter 2 (SGLT2) inhibitors" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,995 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome> rdf:type owl:Ontology ;
+                                                                                 owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                             mp: ;
+                                                                                 rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255499/"^^xsd:anyURI ;
+                                                                                 rdfs:label "Vemurafenib and Tumour lysis syndrome"^^xsd:Literal ;
+                                                                                 owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeDiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content "The four VigiBase® cases of TLS reported in relation to treatment with the new biologic drug vemurafenib do not contain sufficient background information to allow for a high quality causality assessment. In the literature a handful of cases of TLS in relation to malignant melanoma have ever been published, none of which concern treatment with vemurafenib but rather with other drugs or drug combinations. The reporting pattern in VigiBase® of TLS as an adverse drug reaction for any drug during recent years would suggest an overall increase in the incidence of TLS in association to targeted cancer therapy and in solid tumour indications. In line with this some authors have noted that TLS would be expected to increase also in non-hematologic malignancies with more effective treatment, i.e. targeted therapy, including vemurafenib. A causal relationship between vemurafenib and TLS is in light of this and with the reported cases not unlikely, as any effective cancer therapy can lead to TLS. As mentioned previously, while being a signal of a serious side effect, the association could equally be seen as a sign of an effective treatment. Physicians treating solid tumours should be made aware of the apparent increased risk of TLS with vemurafenib or other targeted therapies to be able to determine on a case-bycase basis the need for immediate treatment should TLS appear and also for appropriate prophylaxis. " ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeDose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :vemurafenib ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#12HrsIntervalBetweenAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 960 ;
+       OpenPVSignal:refers_to_dose_value "960 mg" ;
+       rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeDose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :vemurafenib ;
+       OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#12HrsIntervalBetweenAdministration> ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 960 ;
+       OpenPVSignal:refers_to_dose_value "960 mg" ;
+       rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeDr_Birgitta_Grundmark
+:Dr_Birgitta_Grundmark rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                       OpenPVSignal:has_first_name "Birgitta" ;
+                       OpenPVSignal:has_last_name "Grundmark" ;
+                       rdfs:label "Dr Birgitta Grundmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeIntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ;
+                     OpenPVSignal:has_content "Four cases of Tumour Lysis Syndrome (TLS) in association with vemurafenib treatment have been identified and filtered as a potential signal from the WHO Global Individual Case Safety Report (ICSR) database, VigiBase®. Vemurafenib is a B-Raf enzyme inhibitor indicated for the treatment of malignant melanoma.1 It was first approved in 2011 in the US, and has since been approved in other countries including Canada, and in the EU. Vemurafenib causes programmed cell death and works in about 60% of melanoma patients whose cancer has either a V600E BRAF mutation or the more rare BRAF V600K mutation. Melanoma cells without these mutations are not inhibited by vemurafenib; instead the drug paradoxically stimulates normal BRAF and may promote tumour growth in such cases. TLS is a rare and potentially fatal syndrome where a sudden, rapid and massive lysis of tumour tissue occurs, resulting in severe disturbances in electrolytes and renal failure.2 TLS has predominantly been observed in association with various treatments for hematologic malignancies but has also been described with the treatment of solid tumours; e.g. a handful of cases having been reported in scientific literature in patients under treatment for malignant melanoma.3,4,5,6,7,8 While the VigiBase® cases herein are few and contain a relative scarcity of data and TLS is considered by some merely as a consequence or a sign of effective treatment regardless of type, the TLS finding is discussed here as a signal of a new adverse drug reaction for vemurafenib." ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.10 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ,
+                                      :Ref.4 ,
+                                      :Ref.5 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content "According to the approved EU SPC the most common side effects of vemurafenib treatment are arthralgia, fatigue, skin reactions, light sensitivity reactions, nausea, alopecia and pruritus.3 TLS, or signs and symptoms associated with TLS such as acute renal failure, other renal side effects, hyperuricaemia, hypocalcaemia, hyperphosphataemia, and hyperkalaemia are not labelled side effects of vemurafenib according to the EU SPC. TLS is a feared acute and potentially fatal side effect of treatment of primarily hematologic or lymphatic malignancies caused by abrupt, massive tumour cell death. It is a complication of the treatment of bulky, highly proliferative, chemoresponsive disease. Signs and symptoms associated with TLS are hyperuricaemia, hypocalcaemia, hyperphosphataemia, hyperkalaemia with subsequent risk of acute kidney failure, cardiac arrhythmia and seizures1 with a case classification definition suggested by Cairo and Bishop in 2004.9 The incidence of TLS in different diagnoses is not known in any detail due to the variability of patients in cohorts investigated and a lack of standard diagnostic criteria used in studies. The vast majority of data on TLS incidence refer to hematologic malignancies with an incidence range between 0 and 23% and a fatality rate ranging between 0 and 2.5%.1 The high end incidence in some publications may appear to include cases of TLS diagnosed based on laboratory data without significant clinical manifestation. In solid tumours data is scarce with an incidence of TLS of 0.02% reported for colorectal cancer.1 TLS has been described in association with different treatment modalities including chemotherapy, radiation and steroids and when none of these modalities is present even as occurring spontaneously.2 Among solid tumours TLS has been seen - as expected - in both highly chemosensitive tumours (e.g. small cell carcinomas and germ cell tumours) and also in tumours less sensitive to treatment such as malignant melanoma.2,4,5,6,7,8 In TLS case histories reported in literature, in association with malignant melanoma, the TLS has occurred spontaneously or within hours to days of treatment described as corticosteroids, classic chemotherapy, monoclonal antibodies, interleukin, interferon and combinations of these. The detailed mechanism by which TLS is induced in malignant melanoma and other malignancies is largely unknown although any drug causing death of cancer cells by any mechanism may lead to TLS in certain circumstances. In lymphatic tumours, corticosteroids may induce the production of endonucleases in the malignant cells of melanoma, which leads to DNA fragmentation and eventually cell lysis.2 Treatment of TLS includes supportive care including preservation of renal function, prevention of cardiac arrhythmias and seizures. Preventive measures for high risk patients with lymphomas and leukaemias include prophylactic allopurinol or rasburicase.10" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeMechanism_of_Vemurafenib
+:Mechanism_of_Vemurafenib rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ;
+                          OpenPVSignal:has_content "Vemurafenib is a B-Raf enzyme inhibitor indicated for the treatment of malignant melanoma.1 Vemurafenib causes programmed cell death and works in about 60% of melanoma patients whose cancer has either a V600E BRAF mutation or the more rare BRAF V600K mutation. Melanoma cells without these mutations are not inhibited by vemurafenib; instead the drug paradoxically stimulates normal BRAF and may promote tumour growth in such cases" ;
+                          rdfs:label "Mechanism of Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeOverallReportsInVigibaseForTls
+:OverallReportsInVigibaseForTls rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                OpenPVSignal:has_count 1157 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "Overall reports in vigibase for tls" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeOverallReportsInVigibaseForTlsAndVemurafenib
+:OverallReportsInVigibaseForTlsAndVemurafenib rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForTls ;
+                                              OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                              OpenPVSignal:refers_to_drug :vemurafenib ;
+                                              OpenPVSignal:has_count 4 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Overall reports in Vigibase for tls and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromePatient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 24 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromePatient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 58 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromePatient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromePatient_of_previous_report
+:Patient_of_previous_report rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Patient ;
+                            OpenPVSignal:has_age 40 ;
+                            OpenPVSignal:has_gender "female" ;
+                            rdfs:label "Patient of previous report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EU-SPC for vemurafenib. URL: http://www.ema. europa.eu/docs/en_GB/document_library/EPA R_-_ Product_Information/human/002409/ WC500124317. pdf. Accessed: August 2012. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Bose P, Qubaiah O. A review of tumour lysis syndrome with targeted therapies and the role of rasburicase. J Clin Pharm Ther. 2011 Jun;36(3):299-326. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Howard SC, Jones DP, Pui CH. The tumor lysis syndrome. N Engl J Med 2011; 364:1844-54. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mouallem M, Zemer-Wassercug N, Kugler E, Sahar N, Shapira-Frommer R, Schiby G. Tumor lysis syndrome and malignant melanoma. Med Oncol. 2013;30(3):364. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Borne E, Serafi R, Piette F, Mortier L. Tumour lysis syndrome induced by corticosteroid in metastatic melanoma presenting with initial hyperkalemia. J Eur Acad Dermatol Venereol. 2009 Jul;23(7):855-6. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Nakamura Y, Nakamura Y, Hori E, Furuta J, Ishii Y, Takahashi T, et al. Tumor lysis syndrome after transcatheter arterial infusion of cisplatin and embolization therapy for liver metastases of melanoma. Int J Dermatol. 2009 Jul;48(7):763-7. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Habib GS, Saliba WR. Tumor lysis syndrome after hydrocortisone treatment in metastatic melanoma: a case report and review of the literature. Am J Med Sci. 2002 Mar;323(3):155-7. Review. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Stoves J, Richardson D, Patel H. Tumour lysis syndrome in a patient with metastatic melanoma treated with biochemotherapy. Nephrol Dial Transplant. 2001 Jan;16(1):188- 9. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Castro MP, VanAuken J, Spencer-Cisek P, Legha S, Sponzo RW. Acute tumor lysis syndrome associated with concurrent biochemotherapy of metastatic melanoma: a case report and review of the literature. Cancer. 1999 Mar 1;85(5):1055-9. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeRef.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. Br. J Haematol. 2004 Oct;127(1):3-11. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReport1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Case_Report_Information ;
+         OpenPVSignal:has_content "A 24-year-old male study patient was treated for malignant melanoma with vemurafenib at a dose of 960 mg twice daily. Dates of treatment and onset of symptoms, medical history or concurrent illness, and concomitant or past medication were not recorded. The patient was admitted to hospital with severe worsening of general condition, abdominal complaints, flank pain, nausea, vomiting and proteinuria and was diagnosed with TLS. The therapy, outcome and any causality assessment by the reporter was not provided. The marketing authorisation holder (MAH) assessed the TLS as related to vemurafenib. " ;
+         rdfs:label "Info for Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReport2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Case_Report_Information ;
+         OpenPVSignal:has_content "A 58-year-old female patient was treated for malignant melanoma with vemurafenib in a dose of 960 mg twice daily. Concomitant medications were enoxaparin, metoclopramide, betamethasone, orlistat, levothyroxine, omeprazole, and paracetamol. The diagnosis of TLS was reported after five days of vemurafenib treatment. The patient recovered within three weeks." ;
+         rdfs:label "Info for Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReport3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Case_Report_Information ;
+         OpenPVSignal:has_content "A patient of unknown gender and age was treated for malignant melanoma with vemurafenib with an unknown dose. The patient’s medical history, concomitant medication, concurrent conditions and past drugs were not reported. After an unspecified amount of time the patient died due to TLS; in the opinion of the reporter this was related to the treatment with vemurafenib. The patient was enrolled in a healthcare providers’ programme for malignant melanoma. The narrative indicated that this case actually described two different patients experiencing the event as described above. " ;
+         rdfs:label "Info for Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReport4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Case_Report_Information ;
+         OpenPVSignal:has_content "A male patient was reported to have experienced TLS while receiving treatment with vemurafenib. No further relevant information was provided. " ;
+         rdfs:label "Info for Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReport_previous
+:Report_previous rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:has_free_text_reporting_element :ds ;
+                 OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                 OpenPVSignal:refers_to_concomitant_drug :betamethasone ;
+                 OpenPVSignal:refers_to_patient :Patient_of_previous_report ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                 rdfs:label "Report previous" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "A search in VigiBase® in August 2014 retrieved four reports on TLS associated with vemurafenib treatment. The cases originated from Germany and the US, and presented with varying degree of information. Case 1: A 24-year-old male study patient was treated for malignant melanoma with vemurafenib at a dose of 960 mg twice daily. Dates of treatment and onset of symptoms, medical history or concurrent illness, and concomitant or past medication were not recorded. The patient was admitted to hospital with severe worsening of general condition, abdominal complaints, flank pain, nausea, vomiting and proteinuria and was diagnosed with TLS. The therapy, outcome and any causality assessment by the reporter was not provided. The marketing authorisation holder (MAH) assessed the TLS as related to vemurafenib. Case 2: A 58-year-old female patient was treated for malignant melanoma with vemurafenib in a dose of 960 mg twice daily. Concomitant medications were enoxaparin, metoclopramide, betamethasone, orlistat, levothyroxine, omeprazole, and paracetamol. The diagnosis of TLS was reported after five days of vemurafenib treatment. The patient recovered within three weeks. No further relevant information was provided but the narrative mentions a previous TLS report on a 40-year-old female for which the investigator assessed vemurafenib to be related to the event. Among the concomitant medications noted in this case was the corticosteroid betamethasone. Corticosteroids are among the agents classically associated with TLS. Treatment time and time to onset was not reported in relation to the concomitant drug betamethasone, and it was not clear whether the drug was administered before or as treatment after the event. Case 3: A patient of unknown gender and age was treated for malignant melanoma with vemurafenib with an unknown dose. The patient’s medical history, concomitant medication, concurrent conditions and past drugs were not reported. After an unspecified amount of time the patient died due to TLS; in the opinion of the reporter this was related to the treatment with vemurafenib. The patient was enrolled in a healthcare providers’ programme for malignant melanoma. The narrative indicated that this case actually described two different patients experiencing the event as described above. Case 4: A male patient was reported to have experienced TLS while receiving treatment with vemurafenib. No further relevant information was provided. As is noted from the case descriptions above, the four cases of TLS reported in relation to treatment with vemurafenib do not themselves contain enough background information to allow for a high quality causality assessment. In VigiBase® a total of 1,157 reports of TLS for all drugs in the database were present as of 12 August, 2014. The cases were predominately from the US, a majority of them concerned men, middle-aged and older, and almost all of them had been reported after 1 January, 2001. Between 1 January and 12 August, 2014, One hundred ten TLS cases were reported to VigiBase®. Half (55) of these cases concerned treatments for hematologic malignancies, 30 patients were treated for solid malignancies and 25 were treated for an unknown indication. Most commonly reported solid malignancy treatment indications were breast cancer (n=5) and colorectal cancer (n=6). Among TLS cases in solid malignancies and cases of unknown indication two thirds were treated with modern biologic/targeted therapy while one third were reportedly treated with classic chemotherapy agents or steroids only. The signal for vemurafenib may be seen as a part of a larger pattern increasing reporting of TLS in cancer treatments in general, in line with increased effectiveness of modern targeted anticancer drugs. " ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeResponse_from_Roche
+:Response_from_Roche rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report <http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#Vemurafenib_and_Tumor_Lysis_Syndrome_(TLS)> ;
+                     OpenPVSignal:has_content "In November 2014 the WHO collaborating centre for international drug monitoring in Uppsala invited Roche to comment on a potential signal of TLS in melanoma patients treated with vemurafenib. They cited 4 cases of TLS associated with vemurafenib treatment in their global ICSR database, VigiBase®. The report concluded that the information was insufficient for causality analysis, but raised concerns over the lack of clinician awareness of TLS and potential causality with vemurafenib. TLS is an uncommon but potentially fatal syndrome caused by massive tumour cell lysis. This leads to severe electrolyte abnormalities and is often accompanied by acute renal failure. TLS most often occurs after cytotoxic therapy for certain types of lymphoma and leukaemia. TLS also occurs in other tumour types that possess high proliferative rate, large tumour burden, or high sensitivity to cytotoxic therapy. In addition, TLS has been described to occur spontaneously and with other treatment modalities such as radiation and corticosteroids1. TLS in solid tumours is felt to be a rare phenomenon, and in 2010 an expert panel2 did not recommend routine TLS prophylaxis for solid tumours as the estimated risk was below 1 percent. Vemurafenib inhibits mutant BRAFV600 and is approved for the treatment of metastatic melanoma (mM) harbouring this mutation. To date, there has been no described mechanistic association between the RAF/MEK/ERK pathway and TLS. TLS has also not been described with dabrafenib, another BRAF inhibitor. Currently the vemurafenib reference safety information does not include TLS as an adverse drug reaction. Preclinical studies do not support an association with TLS. The literature describes TLS as rare in mM3, and there is no epidemiological assessment of the true incidence of TLS in mM. Our literature search via PubMed current as of 3 December 2014 revealed a total of 11 case reports of TLS in mM patients since 1994. All 11 cases described patients with bulky or widely metastatic disease with liver involvement. TLS was attributed to chemotherapy in 5 cases, biological therapy in 1 case, corticosteroids alone in 2 cases, radiation alone in 1 case, and occurred spontaneously in 1 case. Acute renal failure occurred in 10 patients. As of August 2014, the estimated number of patients exposed to vemurafenib was 28,809 and calculated patient-years of 17,729. The Roche Global Safety Database (RGSD) contained 6 cases of TLS, and included all 4 cases described in the WHO report. We further analysed these 6 cases by applying the case definition of TLS established by Cairo and Bishop2. The Cairo and Bishop classification of laboratory TLS stipulates that 2 or more of the following lab changes occur within 3 days before and 7 days after starting therapy. These lab changes are: hyperuricaemia, hyperkalaemia, hyperphosphatemia, and hypocalcaemia. Clinical TLS occurs when these lab changes are accompanied by increased creatinine level, seizures, cardiac dysrhythmia, or death. All 6 cases of TLS in the RGSD were medically confirmed; 5 patients were treated with vemurafenib for mM and 1 patient for hairy cell leukaemia. These 6 cases reflect a crude reporting rate of 3.4 per 10,000 patient-years. Excluding the hairy cell leukaemia case the 5 cases involving mM reflect a crude reporting rate of 2.8 per 10,000 patient-years. Of the 6 cases, 1 case had acute renal failure and 1 case had a fatal outcome, both involving mM patients. It was unclear if the fatal outcome was associated with TLS. A quality assessment was not possible for 4 cases that failed to contain sufficient information to apply the TLS case definition. These 4 cases also failed to provide the timing of vemurafenib initiation relative to the onset of TLS and did not provide sufficient clinical information to support the diagnosis of TLS. Therefore the case definition was applied to the remaining 2 cases. The first case involved an adult female patient who was treated with vemurafenib for mM. TLS was diagnosed 5 days after vemurafenib initiation but the patient eventually recovered from the event. This case met the case definition of TLS based on laboratory abnormalities and acute renal failure. Vemurafenib was stopped on day 6 but resumed on day 22, while TLS was reported as resolved on day 58. This patient had risk factors for TLS including bulky tumour and concomitant glucocorticoid therapy. The literature contains cases of TLS in mM induced by corticosteroid therapy alone4. The second case involved an adult female patient treated with vemurafenib for mM. TLS was diagnosed 31 days after vemurafenib initiation when the patient developed fevers and chills. The only laboratory results available were white blood cell counts, neutrophil counts, and LDH, which were all normal. Vemurafenib was stopped on the same day but was resumed on an unspecified date and TLS was reported as resolved on day 36. This case failed to meet case definition for TLS and was notable for the unusually long latency between therapy initiation and TLS onset. We identified 6 cases of TLS in our safety database, but 4 cases lacked sufficient information for further analysis. Of the remaining 2 cases, 1 case failed to meet case definition for TLS primarily due to long latency. In the lone case that did meet the case definition for TLS, it was confounded by concomitant corticosteroids. Our overall assessment showed temporal association and a plausible mechanism of action. This signal, however, lacked statistical correlation, was not specific, and was not supported by experimental evidence or an analogous drug reaction. We found no convincing evidence in our analysis to support a causal relationship between vemurafenib and TLS at this time. Roche recognizes this signal involving TLS and vemurafenib in mM and will continue to monitor the events of TLS through routine pharmacovigilance activities. References 1. McBride A, Westervelt P. Recognizing and managing the expanded risk of tumor lysis syndrome in hematologic and solid malignancies. Journal of Hematology & Oncology 2012; 5:75. 2. Cairo M. S., Coiffier B., Reiter A., Younes A. and on behalf of the TLS Expert Panel. Recommendations for the evaluation of risk and prophylaxis of tumour lysis syndrome (TLS) in adults and children with malignant diseases: an expert TLS panel consensus. British Journal of Haematology 2010; 149: 578–586. 3. Mouallem M, Zemer-Wassercug N, Kugler E, Sahar N, Shapira-Frommer R, Schiby G. Tumor lysis syndrome and malignant melanoma. Medical Oncology 2013; 30:364. 4. Habib GS, Saliba WR. Tumor lysis syndrome after hydrocortisone treatment in metastatic melanoma: A case report and review of the literature. The American Journal of the Medical Sciences 2002; 323(3):155-7." ;
+                     rdfs:label "Response from Roche" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeSummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Tumour Lysis Syndrome (TLS) in relation to treatment of malignant melanoma with vemurafenib has been identified and filtered as a potential signal from the WHO Global Individual Case Safety Report (ICSR) database, VigiBase®. TLS is a rare, potentially fatal syndrome caused by a sudden massive lysis of tumour tissue with severe electrolyte disturbances and threat of kidney failure as a result. TLS has classically been observed in association with chemotherapeutic agents in the treatment of hematologic and lymphatic malignancies. With the arrival of new targeted drugs in oncology and their growing and important role, during the last decades TLS has increasingly begun to be reported in association with the treatment of solid tumours, including malignant melanoma. In this setting the possibility of TLS could initially be overlooked with the risk of detrimental effects for the patient. Analysis of current available information suggests that vemurafenib may cause TLS and that informing oncologists about this rare event would be of value to increase patient safety. " ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeTLS_associated_with_treatments
+:TLS_associated_with_treatments rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001125 ;
+                                OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                OpenPVSignal:refers_to_class :classicChemotherapy ,
+                                                             :corticosteroids ,
+                                                             :interferon ,
+                                                             :interleukin ,
+                                                             :monoclonalAntibodies ;
+                                mp:references :Ref.2 ;
+                                OpenPVSignal:has_content "TLS has been described in association with different treatment modalities including chemotherapy, radiation and steroids and when none of these modalities is present even as occurring spontaneously.2" ;
+                                rdfs:label "TLS associated with treatments" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeTLS_associated_with_tumours
+:TLS_associated_with_tumours rdf:type owl:NamedIndividual ,
+                                      obo:OAE_0001125 ;
+                             OpenPVSignal:refers_to_adverse_effect :melanoma ,
+                                                                   :tumorLysisSyndrome ;
+                             mp:references :Ref.2 ,
+                                           :Ref.4 ,
+                                           :Ref.5 ,
+                                           :Ref.6 ,
+                                           :Ref.7 ,
+                                           :Ref.8 ;
+                             OpenPVSignal:has_content "Among solid tumours TLS has been seen - as expected - in both highly chemosensitive tumours (e.g. small cell carcinomas and germ cell tumours) and also in tumours less sensitive to treatment such as malignant melanoma.2,4,5,6,7,8" ;
+                             rdfs:label "TLS associated with tumours" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeTimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 5 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeUpsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeVemurafenib_and_melanoma
+:Vemurafenib_and_melanoma rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Drug_Usage ;
+                          OpenPVSignal:concerns_indication_for_use :melanoma ;
+                          OpenPVSignal:refers_to_drug :vemurafenib ;
+                          rdfs:label "Vemurafenib and melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeVigibase1
+:Vigibase1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:VigiBase_Report ;
+           OpenPVSignal:has_free_text_reporting_element :Report1 ;
+           OpenPVSignal:refers_to_adverse_effect :abdominalComplaints ,
+                                                 :flankPain ,
+                                                 :nausea ,
+                                                 :proteinuria ,
+                                                 :tumorLysisSyndrome ,
+                                                 :vomiting ,
+                                                 :worseningOfGeneralCondition ;
+           OpenPVSignal:refers_to_patient :Patient1 ;
+           OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+           OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Vigibase1 ;
+           OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+           rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeVigibase2
+:Vigibase2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:VigiBase_Report ;
+           OpenPVSignal:has_free_text_reporting_element :Report2 ;
+           OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+           OpenPVSignal:refers_to_concomitant_drug :betamethasone ,
+                                                   :enoxaparin ,
+                                                   :levothyroxine ,
+                                                   :metoclopramide ,
+                                                   :omeprazole ,
+                                                   :orlistat ,
+                                                   :paracetamol ;
+           OpenPVSignal:refers_to_patient :Patient2 ;
+           OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+           OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Vigibase2 ;
+           OpenPVSignal:time_to_onset :TimeToOnset2 ;
+           OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+           rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeVigibase3
+:Vigibase3 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:VigiBase_Report ;
+           OpenPVSignal:has_free_text_reporting_element :Report3 ;
+           OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+           OpenPVSignal:refers_to_patient :Patient3 ;
+           OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+           OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_3 ;
+           OpenPVSignal:refers_to_outcome_after_action "death" ;
+           rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeVigibase4
+:Vigibase4 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:VigiBase_Report ;
+           OpenPVSignal:has_free_text_reporting_element :Report4 ;
+           OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+           OpenPVSignal:refers_to_patient :Patient4 ;
+           OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+           OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+           rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeabdominalComplaints
+:abdominalComplaints rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10072818 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Abdominal disorder" ;
+                     rdfs:label "abdominal complaints" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeacuteRenalFailure
+:acuteRenalFailure rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N17.9" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" ;
+                   rdfs:label "acute renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromealopecia
+:alopecia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L65.9" ;
+          OpenPVSignal:has_MedDRA_code 10001760 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Alopecia" ;
+          rdfs:label "alopecia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromearthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M25.50" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromebetamethasone
+:betamethasone rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "R01AD06 " ;
+               rdfs:label "betamethasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromebreast_cancer
+:breast_cancer rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_MedDRA_code 10006187 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Breast cancer" ;
+               rdfs:label "breast cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromecardiacArrhythmia
+:cardiacArrhythmia rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I49.9" ;
+                   OpenPVSignal:has_MedDRA_code 10003119 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Arrhythmia" ;
+                   rdfs:label "cardiac arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeclassicChemotherapy
+:classicChemotherapy rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:DrugClass ;
+                     OpenPVSignal:has_ATC_code "L01" ;
+                     rdfs:label "classic chemotherapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromecolorectal_cancer
+:colorectal_cancer rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_MedDRA_code 10061451 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Colorectal cancer" ;
+                   rdfs:label "colorectal cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromecorticosteroids
+:corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_ATC_code "H02" ;
+                 rdfs:label "corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeds
+:ds rdf:type owl:NamedIndividual ,
+             OpenPVSignal:Case_Report_Information ;
+    OpenPVSignal:has_content "No further relevant information was provided but the narrative mentions a previous TLS report on a 40-year-old female for which the investigator assessed vemurafenib to be related to the event. Among the concomitant medications noted in this case was the corticosteroid betamethasone. Corticosteroids are among the agents classically associated with TLS. Treatment time and time to onset was not reported in relation to the concomitant drug betamethasone, and it was not clear whether the drug was administered before or as treatment after the event." ;
+    rdfs:label "info for previous report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeenoxaparin
+:enoxaparin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AB05 " ;
+            rdfs:label "enoxaparin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromefatalityRangeCasesWithTLSAndHematologicalMalignancies
+:fatalityRangeCasesWithTLSAndHematologicalMalignancies rdf:type owl:NamedIndividual ,
+                                                                OpenPVSignal:Statistical_Entity ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty OpenPVSignal:has_value ;
+                                                                  owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                                       owl:onDatatype xsd:decimal ;
+                                                                                       owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                              ]
+                                                                                                              [ xsd:maxInclusive 0.025
+                                                                                                              ]
+                                                                                                            )
+                                                                                     ]
+                                                                ] ;
+                                                       OpenPVSignal:refers_to_adverse_effect :hematological_malignancy ,
+                                                                                             :tumorLysisSyndrome ;
+                                                       mp:references :Ref.1 ;
+                                                       rdfs:label "fatality range cases with TLS and hematological malignancies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromefatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53.83" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeflankPain
+:flankPain rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R10.9" ;
+           OpenPVSignal:has_MedDRA_code 10016750 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Flank pain" ;
+           rdfs:label "flank pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromehematological_malignancy
+:hematological_malignancy rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ,
+                                   OpenPVSignal:Indication ;
+                          OpenPVSignal:has_MedDRA_code 10066481 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Hematological malignancy" ;
+                          rdfs:label "hematological malignancy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromehyperkalaemia
+:hyperkalaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "E87.5" ;
+               OpenPVSignal:has_MedDRA_code 10020646 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperkalaemia" ;
+               rdfs:label "hyperkalaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromehyperphosphataemia
+:hyperphosphataemia rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code " E83.39" ;
+                    OpenPVSignal:has_MedDRA_code 10020711 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Hyperphosphataemia" ;
+                    rdfs:label "hyperphosphataemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromehyperuricaemia
+:hyperuricaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "E79.0" ;
+                OpenPVSignal:has_MedDRA_code 10020903 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperuricaemia" ;
+                rdfs:label "hyperuricaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromehypocalcaemia
+:hypocalcaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "E83.51" ;
+               OpenPVSignal:has_MedDRA_code 10020947 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypocalcaemia" ;
+               rdfs:label "hypocalcaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeincidenceOfTLSInColorectalCancer
+:incidenceOfTLSInColorectalCancer rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Incidence ;
+                                  OpenPVSignal:refers_to_adverse_effect :colorectal_cancer ,
+                                                                        :tumorLysisSyndrome ;
+                                  OpenPVSignal:has_value "2.0E-4"^^xsd:double ;
+                                  rdfs:label "incidence of TLS in colorectal cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeincidenceRangeOfTLSInHematologicMalignancies
+:incidenceRangeOfTLSInHematologicMalignancies rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Incidence ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty OpenPVSignal:has_value ;
+                                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                              owl:onDatatype xsd:decimal ;
+                                                                              owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                                                     ]
+                                                                                                     [ xsd:maxInclusive 0.23
+                                                                                                     ]
+                                                                                                   )
+                                                                            ]
+                                                       ] ;
+                                              OpenPVSignal:refers_to_adverse_effect :hematological_malignancy ,
+                                                                                    :tumorLysisSyndrome ;
+                                              mp:references :Ref.1 ;
+                                              rdfs:label "incidence range of TLS in hematologic malignancies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeinterferon
+:interferon rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:DrugClass ;
+            OpenPVSignal:has_ATC_code "L03AB" ;
+            rdfs:label "interferon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeinterleukin
+:interleukin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:DrugClass ;
+             OpenPVSignal:has_ATC_code "L03AC" ;
+             rdfs:label "interleukin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromelabelOfVemurafenib
+:labelOfVemurafenib rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Structured_Product_Labels_information ,
+                             OpenPVSignal:Warning_Information ;
+                    OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                                          :arthralgia ,
+                                                          :fatigue ,
+                                                          :lightSensitivityReactions ,
+                                                          :nausea ,
+                                                          :pruritus ,
+                                                          :skinReactions ;
+                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                    mp:references :Ref.3 ;
+                    OpenPVSignal:has_content "According to the approved EU SPC the most common side effects of vemurafenib treatment are arthralgia, fatigue, skin reactions, light sensitivity reactions, nausea, alopecia and pruritus.3 TLS, or signs and symptoms associated with TLS such as acute renal failure, other renal side effects, hyperuricaemia, hypocalcaemia, hyperphosphataemia, and hyperkalaemia are not labelled side effects of vemurafenib according to the EU SPC." ;
+                    rdfs:label "EU SPC of Vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromelevothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromelightSensitivityReactions
+:lightSensitivityReactions rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "H53.149" ;
+                           OpenPVSignal:has_MedDRA_code 10034960 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Photophobia" ;
+                           rdfs:label "light sensitivity reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromemechanism_of_TLS
+:mechanism_of_TLS rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect_Mechanism ;
+                  OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                  mp:references :Ref.2 ;
+                  OpenPVSignal:has_content "The detailed mechanism by which TLS is induced in malignant melanoma and other malignancies is largely unknown although any drug causing death of cancer cells by any mechanism may lead to TLS in certain circumstances. In lymphatic tumours, corticosteroids may induce the production of endonucleases in the malignant cells of melanoma, which leads to DNA fragmentation and eventually cell lysis.2" ;
+                  rdfs:label "mechanism of TLS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromemelanoma
+:melanoma rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "C43.9" ;
+          OpenPVSignal:has_MedDRA_code 10025650 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Malignant melanoma" ;
+          rdfs:label "malignant melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromemetoclopramide
+:metoclopramide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A03FA01" ;
+                rdfs:label "metoclopramide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromemonoclonalAntibodies
+:monoclonalAntibodies rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:DrugClass ;
+                      OpenPVSignal:has_ATC_code "L01XC" ;
+                      rdfs:label "monoclonal antibodies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromenausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11.0" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeomeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeorlistat
+:orlistat rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A08AB01" ;
+          rdfs:label "orlistat" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeparacetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01 " ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeproteinuria
+:proteinuria rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code " R80.9" ;
+             OpenPVSignal:has_MedDRA_code 10037032 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Proteinuria" ;
+             rdfs:label "proteinuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromepruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L29.9" ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromepvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :tretament_of_tls ,
+                                                   :tumor_lysis_syndrome ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report_previous ,
+                                                              :Vigibase1 ,
+                                                              :Vigibase2 ,
+                                                              :Vigibase3 ,
+                                                              :Vigibase4 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForTls ,
+                                                          :OverallReportsInVigibaseForTlsAndVemurafenib ,
+                                                          :fatalityRangeCasesWithTLSAndHematologicalMalignancies ,
+                                                          :incidenceOfTLSInColorectalCancer ,
+                                                          :incidenceRangeOfTLSInHematologicMalignancies ,
+                                                          :reportsBetween1january-12August2014 ,
+                                                          :reportsThatWereAboutHematologicalMalignancies ,
+                                                          :reportsThatWereAboutSolidTumors ,
+                                                          :reports_that_were_about_breast_cancer ,
+                                                          :reports_that_were_about_colorectal_cancer ;
+          OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+          OpenPVSignal:refers_to_drug :vemurafenib ;
+          mp:supportedByData :TLS_associated_with_treatments ,
+                             :TLS_associated_with_tumours ,
+                             :labelOfVemurafenib ;
+          OpenPVSignal:initially_identified_on "1/5/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromereportsBetween1january-12August2014
+:reportsBetween1january-12August2014 rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForTls ;
+                                     OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                     OpenPVSignal:has_count 110 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports between 1 january-12 august 2014" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromereportsThatWereAboutHematologicalMalignancies
+:reportsThatWereAboutHematologicalMalignancies rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:concerns_indication_for_use :hematological_malignancy ;
+                                               OpenPVSignal:is_subgroup_of :reportsBetween1january-12August2014 ;
+                                               OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                               OpenPVSignal:has_count 55 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "reports that were about hematological malignancies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromereportsThatWereAboutSolidTumors
+:reportsThatWereAboutSolidTumors rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:concerns_indication_for_use :solid_tumour ;
+                                 OpenPVSignal:is_subgroup_of :reportsBetween1january-12August2014 ;
+                                 OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                                 OpenPVSignal:has_count 30 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports that were about solid tumors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromereports_that_were_about_breast_cancer
+:reports_that_were_about_breast_cancer rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:concerns_indication_for_use :breast_cancer ;
+                                       OpenPVSignal:is_subgroup_of :reportsThatWereAboutSolidTumors ;
+                                       OpenPVSignal:has_count 5 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports that were about breast cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromereports_that_were_about_colorectal_cancer
+:reports_that_were_about_colorectal_cancer rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:concerns_indication_for_use :colorectal_cancer ;
+                                           OpenPVSignal:is_subgroup_of :reportsThatWereAboutSolidTumors ;
+                                           OpenPVSignal:has_count 6 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "reports that were about colorectal cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeseizures
+:seizures rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G40 " ;
+          OpenPVSignal:has_MedDRA_code 10039906 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Seizure" ;
+          rdfs:label "seizures" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeskinReactions
+:skinReactions rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code " T78.40XA" ;
+               OpenPVSignal:has_MedDRA_code 10040914 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Skin reaction" ;
+               rdfs:label "skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromesolid_tumour
+:solid_tumour rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_MedDRA_code 10049280 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Solid tumour" ;
+              rdfs:label "solid tumour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrometretament_of_tls
+:tretament_of_tls rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                  mp:references :Ref.10 ;
+                  OpenPVSignal:has_content "Treatment of TLS includes supportive care including preservation of renal function, prevention of cardiac arrhythmias and seizures. Preventive measures for high risk patients with lymphomas and leukaemias include prophylactic allopurinol or rasburicase.10" ;
+                  rdfs:label "tretament of tls" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrometumorLysisSyndrome
+:tumorLysisSyndrome rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ,
+                                                          :cardiacArrhythmia ,
+                                                          :hyperkalaemia ,
+                                                          :hyperphosphataemia ,
+                                                          :hyperuricaemia ,
+                                                          :hypocalcaemia ,
+                                                          :seizures ;
+                    OpenPVSignal:has_ICD_code "E88.3" ;
+                    OpenPVSignal:has_MedDRA_code 10045170 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Tumour lysis syndrome" ;
+                    rdfs:label "tumor lysis syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrometumor_lysis_syndrome
+:tumor_lysis_syndrome rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Free_text_reporting_element ;
+                      OpenPVSignal:refers_to_adverse_effect :tumorLysisSyndrome ;
+                      mp:references :Ref.2 ,
+                                    :Ref.3 ,
+                                    :Ref.4 ,
+                                    :Ref.5 ,
+                                    :Ref.6 ,
+                                    :Ref.7 ,
+                                    :Ref.8 ;
+                      OpenPVSignal:has_content "TLS is a feared acute and potentially fatal side effect of treatment of primarily hematologic or lymphatic malignancies caused by abrupt, massive tumour cell death. It is a complication of the treatment of bulky, highly proliferative, chemoresponsive disease. Signs and symptoms associated with TLS are hyperuricaemia, hypocalcaemia, hyperphosphataemia, hyperkalaemia with subsequent risk of acute kidney failure, cardiac arrhythmia and seizures1 with a case classification definition suggested by Cairo and Bishop in 2004.9" ,
+                                               "TLS is a rare and potentially fatal syndrome where a sudden, rapid and massive lysis of tumour tissue occurs, resulting in severe disturbances in electrolytes and renal failure.2 TLS has predominantly been observed in association with various treatments for hematologic malignancies but has also been described with the treatment of solid tumours; e.g. a handful of cases having been reported in scientific literature in patients under treatment for malignant melanoma. " ;
+                      rdfs:label "tumor lysis syndrome pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeusage_for_report_3
+:usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :melanoma ;
+                    OpenPVSignal:refers_to_drug :vemurafenib ;
+                    rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromevemurafenib
+:vemurafenib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Mechanism_of_Vemurafenib ;
+             OpenPVSignal:has_ATC_code "L01XE15 " ;
+             rdfs:label "vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromevemurafenib_usage_for_Vigibase1
+:vemurafenib_usage_for_Vigibase1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:concerns_indication_for_use :melanoma ;
+                                 OpenPVSignal:refers_to_dosage :Dose1 ;
+                                 OpenPVSignal:refers_to_drug :vemurafenib ;
+                                 rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromevemurafenib_usage_for_Vigibase2
+:vemurafenib_usage_for_Vigibase2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:concerns_indication_for_use :melanoma ;
+                                 OpenPVSignal:refers_to_dosage :Dose2 ;
+                                 OpenPVSignal:refers_to_drug :vemurafenib ;
+                                 rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromevomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndromeworseningOfGeneralCondition
+:worseningOfGeneralCondition rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect ;
+                             OpenPVSignal:has_MedDRA_code 10057364 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Reduced general condition" ;
+                             rdfs:label "worseningOfGeneralCondition" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#12HrsIntervalBetweenAdministration
+<http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#12HrsIntervalBetweenAdministration> rdf:type owl:NamedIndividual ,
+                                                                                                                            time:DurationDescription ;
+                                                                                                                   time:nominalPosition "hours" ;
+                                                                                                                   time:numericPosition 12 ;
+                                                                                                                   rdfs:label "12 hrs interval between administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#Vemurafenib_and_Tumor_Lysis_Syndrome_(TLS)
+<http://purl.org/OpenPVSignal/Signals/2015_4_vemurafenib_tumour_lysis_syndrome#Vemurafenib_and_Tumor_Lysis_Syndrome_(TLS)> rdf:type owl:NamedIndividual ,
+                                                                                                                                    OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                                           OpenPVSignal:refers_to_author :Dr_Birgitta_Grundmark ;
+                                                                                                                           OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                                                           mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                                                                                                           OpenPVSignal:has_creation_date "1/5/2015" ;
+                                                                                                                           OpenPVSignal:has_overall_conclusion "Further investigation needed" ;
+                                                                                                                           rdfs:label "Vemurafenib and Tumor Lysis Syndrome (TLS)" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

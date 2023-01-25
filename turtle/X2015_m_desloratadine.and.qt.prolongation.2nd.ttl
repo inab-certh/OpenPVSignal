@@ -1,0 +1,1572 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction> rdf:type owl:Ontology ;
+                                                                                 owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                             mp: ;
+                                                                                 rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255501/"^^xsd:anyURI ;
+                                                                                 rdfs:label "Desloratadine and QT prolongation"^^xsd:Literal ;
+                                                                                 owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content
+OpenPVSignal:has_content rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#AVBlock
+:AVBlock rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "I44.2" ;
+         OpenPVSignal:has_MedDRA_code 10003671 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Atrioventricular block" ;
+         rdfs:label "av Block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Arrhythmia
+:Arrhythmia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "I49.9" ;
+            OpenPVSignal:has_MedDRA_code 10003119 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arrhythmia" ;
+            rdfs:label "arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Bradycardia
+:Bradycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R00.1" ;
+             OpenPVSignal:has_MedDRA_code 10006093 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Bradycardia" ;
+             rdfs:label "bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ClinicalTrial1
+:ClinicalTrial1 rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001182 ,
+                         OpenPVSignal:Clinical_trial_information ;
+                OpenPVSignal:refers_to_drug :desloratadine ;
+                mp:references :Ref.1 ,
+                              :Ref.2 ;
+                OpenPVSignal:has_content "In a clinical trial where up to 20 mg of desloratadine (four times the indicated dose for adults) was administered daily for two weeks, no cardiovascular effect was observed. In another trial, where desloratadine was administered at a dose of 45 mg daily (which is nine times the clinical dose) for ten days, no prolongation of QTc interval was observed.1 In three placebo-controlled clinical trials 246 paediatric subjects aged 6 months to 11 years received desloratadine as an oral solution for 15 days. There were no clinically meaningful changes in any electrocardiographic parameter, including the QTc interval.2" ;
+                rdfs:label "Clinical trials info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "QT prolongation can have many alternative causes and can either be acquired from e.g. drugs or be congenital. Several of the cases in Vigibase® present alternative or contributory factors to the reaction but eight out of the nine unique cases report a positive dechallenge and three reports have a rapid time to onset recorded the same day as the drug was administered. Two reporters have also assessed the reactions as probably related to desloratadine. The fact that loratadine, the parent drug of desloratadine, has been reported to interact with other drugs, namely amiodarone which was also used as a long term treatment by one of the patients with a rapid time to onset in this case series, makes a possible hypothesis that also desloratadine could have this potential. The product label states that it is not known which enzyme is responsible for the metabolism of desloratadine and that interactions with other medicinal products cannot be excluded. This possibility is highlighted in this signal." ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Desloratadine_and_QT_prolongation
+:Desloratadine_and_QT_prolongation rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                   OpenPVSignal:refers_to_author :Ms_Sarah_Wilson ;
+                                   OpenPVSignal:refers_to_signal :pvSignal ;
+                                   mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                   OpenPVSignal:has_creation_date "01/05/2015" ;
+                                   OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                   rdfs:label "Desloratadine and QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.10 ,
+                                 :Ref.11 ,
+                                 :Ref.12 ,
+                                 :Ref.13 ,
+                                 :Ref.6 ,
+                                 :Ref.9 ;
+                   OpenPVSignal:has_content """Of the nine unique cases in Vigibase® for desloratadine and QT prolongation three cases had underlying diseases which, if not well treated, could be predisposing factors for QT prolongation or cardiac abnormalities in general. In one case the patient had diabetes, which is a known risk factor for QT prolongation,10 and the patient was also taking enalapril which is indicated for high blood pressure or heart failure, the latter also a known cause for QT prolongation.6 One case was concomitantly taking other drugs, such as ramipiril and nicorandil, that indicated underlying heart problems. In one case the patient was taking levothyroxine, presumably for hypothyroidism, which if not well treated can manifest with cardiac abnormalities and there are a few reports in literature of prolonged QT interval in hypothyroid patients.11 Three cases reported a rapid time to onset within one day. In two of these cases other suspected drugs known to cause QT prolongation were co-reported and withdrawn at the same time as desloratadine. There are eight reported positive dechallenges among the nine cases and although there could be alternative or contributory explanations in at least five reports, three cases do not have a strong alternative explanation for the QT prolongation.
+Where causality assessments are made, two reporters have assessed the QT prolongation to possibly be related to desloratadine and in two cases the reporters have assessed desloratadine to probably be related to the reactions. In two of the cases ibuprofen was either co-suspected (in a reported overdose) or concomitantly used.
+Ibuprofen has shown a possible arrhythmogenic potential both in vitro and in vivo.12 This is however not labelled for ibuprofen13 and the clinical significance is unclear. In another case the reporter suspected an interaction between moxifloxacin and desloratadine. It is written in the product label for desloratadine that it is not known which enzyme is responsible for the metabolism of desloratadine and that therefore, some interactions with other medicinal products cannot fully be excluded. Although desloratadine has not been reported to cause QT prolongations, its parent drug loratadine has been described as causing QT prolongation and torsade de pointes in combination with amiodarone9, a drug that is also present in one of these cases.""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DosageForAdultsAndKidsAbove12Years
+:DosageForAdultsAndKidsAbove12Years rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Dosage ;
+                                    OpenPVSignal:refers_to_drug :desloratadine ;
+                                    OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                                    OpenPVSignal:has_content "The daily dose indicated is 5 mg for adults and children above 12 years of age" ;
+                                    OpenPVSignal:has_dosage_unit "mg" ;
+                                    OpenPVSignal:has_value 5 ;
+                                    OpenPVSignal:refers_to_dose_value "5 mg" ;
+                                    rdfs:label "Dosage for adults and kids above 12 years" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DosageForKids1-5YearsOld
+:DosageForKids1-5YearsOld rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Dosage ;
+                          OpenPVSignal:refers_to_drug :desloratadine ;
+                          OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                          OpenPVSignal:has_content "1,25 mg for children 1-5 years" ;
+                          OpenPVSignal:has_dosage_unit "mg" ;
+                          OpenPVSignal:has_value 1.25 ;
+                          OpenPVSignal:refers_to_dose_value "1.25 mg" ;
+                          rdfs:label "Dosage for kids 1-5 years old" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DosageForKidsSmallerThan5-11YearsOld
+:DosageForKidsSmallerThan5-11YearsOld rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Dosage ;
+                                      OpenPVSignal:refers_to_drug :desloratadine ;
+                                      OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                                      OpenPVSignal:has_content "2,5 mg for children 5-11 years of age" ;
+                                      OpenPVSignal:has_dosage_unit "mg" ;
+                                      OpenPVSignal:has_value 2.5 ;
+                                      OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+                                      rdfs:label "Dosage for kids smaller than 5-11 years old" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DoseOfDesloratadineForPatient7
+:DoseOfDesloratadineForPatient7 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Dosage ;
+                                OpenPVSignal:refers_to_drug :desloratadine ;
+                                OpenPVSignal:has_dosage_unit "mg" ;
+                                OpenPVSignal:has_value 335 ;
+                                OpenPVSignal:refers_to_dose_value "335 mg" ;
+                                rdfs:label "Dose of desloratadine for patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DoseOfDesloratadineForPatient8
+:DoseOfDesloratadineForPatient8 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Dosage ;
+                                OpenPVSignal:refers_to_drug :desloratadine ;
+                                OpenPVSignal:has_dosage_unit "mg" ;
+                                OpenPVSignal:has_value 50 ;
+                                OpenPVSignal:refers_to_dose_value "50 mg" ;
+                                rdfs:label "Dose of desloratadine for patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DoseOfIbubrofenForPatient7
+:DoseOfIbubrofenForPatient7 rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Dosage ;
+                            OpenPVSignal:refers_to_drug :ibuprofen ;
+                            OpenPVSignal:has_dosage_unit "mg" ;
+                            OpenPVSignal:has_value 6000 ;
+                            OpenPVSignal:refers_to_dose_value "6000 mg" ;
+                            rdfs:label "Dose of ibubrofen for patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#DoseOfQuetiapineForPatient8
+:DoseOfQuetiapineForPatient8 rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Dosage ;
+                             OpenPVSignal:refers_to_drug :quetiapine ;
+                             OpenPVSignal:has_dosage_unit "mg" ;
+                             OpenPVSignal:has_value 2250 ;
+                             OpenPVSignal:refers_to_dose_value "2250 mg" ;
+                             rdfs:label "Dose of quetiapine for patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Hypertension
+:Hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Hypocalcemia
+:Hypocalcemia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10020949 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypocalcemia" ;
+              rdfs:label "hypocalcemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Hypokalemia
+:Hypokalemia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10021018 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypokalemia" ;
+             rdfs:label "hypokalemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Hypomagnesaemia
+:Hypomagnesaemia rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10021027 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Hypomagnesaemia" ;
+                 rdfs:label "hypomagnesaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Hypothyroidism
+:Hypothyroidism rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10021114 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hypothyroidism" ;
+                rdfs:label "hypothyroidism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ;
+                     OpenPVSignal:has_content """Desloratadine is a long-acting histamine antagonist with non-sedating properties approved in Europe and the United States since 2001.1,2 It selectively blocks peripheral histamine H1- receptors which means that the substance does not readily penetrate the central nervous system. Desloratadine is administered once daily for the relief of symptoms associated with allergic rhinitis (including intermittent and persistent allergic rhinitis) and urticaria. The daily dose indicated is 5 mg for adults and children above 12 years of age (and 1,25 mg for children 1-5 years and 2,5 mg for children 5-11 years of age).1 It is not known which enzyme is responsible for
+desloratadine’s metabolism. QT prolongation is not labelled for desloratadine in the UK summary of product characteristics nor the FDA product label.1,2
+QT prolongation
+The long QT interval can be congenital or acquired. QT prolongation predisposes to arrhythmia by prolonging repolarization, which induces early after-depolarisations and spatial dispersion of refractoriness.
+
+
+This is shown on the electrocardiogram as an undulating QRS axis with the polarity of complexes shifting around the baseline, expressed as the QT interval corrected by the heart rate (QTc). The long QT syndrome is also associated with the development of a distinctive ventricular tachycardia, termed torsade de pointes.3,4 Torsade de pointes may cease spontaneously or degenerate into ventricular fibrillation. It causes significant hemodynamic compromise and often death.5 Drug-induced long QT syndrome is the most common cause of acquired long QT syndrome. Drugs known to frequently cause long QT syndrome are anti-arrhythmic agents; in particular class Ia, Ic, or III antiarrhythmics. Other drugs that can cause a QT prolongation include tricyclic  antidepressants,	phenothiazines, certain antivirals and antifungals5 as well as some antihistamines such as mizolastine and ebastine.3 Virtually all drugs that cause QT prolongation reduce the delayed rectifier potassium current (IKr) and prolong the cardiac action potential.
+Cardiac disorders are also a frequent cause of acquired long QT syndrome, and QT interval prolongation has been reported in chronic heart failure, acute and chronic heart disease, cardiomyopathies, bradychardia due to sinus dysfunction, as well as conduction block.
+Electrolyte imbalances; mainly hypokalaemia, hypomagnesaemia and hypocalcaemia, are also common causes of prolonged QT intervals as are many metabolic, nutritional, neurological and endocrine pathological conditions.6
+Patients with a prolonged QT interval often present with syncope because the underlying rate (200 to 250 beats/min) is nonperfusing. Palpitations are also common among conscious patients.
+Sometimes the long QT interval is detected after resuscitation. Patients with congenital long QT syndrome should avoid drugs that prolong the QT interval, and patients with exercise-related symptoms should avoid strenuous exercise. If a drug is the cause, it should be stopped, but until drug clearance is complete, patients with frequent or long runs of torsade de pointes require treatment to shorten the QT interval. As an increasing heart rate shortens the QT interval, reducing the rate through temporary pacing, intravenous isoproterenol or both is often effective. Long-term treatment is required for patients with a congenital long QT interval syndrome.5""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """QT prolongation is not labelled for desloratadine nor for loratadine of which desloratadine is the active metabolite.1,7 In a clinical trial where up to 20 mg of desloratadine (four times the indicated dose for adults) was administered daily for two weeks, no cardiovascular effect was observed. In another trial, where desloratadine was administered at a dose of 45 mg daily (which is nine times the clinical dose) for ten days, no prolongation of QTc interval was observed.1
+In three placebo-controlled clinical trials 246 paediatric subjects aged 6 months to 11 years received desloratadine as an oral solution for 15 days. There were no clinically meaningful changes in any electrocardiographic parameter, including the QTc interval.2
+Some antihistamines, such as mizolastine and ebastine, can prolong the QT interval and provoke severe arrhythmias. A study performed by Ponte et al compared three nonsedating H1-antagonists’ effects on the QT interval, which they assumed were mediated through modulation of cardiac K+ channels. The effect of ebastine was compared to terfenadine which at the time of the study had reported cardiotoxicity and loratadine which at the time of the study had not reported cardiotoxicity. Their conclusion was that only H1-antagonists that significantly suppress the K+ currents IKr and IK1 (such as terfenadine and astemizole) induce arrhythmogenesis and torsade de pointes, whereas H1-antagonists that have minimal effects on IKr and IK1 (such as loratadine) appear to lack the arrhythmogenic potential.8 Although loratadine has not been reported to cause QT prolongations alone, the drug has been reported to cause QT prolongation and torsade de pointes in combination with amiodarone9 and other CYP3A4 inhibitors.3
+The enzyme responsible for the metabolism of desloratadine has not yet been identified and the product label states that the possibility that desloratadine could interact with other drugs cannot be excluded.1""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#LiteratureByPonde
+:LiteratureByPonde rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001125 ;
+                   OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                   OpenPVSignal:refers_to_class :antihistamines ;
+                   mp:references :Ref.8 ;
+                   OpenPVSignal:has_content "Some antihistamines, such as mizolastine and ebastine, can prolong the QT interval and provoke severe arrhythmias. A study performed by Ponte et al compared three nonsedating H1-antagonists’ effects on the QT interval, which they assumed were mediated through modulation of cardiac K+ channels. The effect of ebastine was compared to terfenadine which at the time of the study had reported cardiotoxicity and loratadine which at the time of the study had not reported cardiotoxicity. Their conclusion was that only H1-antagonists that significantly suppress the K+ currents IKr and IK1 (such as terfenadine and astemizole) induce arrhythmogenesis and torsade de pointes, whereas H1-antagonists that have minimal effects on IKr and IK1 (such as loratadine) appear to lack the arrhythmogenic potential.8 " ;
+                   rdfs:label "Ponte et al study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#MechanismOfDesloratadine
+:MechanismOfDesloratadine rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ;
+                          OpenPVSignal:has_content "Desloratadine is a long-acting histamine antagonist with non-sedating properties approved in Europe and the United States since 2001.1,2 It selectively blocks peripheral histamine H1-receptors which means that the substance does not readily penetrate the central nervous system." ;
+                          rdfs:label "Mechanism of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Mechanism_of_QT_prolongation
+:Mechanism_of_QT_prolongation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect_Mechanism ;
+                              OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                              OpenPVSignal:has_content "Virtually all drugs that cause QT prolongation reduce the delayed rectifier potassium current (IKr) and prolong the cardiac action potential." ;
+                              rdfs:label "Mechanism of QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ms_Sarah_Wilson
+:Ms_Sarah_Wilson rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Author ;
+                 OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                 OpenPVSignal:has_first_name "Sarah" ;
+                 OpenPVSignal:has_last_name "Watson" ;
+                 rdfs:label "Ms Sarah Wilson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation
+:OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                                                 OpenPVSignal:refers_to_drug :desloratadine ;
+                                                                 OpenPVSignal:has_count 9 ;
+                                                                 OpenPVSignal:has_count_of_men 4 ;
+                                                                 OpenPVSignal:has_count_of_women 4 ;
+                                                                 OpenPVSignal:has_max_age "89.0"^^xsd:float ;
+                                                                 OpenPVSignal:has_median_age "60.0"^^xsd:float ;
+                                                                 OpenPVSignal:has_min_age 2 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "Overall reports in vigibase regarding Desloratadine and QT prolongation " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#OverallReportsInVigibaseRegardingLoratadineAndQTProlongation
+:OverallReportsInVigibaseRegardingLoratadineAndQTProlongation rdf:type owl:NamedIndividual ,
+                                                                       OpenPVSignal:Reports_group ;
+                                                              OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                                              OpenPVSignal:refers_to_drug :loratadine ;
+                                                              OpenPVSignal:has_count 48 ;
+                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                              rdfs:label "Overall reports in vigibase regarding Loratadine and QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Palpitation
+:Palpitation rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R00.2" ;
+             OpenPVSignal:has_MedDRA_code 10033557 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+             rdfs:label "palpitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 66 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 79 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 63 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 2 ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 50 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 60 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 18 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 20 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 89 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#QTProlongation
+:QTProlongation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:refers_to_adverse_effect :Palpitation ,
+                                                      :syncope ;
+                OpenPVSignal:has_ICD_code "I45.81" ;
+                OpenPVSignal:has_MedDRA_code 10014387 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Electrocardiogram QT prolonged" ;
+                rdfs:label "qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#QT_prolongation
+:QT_prolongation rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Free_text_reporting_element ;
+                 mp:references :Ref.3 ,
+                               :Ref.4 ,
+                               :Ref.5 ,
+                               :Ref.6 ;
+                 OpenPVSignal:has_content """\"QT prolongation
+The long QT interval can be congenital or acquired. QT prolongation predisposes to arrhythmia by prolonging repolarization, which induces early after-depolarisations and spatial dispersion of refractoriness.
+This is shown on the electrocardiogram as an undulating QRS axis with the polarity of complexes shifting around the baseline, expressed as the QT interval corrected by the heart rate (QTc). The long QT syndrome is also associated with the development of a distinctive ventricular tachycardia, termed torsade de pointes.3,4 Torsade de pointes may cease spontaneously or degenerate into ventricular fibrillation. It causes significant hemodynamic compromise and often death.5 Drug-induced long QT syndrome is the most common cause of acquired long QT syndrome. Drugs known to frequently cause long QT syndrome are anti-arrhythmic agents; in particular class Ia, Ic, or III antiarrhythmics. Other drugs that can cause a QT prolongation include tricyclic  antidepressants,	phenothiazines, certain antivirals and antifungals5 as well as some antihistamines such as mizolastine and ebastine.3 Virtually all drugs that cause QT prolongation reduce the delayed rectifier potassium current (IKr) and prolong the cardiac action potential.
+Cardiac disorders are also a frequent cause of acquired long QT syndrome, and QT interval prolongation has been reported in chronic heart failure, acute and chronic heart disease, cardiomyopathies, bradychardia due to sinus dysfunction, as well as conduction block.
+Electrolyte imbalances; mainly hypokalaemia, hypomagnesaemia and hypocalcaemia, are also common causes of prolonged QT intervals as are many metabolic, nutritional, neurological and endocrine pathological conditions.6
+Patients with a prolonged QT interval often present with syncope because the underlying rate (200 to 250 beats/min) is nonperfusing. Palpitations are also common among conscious patients.
+Sometimes the long QT interval is detected after resuscitation. Patients with congenital long QT syndrome should avoid drugs that prolong the QT interval, and patients with exercise-related symptoms should avoid strenuous exercise. If a drug is the cause, it should be stopped, but until drug clearance is complete, patients with frequent or long runs of torsade de pointes require treatment to shorten the QT interval. As an increasing heart rate shortens the QT interval, reducing the rate through temporary pacing, intravenous isoproterenol or both is often effective. Long-term treatment is required for patients with a congenital long QT interval syndrome.5\"""" ;
+                 rdfs:label "QT prolongation pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK Summary of Product Characteristics for desloratadine (aerius).URL: http://www.medicines.org.uk Accessed: October 2014." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Mathur CP, Deepak G. QTc Prolongation in diabetes mellitus – An indicator of cardiac autonomic neuropathy. Journal Indian Academy of Clin Med 2006; 7(2):130-2." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Shojaie M, Eshraghian A. Primary hypothyroidism presenting with Torsades de pointes type tachycardia: a case report. Cases J. 2008 Nov 6;1(1):298." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Yang ZF, Wang HW, Zheng YQ, Zhang Y, Liu YM, Li CZ. Possible arrhythmogeic mechanism, produced by ibuprofen. Acta Pharmacol Sin 2008 Apr;29(4):421-9." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "UK Summary of Product Characteristics for ibuprofen (Ipren). URL: http://www.medicines.org.uk Accessed October 2014" ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA label for desloratadine (clarinex). URL: http://www.accessdata.fda.gov/scripts/ cder/drugsatfda. Accessed: 9 June 2014." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Cetirizine and loratadine: minimal risk of QT prolongation. Prescrire Int. 2010 Feb;19(105):26- 8." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Taber’s Medical dictionary. URL: www. tabers.com Accessed: October 2014." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Merck Manual. URL: http://www.merckmanuals. com/professional Accessed: October 2014." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "SADS foundation. Acquired, Drug-Induced Long QT syndrome; A Guide for Patients and Health Care Providers. URL: http://www.nhs.uk/conditions/ long-QT syndrome/Documents/Acquired-LQT- Brochure06. pdf Accessed: 3 June 2014." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK Summary of Product Characteristics for loratadine (clarityn). URL: http://www.medicines.org.uk Accessed: October 2014." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ponte ML, Kekker GA, Di Giorlamo G. Mechanisms of drug induced QT interval prolongation. Curr Drug Saf. 2010 Jan;5(1):44-53." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Atar S, Freedberg NA, Antonelli D, Rosenfeld T. Torsade de pointes and QT prolongation due to a combination of loratadine and amiodarone. Pacing Clin Electrophysiol. 2003 Mar;26(3):785-6." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :info_for_case_1 ;
+         OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+         OpenPVSignal:refers_to_concomitant_drug :ibuprofen ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase2 ;
+         OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+         OpenPVSignal:refers_to_concomitant_drug :diltiazem ,
+                                                 :fluticasone ,
+                                                 :glycerylTrinitrate ,
+                                                 :ipratropiumBromide ,
+                                                 :isosorbideMononitrate ,
+                                                 :lansoprazole ,
+                                                 :nicorandil ,
+                                                 :ramipril ,
+                                                 :salbutamol ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase3 ;
+         OpenPVSignal:refers_to_adverse_effect :Bradycardia ,
+                                               :QTProlongation ,
+                                               :bundleBranchBlock ,
+                                               :dizziness ,
+                                               :sweatingIncreased ,
+                                               :syncope ;
+         OpenPVSignal:refers_to_concomitant_drug :amiodarone ,
+                                                 :digoxin ,
+                                                 :pyridoxine ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :alfusozin ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :Arrhythmia ,
+                                               :QTProlongation ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoFroCase5 ;
+         OpenPVSignal:refers_to_adverse_effect :Palpitation ,
+                                               :QTProlongation ,
+                                               :dizziness ;
+         OpenPVSignal:refers_to_interacting_drug :desloratadine ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :moxifloxacin ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase6 ;
+         OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+         OpenPVSignal:refers_to_concomitant_drug :enalapril ,
+                                                 :glibenclamide ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:time_to_onset :TimeToOnset6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase7 ;
+         OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                               :intentionalOverdose ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_of_desloratadine_for_report_7 ,
+                                                    :usage_of_ibuprofen_for_report_7 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :ibuprofen ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase8 ;
+         OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                               :Tachycardia ,
+                                               :fever ,
+                                               :hallucination ,
+                                               :intentionalOverdose ,
+                                               :somnolence ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_of_desloratadine_for_report_8 ,
+                                                    :usage_of_quetiapine_for_report_8 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :isotretinoin ,
+                                                       :loperamide ,
+                                                       :quetiapine ;
+         OpenPVSignal:time_to_onset :TimeToOnset8 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForCase9 ;
+         OpenPVSignal:refers_to_adverse_effect :AVBlock ,
+                                               :Bradycardia ,
+                                               :QTProlongation ;
+         OpenPVSignal:refers_to_concomitant_drug :levothyroxine ,
+                                                 :sertraline ,
+                                                 :vitaminsNos ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+         OpenPVSignal:time_to_onset :TimeToOnset9 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of October 2014, there were ten reports of QT prolongation for desloratadine in the WHO Global ICSR database, Vigibase®. Two of the reports are a likely duplicate pair which leaves nine unique reports in total. There are no additional reports in the database for torsade de pointes with desloratadine. For the parent drug loratadine, there are additionally 48 reports of QT prolongation in Vigibase®. The reports were entered into the database between 2001 and 2014, with all but two reports entered the latest five years. The origin of the reports is four different continents; Europe, North America, Africa and Oceania. The gender distribution among the reports where gender is reported is equal, with four males, four females and there is one patient with unknown gender.
+The age distribution varies from two years to 89 years of age with a median of 60 years. The reporters are in five cases physicians, one report is from a hospital and the rest are not stated.
+Positive dechallenges are reported in eight out of the nine cases. All cases are presented in Table 1.
+The time to onset is within the same day for three cases and approximately two months, three months and 21 months in the other cases in which this information was provided. For the patients who took desloratadine and had a QT prolongation recorded the same day, two had co-suspected drugs known to cause QT prolongation that were withdrawn at the same time as desloratadine, namely alfusozin and amiodarone in one case and quetiapine in the other. In one of these cases, case 3, the patient, who was previously on amiodarone, had taken desloratadine and alfusozin for the first time in the morning of the day of the event. In the other case, case 8, the patient took desloratadine, isotretionin, quetiapine and loperamide in large doses in an attempt to commit suicide: desloratadine was taken with a dose of
+50 mg and quetiapine in a total dose of 2250 mg. The third case that had a time to onset within the same day, case 1, reported ibuprofen as a concomitant drug but had no drugs co-suspected. Although not stated, it is possible that a fourth case, the patient in case 7 who also tried to commit suicide by ingesting 335 mg of desloratadine and 6000 mg of ibuprofen, had a rapid time to onset since the patient assumedly went to hospital quite soon after the suicide attempt and the electrocardiogram was probably taken at this point.
+In the overdose cases the reporters assessed all drugs as possibly contributing to the QT prolongation and in case 6 and 9 the reporters assessed desloratadine as the probable cause of the reaction. In case 5 the reporter first assessed desloratadine as possibly related to the reaction but then removed QT prolongation from the list of ADRs with the motivation that it was only slight. In the other reports no causality assessments were made.""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Reports_assessed_as_possible
+:Reports_assessed_as_possible rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ;
+                              OpenPVSignal:has_count 2 ;
+                              OpenPVSignal:has_evaluation "Possible" ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Reports assessed as possible" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Reports_assessed_as_probable
+:Reports_assessed_as_probable rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ;
+                              OpenPVSignal:has_count 2 ;
+                              OpenPVSignal:has_evaluation "Probable" ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Reports assessed as probable" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Reports_from_hospital
+:Reports_from_hospital rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ;
+                       OpenPVSignal:has_count 1 ;
+                       OpenPVSignal:has_reporter_type "other" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports from hospital" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Reports_from_physicians
+:Reports_from_physicians rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ;
+                         OpenPVSignal:has_count 5 ;
+                         OpenPVSignal:has_reporter_type "physician" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from physicians" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Reports_with_positive_dechallenge
+:Reports_with_positive_dechallenge rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ;
+                                   OpenPVSignal:has_count 8 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                   rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Desloratadine is a long-acting selective H1- histamine antagonist that is administered once daily for the relief of symptoms associated with allergic rhinitis and urticaria. The drug-induced long QT syndrome describes a clinical entity in which administration of a drug produces marked prolongation of the QT interval of an electrocardiogram. A prolonged QT interval is also associated with the development of a severe form of ventricular tachycardia, termed torsade de pointes. QT prolongation is not labelled for desloratadine or its parent drug loratadine although there are reports of loratadine interacting with other drugs to cause QT prolongation.
+There are nine unique cases of desloratadine and QT prolongation in the WHO ICSR database, Vigibase®. Although confounders exist in some of the reports, there are in total eight positive dechallenges and three reports with a rapid time- to-onset of the same day. The reports in Vigibase® are an indication that there might be a possibility that desloratadine contributes to QT prolongation when interacting with other drugs with QT prolonging potential.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TCAs
+:TCAs rdf:type owl:NamedIndividual ,
+               OpenPVSignal:DrugClass ;
+      OpenPVSignal:has_ATC_code "N06AX" ;
+      rdfs:label "TCAs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TCAs_and_qt_prolongation
+:TCAs_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                          OpenPVSignal:refers_to_class :TCAs ;
+                          rdfs:label "TCAs and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Tachycardia
+:Tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R00.0" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Same day" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 0 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "21 months" ;
+              time:nominalPosition "months" ;
+              time:numericPosition 21 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Same day" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 0 ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset6
+:TimeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "2 months" ;
+              time:nominalPosition "months" ;
+              time:numericPosition 2 ;
+              rdfs:label "Time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset8
+:TimeToOnset8 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Same day" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 0 ;
+              rdfs:label "Time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#TimeToOnset9
+:TimeToOnset9 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "3 months" ;
+              time:nominalPosition "months" ;
+              time:numericPosition 3 ;
+              rdfs:label "Time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#acute_heart_disease
+:acute_heart_disease rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10019276 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Heart disease, unspecified" ;
+                     rdfs:label "heart disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#alfusozin
+:alfusozin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G04CA01" ;
+           rdfs:label "alfusozin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#allergicRhinitis
+:allergicRhinitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "J30.9" ;
+                  OpenPVSignal:has_MedDRA_code 10039085 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Rhinitis allergic" ;
+                  rdfs:label "allergic rhinitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#amiodarone
+:amiodarone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01BD01" ;
+            rdfs:label "amiodarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antiarrhythmic_agents_and_qt_prolongation
+:antiarrhythmic_agents_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Warning_Information ;
+                                           OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                           OpenPVSignal:refers_to_class :antiarrhythmics ;
+                                           rdfs:label "antiarrhythmic agents and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antiarrhythmics
+:antiarrhythmics rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_ATC_code "C01B" ;
+                 rdfs:label "antiarrhythmics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antifungals
+:antifungals rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:DrugClass ;
+             OpenPVSignal:has_ATC_code "D01" ;
+             rdfs:label "antifungals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antifungals_and_qt_prolongation
+:antifungals_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                 OpenPVSignal:refers_to_class :antifungals ;
+                                 rdfs:label "antifungals and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antihistamines
+:antihistamines rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "R06" ;
+                rdfs:label "antihistamines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antivirals
+:antivirals rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:DrugClass ;
+            OpenPVSignal:has_ATC_code "J05" ;
+            rdfs:label "antivirals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#antivirals_and_qt_prolongation
+:antivirals_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Warning_Information ;
+                                OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                OpenPVSignal:refers_to_class :antivirals ;
+                                rdfs:label "antivirals and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#bundleBranchBlock
+:bundleBranchBlock rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I45.10" ;
+                   OpenPVSignal:has_MedDRA_code 10006578 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Bundle branch block" ;
+                   rdfs:label "bundle branch block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#cardiomyopathy
+:cardiomyopathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10007636 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiomyopathy" ;
+                rdfs:label "cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#cardiomyopathy_and_qt_prolongation
+:cardiomyopathy_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                                                          :cardiomyopathy ;
+                                    rdfs:label "cardiomyopathy and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#desloratadine
+:desloratadine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:hasClass :antihistamines ;
+               OpenPVSignal:has_mechanism :MechanismOfDesloratadine ;
+               OpenPVSignal:has_ATC_code "R06AX27" ;
+               rdfs:label "desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#diabetes
+:diabetes rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10012594 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diabetes" ;
+          rdfs:label "diabetes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#diabetes_and_qt_prolongation
+:diabetes_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                       obo:OAE_0001182 ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                                                    :diabetes ;
+                              mp:references :Ref.10 ;
+                              rdfs:label "diabetes and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#digoxin
+:digoxin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C01AA05" ;
+         rdfs:label "digoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#diltiazem
+:diltiazem rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C05AE03" ,
+                                     "C08DB01" ;
+           rdfs:label "diltiazem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ebastine
+:ebastine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:hasClass :antihistamines ;
+          OpenPVSignal:has_ATC_code "R06AX22 " ;
+          rdfs:label "ebastine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ebastine_and_qt_prolongation
+:ebastine_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                              OpenPVSignal:refers_to_drug :ebastine ;
+                              rdfs:label "ebastine and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#enalapril
+:enalapril rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C09AA02" ,
+                                     "C09BA02" ,
+                                     "C09BB02" ,
+                                     "C09BB06" ;
+           rdfs:label "enalapril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#fluticasone
+:fluticasone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "D07AC17" ,
+                                       "R01AD08" ,
+                                       "R01AD58" ,
+                                       "R03AK06" ,
+                                       "R03AK11" ,
+                                       "R03BA05" ;
+             rdfs:label "fluticasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#glibenclamide
+:glibenclamide rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A10BB01 " ;
+               rdfs:label "glibenclamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#glycerylTrinitrate
+:glycerylTrinitrate rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "C01DA02" ;
+                    rdfs:label "glyceryl trinitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hallucination
+:hallucination rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R44.3" ;
+               OpenPVSignal:has_MedDRA_code 10019063 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+               rdfs:label "hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#heart_failure_and_qt_prolongation
+:heart_failure_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                            obo:OAE_0001182 ,
+                                            OpenPVSignal:Warning_Information ;
+                                   OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                                                         :acute_heart_disease ;
+                                   mp:references :Ref.6 ;
+                                   rdfs:label "heart failure and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hypertension_and_qt_prolongation
+:hypertension_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :Hypertension ,
+                                                                        :QTProlongation ;
+                                  rdfs:label "hypertension and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hypocalcaemia_and_qt_prolongation
+:hypocalcaemia_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Warning_Information ;
+                                   OpenPVSignal:refers_to_adverse_effect :Hypocalcemia ,
+                                                                         :QTProlongation ;
+                                   rdfs:label "hypocalcaemia and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hypokalaemia_and_qt_prolongation
+:hypokalaemia_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :Hypokalemia ,
+                                                                        :QTProlongation ;
+                                  rdfs:label "hypokalaemia and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hypomagnesaemia_and_qt_prolongation
+:hypomagnesaemia_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Warning_Information ;
+                                     OpenPVSignal:refers_to_adverse_effect :Hypomagnesaemia ,
+                                                                           :QTProlongation ;
+                                     rdfs:label "hypomagnesaemia and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#hypothyroidism_and_qt_prolongation
+:hypothyroidism_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                             obo:OAE_0001182 ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :Hypothyroidism ,
+                                                                          :QTProlongation ;
+                                    mp:references :Ref.11 ;
+                                    rdfs:label "hypothyroidism and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ,
+                                     "G02CC01" ,
+                                     "M01AE01" ,
+                                     "M01AE51" ,
+                                     "M02AA13" ,
+                                     "R02AX02" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ibuprofen_and_possible_arrhythmogenic_potential
+:ibuprofen_and_possible_arrhythmogenic_potential rdf:type owl:NamedIndividual ,
+                                                          obo:OAE_0001182 ,
+                                                          OpenPVSignal:Warning_Information ;
+                                                 OpenPVSignal:refers_to_adverse_effect :Arrhythmia ;
+                                                 OpenPVSignal:refers_to_drug :ibuprofen ;
+                                                 mp:references :Ref.12 ,
+                                                               :Ref.13 ;
+                                                 OpenPVSignal:has_content "Ibuprofen has shown a possible arrhythmogenic potential both in vitro and in vivo.12 This is however not labelled for ibuprofen13 and the clinical significance is unclear." ;
+                                                 rdfs:label "ibuprofen and possible arrhythmogenic potential" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase2
+:infoForCase2 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "One case was concomitantly taking other drugs, such as ramipiril and nicorandil, that indicated underlying heart problems. " ;
+              rdfs:label "info for case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase3
+:infoForCase3 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In one of these cases, case 3, the patient, who was previously on amiodarone, had taken desloratadine and alfusozin for the first time in the morning of the day of the event." ;
+              rdfs:label "info for case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase6
+:infoForCase6 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In one case the patient had diabetes, which is a known risk factor for QT prolongation,10 and the patient was also taking enalapril which is indicated for high blood pressure or heart failure, the latter also a known cause for QT prolongation.6 " ,
+                                       "In the overdose cases the reporters assessed all drugs as possibly contributing to the QT prolongation and in case 6 and 9 the reporters assessed desloratadine as the probable cause of the reaction." ;
+              rdfs:label "info for case 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase7
+:infoForCase7 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "Although not stated, it is possible that a fourth case, the patient in case 7 who also tried to commit suicide by ingesting 335 mg of desloratadine and 6000 mg of ibuprofen, had a rapid time to onset since the patient assumedly went to hospital quite soon after the suicide attempt and the electrocardiogram was probably taken at this point." ;
+              rdfs:label "info for case 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase8
+:infoForCase8 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In the other case, case 8, the patient took desloratadine, isotretionin, quetiapine and loperamide in large doses in an attempt to commit suicide: desloratadine was taken with a dose of 50 mg and quetiapine in a total dose of 2250 mg. " ;
+              rdfs:label "info for case 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoForCase9
+:infoForCase9 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In one case the patient was taking levothyroxine, presumably for hypothyroidism, which if not well treated can manifest with cardiac abnormalities and there are a few reports in literature of prolonged QT interval in hypothyroid patients.11 " ,
+                                       "In the overdose cases the reporters assessed all drugs as possibly contributing to the QT prolongation and in case 6 and 9 the reporters assessed desloratadine as the probable cause of the reaction." ;
+              rdfs:label "info for case 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#infoFroCase5
+:infoFroCase5 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In case 5 the reporter first assessed desloratadine as possibly related to the reaction but then removed QT prolongation from the list of ADRs with the motivation that it was only slight. In the other reports no causality assessments were made." ;
+              rdfs:label "info for case 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#info_for_case_1
+:info_for_case_1 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Case_Report_Information ;
+                 OpenPVSignal:has_content "The third case that had a time to onset within the same day, case 1, reported ibuprofen as a concomitant drug but had no drugs co-suspected." ;
+                 rdfs:label "info for case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#intentionalOverdose
+:intentionalOverdose rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "T50.992A" ;
+                     OpenPVSignal:has_MedDRA_code 10022523 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                     rdfs:label "intentional overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ipratropiumBromide
+:ipratropiumBromide rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "R03BB01 " ;
+                    rdfs:label "ipratropium bromide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#isosorbideMononitrate
+:isosorbideMononitrate rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug ;
+                       OpenPVSignal:has_ATC_code "C01DA14" ;
+                       rdfs:label "isosorbide mononitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#isotretinoin
+:isotretinoin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "D10AD04" ,
+                                        "D10AD54" ,
+                                        "D10BA01" ;
+              rdfs:label "isotretinoin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#labelling_of_desloratadine
+:labelling_of_desloratadine rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Structured_Product_Labels_information ;
+                            OpenPVSignal:refers_to_drug :desloratadine ;
+                            mp:references :Ref.1 ,
+                                          :Ref.2 ;
+                            OpenPVSignal:has_content "QT prolongation is not labelled for desloratadine in the UK summary of product characteristics nor the FDA product label.1,2" ,
+                                                     "The enzyme responsible for the metabolism of desloratadine has not yet been identified and the product label states that the possibility that desloratadine could interact with other drugs cannot be excluded.1" ;
+                            rdfs:label "labelling of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#labelling_of_loratadine
+:labelling_of_loratadine rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Structured_Product_Labels_information ;
+                         OpenPVSignal:refers_to_drug :loratadine ;
+                         mp:references :Ref.7 ;
+                         OpenPVSignal:has_content "QT prolongation is not labelled for desloratadine nor for loratadine of which desloratadine is the active metabolite.1,7" ;
+                         rdfs:label "labelling of loratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#lansoprazole
+:lansoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC03" ,
+                                        "A02BC53" ,
+                                        "A02BD02" ,
+                                        "A02BD03" ,
+                                        "A02BD07" ,
+                                        "A02BD09" ,
+                                        "A02BD10" ;
+              rdfs:label "lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#loperamide
+:loperamide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A07DA03" ,
+                                      "A07DA05" ,
+                                      "A07DA53" ;
+            rdfs:label "loperamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#loratadine
+:loratadine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R06AX13" ;
+            rdfs:label "loratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#mizolastine
+:mizolastine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :antihistamines ;
+             OpenPVSignal:has_ATC_code "R06AX25" ;
+             rdfs:label "mizolastine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#mizolastine_and_qt_prolongation
+:mizolastine_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                 OpenPVSignal:refers_to_drug :mizolastine ;
+                                 rdfs:label "mizolastine and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#moxifloxacin
+:moxifloxacin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J01MA14" ,
+                                        "S01AE07" ;
+              rdfs:label "moxifloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#nicorandil
+:nicorandil rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01DX16" ;
+            rdfs:label "nicorandil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#oneDayIntervalBetweenAdministrations
+:oneDayIntervalBetweenAdministrations rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      time:nominalPosition "days" ;
+                                      time:numericPosition 1 ;
+                                      rdfs:label "one day interval between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#phenothiazines
+:phenothiazines rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "N05AA" ,
+                                          "N05AB" ,
+                                          "N05AC" ;
+                rdfs:label "phenothiazines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#phenothiazines_and_qt_prolongation
+:phenothiazines_and_qt_prolongation rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+                                    OpenPVSignal:refers_to_class :phenothiazines ;
+                                    rdfs:label "phenothiazines and qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :QT_prolongation ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseRegardingDesloratadineAndQTProlongation ,
+                                                          :OverallReportsInVigibaseRegardingLoratadineAndQTProlongation ,
+                                                          :Reports_assessed_as_possible ,
+                                                          :Reports_assessed_as_probable ,
+                                                          :Reports_from_hospital ,
+                                                          :Reports_from_physicians ,
+                                                          :Reports_with_positive_dechallenge ;
+          OpenPVSignal:refers_to_adverse_effect :QTProlongation ;
+          OpenPVSignal:refers_to_drug :desloratadine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :desloratadine ;
+          mp:supportedByData :ClinicalTrial1 ,
+                             :LiteratureByPonde ,
+                             :TCAs_and_qt_prolongation ,
+                             :antiarrhythmic_agents_and_qt_prolongation ,
+                             :antifungals_and_qt_prolongation ,
+                             :antivirals_and_qt_prolongation ,
+                             :cardiomyopathy_and_qt_prolongation ,
+                             :diabetes_and_qt_prolongation ,
+                             :ebastine_and_qt_prolongation ,
+                             :heart_failure_and_qt_prolongation ,
+                             :hypertension_and_qt_prolongation ,
+                             :hypocalcaemia_and_qt_prolongation ,
+                             :hypokalaemia_and_qt_prolongation ,
+                             :hypomagnesaemia_and_qt_prolongation ,
+                             :hypothyroidism_and_qt_prolongation ,
+                             :ibuprofen_and_possible_arrhythmogenic_potential ,
+                             :labelling_of_desloratadine ,
+                             :labelling_of_loratadine ,
+                             :mizolastine_and_qt_prolongation ,
+                             :phenothiazines_and_qt_prolongation ,
+                             <http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ADRBetweenParentDrug(loratadine)AndAmiodarone> ;
+          OpenPVSignal:initially_identified_on "01/05/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#pyridoxine
+:pyridoxine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A11HA02" ;
+            rdfs:label "pyridoxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#quetiapine
+:quetiapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH04" ;
+            rdfs:label "quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ,
+                                      "R03AK04" ,
+                                      "R03AL02" ,
+                                      "R03CC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#sweatingIncreased
+:sweatingIncreased rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R61" ;
+                   OpenPVSignal:has_MedDRA_code 10020642 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+                   rdfs:label "sweating increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#syncope
+:syncope rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R55" ;
+         OpenPVSignal:has_MedDRA_code 10042772 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Syncope" ;
+         rdfs:label "syncope" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#torsadeDePointes
+:torsadeDePointes rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "I45.81" ;
+                  OpenPVSignal:has_MedDRA_code 10044066 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Torsade de pointes" ;
+                  rdfs:label "torsade de pointes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#urticaria
+:urticaria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L50.9" ;
+           OpenPVSignal:has_MedDRA_code 10046735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Urticaria" ;
+           rdfs:label "urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#usage_of_desloratadine
+:usage_of_desloratadine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Drug_Usage ;
+                        OpenPVSignal:concerns_indication_for_use :allergicRhinitis ,
+                                                                 :urticaria ;
+                        OpenPVSignal:refers_to_dosage :DosageForAdultsAndKidsAbove12Years ,
+                                                      :DosageForKids1-5YearsOld ,
+                                                      :DosageForKidsSmallerThan5-11YearsOld ;
+                        OpenPVSignal:refers_to_drug :desloratadine ;
+                        mp:references :Ref.1 ;
+                        rdfs:label "usage of desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#usage_of_desloratadine_for_report_7
+:usage_of_desloratadine_for_report_7 rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Drug_Usage ;
+                                     OpenPVSignal:refers_to_dosage :DoseOfDesloratadineForPatient7 ;
+                                     OpenPVSignal:refers_to_drug :desloratadine ;
+                                     rdfs:label "usage of desloratadine for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#usage_of_desloratadine_for_report_8
+:usage_of_desloratadine_for_report_8 rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Drug_Usage ;
+                                     OpenPVSignal:refers_to_dosage :DoseOfDesloratadineForPatient8 ;
+                                     OpenPVSignal:refers_to_drug :desloratadine ;
+                                     rdfs:label "usage of desloratadine for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#usage_of_ibuprofen_for_report_7
+:usage_of_ibuprofen_for_report_7 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :DoseOfIbubrofenForPatient7 ;
+                                 OpenPVSignal:refers_to_drug :ibuprofen ;
+                                 rdfs:label "usage of ibuprofen for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#usage_of_quetiapine_for_report_8
+:usage_of_quetiapine_for_report_8 rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Drug_Usage ;
+                                  OpenPVSignal:refers_to_dosage :DoseOfQuetiapineForPatient8 ;
+                                  OpenPVSignal:refers_to_drug :quetiapine ;
+                                  rdfs:label "usage of quetiapine for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#vitaminsNos
+:vitaminsNos rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A11J" ;
+             rdfs:label "vitamins nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ADRBetweenParentDrug(loratadine)AndAmiodarone
+<http://purl.org/OpenPVSignal/Signals/2015_2_desloratadine_aggressive_reaction#ADRBetweenParentDrug(loratadine)AndAmiodarone> rdf:type owl:NamedIndividual ,
+                                                                                                                                       obo:OAE_0001197 ;
+                                                                                                                              OpenPVSignal:refers_to_adverse_effect :QTProlongation ,
+                                                                                                                                                                    :torsadeDePointes ;
+                                                                                                                              OpenPVSignal:refers_to_drug :amiodarone ,
+                                                                                                                                                          :loratadine ;
+                                                                                                                              mp:references :Ref.3 ,
+                                                                                                                                            :Ref.9 ;
+                                                                                                                              OpenPVSignal:has_content "Although loratadine has not been reported to cause QT prolongations alone, the drug has been reported to cause QT prolongation and torsade de pointes in combination with amiodarone9 and other CYP3A4 inhibitors.3" ;
+                                                                                                                              rdfs:label "ADR between parent drug (loratadine) and amiodarone" ,
+                                                                                                                                         "ADRBetweenParentDrug(loratadine)AndAmiodarone" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

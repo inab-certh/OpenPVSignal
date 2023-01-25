@@ -1,0 +1,1320 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl> rdf:type owl:Ontology ;
+                                                                                       owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                       rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/325793"^^xsd:anyURI ;
+                                                                                       rdfs:label "Factor Xa inhibitors and haematospermia"^^xsd:Literal ;
+                                                                                       owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ADRs_for_Factor_Xa_inhibitors
+:ADRs_for_Factor_Xa_inhibitors rdf:type owl:NamedIndividual ,
+                                        obo:OAE_0001197 ,
+                                        OpenPVSignal:Structured_Product_Labels_information ,
+                                        OpenPVSignal:Warning_Information ;
+                               OpenPVSignal:refers_to_adverse_effect :hemorrhage ;
+                               OpenPVSignal:refers_to_class :DOACs ;
+                               mp:references :Ref.10 ,
+                                             :Ref.2 ,
+                                             :Ref.6 ,
+                                             :Ref.7 ,
+                                             :Ref.8 ,
+                                             :Ref.9 ;
+                               OpenPVSignal:has_content "many other haemorrhages are listed ADRs for Factor Xa inhibitors.2,6-10" ;
+                               rdfs:label "ADRs for Factor Xa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#DOACs
+:DOACs rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_mechanism :Haemorrhage_and_factor_Xa_inhibitors ,
+                                  :Mechanism_of_DOACs ;
+       OpenPVSignal:has_ATC_code "B01AF" ;
+       rdfs:label "Factor Xa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Discussion_content
+:Discussion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Discussion ;
+                    mp:references :Ref.3 ,
+                                  :Ref.4 ,
+                                  :Ref._11 ;
+                    OpenPVSignal:has_content """There were 39 cases of haematospermia with rivaroxaban and apixaban in VigiBase at the time of analysis. This is a preliminary signal as the case reports were moderately to poorly documented, so there is limited information on time to onset and outcome of the adverse events. However, seven patients recovered on dechallenge and one experienced a recurrence on rechallenge although one had an alternative or contributory cause for the bleeding (Table 1). A striking feature of the case series is the high proportion of patient reports.
+There is no information on haematospermia in the UK SPCs of rivaroxaban, apixaban and edoxaban. The terms urogenital or urethral bleeding in the UK SPCs and FDA labels do not specifically indicate that haematospermia has been reported and even these terms only appear in patient information for edoxaban. There are also no articles in PubMed regarding haematospermia in association with Factor Xa inhibitors. However, the pharmacological mechanism is clear and haemorrhages from various sites are described in the SPCs and other sources.
+The greater reporting of haematospermia with the Factor Xa inhibitors and, to a lesser extent, the antiplatelet agents compared with other antithrombotics could be explained by two hypotheses. One is that haematospermia can occur with all antithrombotic (anticoagulant and antiplatelet) agents, and the prominence of reports with newer agents is due to greater reporting of all suspected ADRs in recent years, including patient reporting, as well as the well- known more intense reporting with newer agents which, in this case, includes the direct oral anticoagulants (DOACs) and the p2y12 inhibitors (e.g. clopidogrel and ticagrelor). Nevertheless, more intense reporting for newer agents might not apply to patients since to them it does not matter what medicine they started on, it is all new to the patient. An exception is the statistical prominence of haematospermia with aspirin and >50% patient reporting even though it is an old medicine.
+However, newer antithrombotics were co-suspects in almost 75% of the aspirin reports. This might explain why reporting for aspirin is more similar to the newer agents. Dabigatran is also a newer anticoagulant and the lower reporting of haematospermia with this medicine compared with the oral Factor Xa inhibitors is more difficult to explain. It could be due to the fact that bleeding from the penis is listed as a known ADR in the PIL for dabigatran.11 The alternative hypothesis is that antiplatelet agents and Factor Xa inhibitors are more likely to cause haematospermia than other antithrombotic agents, but there is no apparent biologic plausibility for this selectivity.
+Haematospermia usually has a benign origin. Personal communication suggests that men do not present frequently with antithrombotic-related haematospermia to urological or men’s health clinics, suggesting that most are reassured by their general practitioners or cardiologists or that the condition is transient. Recommended investigations for haematospermia depend on its persistence, associated symptoms and the age of the patient.3,4 This approach should also apply to patients taking antithrombotic agents.
+Haematospermia has a big impact on the users, since it is frightening to experience this kind of symptom, but most can be reassured. While patient information necessarily focuses on warning symptoms of serious bleeding, the patient reports of haematospermia in this case series are also a reminder of adverse reactions that are usually not serious but can be very disturbing to the patient. They suggest that it may be helpful to list such reactions, where evidence is considered sufficient, so that patients are aware that their medicine is a potential cause of their condition. Given the rare possibility of an underlying malignancy, however, haematospermia would have to be grouped with symptoms that merit consultation if the condition persists.""" ;
+                    rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Dosage_of_rivaroxaban
+:Dosage_of_rivaroxaban rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Dosage ;
+                       OpenPVSignal:refers_to_drug :rivaroxaban ;
+                       OpenPVSignal:has_dosage_unit "mg" ;
+                       OpenPVSignal:has_value 2.5 ;
+                       OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+                       rdfs:label "Dosage of rivaroxaban for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Dosage_of_rivaroxaban_for_report_4
+:Dosage_of_rivaroxaban_for_report_4 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Dosage ;
+                                    OpenPVSignal:refers_to_drug :rivaroxaban ;
+                                    OpenPVSignal:has_dosage_unit "mg" ;
+                                    OpenPVSignal:has_value 20 ;
+                                    OpenPVSignal:refers_to_dose_value "20 mg" ;
+                                    rdfs:label "Dosage of rivaroxaban for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Haematospermia_pathology
+:Haematospermia_pathology rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Free_text_reporting_element ;
+                          OpenPVSignal:is_part_of :introduction ;
+                          OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                          mp:references :Ref.3 ,
+                                        :Ref.4 ;
+                          OpenPVSignal:has_content """Haematospermia is the presence of blood in the ejaculate. Haematospermia in itself is not harmful and usually has a benign origin. Although it is often harmless, it is frightening and concerning for patients. A malignant cause of haematospermia is rare and occurs almost exclusively in men aged over 40 years. The commonest causes are prostate biopsy, post-radiation treatment for prostate cancer and prostatitis. Other causes that have been identified include benign and malignant disorders of the urogenital tract, urogenital infections including schistosomiasis and those that are sexually transmitted, vascular malformations, and congenital or drug-induced bleeding disorders. However, in many cases a cause is not found and the condition resolves spontaneously.
+Recommended investigations depend on the
+persistence of haematospermia, associated symptoms and the age of the patient.3,4""" ;
+                          rdfs:label "Haematospermia pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Haemorrhage_and_factor_Xa_inhibitors
+:Haemorrhage_and_factor_Xa_inhibitors rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Adverse_Effect_Mechanism ;
+                                      OpenPVSignal:refers_to_adverse_effect :hemorrhage ;
+                                      mp:references :Ref.1 ,
+                                                    :Ref.2 ;
+                                      OpenPVSignal:has_content "Factor Xa is required to activate prothrombin (Factor II) to thrombin (Factor IIa) which ultimately leads to fibrin clot formation and activation of platelets by thrombin. Factor Xa inhibitors therefore reduce clot formation.1,2 Directly linked to their mechanism of action is the risk of haemorrhages" ;
+                                      rdfs:label "Mechanism of haemorrhage and factor Xa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Kim_Alting
+:Kim_Alting rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Author ;
+            OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance Centre Lareb" ;
+            OpenPVSignal:has_first_name "Kim" ;
+            OpenPVSignal:has_last_name "Alting" ;
+            rdfs:label "Kim Alting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.10 ,
+                                        :Ref.2 ,
+                                        :Ref.6 ,
+                                        :Ref.7 ,
+                                        :Ref.8 ,
+                                        :Ref.9 ;
+                          OpenPVSignal:has_content "Haematospermia is not listed in the UK Summary of Product Characteristics (SPC) or the FDA labels for rivaroxaban, edoxaban and apixaban or on the associated patient information. The less specific term urogenital bleeding is mentioned in the SPCs for apixaban and rivaroxaban and the rivaroxaban Patient Information leaflet (PIL). Urethral bleeding is mentioned in the edoxaban SPC but not the PIL and in the apixaban and edoxaban FDA labels but not the patient medication guides. However, many other haemorrhages are listed ADRs for Factor Xa inhibitors.2,6-10 Micromedex and Martindale also have no information on haematospermia in association with Factor Xa inhibitors except that Micromedex lists the less specific genital haemorrhage for apixaban. A literature search on PubMed using the following criteria found no articles: (\"rivaroxaban\"[MeSH Terms] OR \"rivaroxaban\"[All Fields]) OR (“apixaban”[MeSH Terms] OR “apixaban” [All Fields]) OR (“edoxaban”[MeSH Terms] OR “edoxaban” [All Fields]) AND (\"hemospermia\"[MeSH Terms] OR \"hemospermia\"[All Fields] OR “haematospermia\"[All Fields])." ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Mechanism_of_DOACs
+:Mechanism_of_DOACs rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Mechanism ;
+                    mp:references :Ref.1 ,
+                                  :Ref.2 ;
+                    OpenPVSignal:has_content "Factor Xa is required to activate prothrombin (Factor II) to thrombin (Factor IIa) which ultimately leads to fibrin clot formation and activation of platelets by thrombin. Factor Xa inhibitors therefore reduce clot formation.1,2" ;
+                    rdfs:label "Mechanism of factor Xa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Onset2
+:Onset2 rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2006/time#DurationDescription> ;
+        <http://www.w3.org/2006/time#nominalPosition> "years" ;
+        <http://www.w3.org/2006/time#numericPosition> 2 ;
+        rdfs:label "Onset 2 report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Onset3
+:Onset3 rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2006/time#DurationDescription> ;
+        <http://www.w3.org/2006/time#nominalPosition> "days" ;
+        <http://www.w3.org/2006/time#numericPosition> 9 ;
+        rdfs:label "Onset 3 report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Onset6
+:Onset6 rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2006/time#DurationDescription> ;
+        <http://www.w3.org/2006/time#nominalPosition> "days" ;
+        <http://www.w3.org/2006/time#numericPosition> 14 ;
+        rdfs:label "Onset 6 report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Onset7
+:Onset7 rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2006/time#DurationDescription> ;
+        <http://www.w3.org/2006/time#nominalPosition> "months" ;
+        <http://www.w3.org/2006/time#numericPosition> 1 ;
+        rdfs:label "Onset 7 report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Overall_reports_of_DOACs_for_haematospermia_in_VigiBase
+:Overall_reports_of_DOACs_for_haematospermia_in_VigiBase rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                                                         OpenPVSignal:refers_to_class :DOACs ;
+                                                         OpenPVSignal:has_count 39 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "Overall reports of factor Xa inhibitors for haematospermia in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#PIL_for_dabigatran
+:PIL_for_dabigatran rdf:type owl:NamedIndividual ,
+                             obo:OAE_0001197 ,
+                             OpenPVSignal:Structured_Product_Labels_information ,
+                             OpenPVSignal:Warning_Information ;
+                    OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                    OpenPVSignal:refers_to_drug :dabigatran ;
+                    mp:references :Ref._11 ;
+                    OpenPVSignal:has_content "It could be due to the fact that bleeding from the penis is listed as a known ADR in the PIL for dabigatran.11" ;
+                    rdfs:label "PIL for dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 67 ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_3
+:Patient_3 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 76 ;
+           rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_4
+:Patient_4 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 74 ;
+           rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_5
+:Patient_5 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 50 ;
+           rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_6
+:Patient_6 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 49 ;
+           rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Patient_7
+:Patient_7 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 61 ;
+           rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Drugbank. Rivaroxaban. Available from: https://www.drugbank.ca/drugs/DB06228. Accessed: September 2018." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for edoxaban (Lixiana®). Available from: https://www.medicines.org.uk/emc/search?q=%22edoxaban+tosilate%22. Accessed: October 2018." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Daily Med: Summary of Product Characteristics for rivaroxaban (Xarelto®). Available from: https://dailymed.nlm.nih.gov/dailymed/drugIn fo.cfm?setid=10db92f9-2300-4a80-836b- 673e1ae91610. Accessed: September 2018." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Up to date: Weiss BD, Richie JP. Hematospermia. Available from: https://www.uptodate.com/contents/hematosp ermia/. Accessed: June 2018." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ahmad I, Krishna NS. Hemospermia. The Journal of Urology 2007; 177(5): 1613-1618." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Celik A, et al. Hematospermia due to clopidogrel: The unknown side effect. Blood Coagulation and Fibrinolysis 2015; 26(1): 113." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Daily Med: Summary of Product Characteristics for apixaban (Eliquis®). Available from: https://dailymed.nlm.nih.gov/dailymed/drugIn fo.cfm?setid=e9481622-7cc6-418a-acb6- c5450daae9b0. Accessed: September 2018." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US Daily Med: Summary of Product Characteristics for edoxaban (Savaysa®). Available from: https://dailymed.nlm.nih.gov/dailymed/drugIn fo.cfm?setid=e77d3400-56ad-11e3-949a- 0800200c9a6 6&audience=professional. Accessed: October 2018." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for rivaroxaban (Xarelto®). Available from: https://www.medicines.org.uk/emc/search?q= rivaroxaban. Accessed: October 2018." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for apixaban (Eliquis®). Available from: https://www.medicines.org.uk/emc/search?q= apixaban. Accessed: October 2018." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ref._11
+:Ref._11 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Bibliographic_reference ;
+         OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product Characteristics for dabigatran (Pradaxa®). Available from:  https://www.medicines.org.uk/emc/files/pil.62 29.pdf. Accessed: October 2018." ;
+         rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :faecesDiscoloured ,
+                                               :fatigue ,
+                                               :haematospermia ,
+                                               :neoplasmMalignant ;
+         OpenPVSignal:refers_to_patient :Patient_1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :rivaroxaban ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_potential_confounding_factor :biopsy_prostate ,
+                                                       :prostatitis ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                               :bloodPressureSystolicIncreased ,
+                                               :bloodUrinePresent ,
+                                               :haematospermia ,
+                                               :lungInfection ;
+         OpenPVSignal:refers_to_patient :Patient_2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :rivaroxaban ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_of_rivaroxaban_for_report_2 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :ciprofloxacin ;
+         OpenPVSignal:time_to_onset :Onset2 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anxiety ,
+                                               :bloodUrinePresent ,
+                                               :haematospermia ;
+         OpenPVSignal:refers_to_concomitant_drug :ascorbicAcid ,
+                                                 :diltiazem ,
+                                                 :magnesiumOxide ,
+                                                 :vitaminBComplex ,
+                                                 :vitaminD ;
+         OpenPVSignal:refers_to_patient :Patient_3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :rivaroxaban ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :acetylsalicylicAcid ;
+         OpenPVSignal:time_to_onset :Onset3 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :bloodySemen ,
+                                               :gastrointestinalBleeding ;
+         OpenPVSignal:refers_to_concomitant_drug :adenosine ,
+                                                 :bisoprolol ,
+                                                 :hydrochlorothiazide ,
+                                                 :lisinopril ,
+                                                 :pantoprazole ;
+         OpenPVSignal:refers_to_patient :Patient_4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :rivaroxaban ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_of_rivaroxaban_for_report_4 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :haematospermia ,
+                                               :offLabelUse ;
+         OpenPVSignal:refers_to_patient :Patient_5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :apixaban ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_partial_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :rivaroxaban ;
+         OpenPVSignal:refers_to_patient :Patient_6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :apixaban ;
+         OpenPVSignal:time_to_onset :Onset6 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ;
+         OpenPVSignal:refers_to_patient :Patient_7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :apixaban ;
+         OpenPVSignal:time_to_onset :Onset7 ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithAgeData
+:ReportsWithAgeData rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                    OpenPVSignal:has_average_age "63.5"^^xsd:float ;
+                    OpenPVSignal:has_count 28 ;
+                    OpenPVSignal:has_max_age "84.0"^^xsd:float ;
+                    OpenPVSignal:has_median_age "67.0"^^xsd:float ;
+                    OpenPVSignal:has_min_age "28.0"^^xsd:float ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with age data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithApixaban
+:ReportsWithApixaban rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                     OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                     OpenPVSignal:refers_to_drug :apixaban ;
+                     OpenPVSignal:has_count 11 ;
+                     OpenPVSignal:has_expected_count "0.7"^^xsd:float ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports with apixaban and haematospermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithAtrialFibrillation
+:ReportsWithAtrialFibrillation rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:concerns_indication_for_use :atrialFibrillation ;
+                               OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                               OpenPVSignal:has_count 5 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with atrial fibrillation as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithDeepVeinThrombosis
+:ReportsWithDeepVeinThrombosis rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:concerns_indication_for_use :deepVeinThrombosis ;
+                               OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                               OpenPVSignal:has_count 5 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with deep vein thrombosis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithGiHaemorrhageAndHaematospermia
+:ReportsWithGiHaemorrhageAndHaematospermia rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:is_subgroup_of :reports_with_hospitalization ;
+                                           OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ;
+                                           OpenPVSignal:has_count 4 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "Reports with gi haemorrhage and haematospermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithIbuprofenAndCitalopramAsSuspects
+:ReportsWithIbuprofenAndCitalopramAsSuspects rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                             OpenPVSignal:refers_to_secondary_suspect_drug :ibuprofen ;
+                                             OpenPVSignal:has_count 1 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "Reports with ibuprofen as suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithNegativeRechallenge
+:ReportsWithNegativeRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "negative rechallenge - condition not appeared" ;
+                                rdfs:label "Reports with negative rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithPositiveDechallenge
+:ReportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                OpenPVSignal:has_count 7 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithPositiveRechallenge
+:ReportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "Reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithRivaroxaban
+:ReportsWithRivaroxaban rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                        OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                        OpenPVSignal:refers_to_drug :rivaroxaban ;
+                        OpenPVSignal:has_count 28 ;
+                        OpenPVSignal:has_expected_count "2.3"^^xsd:float ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports with rivaroxaban and haematospermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithThrombophilia
+:ReportsWithThrombophilia rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:concerns_indication_for_use :thrombophilia ;
+                          OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports with thrombophilia as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithTimeToOnsetData
+:ReportsWithTimeToOnsetData rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:time_to_onset :Time_to_onset_data ;
+                            OpenPVSignal:has_count 17 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "Reports with time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithWithAtrialFibrillation
+:ReportsWithWithAtrialFibrillation rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:concerns_indication_for_use :atrialFibrillation ;
+                                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithCerebralVascularaccident/thrombosisProphylaxis> ;
+                                   OpenPVSignal:has_count 12 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "Reports with cerebral vascular accident/thrombosis prophylaxis as indication and atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.5 ;
+                     OpenPVSignal:has_content """Based on the overall reporting of adverse drug reactions (ADRs) for rivaroxaban and of the adverse reaction haematospermia in VigiBase, the expected number of reports in the combination was 2.3, the observed number was 28, and the association was highlighted as disproportionately over-reported by the information component (IC) analysis. A similar observation was made for apixaban, another Factor Xa inhibitor, and haematospermia where the expected number of reports was 0.7 and the observed number 11.
+There were no reports of haematospermia for the other available Factor Xa-inhibitor edoxaban, however the total number of reports for this drug was low. For both the rivaroxaban and apixaban combinations patients contributed the majority of reports (80%).
+In July 2018 VigiBase held 39 case reports for Factor Xa inhibitors (rivaroxaban 28, apixaban 11) and haematospermia, excluding duplicates. The reports originated from nine countries. Age was stated for 28 patients and ranged from 28 to 84 years, mean 63.5, median 67 years. The indications included 14 for cerebral vascular accident/thrombosis prophylaxis, 12 in combination with atrial fibrillation, one also with a pulmonary embolism. Other indications were atrial fibrillation (5), pulmonary embolism (5), deep vein thrombosis (DVT) (5), venous thromboembolism prophylaxis (3), thrombophilia (1), unknown (6). The time to onset of haematospermia from starting the Factor Xa inhibitor in 17 case reports was within four months. In six other reports time to onset was less specific and ranged from within seven months to approximately three years, in one case triggered by a prostate biopsy. Time to onset was not reported for 16 patients. Daily dose was reported for 19 patients and only one, on apixaban, appeared to be taking greater than the recommended dose for their indication, although there was in most of the cases no information on renal function.
+Rivaroxaban or apixaban were the sole suspect medicines in 28 reports. In two other reports the reviewers considered that ibuprofen and citalopram were co-suspect. In eight other reports one or more other medicines that can cause haemorrhage (i.e. acetylsalicylic acid, clopidogrel, selective serotonin reuptake inhibitors (SSRIs), and nonsteroidal anti-inflammatory drugs (NSAIDs)) were co-suspects. Documentation was poor to moderate in most of the case reports and it is possible that some information on confounders was missing. However, five patients had conditions or underwent procedures that may have caused haematospermia and the Factor Xa inhibitor may have exacerbated the bleeding. These were prostate cancer, prostatitis, prostatitis with prostate biopsy, prostate biopsy and transurethral resection of the prostate gland. The timing of the last two in relation to onset of haematospermia was unclear. Several other patients had prostatic enlargement and/or increased blood prostate specific antigen but it is unclear if these would have increased the possibility of haematospermia on anticoagulants. Seven reports were described as serious because of hospitalisation, but only one was for haematospermia alone. Four of these patients also reported a gastrointestinal haemorrhage. Although the remainder of the reports were not serious, three patients described anxiety, stopping sexual intercourse or consulting another physician because they could not be reassured.
+For seven cases it is known there was a positive dechallenge. One patient experienced recurrence on rechallenge. One patient was rechallenged with no recurrence. Table 1 shows the case reports with a positive dechallenge for haematospermia in association with rivaroxaban or apixaban. For patient 2, recovery on dechallenge may have been coincidental with recovery from prostatitis and prostate biopsy.
+An overview of antithrombotic agents (anticoagulants and antiplatelet agents) in VigiBase showed that, as for the oral Factor Xa inhibitors, haematospermia with the antiplatelet agents aspirin, ticagrelor and clopidogrel was also reported more often than expected and highlighted by the IC values. Patients contributed 33 to 57% of these reports. There is a published case report of clopidogrel and haematospermia with recurrence on rechallenge.5 In contrast, overall reporting for haematospermia, including patient reporting, was low for the vitamin K antagonists (acenocoumarol, phenprocoumon, warfarin), the heparin group and dabigatran none of which were disproportionately over-reported based on IC values.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_citalopram_as_suspect
+:Reports_with_citalopram_as_suspect rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                    OpenPVSignal:refers_to_secondary_suspect_drug :citalopram ;
+                                    OpenPVSignal:has_count 1 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with citalopram as suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_pulmonary_embolism_as_indication
+:Reports_with_pulmonary_embolism_as_indication rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:concerns_indication_for_use :pulmonaryEmbolism ;
+                                               OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                               OpenPVSignal:has_count 5 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "Reports with pulmonary embolism as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_venous_thromboembolism_prophylaxis_as_indication
+:Reports_with_venous_thromboembolism_prophylaxis_as_indication rdf:type owl:NamedIndividual ,
+                                                                        OpenPVSignal:Reports_group ;
+                                                               OpenPVSignal:concerns_indication_for_use :venousThromboembolismProphylaxis ;
+                                                               OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                                               OpenPVSignal:has_count 3 ;
+                                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                               rdfs:label "Reports with venous thromboembolism prophylaxis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Response_from_Bayer
+:Response_from_Bayer rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Factor_Xa_inhibitors_and_haematospermia_A_frightening,_yet_usually_innocuous,_adverse_reaction> ;
+                     OpenPVSignal:has_content """The Uppsala Monitoring Centre (UMC) and the Netherlands Pharmacovigilance Centre Lareb have identified 28 case reports reporting
+ 
+haematospermia in relationship to treatment with rivaroxaban. It is suggested by the authors that it may be helpful to list such reactions, where evidence is considered sufficient, so that patients are aware that their medicine is a potential cause of their condition.
+Bayer has conducted a search of the relevant medical literature and the company safety and clinical databases to identify cases of haematospermia and potential relationship to treatment with rivaroxaban. Urogenital tract hemorrhage (including hematuria and menorrhagia) is listed in the Xarelto® product label since it has been observed in clinical trials with a common frequency. Within treatment-emergent adverse events of male genital tract bleeding, there were five events of haematospermia in patients treated with rivaroxaban and eleven events in the control groups. The pool of clinical trials (phase II and III) with Xarelto® (rivaroxaban) comprises 59,336 patients treated with rivaroxaban and 44,011 patients in control groups, respectively.
+Hence, haematospermia can be considered a very
+rare expression of urogenital bleeding, which is listed as adverse reaction in the Xarelto® labeling.
+A search in the Bayer global safety database for MedDRA preferred term (PT) haematospermia and PT Semen discolouration reported in association to treatment with rivaroxaban yielded 57 case reports for PT haematospermia and seven case reports for PT Semen discolouration (red, reddish, brownish, pink tint in at least five of seven) until 09 November 2018. This translates into a reporting frequency of 2.6 per million patient years, as estimated based on sales. In at least eight of these cases information on abnormalities of the prostate gland was provided by the reporter either in medical history or as a concomitant disease, and in at least 12 cases macrohematuria has been reported, too. In only three cases positive dechallenge and in one case positive de- and rechallenge has been reported. However, in the latter (non-medically confirmed, non-serious case) no further information was provided by the reporter. Overall quality of reported information was low, e.g. 28 of 64 case reports (43.8%) lacked any medical confirmation of the reported vents. Case reports frequently included other bleeding events (e.g. gastrointestinal bleeding, hematuria). In only eight of 24 medically confirmed and serious case reports no event other than haematospermia was reported. All cases identified with MedDRA PT Semen discolouration were assessed as non-serious. In summary, cases reviewed do not indicate any substantial impact of the reported event on the benefit-risk balance for Xarelto® in the approved indications, neither regarding frequency, nor nature and severity of event.
+Bayer agrees with the authors that occurrence of haematospermia deserves attention of a physician as it may be caused by underlying urogenital disease including malignancy in the male urogenital tract. Given the rarity of haematospermia as a possible representation of bleeding during anticoagulant use and the absence of any imbalance for this event in the safety profile of Xarelto® compared to other anticoagulants, the question whether specific mention of the event in the product labeling is warranted should, however, be viewed with caution. Placing undue emphasis on the expected but infrequent association with anticoagulant therapies might even have the contrary effect of sending false assurance and delaying appropriate diagnosis. Moreover, discontinuation of an anticoagulant without appropriate medical consultation is to be avoided since this could prevent a patient from taking a potential life-saving medication.
+
+
+In Summary
+Bleeding is an important identified risk with use of Xarelto®. Haematospermia, a very rare expression of urogenital bleeding, is considered listed for rivaroxaban and the existent SmPC is considered sufficient in this regard. Any occurrence and observation of haematospermia should lead to physician attention and initiation of adequate diagnostic workup.""" ;
+                     rdfs:label "Response from Bayer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Ruth_Savage
+:Ruth_Savage rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Author ;
+             OpenPVSignal:has_first_name "Ruth" ;
+             OpenPVSignal:has_last_name "Savage" ;
+             rdfs:label "Ruth Savage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Summary_content
+:Summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content "During a joint patient report signal detection screening involving the Uppsala Monitoring Centre (UMC) and the Netherlands Pharmacovigilance Centre Lareb, haematospermia in association with rivaroxaban and apixaban was identified. Based on the overall reporting of adverse drug reactions (ADRs) for rivaroxaban and of the adverse reaction haematospermia in VigiBase, the WHO global database of individual case safety reports, the expected value for the number of reports for the combination was 2.3 and the association was highlighted as disproportionately over-reported, by the information component (IC) analysis. A similar observation was made for apixaban, another Factor Xa inhibitor, and haematospermia where the expected number of reports was 0.7. In July 2018 VigiBase contained 39 case reports of Factor Xa inhibitors (rivaroxaban 28, apixaban 11) and haematospermia. The majority of the reports (80%) were from patients. Seven case reports described recovery on dechallenge. One patient experienced recurrence on rechallenge. In 12 reports one or more other medicines that can cause haemorrhage were co-suspect. Four patients had conditions or underwent procedures that may have caused haematospermia. Haematospermia is not listed in the UK Summaries of Product Characteristics (SPCs), the US FDA labels, related patient information or other available literature for rivaroxaban and apixaban. However, many other haemorrhages are known ADRs for Factor Xa inhibitors. Haematospermia has a big impact on the users, since it is frightening to experience this kind of symptom. The reaction is not preventable, but if it was described in the Patient Information Leaflet, it would be clearer to patients that it is a known ADR." ;
+                 rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Time_to_onset_data
+:Time_to_onset_data rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2006/time#DurationDescription> ;
+                    OpenPVSignal:has_content "The time to onset of haematospermia from starting the Factor Xa inhibitor in 17 case reports was within four months." ;
+                    rdfs:label "Time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Vitamin_K_antagonists_and_haematospermia
+:Vitamin_K_antagonists_and_haematospermia rdf:type owl:NamedIndividual ,
+                                                   obo:OAE_0001182 ;
+                                          OpenPVSignal:refers_to_drug :acenocoumarol ,
+                                                                      :dabigatran ,
+                                                                      :phenprocoumon ,
+                                                                      :warfarin ;
+                                          OpenPVSignal:has_content "In contrast, overall reporting for haematospermia, including patient reporting, was low for the vitamin K antagonists (acenocoumarol, phenprocoumon, warfarin), the heparin group and dabigatran none of which were disproportionately over-reported based on IC values." ;
+                                          rdfs:label "Vitamin K antagonists and haemtospermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#acenocoumarol
+:acenocoumarol rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "B01AA07" ;
+               rdfs:label "acenocoumarol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#adenosine
+:adenosine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB10" ;
+           rdfs:label "adenosine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "F419" ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#apixaban
+:apixaban rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AF02" ;
+          rdfs:label "apixaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ascorbicAcid
+:ascorbicAcid rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A11GA01" ;
+              rdfs:label "ascorbic Acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#atrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "I4891" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#biopsy_prostate
+:biopsy_prostate rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Potential_Confounder ;
+                 OpenPVSignal:has_MedDRA_code 10004857 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Biopsy prostate" ;
+                 rdfs:label "biopsy prostate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#bloodPressureSystolicIncreased
+:bloodPressureSystolicIncreased rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_ICD_code "R03.0" ;
+                                OpenPVSignal:has_MedDRA_code 10005760 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Blood pressure systolic increased" ;
+                                rdfs:label "blood pressure systolic increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#bloodUrinePresent
+:bloodUrinePresent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R31.9" ;
+                   OpenPVSignal:has_MedDRA_code 10018870 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Blood urine present" ;
+                   rdfs:label "blood urine present" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#bloodySemen
+:bloodySemen rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R36.1" ;
+             OpenPVSignal:has_MedDRA_code 10018866 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Haematospermia" ;
+             rdfs:label "bloody semen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ciprofloxacin
+:ciprofloxacin rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "J01MA02" ;
+               rdfs:label "ciprofloxacin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#citalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Conclusion ;
+            OpenPVSignal:has_content "Haematospermia with the Factor Xa inhibitors rivaroxaban and apixaban was signalled through a patient reporting sprint based on reports in VigiBase. The signal is preliminary but there is strong biologic plausibility. The signal highlights the problem of adverse reactions that are rarely serious but are very disturbing to patients. It may be helpful for patients to have haematospermia listed in patient information for rivaroxaban, apixaban and other antithrombotics, where there is sufficient evidence, so that they are aware it is a possible adverse reaction to their medicine." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#dabigatran
+:dabigatran rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AE07" ;
+            rdfs:label "dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#deepVeinThrombosis
+:deepVeinThrombosis rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "I82409" ;
+                    OpenPVSignal:has_MedDRA_code 10051055 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Deep vein thrombosis" ;
+                    rdfs:label "deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#diltiazem
+:diltiazem rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C05AE03" ,
+                                     "C08DB01" ;
+           rdfs:label "diltiazem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#faecesDiscoloured
+:faecesDiscoloured rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R195" ;
+                   OpenPVSignal:has_MedDRA_code 10016100 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Faeces discoloured" ;
+                   rdfs:label "faeces discoloured" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#gastrointestinalBleeding
+:gastrointestinalBleeding rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "K922" ;
+                          OpenPVSignal:has_MedDRA_code 10017955 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal haemorrhage" ;
+                          rdfs:label "gastrointestinal bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#gastrointestinalHemorrhage
+:gastrointestinalHemorrhage rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "K922" ;
+                            OpenPVSignal:has_MedDRA_code 10017955 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal haemorrhage" ;
+                            rdfs:label "gastrointestinal hemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#haematospermia
+:haematospermia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R36.1" ;
+                OpenPVSignal:has_MedDRA_code 10018866 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Haematospermia" ;
+                rdfs:label "haematospermia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#hemorrhage
+:hemorrhage rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "D699" ;
+            OpenPVSignal:has_MedDRA_code 10055798 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Haemorrhage" ;
+            rdfs:label "hemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ,
+                                     "G02CC01" ,
+                                     "M01AE01" ,
+                                     "M01AE51" ,
+                                     "M02AA13" ,
+                                     "R02AX02" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ;
+              OpenPVSignal:has_content """A VigiBase, the WHO global database of individual case safety reports, screening for potential signals arising predominantly from patient reports was conducted by staff from the UMC and Lareb in April 2018. An association between direct oral Factor Xa inhibitors (apixaban and rivaroxaban) and haematospermia was identified during this screening.
+Factor Xa inhibitors belong to a group of medicines called Direct Oral Anticoagulants (DOACs) which have been developed as an alternative to warfarin. Dabigatran, a Factor IIa inhibitor, also belongs to this group. Factor Xa is required to activate prothrombin (Factor II) to thrombin (Factor IIa) which ultimately leads to fibrin clot formation and activation of platelets by thrombin. Factor Xa inhibitors therefore reduce clot formation.1,2 Directly linked to their mechanism of action is the risk of haemorrhages.
+Haematospermia is the presence of blood in the ejaculate. Haematospermia in itself is not harmful and usually has a benign origin. Although it is often harmless, it is frightening and concerning for patients. A malignant cause of haematospermia is rare and occurs almost exclusively in men aged over 40 years. The commonest causes are prostate biopsy, post-radiation treatment for prostate cancer and prostatitis. Other causes that have been identified include benign and malignant disorders of the urogenital tract, urogenital infections including schistosomiasis and those that are sexually transmitted, vascular malformations, and congenital or drug-induced bleeding disorders. However, in many cases a cause is not found and the condition resolves spontaneously.
+Recommended investigations depend on the
+persistence of haematospermia, associated symptoms and the age of the patient.3,4 We describe here the clinical assessment of the reports in the identified Factor Xa and haematospermia combinations.""" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#lisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03" ,
+                                      "C09BA03" ,
+                                      "C09BB03" ,
+                                      "C10BX07" ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#lungInfection
+:lungInfection rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "J069" ;
+               OpenPVSignal:has_MedDRA_code 10061229 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Lung infection" ;
+               rdfs:label "lung infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#magnesiumOxide
+:magnesiumOxide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A02AA02" ,
+                                          "A06AD02" ,
+                                          "A12CC10" ;
+                rdfs:label "magnesium oxide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#neoplasmMalignant
+:neoplasmMalignant rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "C801" ;
+                   OpenPVSignal:has_MedDRA_code 10028997 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Neoplasm malignant" ;
+                   rdfs:label "neoplasm malignant" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#offLabelUse
+:offLabelUse rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "Z79.84" ;
+             OpenPVSignal:has_MedDRA_code 10053762 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Off label use" ;
+             rdfs:label "off label use" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#overview_of_antithrombotic_agents
+:overview_of_antithrombotic_agents rdf:type owl:NamedIndividual ,
+                                            obo:OAE_0001197 ;
+                                   OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+                                   OpenPVSignal:refers_to_drug :acetylsalicylicAcid ,
+                                                               :clopidogrel ,
+                                                               :ticagrelor ;
+                                   mp:references :Ref.5 ;
+                                   OpenPVSignal:has_content "An overview of antithrombotic agents (anticoagulants and antiplatelet agents) in VigiBase showed that, as for the oral Factor Xa inhibitors, haematospermia with the antiplatelet agents aspirin, ticagrelor and clopidogrel was also reported more often than expected and highlighted by the IC values. Patients contributed 33 to 57% of these reports. There is a published case report of clopidogrel and haematospermia with recurrence on rechallenge.5" ;
+                                   rdfs:label "overview of antithrombotic agents" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#phenprocoumon
+:phenprocoumon rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "B01AA04" ;
+               rdfs:label "phenprocoumon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#prostateCancer
+:prostateCancer rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Potential_Confounder ;
+                OpenPVSignal:has_ICD_code " C61" ;
+                OpenPVSignal:has_MedDRA_code 10060862 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Prostate cancer" ;
+                rdfs:label "prostate cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#prostate_transurethral_resection
+:prostate_transurethral_resection rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Potential_Confounder ;
+                                  OpenPVSignal:has_MedDRA_code 10036932 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Prostate transurethral resection" ;
+                                  rdfs:label "prostate transurethral resection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#prostatitis
+:prostatitis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Potential_Confounder ;
+             OpenPVSignal:has_ICD_code "N410" ;
+             OpenPVSignal:has_MedDRA_code 10036978 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Prostatitis" ;
+             rdfs:label "prostatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#pulmonaryEmbolism
+:pulmonaryEmbolism rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "I26" ;
+                   OpenPVSignal:has_MedDRA_code 10037377 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Pulmonary embolism" ;
+                   rdfs:label "pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Haematospermia_pathology ,
+                                                   :Reports_in_VigiBase ,
+                                                   :Summary_content ,
+                                                   :conclusion ,
+                                                   :introduction ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ;
+          OpenPVSignal:is_supported_by_statistical_entity :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ,
+                                                          :ReportsWithAgeData ,
+                                                          :ReportsWithApixaban ,
+                                                          :ReportsWithAtrialFibrillation ,
+                                                          :ReportsWithDeepVeinThrombosis ,
+                                                          :ReportsWithGiHaemorrhageAndHaematospermia ,
+                                                          :ReportsWithIbuprofenAndCitalopramAsSuspects ,
+                                                          :ReportsWithNegativeRechallenge ,
+                                                          :ReportsWithPositiveDechallenge ,
+                                                          :ReportsWithPositiveRechallenge ,
+                                                          :ReportsWithRivaroxaban ,
+                                                          :ReportsWithThrombophilia ,
+                                                          :ReportsWithTimeToOnsetData ,
+                                                          :ReportsWithWithAtrialFibrillation ,
+                                                          :Reports_with_citalopram_as_suspect ,
+                                                          :Reports_with_pulmonary_embolism_as_indication ,
+                                                          :Reports_with_venous_thromboembolism_prophylaxis_as_indication ,
+                                                          :reports_with_anxiety ,
+                                                          :reports_with_hospitalization ,
+                                                          :reports_with_prostate_biopsy_as_confounder ,
+                                                          :reports_with_prostate_cancer_as_confounder ,
+                                                          :reports_with_prostate_transurethral_resection_as_confounder ,
+                                                          :reports_with_prostatitis_and_prostate_biopsy_as_confounder ,
+                                                          :reports_with_prostatitis_as_confounder ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithCerebralVascularaccident/thrombosisProphylaxis> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_cerebral_vascular_accident/thrombosis_prophylaxis_as_indication_and_pulmonary_embolism> ;
+          OpenPVSignal:refers_to_adverse_effect :haematospermia ;
+          OpenPVSignal:refers_to_class :DOACs ;
+          OpenPVSignal:refers_to_drug :apixaban ,
+                                      :rivaroxaban ;
+          mp:supportedByData :ADRs_for_Factor_Xa_inhibitors ,
+                             :Literature_and_Labelling ,
+                             :PIL_for_dabigatran ,
+                             :Vitamin_K_antagonists_and_haematospermia ,
+                             :overview_of_antithrombotic_agents ;
+          OpenPVSignal:initially_identified_on "01/07/2020" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_anxiety
+:reports_with_anxiety rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                      OpenPVSignal:refers_to_adverse_effect :anxiety ;
+                      OpenPVSignal:has_count 3 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "reports with anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_hospitalization
+:reports_with_hospitalization rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                              OpenPVSignal:has_count 7 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "hospitalization for treatment" ;
+                              rdfs:label "reports with hospitalization" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_prostate_biopsy_as_confounder
+:reports_with_prostate_biopsy_as_confounder rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:has_potential_confounding_factor :biopsy_prostate ;
+                                            OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                            OpenPVSignal:has_count 1 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports with prostate biopsy as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_prostate_cancer_as_confounder
+:reports_with_prostate_cancer_as_confounder rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:has_potential_confounding_factor :prostateCancer ;
+                                            OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                            OpenPVSignal:has_count 1 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports with prostate cancer as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_prostate_transurethral_resection_as_confounder
+:reports_with_prostate_transurethral_resection_as_confounder rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:has_potential_confounding_factor :prostate_transurethral_resection ;
+                                                             OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                                             OpenPVSignal:has_count 1 ;
+                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                             rdfs:label "reports with prostate transurethral resection as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_prostatitis_and_prostate_biopsy_as_confounder
+:reports_with_prostatitis_and_prostate_biopsy_as_confounder rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Reports_group ;
+                                                            OpenPVSignal:has_potential_confounding_factor :biopsy_prostate ,
+                                                                                                          :prostatitis ;
+                                                            OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                                            OpenPVSignal:has_count 1 ;
+                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                            rdfs:label "reports with prostatitis and prostate biopsy as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#reports_with_prostatitis_as_confounder
+:reports_with_prostatitis_as_confounder rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:has_potential_confounding_factor :prostatitis ;
+                                        OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                        OpenPVSignal:has_count 1 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with prostatitis as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#rivaroxaban
+:rivaroxaban rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AF01" ;
+             rdfs:label "rivaroxaban" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#the_Netherlands_Pharmacovigilance_Centre_Lareb
+:the_Netherlands_Pharmacovigilance_Centre_Lareb rdf:type owl:NamedIndividual ,
+                                                         prov:Organization ;
+                                                rdfs:label "the Netherlands Pharmacovigilance Centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#thrombophilia
+:thrombophilia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_ICD_code "D68.69" ;
+               OpenPVSignal:has_MedDRA_code 10057396 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Thrombophilia" ;
+               rdfs:label "thrombophilia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#thrombosis_prophylaxis
+:thrombosis_prophylaxis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Indication ;
+                        OpenPVSignal:has_MedDRA_code 10043634 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Thrombosis prophylaxis" ;
+                        rdfs:label "thrombosis prophylaxis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ticagrelor
+:ticagrelor rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AC24" ;
+            rdfs:label "ticagrelor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#uppsala_monitoring_centre
+:uppsala_monitoring_centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "uppsala monitoring centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#usage_of_rivaroxaban_for_report_2
+:usage_of_rivaroxaban_for_report_2 rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Drug_Usage ;
+                                   OpenPVSignal:refers_to_dosage :Dosage_of_rivaroxaban ;
+                                   OpenPVSignal:refers_to_drug :rivaroxaban ;
+                                   rdfs:label "usage of rivaroxaban for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#usage_of_rivaroxaban_for_report_4
+:usage_of_rivaroxaban_for_report_4 rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Drug_Usage ;
+                                   OpenPVSignal:refers_to_dosage :Dosage_of_rivaroxaban_for_report_4 ;
+                                   OpenPVSignal:refers_to_drug :rivaroxaban ;
+                                   rdfs:label "usage of rivaroxaban for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#venousThromboembolismProphylaxis
+:venousThromboembolismProphylaxis rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Indication ;
+                                  OpenPVSignal:has_MedDRA_code 10043634 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Thrombosis prophylaxis" ;
+                                  rdfs:label "venous thromboembolism prophylaxis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#vitaminBComplex
+:vitaminBComplex rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A11E" ;
+                 rdfs:label "vitamin B Complex" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#vitaminD
+:vitaminD rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A11CC05" ;
+          rdfs:label "vitamin D" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Factor_Xa_inhibitors_and_haematospermia_A_frightening,_yet_usually_innocuous,_adverse_reaction
+<http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Factor_Xa_inhibitors_and_haematospermia_A_frightening,_yet_usually_innocuous,_adverse_reaction> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                              OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                                                                                                     OpenPVSignal:refers_to_author :Kim_Alting ,
+                                                                                                                                                                                                                   :Ruth_Savage ;
+                                                                                                                                                                                     OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                                                                                                                     mp:publishedBy :the_Netherlands_Pharmacovigilance_Centre_Lareb ,
+                                                                                                                                                                                                    :uppsala_monitoring_centre ;
+                                                                                                                                                                                     OpenPVSignal:has_creation_date "01/07/2020" ;
+                                                                                                                                                                                     OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                                                                                                                                                                     rdfs:label "Factor Xa inhibitors and haematospermia A frightening, yet usually innocuous, adverse reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithCerebralVascularaccident/thrombosisProphylaxis
+<http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithCerebralVascularaccident/thrombosisProphylaxis> rdf:type owl:NamedIndividual ,
+                                                                                                                                                         OpenPVSignal:Reports_group ;
+                                                                                                                                                OpenPVSignal:concerns_indication_for_use :thrombosis_prophylaxis ;
+                                                                                                                                                OpenPVSignal:is_subgroup_of :Overall_reports_of_DOACs_for_haematospermia_in_VigiBase ;
+                                                                                                                                                OpenPVSignal:has_count 14 ;
+                                                                                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                rdfs:label "Reports with cerebral vascular accident/thrombosis prophylaxis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_cerebral_vascular_accident/thrombosis_prophylaxis_as_indication_and_pulmonary_embolism
+<http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#Reports_with_cerebral_vascular_accident/thrombosis_prophylaxis_as_indication_and_pulmonary_embolism> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                   OpenPVSignal:Reports_group ;
+                                                                                                                                                                                          OpenPVSignal:concerns_indication_for_use :pulmonaryEmbolism ;
+                                                                                                                                                                                          OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2019_3_factor_xa_inhibitors_haematospermia.owl#ReportsWithCerebralVascularaccident/thrombosisProphylaxis> ;
+                                                                                                                                                                                          OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                          rdfs:label "Reports with cerebral vascular accident/thrombosis prophylaxis as indication and pulmonary embolism" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

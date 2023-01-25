@@ -1,0 +1,1235 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                           rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/329688"^^xsd:anyURI ;
+                                                                           rdfs:label "Vortioxetine and aggression"^^xsd:Literal ;
+                                                                           owl:versionInfo "draft-v0.95-20210819"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Aggression_pathobiology
+:Aggression_pathobiology rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Free_text_reporting_element ;
+                         OpenPVSignal:refers_to_adverse_effect :aggression ;
+                         mp:references :Ref.3 ,
+                                       :Ref.4 ,
+                                       :Ref.5 ,
+                                       :Ref.6 ,
+                                       :Ref.7 ,
+                                       :Ref.8 ;
+                         OpenPVSignal:has_content "Aggression is defined as “forceful physical, verbal, or symbolic action which may be appropriate and self- protective or inappropriate; aggression may be directed toward the environment, another person/personality, or toward the self” in the McGraw-Hill Concise Dictionary of Modern Medicine.3 Aggression can be a symptom of certain psychiatric disorders, and it may complicate non- psychiatric illnesses when patients feel unrecognised or disregarded by the medical system.4 Within clinical practice there exist a number of related words which are used interchangeably with “aggression”, such as “anger”, “hostility”, or “irritability”. The granularity of this medical concept is reflected in the MedDRA dictionary by the existence of a standardized MedDRA query (SMQ) “Hostility/Aggression. The biological mechanism behind aggression is complex, involving several cortical and subcortical brain networks which are modulated by number of neurotransmitter systems, including monoamines, glutamate, and GABA, and by ion channels.5,6 The main receptors and enzymes involved in the neurobiology of aggression include serotonin 5- HT1A and 5-HT2A receptors, 5-HT transporters, DA D1 and D2 receptors, DA transporters, 1- and 2- adrenoceptors, the enzyme monoamine oxidase (MAO)-A, the GABA system (GABAA and GABAB receptors and GABA transaminase), the glutamate NMDA and AMPA receptors, and voltage- gated Na+ and Ca2+ channels. A clinical manifestation of aggression can occur as a result of dysfunction at genomic and transcriptional levels, as well as at the level of the synthesis and the metabolism of these various neurotransmitters and their receptors.7,8" ;
+                         rdfs:label "Aggression pathobiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Agitation_known_side_effect_of_ondansetron
+:Agitation_known_side_effect_of_ondansetron rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001197 ,
+                                                     OpenPVSignal:Warning_Information ;
+                                            OpenPVSignal:refers_to_adverse_effect :agitation ;
+                                            OpenPVSignal:refers_to_drug :lurasidone ,
+                                                                        :ondansetron ;
+                                            OpenPVSignal:has_content "Aggression is not a known side effect of ondansetron; however agitation is." ,
+                                                                     "while agitation is a known ADR for ondansetron and lurasidone." ;
+                                            rdfs:label "Agitation known ADR for ondansetron and lurasidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Case_1
+:Case_1 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content """A 75-year-old female with severe depression was treated with vortioxetine after she experienced lack of effect with escitalopram. Within weeks of starting treatment, the patient was hospitalized due to aggressive behaviour, confused state, a cramp-like incident in her arms, a strange feeling of heavy arms, and a strange feeling in the body.
+The patient had never before shown aggressive behaviour, but while on treatment with vortioxetine, severe aggression developed. The patient slammed wet dishcloths on the table, threw a box with shoes on the floor, banged on the walls and on the toilet door while her spouse was in the toilet. The patient was out of her mind, and the spouse described that the patient was completely out of balance, which he had never observed before.
+Vortioxetine was discontinued 24 days after its initiation. Symptoms resolved while hospitalised.""" ;
+        rdfs:label "Case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Case_2
+:Case_2 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content "A 42-year-old male with acute depression, he had been treated previously with sertraline but discontinued it due to sexual side effects. The treatment with vortioxetine was initiated at 10 mg. The patient complained that he was irritable on the medication. The dose was increased to 15 mg, after which it was noted that he felt that he became more aggressive, which was not in his character. He described that he “almost came into conflict with people on a few occasions that could have led to an actual altercation”. He himself stopped the medication. The patient considered other factors for the aggression (work, stress) but felt that vortioxetine was responsible for the change. At the time of this report, he had stopped the medication four days previously and was waiting to see if there was a difference." ;
+        rdfs:label "Case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Case_3
+:Case_3 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content "A 50-year-old female was treated for major depression with vortioxetine. The patient noted that after the start of the medication, she felt agitated, with motoric unrest. After increasing the dosage from 10 mg to 15 mg, the patient was aggressive and more agitated. The vortioxetine dose was subsequently decreased stepwise from 15 mg to 10 mg to 5 mg, and finally withdrawn. The patient recovered from the agitation/aggression within a week of the withdrawal. Concomitant medication was not reported. The patient had no known medical history, nor known past drug therapy." ;
+        rdfs:label "Case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Case_4
+:Case_4 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content "A 40-year-old male was started on vortioxetine for major depression. In the second week of therapy, the patient developed severe nausea and diarrhoea as well as a gradual onset of irritability and angry mood. During the third week the patient suffered from strong itching of the lower limbs at night in addition to continued nausea and diarrhoea and a headache every day starting in the morning. The patient reported his condition to his psychiatrist, but was told that these were usual adverse reactions. At the end of fourth week the patient experienced an attack of aggression which “resulted in the destruction of things”. The patient visited the psychiatrist again, no hospitalization was needed, and his medication was immediately changed to Zoloft 100 mg." ;
+        rdfs:label "Case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Corine_Ekhart
+:Corine_Ekhart rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Author ;
+               OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance Centre Lareb" ;
+               OpenPVSignal:has_first_name "Corine" ;
+               OpenPVSignal:has_last_name "Ekhart" ;
+               rdfs:label "Corine Ekhart" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Discussion_and_Conclusion
+:Discussion_and_Conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.12 ,
+                                         :Ref.13 ,
+                                         :Ref.14 ,
+                                         :Ref.15 ,
+                                         :Ref.17 ,
+                                         :Ref.18 ,
+                                         :Ref.19 ,
+                                         :Ref.2 ,
+                                         :Ref.20 ;
+                           OpenPVSignal:has_content """Disproportionality analysis (IC analysis)12 has revealed a statistically significant increased number of observed cases of aggression with vortioxetine compared to what is expected within the database. Exploration of VigiBase reveals a similarly significant increase in disproportionality for a number of related PT terms, including hostility, violence-related symptom, irritability, verbal abuse.
+Review of the cases included in the drug-ADR combination has focused on the specific MedDRA PT “aggression” given the number of cases within the case series with sufficient and rich detail, enabling causality assessment. It is likely that additional clinically relevant cases could be identified by expansion of the case search using the High Level Term Behaviour and Socialisation Disturbances or the SMQ Hostility/Aggression.
+Supporting evidence for possible causality from the case series are the wide geographic distribution of cases, a lack of evidence that aggression was part of a larger clinical syndrome in 26 cases, vortioxetine as the only reported drug in 42 reports (and the only suspected drug in 29 additional reports with concomitant medication), and the documentation of a positive de-challenge in 15 cases. A potential confounder in all cases is that of indication for treatment; however, aggression is not usually considered to be related to major depressive disorder which is the only indication for which vortioxetine is licensed. Cases 1 to 4 above were chosen to highlight a number of details which support the causality hypothesis: the clear onset of symptoms (noted to be out of character for these patients) after the initiation of therapy; the lack of apparent confounders, such as concomitant medications; dose-response relationship in two cases; and resolution of symptoms with discontinuation in three cases.
+Furthermore, three of the cases suggest a clinical
+pattern in which feelings of agitation/irritability precede the overt manifestation of aggression.
+To explore the biological plausibility of a causal association between vortioxetine and aggression the relationship between serotonin and aggression has been reviewed. Serotonin is thought to have a role in the inhibition of impulses and the regulation of emotions and social functioning, which are domains linked to aggression.13,14 Manchiaetal. recountthat 5-HTreceptors have been investigated in preclinical and clinical studies for their role in mental diseases but also specifically in aggressive behaviour. Involvement of 5-HT1A and 5-HT1B receptors in aggression has been confirmed by pharmacological studies indicating that 5-HT1A agonists and partial agonists and mixed 5-HT1A/5- HT1B partial agonists have potent anti-aggressive properties in animal paradigms of aggressive behaviour. Since vortioxetine is a 5-HT1B receptor partial agonist, anti-aggressive behaviour could possibly be expected. However, they stated that current knowledge does not yet clearly disentangle whether 5-HT dysfunction, most often a 5-HT deficiency, is the cause or the consequence of the aggressive/violent behaviour, of the underlying mental disease(s), or the expression of the comorbidity. Future studies are recommended to clarify the association between changes in 5-HT levels, altered activity of 5-HT receptors and their intracellular signalling cascades, and modifications of 5-HT genes, and in particular, the neurobiological link between the altered 5-HT machinery and aggressive behaviour in the context or in the absence of mental illness.15
+A causal link between aggression and an analogous class of antidepressants, the SSRIs, has been explored in a number of published articles; however, there is a lack of consensus in the conclusions on causality. An article from Walsh and Dinan reviewed all published papers on Medline and other databases linking serotonin, SSRIs and aggression. They conclude that there is no convincing evidence to link SSRIs causally to violence and suicide. A small proportion of patients treated with SSRIs may become akathisic and others may show increases in anxiety in the initial phase of treatment, but no increased susceptibility to aggression nor suicidality can be connected with the SSRIs. In fact, SSRI treatment may reduce aggression, probably due to positive effects on the serotonergic dysfunction that is implicated in aggressive behaviour directed towards oneself or others.16 In contrast, the review and analysis by Breggin states that evidence from many sources (clinical reports, controlled clinical trials and epidemiological studies) confirms that SSRIs commonly cause or exacerbate a wide range of abnormal mental and behavioural conditions. This can result in suicidality, violence and other forms of extreme abnormal behaviour. These include the production of feelings that often begin with lesser degrees of insomnia, nervousness, anxiety, hyperactivity and irritability and then progress toward more severe agitation, aggression, and varying degrees of mania. Another proposed mechanism is the production of a combined state of stimulation and depression (an agitated depression) with a high risk of suicide and violence. Additionally, SSRIs can be associated with the production of obsessive preoccupations and/or the production of akathisia, an inner agitation, both of which can lead to aggression against self or others.17 In spite of the lack of consensus on causality, the Pharmacovigilance Risk Assessment Committee at the EMA concluded that the evidence was enough to include aggression in the product labelling for paroxetine in 2015.18
+Review of regulatory documentation for vortioxetine has revealed that in pre-clinical studies performed to support the application for licensure, administration of the drug was associated with CNS-related clinical signs in mice, rats and dogs. These included salivation (rat and dog), pupil dilatation (dog), and convulsions (dogs). Analysis of a subgroup of the clinical trial population (“the MDD short-term pool”) revealed an increased proportion of the CNS events of dizziness, abnormal dreams and increased appetite in participants who received vortioxetine. However, the incidence of treatment-emergent adverse events within the SMQ Hostility/Aggression were found to be similar between the placebo group (2.8%) and the vortioxetine total group (1.9%).2
+Pharmacokinetic data show that several CYP isoenzymes are involved in the metabolism of vortioxetine: CYP2D6, CYP2C9, CYP3A4/5, CYP2A6, CYP2C8, CYP2C19 and CYP2B6. CYP2D6
+is the primary enzyme catalyzing the metabolism of vortioxetine to its major, pharmacologically inactive, carboxylic acid metabolite, and poor metabolizers (PM) of CYP2D6 have approximately twice the vortioxetine plasma concentration of extensive metabolizers (EM). According to the manufacturer, the approximately two- fold higher vortioxetine exposure in CYP2D6 PMs does not translate into significant changes in the safety and tolerability profile of vortioxetine relative to that in CYP2D6 EMs. However, the frequency of some adverse effects is doubled in the PM group versus the EM group, such as dizziness and pruritus.2 A small study of 18 patients performed in the Netherlands found no evidence for a significant relationship between CYP2C19 and CYP2D6 polymorphisms and aggression in patients using SSRIs.19 An expansion of this study using a larger cohort of patients to investigate the relationship between vortioxetine and aggression could be considered.
+Given the complexity of the multi-modal actions of vortioxetine and the uncertainties surrounding the role of serotonin in aggression and the strength of the clinical support from the case series, there is adequate evidence to suggest a potential causal relationship between vortioxetine and aggression. The combination of pharmacokinetic data and the two cases suggesting the possibility of a dose response relationship could be used to hypothesize that patients who are CYP2D6 poor metabolizers are at an increased risk for aggression and other ADRs from vortioxetine. Current product information for vortioxetine does not sufficiently inform patients about the potential association with aggression, and the product labelling may need to be revised.""" ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Dr._Florence_van_Hunsel
+:Dr._Florence_van_Hunsel rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Author ;
+                         OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance Centre Lareb" ;
+                         OpenPVSignal:has_first_name "Florence" ;
+                         OpenPVSignal:has_last_name "van Hunsel" ;
+                         rdfs:label "Dr. Florence van Hunsel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#EU_SmPC_for_antidepressants_and_aggression
+:EU_SmPC_for_antidepressants_and_aggression rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001197 ,
+                                                     OpenPVSignal:Structured_Product_Labels_information ,
+                                                     OpenPVSignal:Warning_Information ;
+                                            OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                            OpenPVSignal:refers_to_drug :antidepressants ;
+                                            mp:references :Ref.9 ;
+                                            OpenPVSignal:has_content "The EU product labelling intended for health care providers (the Summary of Product Characteristics in the EU) only warns that aggression has been observed in paediatric patients being treated with other antidepressants, without a specific mention of vortioxetine.9" ;
+                                            rdfs:label "EU SmPC for antidepressants and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#IC
+:IC rdf:type owl:NamedIndividual ,
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+    OpenPVSignal:refers_to_adverse_effect :aggression ;
+    OpenPVSignal:refers_to_drug :vortioxetine ;
+    OpenPVSignal:has_value 1.82 ;
+    OpenPVSignal:refers_to_number_of_reports 77 ;
+    rdfs:label "IC for vortioxetine and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#IC025
+:IC025 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+       OpenPVSignal:refers_to_adverse_effect :aggression ;
+       OpenPVSignal:refers_to_drug :vortioxetine ;
+       OpenPVSignal:refers_to_information_component :IC ;
+       OpenPVSignal:has_value 1.48 ;
+       OpenPVSignal:refers_to_number_of_reports 77 ;
+       rdfs:label "IC025 for vortioxetine and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Illustrative_case_reports
+:Illustrative_case_reports rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Free_text_reporting_element ;
+                           OpenPVSignal:has_affiliation """Case 1 
+A 75-year-old female with severe depression was treated with vortioxetine after she experienced lack of effect with escitalopram. Within weeks of starting treatment, the patient was hospitalized due to aggressive behaviour, confused state, a cramp-like incident in her arms, a strange feeling of heavy arms, and a strange feeling in the body. The patient had never before shown aggressive behaviour, but while on treatment with vortioxetine, severe aggression developed. The patient slammed wet dishcloths on the table, threw a box with shoes on the floor, banged on the walls and on the toilet door while her spouse was in the toilet. The patient was out of her mind, and the spouse described that the patient was completely out of balance, which he had never observed before. Vortioxetine was discontinued 24 days after its initiation. Symptoms resolved while hospitalised. 
+Case 2 
+A 42-year-old male with acute depression, he had been treated previously with sertraline but discontinued it due to sexual side effects. The treatment with vortioxetine was initiated at 10 mg. The patient complained that he was irritable on the medication. The dose was increased to 15 mg, after which it was noted that he felt that he became more aggressive, which was not in his character. He described that he “almost came into conflict with people on a few occasions that could have led to an actual altercation”. He himself stopped the medication. The patient considered other factors for the aggression (work, stress) but felt that vortioxetine was responsible for the change. At the time of this report, he had stopped the medication four days previously and was waiting to see if there was a difference. 
+Case 3 
+A 50-year-old female was treated for major depression with vortioxetine. The patient noted that after the start of the medication, she felt agitated, with motoric unrest. After increasing the dosage from 10 mg to 15 mg, the patient was aggressive and more agitated. The vortioxetine dose was subsequently decreased stepwise from 15 mg to 10 mg to 5 mg, and finally withdrawn. The patient recovered from the agitation/aggression within a week of the withdrawal. Concomitant medication was not reported. The patient had no known medical history, nor known past drug therapy. 
+Case 4 
+A 40-year-old male was started on vortioxetine for major depression. In the second week of therapy, the patient developed severe nausea and diarrhoea as well as a gradual onset of irritability and angry mood. During the third week the patient suffered from strong itching of the lower limbs at night in addition to continued nausea and diarrhoea and a headache every day starting in the morning. The patient reported his condition to his psychiatrist, but was told that these were usual adverse reactions. At the end of fourth week the patient experienced an attack of aggression which “resulted in the destruction of things”. The patient visited the psychiatrist again, no hospitalization was needed, and his medication was immediately changed to Zoloft 100 mg.""" ;
+                           rdfs:label "Illustrative case reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ,
+                                    :Ref.4 ,
+                                    :Ref.5 ,
+                                    :Ref.6 ,
+                                    :Ref.7 ,
+                                    :Ref.8 ;
+                      OpenPVSignal:has_content """Vortioxetine (1-[2-(2,4-dimethyl-phenylsulfanyl)- phenyl]-piperazine), a structurally new type of psychotropic medication, is considered to have a multimodal pharmacological mechanism of action. In vitro studies have revealed it to be 5-HT3, 5- HT7, and 5-HT1D receptor antagonist, a 5-HT1B receptor partial agonist, a 5-HT1A receptor agonist, and an inhibitor of the 5-HT transporter. Animal models suggest that it modulates neurotransmission within several systems, predominantly the serotonin but probably also the norepinephrine, dopamine (DA), histamine, acetylcholine, GABA and glutamate systems. This multi-modal activity is thought to be responsible for the differences between vortioxetine and the class of serotonin reuptake inhibitors (SSRIs) with vortioxetine exhibiting additional effects such as increased synaptic plasticity and improved cognitive function.1
+Vortioxetine was approved for use in the treatment of major depressive disorder in adults in the United States of America (USA) and the European Union (EU) in 2013.
+At the time of licensure by the European Medicines Agency (EMA), vortioxetine received a black triangle warning, and the risk management plan included a post-authorisation safety study with an aim to “… further characterise the safety profile of vortioxetine by assessing the frequency of the certain events related to important potential risks in patients treated with vortioxetine.”2
+Aggression is defined as “forceful physical, verbal, or symbolic action which may be appropriate and self- protective or inappropriate; aggression may be directed toward the environment, another person/personality, or toward the self” in the McGraw-Hill Concise Dictionary of Modern Medicine.3 Aggression can be a symptom of certain psychiatric disorders, and it may complicate non-psychiatric illnesses when patients feel unrecognised or disregarded by the medical system.4 Within clinical practice there exist a number of related words which are used interchangeably with “aggression”, such as “anger”, “hostility”, or “irritability”. The granularity of this medical concept is reflected in the MedDRA dictionary by the existence of a standardized MedDRA query (SMQ) “Hostility/Aggression”. The biological mechanism behind aggression is complex, involving several cortical and subcortical brain networks which are modulated by number of neurotransmitter systems, including monoamines, glutamate, and GABA, and by ion channels.5,6 The main receptors and enzymes involved in the neurobiology of aggression include serotonin 5- HT1A and 5-HT2A receptors, 5-HT transporters, DA D1 and D2 receptors, DA transporters, 1- and 2- adrenoceptors, the enzyme monoamine oxidase (MAO)-A, the GABA system (GABAA and GABAB receptors and GABA transaminase), the glutamate NMDA and AMPA receptors, and voltage- gated Na+ and Ca2+ channels. A clinical manifestation of aggression can occur as a result of dysfunction at genomic and transcriptional levels, as well as at the level of the synthesis and the metabolism of these various neurotransmitters and their receptors.7,8""" ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.10 ,
+                                        :Ref.11 ,
+                                        :Ref.9 ;
+                          OpenPVSignal:has_content "The EU product labelling intended for health care providers (the Summary of Product Characteristics in the EU) only warns that aggression has been observed in paediatric patients being treated with other antidepressants, without a specific mention of vortioxetine.9 The labelling intended for patients (the Patient Information Leaflet) contains no mention of aggression or other similar terms.10 The US Package Insert (intended for both health care providers and patients) refers to the association of aggression with other antidepressants, but it also mentions an aggression-like term (sudden outbursts of anger) in specific association with discontinuation of vortioxetine.11" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Mechanism_of_vortioxetine
+:Mechanism_of_vortioxetine rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Mechanism ;
+                           mp:references :Ref.1 ;
+                           OpenPVSignal:has_content "Vortioxetine (1-[2-(2,4-dimethyl-phenylsulfanyl)- phenyl]-piperazine), a structurally new type of psychotropic medication, is considered to have a multimodal pharmacological mechanism of action. In vitro studies have revealed it to be 5-HT3, 5- HT7, and 5-HT1D receptor antagonist, a 5-HT1B receptor partial agonist, a 5-HT1A receptor agonist, and an inhibitor of the 5-HT transporter. Animal models suggest that it modulates neurotransmission within several systems, predominantly the serotonin but probably also the norepinephrine, dopamine (DA), histamine, acetylcholine, GABA and glutamate systems. This multi-modal activity is thought to be responsible for the differences between vortioxetine and the class of serotonin reuptake inhibitors (SSRIs) with vortioxetine exhibiting additional effects such as increased synaptic plasticity and improved cognitive function" ;
+                           rdfs:label "Mechanism of vortioxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 75 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 42 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 50 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Pharmogenomic_data_of_vortioxetine_in_lieu_with_aggression-Biological_plausibility
+:Pharmogenomic_data_of_vortioxetine_in_lieu_with_aggression-Biological_plausibility rdf:type owl:NamedIndividual ,
+                                                                                             OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                                    OpenPVSignal:refers_to_adverse_effect :dizziness ,
+                                                                                                                          :pruritus ;
+                                                                                    mp:references :Ref.2 ,
+                                                                                                  :Ref.20 ;
+                                                                                    OpenPVSignal:has_content """Pharmacokinetic data show that several CYP isoenzymes are involved in the metabolism of vortioxetine: CYP2D6, CYP2C9, CYP3A4/5, CYP2A6, CYP2C8, CYP2C19 and CYP2B6. CYP2D6
+is the primary enzyme catalyzing the metabolism of vortioxetine to its major, pharmacologically inactive, carboxylic acid metabolite, and poor metabolizers (PM) of CYP2D6 have approximately twice the vortioxetine plasma concentration of extensive metabolizers (EM). According to the manufacturer, the approximately two- fold higher vortioxetine exposure in CYP2D6 PMs does not translate into significant changes in the safety and tolerability profile of vortioxetine relative to that in CYP2D6 EMs. However, the frequency of some adverse effects is doubled in the PM group versus the EM group, such as dizziness and pruritus.2 A small study of 18 patients performed in the Netherlands found no evidence for a significant relationship between CYP2C19 and CYP2D6 polymorphisms and aggression in patients using SSRIs.19 An expansion of this study using a larger cohort of patients to investigate the relationship between vortioxetine and aggression could be considered.""" ;
+                                                                                    rdfs:label "Pharmogenomic data of vortioxetine in lieu with aggression-Biological plausibility" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Product_labelling_for_paroxetine
+:Product_labelling_for_paroxetine rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ,
+                                           OpenPVSignal:Structured_Product_Labels_information ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                  OpenPVSignal:refers_to_drug :paroxetine ;
+                                  mp:references :Ref.19 ;
+                                  OpenPVSignal:has_content "In spite of the lack of consensus on causality, the Pharmacovigilance Risk Assessment Committee at the EMA concluded that the evidence was enough to include aggression in the product labelling for paroxetine in 2015.18" ;
+                                  rdfs:label "Product labelling for paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Rebecca_E._Chandler
+:Rebecca_E._Chandler rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Author ;
+                     OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                     OpenPVSignal:has_first_name "Rebecca" ;
+                     OpenPVSignal:has_last_name "Chandler" ;
+                     rdfs:label "Rebecca E. Chandler" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sanchez C, Asin KE, Artigas F. Vortioxetine, a novel antidepressant with multimodal activity: review of preclinical and clinical data. Pharmacol Ther. 2015 Jan;145:43-57." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "electronic Medicines Compendium: Patient Information Leaflet for vortioxetine (Brintellix). https://www.medicines.org.uk/emc/product/71 21/pil Accessed 23 October 2018." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "US SmPC Trintellix. https://www.accessdata.fda.gov/drugsatfda_d ocs/label/2018/204447s006lbl.pdf Accessed 23 October 2018." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "G Niklas Norén, Johan Hopstadius, Andrew Bate. Shrinkage observed-to-expected ratios for robust and transparent large-scale pattern discovery. Stat Methods Med Res. 2013 Feb;22(1):57-69." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Krakowski M. Violence and serotonin: influence of impulse control, affect regulation, and social functioning. J Neuropsychiatry Clin Neurosci 2003;15(3):294-305." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ryding E, Lindstrom M, Traskman-Bendz L. The role of dopamine and serotonin in suicidal behaviour and aggression. Prog Brain Res 2008;172:307-15." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Manchia M, Carpiniello B, Valtorta F, Comai S. Serotonin Dysfunction, Aggressive Behavior, and Mental Illness: Exploring the Link Using a Dimensional Approach. ACS Chem Neurosci 2017 May 17;8(5):961-72." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Walsh MT, Dinan TG. Selective serotonin reuptake inhibitors and violence: a review of the available evidence. Acta Psychiatr Scand 2001 Aug;104(2):84- 91." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Breggin PR. Suicidality, violence and mania caused by selective serotonin reuptake inhibitors (SSRIs): A review and analysis. International Journal of Risk & Safety in Medicine 2003;16:31-49." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "https://www.ema.europa.eu/documents/prac-recommendation/prac-recommendations- signals- adopted-prac-meeting-6-9-january- 2015_en.pdf. Accessed 23 October 2018." ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Brintellix: Assessment report for an initial marketing authorisation application. https://www.ema.europa.eu/documents/asseassessment-report_en.pdf" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ekhart C, Matic M, Kant A, van Puijenbroek E, van Schaik R. CYP450 genotype and aggressive behavior on selective serotonin reuptake inhibitors. Pharmacogenomics. 2017 May;18(7):613-620" ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "McGraw-Hill Concise Dictionary of Modern Medicine. (2002). Accessed October 22 2018 from https://medical- dictionary.thefreedictionary.com/ aggression" ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Levenson JOnyike C and Lyketsos C (2011) Aggression and violence, in Textbook of Psychosomatic Medicine: Psychiatric Care of the Medically Ill (Levenson J ed) pp 153–174, American Psychiatric Publishing, Washington, DC." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Gedye A (1989) Episodic rage and aggression attributed to frontal lobe seizures. J Ment Defic Res 33:369–379." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sumer MM, Atik L, Unal A, Emre U, and Atasoy HT (2007) Frontal lobe epilepsy presented as ictal aggression. Neurol Sci 28:48–51." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Siever LJ (2008) Neurobiology of aggression and violence. Am J Psychiatry 165:429–442." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Comai S, Tau M, and Gobbi G (2012a) The psychopharmacology of aggressive behavior: a translational approach: part 1: neurobiology. J Clin Psychopharmacol 32:83– 94." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "electronic Medicines Compendium: Summary of Product Charactersitcs for vortioxetine (Brintellix). https://www.medicines.org.uk/emc/product/7 121/ smpc Accessed 23 October 2018." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case_1 ;
+          OpenPVSignal:refers_to_adverse_effect :aggressiveBehaviour ,
+                                                :confused ;
+          OpenPVSignal:refers_to_patient :Patient1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_of_vortioxetine_for_report_1 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after hospitalization" ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case_2 ;
+          OpenPVSignal:refers_to_adverse_effect :aggression ,
+                                                :irritability ;
+          OpenPVSignal:refers_to_patient :Patient2 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_of_vortioxetine_for_report_2 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Report_3
+:Report_3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case_3 ;
+          OpenPVSignal:refers_to_adverse_effect :aggression ,
+                                                :agitation ;
+          OpenPVSignal:refers_to_patient :Patient3 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_of_vortioxetine_for_report_3 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Report_4
+:Report_4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case_4 ;
+          OpenPVSignal:refers_to_adverse_effect :aggression ,
+                                                :anger ,
+                                                :diarrhea ,
+                                                :headache ,
+                                                :irritability ,
+                                                :itching ,
+                                                :nausea ;
+          OpenPVSignal:refers_to_patient :Patient4 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_of_vortioxetine_for_report_4 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "Table 1 illustrates the disproportionality of vortioxetine and aggression, as of 30 September 2018. Based on the overall reporting of adverse reactions for vortioxetine and aggression in VigiBase, the WHO global database of individual case safety reports (ICSRs), the expected value for the number of reports on the combination was 22, while the observed number of reports was 77. The statistical significance of the association is shown by the IC025 of 1.48." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#SSRIs
+:SSRIs rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_mechanism :SSRIs_triggering_aggression-Biological_plausibility ;
+       OpenPVSignal:has_ATC_code "N06AB" ;
+       rdfs:label "SSRIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#SSRIs_triggering_aggression-Biological_plausibility
+:SSRIs_triggering_aggression-Biological_plausibility rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                     OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                                     mp:references :Ref.17 ,
+                                                                   :Ref.18 ;
+                                                     OpenPVSignal:has_content "A causal link between aggression and an analogous class of antidepressants, the SSRIs, has been explored in a number of published articles; however, there is a lack of consensus in the conclusions on causality. An article from Walsh and Dinan reviewed all published papers on Medline and other databases linking serotonin, SSRIs and aggression. They conclude that there is no convincing evidence to link SSRIs causally to violence and suicide. A small proportion of patients treated with SSRIs may become akathisic and others may show increases in anxiety in the initial phase of treatment, but no increased susceptibility to aggression nor suicidality can be connected with the SSRIs. In fact, SSRI treatment may reduce aggression, probably due to positive effects on the serotonergic dysfunction that is implicated in aggressive behaviour directed towards oneself or others.16 In contrast, the review and analysis by Breggin states that evidence from many sources (clinical reports, controlled clinical trials and epidemiological studies) confirms that SSRIs commonly cause or exacerbate a wide range of abnormal mental and behavioural conditions. This can result in suicidality, violence and other forms of extreme abnormal behaviour. These include the production of feelings that often begin with lesser degrees of insomnia, nervousness, anxiety, hyperactivity and irritability and then progress toward more severe agitation, aggression, and varying degrees of mania. Another proposed mechanism is the production of a combined state of stimulation and depression (an agitated depression) with a high risk of suicide and violence. Additionally, SSRIs can be associated with the production of obsessive preoccupations and/or the production of akathisia, an inner agitation, both of which can lead to aggression against self or others.17" ;
+                                                     rdfs:label "SSRIs triggering aggression-Biological plausibility" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Summary_content
+:Summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content "Vortioxetine is a new chemical entity licensed for the indication of major depressive disorder. With a complex pharmacological mechanism of action, it modulates neurotransmission within the serotonin system, as do serotonin reuptake inhibitors, but also within a number of other systems which are thought to account for additional effects such as improved cognition. A statistical screening of VigiBase, the WHO global database of individual case safety reports, performed in April 2018 and designed to detect safety concerns reported by patients, highlighted the combination vortioxetine and aggression. Given the multimodal actions of vortioxetine, the strength of the clinical support from the case series, and the evidence for a potential role of serotonin in aggression, there is adequate support for a potential causal relationship between vortioxetine and aggression. Current product information for vortioxetine does not sufficiently inform patients about the potential of aggression as an adverse effect." ;
+                 rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#The_case_series
+:The_case_series rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Free_text_reporting_element ;
+                 OpenPVSignal:has_content """Seventy-six ICSRs reporting the MedDRA preferred term (PT) “aggression” with the use of vortioxetine had been received into VigiBase by 30 August 2018 and were included in this case series review. These reports concerned 45 women, 28 men, with three unknown. Age varied from 15 to 90 years, with a median of 47; age was not provided in 26 reports. The largest number of reports for which age was known was the age group 18-44 years. Reports were primarily received from consumers/non-health professionals (n=41) and physicians (n=23).
+Reports originated from all continents, including the Americas (USA, Canada), Europe (Austria, Denmark, Czech Republic, the Netherlands, Germany, Finland, Italy, Sweden, France, Norway, Spain, Switzerland, the United Kingdom), Asia (Turkey, Republic of Korea) and Africa (Namibia and South Africa). Twenty-seven of the cases were reported as “serious” and eighteen reports mention aggression as the only preferred term. The most commonly co-reported adverse drug reactions (ADRs) were irritability (14 reports), suicidal ideation (12 reports) and anger (11 reports).
+In 12 reports, time-to-onset was reported. Time- to-onset varied from 0 days to 4 months, with a median of 11 days. Fifteen reports mention that the drug was withdrawn, and the patient recovered (positive de-challenge), while only six reports that the drug withdrawn and there was no effect observed (negative de-challenge). None of the reports mention a positive re-challenge. In 42 reports, vortioxetine was the only suspect drug and no concomitant medication was reported. In 29 reports, vortioxetine was the only suspect drug but there was concomitant medication. In five reports there were drugs reported as “suspect”: escitalopram (two reports), mirtazapine (one report), ondansetron (one report), and clonazepam/lamotrigine/lurasidone/venlafaxine (one report). Aggression is not a known side effect of ondansetron; however agitation is. One report also had clonazepam, lamotrigine, lurasidone and venlafaxine as suspect drugs. Aggression is a known ADR for escitalopram, mirtazapine, clonazepam, lamotrigine and venlafaxine, while agitation is a known ADR for ondansetron and lurasidone.""" ;
+                 rdfs:label "The case series" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#US_Package_Insert
+:US_Package_Insert rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001197 ,
+                            OpenPVSignal:Warning_Information ;
+                   OpenPVSignal:refers_to_adverse_effect :aggression ;
+                   OpenPVSignal:refers_to_drug :antidepressants ,
+                                               :vortioxetine ;
+                   mp:references :Ref.11 ;
+                   OpenPVSignal:has_content "The US Package Insert (intended for both health care providers and patients) refers to the association of aggression with other antidepressants, but it also mentions an aggression-like term (sudden outbursts of anger) in specific association with discontinuation of vortioxetine.11" ;
+                   rdfs:label "US Package Insert" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Vortioxetine_and_aggression
+:Vortioxetine_and_aggression rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                             OpenPVSignal:refers_to_author :Corine_Ekhart ,
+                                                           :Dr._Florence_van_Hunsel ,
+                                                           :Rebecca_E._Chandler ;
+                             OpenPVSignal:refers_to_signal :pvSignal ;
+                             mp:publishedBy :Uppsala_Monitoring_Centre ,
+                                            :the_Netherlands_Pharmacovigilance_Centre_Lareb ;
+                             OpenPVSignal:has_creation_date "01/11/2020" ;
+                             OpenPVSignal:has_overall_conclusion "causal association" ;
+                             rdfs:label "Vortioxetine and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Vortioxetine_pre-clinical_studies
+:Vortioxetine_pre-clinical_studies rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Clinical_trial_information ;
+                                   OpenPVSignal:refers_to_adverse_effect :abnormal_dreams ,
+                                                                         :convulsion ,
+                                                                         :dizziness ,
+                                                                         :increased_appetite ,
+                                                                         :pupil_dilation ,
+                                                                         :salivation ;
+                                   OpenPVSignal:refers_to_drug :vortioxetine ;
+                                   mp:references :Ref.2 ;
+                                   OpenPVSignal:has_content "Review of regulatory documentation for vortioxetine has revealed that in pre-clinical studies performed to support the application for licensure, administration of the drug was associated with CNS-related clinical signs in mice, rats and dogs. These included salivation (rat and dog), pupil dilatation (dog), and convulsions (dogs). Analysis of a subgroup of the clinical trial population (“the MDD short-term pool”) revealed an increased proportion of the CNS events of dizziness, abnormal dreams and increased appetite in participants who received vortioxetine. However, the incidence of treatment-emergent adverse events within the SMQ Hostility/Aggression were found to be similar between the placebo group (2.8%) and the vortioxetine total group (1.9%).2" ;
+                                   rdfs:label "Vortioxetine pre-clinical studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Vortioxetine_triggering_aggression-Biological_plausibility
+:Vortioxetine_triggering_aggression-Biological_plausibility rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                            OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                                            mp:references :Ref.13 ,
+                                                                          :Ref.14 ,
+                                                                          :Ref.15 ;
+                                                            OpenPVSignal:has_content "To explore the biological plausibility of a causal association between vortioxetine and aggression the relationship between serotonin and aggression has been reviewed. Serotonin is thought to have a role in the inhibition of impulses and the regulation of emotions and social functioning, which are domains linked to aggression.13,14 Manchiaetal. recountthat 5-HTreceptors have been investigated in preclinical and clinical studies for their role in mental diseases but also specifically in aggressive behaviour. Involvement of 5-HT1A and 5-HT1B receptors in aggression has been confirmed by pharmacological studies indicating that 5-HT1A agonists and partial agonists and mixed 5-HT1A/5- HT1B partial agonists have potent anti-aggressive properties in animal paradigms of aggressive behaviour. Since vortioxetine is a 5-HT1B receptor partial agonist, anti-aggressive behaviour could possibly be expected. However, they stated that current knowledge does not yet clearly disentangle whether 5-HT dysfunction, most often a 5-HT deficiency, is the cause or the consequence of the aggressive/violent behaviour, of the underlying mental disease(s), or the expression of the comorbidity. Future studies are recommended to clarify the association between changes in 5-HT levels, altered activity of 5-HT receptors and their intracellular signalling cascades, and modifications of 5-HT genes, and in particular, the neurobiological link between the altered 5-HT machinery and aggressive behaviour in the context or in the absence of mental illness.15" ;
+                                                            rdfs:label "Vortioxetine triggering aggression-Biological plausibility" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#abnormal_dreams
+:abnormal_dreams rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10000125 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Abnormal dreams" ;
+                 rdfs:label "abnormal dreams" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#acuteDepression
+:acuteDepression rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "F33" ;
+                 OpenPVSignal:has_MedDRA_code 10012378 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+                 rdfs:label "acute depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#aggression
+:aggression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G245" ;
+            OpenPVSignal:has_MedDRA_code 10001488 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Aggression" ;
+            rdfs:label "aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#aggressiveBehaviour
+:aggressiveBehaviour rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "G245" ;
+                     OpenPVSignal:has_MedDRA_code 10001488 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Aggression" ;
+                     rdfs:label "aggressive behaviour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R451" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#anger
+:anger rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_MedDRA_code 10002368 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Anger" ;
+       rdfs:label "anger" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#antidepressants
+:antidepressants rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06A" ;
+                 rdfs:label "antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#clonazepam
+:clonazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AE01" ;
+            rdfs:label "clonazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#confused
+:confused rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F448" ;
+          OpenPVSignal:has_MedDRA_code 10010305 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+          rdfs:label "confused state" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#convulsion
+:convulsion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10010904 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Convulsion" ;
+            rdfs:label "convulsion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_fourth_of_vortioxetine_after_partial_dechallenge_for_report_3
+:dosage_fourth_of_vortioxetine_after_partial_dechallenge_for_report_3 rdf:type owl:NamedIndividual ,
+                                                                               OpenPVSignal:Dosage ;
+                                                                      OpenPVSignal:refers_to_drug :vortioxetine ;
+                                                                      OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                                                      OpenPVSignal:has_value 5 ;
+                                                                      OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+                                                                      OpenPVSignal:refers_to_dose_value "5 mg" ;
+                                                                      rdfs:label "dosage fourth of vortioxetine after partial dechallenge for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_initial_of_vortioxetine_for_report_3
+:dosage_initial_of_vortioxetine_for_report_3 rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Dosage ;
+                                             OpenPVSignal:refers_to_drug :vortioxetine ;
+                                             OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                             OpenPVSignal:has_value 10 ;
+                                             OpenPVSignal:refers_to_dose_value "10 mg" ;
+                                             rdfs:label "dosage initial of vortioxetine for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_of_vortioxetine_for_report_2
+:dosage_of_vortioxetine_for_report_2 rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Dosage ;
+                                     OpenPVSignal:refers_to_drug :vortioxetine ;
+                                     OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                     OpenPVSignal:has_value 10 ;
+                                     OpenPVSignal:refers_to_dose_value "10 mg" ;
+                                     rdfs:label "dosage initial of vortioxetine for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_second_of_vortioxetine_for_report_2
+:dosage_second_of_vortioxetine_for_report_2 rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Dosage ;
+                                            OpenPVSignal:refers_to_drug :vortioxetine ;
+                                            OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                            OpenPVSignal:has_value 15 ;
+                                            OpenPVSignal:refers_to_dose_value "15 mg" ;
+                                            rdfs:label "dosage second of vortioxetine for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_second_of_vortioxetine_for_report_3
+:dosage_second_of_vortioxetine_for_report_3 rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Dosage ;
+                                            OpenPVSignal:refers_to_drug :vortioxetine ;
+                                            OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                            OpenPVSignal:has_value 15 ;
+                                            OpenPVSignal:refers_to_dose_value "15 mg" ;
+                                            OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+                                            rdfs:label "dosage second of vortioxetine for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#dosage_third_of_vortioxetine_for_report_3
+:dosage_third_of_vortioxetine_for_report_3 rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Dosage ;
+                                           OpenPVSignal:refers_to_drug :vortioxetine ;
+                                           OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                           OpenPVSignal:has_value 10 ;
+                                           OpenPVSignal:refers_to_dose_value "10 mg" ;
+                                           OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+                                           rdfs:label "dosage third of vortioxetine after partial dechallenge for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#escitalopram
+:escitalopram rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N06AB10" ;
+              rdfs:label "escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#increased_appetite
+:increased_appetite rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10021654 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Increased appetite" ;
+                    rdfs:label "increased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#irritability
+:irritability rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R45.4" ;
+              OpenPVSignal:has_MedDRA_code 10022998 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Irritability" ;
+              rdfs:label "irritability" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#itching
+:itching rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "L29" ;
+         OpenPVSignal:has_MedDRA_code 10037087 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+         rdfs:label "itching" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#lamotrigine
+:lamotrigine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N03AX09" ;
+             rdfs:label "lamotrigine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#lurasidone
+:lurasidone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AE05" ;
+            rdfs:label "lurasidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#majorDepression
+:majorDepression rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Indication ;
+                 OpenPVSignal:has_ICD_code "F33" ,
+                                           " F33" ;
+                 OpenPVSignal:has_MedDRA_code 10057840 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Major depression" ;
+                 rdfs:label "major depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#majorDepressiveDisorder
+:majorDepressiveDisorder rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Indication ,
+                                  OpenPVSignal:Potential_Confounder ;
+                         OpenPVSignal:has_ICD_code " F33" ;
+                         OpenPVSignal:has_MedDRA_code 10081270 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Major depressive disorder" ;
+                         rdfs:label "major depressive disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#major_depression_as_confounder
+:major_depression_as_confounder rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001182 ;
+                                OpenPVSignal:has_potential_confounding_factor :majorDepressiveDisorder ;
+                                OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                OpenPVSignal:has_content "A potential confounder in all cases is that of indication for treatment; however, aggression is not usually considered to be related to major depressive disorder which is the only indication for which vortioxetine is licensed." ;
+                                rdfs:label "major depression as confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#ondansetron
+:ondansetron rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A04AA01" ;
+             rdfs:label "ondansetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#overallCasesOfVortioxetineAndAggression
+:overallCasesOfVortioxetineAndAggression rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:refers_to_adverse_effect :aggression ;
+                                         OpenPVSignal:refers_to_drug :vortioxetine ;
+                                         OpenPVSignal:has_count 76 ;
+                                         OpenPVSignal:has_count_of_men 28 ;
+                                         OpenPVSignal:has_count_of_women 45 ;
+                                         OpenPVSignal:has_expected_count "22.0"^^xsd:float ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "overall cases of vortioxetine and aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#paroxetine
+:paroxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB05" ;
+            rdfs:label "paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#pupil_dilation
+:pupil_dilation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10037535 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Pupils dilated" ;
+                rdfs:label "pupil dilatation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Aggression_pathobiology ,
+                                                   :Discussion_and_Conclusion ,
+                                                   :Illustrative_case_reports ,
+                                                   :Introduction_content ,
+                                                   :Reports_in_Vigibase ,
+                                                   :Summary_content ,
+                                                   :The_case_series ;
+          OpenPVSignal:has_free_text_reporting_element :Vortioxetine_pre-clinical_studies ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                              :Report_2 ,
+                                                              :Report_3 ,
+                                                              :Report_4 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC ,
+                                                          :IC025 ,
+                                                          :overallCasesOfVortioxetineAndAggression ,
+                                                          :reportsFromHCPs ,
+                                                          :reportsFromPatients ,
+                                                          :reportsWithAngerco-reported ,
+                                                          :reportsWithEscitalopramAsSuspectDrug ,
+                                                          :reportsWithIrritabilityco-reported ,
+                                                          :reportsWithMirtazapineAsSuspsectDrug ,
+                                                          :reportsWithNegativeDechallenge ,
+                                                          :reportsWithOndansetronAsSuspectDrug ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithSuicidalIdeationco-reported ,
+                                                          :reportsWithVortioxetineTheOnlySuspectDrugAndConcomittants ,
+                                                          :reportsWithtime-toOnsetData ,
+                                                          :reports_with_aggression ,
+                                                          :reports_with_info_for_age ,
+                                                          :reports_with_vortioxetine ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithclonazepam/lamotrigine/lurasidone/venlafaxineAsSuspectDrug> ;
+          OpenPVSignal:refers_to_adverse_effect :aggression ;
+          OpenPVSignal:refers_to_drug :vortioxetine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+          mp:supportedByData :Agitation_known_side_effect_of_ondansetron ,
+                             :EU_SmPC_for_antidepressants_and_aggression ,
+                             :Literature_and_Labelling ,
+                             :Pharmogenomic_data_of_vortioxetine_in_lieu_with_aggression-Biological_plausibility ,
+                             :Product_labelling_for_paroxetine ,
+                             :US_Package_Insert ,
+                             :Vortioxetine_triggering_aggression-Biological_plausibility ,
+                             :major_depression_as_confounder ,
+                             :supporting_evidence ,
+                             <http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Aggression_known_ADR_for_escitalopram,_mirtazapine,__clonazepam,_lamotrigine_and_venlafaxine> ;
+          OpenPVSignal:initially_identified_on "01/11/2020" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsFromHCPs
+:reportsFromHCPs rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                 OpenPVSignal:has_count 23 ;
+                 OpenPVSignal:has_reporter_type "physician" ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "reports from HCPs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsFromPatients
+:reportsFromPatients rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                     OpenPVSignal:has_count 41 ;
+                     OpenPVSignal:has_reporter_type "patient" ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "reports from patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithAngerco-reported
+:reportsWithAngerco-reported rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                             OpenPVSignal:refers_to_adverse_effect :anger ;
+                             OpenPVSignal:has_count 11 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with anger co-reported" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithEscitalopramAsSuspectDrug
+:reportsWithEscitalopramAsSuspectDrug rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                      OpenPVSignal:refers_to_secondary_suspect_drug :escitalopram ;
+                                      OpenPVSignal:has_count 2 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "reports with escitalopram as suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithIrritabilityco-reported
+:reportsWithIrritabilityco-reported rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                    OpenPVSignal:refers_to_adverse_effect :irritability ;
+                                    OpenPVSignal:has_count 14 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports with irritability co-reported" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithMirtazapineAsSuspsectDrug
+:reportsWithMirtazapineAsSuspsectDrug rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                      OpenPVSignal:refers_to_secondary_suspect_drug :mirtazapine ;
+                                      OpenPVSignal:has_count 1 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "reports with mirtazapine as suspsect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithNegativeDechallenge
+:reportsWithNegativeDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                OpenPVSignal:has_count 6 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                rdfs:label "reports with negative dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithOndansetronAsSuspectDrug
+:reportsWithOndansetronAsSuspectDrug rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                     OpenPVSignal:refers_to_secondary_suspect_drug :ondansetron ;
+                                     OpenPVSignal:has_count 1 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports with ondansetron as suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                OpenPVSignal:has_count 15 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithSuicidalIdeationco-reported
+:reportsWithSuicidalIdeationco-reported rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                        OpenPVSignal:refers_to_adverse_effect :suicidalIdeation ;
+                                        OpenPVSignal:has_count 12 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with suicidal ideation co-reported " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithVortioxetineTheOnlySuspectDrugAndConcomittants
+:reportsWithVortioxetineTheOnlySuspectDrugAndConcomittants rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Reports_group ;
+                                                           OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                                           OpenPVSignal:refers_to_primary_suspect_drug :vortioxetine ;
+                                                           OpenPVSignal:has_count 71 ;
+                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                           rdfs:label "reports with vortioxetine the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithtime-toOnsetData
+:reportsWithtime-toOnsetData rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                             OpenPVSignal:time_to_onset :timeToOnsetInfo ;
+                             OpenPVSignal:has_count 12 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with time-to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reports_with_aggression
+:reports_with_aggression rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:refers_to_adverse_effect :aggression ;
+                         OpenPVSignal:has_count 44299 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with aggression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reports_with_info_for_age
+:reports_with_info_for_age rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                           OpenPVSignal:has_count 50 ;
+                           OpenPVSignal:has_max_age 90 ;
+                           OpenPVSignal:has_min_age 15 ,
+                                                    47 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with info for age" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reports_with_vortioxetine
+:reports_with_vortioxetine rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:refers_to_drug :vortioxetine ;
+                           OpenPVSignal:has_count 8790 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with vortioxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#salivation
+:salivation rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R52" ;
+            OpenPVSignal:has_MedDRA_code 10039424 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Salivary hypersecretion" ;
+            rdfs:label "salivation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#suicidalIdeation
+:suicidalIdeation rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R45851" ;
+                  OpenPVSignal:has_MedDRA_code 10042458 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Suicidal ideation" ;
+                  rdfs:label "suicidal ideation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#supporting_evidence
+:supporting_evidence rdf:type owl:NamedIndividual ,
+                              obo:OAE_0001197 ;
+                     OpenPVSignal:has_content "Supporting evidence for possible causality from the case series are the wide geographic distribution of cases, a lack of evidence that aggression was part of a larger clinical syndrome in 26 cases, vortioxetine as the only reported drug in 42 reports (and the only suspected drug in 29 additional reports with concomitant medication), and the documentation of a positive de-challenge in 15 cases." ;
+                     rdfs:label "supporting evidence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#the_Netherlands_Pharmacovigilance_Centre_Lareb
+:the_Netherlands_Pharmacovigilance_Centre_Lareb rdf:type owl:NamedIndividual ,
+                                                         prov:Organization ;
+                                                rdfs:label "the Netherlands Pharmacovigilance Centre Lareb" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#timeToOnsetInfo
+:timeToOnsetInfo rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 OpenPVSignal:has_content "Time- to-onset varied from 0 days to 4 months, with a median of 11 days." ;
+                 rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#usage_of_vortioxetine
+:usage_of_vortioxetine rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug_Usage ;
+                       OpenPVSignal:concerns_indication_for_use :majorDepressiveDisorder ;
+                       OpenPVSignal:refers_to_drug :vortioxetine ;
+                       rdfs:label "usage of vortioxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#usage_of_vortioxetine_for_report_1
+:usage_of_vortioxetine_for_report_1 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Usage ;
+                                    OpenPVSignal:concerns_indication_for_use :depression ;
+                                    OpenPVSignal:refers_to_drug :vortioxetine ;
+                                    rdfs:label "usage of vortioxetine for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#usage_of_vortioxetine_for_report_2
+:usage_of_vortioxetine_for_report_2 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Usage ;
+                                    OpenPVSignal:concerns_indication_for_use :acuteDepression ;
+                                    OpenPVSignal:refers_to_dosage :dosage_of_vortioxetine_for_report_2 ,
+                                                                  :dosage_second_of_vortioxetine_for_report_2 ;
+                                    OpenPVSignal:refers_to_drug :vortioxetine ;
+                                    rdfs:label "usage of vortioxetine for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#usage_of_vortioxetine_for_report_3
+:usage_of_vortioxetine_for_report_3 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Usage ;
+                                    OpenPVSignal:concerns_indication_for_use :majorDepression ;
+                                    OpenPVSignal:refers_to_dosage :dosage_fourth_of_vortioxetine_after_partial_dechallenge_for_report_3 ,
+                                                                  :dosage_initial_of_vortioxetine_for_report_3 ,
+                                                                  :dosage_second_of_vortioxetine_for_report_3 ,
+                                                                  :dosage_third_of_vortioxetine_for_report_3 ;
+                                    OpenPVSignal:refers_to_drug :vortioxetine ;
+                                    rdfs:label "usage of vortioxetine for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#usage_of_vortioxetine_for_report_4
+:usage_of_vortioxetine_for_report_4 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Usage ;
+                                    OpenPVSignal:concerns_indication_for_use :majorDepression ;
+                                    OpenPVSignal:refers_to_drug :vortioxetine ;
+                                    rdfs:label "usage of vortioxetine for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#vortioxetine
+:vortioxetine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:hasClass :SSRIs ;
+              OpenPVSignal:has_mechanism :Mechanism_of_vortioxetine ,
+                                         :Pharmogenomic_data_of_vortioxetine_in_lieu_with_aggression-Biological_plausibility ,
+                                         :Vortioxetine_triggering_aggression-Biological_plausibility ;
+              OpenPVSignal:has_ATC_code "N06AX26" ;
+              rdfs:label "vortioxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Aggression_known_ADR_for_escitalopram,_mirtazapine,__clonazepam,_lamotrigine_and_venlafaxine
+<http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#Aggression_known_ADR_for_escitalopram,_mirtazapine,__clonazepam,_lamotrigine_and_venlafaxine> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                obo:OAE_0001197 ,
+                                                                                                                                                                                OpenPVSignal:Warning_Information ;
+                                                                                                                                                                       OpenPVSignal:refers_to_drug :clonazepam ,
+                                                                                                                                                                                                   :escitalopram ,
+                                                                                                                                                                                                   :lamotrigine ,
+                                                                                                                                                                                                   :mirtazapine ,
+                                                                                                                                                                                                   :venlafaxine ;
+                                                                                                                                                                       OpenPVSignal:has_content "Aggression is a known ADR for escitalopram, mirtazapine, clonazepam, lamotrigine and venlafaxine" ;
+                                                                                                                                                                       rdfs:label "Aggression known ADR for escitalopram, mirtazapine,  clonazepam, lamotrigine and venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithclonazepam/lamotrigine/lurasidone/venlafaxineAsSuspectDrug
+<http://purl.org/OpenPVSignal/Signals/2019_5_vortioxetine_aggression.owl#reportsWithclonazepam/lamotrigine/lurasidone/venlafaxineAsSuspectDrug> rdf:type owl:NamedIndividual ,
+                                                                                                                                                         OpenPVSignal:Reports_group ;
+                                                                                                                                                OpenPVSignal:is_subgroup_of :overallCasesOfVortioxetineAndAggression ;
+                                                                                                                                                OpenPVSignal:refers_to_secondary_suspect_drug :clonazepam ,
+                                                                                                                                                                                              :lamotrigine ,
+                                                                                                                                                                                              :lurasidone ,
+                                                                                                                                                                                              :venlafaxine ;
+                                                                                                                                                OpenPVSignal:has_count 1 ;
+                                                                                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                rdfs:label "reports with clonazepam/lamotrigine/lurasidone/venlafaxine as suspect drug" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

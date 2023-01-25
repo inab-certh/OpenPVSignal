@@ -1,0 +1,1040 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage> .
+
+<http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                       mp: ;
+                                                                           rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255523/"^^xsd:anyURI ;
+                                                                           rdfs:label "Fesoterodine – GI haemorrhage"^^xsd:Literal ;
+                                                                           owl:versionInfo "draft-v0.95-20211013"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Comment
+:Comment rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Free_text_reporting_element ;
+         OpenPVSignal:has_content "The reports are notable for the short time to onset in four of seven reports and positive dechallenge (recovery after stopping fesoterodine) in five of seven reports. Two of the reports list concomitant non-steroidal anti-inflammatory drugs (NSAIDs) and three other reports list other concomitant medications (oxycodone, bendroflumethiazide, tramadol) described as being associated with \"gastric irritation\" in UK SPCs. No reports mention constipation as an ADR and no reports list concomitant CYP2D6 or CYP3A4 inhibitors." ;
+         rdfs:label "Comment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Conclusion_content
+:Conclusion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Conclusion ;
+                    OpenPVSignal:has_content "Reports in VigiBase lend support to an association between fesoterodine and GI bleeding. Key features in the reports include rapid time to onset, recovery on stopping fesoterodine, and co-administration with drugs known to cause gastric irritation, suggesting a possible mechanism for this adverse reaction." ;
+                    rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Discussion_content
+:Discussion_content rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Discussion ;
+                    mp:references :Ref.2 ,
+                                  :Ref.3 ,
+                                  :Ref.4 ,
+                                  :Ref.5 ;
+                    OpenPVSignal:has_content "Six reports in VigiBase contain sufficient information regarding time to onset and recovery after dechallenge to support an association between fesoterodine and gastrointestinal bleeding. Gastrointestinal adverse effects, including abdominal pain, diarrhoea, dyspepsia, and constipation, are common with fesoterodine2 and it is possible to envisage at least two mechanisms which may explain this association. A recent meta-analysis found that fesoterodine is associated with a doubling of risk of constipation compared to placebo. Chronic constipation is already a significant health problem in the elderly, the same group of patients prescribed fesoterodine, and constipation itself increases the risk of other sequelae such as haemorrhoids, which may result in bleeding.3 Secondly, drugs with antimuscarinic activity, such as fesoterodine, can reduce gastric motility, possibly reducing the absorption of concomitantly administered medications. The US product label for fesoterodine specifically mentions this as a possible mechanism for some drug interactions.4 In the case of drugs which are gastric irritants, this reduced absorption may result in increased gastric irritation, with consequent GI bleeding. Clearly, this will also apply to non-prescription medicines, such as 'over-the-counter' NSAIDs, which may not be captured in full on spontaneous ADR reports. VigiBase additionally contains 52 reports with the HLT GI haemorrhage in association with tolterodine, and a published review states that gastrointestinal haemorrhage and decreased GI motility have been reported infrequently in association with tolterodine use.5" ;
+                    rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :fesoterodine ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 12 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "12 mg" ;
+       rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dose3
+:Dose3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :fesoterodine ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 4 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "4 mg" ;
+       rdfs:label "Dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dose4
+:Dose4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :fesoterodine ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 8 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "8 mg" ;
+       rdfs:label "Dose 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dose5
+:Dose5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :fesoterodine ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 4 ;
+       OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+       OpenPVSignal:refers_to_dose_value "4 mg" ;
+       rdfs:label "Dose 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dose6
+:Dose6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :fesoterodine ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 8 ;
+       OpenPVSignal:refers_to_dose_value "8 mg" ;
+       rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Dr_Richard_Hill
+:Dr_Richard_Hill rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Author ;
+                 OpenPVSignal:has_first_name "Richard" ;
+                 OpenPVSignal:has_last_name "Hill" ;
+                 rdfs:label "Dr Richard Hill" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#FesoterodinePharmacology
+:FesoterodinePharmacology rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Free_text_reporting_element ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ,
+                                        :Ref.3 ;
+                          OpenPVSignal:has_content """Fesoterodine is a muscarinic receptor antagonist used for the treatment of symptoms associated with overactive bladder. The usual dose is 4-8 mg daily. Fesoterodine is rapidly hydrolysed to the active metabolite 5-HMT (the same active metabolite as tolterodine), which is subsequently metaboli¬sed by CYP3A4 and CYP2D6.1 Elevated plasma levels of 5-HMT may occur in the presence of potent inhibitors of CYP3A4 and CYP2D6.2
+Fesoterodine is said to have relatively increased selectivity for muscarinic M2 and M3 receptors and decreased selectivity for Ml receptors.3 This may result in less cognitive impairment compared to nonselective antimuscarinic drugs, but is not expected to reduce gastrointestinal adverse effects such as decreased gastrointestinal motility and constipation.""" ;
+                          rdfs:label "Fesoterodine pharmacology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#GIHaemorrhagePathobiology
+:GIHaemorrhagePathobiology rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Free_text_reporting_element ;
+                           OpenPVSignal:has_content "This association was detected for the WHO-ART High Level Term (HLT) GI haemorrhage, which contains the Preferred Terms (PTs) GI haemorrhage, haematemesis, haemorrhage rectum and melaena." ;
+                           rdfs:label "GI Haemorrhage pathobiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ,
+                    OpenPVSignal:Warning_Information ;
+           OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                 :constipation ,
+                                                 :diarrhea ,
+                                                 :dyspepsia ;
+           OpenPVSignal:refers_to_drug :fesoterodine ;
+           mp:references :Ref.2 ,
+                         :Ref.4 ;
+           OpenPVSignal:has_content "GI haemorrhage is not labelled in either the US product label4 or the UK Summary of Product Characteristics (SPC)2.  Labelled gastrointestinal adverse effects include abdominal pain, dyspepsia, constipation and diarrhoea. According to the US product label \"fesoterodine should be used with caution in patients with decreased gastrointestinal motility, such as those with severe constipation.\"4 In the UK SPC, \"decreased gastrointestinal motility\" is included under special warnings and precautions for use.2" ;
+           rdfs:label "Labelling for fesoterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Labelling_d
+:Labelling_d rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Literature_information ;
+             mp:references :Ref.2 ,
+                           :Ref.4 ;
+             OpenPVSignal:has_content "GI haemorrhage is not labelled in either the US product label4 or the UK Summary of Product Characteristics (SPC)2 . Labelled gastrointestinal adverse effects include abdominal pain, dyspepsia, constipation and diarrhoea. According to the US product label \"fesoterodine should be used with caution in patients with decreased gastrointestinal motility, such as those with severe constipation.\"4 In the UK SPC, \"decreased gastrointestinal motility\" is included under special warnings and precautions for use.2" ;
+             rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#MechanismOfFesoterodine
+:MechanismOfFesoterodine rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         mp:references :Ref.1 ,
+                                       :Ref.2 ,
+                                       :Ref.3 ;
+                         OpenPVSignal:has_content "Fesoterodine is a muscarinic receptor antagonist used for the treatment of symptoms associated with overactive bladder. The usual dose is 4-8 mg daily. Fesoterodine is rapidly hydrolysed to the active metabolite 5-HMT (the same active metabolite as tolterodine), which is subsequently metaboli¬sed by CYP3A4 and CYP2D6.1 Elevated plasma levels of 5-HMT may occur in the presence of potent inhibitors of CYP3A4 and CYP2D6.2 Fesoterodine is said to have relatively increased selectivity for muscarinic M2 and M3 receptors and decreased selectivity for Ml receptors.3 This may result in less cognitive impairment compared to nonselective antimuscarinic drugs, but is not expected to reduce gastrointestinal adverse effects such as decreased gastrointestinal motility and constipation." ;
+                         rdfs:label "Mechanism of Fesoterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#NSAIDs
+:NSAIDs rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:DrugClass ;
+        OpenPVSignal:has_ATC_code "M01A" ;
+        rdfs:label "NSAIDs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 68 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 64 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 69 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Review of fesoterodine. Expert Opin. Drug Saf. 2011. 10(5): 805-808." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "SPC for fesoterodine (TOVIAZ). URL: http://www.medicines.org.uk/emc Accessed: 2012-02-09" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Overactive bladder drugs and constipation: a meta-analy-sis of randomized, placebo-controlled trials. Dig Dis Sci 2011; 56: 7-18." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US product label for fesoterodine (TOVIAZ). URL: http://www.accessdata.fda.gov/scripts/cder/drugs atfda Accessed: 2012-02-09" ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Garely AD, Burrows L. Benefit-Risk Assessment of Tolterodine in the Treatment of Overactive Bladder in adults. Drug Safety 2004; 27 (13): 1043-1057" ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ,
+                                               :ileus ,
+                                               :nausea ;
+         OpenPVSignal:refers_to_concomitant_drug :aspirin ,
+                                                 :atenolol ,
+                                                 :nifedipine ,
+                                                 :nitrendipine ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+         OpenPVSignal:time_to_onset :timeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylcysteine ,
+                                                 :bisoprolol ,
+                                                 :diclofenac ,
+                                                 :ramipril ,
+                                                 :zolpidem ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "hospitalization for treatment" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :diarrhea ,
+                                               :melena ;
+         OpenPVSignal:refers_to_concomitant_drug :amitriptyline ,
+                                                 :codeine ,
+                                                 :oxycodone ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_3 ;
+         OpenPVSignal:time_to_onset :timeToOnset3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :melena ;
+         OpenPVSignal:refers_to_concomitant_drug :cimicifuga ,
+                                                 :estriol ,
+                                                 :progesterone ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_4 ;
+         OpenPVSignal:time_to_onset :timeToOnset4 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :haemorrhageRectum ,
+                                               :melena ;
+         OpenPVSignal:refers_to_concomitant_drug :atenolol ,
+                                                 :bendroflumethiazide ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_5 ;
+         OpenPVSignal:time_to_onset :timeToOnset5 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalDistension ,
+                                               :gastrointestinalHemorrhage ;
+         OpenPVSignal:refers_to_concomitant_drug :gabapentin ,
+                                                 :sertraline ,
+                                                 :tramadol ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_6 ;
+         OpenPVSignal:time_to_onset :timeToOnset6 ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :diarrheaHemorrhagic ,
+                                               :gastrointestinalHemorrhage ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "This signal was identified during a pilot study investigating electronic health records (EHRs) as an additional source of reference during signal detection in the WHO Global ICSR database, VigiBase™. The EHRs used in the study came from The Health Improvement Network (THIN), an electronic medical record data resource covering three and a half million active patients in the UK. After elimination of one duplicate, VigiBase contains seven reports of GI haemorrhage following fesoterodine use, received from five countries (Germany and the US two each; Netherlands, Switzerland and UK one each) as shown in Table 1." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Response_from_Pfizer
+:Response_from_Pfizer rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                      OpenPVSignal:refers_to_pharmacovigilance_signal_report <http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Fesoterodine_–_GI_haemorrhage> ;
+                      OpenPVSignal:has_content """Search and analysis/review of the medical literature and the Pfizer clinical and safety databases for gastrointestinal haemorrhage-related terms do not indicate a risk of gastrointestinal haemorrhage associated with fesoterodine and therefore there are no newly identified issues that may impact on the benefit/risk profile for fesoterodine. 
+Background 
+The Uppsala Monitoring Centre (UMC) has identified 7 Individual Case Safety Reports (ICSR) related to Gastrointestinal haemorrhage from patients treated with fesoterodine (Toviaz) in the WHO ICSR VigiBase™ database.1 Six of these cases were reported by the UMC to contain sufficient information regarding time to onset and recovery after de-challenge to support a possible association between fesoterodine and gastrointestinal bleeding. The UMC proposed theoretical mechanisms by which drugs with antimuscarinic activity, such as fesoterodine, may increase gastrointestinal bleeding by increasing the risk of constipation and may also reduce gastrointestinal motility leading to increased exposure of the gastrointestinal tract to concomitantly-administered gastric irritants such as NSAIDs. 
+Response 
+Pfizer has conducted a search of the relevant medical literature and the company safety and clinical databases to identify cases of gastrointestinal haemorrhage using the Gastrointestinal haemorrhage Standardized MedDRA Query (SMQ, version 15.0, narrow event terms). A broad search of the medical literature for gastrointestinal haemorrhage-related events reported with urinary antimuscarinic drugs (including fesoterodine, tolterodine, solifenacin, darifenacin and oxybuttynin using both generic and trade names) was conducted to assess whether there was evidence for association with the antimuscarinic mechanism of action. This search identified a published review, also identified in the WHO report, where reference is made to the Pfizer Periodic Safety Update Report in which gastrointestinal haemorrhage and decreased GI motility were reported infrequently in association with tolterodine use.2 There were no other reports in the literature indicative of an association between gastrointestinal haemorrhage events and use of antimuscarinic drugs, including fesoterodine, for treatment of overactive bladder. The Pfizer safety database contains cases of Adverse Events reported spontaneously, cases reported from Regulatory Authorities, cases published in the medical literature, and cases of Serious Adverse Events reported from clinical trials and other solicited sources. This database was searched for events contained within the Gastrointestinal haemorrhage SMQ specifically from cumulative fesoterodine data (from the International Birth Date 20th April 2007 through 28th May 2012). Of the 3,446 fesoterodine ICSRs in this database, 17 gastrointestinal haemorrhage-related events (0.5% of all fesoterodine cases in the database) were identified. Nine of these cases were consumer reports without medical confirmation. There were no deaths in this dataset and six of the cases reported hospitalization. Only two of the cases co-reported constipation with the gastrointestinal haemorrhage term indicating that the two outcomes are not necessarily linked. Six of the 7 cases identified by UMC appear to be included in this dataset. The reported events did not indicate a specific pattern and included (n): Diarrhoea haemorrhagic (1), Gastric haemorrhage (1), Gastrointestinal haemorrhage (3), Haematemesis (2), Haematochezia (5), Rectal haemorrhage (2) and Ulcer haemorrhage (3). The clinical database of all completed double-blind and open label Phase 2-4 fesoterodine trials was searched for terms contained within the Gastrointestinal haemorrhage SMQ. Of 9,762 subjects exposed to fesoterodine, 16 subjects (0.2%) reported relevant events, only one of which was considered to be treatment-related (a case of Gastrointestinal haemorrhage). In double-blind clinical trials, 7 subjects of 6,132 exposed to fesoterodine (0.11%) and 7/3,993 (0.18%) subjects exposed to placebo experienced gastrointestinal haemorrhage-related adverse events. In subjects for whom patient profiles are available, the gastrointestinal event was reported with constipation by 2/15 subjects exposed to fesoterodine and 2/6 subjects exposed to placebo. Treatment emergent events in the fesoterodine exposed clinical dataset included the following (n): Anal haemorrhage (1), Gastrointestinal haemorrhage (1, considered treatment-related), Haematemesis (1), Haematochezia (4), Hemorrhoidal haemorrhage (1), Occult blood positive (1), Rectal haemorrhage (7).
+Conclusions 
+The reporting rate of gastrointestinal haemorrhage-related events in the fesoterodine safety and clinical databases is very low and there is insufficient evidence to link these events to the use of fesoterodine. For those events identified by the UMC that were present in the Pfizer safety database and in which gastrointestinal irritant concomitant medications were present, the case narratives do not clarify whether or not the concomitant medication could be directly responsible for the event. In addition, none of the narratives for these cases state whether the concomitant medications were also discontinued at the same time as fesoterodine, which may have led to the symptom improvement on de-challenge. Only two of the cases in the Pfizer safety database report constipation in addition to the gastrointestinal haemorrhage event whilst none of the cases identified in the UMC search report constipation events. Similarly, in clinical trials, gastrointestinal haemorrhage events were not associated with constipation in subjects exposed to fesoterodine in comparison with subjects exposed to placebo. In double-blind clinical trials, gastrointestinal haemorrhage-related events did not occur more frequently in subjects exposed to fesoterodine compared with those exposed to placebo. Review of cases of gastrointestinal haemorrhage-related events in the literature for antimuscarinic drugs prescribed for overactive bladder, and in the Pfizer safety and clinical databases for fesoterodine does not indicate a risk of gastrointestinal haemorrhage associated with fesoterodine use. Pfizer will continue to monitor all adverse events reported to its clinical and safety databases and will ensure that product labeling appropriately reflects the benefit / risk profile for fesoterodine.
+References 
+WHO Pharmaceuticals Newsletter (WHO-PN), June 2012. Garely AD, Burrows L. Benefit-Risk Assessment of Tolterodine in the Treatment of Overactive Bladder in Adults. Drug Safety 2004; 27 (13): 1043-1057""" ;
+                      rdfs:label "Response from Pfizer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "VigiBase™ contains seven reports of gastrointestinal haemorrhage following use of the muscarinic receptor antagonist fesoterodine. A number of the reports describe short time to onsets and in most cases recovery occurred on stopping fesoterodine. A plausible mechanism for this adverse reaction involves reduction in gastric motility and consequent increased exposure to gastric irritants, particularly concomitant drugs." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#UK_SPCs_for_drugs_associated_with_gastric_irritation
+:UK_SPCs_for_drugs_associated_with_gastric_irritation rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Structured_Product_Labels_information ;
+                                                      OpenPVSignal:refers_to_adverse_effect :gastricIrritation ;
+                                                      OpenPVSignal:refers_to_class :NSAIDs ;
+                                                      OpenPVSignal:refers_to_drug :bendroflumethiazide ,
+                                                                                  :oxycodone ,
+                                                                                  :tramadol ;
+                                                      OpenPVSignal:has_content "Two of the reports list concomitant non-steroidal anti-inflammatory drugs (NSAIDs) and three other reports list other concomitant medications (oxycodone, bendroflumethiazide, tramadol) described as being associated with \"gastric irritation\" in UK SPCs." ;
+                                                      rdfs:label "UK SPCs for drugs associated with gastric irritation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#abdominalDistension
+:abdominalDistension rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R140" ;
+                     OpenPVSignal:has_MedDRA_code 10000060 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Abdominal distension" ;
+                     rdfs:label "abdominal distension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R109" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#acetylcysteine
+:acetylcysteine rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "R05CB01" ,
+                                          "S01XA08" ,
+                                          "V03AB23" ;
+                rdfs:label "acetylcysteine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#amitriptyline
+:amitriptyline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N06AA09" ,
+                                         "N06CA01" ;
+               rdfs:label "amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#aspirin
+:aspirin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "B01AC06" ;
+         rdfs:label "aspirin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#atenolol
+:atenolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AB03" ,
+                                    "C07BB03" ,
+                                    "C07CB03" ,
+                                    "C07CB53" ,
+                                    "C07DB01" ,
+                                    "C07FB03" ;
+          rdfs:label "atenolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#bendroflumethiazide
+:bendroflumethiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA01" ,
+                                               "C03AB01" ,
+                                               "C03EA13" ,
+                                               "G01AE10" ;
+                     rdfs:label "bendroflumethiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#cimicifuga
+:cimicifuga rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G02C" ;
+            rdfs:label "cimifuga racemosa" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#codeine
+:codeine rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "N02AA59" ,
+                                   "N02AA79" ,
+                                   "R05DA04" ;
+         rdfs:label "codeine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K590" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#diarrheaHemorrhagic
+:diarrheaHemorrhagic rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "H532" ;
+                     OpenPVSignal:has_MedDRA_code 10012741 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea haemorrhagic" ;
+                     rdfs:label "diarrhea hemorrhagic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#diclofenac
+:diclofenac rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D11AX18" ,
+                                      "M01AB05" ,
+                                      "M01AB55" ,
+                                      "M02AA15" ,
+                                      "S01BC03" ,
+                                      "S01CC01" ;
+            rdfs:label "diclofenac" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#drug-drug_pharmacokinetic_interaction
+:drug-drug_pharmacokinetic_interaction rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Adverse_Effect ;
+                                       OpenPVSignal:has_MedDRA_code 10065994 ;
+                                       OpenPVSignal:has_MedDRA_prefered_term "Drug-drug pharmacokinetic interaction" ;
+                                       rdfs:label "drug-drug pharmacokinetic interaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#dyspepsia
+:dyspepsia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K30" ;
+           OpenPVSignal:has_MedDRA_code 10013946 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dyspepsia" ;
+           rdfs:label "dyspepsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#estriol
+:estriol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "G03CA04" ,
+                                   "G03CC06" ;
+         rdfs:label "estriol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#fesoterodine
+:fesoterodine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :MechanismOfFesoterodine ,
+                                         <http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#1stProposedMechanismForFesoterodineCausalityBehindGIHaemorrhage> ,
+                                         <http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#2ndProposedMechanismForFesoterodineCausalityBehindGIHaamoorage> ;
+              OpenPVSignal:has_ATC_code "G04BD11" ;
+              rdfs:label "fesoterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#gabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#gastricIrritation
+:gastricIrritation rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10017791 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Gastric irritation" ;
+                   rdfs:label "gastric irritation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#gastric_motility_reduced
+:gastric_motility_reduced rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10017978 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal motility disorder NOS" ;
+                          rdfs:label "gastric motility reduced" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#gastrointestinalBleeding
+:gastrointestinalBleeding rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "K922" ;
+                          OpenPVSignal:has_MedDRA_code 10017936 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal bleeding" ;
+                          rdfs:label "gastrointestinal bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#gastrointestinalHemorrhage
+:gastrointestinalHemorrhage rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "K922" ;
+                            OpenPVSignal:has_MedDRA_code 10017955 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal haemorrhage" ;
+                            rdfs:label "gastrointestinal hemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#haemorrhageRectum
+:haemorrhageRectum rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "K625" ;
+                   OpenPVSignal:has_MedDRA_code 10038063 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Rectal haemorrhage" ;
+                   rdfs:label "haemorrhage rectum" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#hematemesis
+:hematemesis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "K920" ;
+             OpenPVSignal:has_MedDRA_code 10018830 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Haematemesis" ;
+             rdfs:label "hematemesis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#hemorrhoids
+:hemorrhoids rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "K648" ;
+             OpenPVSignal:has_MedDRA_code 10019022 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Haemorrhoids" ;
+             rdfs:label "hemorrhoids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#ileus
+:ileus rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "K56.7" ;
+       OpenPVSignal:has_MedDRA_code 10021328 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Ileus" ;
+       rdfs:label "ileus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#melena
+:melena rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "K921" ;
+        OpenPVSignal:has_MedDRA_code 10027141 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Melaena" ;
+        rdfs:label "melena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#nifedipine
+:nifedipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA05" ,
+                                      "C08CA55" ,
+                                      "C08GA01" ;
+            rdfs:label "nifedipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#nitrendipine
+:nitrendipine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "C08CA08" ,
+                                        "C09BB06" ;
+              rdfs:label "nitrendipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#overactiveBladder
+:overactiveBladder rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "N32.81" ;
+                   OpenPVSignal:has_MedDRA_code 10020853 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hypertonic bladder" ;
+                   rdfs:label "overactive bladder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#oxycodone
+:oxycodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02AA05" ,
+                                     "N02AA55" ;
+           rdfs:label "oxycodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#progesterone
+:progesterone rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "G03DA04" ,
+                                        "G03FA04" ;
+              rdfs:label "progesterone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#published_review_for_tolterodine
+:published_review_for_tolterodine rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ;
+                                  OpenPVSignal:refers_to_adverse_effect :gastric_motility_reduced ,
+                                                                        :gastrointestinalHemorrhage ;
+                                  OpenPVSignal:refers_to_drug :tolterodine ;
+                                  mp:references :Ref.5 ;
+                                  OpenPVSignal:has_content """a published review states that gastrointestinal haemorrhage and decreased GI 
+motility have been reported infrequently in association with tolterodine use.5""" ;
+                                  rdfs:label "published review for tolterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Comment ,
+                                                   :Conclusion_content ,
+                                                   :Discussion_content ,
+                                                   :FesoterodinePharmacology ,
+                                                   :GIHaemorrhagePathobiology ,
+                                                   :Reports_in_Vigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ;
+          OpenPVSignal:is_supported_by_statistical_entity :reportsForTolterodineAndGIHaemorrhage ,
+                                                          :reportsFromGermany ,
+                                                          :reportsFromNetherlands ,
+                                                          :reportsFromSwitzerland ,
+                                                          :reportsFromUk ,
+                                                          :reportsFromuS ,
+                                                          :reportsInVigibaseForFesoterodineAndGiHaemorrhage ,
+                                                          :reports_with_positive_dechallenge ;
+          OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ,
+                                                :haemorrhageRectum ,
+                                                :hematemesis ,
+                                                :melena ;
+          OpenPVSignal:refers_to_primary_suspect_drug :fesoterodine ;
+          mp:supportedByData :Labelling ,
+                             :UK_SPCs_for_drugs_associated_with_gastric_irritation ,
+                             :published_review_for_tolterodine ;
+          OpenPVSignal:initially_identified_on "01/12/2012" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsForTolterodineAndGIHaemorrhage
+:reportsForTolterodineAndGIHaemorrhage rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ;
+                                       OpenPVSignal:refers_to_drug :tolterodine ;
+                                       OpenPVSignal:has_count 52 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports for tolterodine and GI haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsFromNetherlands
+:reportsFromNetherlands rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Netherlands" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from netherlands" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsFromSwitzerland
+:reportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsFromUk
+:reportsFromUk rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+               OpenPVSignal:has_count 1 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsFromuS
+:reportsFromuS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+               OpenPVSignal:has_count 2 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reportsInVigibaseForFesoterodineAndGiHaemorrhage
+:reportsInVigibaseForFesoterodineAndGiHaemorrhage rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:refers_to_adverse_effect :gastrointestinalHemorrhage ;
+                                                  OpenPVSignal:refers_to_drug :fesoterodine ;
+                                                  OpenPVSignal:has_count 7 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports in vigibase for fesoterodine and gi haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#reports_with_positive_dechallenge
+:reports_with_positive_dechallenge rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :reportsInVigibaseForFesoterodineAndGiHaemorrhage ;
+                                   OpenPVSignal:has_count 5 ;
+                                   OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                   rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#timeToOnset1
+:timeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "62 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 62 ;
+              rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#timeToOnset3
+:timeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "3 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 3 ;
+              rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#timeToOnset4
+:timeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "2 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 2 ;
+              rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#timeToOnset5
+:timeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "7 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 7 ;
+              rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#timeToOnset6
+:timeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "2 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 2 ;
+              rdfs:label "time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#tolterodine
+:tolterodine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "G04BD07" ;
+             rdfs:label "tolterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ,
+                                    "N02AX52" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose1 ;
+                    OpenPVSignal:refers_to_drug :fesoterodine ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_for_report_3
+:usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose3 ;
+                    OpenPVSignal:refers_to_drug :fesoterodine ;
+                    rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_for_report_4
+:usage_for_report_4 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose4 ;
+                    OpenPVSignal:refers_to_drug :fesoterodine ;
+                    rdfs:label "usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_for_report_5
+:usage_for_report_5 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose5 ;
+                    OpenPVSignal:refers_to_drug :fesoterodine ;
+                    rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_for_report_6
+:usage_for_report_6 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose6 ;
+                    OpenPVSignal:refers_to_drug :fesoterodine ;
+                    rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#usage_of_fesoterodine
+:usage_of_fesoterodine rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug_Usage ;
+                       OpenPVSignal:concerns_indication_for_use :overactiveBladder ;
+                       OpenPVSignal:refers_to_drug :fesoterodine ;
+                       rdfs:label "usage of fesoterodine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#1stProposedMechanismForFesoterodineCausalityBehindGIHaemorrhage
+<http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#1stProposedMechanismForFesoterodineCausalityBehindGIHaemorrhage> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                                                                                          OpenPVSignal:refers_to_adverse_effect :constipation ,
+                                                                                                                                                                                :gastrointestinalBleeding ,
+                                                                                                                                                                                :hemorrhoids ;
+                                                                                                                                          mp:references :Ref.3 ;
+                                                                                                                                          OpenPVSignal:has_content "A recent meta-analysis found that fesoterodine is associated with a doubling of risk of constipation compared to placebo. Chronic constipation is already a significant health problem in the elderly, the same group of patients prescribed fesoterodine, and constipation itself increases the risk of other sequelae such as haemorrhoids, which may result in bleeding.3" ;
+                                                                                                                                          rdfs:label "1st Proposed mechanism for fesoterodine causality behind GI Haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#2ndProposedMechanismForFesoterodineCausalityBehindGIHaamoorage
+<http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#2ndProposedMechanismForFesoterodineCausalityBehindGIHaamoorage> rdf:type owl:NamedIndividual ,
+                                                                                                                                                  OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                                                                                         OpenPVSignal:refers_to_adverse_effect :drug-drug_pharmacokinetic_interaction ,
+                                                                                                                                                                               :gastricIrritation ,
+                                                                                                                                                                               :gastric_motility_reduced ,
+                                                                                                                                                                               :gastrointestinalHemorrhage ;
+                                                                                                                                         mp:references :Ref.4 ;
+                                                                                                                                         OpenPVSignal:has_content """Secondly, drugs with antimuscarinic activity, such as fesoterodine, can reduce gastric motility, possibly reducing the absorption of concomitantly administered medications. The US product label for fesoterodine specifically mentions this as a possible mechanism for some drug interactions. 
+In the case of drugs which are gastric irritants, this reduced absorption may result in increased gastric irritation, with consequent GI bleeding.""" ;
+                                                                                                                                         rdfs:label "2nd Proposed mechanism for fesoterodine causality behind GI Haamoorage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Fesoterodine_–_GI_haemorrhage
+<http://purl.org/OpenPVSignal/Signals/2012_6_fesoterodine_GI_haemorrhage#Fesoterodine_–_GI_haemorrhage> rdf:type owl:NamedIndividual ,
+                                                                                                                 OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                                                        OpenPVSignal:refers_to_author :Dr_Richard_Hill ;
+                                                                                                        OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                                                        OpenPVSignal:has_creation_date "01/12/2012" ;
+                                                                                                        OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                                                                                        rdfs:label "Fesoterodine – GI haemorrhage" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Fesoterodine rdfs:label "fesoterodine" ;
+              OpenPVSignal:has_ATC_code "G04BD11" .
+
+
+:GIHaemorrhage rdfs:label "GI haemorrhage" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

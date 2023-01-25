@@ -1,0 +1,1883 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction> rdf:type owl:Ontology ;
+                                                                              owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                              rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255519"^^xsd:anyURI ;
+                                                                              rdfs:label "Tapentadol and Aggressive reaction"^^xsd:Literal ;
+                                                                              owl:versionInfo "draft-v0.95-20210614"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Common_ADR_for_tapentadol
+:Common_ADR_for_tapentadol rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Clinical_trial_information ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_drug :tapentadol ;
+                           OpenPVSignal:refers_to_known_adverse_effect :anxiety ,
+                                                                       :constipation ,
+                                                                       :decreasedAppetite ,
+                                                                       :depressedMood ,
+                                                                       :diarrhoea ,
+                                                                       :disturbanceInAttention ,
+                                                                       :dizziness ,
+                                                                       :dryMouth ,
+                                                                       :fatigue ,
+                                                                       :flushing ,
+                                                                       :headache ,
+                                                                       :hyperhydrosis ,
+                                                                       :involuntaryMuscleContractions ,
+                                                                       :myalgia ,
+                                                                       :nausea ,
+                                                                       :nervousness ,
+                                                                       :pruritus ,
+                                                                       :restlessness ,
+                                                                       :sleepDisorder ,
+                                                                       :somnolence ,
+                                                                       :tremor ,
+                                                                       :vertigo ,
+                                                                       :vomiting ;
+                           mp:references :Ref.1 ;
+                           OpenPVSignal:has_content "Very common adverse reactions observed in clinical trials with tapentadol include gastrointestinal effects such as nausea and constipation and nervous system disorders such as dizziness, headache and somnolence. Common reactions include gastrointestinal effects such as vomiting, dry mouth and diarrhoea, nervous system disorders such as disturbance in attention, tremor and involuntary muscle contractions, psychiatric effects such as anxiety, depressed mood, sleep disorder, nervousness, restlessness, skin disorders such as pruritus and hyperhydrosis, fatigue, myalgia, vertigo, flushing and decreased appetite.1" ;
+                           rdfs:label "Common ADR for tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content "Case reports in VigiBase are suggestive that there is a signal for the association of tapentadol and aggressive reaction. Tapentadol was the only drug suspected in 10 of the 12 cases. Time to onset was reported in three of the ICSRs and in each of those, onset occurred within two days of the initiation of tapentadol therapy, consistent with a drug-induced effect. Dechallenge is also suggestive of a signal. The outcome was stated in 10 ICSRs. The patients were reported as recovered or recovering in nine cases and not recovered in the other case. In eight of the cases where recovery was documented, the drug was reported to have been withdrawn as well as in the other report where the patient had not recovered. Three of the ICSRs describe serotonin syndrome and it is possible that aggressive reaction may be a component of serotonin syndrome. However, the absence of a concomitant serotonergic drug in two of these cases would make the diagnosis of serotonin syndrome uncertain. It is not surprising that neuropsychiatric effects may be associated with a drug such as tapentadol which combines both noradrenaline reuptake inhibition and mu-opioid receptor agonist activity. In addition, in the product information, psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, abnormal dreams and euphoria are described as uncommon. The occurrence of aggressive reaction as an adverse reaction would not be inconsistent with these observations. In VigiBase, many psychiatric reactions have been reported for tapentadol. These include hallucinations (which are perception disturbances) (110 cases), confusion (which includes disorientation) (100 cases), agitation (which includes restlessness) (60 cases), depression including depression aggravated (51), anxiety (36), nervousness (22), sleep disorder (12), abnormal dreams (five) and euphoria (five). All of these terms are considered as common and uncommon in the product information and the presence of 12 ICSRs of aggressive reaction is consistent with the proposal that aggressive reaction is a signal." ;
+                         rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Dr_Ian_Boyd
+:Dr_Ian_Boyd rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Author ;
+             OpenPVSignal:has_first_name "Ian" ;
+             OpenPVSignal:has_last_name "Boyd" ;
+             rdfs:label "Dr Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#IC025OfTapentadolAndAggressiveReaction
+:IC025OfTapentadolAndAggressiveReaction rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+                                        OpenPVSignal:refers_to_drug :tapentadol ;
+                                        OpenPVSignal:refers_to_information_component :ICOfTapentadolAndAggressiveReaction ;
+                                        OpenPVSignal:has_value 0.33 ;
+                                        OpenPVSignal:refers_to_number_of_reports 12 ;
+                                        rdfs:label "IC025 of tapentadol and aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ICOfTapentadolAndAggressiveReaction
+:ICOfTapentadolAndAggressiveReaction rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                     OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ;
+                                     OpenPVSignal:refers_to_drug :tapentadol ;
+                                     OpenPVSignal:has_value 1.26 ;
+                                     OpenPVSignal:refers_to_number_of_reports 12 ;
+                                     rdfs:label "IC of tapentadol and aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ;
+                     OpenPVSignal:has_content """Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. It has 18 times less binding affinity than morphine to the human mu-opioid receptor but was only two-three times less potent in producing analgesia in animal models (on a dose per body weight basis). This low in vivo potency difference is consistent with its two mechanisms of action.
+Tapentadol has been shown to inhibit noradrenaline reuptake in the brain of rats resulting in increased noradrenaline concentrations. In preclinical models, the analgesic activity due to the mu-opioid receptor agonist
+ 
+activity of tapentadol can be antagonized by selective mu-opioid receptor antagonists (e.g., naloxone), whereas the noradrenaline reuptake inhibition is sensitive to noradrenaline modulators.1
+Tapentadol is indicated for the management of moderate to severe chronic pain unresponsive to non- narcotic analgesia.1
+Very common adverse reactions observed in clinical trials with tapentadol include gastrointestinal effects such as nausea and constipation and nervous system disorders such as dizziness, headache and somnolence. Common reactions include gastrointestinal effects such as vomiting, dry mouth and diarrhoea, nervous system disorders such as disturbance in attention, tremor and involuntary muscle contractions, psychiatric effects such as anxiety, depressed mood, sleep disorder, nervousness, restlessness, skin disorders such as pruritus and hyperhydrosis, fatigue, myalgia, vertigo, flushing and decreased appetite.1
+Aggressive reaction, or aggression, is one of a number of ill-defined behaviour and socialisation disturbances. Aggression can be either proactive or reactive.2 Proactive aggression is goal-oriented requiring neither provocation nor anger. It can be directed towards possessing objects or dominating people. Reactive aggression involves angry outbursts in response to provocation.2 However, regardless of its psychiatric definition, an aggressive reaction is a clinical judgment.""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ;
+                        OpenPVSignal:has_content "The product literature does not refer to aggressive reaction. However, other psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, abnormal dreams and euphoria are described as uncommon.1 There have been no reports in the literature of aggressive reaction in association with tapentadol." ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#MechanismOfTapentadol
+:MechanismOfTapentadol rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       mp:references :Ref.1 ;
+                       OpenPVSignal:has_content """Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. It has 18 times less binding affinity than morphine to the human mu-opioid receptor but was only two-three times less potent in producing analgesia in animal models (on a dose per body weight basis). This low in vivo potency difference is consistent with its two mechanisms of action. Tapentadol has been shown to inhibit noradrenaline reuptake in the brain of rats resulting in increased noradrenaline concentrations. In preclinical models, the analgesic activity due to the mu-opioid receptor agonist activity of tapentadol can be antagonized by 
+selective mu-opioid receptor antagonists (e.g., naloxone), whereas the noradrenaline reuptake inhibition is sensitive to noradrenaline modulators.""" ;
+                       rdfs:label "Mechanism of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Oral_administration_of_tapentadol
+:Oral_administration_of_tapentadol rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Drug_Intake_Form ;
+                                   OpenPVSignal:refers_to_drug :tapentadol ;
+                                   OpenPVSignal:refers_to_form_of_intake "oral" ;
+                                   rdfs:label "Oral administration of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Oral_usage_of_tapentadol
+:Oral_usage_of_tapentadol rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Drug_Usage ;
+                          OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_tapentadol ;
+                          OpenPVSignal:refers_to_drug :tapentadol ;
+                          rdfs:label "Oral usage of tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 60 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 63 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 63 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 57 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Precaution_in_the_Australian_Product_Information
+:Precaution_in_the_Australian_Product_Information rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Structured_Product_Labels_information ,
+                                                           OpenPVSignal:Warning_Information ;
+                                                  OpenPVSignal:refers_to_drug :tapentadol ;
+                                                  OpenPVSignal:refers_to_unconfirmed_adverse_effect :serotoninSyndrome ;
+                                                  mp:references :Ref.1 ;
+                                                  OpenPVSignal:has_content "There is a precaution in the Australian Product Information concerning serotonin syndrome which notes that isolated cases of serotonin syndrome have been reported in association with tapentadol but a causal association has not been established.1" ;
+                                                  rdfs:label "Precaution in the Australian Product Information" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Product_information_for_tapentadol
+:Product_information_for_tapentadol rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Structured_Product_Labels_information ;
+                                    OpenPVSignal:refers_to_drug :tapentadol ;
+                                    OpenPVSignal:refers_to_known_adverse_effect :abnormalDreams ,
+                                                                                :agitation ,
+                                                                                :anxiety ,
+                                                                                :confusion ,
+                                                                                :depressedMood ,
+                                                                                :disorientation ,
+                                                                                :euphoria ,
+                                                                                :nervousness ,
+                                                                                :perceptionDisturbances ,
+                                                                                :restlessness ,
+                                                                                :sleepDisorder ;
+                                    OpenPVSignal:has_content "In addition, in the product information, psychiatric reactions such as anxiety, depressed mood, sleep disorder, nervousness and restlessness are described as common and disorientation, confusion, agitation, perception disturbances, abnormal dreams and euphoria are described as uncommon. The occurrence of aggressive reaction as an adverse reaction would not be inconsistent with these observations" ;
+                                    rdfs:label "Product information for tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Therapeutic Goods Administration. Product Information for Palexia, CSL Limited, 5 November 2012. URL: https://www.ebs.tga.gov.au/ebs/picmi/ picmirepository.nsf/pdf?OpenAgent&id=CP-2011- PI-02119-3. Accessed: 18 February 2013." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Vitaro F, Gendreau PL, Tremblay RA, Oligny P. Reactive and proactive aggression differentially predict later con- duct problems. J Child Psychol Psychiatr. 1998;39:377- 85." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "U.S. National Library of Medicine. PubMed Health. Serotonin syndrome. URL: http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0 004531. Accessed: 20 February 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :aggressiveReaction ,
+                                               :confusion ,
+                                               :mentalDeficiency ,
+                                               :nervousness ;
+         OpenPVSignal:refers_to_concomitant_drug :fentanyl ,
+                                                 :gabapentin ,
+                                                 :lorazepam ,
+                                                 :olanzapine ,
+                                                 :paroxetine ,
+                                                 :tricyclicAntidepressants ,
+                                                 :zolpidem ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                                :anxiety ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                                :ataxia ,
+                                                :confusion ,
+                                                :hyperkinesia ,
+                                                :serotoninSyndrome ,
+                                                :speechDisorder ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                                :agitation ,
+                                                :diarrhoea ,
+                                                :sweatingIncreased ;
+          OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                  :carbamazepine ,
+                                                  :folicAcid ,
+                                                  :glycerylTrinitrate ,
+                                                  :isosorbideMononitrate ,
+                                                  :lofepramine ,
+                                                  :metoprolol ,
+                                                  :morphine ,
+                                                  :paracetamol ,
+                                                  :testosterone ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :hallucination ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :confusion ,
+                                               :delusion ,
+                                               :hallucination ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :citalopram ,
+                                                 :etoricoxib ,
+                                                 :lercanidipine ,
+                                                 :levothyroxine ,
+                                                 :metamizole ,
+                                                 :metoprolol ,
+                                                 :simvastatin ,
+                                                 :sitagliptin ,
+                                                 :torasemide ,
+                                                 :xipamide ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#insulinaspart/insulinAspartProtamine> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :cardiacArrestIncident ,
+                                               :coma ,
+                                               :dyspnea ,
+                                               :hypotension ,
+                                               :non-DrugAllergy ,
+                                               :oedemaGeneralised ,
+                                               :pruritus ,
+                                               :urinaryIncontinence ,
+                                               :weightIncrease ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :corticosteroids ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :depersonalization ,
+                                               :hypertension ,
+                                               :rigors ,
+                                               :serotoninSyndrome ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :bupropion ,
+                                                       :fluoxetine ,
+                                                       :tizanidine ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :convulsionsGrandMal ,
+                                               :dyskinesia ,
+                                               :speechDisorder ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :levothyroxine ,
+                                                 :lisinopril ,
+                                                 :metformin ,
+                                                 :metoprolol ,
+                                                 :simvastatin ,
+                                                 :sitagliptin ,
+                                                 :tamsulosin ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abnormalBehaviour ,
+                                               :aggressiveReaction ,
+                                               :agitation ,
+                                               :ataxia ,
+                                               :confusion ,
+                                               :fever ,
+                                               :hallucination ,
+                                               :serotoninSyndrome ,
+                                               :speechDisorder ,
+                                               :sweatingIncreased ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :dizziness ,
+                                               :medicineIneffective ,
+                                               :somnolence ,
+                                               :suicideIdeation ;
+         OpenPVSignal:refers_to_concomitant_drug :etoricoxib ,
+                                                 :tramadol ,
+                                                 :venlafaxine ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :aggressiveReaction ,
+                                               :constipation ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :bisoprolol ,
+                                                 :clopidogrel ,
+                                                 :metformin ,
+                                                 :pantoprazole ,
+                                                 :pentaerithritylTetranitrate ,
+                                                 :ramipril ,
+                                                 :simvastatin ,
+                                                 :torasemide ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ReportsFromUnitedKingdom
+:ReportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ReportsFromUnitedStates
+:ReportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                         OpenPVSignal:has_count 8 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from United States" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.1 ,
+                                   :Ref.3 ;
+                     OpenPVSignal:has_content "As of 25 January 2013 there are 12 Individual Case Safety Reports (ICSRs) of aggressive reaction in association with tapentadol in the WHO Global ICSR Database, VigiBase™ (Table 1). The association has an IC value of 1.26 with an IC025 value of 0.33. The ICSRs were submitted from the United States (eight cases), Germany (two cases), Switzerland and the United Kingdom (one each). The patients ranged in age from 57 to 80 years with a median of 62 years in the seven cases which provided this information. The gender distribution was four females and seven males in the 11 cases with this information. Tapentadol was the only drug suspected in 10 of the 12 cases. Other drugs were taken in eight cases while concomitant drugs (not suspected) were reported in six cases and included drugs involved in a pain management setting such as paracetamol, tramadol, morphine and NSAIDs. This indicates a patient population with significant morbidity, also indicated by the use of antihypertensives, acetylsalicylic acid, antidiabetics, hypolipidaemics and antidepressants. Tapentadol was reported to have been administered orally, as expected, in 11 cases. The indication for use was included in 11 ICSRs and included treatment for pain in each case. Time to onset was reported in only three of the ICSRs and ranged from one to two days after the drug was administered. The outcome was stated in 10 ICSRs. The patients were reported as recovered or recovering in nine cases and not recovered in one case. In eight of the cases where recovery was documented, the drug was reported to have been withdrawn as well as in the other report where the patient had not recovered. Other reactions were described in all 12 ICSRs. In 10 of those ICSRs, other neuropsychiatric effects were described including confusion (four cases), hallucination, speech disorder (both three cases), agitation and increased sweating (both two cases). Interestingly, serotonin syndrome was reported in three cases and the aggressive reaction may have been a manifestation of serotonin syndrome. There is a precaution in the Australian Product Information concerning serotonin syndrome which notes that isolated cases of serotonin syndrome have been reported in association with tapentadol but a causal association has not been established.1 However, in the ICSRs reviewed here, only one of the cases in which serotonin syndrome has been reported documents the use of a serotonergic drug which might precipitate the occurrence of the syndrome. There is also another case (case 12) which lists three of the cardinal symptoms of serotonin syndrome but again, a concomitant serotonergic drug is not listed so an undiagnosed case of serotonin syndrome appears unlikely.3" ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Tapentadol is a centrally acting synthetic analgesic combining opioid and non-opioid (noradrenaline reuptake inhibition) activity in a single molecule. In the WHO Global Individual Case Safety Report (ICSR) Database, VigiBaseTM, there are currently (25 January 2013) 12 ICSRs from four countries of aggressive reaction in association with tapentadol. The association has an IC value of 1.26 with an IC025 value of 0.33. The outcome was stated in 10 reports. The patients were reported as recovered or recovering in nine cases and not recovered in one case. The drug was reported to have been withdrawn in eight of the cases where recovery was documented, as well as in the ICSR where the patient had not recovered. The association of aggressive reaction with tapentadol appears to be a signal. Tapentadol was the only drug suspected in 10 of the 12 cases, the time to onset is suggestive of a drug-induced effect and the observation of recovery after dechallenge in eight of the 12 cases is highly supportive of the signal. In addition, the observation in the product information that other psychiatric reactions occurred commonly and uncommonly in clinical trials suggests that a mechanism for the development of another psychiatric reaction such as aggressive reaction may be possible. The fact that aggressive reaction has been reported in VigiBase at a similar level to some of these reactions is also suggestive of a signal." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Tapentadol_and_Aggressive_reaction
+:Tapentadol_and_Aggressive_reaction rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                    OpenPVSignal:refers_to_author :Dr_Ian_Boyd ;
+                                    OpenPVSignal:refers_to_signal :pvSignal ;
+                                    mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                    OpenPVSignal:has_creation_date "01/08/2014" ;
+                                    OpenPVSignal:has_overall_conclusion "causal association" ;
+                                    rdfs:label "Tapentadol and Aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#abnormalBehaviour
+:abnormalBehaviour rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10061422 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Abnormal behaviour" ;
+                   rdfs:label "abnormal behaviour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#abnormalDreams
+:abnormalDreams rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10000125 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Abnormal dreams" ;
+                rdfs:label "abnormal dreams" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#aggressiveReaction
+:aggressiveReaction rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10001493 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Aggressive reaction" ;
+                    rdfs:label "aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#aggressive_reaction
+:aggressive_reaction rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.2 ;
+                     OpenPVSignal:has_content "Aggressive reaction, or aggression, is one of a number of ill-defined behaviour and socialisation disturbances. Aggression can be either proactive or reactive.2 Proactive aggression is goal-oriented requiring neither provocation nor anger. It can be directed towards possessing objects or dominating people. Reactive aggression involves angry outbursts in response to provocation.2 However, regardless of its psychiatric definition, an aggressive reaction is a clinical judgment" ;
+                     rdfs:label "aggressive reaction pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R45.1" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#anxiety
+:anxiety rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "F41.9" ;
+         OpenPVSignal:has_MedDRA_code 10002855 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anxiety" ;
+         rdfs:label "anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ataxia
+:ataxia rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R27.0" ;
+        OpenPVSignal:has_MedDRA_code 10003591 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Ataxia" ;
+        rdfs:label "ataxia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#bupropion
+:bupropion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A08AA62" ,
+                                     "N06AX12" ;
+           rdfs:label "bupropion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#carbamazepine
+:carbamazepine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AF01" ;
+               rdfs:label "carbamazepine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#cardiacArrestIncident
+:cardiacArrestIncident rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "I46.9" ;
+                       OpenPVSignal:has_MedDRA_code 10007515 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Cardiac arrest" ;
+                       rdfs:label "cardiac arrest" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#chronicPain
+:chronicPain rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "G89.29" ;
+             OpenPVSignal:has_MedDRA_code 10049475 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Chronic pain" ;
+             rdfs:label "chronic pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#citalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#coma
+:coma rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R40" ;
+      OpenPVSignal:has_MedDRA_code 10010071 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Coma" ;
+      rdfs:label "coma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#confusion
+:confusion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F44.8" ;
+           OpenPVSignal:has_MedDRA_code 10010305 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+           rdfs:label "confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K59.0" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#convulsionsGrandMal
+:convulsionsGrandMal rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R56.9" ;
+                     OpenPVSignal:has_MedDRA_code 10018100 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Generalised tonic-clonic seizure" ;
+                     rdfs:label "convulsions grand mal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#corticosteroids
+:corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "C05AA" ,
+                                           "R01AD" ,
+                                           "S02B" ,
+                                           "S02BA" ,
+                                           "S03B" ,
+                                           "S03BA" ;
+                 rdfs:label "corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#decreasedAppetite
+:decreasedAppetite rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R63.0" ;
+                   OpenPVSignal:has_MedDRA_code 10061428 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+                   rdfs:label "decreased appetite" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#delusion
+:delusion rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F22" ;
+          OpenPVSignal:has_MedDRA_code 10012239 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Delusion" ;
+          rdfs:label "delusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#depersonalization
+:depersonalization rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "F48.1" ;
+                   OpenPVSignal:has_MedDRA_code 10077805 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Depersonalisation/derealisation disorder" ;
+                   rdfs:label "depersonalization" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#depressedMood
+:depressedMood rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "F43.21" ;
+               OpenPVSignal:has_MedDRA_code 10012374 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Depressed mood" ;
+               rdfs:label "depressed mood" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#depressionAggravated
+:depressionAggravated rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "F33" ;
+                      OpenPVSignal:has_MedDRA_code 10012379 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Depression aggravated" ;
+                      rdfs:label "depression aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R19.7" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#disorientation
+:disorientation rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R41.0" ;
+                OpenPVSignal:has_MedDRA_code 10013395 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Disorientation" ;
+                rdfs:label "disorientation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#disturbanceInAttention
+:disturbanceInAttention rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R41.840" ;
+                        OpenPVSignal:has_MedDRA_code 10013496 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Disturbance in attention" ;
+                        rdfs:label "disturbance in attention" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#dryMouth
+:dryMouth rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R68.2" ;
+          OpenPVSignal:has_MedDRA_code 10013781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dry mouth" ;
+          rdfs:label "dry mouth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#dyskinesia
+:dyskinesia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G24.01" ;
+            OpenPVSignal:has_MedDRA_code 10013916 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Dyskinesia" ;
+            rdfs:label "dyskinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#dyspnea
+:dyspnea rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R06.0" ;
+         OpenPVSignal:has_MedDRA_code 10013968 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+         rdfs:label "dyspnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#etoricoxib
+:etoricoxib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M01AH05" ;
+            rdfs:label "etoricoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#euphoria
+:euphoria rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F39" ;
+          OpenPVSignal:has_MedDRA_code 10015535 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Euphoric mood" ;
+          rdfs:label "euphoria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ,
+                                   "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#fentanyl
+:fentanyl rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AH01" ,
+                                    "N01AH51" ,
+                                    "N02AB03" ;
+          rdfs:label "fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#fluoxetine
+:fluoxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB03" ,
+                                      "N06CA03" ;
+            rdfs:label "fluoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#flushing
+:flushing rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R23.2" ;
+          OpenPVSignal:has_MedDRA_code 10016825 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Flushing" ;
+          rdfs:label "flushing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#folicAcid
+:folicAcid rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "B03AE01" ,
+                                     "B03AE02" ,
+                                     "B03BB01" ,
+                                     "B03BB51" ;
+           rdfs:label "folic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#gabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#glycerylTrinitrate
+:glycerylTrinitrate rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "C01DA02" ;
+                    rdfs:label "glyceryl trinitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#hallucination
+:hallucination rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R44.3" ;
+               OpenPVSignal:has_MedDRA_code 10019063 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hallucination" ;
+               rdfs:label "hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#hyperhydrosis
+:hyperhydrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R61" ;
+               OpenPVSignal:has_MedDRA_code 10020642 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+               rdfs:label "hyperhydrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#hyperkinesia
+:hyperkinesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10020651 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hyperkinesia" ;
+              rdfs:label "hyperkinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#hypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#hypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I95.9" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#involuntaryMuscleContractions
+:involuntaryMuscleContractions rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect ;
+                               OpenPVSignal:has_ICD_code "M62.838" ;
+                               OpenPVSignal:has_MedDRA_code 10028293 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Muscle contractions involuntary" ;
+                               rdfs:label "involuntary muscle contractions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#isosorbideMononitrate
+:isosorbideMononitrate rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Drug ;
+                       OpenPVSignal:has_ATC_code "C01DA14" ;
+                       rdfs:label "isosorbide mononitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#lercanidipine
+:lercanidipine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C08CA13" ,
+                                         "C09BB02" ,
+                                         "C09DB08" ;
+               rdfs:label "lercanidipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#lisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03" ,
+                                      "C09BA03" ,
+                                      "C09BB03" ,
+                                      "C10BX07" ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#lofepramine
+:lofepramine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AA07" ;
+             rdfs:label "lofepramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#medicineIneffective
+:medicineIneffective rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10013709 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Drug ineffective" ;
+                     rdfs:label "medicine ineffective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#mentalDeficiency
+:mentalDeficiency rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10027351 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Mental deficiency" ;
+                  rdfs:label "mental deficiency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#metamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02" ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ,
+                                     "A10BD02" ,
+                                     "A10BD03" ,
+                                     "A10BD05" ,
+                                     "A10BD07" ,
+                                     "A10BD08" ,
+                                     "A10BD10" ,
+                                     "A10BD11" ,
+                                     "A10BD13" ,
+                                     "A10BD14" ,
+                                     "A10BD15" ,
+                                     "A10BD16" ,
+                                     "A10BD17" ,
+                                     "A10BD18" ,
+                                     "A10BD20" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A07DA52" ,
+                                    "N02AA01" ,
+                                    "N02AA51" ,
+                                    "N02AG01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#myalgia
+:myalgia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "M79.1" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#nervousness
+:nervousness rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R45.0" ;
+             OpenPVSignal:has_MedDRA_code 10029216 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Nervousness" ;
+             rdfs:label "nervousness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#non-DrugAllergy
+:non-DrugAllergy rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "Z91.0" ;
+                 OpenPVSignal:has_MedDRA_code 10001741 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Allergy NOS" ;
+                 rdfs:label "non-drug allergy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#oedemaGeneralised
+:oedemaGeneralised rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R60.1" ;
+                   OpenPVSignal:has_MedDRA_code 10018092 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Generalised oedema" ;
+                   rdfs:label "oedema generalised" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#olanzapine
+:olanzapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH03" ;
+            rdfs:label "olanzapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#paroxetine
+:paroxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB05" ;
+            rdfs:label "paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#pentaerithritylTetranitrate
+:pentaerithritylTetranitrate rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Drug ;
+                             OpenPVSignal:has_ATC_code "C01DA05" ;
+                             rdfs:label "pentaerithrityl tetranitrate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#perceptionDisturbances
+:perceptionDisturbances rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10082213 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Perception disturbances NEC" ;
+                        rdfs:label "perception disturbances" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L29" ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :Reports_in_Vigibase ,
+                                                   :SummaryContent ,
+                                                   :aggressive_reaction ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :ReportsFromGermany ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsFromUnitedKingdom ,
+                                                          :ReportsFromUnitedStates ,
+                                                          :reportsInVigibaseForTapentadolAndAggressiveReaction ,
+                                                          :reportsThatHaveIndicationinformation-treatmentOfPain ,
+                                                          :reportsWithAgeInformation ,
+                                                          :reportsWithNoRecoveryAsOutcome ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithTapentadolAndAbnormalDreams ,
+                                                          :reportsWithTapentadolAndAgitation ,
+                                                          :reportsWithTapentadolAndAnxiety ,
+                                                          :reportsWithTapentadolAndConfusion ,
+                                                          :reportsWithTapentadolAndDepression ,
+                                                          :reportsWithTapentadolAndEuphoria ,
+                                                          :reportsWithTapentadolAndHallucinations ,
+                                                          :reportsWithTapentadolAndNervousness ,
+                                                          :reportsWithTapentadolAndSleepDisorder ,
+                                                          :reportsWithTapentadolAsTheOnlySuspectedDrug ,
+                                                          :reportsWithTapentadolBeingGivenOrally ,
+                                                          :reportsWithTimeToOnsetData ,
+                                                          :reports_with_agitation ,
+                                                          :reports_with_confusion ,
+                                                          :reports_with_hallucination ,
+                                                          :reports_with_increased_sweating ,
+                                                          :reports_with_serotonin_syndrome ,
+                                                          :rerports_with_speech_disorder ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithrecovering/recoveredAsOutcome> ;
+          OpenPVSignal:refers_to_drug :tapentadol ;
+          OpenPVSignal:refers_to_unconfirmed_adverse_effect :aggressiveReaction ;
+          mp:supportedByData :Common_ADR_for_tapentadol ,
+                             :Precaution_in_the_Australian_Product_Information ,
+                             :Product_information_for_tapentadol ;
+          OpenPVSignal:initially_identified_on "01/08/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsInVigibaseForTapentadolAndAggressiveReaction
+:reportsInVigibaseForTapentadolAndAggressiveReaction rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:refers_to_drug :tapentadol ;
+                                                     OpenPVSignal:refers_to_unconfirmed_adverse_effect :aggressiveReaction ;
+                                                     OpenPVSignal:has_count 12 ;
+                                                     OpenPVSignal:has_count_of_men 7 ;
+                                                     OpenPVSignal:has_count_of_women 4 ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "reports in vigibase for tapentadol and aggressive reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsThatHaveIndicationinformation-treatmentOfPain
+:reportsThatHaveIndicationinformation-treatmentOfPain rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Reports_group ;
+                                                      OpenPVSignal:concerns_indication_for_use :chronicPain ;
+                                                      OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                                      OpenPVSignal:has_count 11 ;
+                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                      rdfs:label "reports that have indication information-treatment of pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithAgeInformation
+:reportsWithAgeInformation rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                           OpenPVSignal:has_count 7 ;
+                           OpenPVSignal:has_max_age 80 ;
+                           OpenPVSignal:has_median_age 62 ;
+                           OpenPVSignal:has_min_age 57 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with age information " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithNoRecoveryAsOutcome
+:reportsWithNoRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                rdfs:label "reports with no recovery as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithrecovering/recoveredAsOutcome> ;
+                                OpenPVSignal:has_count 8 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndAbnormalDreams
+:reportsWithTapentadolAndAbnormalDreams rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:refers_to_adverse_effect :abnormalDreams ;
+                                        OpenPVSignal:refers_to_drug :tapentadol ;
+                                        OpenPVSignal:has_count 5 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with tapentadol and abnormal dreams" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndAgitation
+:reportsWithTapentadolAndAgitation rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:refers_to_adverse_effect :agitation ;
+                                   OpenPVSignal:refers_to_drug :tapentadol ;
+                                   OpenPVSignal:has_count 60 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports with tapentadol and agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndAnxiety
+:reportsWithTapentadolAndAnxiety rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:refers_to_adverse_effect :anxiety ;
+                                 OpenPVSignal:refers_to_drug :tapentadol ;
+                                 OpenPVSignal:has_count 36 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with tapentadol and anxiety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndConfusion
+:reportsWithTapentadolAndConfusion rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:refers_to_adverse_effect :confusion ;
+                                   OpenPVSignal:refers_to_drug :tapentadol ;
+                                   OpenPVSignal:has_count 100 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "reports with tapentadol and confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndDepression
+:reportsWithTapentadolAndDepression rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:refers_to_adverse_effect :depression ,
+                                                                          :depressionAggravated ;
+                                    OpenPVSignal:refers_to_drug :tapentadol ;
+                                    OpenPVSignal:has_count 51 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "reports with tapentadol and depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndEuphoria
+:reportsWithTapentadolAndEuphoria rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:refers_to_adverse_effect :euphoria ;
+                                  OpenPVSignal:refers_to_drug :tapentadol ;
+                                  OpenPVSignal:has_count 5 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with tapentadol and euphoria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndHallucinations
+:reportsWithTapentadolAndHallucinations rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:refers_to_adverse_effect :hallucination ;
+                                        OpenPVSignal:has_count 110 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with tapentadol and hallucinations " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndNervousness
+:reportsWithTapentadolAndNervousness rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:refers_to_adverse_effect :nervousness ;
+                                     OpenPVSignal:refers_to_drug :tapentadol ;
+                                     OpenPVSignal:has_count 22 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports with tapentadol and nervousness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAndSleepDisorder
+:reportsWithTapentadolAndSleepDisorder rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:refers_to_adverse_effect :sleepDisorder ;
+                                       OpenPVSignal:refers_to_drug :tapentadol ;
+                                       OpenPVSignal:has_count 12 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with tapentadol and sleep disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolAsTheOnlySuspectedDrug
+:reportsWithTapentadolAsTheOnlySuspectedDrug rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                             OpenPVSignal:refers_to_primary_suspect_drug :tapentadol ;
+                                             OpenPVSignal:has_count 10 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "reports with tapentadol as the only suspected drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTapentadolBeingGivenOrally
+:reportsWithTapentadolBeingGivenOrally rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                       OpenPVSignal:refers_to_reported_drug_usage :Oral_usage_of_tapentadol ;
+                                       OpenPVSignal:has_count 11 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with tapentadol being given orally" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithTimeToOnsetData
+:reportsWithTimeToOnsetData rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                            OpenPVSignal:time_to_onset :timeToOnsetData ;
+                            OpenPVSignal:has_count 3 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reports_with_agitation
+:reports_with_agitation rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                        OpenPVSignal:refers_to_adverse_effect :agitation ;
+                        OpenPVSignal:has_count 2 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reports_with_confusion
+:reports_with_confusion rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                        OpenPVSignal:refers_to_adverse_effect :confusion ;
+                        OpenPVSignal:has_count 4 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reports_with_hallucination
+:reports_with_hallucination rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                            OpenPVSignal:refers_to_adverse_effect :hallucination ;
+                            OpenPVSignal:has_count 3 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with hallucination" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reports_with_increased_sweating
+:reports_with_increased_sweating rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                 OpenPVSignal:refers_to_adverse_effect :sweatingIncreased ;
+                                 OpenPVSignal:has_count 2 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with increased sweating" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reports_with_serotonin_syndrome
+:reports_with_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                 OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                 OpenPVSignal:has_count 3 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#rerports_with_speech_disorder
+:rerports_with_speech_disorder rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                               OpenPVSignal:refers_to_adverse_effect :speechDisorder ;
+                               OpenPVSignal:has_count 3 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports with speech disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#restlessness
+:restlessness rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R45.1" ;
+              OpenPVSignal:has_MedDRA_code 10038743 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Restlessness" ;
+              rdfs:label "restlessness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#rigors
+:rigors rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R68.83" ;
+        OpenPVSignal:has_MedDRA_code 10008531 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Chills" ;
+        rdfs:label "rigors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#serotoninSyndrome
+:serotoninSyndrome rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10040108 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Serotonin syndrome" ;
+                   rdfs:label "serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#sitagliptin
+:sitagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BD07" ,
+                                       "A10BD12" ,
+                                       "A10BH01" ,
+                                       "A10BH51" ;
+             rdfs:label "sitagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#sleepDisorder
+:sleepDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "G47.9" ;
+               OpenPVSignal:has_MedDRA_code 10040984 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Sleep disorder" ;
+               rdfs:label "sleep disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#speechDisorder
+:speechDisorder rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "F80.9" ;
+                OpenPVSignal:has_MedDRA_code 10041466 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Speech disorder" ;
+                rdfs:label "speech disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#suicideIdeation
+:suicideIdeation rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R45.851" ;
+                 OpenPVSignal:has_MedDRA_code 10042458 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Suicidal ideation" ;
+                 rdfs:label "suicide ideation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#sweatingIncreased
+:sweatingIncreased rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R61" ;
+                   OpenPVSignal:has_MedDRA_code 10020642 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+                   rdfs:label "sweating increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tamsulosin
+:tamsulosin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G04CA02" ,
+                                      "G04CA52" ,
+                                      "G04CA53" ;
+            rdfs:label "tamsulosin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tapentadol
+:tapentadol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:concerns_indication_for_use :chronicPain ;
+            OpenPVSignal:has_mechanism :MechanismOfTapentadol ;
+            OpenPVSignal:has_ATC_code "N02AX06" ;
+            rdfs:label "tapentadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#testosterone
+:testosterone rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "G03BA03" ,
+                                        "G03EA02" ;
+              rdfs:label "testosterone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#timeToOnsetData
+:timeToOnsetData rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 OpenPVSignal:has_content "Time to onset was reported in only three of the ICSRs and ranged from one to two days after the drug was administered" ;
+                 <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                 <http://www.w3.org/2006/time#numericDuration> 2 ;
+                 <http://www.w3.org/2006/time#numericPosition> 1 ;
+                 rdfs:label "time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tizanidine
+:tizanidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M03BX02" ;
+            rdfs:label "tizanidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#torasemide
+:torasemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA04" ;
+            rdfs:label "torasemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ,
+                                    "N02AX52" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R251" ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#tricyclicAntidepressants
+:tricyclicAntidepressants rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Drug ;
+                          OpenPVSignal:has_ATC_code "N06AA" ;
+                          rdfs:label "tricyclic antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#urinaryIncontinence
+:urinaryIncontinence rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R39.81" ;
+                     OpenPVSignal:has_MedDRA_code 10046543 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Urinary incontinence" ;
+                     rdfs:label "urinary incontinence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#vertigo
+:vertigo rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R42" ;
+         OpenPVSignal:has_MedDRA_code 10047340 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Vertigo" ;
+         rdfs:label "vertigo" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#weightIncrease
+:weightIncrease rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R63.5" ;
+                OpenPVSignal:has_MedDRA_code 10047899 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Weight increased" ;
+                rdfs:label "weight increase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#xipamide
+:xipamide rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C03BA10" ;
+          rdfs:label "xipamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Response_from_Grünenthal_GmbH_and_Janssen_Pharmaceuticals,_inc.
+<http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#Response_from_Grünenthal_GmbH_and_Janssen_Pharmaceuticals,_inc.> rdf:type owl:NamedIndividual ,
+                                                                                                                                                      OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                                                                                                                             OpenPVSignal:refers_to_pharmacovigilance_signal_report :Tapentadol_and_Aggressive_reaction ;
+                                                                                                                                             OpenPVSignal:has_content """The medical concept of aggression has been reviewed during the routine signal detection activities for tapentadol. Based on the integrated analysis including data from the clinical development program and post- marketing case reports for tapentadol and literature reports, there has not been sufficient evidence  for an association between tapentadol and aggressive reactions.
+
+Clinical Experience
+To date, only 0.03% subjects treated with tapentadol experienced aggression or anger during the clinical development program. All these events were non-serious, with mild or moderate intensity, and did not lead to a change of the safety profile of tapentadol.
+
+Postmarketing Experience
+A cumulative review of the MedDRA SMQ Hostility/ Aggression (narrow scope) in the MAHs’ safety databases was performed. Most of the retrieved cases contained the MedDRA Preferred Terms (PT) Aggression or Anger. In addition, a few cases included PTs Hostility, Homicidal Ideation, and Violence-related symptom.
+Two thirds of the reports were very sparsely documented, lacking a description of the event itself and circumstances under which it occurred, as well as tapentadol therapy details. In the remaining cases aggression was reported together with one or more of the following underlying disorders such as: bipolar disorder, anxiety, depression, posttraumatic stress disorder, and/or concomitant medication known to cause aggressiveness (tricyclic antidepressants, benzodiazepines) or alcohol use. These confound the causality assessment for tapentadol (data on file).
+Based on the available review of post-marketing cases, it can be concluded that the currently available information is not supportive of tapentadol induced aggression and/or hostility.
+
+Discussion and Conclusion
+Tapentadol is a centrally acting analgesic, combining mu-opioid agonist and noradrenalin- reuptake inhibitor activity in a single molecule. Aggression, as a behavior and socialization disturbance, is not known so far to be caused by morphine as the prototypical opiate. An opioid class effect for aggression has not been established as well. To date, only one publication could be found which discussed the relationship between opioids and aggressive responding as
+ 
+possible1; however this claim has not been confirmed to date. Noradrenaline reuptake inhibitors have not shown to cause such adverse reaction either.
+Some other psychiatric disorders constitute adverse drug reactions for tapentadol, such as: restlessness, perception disturbancies, agitation, thinking abnormal. However, the labeling of these events as adverse drug reactions for tapentadol is not sufficient factor to draw the conclusion that aggressive reaction is also expected, as it would constitute a more specific psychiatric disorder. As such, it might not be triggered by above mentioned reactions, but can be a standalone event.
+Based on available up-to-date information on tapentadol, there is no pattern observed in occurrence of aggression and/or hostility in patients treated with this substance. Information from the clinical development program and post- marketing case reports do not contain sufficient evidence for an association between events listed in Hostility/Aggression SMQ and tapentadol.
+Nevertheless, the medical concept of aggression will be further monitored and targeted questions will be implemented in the follow up of spontaneous case reports, in order to obtain relevant missing information.
+
+Reference
+1. Taylor, S. P., & Hulsizer, M. R. (1998). Psychoactive drugs & human aggression. In R. G. Geen & E. Donnerstein (Eds.). Human aggression: Theories, research, and implications for social policy (pp. 139-165). New York: Academic Press.""" ;
+                                                                                                                                             rdfs:label "Response from Grünenthal GmbH and Janssen Pharmaceuticals, inc." .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#insulinaspart/insulinAspartProtamine
+<http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#insulinaspart/insulinAspartProtamine> rdf:type owl:NamedIndividual ,
+                                                                                                                           OpenPVSignal:Drug ;
+                                                                                                                  OpenPVSignal:has_ATC_code "A10AD05" ;
+                                                                                                                  rdfs:label "insulin aspart / insulin aspart protamine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithrecovering/recoveredAsOutcome
+<http://purl.org/OpenPVSignal/Signals/2013_4_tapentadol_aggressive_reaction#reportsWithrecovering/recoveredAsOutcome> rdf:type owl:NamedIndividual ,
+                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                      OpenPVSignal:is_subgroup_of :reportsInVigibaseForTapentadolAndAggressiveReaction ;
+                                                                                                                      OpenPVSignal:has_count 9 ;
+                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                      OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                                                                                      rdfs:label "reports with recovering/recovered as outcome" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:diarrhea OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

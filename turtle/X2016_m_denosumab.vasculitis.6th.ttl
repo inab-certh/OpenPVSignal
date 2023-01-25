@@ -1,0 +1,2941 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis> .
+
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                mp: ;
+                                                                    rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255490/"^^xsd:anyURI ;
+                                                                    rdfs:label "Denosumab and vasculitis"^^xsd:Literal ;
+                                                                    owl:versionInfo "draft-v0.95-20211025"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/citation
+mp:citation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "In summary, there are 30 reports associating vasculitis with the use of denosumab. Denosumab was the only drug suspected in 29 of the 30 reports. Time to onset is consistent with a drug induced effect. Dechallenge is not particularly supportive of a drug association but for a drug such as denosumab which is administered every six months, the concept of drug withdrawal is not meaningful. Although the patients in this case series had considerable morbidity, there is little in the reports to indicate any other possible cause for vasculitis. It is possible that denosumab may cause vasculitis using a similar mechanism to that of TNF-α inhibitors. " ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#DenosumabAndMusculoskeletalPain
+:DenosumabAndMusculoskeletalPain rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Warning_Information ;
+                                 OpenPVSignal:refers_to_adverse_effect :musculoskeletalPain ;
+                                 OpenPVSignal:refers_to_drug :denosumab ;
+                                 mp:references :Ref.1 ;
+                                 mp:citation "The most common side effects with denosumab (seen in more than one patient in ten) are musculoskeletal pain and pain in the extremity . " ;
+                                 rdfs:label "Denosumab and musculoskeletal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#DenosumabAndPainInTheExtremety
+:DenosumabAndPainInTheExtremety rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Warning_Information ;
+                                OpenPVSignal:refers_to_adverse_effect :painInTheExtremity ;
+                                OpenPVSignal:refers_to_drug :denosumab ;
+                                mp:references :Ref.1 ;
+                                mp:citation "The most common side effects with denosumab (seen in more than one patient in ten) are musculoskeletal pain and pain in the extremity . " ;
+                                rdfs:label "Denosumab and pain in the extremety" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Desonumab_and_vasculitis
+:Desonumab_and_vasculitis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                          OpenPVSignal:refers_to_author :Dr_Ian_Boyd ;
+                          OpenPVSignal:refers_to_signal :pvSignal ;
+                          OpenPVSignal:has_creation_date "01/12/2016" ;
+                          OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                          rdfs:label "Denosumab and vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Discussion
+:Discussion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Discussion ;
+            mp:references :Ref.10 ,
+                          :Ref.11 ,
+                          :Ref.12 ,
+                          :Ref.6 ,
+                          :Ref.7 ,
+                          :Ref.8 ,
+                          :Ref.9 ;
+            OpenPVSignal:has_content """Case reports in VigiBase® suggest that there is a possible signal for the association of denosumab and vasculitis. Denosumab was the only drug suspected in 29 of the 30 cases. Lercanidipine and sevelamer were co-suspected in the remaining case. The product literature for these two drugs do not refer to vasculitis.6,7 Time to onset was reported in only 10 of the reports and ranged from three days to nine months after the drug was administered with a median of about two months. This would appear consistent with a drug induced effect since druginduced vasculitis is an immune mediated reaction which would be expected to take weeks or months to develop. Indeed, one report in the literature has noted that vasculitis in association with antithyroid drugs had a time to onset with a range of 1 to 372 months (median: 42 months). 
+In this case series, the underlying time to onset may be 3 to 6 months and those patients who experienced a quick reaction have possibly received the drug or a similar one before and those patients who reacted after the second dose are following a similar pattern. The outcome of the vasculitis was stated in 16 reports. In the 10 cases with recovery, the drug was reported as withdrawn in five cases and in the six cases without recovery, the drug was reported as withdrawn in two cases. For a drug that is injected periodically though, mostly every six months for denosumab, the effect of drug withdrawal or dechallenge is not meaningful. Major causes of vasculitis include infections such as hepatitis B and hepatitis C, blood cancers, immune system diseases such as rheumatoid arthritis, lupus and scleroderma and reactions to drugs.9 Although the patients in this case series had a number of concomitant conditions only one patient was reported with one of these conditions, rheumatoid arthritis in case 25. Vasculitis can be confirmed by biopsy. Only two of the cases reported biopsy-proven vasculitis while in two cases, biopsies appeared to be negative. In two other cases, there was evidence for a different diagnosis so it is possible that not all 30 cases describe vasculitis. There have been reports of vasculitis in association with tumour necrosis factor (TNF)-α inhibitors.10,11 In one of these reports, the authors suggested a relationship between the introduction of therapy with TNF-α inhibitors and anti-drug antibody production. The resulting immune complexes and recruitment of inflammatory mediators may lead to cutaneous vasculitis.10 In another report, the authors documented 233 cases of autoimmune disease associated with TNF-α inhibitors including 113 cases of vasculitis.11 Since RANKL is a member of the TNF superfamily, it is possible that denosumab may cause vasculitis through a similar mechanism.12 
+""" ;
+            rdfs:label "Discussion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dosage1
+:Dosage1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :denosumab ;
+         OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#6MonthsBetweenAdministrations> ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 60 ;
+         OpenPVSignal:refers_to_dose_value "60 mg" ;
+         rdfs:label "Dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dosage2
+:Dosage2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :denosumab ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 60 ;
+         OpenPVSignal:refers_to_dose_value "60 mg" ;
+         rdfs:label "Dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dosage3
+:Dosage3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :denosumab ;
+         OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#4WeeksBetweenAdministrations> ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 120 ;
+         OpenPVSignal:refers_to_dose_value "120 mg" ;
+         rdfs:label "Dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dosage_3
+:Dosage_3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Dosage ;
+          OpenPVSignal:refers_to_drug :denosumab ;
+          OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#1_month_between_administration> ;
+          OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+          OpenPVSignal:has_value 60 ;
+          OpenPVSignal:refers_to_dose_value "60 mg" ;
+          rdfs:label "Dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dosage_4
+:Dosage_4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Dosage ;
+          OpenPVSignal:refers_to_drug :denosumab ;
+          OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#6MonthsBetweenAdministrations> ;
+          rdfs:label "Dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Dr_Ian_Boyd
+:Dr_Ian_Boyd rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Author ;
+             OpenPVSignal:has_first_name "Ian" ;
+             OpenPVSignal:has_last_name "Boyd" ;
+             rdfs:label "Dr Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#HypersensitivityVasculitis
+:HypersensitivityVasculitis rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Free_text_reporting_element ;
+                            OpenPVSignal:refers_to_adverse_effect :hypersensitivity_vasculitis ;
+                            mp:references :Ref.3 ,
+                                          :Ref.4 ;
+                            OpenPVSignal:has_content "Hypersensitivity vasculitis is an acute form of this condition that is marked by inflammation or redness of the skin that occurs when contact is made with an irritating substance. It is characterized by the appearance of red spots on the skin – most commonly, palpable purpura. Palpable purpura are raised spots that are usually red in color but may darken to a purple color. However, there are many other types of rashes that can occur. Substances that can cause skin inflammation include medications, infections or any other foreign object which may induce an allergic reaction.3 Hypersensitivity vasculitis is usually represented histopathologically as leukocytoclastic vasculitis (LCV) which is a term commonly used to denote a small vessel vasculitis. Hypersensitivity vasculitis is thought to be mediated by immune complex deposition. In this form of vasculitis, circulating antigens in the body (produced by factors such as medications, infections, and neoplasms) induce antibody formation. These antibodies bind to the circulating antigen and create immune complexes, which then deposit within vessels, activating complement and inducing inflammatory mediators. Inflammatory mediators, adhesion molecules, and local factors may affect the endothelial cells and may play a role in the manifestations of this disease.4" ;
+                            rdfs:label "Hypersensitivity vasculitis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#LercadipineAndSevelamerDoNotTriggerVasculitis
+:LercadipineAndSevelamerDoNotTriggerVasculitis rdf:type owl:NamedIndividual ,
+                                                        obo:OAE_0001197 ;
+                                               OpenPVSignal:refers_to_drug :lercanidipine ,
+                                                                           :sevelamer ;
+                                               mp:references :Ref.6 ,
+                                                             :Ref.7 ;
+                                               OpenPVSignal:has_content "Lercanidipine and sevelamer were co-suspected in the remaining case. The product literature for these two drugs do not refer to vasculitis " ;
+                                               rdfs:label "Lercadipine and sevelamer do not trigger vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ;
+                        OpenPVSignal:has_content "The product literature does not refer to vasculitis nor does it refer to any other vascular reactions. It notes that the skin reactions rash and eczema are common and that cases of cellulitis have been reported uncommonly.1 There are also no reports of vasculitis in association with denosumab in the medical literature." ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#MechanismOfHypersensitivityVasculitis
+:MechanismOfHypersensitivityVasculitis rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Adverse_Effect_Mechanism ;
+                                       OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                                       mp:references :Ref.4 ;
+                                       OpenPVSignal:has_content "Hypersensitivity vasculitis is thought to be mediated by immune complex deposition. In this form of vasculitis, circulating antigens in the body (produced by factors such as medications, infections, and neoplasms) induce antibody formation. These antibodies bind to the circulating antigen and create immune complexes, which then deposit within vessels, activating complement and inducing inflammatory mediators. Inflammatory mediators, adhesion molecules, and local factors may affect the endothelial cells and may play a role in the manifestations of this disease. " ;
+                                       rdfs:label "Mechanism of hypersensitivity vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Mechanism_of_denosumab
+:Mechanism_of_denosumab rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        mp:references :Ref.1 ;
+                        OpenPVSignal:has_content "Denosumab is a human monoclonal antibody (IgG2) that targets and binds with high affinity and specificity to the receptor activator of nuclear factor kappa-B ligand (RANKL), preventing activation of its receptor, RANK, on the surface of osteoclast precursors and osteoclasts. Prevention of the RANKL/RANK interaction inhibits osteoclast formation, function and survival, thereby decreasing bone resorption in cortical and trabecular bone. " ;
+                        rdfs:label "Mechanism of denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#NoReportingForVasculitisInDenosumab
+:NoReportingForVasculitisInDenosumab rdf:type owl:NamedIndividual ,
+                                              obo:OAE_0001182 ;
+                                     OpenPVSignal:refers_to_drug :denosumab ;
+                                     mp:references :Ref.1 ;
+                                     OpenPVSignal:has_content "The product literature does not refer to vasculitis nor does it refer to any other vascular reactions. It notes that the skin reactions rash and eczema are common and that cases of cellulitis have been reported uncommonly.1 There are also no reports of vasculitis in association with denosumab in the medical literature . " ;
+                                     rdfs:label "No reporting for vasculitis in denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Other_causes_of_vasculitis
+:Other_causes_of_vasculitis rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :blood_cancer ,
+                                                                  :hepatitis_B ,
+                                                                  :hepatitis_C ,
+                                                                  :lupus_syndrome ,
+                                                                  :rheumatoid_arthritis ,
+                                                                  :sceloderma ,
+                                                                  :vasculitis ;
+                            mp:references :Ref.9 ;
+                            OpenPVSignal:has_content "Major causes of vasculitis include infections such as hepatitis B and hepatitis C, blood cancers, immune system diseases such as rheumatoid arthritis, lupus and scleroderma and reactions to drugs.9" ;
+                            rdfs:label "Other causes of vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#OverallReportsInVigibase
+:OverallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                          OpenPVSignal:refers_to_drug :denosumab ;
+                          OpenPVSignal:has_count 32 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#OverallReportsInVigibaseWithoutDuplicates
+:OverallReportsInVigibaseWithoutDuplicates rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                           OpenPVSignal:has_count 30 ;
+                                           OpenPVSignal:has_count_of_men 2 ;
+                                           OpenPVSignal:has_count_of_women 28 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "Overall reports in vigibase without duplicates" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 36 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 93 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 71 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 69 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 69 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 81 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 55 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient19
+:Patient19 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 64 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 78 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient20
+:Patient20 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 71 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient21
+:Patient21 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 81 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient22
+:Patient22 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient23
+:Patient23 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 88 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient24
+:Patient24 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 74 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient25
+:Patient25 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 68 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient26
+:Patient26 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 88 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient27
+:Patient27 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 73 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient28
+:Patient28 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 67 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 28" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient29
+:Patient29 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 76 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 29" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 77 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient30
+:Patient30 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 61 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient31
+:Patient31 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 31" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient32
+:Patient32 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 32" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 74 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 73 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 78 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 81 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 83 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency. Summary of product characteristics for Prolia. Available from: http://www. ema.europa.eu/docs/ en_GB/document_library/EPAR_-_Product_ Information/human/001120/WC500093526.pdf. Accessed: 3 February 2016.  " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "McCain ME, Quinet RJ, Davis WE. Etanercept and infliximab associated with cutaneous vasculitis. Rheumatology 2002;41:116-7. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ramos-Casals M, Brito-Zeron P, Munoz S, Soria N, Galiana D, Bertolaccini L, Cuadrado M-J, Khamashta MA. Autoimmune diseases induced by TNF targeted therapies. Medicine 2007;86:242-51. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Gaur U, Aggarwal BB. Regulation of proliferation, survival and apoptosis by members of the TNF superfamily. Biochem Pharmacol. 2003;66:1403-8. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Council for International Organizations of Medical Sciences (CIOMS). Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use. CIOMS, Geneva, 1999. Available from: http://www.cioms.ch/ publications/reporting_adverse_drug.pdf. Accessed: February 2016." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wint C, Spriggs BB. Healthline: hypersensitivity vasculitis. Available from: http://www. healthline.com/health/allergic-vasculitis#Overview1. Accessed: 3 February 2016." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Patel M, Callen JP, Vleugels RA, Wells MJ, Miller JJ, James WD. Medscape: hypersensitivity vasculitis. Available from: http://emedicine. medscape.com/article/1083719-overview#a5. Accessed: 3 February 2016. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Longo DL, Fauci AS, Kasper DL, Hauser SL, Jameson JL, Loscalzo J, eds. Harrison’s Principles of Internal Medicine, 18th ed. McGraw Hill, New York, 2011. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of Product Characteristics for Zanidip. Available from: http://www.medicines.org.uk/emc/ medicine/17624. Accessed: 15 February 2016. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of Product Characteristics for Renvela. Available from: http://www.medicines.org.uk/emc/ medicine/22781. Accessed: 15 February 2016. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Noh JH, Yasuda S, Sato S, Matsumoto M, Kunii Y, Noguchi Y et al. Clinical characteristics of myeloperoxidase antineutrophil cytoplasmic antibody-associated vasculitis caused by antithyroid drugs. J Clin Endocrinol Metab. 2009;94:2806-11. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mayo Clinic. Vasculitis. Available from: http://www.mayoclinic.org/diseases-conditions/ vasculitis/basics/causes/con-20026049. Accessed: 3 February 2016. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :vasculitis ,
+                                               <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#medicationError(offLabeluse)> ;
+         OpenPVSignal:refers_to_concomitant_drug :calciumCarbonate ,
+                                                 :vitaminDNos ,
+                                                 :warfarin ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :asthenia ,
+                                                :cheilitis ,
+                                                :choking ,
+                                                :faceOedema ,
+                                                :malaise ,
+                                                :pruritus ,
+                                                :somnolence ,
+                                                :transientIschaemicAttack ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :bromazepam ,
+                                                  :clopidogrel ,
+                                                  :fentanyl ,
+                                                  :levothyroxine ,
+                                                  :morphine ,
+                                                  :nicorandil ,
+                                                  :pantoprazole ,
+                                                  :paracetamol ,
+                                                  :pregabalin ,
+                                                  :propofol ,
+                                                  :propranolol ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#phloroglucinol/trimethylphloroglucinol> ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:time_to_onset :time_to_onset_11 ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :skeletalPain ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :auto-antibodyResponse ,
+                                                :pulmonaryDisorder ,
+                                                :renalFailureAcute ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :adverseDrugReaction ,
+                                                :malaise ,
+                                                :oedema ,
+                                                :paraesthesia ,
+                                                :rash ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                                :conditionAggravated ,
+                                                :hyperparathyroidism ,
+                                                :hypocalcaemia ,
+                                                :hypophosphataemia ,
+                                                :pruritus ,
+                                                :skinExfoliation ,
+                                                :vasculitis ,
+                                                <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cardiacarrest/heartAttack> ;
+          OpenPVSignal:refers_to_concomitant_drug :aceInhibitors ,
+                                                  :allopurinol ,
+                                                  :atenolol ,
+                                                  :colecalciferol ,
+                                                  :gemfibrozil ,
+                                                  :nicorandil ,
+                                                  :omeprazole ,
+                                                  :perhexiline ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :lercanidipine ,
+                                                        :sevelamer ;
+          OpenPVSignal:time_to_onset :time_to_onset_16 ;
+          OpenPVSignal:refers_to_outcome_after_action "irrelevant death" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :allergy ,
+                                                :diverticulitis ,
+                                                :purpura ,
+                                                :skinDiscolouration ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :calcio ,
+                                                  :omeprazole ,
+                                                  :plantagoOvata ,
+                                                  :ranelicAcid ,
+                                                  :tramadol ,
+                                                  :zoledronicAcid ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#colecalciferol/calciumCarbonate> ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/amilorideHydrochloride> ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :gaitAbnormal ,
+                                                :hypokinesia ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :capecitabine ,
+                                                  :megestrol ,
+                                                  :morphine ,
+                                                  :paracetamol ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report19
+:Report19 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :arthralgia ,
+                                                :pain ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient19 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :purpura ,
+                                               :serumSickness ,
+                                               :vasculitis ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:time_to_onset :time_to_onset_2 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report20
+:Report20 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :allergy ,
+                                                :confusion ,
+                                                :malaise ,
+                                                :skinNodule ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient20 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report21
+:Report21 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :faecalIncontinence ,
+                                                :faecesDiscoloured ,
+                                                :gaitAbnormal ,
+                                                :hyperpyrexia ,
+                                                :inflammationLocalized ,
+                                                :limbPain ,
+                                                :lymphangitis ,
+                                                :musculoskeletalDisorder ,
+                                                :oedema ,
+                                                :rashErythematous ,
+                                                :urinaryIncontinence ,
+                                                :vascularDisorder ,
+                                                :vasculitis ,
+                                                :visionAbnormal ;
+          OpenPVSignal:refers_to_patient :Patient21 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:time_to_onset :time_to_onset_21 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report22
+:Report22 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient22 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:time_to_onset :time_to_onset_22 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report23
+:Report23 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cerumenImpaction ,
+                                                :micturitionFrequency ,
+                                                :neuralgia ,
+                                                :oedemaPeripheral ,
+                                                :skinDisorder ,
+                                                :sleepDisorder ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :gabapentin ;
+          OpenPVSignal:refers_to_patient :Patient23 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report24
+:Report24 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                                :hypocalcaemia ,
+                                                :immuneSystemDisorder ,
+                                                :infectionBacterial ,
+                                                :infectionViral ,
+                                                :neutropenia ,
+                                                :pulmonaryOedema ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :atorvastatin ,
+                                                  :calcium ,
+                                                  :cetirizine ,
+                                                  :dexlansoprazole ,
+                                                  :ergocalciferol ,
+                                                  :ranitidine ,
+                                                  :vitaminsNos ,
+                                                  :zolpidem ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/valsartan> ;
+          OpenPVSignal:refers_to_patient :Patient24 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:time_to_onset :time_to_onset_24 ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report25
+:Report25 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_potential_confounding_factor :rheumatoid_arthritis ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :sulindac ;
+          OpenPVSignal:refers_to_patient :Patient25 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report26
+:Report26 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :metoprolol ,
+                                                  :tramadol ,
+                                                  :zolpidem ;
+          OpenPVSignal:refers_to_patient :Patient26 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:time_to_onset :time_to_onset_26 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report27
+:Report27 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :anginaPectoris ,
+                                                :arthralgia ,
+                                                :avascularNecrosisBone ,
+                                                :bedRestProtection ,
+                                                :cystitis ,
+                                                :gaitAbnormal ,
+                                                :oedemaPeripheral ,
+                                                :pharyngitis ,
+                                                :pneumonia ,
+                                                :rash ,
+                                                :skeletalPain ,
+                                                :upperRespiratoryTractInfection ,
+                                                :vasculitis ,
+                                                :weightIncrease ,
+                                                :wheelchairUser ;
+          OpenPVSignal:refers_to_concomitant_drug :ergocalciferol ,
+                                                  :hydrochlorothiazide ;
+          OpenPVSignal:refers_to_patient :Patient27 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report28
+:Report28 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :chestPain ,
+                                                :dyspnoea ,
+                                                :rash ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient28 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 28" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report29
+:Report29 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :malaise ,
+                                                :muscleInjury ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient29 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 29" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:time_to_onset :time_to_onset_3 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report30
+:Report30 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient30 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report31
+:Report31 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                                :cellulitis ,
+                                                :hyperparathyroidism ,
+                                                :hypocalcaemia ,
+                                                :hypophosphataemia ,
+                                                :oedemaPeripheral ,
+                                                :ulceration ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_concomitant_drug :allopurinol ,
+                                                  :atenolol ,
+                                                  :colecalciferol ,
+                                                  :gemfibrozil ,
+                                                  :lercanidipine ,
+                                                  :nicorandil ,
+                                                  :omeprazole ;
+          OpenPVSignal:refers_to_patient :Patient31 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :sevelamer ;
+          OpenPVSignal:refers_to_outcome_after_action "irrelevant death" ;
+          rdfs:label "Report 31" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report32
+:Report32 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :alopecia ,
+                                                :haemorrhageNos ,
+                                                :oedema ,
+                                                :rashErythematous ,
+                                                :secretionDischarge ,
+                                                :skinExfoliation ,
+                                                :ulceration ,
+                                                :vasculitis ;
+          OpenPVSignal:refers_to_patient :Patient32 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 32" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ,
+                                                 :calcio ,
+                                                 :colecalciferol ,
+                                                 :hydrochlorothiazide ,
+                                                 :levothyroxine ,
+                                                 :losartan ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:time_to_onset :time_to_onset_4 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :eczema ,
+                                               :vasculitis ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:time_to_onset :time_to_onset_5 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :rash ,
+                                               :vasculitis ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cellulitis ,
+                                               :rashPustular ,
+                                               :vasculitis ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:time_to_onset :time_to_onset_7 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :bullousEruption ,
+                                               :rashPustular ,
+                                               :vasculitis ;
+         OpenPVSignal:refers_to_concomitant_drug :alfacalcidol ,
+                                                 :omeprazole ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#enalaprilmaleate/lercanidipineHydrochloride> ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromArgentina
+:ReportsFromArgentina rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Argentina" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Argentina" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromFrance
+:ReportsFromFrance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/France" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from France" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromGreece
+:ReportsFromGreece rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Greece" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Greece" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromIreland
+:ReportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromNetherlands
+:ReportsFromNetherlands rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Netherlands" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Netherlands" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                        OpenPVSignal:has_count 2 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromUK
+:ReportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+               OpenPVSignal:has_count 2 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsFromUnitedStates
+:ReportsFromUnitedStates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                         OpenPVSignal:has_count 16 ;
+                         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports from United States" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content "As of 1 January 2016 there are 32 individual case safety reports (ICSRs) of vasculitis in association with denosumab in VigiBase®, the WHO Global ICSR database (Table 1). After the elimination of two suspected duplicates, the reports were submitted from the United States (16 reports), Australia, Germany, Switzerland and the United Kingdom (2 reports each), and Argentina, France, Greece, Ireland, the Netherlands and Spain (1 report each). The patients ranged in age from 36 to 93 years with a median of 74 years in the 26 reports which provided this information. There were 28 females and two males. Denosumab was the only drug suspected in all of the 30 cases except one. In this case, lercanidipine and sevelamer were also suspected. Concomitant drugs were reported in only 12 of the 30 cases and indicated a patient population with a number of concomitant conditions indicated by the use of vitamin D (7 patients), drugs for the treatment of hypertension (5), stomach acidity (5) and calcium (5), pain management (4), and drugs for treatment of hypothyroidism, lipid management and sleep disorders (2). Denosumab was reported to have been administered subcutaneously, as expected, in all 11 cases which provided the information. The indication for use was stated in 24 reports and included osteoporosis or postmenopausal osteoporosis in 22 reports, spondyloarthritis in one report and bone metastases in one report. Dosage was reported in 16 cases and was 60 mg per six months in eight reports, 60 mg without the frequency mentioned in four reports, 60 mg per one month in one report, one dosage form per six months in two reports and lastly 120 mg per four weeks in the case where bone metastases was the indication. Time to onset was reported in only 11 of the reports and ranged from three days to nine months after the drug was administered with a median of about two months. Two cases reported onset after receiving the second dose – after one week and three months respectively. The outcome of the vasculitis was stated in 16 of the 30 reports. Ten of the patients were reported as recovered or recovering, five were reported as not recovered and the remaining patient died, unrelated to the reaction. In the 10 reports with recovery, the drug was reported as withdrawn in five cases, dose not changed in one case while the action taken with the drug was unknown in the remaining four cases. In the five reports without recovery, the drug was reported as withdrawn in two cases while the action taken with the drug was unknown in the remaining three cases. Other reactions were reported in 20 of the 30 cases. These included skin reactions in 15 cases including rashes in seven cases. These are probably related to vasculitis. A variety of other reactions were reported including arthralgia or similar reactions in four cases, malaise in four cases and gait abnormal in three cases." ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatRecoveredAndHadDrugWithdrawn
+:ReportsThatRecoveredAndHadDrugWithdrawn rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                         OpenPVSignal:has_count 5 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                         rdfs:label "Reports with recovery and drug withdrawl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatRecoveredAndThereWasNoDoseChange
+:ReportsThatRecoveredAndThereWasNoDoseChange rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                             OpenPVSignal:has_count 1 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                                             rdfs:label "Reports with recovery and no dose change" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatRecoveredAndThereWasNoInformationAboutDrugWithdrawal
+:ReportsThatRecoveredAndThereWasNoInformationAboutDrugWithdrawal rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                                                 OpenPVSignal:has_count 4 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                                 rdfs:label "Reports with recovery and no information about drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithBoneMetastasisAsIndication
+:ReportsWithBoneMetastasisAsIndication rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:concerns_indication_for_use :bone_metastases ;
+                                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                       OpenPVSignal:refers_to_reported_drug_usage :usage_for_dosage_5 ;
+                                       OpenPVSignal:has_count 1 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "Reports with bone metastasis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithDenosumabAsTheOnlySuspectDrug
+:ReportsWithDenosumabAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+                                          OpenPVSignal:has_count 29 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "Reports with denosumab as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithDosage1
+:ReportsWithDosage1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                    OpenPVSignal:refers_to_reported_drug_usage :usage_for_dosage_1 ;
+                    OpenPVSignal:has_count 8 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithDosage2
+:ReportsWithDosage2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                    OpenPVSignal:refers_to_reported_drug_usage :usage_for_dosage_2 ;
+                    OpenPVSignal:has_count 4 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithDosage3
+:ReportsWithDosage3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                    OpenPVSignal:refers_to_reported_drug_usage :usage_for_dosage_3 ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithPostmenopausalOsteorporosisAsIndication
+:ReportsWithPostmenopausalOsteorporosisAsIndication rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:concerns_indication_for_use :osteoporosis ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                                    OpenPVSignal:has_count 22 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "Reports with postmenopausal osteorporosis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithScAdministrationOfDenosumab
+:ReportsWithScAdministrationOfDenosumab rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                        OpenPVSignal:has_count 11 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        OpenPVSignal:refers_to_form_of_intake "subcutaneous" ;
+                                        rdfs:label "Reports with subcutaneous administration of denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsWithSpondyloarthritisAsIndication
+:ReportsWithSpondyloarthritisAsIndication rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:concerns_indication_for_use :spondyloarthritis ;
+                                          OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                          OpenPVSignal:has_count 1 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "Reports with spondyloarthritis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Reports_with_age_info
+:Reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                       OpenPVSignal:has_count 26 ;
+                       OpenPVSignal:has_max_age 93 ;
+                       OpenPVSignal:has_median_age 74 ;
+                       OpenPVSignal:has_min_age 36 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Reports_with_dosage_4
+:Reports_with_dosage_4 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                       OpenPVSignal:refers_to_reported_drug_usage :usage_for_dosage_4 ;
+                       OpenPVSignal:has_count 2 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Reports_with_unrelated_death
+:Reports_with_unrelated_death rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "irrelevant death" ;
+                              rdfs:label "Reports with unrelated death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Response_from_Amgen
+:Response_from_Amgen rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Desonumab_and_vasculitis ;
+                     OpenPVSignal:has_content "Amgen acknowledges that cases of vasculitis have been reported. Based on a request from the Pharmacovigilance Risk Assessment Committee (PRAC), Amgen has performed a comprehensive safety assessment to evaluate the risk of vasculitis events with the use of denosumab and reported in Periodic Benefit-Risk Evaluation Report/Periodic Safety Update Report 7. For evaluation of this safety signal, Amgen utilized a cumulative review of all study and non-study adverse event reports with denosumab as well as a review of the epidemiology data of vasculitis, nonclinical data and controlled clinical trial data with denosumab. Biological plausibility was also assessed. Based on this comprehensive review, no new safety risk was identified for vasculitis in association with the use of denosumab. The Amgen conclusions to close the signal vasculitis was endorsed by the PRAC with no additional analyses required (dated 10 April 2014). The benefit:risk profile of denosumab remains favourable in the current approved indications and the product label adequately reflects the safety profile of Prolia. Amgen will continue to monitor events of vasculitis with denosumab through ongoing routine pharmacovigilance activities." ;
+                     rdfs:label "Response from Amgen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Denosumab is a human monoclonal antibody (IgG2) that targets and binds with high affinity and specificity to the receptor activator of nuclear factor kappa-B ligand (RANKL), preventing activation of its receptor, RANK, on the surface of osteoclast precursors and osteoclasts. Prevention of the RANKL/RANK interaction inhibits osteoclast formation, function and survival, thereby decreasing bone resorption in cortical and trabecular bone. Denosumab is indicated for the treatment of osteoporosis in postmenopausal women and in men at increased risk of fractures, and treatment of bone loss associated with hormone ablation in men with prostate cancer at increased risk of fractures. After the elimination of duplicates there are (as of 1 January 2016) 30 individual case safety reports of vasculitis in association with denosumab in VigiBase®, the WHO Global ICSR database. The reports are from Argentina, Australia, France, Germany, Greece, Ireland, the Netherlands, Spain, Switzerland, the United Kingdom and the United States. Denosumab was the only drug suspected in 29 of the 30 cases. The outcome of the vasculitis was stated in 16 cases and the patients were reported as recovered or recovering in 10 cases, not recovered in five cases and in the remaining case, the patient died unrelated to the adverse reaction. Case reports in VigiBase® suggest that there is a possible signal for the association of denosumab and vasculitis. Time to onset is consistent with a drug induced effect. Dechallenge is not particularly supportive of a drug association but for a drug such as denosumab, which is administered every six months, the concept of drug withdrawal is not meaningful. Although the patients in this case series had a number of concomitant conditions, there is little in the reports to indicate any other possible cause for vasculitis, other than the use of denosumab. It is possible that denosumab may cause vasculitis using a similar mechanism to that of TNF-α inhibitors. 
+""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#TNFa_inhibitors
+:TNFa_inhibitors rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_mechanism :Vasculitis_and_TNFa_inhibitors ;
+                 OpenPVSignal:has_ATC_code "L04AB" ;
+                 rdfs:label "TNFa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#TimeToOnsetOfVasculitis
+:TimeToOnsetOfVasculitis rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001197 ;
+                         mp:references :Ref.8 ;
+                         OpenPVSignal:has_content "Time to onset was reported in only 10 of the reports and ranged from three days to nine months after the drug was administered with a median of about two months. This would appear consistent with a drug induced effect since drug induced vasculitis is an immune mediated reaction which would be expected to take weeks or months to develop. Indeed, one report in the literature has noted that vasculitis in association with antithyroid drugs had a time to onset with a range of 1 to 372 months  (median: 42 months). " ;
+                         rdfs:label "Time to onset of vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Uncommon_ADR_of_denosumab
+:Uncommon_ADR_of_denosumab rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_adverse_effect :atypicalFemoralFractures ,
+                                                                 :hypersensitivity ,
+                                                                 :hypocalcaemia ,
+                                                                 :osteonecrosisOfTheJaw ;
+                           OpenPVSignal:refers_to_drug :denosumab ;
+                           mp:references :Ref.1 ;
+                           OpenPVSignal:has_content """Uncommon cases of cellulitis; rare cases of hypocalcaemia, hypersensitivity, 
+osteonecrosis of the jaw and atypical femoral fractures have been observed in patients taking denosumab.1""" ;
+                           rdfs:label "Uncommon ADR of denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#VasculitisManifestationInTheBody
+:VasculitisManifestationInTheBody rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Free_text_reporting_element ;
+                                  OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                                  mp:references :Ref.5 ;
+                                  OpenPVSignal:has_content "Vasculitis and its consequences may be the primary or sole manifestation of a disease or alternatively, it may be a secondary component of another primary disease. Vasculitis may be confined to a single organ, such as the skin, or it may simultaneously involve several organ systems" ;
+                                  rdfs:label "Vasculitis manifestation in the body" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#VasculitisMechanism
+:VasculitisMechanism rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                     mp:references :Ref.2 ;
+                     OpenPVSignal:has_content "Vasculitis comprises a heterogeneous group of inflammatory vascular lesions that can involve any kind of blood vessel, irrespective of its lumen or location. Vasculitis gives rise to such conditions as ischaemia or thrombosis, which may cause serious organ damage and be life-threatening. Vasculitis is a necrotizing inflammatory lesion of blood vessels, leading to their occlusion or disruption, with clinical sequelae. The clinicopathological diagnosis of vasculitis is supported by the demonstration of elevated levels of acute-phase reactants (demonstrated by, for example, erythrocyte sedimentation rate, differential blood count showing thrombocytosis and leukocytosis, and C-reactiveprotein), high levels of rheumatoid factors and cryoglobulins, hypocomplementaemia, antinuclear antibodies (ANA), and anti-neutrophil cytoplasmic antibodies (ANCA) especially those ANCAs directed against proteinase 3 or myeloperoxidase.2" ;
+                     rdfs:label "Vasculitis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#Vasculitis_and_TNFa_inhibitors
+:Vasculitis_and_TNFa_inhibitors rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001197 ,
+                                         OpenPVSignal:Adverse_Effect_Mechanism ;
+                                OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                                mp:references :Ref.10 ,
+                                              :Ref.11 ,
+                                              :Ref.12 ;
+                                OpenPVSignal:has_content "There have been reports of vasculitis in association with tumour necrosis factor (TNF)-α inhibitors.10,11 In one of these reports, the authors suggested a relationship between the introduction of therapy with TNF-α inhibitors and anti-drug antibody production. The resulting immune complexes and recruitment of inflammatory mediators may lead to cutaneous vasculitis.10 In another report, the authors documented 233 cases of autoimmune disease associated with TNF-α inhibitors including 113 cases of vasculitis.11 Since RANKL is a member of the TNF superfamily, it is possible that denosumab may cause vasculitis through a similar mechanism.12" ;
+                                rdfs:label "Mechanism of vasculitis and TNFa inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#aceInhibitors
+:aceInhibitors rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C09A" ;
+               rdfs:label "ace inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#adverseDrugReaction
+:adverseDrugReaction rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "T88.7XXA" ;
+                     OpenPVSignal:has_MedDRA_code 10061623 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Adverse drug reaction" ;
+                     rdfs:label "adverse drug reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#alfacalcidol
+:alfacalcidol rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A11CC03" ;
+              rdfs:label "alfacalcidol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#allergy
+:allergy rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10001738 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Allergy" ;
+         rdfs:label "allergy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#allopurinol
+:allopurinol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "M04AA01" ;
+             rdfs:label "allopurinol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#alopecia
+:alopecia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L65.9" ;
+          OpenPVSignal:has_MedDRA_code 10001760 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Alopecia" ;
+          rdfs:label "alopecia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D64.9" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#anginaPectoris
+:anginaPectoris rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I20.9" ;
+                OpenPVSignal:has_MedDRA_code 10002383 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+                rdfs:label "angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#arthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M26.62" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#atenolol
+:atenolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AB03" ;
+          rdfs:label "atenolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#atorvastatin
+:atorvastatin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "C10AA05" ;
+              rdfs:label "atorvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#atypicalFemoralFractures
+:atypicalFemoralFractures rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10070884 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Atypical femur fracture" ;
+                          rdfs:label "atypical femoral fractures" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#auto-antibodyResponse
+:auto-antibodyResponse rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10003809 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Auto-antibody response" ;
+                       rdfs:label "auto-antibody response" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#avascularNecrosisBone
+:avascularNecrosisBone rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10003861 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Avascular necrosis of bone" ;
+                       rdfs:label "avascular necrosis bone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#bedRestProtection
+:bedRestProtection rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "Z74.01" ;
+                   OpenPVSignal:has_MedDRA_code 10050118 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Bed rest" ;
+                   rdfs:label "bed rest" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07 " ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#blood_cancer
+:blood_cancer rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10066481 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hematological malignancy" ;
+              rdfs:label "blood cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#boneLoss
+:boneLoss rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "M85.9" ;
+          OpenPVSignal:has_MedDRA_code 10065687 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Bone loss" ;
+          rdfs:label "bone loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#bone_metastases
+:bone_metastases rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Indication ;
+                 OpenPVSignal:has_MedDRA_code 10005993 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Bone metastases" ;
+                 rdfs:label "bone metastases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#bromazepam
+:bromazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05BA08" ;
+            rdfs:label "bromazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#bullousEruption
+:bullousEruption rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10006559 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Bullous eruption" ;
+                 rdfs:label "bullous eruption" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#calcio
+:calcio rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Drug ;
+        OpenPVSignal:has_ATC_code "A12AA" ;
+        rdfs:label "calcio" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#calcium
+:calcium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A12AA" ;
+         rdfs:label "calcium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#calciumCarbonate
+:calciumCarbonate rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "A12AA04 " ;
+                  rdfs:label "calcium carbonate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#capecitabine
+:capecitabine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "L01BC06" ;
+              rdfs:label "capecitabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cellulitis
+:cellulitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "L03.90" ;
+            OpenPVSignal:has_MedDRA_code 10007882 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Cellulitis" ;
+            rdfs:label "cellulitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cerumenImpaction
+:cerumenImpaction rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "H61.23" ;
+                  OpenPVSignal:has_MedDRA_code 10050337 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Cerumen impaction" ;
+                  rdfs:label "cerumen impaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cetirizine
+:cetirizine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R06AE07 " ;
+            rdfs:label "cetirizine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cheilitis
+:cheilitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K13.0" ;
+           OpenPVSignal:has_MedDRA_code 10008417 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Cheilitis" ;
+           rdfs:label "cheilitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#chestPain
+:chestPain rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R07" ;
+           OpenPVSignal:has_MedDRA_code 10008479 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Chest pain" ;
+           rdfs:label "chest pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#choking
+:choking rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10008589 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Choking" ;
+         rdfs:label "choking" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#colecalciferol
+:colecalciferol rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11CC05" ;
+                rdfs:label "colecalciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#conditionAggravated
+:conditionAggravated rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code " F91.8" ;
+                     OpenPVSignal:has_MedDRA_code 10010264 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Condition aggravated" ;
+                     rdfs:label "condition aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#confusion
+:confusion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F44.8" ;
+           OpenPVSignal:has_MedDRA_code 10010305 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+           rdfs:label "confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cystitis
+:cystitis rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "N30.90" ;
+          OpenPVSignal:has_MedDRA_code 10011781 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Cystitis" ;
+          rdfs:label "cystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#denosumab
+:denosumab rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_mechanism :Mechanism_of_denosumab ;
+           OpenPVSignal:has_ATC_code "M05BX04 " ;
+           rdfs:label "denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#dexlansoprazole
+:dexlansoprazole rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A02BC06" ;
+                 rdfs:label "dexlansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#diverticulitis
+:diverticulitis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "K57.32" ;
+                OpenPVSignal:has_MedDRA_code 10013538 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Diverticulitis" ;
+                rdfs:label "diverticulitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#dyspnoea
+:dyspnoea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R06.0" ;
+          OpenPVSignal:has_MedDRA_code 10013968 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+          rdfs:label "dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#eczema
+:eczema rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "L30.9" ;
+        OpenPVSignal:has_MedDRA_code 10014184 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Eczema" ;
+        rdfs:label "eczema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ergocalciferol
+:ergocalciferol rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11CC01" ;
+                rdfs:label "ergocalciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#faceOedema
+:faceOedema rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R60.9" ;
+            OpenPVSignal:has_MedDRA_code 10016029 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Face oedema" ;
+            rdfs:label "face oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#faecalIncontinence
+:faecalIncontinence rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10016092 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Faecal incontinence" ;
+                    rdfs:label "faecal incontinence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#faecesDiscoloured
+:faecesDiscoloured rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R19.5" ;
+                   OpenPVSignal:has_MedDRA_code 10016100 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Faeces discoloured" ;
+                   rdfs:label "faeces discoloured" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#fentanyl
+:fentanyl rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AH01" ;
+          rdfs:label "fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#gabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#gaitAbnormal
+:gaitAbnormal rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R26" ;
+              OpenPVSignal:has_MedDRA_code 10017577 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Gait disturbance" ;
+              rdfs:label "gait abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#gemfibrozil
+:gemfibrozil rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AB04 " ;
+             rdfs:label "gemfibrozil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#haemorrhageNos
+:haemorrhageNos rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R58" ;
+                OpenPVSignal:has_MedDRA_code 10055798 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Haemorrhage" ;
+                rdfs:label "haemorrhage nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hepatitis_B
+:hepatitis_B rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10019731 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hepatitis B" ;
+             rdfs:label "hepatitis B" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hepatitis_C
+:hepatitis_C rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10019744 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hepatitis C" ;
+             rdfs:label "hepatitis C" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hyperparathyroidism
+:hyperparathyroidism rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "E21.3" ;
+                     OpenPVSignal:has_MedDRA_code 10020705 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Hyperparathyroidism" ;
+                     rdfs:label "hyperparathyroidism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hyperpyrexia
+:hyperpyrexia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R50.9" ;
+              OpenPVSignal:has_MedDRA_code 10020741 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hyperpyrexia" ;
+              rdfs:label "hyperpyrexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hypersensitivity
+:hypersensitivity rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10020751 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hypersensitivity" ;
+                  rdfs:label "hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hypersensitivity_vasculitis
+:hypersensitivity_vasculitis rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect ;
+                             OpenPVSignal:has_MedDRA_code 10020764 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Hypersensitivity vasculitis" ;
+                             rdfs:label "hypersensitivity vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hypocalcaemia
+:hypocalcaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "E83.51" ;
+               OpenPVSignal:has_MedDRA_code 10020947 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypocalcaemia" ;
+               rdfs:label "hypocalcaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hypokinesia
+:hypokinesia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I51.89" ;
+             OpenPVSignal:has_MedDRA_code 10021021 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypokinesia" ;
+             rdfs:label "hypokinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hypophosphataemia
+:hypophosphataemia rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "E83.39" ;
+                   OpenPVSignal:has_MedDRA_code 10021058 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hypophosphataemia" ;
+                   rdfs:label "hypophosphataemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#immuneSystemDisorder
+:immuneSystemDisorder rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "D89.9" ;
+                      OpenPVSignal:has_MedDRA_code 10021425 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Immune system disorder" ;
+                      rdfs:label "immune system disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#infectionBacterial
+:infectionBacterial rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "A49.9" ;
+                    OpenPVSignal:has_MedDRA_code 10060945 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Bacterial infection" ;
+                    rdfs:label "infection bacterial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#infectionViral
+:infectionViral rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "B34.9" ;
+                OpenPVSignal:has_MedDRA_code 10047461 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Viral infection" ;
+                rdfs:label "infection viral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#inflammationLocalized
+:inflammationLocalized rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10061218 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Inflammation" ;
+                       rdfs:label "inflammation localized" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ;
+              OpenPVSignal:has_content """Introduction 
+Denosumab is a human monoclonal antibody (IgG2) that targets and binds with high affinity and specificity to the receptor activator of nuclear factor kappa-B ligand (RANKL), preventing activation of its receptor, RANK, on the surface of osteoclast precursors and osteoclasts. Prevention of the RANKL/RANK interaction inhibits osteoclast formation, function and survival, thereby decreasing bone resorption in cortical and trabecular bone. Denosumab is indicated for the treatment of osteoporosis in postmenopausal women and in men at increased risk of fractures, and treatment of bone loss associated with hormone ablation in men with prostate cancer at increased risk of fractures. The most common side effects with denosumab (seen in more than one patient in ten) are musculoskeletal pain and pain in the extremity. Uncommon cases of cellulitis; rare cases of hypocalcaemia, hypersensitivity, osteonecrosis of the jaw and atypical femoral fractures have been observed in patients taking denosumab.1 Vasculitis comprises a heterogeneous group of inflammatory vascular lesions that can involve any kind of blood vessel, irrespective of its lumen or location. Vasculitis gives rise to such conditions as ischaemia or thrombosis, which may cause serious organ damage and be life-threatening. Vasculitis is a necrotizing inflammatory lesion of blood vessels, leading to their occlusion or disruption, with clinical sequelae. The clinicopathological diagnosis of vasculitis is supported by the demonstration of elevated levels of acute-phase reactants (demonstrated by, for example, erythrocyte sedimentation rate, differential blood count showing thrombocytosis and leukocytosis, and Creactiveprotein), high levels of rheumatoid factors and cryoglobulins, hypocomplementaemia, antinuclear antibodies (ANA), and anti-neutrophil cytoplasmic antibodies (ANCA) especially those ANCAs directed against proteinase 3 or myeloperoxidase.2 Hypersensitivity vasculitis is an acute form of this condition that is marked by inflammation or redness of the skin that occurs when contact is made with an irritating substance. It is characterized by the appearance of red spots on the skin – most commonly, palpable purpura. Palpable purpura are raised spots that are usually red in color but may darken to a purple color. However, there are many other types of rashes that can occur. Substances that can cause skin inflammation include medications, infections or any other foreign object which may induce an allergic reaction.3 Hypersensitivity vasculitis is usually represented histopathologically as leukocytoclastic vasculitis (LCV) which is a term commonly used to denote a small vessel vasculitis. Hypersensitivity vasculitis is thought to be mediated by immune complex deposition. In this form of vasculitis, circulating antigens in the body (produced by factors such as medications, infections, and neoplasms) induce antibody formation. These antibodies bind to the circulating antigen and create immune complexes, which then deposit within vessels, activating complement and inducing inflammatory mediators. Inflammatory mediators, adhesion molecules, and local factors may affect the endothelial cells and may play a 
+role in the manifestations of this disease.4 Vasculitis and its consequences may be the primary or sole manifestation of a disease or alternatively, it may be a secondary component of another primary disease. Vasculitis may be confined to a single organ, such as the skin, or it may simultaneously involve several organ systems.5 It should be noted that in WHO-ART, vasculitis is a preferred term with many included terms. Vasculitis is also a high level term which apart from vasculitis includes the related preferred terms arteritis, Churg Strauss syndrome, polyarteritis nodosa, Takayasu’s arteritis, and Wegener’s granulomatosis. MedDRA is more specific with vasculitis as a preferred term and many of the terms which are included terms in WHO-ART are preferred terms in the same high level term.""" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#lercanidipine
+:lercanidipine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C08CA13" ;
+               rdfs:label "lercanidipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#levothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#limbPain
+:limbPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10033503 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Painful arm" ;
+          rdfs:label "limb pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#losartan
+:losartan rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09CA01" ;
+          rdfs:label "losartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#lupus_syndrome
+:lupus_syndrome rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10025142 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Lupus syndrome" ;
+                rdfs:label "lupus syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#lymphangitis
+:lymphangitis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I89.1" ;
+              OpenPVSignal:has_MedDRA_code 10025226 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Lymphangitis" ;
+              rdfs:label "lymphangitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#malaise
+:malaise rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53.8 " ;
+         OpenPVSignal:has_MedDRA_code 10025482 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Malaise" ;
+         rdfs:label "malaise" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#megestrol
+:megestrol rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G03AC05" ;
+           rdfs:label "megestrol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#micturitionFrequency
+:micturitionFrequency rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10027562 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Micturition frequency" ;
+                      rdfs:label "micturition frequency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AA01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#muscleInjury
+:muscleInjury rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_MedDRA_code 10028314 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Muscle injury" ;
+              rdfs:label "muscle injury" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#musculoskeletalDisorder
+:musculoskeletalDisorder rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "M62.9" ;
+                         OpenPVSignal:has_MedDRA_code 10048592 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Musculoskeletal disorder" ;
+                         rdfs:label "musculoskeletal disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#musculoskeletalPain
+:musculoskeletalPain rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10028391 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Musculoskeletal pain" ;
+                     rdfs:label "musculoskeletal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#neuralgia
+:neuralgia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10029223 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Neuralgia" ;
+           rdfs:label "neuralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#neutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D70.9" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#nicorandil
+:nicorandil rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01DX16" ;
+            rdfs:label "nicorandil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#oedema
+:oedema rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R60.9" ;
+        OpenPVSignal:has_MedDRA_code 10030095 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Oedema" ;
+        rdfs:label "oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#oedemaPeripheral
+:oedemaPeripheral rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R60.9" ;
+                  OpenPVSignal:has_MedDRA_code 10030124 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Oedema peripheral" ;
+                  rdfs:label "oedema peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#osteonecrosisOfTheJaw
+:osteonecrosisOfTheJaw rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10064658 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Osteonecrosis of jaw" ;
+                       rdfs:label "osteonecrosis of the jaw" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#osteoporosis
+:osteoporosis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "M81.0" ;
+              OpenPVSignal:has_MedDRA_code 10031282 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Osteoporosis" ;
+              rdfs:label "osteoporosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pain
+:pain rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "G89.1" ;
+      OpenPVSignal:has_MedDRA_code 10033371 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Pain" ;
+      rdfs:label "pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#painInTheExtremity
+:painInTheExtremity rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10033425 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Pain in extremity" ;
+                    rdfs:label "pain in the extremity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01" ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#paraesthesia
+:paraesthesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R20.2" ;
+              OpenPVSignal:has_MedDRA_code 10033775 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Paraesthesia" ;
+              rdfs:label "paraesthesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#perhexiline
+:perhexiline rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C08EX02" ;
+             rdfs:label "perhexiline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pharyngitis
+:pharyngitis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10034835 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Pharyngitis" ;
+             rdfs:label "pharyngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#plantagoOvata
+:plantagoOvata rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A06AC51" ;
+               rdfs:label "plantago ovata" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pneumonia
+:pneumonia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "J15.8" ;
+           OpenPVSignal:has_MedDRA_code 10035664 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Pneumonia" ;
+           rdfs:label "pneumonia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pregabalin
+:pregabalin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX16" ;
+            rdfs:label "pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#propofol
+:propofol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AX10" ;
+          rdfs:label "propofol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#propranolol
+:propranolol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C07AA05" ;
+             rdfs:label "propranolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pruritus
+:pruritus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "L29" ;
+          OpenPVSignal:has_MedDRA_code 10037087 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Pruritus" ;
+          rdfs:label "pruritus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pulmonaryDisorder
+:pulmonaryDisorder rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "J98.4" ;
+                   OpenPVSignal:has_MedDRA_code 10025082 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Lung disorder" ;
+                   rdfs:label "pulmonary disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pulmonaryOedema
+:pulmonaryOedema rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "J81" ;
+                 OpenPVSignal:has_MedDRA_code 10037423 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pulmonary oedema" ;
+                 rdfs:label "pulmonary oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#purpura
+:purpura rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D69.2" ;
+         OpenPVSignal:has_MedDRA_code 10037549 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Purpura" ;
+         rdfs:label "purpura" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :Discussion ,
+                                                   :HypersensitivityVasculitis ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :VasculitisManifestationInTheBody ,
+                                                   :VasculitisMechanism ,
+                                                   :introduction ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report17 ,
+                                                              :Report18 ,
+                                                              :Report19 ,
+                                                              :Report2 ,
+                                                              :Report20 ,
+                                                              :Report21 ,
+                                                              :Report22 ,
+                                                              :Report23 ,
+                                                              :Report24 ,
+                                                              :Report25 ,
+                                                              :Report26 ,
+                                                              :Report27 ,
+                                                              :Report28 ,
+                                                              :Report29 ,
+                                                              :Report3 ,
+                                                              :Report30 ,
+                                                              :Report31 ,
+                                                              :Report32 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibase ,
+                                                          :OverallReportsInVigibaseWithoutDuplicates ,
+                                                          :ReportsFromArgentina ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromFrance ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromGreece ,
+                                                          :ReportsFromIreland ,
+                                                          :ReportsFromNetherlands ,
+                                                          :ReportsFromSpain ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsFromUK ,
+                                                          :ReportsFromUnitedStates ,
+                                                          :ReportsThatRecoveredAndHadDrugWithdrawn ,
+                                                          :ReportsThatRecoveredAndThereWasNoDoseChange ,
+                                                          :ReportsThatRecoveredAndThereWasNoInformationAboutDrugWithdrawal ,
+                                                          :ReportsWithBoneMetastasisAsIndication ,
+                                                          :ReportsWithDenosumabAsTheOnlySuspectDrug ,
+                                                          :ReportsWithDosage1 ,
+                                                          :ReportsWithDosage2 ,
+                                                          :ReportsWithDosage3 ,
+                                                          :ReportsWithPostmenopausalOsteorporosisAsIndication ,
+                                                          :ReportsWithScAdministrationOfDenosumab ,
+                                                          :ReportsWithSpondyloarthritisAsIndication ,
+                                                          :Reports_with_age_info ,
+                                                          :Reports_with_dosage_4 ,
+                                                          :Reports_with_unrelated_death ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReporsThatdidn’tRecoverAndTheDrugWasWithdrawn> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatdidn’tRecover> ;
+          OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+          OpenPVSignal:refers_to_drug :denosumab ;
+          OpenPVSignal:refers_to_primary_suspect_drug :denosumab ;
+          mp:supportedByData :DenosumabAndMusculoskeletalPain ,
+                             :DenosumabAndPainInTheExtremety ,
+                             :LercadipineAndSevelamerDoNotTriggerVasculitis ,
+                             :NoReportingForVasculitisInDenosumab ,
+                             :Other_causes_of_vasculitis ,
+                             :TimeToOnsetOfVasculitis ,
+                             :Uncommon_ADR_of_denosumab ,
+                             :Vasculitis_and_TNFa_inhibitors ,
+                             :rarely_biopsey-proven_vasculitis ,
+                             :timeToOnsetData ;
+          OpenPVSignal:initially_identified_on "01/12/2016" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ranelicAcid
+:ranelicAcid rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "M05BX03" ;
+             rdfs:label "ranelic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ranitidine
+:ranitidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA02" ;
+            rdfs:label "ranitidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#rarely_biopsey-proven_vasculitis
+:rarely_biopsey-proven_vasculitis rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ;
+                                  OpenPVSignal:refers_to_adverse_effect :vasculitis ;
+                                  OpenPVSignal:has_content "Vasculitis can be  confirmed by biopsy. Only two of the cases  reported biopsy-proven vasculitis while in two  cases, biopsies appeared to be negative. In two other cases, there was evidence for a different  diagnosis so it is possible that not all 30 cases  describe vasculitis." ;
+                                  rdfs:label "rarely biopsy-proven vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#rash
+:rash rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R21" ;
+      OpenPVSignal:has_MedDRA_code 10037844 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Rash" ;
+      rdfs:label "rash" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#rashErythematous
+:rashErythematous rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "L53.9" ;
+                  OpenPVSignal:has_MedDRA_code 10037855 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Rash erythematous" ;
+                  rdfs:label "rash erythematous" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#rashPustular
+:rashPustular rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R21" ;
+              OpenPVSignal:has_MedDRA_code 10037888 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Rash pustular" ;
+              rdfs:label "rash pustular" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#renalFailureAcute
+:renalFailureAcute rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N17.9" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" ;
+                   rdfs:label "renal failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#rheumatoid_arthritis
+:rheumatoid_arthritis rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ,
+                               OpenPVSignal:Potential_Confounder ;
+                      OpenPVSignal:has_MedDRA_code 10039073 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Rheumatoid arthritis" ;
+                      rdfs:label "rheumatoid arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#sceloderma
+:sceloderma rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10039710 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Scleroderma" ;
+            rdfs:label "scleoderma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#secretionDischarge
+:secretionDischarge rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "R36.9" ;
+                    OpenPVSignal:has_MedDRA_code 10053459 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Secretion discharge" ;
+                    rdfs:label "secretion discharge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#serumSickness
+:serumSickness rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "T80.69XA" ;
+               OpenPVSignal:has_MedDRA_code 10040400 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Serum sickness" ;
+               rdfs:label "serum sickness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#sevelamer
+:sevelamer rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "V03AE02" ;
+           rdfs:label "sevelamer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#skeletalPain
+:skeletalPain rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code " M79.1" ;
+              OpenPVSignal:has_MedDRA_code 10006002 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Bone pain" ;
+              rdfs:label "skeletal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#skinDiscolouration
+:skinDiscolouration rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "L81.9" ;
+                    OpenPVSignal:has_MedDRA_code 10040829 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Skin discolouration" ;
+                    rdfs:label "skin discolouration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#skinDisorder
+:skinDisorder rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code " L98.9" ;
+              OpenPVSignal:has_MedDRA_code 10040831 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Skin disorder" ;
+              rdfs:label "skin disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#skinExfoliation
+:skinExfoliation rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "L49.1" ;
+                 OpenPVSignal:has_MedDRA_code 10040844 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Skin exfoliation" ;
+                 rdfs:label "skin exfoliation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#skinNodule
+:skinNodule rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10040902 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Skin nodule" ;
+            rdfs:label "skin nodule" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#sleepDisorder
+:sleepDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10040984 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Sleep disorder" ;
+               rdfs:label "sleep disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#spondyloarthritis
+:spondyloarthritis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_MedDRA_code 10071400 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Axial spondyloarthritis" ;
+                   rdfs:label "spondyloarthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#sulindac
+:sulindac rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "M01AB02" ;
+          rdfs:label "sulindac" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#timeToOnsetData
+:timeToOnsetData rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 OpenPVSignal:has_content "Time to onset was reported in only 11 of the reports and ranged from three days to nine months after the drug was administered with a median of about two months. " ;
+                 rdfs:label "time to onset data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_11
+:time_to_onset_11 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "months" ;
+                  time:numericPosition 9 ;
+                  rdfs:label "time to onset 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_16
+:time_to_onset_16 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 3 ;
+                  rdfs:label "time to onset 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_2
+:time_to_onset_2 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "months" ;
+                 time:numericPosition 6 ;
+                 rdfs:label "time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_21
+:time_to_onset_21 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "weeks" ;
+                  time:numericPosition 2 ;
+                  rdfs:label "time to onset 21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_22
+:time_to_onset_22 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 10 ;
+                  rdfs:label "time to onset 22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_24
+:time_to_onset_24 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "weeks" ;
+                  time:numericPosition 15 ;
+                  rdfs:label "time to onset 24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_26
+:time_to_onset_26 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "months" ;
+                  time:numericPosition 1 ;
+                  rdfs:label "time to onset 26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_3
+:time_to_onset_3 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 3 ;
+                 rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_4
+:time_to_onset_4 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 OpenPVSignal:has_content "1.5-2.5 months" ;
+                 time:nominalPosition "months" ;
+                 time:numericDuration 1 ;
+                 time:numericPosition 1.5 ;
+                 rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_5
+:time_to_onset_5 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "months" ;
+                 time:numericPosition 3 ;
+                 rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#time_to_onset_7
+:time_to_onset_7 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 OpenPVSignal:has_content "3-4 months" ;
+                 time:nominalPosition "months" ;
+                 time:numericDuration 1 ;
+                 time:numericPosition 3 ;
+                 rdfs:label "time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#transientIschaemicAttack
+:transientIschaemicAttack rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "G45.9" ;
+                          OpenPVSignal:has_MedDRA_code 10044390 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Transient ischaemic attack" ;
+                          rdfs:label "transient ischaemic attack" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ulceration
+:ulceration rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "K27.9" ;
+            OpenPVSignal:has_MedDRA_code 10045285 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Ulcer" ;
+            rdfs:label "ulcer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#upperRespiratoryTractInfection
+:upperRespiratoryTractInfection rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_ICD_code "J06.9" ;
+                                OpenPVSignal:has_MedDRA_code 10046306 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Upper respiratory tract infection" ;
+                                rdfs:label "upper respiratory tract infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#urinaryIncontinence
+:urinaryIncontinence rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "R32" ;
+                     OpenPVSignal:has_MedDRA_code 10046543 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Urinary incontinence" ;
+                     rdfs:label "urinary incontinence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_for_dosage_1
+:usage_for_dosage_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dosage1 ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage for dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_for_dosage_2
+:usage_for_dosage_2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dosage2 ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage for dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_for_dosage_3
+:usage_for_dosage_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dosage_3 ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage for dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_for_dosage_4
+:usage_for_dosage_4 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dosage_4 ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage for dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_for_dosage_5
+:usage_for_dosage_5 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dosage3 ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage for dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#usage_of_denosumab
+:usage_of_denosumab rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :boneLoss ,
+                                                             :osteoporosis ;
+                    OpenPVSignal:refers_to_drug :denosumab ;
+                    rdfs:label "usage of denosumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#vascularDisorder
+:vascularDisorder rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10047059 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Vascular disorder" ;
+                  rdfs:label "vascular disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#vasculitis
+:vasculitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10047115 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Vasculitis" ;
+            rdfs:label "vasculitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#visionAbnormal
+:visionAbnormal rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "H54" ;
+                OpenPVSignal:has_MedDRA_code 10047571 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                rdfs:label "vision abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#vitaminDNos
+:vitaminDNos rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A11CC" ;
+             rdfs:label "vitamin d nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#vitaminsNos
+:vitaminsNos rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A11" ;
+             rdfs:label "vitamins nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#weightIncrease
+:weightIncrease rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R63.5" ;
+                OpenPVSignal:has_MedDRA_code 10047899 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Weight increased" ;
+                rdfs:label "weight increase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#wheelchairUser
+:wheelchairUser rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "Z99.3" ;
+                OpenPVSignal:has_MedDRA_code 10047920 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Wheelchair user" ;
+                rdfs:label "wheelchair user" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#zoledronicAcid
+:zoledronicAcid rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "M05BA08 " ;
+                rdfs:label "zoledronic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#1_month_between_administration
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#1_month_between_administration> rdf:type owl:NamedIndividual ,
+                                                                                                           time:DurationDescription ;
+                                                                                                  time:nominalPosition "months" ;
+                                                                                                  time:numericPosition 1 ;
+                                                                                                  rdfs:label "1 month between administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#4WeeksBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#4WeeksBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                         time:DurationDescription ;
+                                                                                                time:nominalPosition "weeks" ;
+                                                                                                time:numericPosition 4 ;
+                                                                                                rdfs:label "4 weeks between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#6MonthsBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#6MonthsBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                          time:DurationDescription ;
+                                                                                                 time:nominalPosition "months" ;
+                                                                                                 time:numericPosition 6 ;
+                                                                                                 rdfs:label "6 months between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReporsThatdidn’tRecoverAndTheDrugWasWithdrawn
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReporsThatdidn’tRecoverAndTheDrugWasWithdrawn> rdf:type owl:NamedIndividual ,
+                                                                                                                          OpenPVSignal:Reports_group ;
+                                                                                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatdidn’tRecover> ;
+                                                                                                                 OpenPVSignal:has_count 2 ;
+                                                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                 OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                                                                                                 rdfs:label "Reports with no recovery and drug withdrawl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatdidn’tRecover
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#ReportsThatdidn’tRecover> rdf:type owl:NamedIndividual ,
+                                                                                                     OpenPVSignal:Reports_group ;
+                                                                                            OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseWithoutDuplicates ;
+                                                                                            OpenPVSignal:has_count 5 ;
+                                                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                            OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                                                                            rdfs:label "Reports with no recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cardiacarrest/heartAttack
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#cardiacarrest/heartAttack> rdf:type owl:NamedIndividual ,
+                                                                                                      OpenPVSignal:Adverse_Effect ;
+                                                                                             OpenPVSignal:has_ICD_code "I46.9" ;
+                                                                                             OpenPVSignal:has_MedDRA_code 10007515 ;
+                                                                                             OpenPVSignal:has_MedDRA_prefered_term "Cardiac arrest" ;
+                                                                                             rdfs:label "cardiac arrest/heart attack" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#colecalciferol/calciumCarbonate
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#colecalciferol/calciumCarbonate> rdf:type owl:NamedIndividual ,
+                                                                                                            OpenPVSignal:Drug ;
+                                                                                                   OpenPVSignal:has_ATC_code "A11CC05" ,
+                                                                                                                             "A12AX01" ;
+                                                                                                   rdfs:label "colecalciferol/calcium carbonate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#enalaprilmaleate/lercanidipineHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#enalaprilmaleate/lercanidipineHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                                        OpenPVSignal:Drug ;
+                                                                                                               OpenPVSignal:has_ATC_code "C09BB02" ;
+                                                                                                               rdfs:label "enalapril maleate/lercanidipine hydrochloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/amilorideHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/amilorideHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                                       OpenPVSignal:Drug ;
+                                                                                                              OpenPVSignal:has_ATC_code "C03AA03" ,
+                                                                                                                                        "C03DB01" ;
+                                                                                                              rdfs:label "hydrochlorothiazide/ amiloride hydrochloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/valsartan
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#hydrochlorothiazide/valsartan> rdf:type owl:NamedIndividual ,
+                                                                                                          OpenPVSignal:Drug ;
+                                                                                                 OpenPVSignal:has_ATC_code "C03AA03" ,
+                                                                                                                           "C09DA03" ;
+                                                                                                 rdfs:label "hydrochlorothiazide/valsartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#medicationError(offLabeluse)
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#medicationError(offLabeluse)> rdf:type owl:NamedIndividual ,
+                                                                                                         OpenPVSignal:Adverse_Effect ;
+                                                                                                OpenPVSignal:has_ICD_code "T50.901A" ;
+                                                                                                OpenPVSignal:has_MedDRA_code 10027091 ;
+                                                                                                OpenPVSignal:has_MedDRA_prefered_term "Medication error" ;
+                                                                                                rdfs:label "medication error (off label use)" ,
+                                                                                                           "medicationError(offLabeluse)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#phloroglucinol/trimethylphloroglucinol
+<http://purl.org/OpenPVSignal/Signals/2016_6_denosumab_vasculitis#phloroglucinol/trimethylphloroglucinol> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:Drug ;
+                                                                                                          OpenPVSignal:has_ATC_code "A03AX12" ;
+                                                                                                          rdfs:label "phloroglucinol/trimethylphloroglucinol" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

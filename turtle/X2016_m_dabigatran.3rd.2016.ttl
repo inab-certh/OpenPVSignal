@@ -1,0 +1,1630 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism> .
+
+<http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism> rdf:type owl:Ontology ;
+                                                                          owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                      mp: ;
+                                                                          rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255493/"^^xsd:anyURI ;
+                                                                          rdfs:label "Dabigatran and thromboembolism: analysis of case histories for risk factors"^^xsd:Literal ;
+                                                                          owl:versionInfo "draft-v0.95-20211025"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismAssessmentLimitations
+:AssessmentLimitations rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001182 ,
+                                OpenPVSignal:Free_text_reporting_element ;
+                       OpenPVSignal:has_content "It is acknowledged that the information in VigiBase® is heterogeneous, i.e., it originates from multiple sources (different countries and types of reporters) and the amount of information given may vary from case to case. As an example, even though there were several patients apparently following treatment guidelines, little information on whether patients were compliant or not could be retrieved. Our case series presents patients with additional risk factors to those connected with the primary indication for dabigatran and include neoplasm, concomitant prothrombotic medications, myocardial infarction and coronary artery disease. It is not possible at this stage to compare the effectiveness of dabigatran with warfarin or enoxaparin in the type of patients this case series represents.  " ;
+                       rdfs:label "Assessment limitations " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismCHMP_report_for_dabigatran
+:CHMP_report_for_dabigatran rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001197 ;
+                            OpenPVSignal:is_supported_by_statistical_entity :frequencyOfDeepVeinthrombosis-CHMPreport-150Mg ,
+                                                                            :frequencyOfDeepVeinthrombosis-CHMPreport-220Mg ;
+                            OpenPVSignal:refers_to_adverse_effect :venousThromboembolism ;
+                            OpenPVSignal:refers_to_drug :dabigatran ;
+                            mp:references :Ref.12 ;
+                            OpenPVSignal:has_content "In the 2008 European Medicines Agency (EMA) Committee for Medicinal Products for Human Use (CHMP) Assessment Report, the event “deep vein thrombosis” is described among the most frequent adverse events in the pivotal studies of venous thromboembolism prevention after knee and hip total replacement with a frequency of 9.3% and 6.4% for dabigatran 150 mg and 220 mg daily respectively. In addition, deep vein thrombosis was reported among the most common reasons for discontinuation due to adverse events.12" ;
+                            rdfs:label "CHMP report for dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   mp:references :Ref.26 ;
+                   OpenPVSignal:has_content "The most informative reports in VigiBase® reporting venous or arterial thrombotic or embolic events in patients on dabigatran therapy were collected and analysed according to the dabigatran indication. The information in two thirds of the 79 most informative reports indicated that dabigatran was ineffective in overcoming multiple thrombosis risk factors. However, modifiable risk factors included lower than recommended doses, coprescription of pro-thrombotic medicines and, possibly, co-prescription of proton pump inhibitors. The 79 discussed reports were submitted from Americas, Asia and Europe, with most of them coming from Europe. Spontaneous reporting is used for collecting information about unexpected adverse reactions once drugs are on the market. It is not used to assess drug efficacy, but can be used to detect unexpected cases of failure of therapy.26 In the case of the topic of this study, it has been useful in highlighting risk factors for dabigatran ineffectiveness in clinical practice, including those that might be modifiable. Given the strong correlation between dabigatran plasma levels and anticoagulant effect, therapeutic drug monitoring could provide valuable information for dose selection in patients on potentially interacting medicines, elderly patients with apparently normal renal function to ensure they receive an adequate dose, and where there are concerns about adherence. " ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDabigatranAndBleeding
+:DabigatranAndBleeding rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Warning_Information ;
+                       OpenPVSignal:refers_to_adverse_effect :bleeding ;
+                       OpenPVSignal:refers_to_drug :dabigatran ;
+                       mp:references :Ref.1 ,
+                                     :Ref.2 ,
+                                     :Ref.3 ,
+                                     :Ref.4 ;
+                       rdfs:label "Dabigatran and bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDabigatranAndGastritisLikeSymptoms
+:DabigatranAndGastritisLikeSymptoms rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Warning_Information ;
+                                    OpenPVSignal:refers_to_adverse_effect :gastritis ;
+                                    OpenPVSignal:refers_to_drug :dabigatran ;
+                                    mp:references :Ref.1 ,
+                                                  :Ref.2 ,
+                                                  :Ref.3 ,
+                                                  :Ref.4 ;
+                                    rdfs:label "Dabigatran and gastritis like symptoms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.1 ,
+                                 :Ref.19 ,
+                                 :Ref.20 ,
+                                 :Ref.21 ,
+                                 :Ref.22 ,
+                                 :Ref.23 ,
+                                 :Ref.24 ,
+                                 :Ref.25 ;
+                   OpenPVSignal:has_content "Out of the 122 most informative reports selected, the 79 reports that fitted our inclusion criteria were presented and discussed. Across all the four groups three modifiable potential risk factors for lack of dabigatran efficacy were identified. Ten patients were taking lower than recommended doses and three of these were taking concomitant proton pump inhibitors. Ten other patients were also taking proton pump inhibitors. Five patients were taking prothrombotic agents, tranexamic acid, estradiol, exemestane, cyproterone and letrozole respectively. As indicated in the introduction, there is a theoretical reason for an interaction with proton pump inhibitors leading to decreased dabigatran plasma levels but this was not found to be clinically important in one pharmacokinetic study with pantoprazole.1 Upper gastrointestinal symptoms are common adverse reactions to dabigatran which may lead to proton pump inhibitor use. There is also a high proton pump inhibitor use prevalence in many countries so without further studies a firm conclusion cannot be drawn. Only one report had sufficient detail to show commencement of a proton pump inhibitor after dabigatran had been commenced and shortly before thrombosis occurred. However, it is possible that for patients whose dabigatran plasma levels are at the lower end of the therapeutic range or with other risk factors for VTE the interaction may be clinically important. On the other hand, an 86-year-old patient was taking a higher than recommended dose of dabigatran in the presence of rabeprazole but experienced a deep vein thrombosis anyway. In most cases the use of the lower recommended dose was appropriate, as the patients had renal failure or were aged over 75 years. However some patients in the older age group will have adequate renal function and in these cases dabigatran  plasma level monitoring could be useful to find the appropriate dose. Risk factors that were less modifiable were the presence of a coagulopathy in two patients and antiphospholipid syndrome in another. Patients with atrial fibrillation, in particular, had comorbidities that could lead to or be due to atherosclerosis, such as hypertension, diabetes, dyslipidemia and coronary artery disease, and this would have increased arterial thrombotic risk. However, these patients would also have been represented in clinical trials as the co-morbidities are often closely linked with atrial fibrillation. At least three patients who developed pulmonary embolism had active cancer. The patients of most interest were those who developed VTE while taking dabigatran to prevent arterial embolism due to atrial fibrillation. These patients were older than those in the other groups and older age is a risk factor for VTE. A high proportion of patients who developed pulmonary embolism clearly had a number of serious comorbidities that could have contributed. Active cancer is known to account for almost 20% of incident VTE events.19 Pneumonia was co-reported in one case. Pulmonary embolism and pneumonia are both prevalent conditions after stroke, moreover a patient developing pneumonia is likely to be further predisposed to supervening pulmonary embolism.20 One patient had a recently implanted pacemaker but it was not specified whether the pacemaker was intravenous, which is a VTE risk factor.19 As expected, the rest of the patients presented with thrombotic risk factors such as arterial hypertension, congestive heart failure, myocardial infarction and coronary disease. In general however, the risk of VTE associated with congestive heart failure, independent of hospitalization, is low.19 It is therefore possible that patients who develop pulmonary embolism while taking dabigatran for stroke prevention represent a group of predisposed individuals in whom co-morbid hypercoagulable states overcome the effect of dabigatran. It is also known that AF is associated with a hypercoagulable state.21-23 Noel et al. described a higher incidence of deep vein thrombosis and pulmonary embolism in stroke patients with NVAF.21 However, atrial fibrillation is not listed as a cause of venous thromboembolism in standard texts unless there has been immobility due to stroke.24 Three patients developed thrombosis on stopping dabigatran; one was taking a sub-therapeutic dose. There is one published case series of thrombosis developing within one month of dabigatran withdrawal. The possibility of rebound, and therefore the question of how to stop dabigatran safely, was raised.25 Dabigatran has a much shorter half-life than warfarin and it is possible therefore that thrombosis might be more likely to develop when doses are missed or when therapy is discontinued. There was little information on whether patients were compliant or not in the reports we extracted. Most surprising was reports of thromboembolism in patients who were taking greater than recommended dabigatran doses, other antithrombotic agents, or interacting medicines that decrease dabigatran clearance. There is no clear explanation for these observations.  " ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDosageForDabigatran
+:DosageForDabigatran rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :dabigatran ;
+                     OpenPVSignal:has_content "The recommended daily doses of dabigatran for NVAF are 300 mg and, for older patients and patients with creatinine clearance 30 to 50 ml/min, 220 mg daily in two divided doses. For prevention of VTE after major orthopaedic surgery the corresponding recommended daily doses are 220 mg and 150 mg.  " ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 150 ,
+                                            220 ,
+                                            300 ;
+                     OpenPVSignal:refers_to_dose_value "150 mg" ,
+                                                       "220 mg" ,
+                                                       "300 mg" ;
+                     rdfs:label "Dosage for dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDosage_for_2a
+:Dosage_for_2a rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Dosage ;
+               OpenPVSignal:refers_to_drug :dabigatran ;
+               OpenPVSignal:has_content "Dabigatran daily dose was recorded for all patients and was consistent with the recommended daily doses stated in the product information in all but two patients." ;
+               rdfs:label "Dosage for 2a" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDose150OfDabigatran
+:Dose150OfDabigatran rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :dabigatran ;
+                     OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 150 ;
+                     OpenPVSignal:refers_to_dose_value "150 mg" ;
+                     rdfs:label "Dose 150 of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDose220OfDabigatrane
+:Dose220OfDabigatrane rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :dabigatran ;
+                      OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                      OpenPVSignal:has_dosage_unit "mg" ;
+                      OpenPVSignal:has_value 220 ;
+                      OpenPVSignal:refers_to_dose_value "220 mg" ;
+                      rdfs:label "Dose 220 of dabigatrane" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDose300MgOfDabigatran
+:Dose300MgOfDabigatran rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Dosage ;
+                       OpenPVSignal:refers_to_drug :dabigatran ;
+                       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalBetweenAdministrations ;
+                       OpenPVSignal:has_dosage_unit "mg" ;
+                       OpenPVSignal:has_value 300 ;
+                       OpenPVSignal:refers_to_dose_value "300 mg" ;
+                       rdfs:label "Dose 300 mg of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDr_Ruth_Savage
+:Dr_Ruth_Savage rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Author ;
+                OpenPVSignal:has_first_name "Ruth" ;
+                OpenPVSignal:has_last_name "Savage" ;
+                rdfs:label "Dr Ruth Savage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismIntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.10 ,
+                                   :Ref.11 ,
+                                   :Ref.12 ,
+                                   :Ref.13 ,
+                                   :Ref.14 ,
+                                   :Ref.15 ,
+                                   :Ref.16 ,
+                                   :Ref.17 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content "Dabigatran is a direct thrombin inhibitor. Thrombin is the pivotal protease of the coagulation cascade by enabling transformation of fibrinogen to fibrin, and therefore inhibition of thrombin prevents development of thrombosis and increases the risk of bleeding. The anti-coagulation effect is in direct correlation to the plasma concentration of dabigatran. The mean half-life is 8.8 hours. Renal excretion is the dominant elimination pathway; consequently, half-life is prolonged with decreased renal function. Dabigatran is taken as the prodrug dabigatran etexilate which is an efflux pump P-glycoprotein substrate. Thus, dabigatran plasma levels were elevated when given following known P-glycoprotein inhibitors such as amiodarone and verapamil, and reduced with inducers such as rifampicin. A number of proton pump inhibitors interact with P-glycoprotein, and in one study the mean area under the curve for dabigatran was reduced by 30% with pantoprazole. Unlike the vitamin K antagonists, repeated monitoring for anticoagulant effect is considered unnecessary for dabigatran. Dabigatran is approved for prevention of stroke and systemic embolism in adult patients with NVAF and additional risk factors for stroke; prevention of venous thromboembolic events in adult patients who have undergone elective total hip or knee replacement surgery; and more recently, treatment and prevention of deep vein thrombosis (DVT) and pulmonary embolism. Dose adjustment is required in patients above the age of 75 or 80 years according to the indication, patients with reduced kidney function, and other patients who are at increased risk of bleeding. The recommended daily doses of dabigatran for NVAF are 300 mg and, for older patients and patients with creatinine clearance 30 to 50 ml/min, 220 mg daily in two divided doses. For prevention of VTE after major orthopaedic surgery the corresponding recommended daily doses are 220 mg and 150 mg. Medical knowledge and adherence to treatment are needed for successful use of these drugs in clinical practice. The most commonly (>15%) reported adverse reactions are gastritislike symptoms and bleeding.1-4 Thrombosis, venous or arterial, is the formation of a blood clot (thrombus) in a blood vessel or the heart. The thrombus, if detached, travels through the bloodstream and may occlude a vessel distant from the original site. This phenomenon is referred to as thromboembolism. The most common form of thromboembolism is venous thromboembolism when a blood clot that forms in a deep vein migrates to another location e.g., a deep vein thrombus in the leg may break off and cause a pulmonary embolus. The risk of thrombosis is influenced by both genetic and environmental factors. Trauma (particularly after surgery or parturition), immobility, cardiac and vascular disorders, obesity, coagulation disorders, age over 65 years, sepsis, medical conditions such as malignancy, and medications such as hormonal therapy, are predisposing causes of venous thrombosis. Likewise atherosclerosis is the major risk factor for arterial thrombosis.5,6 Clinical trial data for dabigatran have provided a rate for lack of efficacy.7-12 Subsequently, case reports of thromboembolic events have been published where the authors have expressed concern and have discussed various hypotheses about why these events occurred.13-17 Our study of case reports in VigiBase® was undertaken to ascertain whether investigation of a larger number of reports than those published would help  identify circumstances and modifiable risk factors for thromboembolism occurring during dabigatran treatment in clinical practice." ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismLabellingOfDabigatran
+:LabellingOfDabigatran rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Structured_Product_Labels_information ;
+                       OpenPVSignal:refers_to_drug :dabigatran ;
+                       mp:references :Ref.1 ;
+                       OpenPVSignal:has_content "The product literature does not refer to thromboembolism as an adverse reaction as dabigatran is indicated for preventing such events." ;
+                       rdfs:label "Labelling of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.10 ,
+                                      :Ref.11 ,
+                                      :Ref.12 ,
+                                      :Ref.13 ,
+                                      :Ref.14 ,
+                                      :Ref.15 ,
+                                      :Ref.16 ,
+                                      :Ref.17 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """The product literature does not refer to thromboembolism as an adverse reaction as dabigatran is indicated for preventing such events.1 In the RE-MODEL trial (knee replacement), dabigatran treatment was for 6-10 days, while in the RE-NOVATE trial (hip replacement) it was for 28-35 days; respectively, 2,076 and 3,494 patients were treated. The rate of symptomatic pulmonary embolism during treatment was low, both with the 220 mg daily dose (0.0% for knee replacements, 0.4% for hip), and the 150 mg daily dose (0.1% for knee replacement and 0.1% for hip). The rate of symptomatic deep vein thrombosis was 0.1% for knee replacement and 0.5% for hip surgery within the 220 mg group; whereas recorded rates were 0.4% and 0.8% within the 150 mg daily dose group respectively. Similarly, the rate of symptomatic VTE during the three-month RE-NOVATE II study period was low (0.3%) and comparable with that reported in RENOVATE.7-9 The clinical evidence for the efficacy of dabigatran etexilate is derived from the RE-LY study for patients with NVAF at moderate to high risk of stroke and systemic embolism. The primary objective in this study was to determine if dabigatran etexilate was non-inferior to warfarin in reducing the occurrence of the composite endpoint stroke and systemic embolism. The incidence of ischaemic or unspecified stroke was 2.64% at the 220 mg and 1.83% at the 300 mg dabigatran daily dose. Half of the study patients continued into the RELY-ABLE two-year follow-up study. Pulmonary embolism was reported with a very low frequency of 0.12 to 0.15% per year in the RELY trial, and this is consistent with the rate in the RELY-ABLE trial. In addition, symptomatic “deep vein thrombosis” was regarded as a safety outcome in the RELY-ABLE trial and occurred with a frequency of 2/2914 (0.07%) in the dabigatran 220 mg daily group compared to 6/2937 (0.20%) in the 300 mg daily group.10,11 In the 2008 European Medicines Agency (EMA) Committee for Medicinal Products for Human Use (CHMP) Assessment Report, the event “deep vein thrombosis” is described among the most frequent adverse events in the pivotal studies of venous thromboembolism prevention after knee and hip total replacement with a frequency of 9.3% and 6.4% for dabigatran 150 mg and 220 mg daily respectively. In addition, deep vein thrombosis was reported among the most common reasons for discontinuation due to adverse events.12 Shah et al. described left atrial thrombus formation with consequent cerebrovascular accident in a 60-year-old man on dabigatran therapy. This patient had a past medical history of hypertension, coronary artery disease, chronic atrial fibrillation, and stroke. They speculated that lack of patient adherence may have decreased the bioavailability and effectiveness of dabigatran.13 
+Sharma et al. described two cases of dabigatran failure leading to left atrial thrombosis. One patient suffered a stroke due to cardiac embolism ten weeks after dabigatran therapy was started. This patient had a history of congestive heart failure. The other patient had a concomitant active lung cancer. They speculated that the “downstream” single-point blockade of the coagulation cascade (at the level of thrombin) may incite a compensatory increase in the “upstream” coagulation factor levels. At the same time they suggested that the absence of routine monitoring could prevent diagnosis of subtherapeutic drug levels.14 There are two more cases in the literature describing atrial thrombosis15,16: in these cases we consider the risk may have been increased by the presence of valvular atrial fibrillation in one and the concomitant use of lansoprazole in the other. Finally, one case report described dabigatran failure in preventing recurrent deep vein thrombosis in an 80-year old patient. This patient had a history of paroxysmal atrial fibrillation ten years prior and several risk factors: intensive parachuting career, venous insufficiency, three past events of DVT, insertion of an inferior vena cava filter (18 years prior), mild obesity and the presence of a pacemaker.17 """ ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismMechanismOfDabigatran
+:MechanismOfDabigatran rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       OpenPVSignal:has_content "Dabigatran is a direct thrombin inhibitor. Thrombin is the pivotal protease of the coagulation cascade by enabling transformation of fibrinogen to fibrin, and therefore inhibition of thrombin prevents development of thrombosis and increases the risk of bleeding." ;
+                       rdfs:label "Mechanism of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismMr_Daniele_Sartori
+:Mr_Daniele_Sartori rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Author ;
+                    OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                    OpenPVSignal:has_first_name "Daniele" ;
+                    OpenPVSignal:has_last_name "Sartori" ;
+                    rdfs:label "Mr Daniele Sartori" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismMs_Marilina_Castellano
+:Ms_Marilina_Castellano rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Author ;
+                        OpenPVSignal:has_affiliation "Upsalla Monitoring Centre" ;
+                        OpenPVSignal:has_first_name "Marilina" ;
+                        OpenPVSignal:has_last_name "Castellano" ;
+                        rdfs:label "Ms Marilina Castellano" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismOverall_reports_for_dabigatran
+:Overall_reports_for_dabigatran rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:has_count 1826 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "Overall reports for dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismPharmacokineticsOfDabigatran
+:PharmacokineticsOfDabigatran rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Mechanism ;
+                              OpenPVSignal:has_content "The anti-coagulation effect is in direct  correlation to the plasma concentration of  dabigatran. The mean half-life is 8.8 hours. Renal  excretion is the dominant elimination pathway;  consequently, half-life is prolonged with decreased  renal function. Dabigatran is taken as the prodrug  dabigatran etexilate which is an efflux pump P-glycoprotein substrate. Thus, dabigatran plasma  levels were elevated when given following known  P-glycoprotein inhibitors such as amiodarone and  verapamil, and reduced with inducers such as  rifampicin. A number of proton pump inhibitors  interact with P-glycoprotein, and in one study the  mean area under the curve for dabigatran was  reduced by 30% with pantoprazole. Unlike the vitamin K antagonists, repeated monitoring for anticoagulant effect is considered unnecessary for dabigatran." ;
+                              rdfs:label "Pharmacokinetics of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRE-LY_ABLE_trial
+:RE-LY_ABLE_trial rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Clinical_trial_information ;
+                  OpenPVSignal:is_supported_by_statistical_entity :frequencyOfDeepVeinthrombosis-220Mg ,
+                                                                  :frequencyOfDeepVeinthrombosis-300Mg ,
+                                                                  :frequencyOfPulmonaryEmbolism ;
+                  OpenPVSignal:refers_to_drug :dabigatran ;
+                  mp:references :Ref.11 ;
+                  OpenPVSignal:has_content "Half of the study patients continued into the RELY-ABLE two-year follow-up study. Pulmonary embolism was reported with a very low frequency of 0.12 to 0.15% per year in the RELY trial, and this is consistent with the rate in the RELY-ABLE trial. In addition, symptomatic “deep vein thrombosis” was regarded as a safety outcome in the RELY-ABLE trial and occurred with a frequency of 2/2914 (0.07%) in the dabigatran 220 mg daily group compared to 6/2937 (0.20%) in the 300 mg daily group.10,11" ;
+                  rdfs:label "RE-LY ABLE trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRE-LY_trial
+:RE-LY_trial rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Clinical_trial_information ;
+             OpenPVSignal:is_supported_by_statistical_entity :frequencyOfPulmonaryEmbolism ,
+                                                             :incidenceIfIschaemicOrUnspecifiedstroke-220Mg ,
+                                                             :incidenceIfIschaemicOrUnspecifiedstroke-300Mg ;
+             OpenPVSignal:refers_to_drug :dabigatran ;
+             mp:references :Ref.10 ;
+             OpenPVSignal:has_content "The clinical evidence for the efficacy of dabigatran etexilate is derived from the RE-LY study for patients with NVAF at moderate to high risk of stroke and systemic embolism. The primary objective in this study was to determine if dabigatran etexilate was non-inferior to warfarin in reducing the occurrence of the composite endpoint stroke and systemic embolism. The incidence of ischaemic or unspecified stroke was 2.64% at the 220 mg and 1.83% at the 300 mg dabigatran daily dose." ;
+             rdfs:label "RE-LY trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRE-MODELTrial
+:RE-MODELTrial rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Clinical_trial_information ;
+               OpenPVSignal:is_supported_by_statistical_entity :rateOfSymptomaticDeepVeinThrombosis-kneereplacement-150Mg ,
+                                                               :rateOfSymptomaticDeepVeinThrombosis-kneereplacement-220Mg ,
+                                                               :rateOfSymptomaticPulmonaryembolism-kneereplacement-150Mg ,
+                                                               :rateOfSymptomaticPulmonaryembolism-kneereplacement-220Mg ;
+               OpenPVSignal:refers_to_dosage :Dose150OfDabigatran ,
+                                             :Dose220OfDabigatrane ;
+               OpenPVSignal:refers_to_drug :dabigatran ;
+               mp:references :Ref.7 ;
+               OpenPVSignal:has_content "In the RE-MODEL trial (knee replacement), dabigatran treatment was for 6-10 days, while in the RE-NOVATE trial (hip replacement) it was for 28-35 days; respectively, 2,076 and 3,494 patients were treated. The rate of symptomatic pulmonary embolism during treatment was low, both with the 220 mg daily dose (0.0% for knee replacements, 0.4% for hip), and the 150 mg daily dose (0.1% for knee replacement and 0.1% for hip). The rate of symptomatic deep vein thrombosis was 0.1% for knee replacement and 0.5% for hip surgery within the 220 mg group; whereas recorded rates were 0.4% and 0.8% within the 150 mg daily dose group respectively. Similarly, the rate of symptomatic VTE during the three-month RE-NOVATE II study period was low (0.3%) and comparable with that reported in RE-NOVATE.7-9" ;
+               rdfs:label "RE-MODEL trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRE-NOVATETrial
+:RE-NOVATETrial rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Clinical_trial_information ;
+                OpenPVSignal:is_supported_by_statistical_entity :rateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-150Mg ,
+                                                                :rateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-220Mg ,
+                                                                :rateOfSymptomaticPulmonaryembolism-hipReplacementRE-150Mg ,
+                                                                :rateOfSymptomaticPulmonaryembolism-hipreplacement-220MgMg ;
+                OpenPVSignal:refers_to_dosage :Dose150OfDabigatran ,
+                                              :Dose220OfDabigatrane ;
+                mp:references :Ref.8 ;
+                OpenPVSignal:has_content "In the RE-MODEL trial (knee replacement), dabigatran treatment was for 6-10 days, while in the RE-NOVATE trial (hip replacement) it was for 28-35 days; respectively, 2,076 and 3,494 patients were treated. The rate of symptomatic pulmonary embolism during treatment was low, both with the 220 mg daily dose (0.0% for knee replacements, 0.4% for hip), and the 150 mg daily dose (0.1% for knee replacement and 0.1% for hip). The rate of symptomatic deep vein thrombosis was 0.1% for knee replacement and 0.5% for hip surgery within the 220 mg group; whereas recorded rates were 0.4% and 0.8% within the 150 mg daily dose group respectively. Similarly, the rate of symptomatic VTE during the three-month RE-NOVATE II study period was low (0.3%) and comparable with that reported in RE-NOVATE.7-9" ;
+                rdfs:label "RE-NOVATE trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRE-NOVATE_trial_2
+:RE-NOVATE_trial_2 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Clinical_trial_information ;
+                   OpenPVSignal:is_supported_by_statistical_entity :rateOfSymptomaticVTE ;
+                   OpenPVSignal:refers_to_drug :dabigatran ;
+                   mp:references :Ref.9 ;
+                   OpenPVSignal:has_content "In the RE-MODEL trial (knee replacement), dabigatran treatment was for 6-10 days, while in the RE-NOVATE trial (hip replacement) it was for 28-35 days; respectively, 2,076 and 3,494 patients were treated. The rate of symptomatic pulmonary embolism during treatment was low, both with the 220 mg daily dose (0.0% for knee replacements, 0.4% for hip), and the 150 mg daily dose (0.1% for knee replacement and 0.1% for hip). The rate of symptomatic deep vein thrombosis was 0.1% for knee replacement and 0.5% for hip surgery within the 220 mg group; whereas recorded rates were 0.4% and 0.8% within the 150 mg daily dose group respectively. Similarly, the rate of symptomatic VTE during the three-month RE-NOVATE II study period was low (0.3%) and comparable with that reported in RE-NOVATE.7-9" ;
+                   rdfs:label "RE-NOVATE trial 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium. Summary of Product Characteristics for dabigatran (Pradaxa®). Available from: https://www. medicines.org.uk/emc/ medicine/20760. Accessed: 30 October 2015. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Connolly SJ, Ezekowitz MD, Yusuf S, Eikelboom J, Oldgren J, Parekh A, et al. Dabigatran versus warfarin in patients with atrial fibrillation. N Engl J Med. 2009 Sep 17;361(12):1139-51. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Connolly SJ, Wallentin L, Ezekowitz MD, Eikelboom J, Oldgren J, Reilly PA, et al. The Long-Term Multicenter Observational Study of Dabigatran Treatment in Patients With Atrial Fibrillation (RELY-ABLE) Study. Circulation. 2013 Jul 16;128(3):237-43. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "European Medicines Agency. Initial marketingauthorisation documents: EPAR - Public assessment report for dabigatran (Pradaxa®). Available from: http://www.ema. europa.eu/docs/en_GB/ document_library/ EPAR_-_Public_assessment _report/human/ 000829/WC500041062.pdf. Accessed: 30 October 2015. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Shah P, Mithawala P, Konlian D, Soyombo A, Bikkina M. Thrombus formation in left atrium on dabigatran therapy. Case Rep Cardiol. 2015;2015:518982. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sharma S, Singh S, Sandhu R, Monterroso M, Bhambi N, Sharma R. Case report series of left atrial thrombus formation in patients on dabigatran therapy. Am J Ther. 2014 Jun;21(3):e71-4. " ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Luis SA, Poon K, Luis C, Shukla A, Bett N, Hamilton-Craig C. Massive left atrial thrombus in a patient with rheumatic mitral stenosis and atrial fibrillation while anticoagulated with dabigatran. Circ Cardiovasc Imaging. 2013 May 1;6(3):491-2. " ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lobo R, McCann C, Hussaini A, Meany TB, Kiernan TJ. Left atrial appendage thrombus with resulting stroke post-RF ablation for atrial fibrillation in a patient on dabigatran. Ir Med J. 2014 Dec;107(10):329-30. " ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Twig G, Furer A, Yaniv G, Michael L, Karplus R, Amital H. Dabigatran in recurrent deep vein thrombosis: when one-size does not fit all. Isr Med Assoc J IMAJ. 2012 Jul;14(7):454-5. " ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Bergvall T, Norén GN, Lindquist M. vigiGrade: a tool to identify well-documented individual case reports and highlight systematic data quality issues. Drug Saf. 2014 Jan;37(1):65- 77. " ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Heit JA. Venous thromboembolism: disease burden, outcomes and risk factors. J Thromb Haemost JTH. 2005 Aug;3(8):1611-7. " ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA product label for dabigatran etexilate mesylate (Pradaxa®). Available from: http://www.accessdata.fda.gov/drugsatfda _docs/label/2015/022512s027lbl.pdf. Accessed: 19 October 2015. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kelly J, Hunt BJ, Rudd A, Lewis RR. Pulmonary embolism and pneumonia may be confounded after acute stroke and may coexist. Age Ageing. 2002 Jul;31(4):235-9. " ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Noël P, Grégoire F, Capon A, Lehert P. Atrial fibrillation as a risk factor for deep venous thrombosis and pulmonary emboli in stroke patients. Stroke J Cereb Circ. 1991 Jun;22(6):760-2. " ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sohara H, Amitani S, Kurose M, Miyahara K. Atrial fibrillation activates platelets and coagulation in a time-dependent manner: a study in patients with paroxysmal atrial fibrillation. J Am Coll Cardiol. 1997 Jan;29(1):106-12. " ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.23
+:Ref.23 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Hatzinikolaou-Kotsakou E, Kartasis Z, Tziakas D, Hotidis A, Stakos D, Tsatalas K, et al. Atrial fibrillation and hypercoagulability: dependent on clinical factors or/ and on genetic alterations? J Thromb Thrombolysis. 2003 Dec;16(3):155-61. " ;
+        rdfs:label "Ref.23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.24
+:Ref.24 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "UpToDate® 2015. Risk factors (causes) for the development of venous thrombosis. Available from: http://www.uptodate.com/contents/ image?imageKey=HEME/59759&view= print&source=graphics_search&rank= 0&search=venous+thromboembolism+etiolog y&p opup=true. Accessed: 7 December 2015. " ;
+        rdfs:label "Ref.24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.25
+:Ref.25 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Thorne KM, Dee S, Jayathissa S. Thrombotic events after discontinuing dabigatran: rebound or resumption? BMJ. 2012;345:e4469. 26. Edwards IR, Aronson JK. Adverse drug reactions: definitions, diagnosis, and management. Lancet. 2000 Oct 7;356(9237):1255-9.   " ;
+        rdfs:label "Ref.25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.26
+:Ref.26 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Edwards IR, Aronson JK. Adverse drug reactions: definitions, diagnosis, and management. Lancet. 2000 Oct 7;356(9237):1255-9." ;
+        rdfs:label "Ref.26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "da Silva RM. Novel oral anticoagulants in nonvalvular atrial fibrillation. Cardiovasc Hematol Agents Med Chem. 2014;12(1):3-8. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Eisert WG, Hauel N, Stangier J, Wienen W, Clemens A, van Ryn J. Dabigatran: an oral novel potent reversible nonpeptide inhibitor of thrombin. Arterioscler Thromb Vasc Biol. 2010 Oct;30(10):1885-9. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Council for International Organizations of Medical Sciences (CIOMS). Reporting adverse drug reactions: definitions of terms and criteria for their use. CIOMS, Geneva, 1999. Available from: http://www.cioms.ch/ publications/reporting_adverse_drug.pdf. Accessed: 16 October 2015. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kasper DL, Fauci AS, Hauser SL, Longo DL, Jameson JL, Loscalzo J, editors. Harrison’s Principles of Internal Medicine. 19th edition. New York: McGraw Hill Education; 2015. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Eriksson BI, Dahl OE, Rosencher N, Kurth AA, van Dijk CN, Frostick SP, et al. Oral dabigatran etexilate vs. subcutaneous enoxaparin for the prevention of venous thromboembolism after total knee replacement: the RE-MODEL randomized trial. J Thromb Haemost. 2007 Nov;5(11):2178-85. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Eriksson BI, Dahl OE, Rosencher N, Kurth AA, van Dijk CN, Frostick SP, et al. Dabigatran etexilate versus enoxaparin for prevention of venous thromboembolism after total hip replacement: a randomised, double-blind, non-inferiority trial. Lancet Lond Engl. 2007 Sep 15;370(9591):949-56. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRef.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Eriksson BI, Dahl OE, Huo MH, Kurth AA, Hantel S, Hermansson K, et al. Oral dabigatran versus enoxaparin for thromboprophylaxis after primary total hip arthroplasty (RE-NOVATE II*). A randomised, double-blind, non-inferiority trial. Thromb Haemost. 2011 Apr;105(4):721-9. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportByShahAboutLackOfAdherence
+:ReportByShahAboutLackOfAdherence rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ;
+                                  OpenPVSignal:refers_to_adverse_effect :atrial_thrombosis ;
+                                  OpenPVSignal:refers_to_drug :dabigatran ;
+                                  mp:references :Ref.13 ;
+                                  OpenPVSignal:has_content "Shah et al. described left atrial thrombus formation with consequent cerebrovascular accident in a 60-year-old man on dabigatran therapy. This patient had a past medical history of hypertension, coronary artery disease, chronic atrial fibrillation, and stroke. They speculated that lack of patient adherence may have decreased the bioavailability and effectiveness of dabigatran.13  " ;
+                                  rdfs:label "Report by Shah about lack of adherence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportBySharma
+:ReportBySharma rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001197 ;
+                OpenPVSignal:refers_to_adverse_effect :atrial_thrombosis ;
+                OpenPVSignal:refers_to_drug :dabigatran ;
+                mp:references :Ref.14 ;
+                OpenPVSignal:has_content "Sharma et al. described two cases of dabigatran failure leading to left atrial thrombosis. One patient suffered a stroke due to cardiac embolism ten weeks after dabigatran therapy was started. This patient had a history of congestive heart failure. The other patient had a concomitant active lung cancer. They speculated that the “downstream” single-point blockade of the coagulation cascade (at the level of thrombin) may incite a compensatory increase in the “upstream” coagulation factor levels. At the same time they suggested that the absence of routine monitoring could prevent diagnosis of subtherapeutic drug levels. " ;
+                rdfs:label "Report by Sharma " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsAboutValvularAtrialFibrillationAndLansoprazole
+:ReportsAboutValvularAtrialFibrillationAndLansoprazole rdf:type owl:NamedIndividual ,
+                                                                obo:OAE_0001182 ;
+                                                       OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                                                             :atrial_thrombosis ;
+                                                       OpenPVSignal:refers_to_drug :dabigatran ,
+                                                                                   :lansoprazole ;
+                                                       mp:references :Ref.15 ,
+                                                                     :Ref.16 ;
+                                                       OpenPVSignal:has_content "There are two more cases in the literature describing atrial thrombosis15,16: in these cases we consider the risk may have been increased by the presence of valvular atrial fibrillation in one and the concomitant use of lansoprazole in the other." ;
+                                                       rdfs:label "Reports about valvular atrial fibrillation and lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsCommonForThrombosisAndThromboembolism
+:ReportsCommonForThrombosisAndThromboembolism rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :Overall_reports_for_dabigatran ;
+                                              OpenPVSignal:refers_to_adverse_effect :thromboembolism ,
+                                                                                    :thrombosis ;
+                                              OpenPVSignal:has_count 101 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports common for thrombosis and thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForAtrialFibrillationAndEmbolism
+:ReportsForAtrialFibrillationAndEmbolism rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:has_count 473 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports for atrial fibrillation and embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared rdf:type owl:NamedIndividual ,
+                                                                                        OpenPVSignal:Reports_group ;
+                                                                               OpenPVSignal:concerns_indication_for_use :nonvalvularAtrialFibrillation ;
+                                                                               OpenPVSignal:refers_to_adverse_effect :arterial_thrombosis ;
+                                                                               OpenPVSignal:refers_to_dosage :Dosage_for_2a ;
+                                                                               OpenPVSignal:refers_to_drug :dabigatran ;
+                                                                               OpenPVSignal:time_to_onset :timeToOnsetReport2a.1 ;
+                                                                               OpenPVSignal:has_count 15 ;
+                                                                               OpenPVSignal:has_count_of_men 7 ;
+                                                                               OpenPVSignal:has_count_of_women 8 ;
+                                                                               OpenPVSignal:has_max_age "83.0"^^xsd:float ;
+                                                                               OpenPVSignal:has_median_age "66.0"^^xsd:float ;
+                                                                               OpenPVSignal:has_min_age "46.0"^^xsd:float ;
+                                                                               OpenPVSignal:has_reporter_type "health care professional" ;
+                                                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                               rdfs:label "Reports for NVAF and arterial thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-concomitantPresenceOfDyslipidemiaAndHypertension
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-concomitantPresenceOfDyslipidemiaAndHypertension rdf:type owl:NamedIndividual ,
+                                                                                                                                         OpenPVSignal:Reports_group ;
+                                                                                                                                OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                                                                OpenPVSignal:refers_to_past_diagnosis :dyslipidemia ,
+                                                                                                                                                                      :hypertension ;
+                                                                                                                                OpenPVSignal:has_count 3 ;
+                                                                                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                rdfs:label "Reports for NVAF and arterial thrombosis-concomitant presence of dyslipidemia and hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-coronaryDisease
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-coronaryDisease rdf:type owl:NamedIndividual ,
+                                                                                                        OpenPVSignal:Reports_group ;
+                                                                                               OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                               OpenPVSignal:refers_to_past_diagnosis :coronaryArteryDisease ;
+                                                                                               OpenPVSignal:has_count 1 ;
+                                                                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                               rdfs:label "Reports for NVAF and arterial thrombosis-coronary disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-embolism
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-embolism rdf:type owl:NamedIndividual ,
+                                                                                                 OpenPVSignal:Reports_group ;
+                                                                                        OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                        OpenPVSignal:refers_to_adverse_effect :embolism ;
+                                                                                        OpenPVSignal:has_count 1 ;
+                                                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                        rdfs:label "Reports for NVAF and arterial thrombosis-embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-intracardiacThrombus
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-intracardiacThrombus rdf:type owl:NamedIndividual ,
+                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                    OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                                    OpenPVSignal:refers_to_adverse_effect :intracardiacThrombus ;
+                                                                                                    OpenPVSignal:has_count 3 ;
+                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                    rdfs:label "Reports for NVAF and arterial thrombosis-intracardiac thrombus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-lackOfEfficacy
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-lackOfEfficacy rdf:type owl:NamedIndividual ,
+                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                              OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                              OpenPVSignal:has_count 3 ;
+                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                              rdfs:label "Reports for NVAF and arterial thrombosis-lack of efficacy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndArterialthrombosis-atrialSeptalDefect
+:ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-atrialSeptalDefect rdf:type owl:NamedIndividual ,
+                                                                                          OpenPVSignal:Reports_group ;
+                                                                                 OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                 OpenPVSignal:refers_to_past_diagnosis :atrial_septal_defect ;
+                                                                                 OpenPVSignal:has_count 1 ;
+                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                 rdfs:label "Reports for NVAF and arterial thrombosis-atrial septal defect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndVenousThromboembolism
+:ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:concerns_indication_for_use :nonvalvularAtrialFibrillation ;
+                                                                 OpenPVSignal:refers_to_adverse_effect :venousThromboembolism ;
+                                                                 OpenPVSignal:refers_to_drug :dabigatran ;
+                                                                 OpenPVSignal:has_count 401 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "Reports for NVAF and venous thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForNonValvularAtrialFibrillationAndVenousthromboembolism-VigiGradeCleared
+:ReportsForNonValvularAtrialFibrillationAndVenousthromboembolism-VigiGradeCleared rdf:type owl:NamedIndividual ,
+                                                                                           OpenPVSignal:Reports_group ;
+                                                                                  OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                                  OpenPVSignal:has_count 37 ;
+                                                                                  OpenPVSignal:has_count_of_men 14 ;
+                                                                                  OpenPVSignal:has_count_of_women 23 ;
+                                                                                  OpenPVSignal:has_max_age "88.0"^^xsd:float ;
+                                                                                  OpenPVSignal:has_median_age "79.0"^^xsd:float ;
+                                                                                  OpenPVSignal:has_min_age "40.0"^^xsd:float ;
+                                                                                  OpenPVSignal:has_reporter_type "health care professional" ;
+                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                  rdfs:label "Reports for NVAF and venous thromboembolism-VigiGrade cleared" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared rdf:type owl:NamedIndividual ,
+                                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                                              OpenPVSignal:concerns_indication_for_use :venousThromboembolism ;
+                                                                                                                              OpenPVSignal:refers_to_adverse_effect :venous_embolism ,
+                                                                                                                                                                    :venous_thrombosis ;
+                                                                                                                              OpenPVSignal:refers_to_drug :dabigatran ;
+                                                                                                                              OpenPVSignal:time_to_onset :timeToOnsetFor1b ;
+                                                                                                                              OpenPVSignal:has_count 22 ;
+                                                                                                                              OpenPVSignal:has_count_of_men 8 ;
+                                                                                                                              OpenPVSignal:has_count_of_women 14 ;
+                                                                                                                              OpenPVSignal:has_max_age "85.0"^^xsd:float ;
+                                                                                                                              OpenPVSignal:has_median_age "68.0"^^xsd:float ;
+                                                                                                                              OpenPVSignal:has_min_age "46.0"^^xsd:float ;
+                                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                              rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-PPI
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-PPI rdf:type owl:NamedIndividual ,
+                                                                                                                                           OpenPVSignal:Reports_group ;
+                                                                                                                                  OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ;
+                                                                                                                                  OpenPVSignal:refers_to_class :proton_pump_inhibitor ;
+                                                                                                                                  OpenPVSignal:has_count 6 ;
+                                                                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                  rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - PPI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-medicineIneffectiveTermIncluded
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-medicineIneffectiveTermIncluded rdf:type owl:NamedIndividual ,
+                                                                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                                                                              OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ;
+                                                                                                                                                              OpenPVSignal:has_count 15 ;
+                                                                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                              rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - recommended dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-overdosing
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-overdosing rdf:type owl:NamedIndividual ,
+                                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                                         OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ;
+                                                                                                                                         OpenPVSignal:has_count 2 ;
+                                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                         rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - overdosing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-pulmonaryEmbolismEnsuing
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-pulmonaryEmbolismEnsuing rdf:type owl:NamedIndividual ,
+                                                                                                                                                                OpenPVSignal:Reports_group ;
+                                                                                                                                                       OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ;
+                                                                                                                                                       OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                                                                                                                       OpenPVSignal:has_count 4 ;
+                                                                                                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                       rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - pulmonary embolism ensuing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose rdf:type owl:NamedIndividual ,
+                                                                                                                                                   OpenPVSignal:Reports_group ;
+                                                                                                                                          OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ;
+                                                                                                                                          OpenPVSignal:refers_to_adverse_effect :underdose ;
+                                                                                                                                          OpenPVSignal:has_count 3 ;
+                                                                                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                          rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - smaller dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndWHO-ARTPTsArterialThrombosisOrembolism-VigiGradeCleared
+:ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndWHO-ARTPTsArterialThrombosisOrembolism-VigiGradeCleared rdf:type owl:NamedIndividual ,
+                                                                                                                                     OpenPVSignal:Reports_group ;
+                                                                                                                            OpenPVSignal:concerns_indication_for_use :venousThromboembolism ;
+                                                                                                                            OpenPVSignal:refers_to_adverse_effect :arterial_embolism ,
+                                                                                                                                                                  :arterial_thrombosis ;
+                                                                                                                            OpenPVSignal:refers_to_drug :dabigatran ;
+                                                                                                                            OpenPVSignal:has_count 5 ;
+                                                                                                                            OpenPVSignal:has_median_age 59 ;
+                                                                                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                            rdfs:label "Reports for VTE and WHO-ART PTs arterial thrombosis or embolism-VigiGrade cleared" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of 1 October 2015 there were 1,826 reports for dabigatran in VigiBase®, the WHO international database of suspected adverse drug reactions, with the WHO-ART High Level Terms (HLT) thrombosis (1,193 reports) and thromboembolism (734); a total of 101 reports overlap both HLTs. The HLT thrombosis includes the following preferred terms (PTs): deep vein thrombosis (531 reports), thrombosis (609) and arterial thrombosis (74). The HLT thromboembolism includes the PTs thromboembolism (715) and embolism (20). The reports were submitted worldwide but half of them came from the United States. In order to understand why thrombosis had developed in these patients we decided to systematically investigate venous and arterial thrombotic and/or embolic events separately, in correlation with dabigatran therapeutic indications. The aim was to see if there was a range of risk factors some of which may be modifiable. Case reports were first selected on the indication. Two indications were chosen according to the product information of the drug: (1) non-valvular atrial fibrillation (NVAF), and (2) prevention of venous thromboembolism (VTE) after major orthopaedic surgery. There were thus four groups of reports: 1a. Indication - Prevention of VTE ADR terms - arterial thrombosis or embolism 1b. Indication - Prevention of VTE ADR terms - venous thrombosis or embolism 2a. Indication - NVAF ADR terms - arterial thrombosis or embolism 2b. Indication - NVAF ADR terms - venous thrombosis or embolism Reports in VigiBase® are of variable quality and completeness. Some contain narrative and some do not. A measure of completeness of reports has been developed by Uppsala Monitoring Centre.18 Because of the large number of reports of thromboembolism associated with dabigatran it was decided to select reports from each of the four groups listed that were likely to be the most informative, based on their vigiGrade completeness score18 (ranging from 0.8 to 1.0) and presence of a narrative. Exclusions were suspected duplicates, and reports which on closer inspection did not fit the indication criteria or where it was not clear if the suspected ADR was arterial or venous. 
+
+1a. Venous thromboembolism prevention after orthopaedic surgery and WHO-ART PTs arterial thrombosis or embolism 
+Only five case reports were identified with indications and ADR terms that fitted the criteria out of the 23 reports found in VigiBase®. Patients were all aged over 59 years and were predominantly male. Only one case provided information regarding duration of dabigatran use to reaction onset (time to onset), which was negative and thus discarded. One patient had an unspecified coagulopathy and one antiphospholipid syndrome. One report mentioned that the patient had not been taking dabigatran for one week.
+
+ 1b. Venous thromboembolism prevention after orthopaedic surgery and venous thrombosis or embolism 
+There were 331 reports in this group. After removal of suspected duplicates, the 31 best reports were selected, according to their completeness score and the presence of a narrative. After removal of reports outside of the inclusion criteria 22 reports were fully assessed. These 22 reports, all from health care professionals save three from observational post-authorization studies, involved 14 females and 8 males. The age range was 46 to 85 years, median 68 years. Time to onset (recorded for 21 patients) ranged from 14 hours to 9 months. Seventeen patients experienced the reaction within the first 18 days, whereas for the other four patients the times to onset were one month (two patients), two months and nine months. Dabigatran daily dose (recorded for 20 patients) was consistent with the recommended daily dose for all except five patients. Two were taking greater than the recommended dose and three less. In one case the patient started dabigatran therapy with one dose of 110 mg after total hip replacement according to treatment indication in the product information. The advice to then proceed with 110 mg twice daily does not appear to have been followed and she experienced a deep vein thrombosis 14 hours after the post-operative dose. This patient was described as being at a higher risk of bleeding which may have influenced the dose regime prescribed. Another patient who took less than the recommended dose had factor V deficiency and this may have affected the prescribing decision. All these 22 patients experienced a deep vein thrombosis. Four reports described pulmonary embolism subsequent to the deep vein thrombosis. Fifteen reports included the WHO-ART PT “medicine ineffective”. Recorded administration and onset dates indicated that seventeen patients definitely experienced deep vein thrombosis under dabigatran treatment and one just after discontinuing dabigatran earlier than recommended. For three patients the anticoagulant therapy was prolonged beyond the recommended period. Potential contributory or alternative explanations were explored. Three patients, mentioned above, were taking less than the recommended dose and two of these were also taking a proton pump inhibitor. Four other patients were also taking proton pump inhibitors. In one report, rabeprazole, which was started two days after the commencement of dabigatran, was taken for three days and then stopped, with deep vein thrombosis occurring two days later. One patient was taking the pro-thrombotic agent tranexamic acid which was co-suspect but may have been given for bleeding; the patient who discontinued dabigatran early was also taking the pro-thrombotic drug exemestane and had breast cancer. In one case the patient’s medical history included congestive cardiac failure and hypertension; this patient had not been wearing anti-embolism stockings. For three patients the venous thromboembolism was more unexpected since one had factor V deficiency and two were taking greater than recommended doses. Dabigatran was withdrawn in all cases except for one. Generally, the thrombotic event was treated with alternative anticoagulants such as warfarin or heparins.
+
+ 2a. Non valvular atrial fibrillation and arterial thrombosis 
+There were 77 cases in VigiBase® for this indication/ reaction combination. Fifteen reports were left to be discussed after applying the report quality and exclusion criteria. These 15 reports, all from health-care professionals, involved eight females and seven males. The age range was 46 to 83 years, median 66 years. Time to onset was stated in all cases except for one, and ranged from one day to three years. Nine patients experienced the reaction within the first two months, whereas for the other five patients the time to onset was reported as three months, six months, two years (two patients), and three years. Dabigatran daily dose was recorded for all patients and was consistent with the recommended daily doses stated in the product information in all but two patients. All patients experienced arterial thrombotic events under dabigatran therapy save two for whom clear administration and onset dates were not provided and one where thrombosis occurred on discontinuation. In this case a withdrawal syndrome was suggested. Intracardiac thrombus was found in three patients; one of these developed severe embolism in both legs and one an aortic thrombosis and deep vein thrombosis. Other sites were cerebral (10 patients), aortic and leg arteries. One of the eight patients with stroke had a history of recurrent cerebrovascular accident occurring first on rivaroxaban therapy, and recurring after 24 days when the patient was switched to dabigatran. However, this patient had not taken his antihypertensive therapy for several days. Lack of efficacy was stated in 3 reports out of 15. These patients presented with several risk factors for arterial thrombosis, such as diabetes and hypertension, as expected in many patients with atrial fibrillation (AF). In three cases the concomitant presence of dyslipidemia and hypertension was reported and in one case coronary artery disease. One patient presented with atrial septal defect. Two patients were taking dabigatran 150 mg daily which is lower than the recommended dose. In one of these the thrombosis occurred on stopping dabigatran.
+
+ 2b. Non valvular atrial fibrillation and venous thromboembolism
+ This category represents less expected events, since arterial events are expected if there is lack of dabigatran efficacy in preventing embolization from atrial fibrillation. There were 401 reports in VigiBase® regarding this indication/reaction combination. In addition a separate search for cases with AF as indication and the preferred term “embolism” highlighted another 473 cases. Thirtyseven case reports remained to be studied after applying report quality and exclusion criteria. These 37 reports, all from health-care professionals, involved 23 females and 14 males. The age range was 40 to 88 years, median 79 years. Time to onset was stated for 28 patients and ranged from one day to three years. Nineteen patients experienced the reaction within the first four months, whereas for the other patients the time to onset ranged from five months to three years. One patient who developed pulmonary embolism had been taking alteplase and acetyl salicylic acid. Dabigatran was added and pulmonary embolism symptoms developed rapidly, perhaps too soon for dabigatran to be effective. In one case the patient, who was taking a lower than recommended dose, experienced two pulmonary embolic events six days apart before discontinuing dabigatran. Eighteen patients experienced a deep vein thrombosis. One patient experienced right atrial thrombosis on dabigatran therapy that led to pulmonary embolism. Differentiation between in situ and in transit right thrombus could not be established. One patient developed a cardioembolic occlusion of both right and left limb arteries following atrial thrombosis. It is likely that such thrombosis occurred in the left atrium and therefore would be classified as arterial thrombosis. Seventeen patients experienced a pulmonary embolism. The preferred term “medicine ineffective” was reported in three cases within this group. Administration and onset dates indicate that 29 patients out of the 37 clearly developed the reaction on dabigatran therapy including all patients who experienced a pulmonary embolism. Fourteen patients developed deep vein thrombosis on therapy whereas one developed it four days after the drug was discontinued after eight months of therapy. Dabigatran was discontinued in all cases except two for whom this information was not provided and two cases where the dabigatran dose was not changed. Five patients died, and in three of these cases cardiogenic shock, cerebral haemorrhage and recurrent pulmonary embolism were respectively stated as the cause of death. Regarding risk factors for venous thrombosis, the dabigatran daily dose was lower than recommended for five patients. Two patients were taking adjusted doses due to compromised renal function. Two other patients were taking optional lower doses as their age was between 75 and 80. One patient aged 72 years was taking the adjusted 220 mg daily dose even though the renal function was recorded as normal. Seven patients were taking a proton pump inhibitor, one with a lower and one with a higher than recommended daily dose of dabigatran. Three patients were taking a prothrombotic agent, letrozole, estradiol or cyproterone. These may represent treatments for cancer and be unavoidable. Five patients had concomitant neoplasms; however one was localized prostate cancer that was considered noncontributory. The other four had stomach cancer, cerebellar tumour, non-Hodgkin’s lymphoma and one atrial myxoma recently removed. In one case a concomitant bacterial pneumonia was recorded. A pacemaker had been recently implanted in one patient for atrioventricular block. All these patients were on dabigatran therapy for NVAF and, as expected, some of them were affected by arterial hypertension, congestive heart failure and coronary artery disease. In one case, the patient experienced a cardiogenic shock that would appear to have started with a myocardial infarction that led first to pulmonary embolism, lung haemorrhage and consequently to shock. In contrast to the patients with apparent risk factors for VTE, these events were particularly unexpected in four elderly patients who were taking greater than the recommended daily dose, four patients taking concomitant antithrombotic agents and three who were taking p-glycoprotein inhibitors (amiodarone, dronedarone or verapamil), including one of those who was taking a greater than recommended daily dose of dabigatran. 
+""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithArterialThrombosis
+:ReportsWithArterialThrombosis rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :ReportsWithThrombosisAndDabigatran ;
+                               OpenPVSignal:refers_to_adverse_effect :arterial_thrombosis ;
+                               OpenPVSignal:has_count 74 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with arterial thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithDeepVeinThrombosis
+:ReportsWithDeepVeinThrombosis rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :ReportsWithThrombosisAndDabigatran ;
+                               OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                               OpenPVSignal:has_count 531 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithEmbolism
+:ReportsWithEmbolism rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :ReportsWithThromboembolism ;
+                     OpenPVSignal:refers_to_adverse_effect :embolism ;
+                     OpenPVSignal:has_count 20 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports with embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithThromboembolism
+:ReportsWithThromboembolism rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :Overall_reports_for_dabigatran ;
+                            OpenPVSignal:refers_to_adverse_effect :thromboembolism ;
+                            OpenPVSignal:refers_to_drug :dabigatran ;
+                            OpenPVSignal:has_count 734 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "Reports with thromboembolism and dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithThrombosis
+:ReportsWithThrombosis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :ReportsWithThrombosisAndDabigatran ;
+                       OpenPVSignal:refers_to_adverse_effect :thrombosis ;
+                       OpenPVSignal:has_count 609 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReportsWithThrombosisAndDabigatran
+:ReportsWithThrombosisAndDabigatran rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :Overall_reports_for_dabigatran ;
+                                    OpenPVSignal:refers_to_adverse_effect :thrombosis ;
+                                    OpenPVSignal:refers_to_drug :dabigatran ;
+                                    OpenPVSignal:has_count 1193 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with thrombosis and dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_arterial_thrombosis_-_150_mg
+:Reports_for_NVAF_and_arterial_thrombosis_-_150_mg rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                   OpenPVSignal:refers_to_dosage :Dose150OfDabigatran ;
+                                                   OpenPVSignal:has_count 2 ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "Reports for NVAF and arterial thrombosis - 150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_PPI
+:Reports_for_NVAF_and_venous_thromboembolism_-_PPI rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                   OpenPVSignal:refers_to_class :proton_pump_inhibitor ;
+                                                   OpenPVSignal:has_count 7 ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "Reports for NVAF and venous thromboembolism - PPI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_antithrombotic_agent
+:Reports_for_NVAF_and_venous_thromboembolism_-_antithrombotic_agent rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Reports_group ;
+                                                                    OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                    OpenPVSignal:refers_to_concomitant_drug :cyproterone ,
+                                                                                                            :estradiol ,
+                                                                                                            :letrozole ;
+                                                                    OpenPVSignal:has_count 3 ;
+                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                    rdfs:label "Reports for NVAF and venous thromboembolism - antithrombotic agent" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_concomitant_neoplasms
+:Reports_for_NVAF_and_venous_thromboembolism_-_concomitant_neoplasms rdf:type owl:NamedIndividual ,
+                                                                              OpenPVSignal:Reports_group ;
+                                                                     OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                     OpenPVSignal:refers_to_past_diagnosis :atrial_myxoma ,
+                                                                                                           :cerebellar_tumour ,
+                                                                                                           :prostate_cancer ,
+                                                                                                           :stomach_cancer ,
+                                                                                                           <http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#non-Hodgkin's_lymphoma> ;
+                                                                     OpenPVSignal:has_content "Five patients had concomitant neoplasms; however one was localized prostate cancer that was considered non-contributory. The other four had stomach cancer, cerebellar tumour, non-Hodgkin’s lymphoma and one atrial myxoma recently removed." ;
+                                                                     OpenPVSignal:has_count 5 ;
+                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                     rdfs:label "Reports for NVAF and venous thromboembolism - concomitant neoplasms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_death
+:Reports_for_NVAF_and_venous_thromboembolism_-_death rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                     OpenPVSignal:has_count 5 ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                     rdfs:label "Reports for NVAF and venous thromboembolism - death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_deep_vein_thrombosis
+:Reports_for_NVAF_and_venous_thromboembolism_-_deep_vein_thrombosis rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Reports_group ;
+                                                                    OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                    OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                                    OpenPVSignal:has_count 18 ;
+                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                    rdfs:label "Reports for NVAF and venous thromboembolism - deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_lower_dose
+:Reports_for_NVAF_and_venous_thromboembolism_-_lower_dose rdf:type owl:NamedIndividual ,
+                                                                   OpenPVSignal:Reports_group ;
+                                                          OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                          OpenPVSignal:has_count 5 ;
+                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                          rdfs:label "Reports for NVAF and venous thromboembolism - lower dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_medicine_ineffective
+:Reports_for_NVAF_and_venous_thromboembolism_-_medicine_ineffective rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Reports_group ;
+                                                                    OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                    OpenPVSignal:refers_to_adverse_effect :medicineIneffective ;
+                                                                    OpenPVSignal:has_count 3 ;
+                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                    rdfs:label "Reports for NVAF and venous thromboembolism - medicine ineffective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_pulmonary_embolism
+:Reports_for_NVAF_and_venous_thromboembolism_-_pulmonary_embolism rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Reports_group ;
+                                                                  OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                                  OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                                  OpenPVSignal:has_count 17 ;
+                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                  rdfs:label "Reports for NVAF and venous thromboembolism - pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_for_NVAF_and_venous_thromboembolism_-_time_to_onset
+:Reports_for_NVAF_and_venous_thromboembolism_-_time_to_onset rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ;
+                                                             OpenPVSignal:time_to_onset :timeToOnset2b ;
+                                                             OpenPVSignal:has_count 28 ;
+                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                             rdfs:label "Reports for NVAF and venous thromboembolism - time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismReports_with_thromboembolism
+:Reports_with_thromboembolism rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :ReportsWithThromboembolism ;
+                              OpenPVSignal:refers_to_adverse_effect :thromboembolism ;
+                              OpenPVSignal:has_count 715 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Reports with thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismResponse_from_Boehringer_Ingelheim
+:Response_from_Boehringer_Ingelheim rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                    OpenPVSignal:refers_to_pharmacovigilance_signal_report :Dabigatran_and_thromboembolism:_analysis_of_case_histories_for_risk_factors ;
+                                    OpenPVSignal:has_content """The signal report by the WHO Uppsala Monitoring Centre (UMC) investigates disproportionality of the WHO ART preferred term thromboembolism in VigiBase®, the WHO global database of ICSRs. It concludes that this disproportionality may be caused by patients who on top of their base line thromboembolic risk have additional risk factor for thrombosis. Thromboembolic events during dabigatran treatment have been closely monitored by the marketing authorization holder (MAH) as a topic of special interest since launch of the product. In the last Periodic Safety Update Report (PSUR) (reporting period 19 Mar 2015 to 18 Sep 2015) the MedDRA Standard MedDRA Queries (SMQ) ‘Embolic and thrombotic events (narrow)’ and ‘Lack of efficacy/effect’ identified 608 events resulting in a reporting rate of 8.4 case reports per 10,000 patient years of exposure. The findings in this report confirmed analyses of all previous reports. In total, the pharmacovigilance database of the MAH contains 8,444 post-approval case reports with MedDRA Preferred Terms from these SMQs, resulting in a reporting rate of 16.3 case reports per 10,000 patient years. In the MAH’s pharmacovigilance database thromboembolic events are amongst the most commonly spontaneously reported adverse events comprising approx. 10% of all case reports. The fact that (i) a different dictionary was used for the analysis of the VigiBase® (WHO ART) than was used for the analysis by the MAH (MedDRA), and (ii) the databases probably cover different populations for which thromboembolic cases have been reported, explains the minor differences found in the number of cases containing thromboembolic events, the proportion of thromboembolic events compared to other event reports for dabigatran, and the types of different thromboembolic events. The MAH did not perform an analysis on the various types of thromboembolic events in different indications, since approx. 40 % of spontaneous reports do not provide a clear indication for use. Therefore, no reliable conclusion on the frequency of a given thromboembolic event in a certain indication is possible. In the analysis of thromboembolism in the VigiBase® database a limited number of cases were selected for in depth analysis. The major portion of patients in the cases selected for an in depth investigation who experience a thromboembolic event have further risk factors in addition to the patients’ base line risk which increase the probability of lack of effect (i.e. thromboembolic event despite anticoagulation), such as active cancer, or coagulopathies such as anti-phospholipid syndrome. Another reason mentioned in the analysis is incompliant use (not taking the drug, taken a dose lower than recommended) which is a known important factor in lack of efficacy. Overall, the analysis performed by the Uppsala Monitoring Centre in VigiBase® is in line with the findings of the MAH seen in continuous monitoring of this important event. 
+In the analysis performed by the UMC concomitant intake of proton pump inhibitors is speculated to be a risk factor for thromboembolic events during anti-coagulation with dabigatran. However, an interaction of dabigatran with proton pump inhibitors leading to decreased plasma levels has been found to be minor in a pharmacokinetic interaction study of dabigatran with the proton pump inhibitor pantoprazole by the MAH. The interaction between dabigatran and pantoprazole was found not clinically relevant. The fact that many patients with thromboembolic events receive proton pump inhibitors concomitantly may simply reflect the frequent use of proton pump inhibitors. Proton pump inhibitors are frequently used in gastrointestinal disorders and are available in many countries as OTC drugs. Dabigatran treatment is safe and efficacious when used according to dosing recommendation in the product information which is based on patient characteristics (e.g. renal impairment, age and comedication). The assessment of individual plasma concentration does not add value for the dose selection of dabigatran etexilate and its riskbenefit assessment for the individual patient. Dabigatran plasma levels are confounded by age and renal function. Age is by far the more relevant determinant of the risk of stroke and bleeding. Therefore there cannot be one therapeutic range for dabigatran applying to all patients. Measurements of plasma levels are affected by several layers of variability and uncertainty (including for example an inappropriate sampling time-point and the intra-individual variability of plasma levels). In clinical practice, this is likely to lead to unreliable and potentially misleading test results. Clinical characteristics of the patient have been proven to be reliable and valid decision criteria for dose selection. Plasma level measurements may at most guide the physician in specific clinical situations, but if used as a decision criterion for dose adoption it bears the risk of compromising the positive benefit/risk profile of dabigatran treatment. In clinical trials, fixed dose dabigatran has been shown to be at least as safe and efficacious as monitored warfarin in different approved indications. In the opinion of the MAH the data provided in this analysis by the UMC do not provide evidence that monitoring of drug levels would further reduce the risk of thromboembolic events in patients receiving dabigatran. In conclusion • This signal report confirms results from routine pharmacovigilance activities performed by the MAH which are regularly reported to Health authorities • There is no evidence that concomitant use of proton pump inhibitors has an impact on the anticoagulant effect of dabigatran • Plasma level measurements may at most guide the physician in specific clinical situations, but if used as a decision criterion for dose adoption it bears the risk of compromising the positive benefit/risk profile of dabigatran treatment.""" ;
+                                    rdfs:label "Response from Boehringer Ingelheim" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismRiskFactorsForTheReportsAnalyzed
+:RiskFactorsForTheReportsAnalyzed rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Free_text_reporting_element ;
+                                  mp:references :Ref.19 ;
+                                  OpenPVSignal:has_content "These patients were older than those in the other groups and older age is a risk factor for VTE. A high proportion of patients who developed pulmonary embolism clearly had a number of serious comorbidities that could have contributed. Active cancer is known to account for almost 20% of incident VTE events.19 Pneumonia was co-reported in one case. Pulmonary embolism and pneumonia are both prevalent conditions after stroke, moreover a patient developing pneumonia is likely to be further predisposed to supervening pulmonary embolism.20 One patient had a recently implanted pacemaker but it was not specified whether the pacemaker was intravenous, which is a VTE risk factor.19 As expected, the rest of the patients presented with thrombotic risk factors such as arterial hypertension, congestive heart failure, myocardial infarction and coronary disease. In general however, the risk of VTE associated with congestive heart failure, independent of hospitalization, is low " ;
+                                  rdfs:label "Risk factors for the reports analyzed" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismSummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "The combination of dabigatran and the WHO-ART preferred term thromboembolism stands out disproportionately in VigiBase®, the WHO global database of ICSRs. As of 1 October 2015, a widened search identified 734 ICSRs for dabigatran under the High Level Term (HLT) thromboembolism, and 1,193 under the HLT thrombosis. These terms included both venous and arterial events. Dabigatran is a direct thrombin inhibitor, the pivotal protease of the coagulation cascade, and is indicated for the prevention of thromboembolic events both in patients with nonvalvular atrial fibrillation (NVAF) and after major orthopaedic surgery. From clinical trials of efficacy these events are not unexpected. In addition, there are five published case reports in which patients unexpectedly developed atrial thrombosis on dabigatran therapy, and one more published report described dabigatran failure in preventing deep vein thrombosis. Reports in VigiBase® were therefore assessed to determine the circumstances in which dabigatran became ineffective in clinical practice and whether there were modifiable risk factors. Because of the large number of reports a decision was made to examine a sample of reports that were the most informative from four groups of reports: (1) reports with the indication prevention of venous thromboembolism (VTE) and adverse drug reaction (ADR) terms (a) arterial thrombosis or embolism and (b) venous thrombosis or embolism and (2) reports with the indication NVAF and ADR terms (a) and(b) as for group (1). A high proportion of patients had known risk factors for thrombosis in addition to the indications for dabigatran. Information in the reports also suggested that inappropriately low dose, concomitant use of pro-thrombotic agents or use of proton pump inhibitors may contribute. Dabigatran plasma concentration monitoring may be appropriate in a subgroup of patients. " ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismTheRoleOfPPIsInTheDevelopmentOfAE
+:TheRoleOfPPIsInTheDevelopmentOfAE rdf:type owl:NamedIndividual ,
+                                            obo:OAE_0001197 ;
+                                   OpenPVSignal:refers_to_adverse_effect :venousThromboembolism ;
+                                   OpenPVSignal:refers_to_class :proton_pump_inhibitor ;
+                                   OpenPVSignal:refers_to_drug :dabigatran ;
+                                   mp:references :Ref.1 ;
+                                   OpenPVSignal:has_content "As indicated in the introduction, there is a theoretical reason for an interaction with proton pump inhibitors leading to decreased dabigatran plasma levels but this was not found to be clinically important in one pharmacokinetic study with pantoprazole .1 " ;
+                                   rdfs:label "The role of PPIs in the development of AE" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismThrombosis
+:Thrombosis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Free_text_reporting_element ;
+            OpenPVSignal:refers_to_adverse_effect :thromboembolism ;
+            mp:references :Ref.5 ,
+                          :Ref.6 ;
+            OpenPVSignal:has_content "Thrombosis, venous or arterial, is the formation of a blood clot (thrombus) in a blood vessel or the heart. The thrombus, if detached, travels through the bloodstream and may occlude a vessel distant from the original site. This phenomenon is referred to as thromboembolism. The most common form of thromboembolism is venous thromboembolism when a blood clot that forms in a deep vein migrates to another location e.g., a deep vein thrombus in the leg may break off and cause a pulmonary embolus. The risk of thrombosis is influenced by both genetic and environmental factors. Trauma (particularly after surgery or parturition), immobility, cardiac and vascular disorders, obesity, coagulation disorders, age over 65 years, sepsis, medical conditions such as malignancy, and medications such as hormonal therapy, are predisposing causes of venous thrombosis. Likewise atherosclerosis is the major risk factor for arterial thrombosis.5,6" ;
+            rdfs:label "Thromboembolism pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismUsage_of_dabigatran
+:Usage_of_dabigatran rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :deepVeinThrombosis ,
+                                                              :embolism ,
+                                                              :pulmonaryEmbolism ,
+                                                              :stroke ,
+                                                              :venousThromboembolism ;
+                     OpenPVSignal:refers_to_dosage :DosageForDabigatran ;
+                     OpenPVSignal:refers_to_drug :dabigatran ;
+                     rdfs:label "Usage of dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismarterial_embolism
+:arterial_embolism rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10014513 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Embolism arterial" ;
+                   rdfs:label "arterial embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismarterial_thrombosis
+:arterial_thrombosis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10003178 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Arterial thrombosis" ;
+                     rdfs:label "arterial thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismatrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "I48" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismatrial_myxoma
+:atrial_myxoma rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Past_Diagnosis ;
+               OpenPVSignal:has_MedDRA_code 10081171 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Atrial myxoma" ;
+               rdfs:label "atrial myxoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismatrial_septal_defect
+:atrial_septal_defect rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Past_Diagnosis ;
+                      OpenPVSignal:has_MedDRA_code 10003664 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Atrial septal defect" ;
+                      rdfs:label "atrial septal defect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismatrial_thrombosis
+:atrial_thrombosis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10048632 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Atrial thrombosis" ;
+                   rdfs:label "atrial thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismbleeding
+:bleeding rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R58" ;
+          OpenPVSignal:has_MedDRA_code 10055798 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Haemorrhage" ;
+          rdfs:label "bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismcase_report
+:case_report rdf:type owl:NamedIndividual ,
+                      obo:OAE_0001197 ;
+             OpenPVSignal:refers_to_adverse_effect :atrial_thrombosis ;
+             OpenPVSignal:refers_to_drug :dabigatran ;
+             mp:references :Ref.17 ;
+             OpenPVSignal:has_content "Finally, one case report described dabigatran failure in preventing recurrent deep vein thrombosis in an 80-year old patient. This patient had a history of paroxysmal atrial fibrillation ten years prior and several risk factors: intensive parachuting career, venous insufficiency, three past events of DVT, insertion of an inferior vena cava filter (18 years prior), mild obesity and the presence of a pacemaker.17" ;
+             rdfs:label "case report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismcerebellar_tumour
+:cerebellar_tumour rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Past_Diagnosis ;
+                   OpenPVSignal:has_MedDRA_code 10061750 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Cerebellar tumour" ;
+                   rdfs:label "cerebellar tumour" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismcoronaryArteryDisease
+:coronaryArteryDisease rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Past_Diagnosis ;
+                       OpenPVSignal:has_ICD_code "I25.10" ;
+                       OpenPVSignal:has_MedDRA_code 10011078 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Coronary artery disease" ;
+                       rdfs:label "coronary artery disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismcyproterone
+:cyproterone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "G03HA01" ;
+             rdfs:label "cyproterone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismdabigatran
+:dabigatran rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :MechanismOfDabigatran ,
+                                       :PharmacokineticsOfDabigatran ,
+                                       :possible_mechanism_for_thrombosis_during_dabigatran_therapy ;
+            OpenPVSignal:has_ATC_code "B01AE07 " ;
+            rdfs:label "dabigatran" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismdeepVeinThrombosis
+:deepVeinThrombosis rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "I82.409" ;
+                    OpenPVSignal:has_MedDRA_code 10051055 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Deep vein thrombosis" ;
+                    rdfs:label "deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismdyslipidemia
+:dyslipidemia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "E78.5" ;
+              OpenPVSignal:has_MedDRA_code 10058108 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Dyslipidemia" ;
+              rdfs:label "dyslipidemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismembolism
+:embolism rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "I26.99" ;
+          OpenPVSignal:has_MedDRA_code 10061169 ;
+          OpenPVSignal:has_MedDRA_prefered_term "embolism" ;
+          rdfs:label "embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismestradiol
+:estradiol rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G03CA03" ;
+           rdfs:label "estradiol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismfrequencyOfDeepVeinthrombosis-220Mg
+:frequencyOfDeepVeinthrombosis-220Mg rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Statistical_Entity ;
+                                     OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                     OpenPVSignal:refers_to_dosage :Dose220OfDabigatrane ;
+                                     OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                     OpenPVSignal:has_value 0.0007 ;
+                                     rdfs:label "frequency of deep vein thrombosis-220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismfrequencyOfDeepVeinthrombosis-300Mg
+:frequencyOfDeepVeinthrombosis-300Mg rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Statistical_Entity ;
+                                     OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                     OpenPVSignal:refers_to_dosage :Dose300MgOfDabigatran ;
+                                     OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                     OpenPVSignal:has_value 0.002 ;
+                                     rdfs:label "frequency of deep vein thrombosis-300 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismfrequencyOfDeepVeinthrombosis-CHMPreport-150Mg
+:frequencyOfDeepVeinthrombosis-CHMPreport-150Mg rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Statistical_Entity ;
+                                                OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                OpenPVSignal:refers_to_dosage :Dose150OfDabigatran ;
+                                                OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                OpenPVSignal:has_value 0.093 ;
+                                                rdfs:label "frequency of deep vein thrombosis-CHMP report-150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismfrequencyOfDeepVeinthrombosis-CHMPreport-220Mg
+:frequencyOfDeepVeinthrombosis-CHMPreport-220Mg rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Statistical_Entity ;
+                                                OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                OpenPVSignal:refers_to_dosage :Dose220OfDabigatrane ;
+                                                OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                OpenPVSignal:has_value 0.064 ;
+                                                rdfs:label "frequency of deep vein thrombosis-CHMP report-220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismfrequencyOfPulmonaryEmbolism
+:frequencyOfPulmonaryEmbolism rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Statistical_Entity ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty OpenPVSignal:has_value ;
+                                         owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                              owl:onDatatype xsd:decimal ;
+                                                              owl:withRestrictions ( [ xsd:minInclusive 0.12
+                                                                                     ]
+                                                                                     [ xsd:maxInclusive 0.15
+                                                                                     ]
+                                                                                   )
+                                                            ]
+                                       ] ;
+                              OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                              OpenPVSignal:has_reporter_type "clinical trial report" ;
+                              rdfs:label "frequency of pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismgastritis
+:gastritis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K29.70" ;
+           OpenPVSignal:has_MedDRA_code 10017853 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Gastritis" ;
+           rdfs:label "gastritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismhypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismincidenceIfIschaemicOrUnspecifiedstroke-220Mg
+:incidenceIfIschaemicOrUnspecifiedstroke-220Mg rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Statistical_Entity ;
+                                               OpenPVSignal:refers_to_adverse_effect :stroke ;
+                                               OpenPVSignal:refers_to_dosage :Dose220OfDabigatrane ;
+                                               OpenPVSignal:has_content "0.0264"^^xsd:float ;
+                                               OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                               rdfs:label "incidence if ischaemic or unspecified stroke-220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismincidenceIfIschaemicOrUnspecifiedstroke-300Mg
+:incidenceIfIschaemicOrUnspecifiedstroke-300Mg rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Statistical_Entity ;
+                                               OpenPVSignal:refers_to_adverse_effect :stroke ;
+                                               OpenPVSignal:refers_to_dosage :Dose300MgOfDabigatran ;
+                                               OpenPVSignal:has_content "0.0183"^^xsd:float ;
+                                               OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                               rdfs:label "incidence if ischaemic or unspecified stroke-300 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismintracardiacThrombus
+:intracardiacThrombus rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I51.3" ;
+                      OpenPVSignal:has_MedDRA_code 10048620 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Intracardiac thrombus" ;
+                      rdfs:label "intracardiac thrombus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismlansoprazole
+:lansoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC03" ;
+              rdfs:label "lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismletrozole
+:letrozole rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L02BG04" ;
+           rdfs:label "letrozole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismmedicineIneffective
+:medicineIneffective rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10013709 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Drug ineffective" ;
+                     rdfs:label "medicine ineffective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismnonvalvularAtrialFibrillation
+:nonvalvularAtrialFibrillation rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Indication ;
+                               OpenPVSignal:has_ICD_code "I48" ;
+                               OpenPVSignal:has_MedDRA_code 10003658 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                               rdfs:label "nonvalvular atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismoneDayIntervalBetweenAdministrations
+:oneDayIntervalBetweenAdministrations rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      time:nominalPosition "days" ;
+                                      time:numericPosition 1 ;
+                                      rdfs:label "one day interval between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismpossible_mechanism_for_thrombosis_during_dabigatran_therapy
+:possible_mechanism_for_thrombosis_during_dabigatran_therapy rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                             mp:references :Ref.25 ;
+                                                             OpenPVSignal:has_content "There is one published case series of thrombosis developing within one month of dabigatran withdrawal. The possibility of rebound, and therefore the question of how to stop dabigatran safely, was raised.25 Dabigatran has a much shorter half-life than warfarin and it is possible therefore that thrombosis might be more likely to develop when doses are missed or when therapy is discontinued." ;
+                                                             rdfs:label "possible mechanism for thrombosis during dabigatran therapy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismpredispositionForTheDevelopmentOfPulmonaryEmbolismForDabigatranPatients
+:predispositionForTheDevelopmentOfPulmonaryEmbolismForDabigatranPatients rdf:type owl:NamedIndividual ,
+                                                                                  obo:OAE_0001182 ;
+                                                                         mp:references :Ref.21 ,
+                                                                                       :Ref.22 ,
+                                                                                       :Ref.23 ,
+                                                                                       :Ref.24 ;
+                                                                         OpenPVSignal:has_content "It is therefore possible that patients who develop pulmonary embolism while taking dabigatran for stroke prevention represent a group of predisposed individuals in whom co-morbid hypercoagulable states overcome the effect of dabigatran. It is also known that AF is associated with a hypercoagulable state.21-23 Noel et al. described a higher incidence of deep vein thrombosis and pulmonary embolism in stroke patients with NVAF.21 However, atrial fibrillation is not listed as a cause of venous thromboembolism in standard texts unless there has been immobility due to stroke.2 4" ;
+                                                                         rdfs:label "predisposition for the development of pulmonary embolism for dabigatran patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismprostate_cancer
+:prostate_cancer rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Past_Diagnosis ;
+                 OpenPVSignal:has_MedDRA_code 10060862 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Prostate cancer" ;
+                 rdfs:label "prostate cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismproton_pump_inhibitor
+:proton_pump_inhibitor rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:DrugClass ;
+                       OpenPVSignal:has_ATC_code "A02BC" ;
+                       rdfs:label "proton pump inhibitor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismpulmonaryEmbolism
+:pulmonaryEmbolism rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I26" ,
+                                             " I26. 9" ;
+                   OpenPVSignal:has_MedDRA_code 10037377 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Pulmonary embolism" ;
+                   rdfs:label "pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismpvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :RiskFactorsForTheReportsAnalyzed ,
+                                                   :SummaryContent ,
+                                                   :Thrombosis ;
+          OpenPVSignal:is_supported_by_statistical_entity :Overall_reports_for_dabigatran ,
+                                                          :ReportsCommonForThrombosisAndThromboembolism ,
+                                                          :ReportsForAtrialFibrillationAndEmbolism ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-concomitantPresenceOfDyslipidemiaAndHypertension ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-coronaryDisease ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-embolism ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-intracardiacThrombus ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-lackOfEfficacy ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-atrialSeptalDefect ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndVenousThromboembolism ,
+                                                          :ReportsForNonValvularAtrialFibrillationAndVenousthromboembolism-VigiGradeCleared ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradeCleared ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-PPI ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-medicineIneffectiveTermIncluded ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-overdosing ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-pulmonaryEmbolismEnsuing ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose ,
+                                                          :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndWHO-ARTPTsArterialThrombosisOrembolism-VigiGradeCleared ,
+                                                          :ReportsWithArterialThrombosis ,
+                                                          :ReportsWithDeepVeinThrombosis ,
+                                                          :ReportsWithEmbolism ,
+                                                          :ReportsWithThromboembolism ,
+                                                          :ReportsWithThrombosis ,
+                                                          :ReportsWithThrombosisAndDabigatran ,
+                                                          :Reports_for_NVAF_and_arterial_thrombosis_-_150_mg ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_PPI ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_antithrombotic_agent ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_concomitant_neoplasms ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_death ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_deep_vein_thrombosis ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_lower_dose ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_medicine_ineffective ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_pulmonary_embolism ,
+                                                          :Reports_for_NVAF_and_venous_thromboembolism_-_time_to_onset ,
+                                                          :Reports_with_thromboembolism ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-aorticThrombosis&DeepVeinThrombosis> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose+PPI> ;
+          OpenPVSignal:refers_to_adverse_effect :thromboembolism ;
+          OpenPVSignal:refers_to_drug :dabigatran ;
+          mp:supportedByData :AssessmentLimitations ,
+                             :CHMP_report_for_dabigatran ,
+                             :DabigatranAndBleeding ,
+                             :DabigatranAndGastritisLikeSymptoms ,
+                             :LabellingOfDabigatran ,
+                             :ReportByShahAboutLackOfAdherence ,
+                             :ReportBySharma ,
+                             :ReportsAboutValvularAtrialFibrillationAndLansoprazole ,
+                             :TheRoleOfPPIsInTheDevelopmentOfAE ,
+                             :case_report ,
+                             :predispositionForTheDevelopmentOfPulmonaryEmbolismForDabigatranPatients ;
+          OpenPVSignal:initially_identified_on "01/06/2016" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticDeepVeinThrombosis-kneereplacement-150Mg
+:rateOfSymptomaticDeepVeinThrombosis-kneereplacement-150Mg rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Statistical_Entity ;
+                                                           OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                           OpenPVSignal:has_content "0.004"^^xsd:float ;
+                                                           OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                           rdfs:label "rate of symptomatic deep vein thrombosis in RE-MODEL for 150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticDeepVeinThrombosis-kneereplacement-220Mg
+:rateOfSymptomaticDeepVeinThrombosis-kneereplacement-220Mg rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Statistical_Entity ;
+                                                           OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                           OpenPVSignal:has_content "0.001"^^xsd:float ;
+                                                           OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                           rdfs:label "rate of symptomatic deep vein thrombosis in RE-MODEL for 220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-150Mg
+:rateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-150Mg rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Statistical_Entity ;
+                                                            OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                            OpenPVSignal:has_content "0.008"^^xsd:float ;
+                                                            OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                            rdfs:label "rate of symptomatic deep vein thrombosis in RE-NOVATE for 150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-220Mg
+:rateOfSymptomaticDeepVeinthrombosis-hipReplacementRE-220Mg rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Statistical_Entity ;
+                                                            OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                            OpenPVSignal:has_content "0.005"^^xsd:float ;
+                                                            OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                            rdfs:label "rate of symptomatic deep vein thrombosis in RE-NOVATE for 220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticPulmonaryembolism-hipReplacementRE-150Mg
+:rateOfSymptomaticPulmonaryembolism-hipReplacementRE-150Mg rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Statistical_Entity ;
+                                                           OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                           OpenPVSignal:has_content "0.001"^^xsd:float ;
+                                                           OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                           rdfs:label "rate of symptomatic pulmonary embolism in RE-NOVATE for 150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticPulmonaryembolism-hipreplacement-220MgMg
+:rateOfSymptomaticPulmonaryembolism-hipreplacement-220MgMg rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Statistical_Entity ;
+                                                           OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                           OpenPVSignal:has_content "0.004"^^xsd:float ;
+                                                           OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                           rdfs:label "rate of symptomatic pulmonary embolism in RE-NOVATE for 220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticPulmonaryembolism-kneereplacement-150Mg
+:rateOfSymptomaticPulmonaryembolism-kneereplacement-150Mg rdf:type owl:NamedIndividual ,
+                                                                   OpenPVSignal:Statistical_Entity ;
+                                                          OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                          OpenPVSignal:has_content "0.001"^^xsd:float ;
+                                                          OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                          rdfs:label "rate of symptomatic pulmonary embolism in RE-MODEL for 150 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticPulmonaryembolism-kneereplacement-220Mg
+:rateOfSymptomaticPulmonaryembolism-kneereplacement-220Mg rdf:type owl:NamedIndividual ,
+                                                                   OpenPVSignal:Statistical_Entity ;
+                                                          OpenPVSignal:refers_to_adverse_effect :pulmonaryEmbolism ;
+                                                          OpenPVSignal:has_content "0.0"^^xsd:float ;
+                                                          OpenPVSignal:has_reporter_type "clinical trial report" ;
+                                                          rdfs:label "rate of symptomatic pulmonary embolism in RE-MODEL for 220 mg" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismrateOfSymptomaticVTE
+:rateOfSymptomaticVTE rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Statistical_Entity ;
+                      OpenPVSignal:refers_to_adverse_effect :venousThromboembolism ;
+                      OpenPVSignal:has_content "0.003"^^xsd:float ;
+                      OpenPVSignal:has_reporter_type "clinical trial report" ;
+                      rdfs:label "rate of symptomatic VTE" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismstomach_cancer
+:stomach_cancer rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Past_Diagnosis ;
+                OpenPVSignal:has_MedDRA_code 10042080 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Stomach cancer" ;
+                rdfs:label "stomach cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismstroke
+:stroke rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code " I63.9" ;
+        OpenPVSignal:has_MedDRA_code 10042244 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Stroke" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismthromboembolism
+:thromboembolism rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "I74.9" ;
+                 OpenPVSignal:has_MedDRA_code 10043566 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Thromboembolism" ;
+                 rdfs:label "thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismthrombosis
+:thrombosis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10043607 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Thrombosis" ;
+            rdfs:label "thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismtimeToOnset2b
+:timeToOnset2b rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "Time to onset was stated for 28 patients and ranged from one day to three years. Nineteen patients experienced the reaction within the first four months, whereas for the other patients the time to onset ranged from five months to three years.  " ;
+               rdfs:label "time to onset 2b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismtimeToOnsetFor1b
+:timeToOnsetFor1b rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  OpenPVSignal:has_content "Time to onset (recorded for 21 patients) ranged from 14 hours to 9 months. Seventeen patients experienced the reaction within the first 18 days, whereas for the other four patients the times to onset were one month (two patients), two months and nine months." ;
+                  rdfs:label "time to onset for 1b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismtimeToOnsetReport2a.1
+:timeToOnsetReport2a.1 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "Time to onset was stated in all cases except for one, and ranged from one day to three years. Nine patients experienced the reaction within the first two months, whereas for the other five patients the time to onset was reported as three months, six months, two years (two patients), and three years." ;
+                       rdfs:label "time to onset report 2a" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismunderdose
+:underdose rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10057362 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Underdose" ;
+           rdfs:label "underdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismvenousThromboembolism
+:venousThromboembolism rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Indication ;
+                       OpenPVSignal:has_ICD_code "I82" ;
+                       OpenPVSignal:has_MedDRA_code 10066899 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Venous thromboembolism" ;
+                       rdfs:label "venous thromboembolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismvenous_embolism
+:venous_embolism rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10014522 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Embolism venous" ;
+                 rdfs:label "venous embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismvenous_thrombosis
+:venous_thrombosis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10047249 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Venous thrombosis" ;
+                   rdfs:label "venous thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-aorticThrombosis&DeepVeinThrombosis
+<http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradecleared-aorticThrombosis&DeepVeinThrombosis> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                    OpenPVSignal:Reports_group ;
+                                                                                                                                                                                           OpenPVSignal:is_subgroup_of :ReportsForNonValvularAtrialFibrillationAndArterialthrombosis-VigiGradeCleared ;
+                                                                                                                                                                                           OpenPVSignal:refers_to_adverse_effect :deepVeinThrombosis ;
+                                                                                                                                                                                           OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                           rdfs:label "Reports for NVAF and arterial thrombosis-aortic thrombosis & deep vein thrombosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose+PPI
+<http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose+PPI> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                      OpenPVSignal:is_subgroup_of :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-PPI ,
+                                                                                                                                                                                                                                                  :ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose ;
+                                                                                                                                                                                                                      OpenPVSignal:refers_to_class :proton_pump_inhibitor ;
+                                                                                                                                                                                                                      OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                      rdfs:label "Reports for VTE and venous thrombosis or embolism - cleared - smaller dose + PPI" ,
+                                                                                                                                                                                                                                 "ReportsForVenousThromboembolismPreventionAfterOrthopaedicSurgeryAndVenousThrombosisOrEmbolism-fullassessment-VigGradecleared-smallerDose+PPI" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#non-Hodgkin's_lymphoma
+<http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolism#non-Hodgkin's_lymphoma> rdf:type owl:NamedIndividual ,
+                                                                                                         OpenPVSignal:Past_Diagnosis ;
+                                                                                                OpenPVSignal:has_MedDRA_code 10029547 ;
+                                                                                                OpenPVSignal:has_MedDRA_prefered_term "Non-Hodgkin's lymphoma" ;
+                                                                                                rdfs:label "non-Hodgkin's lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_3_dabigatran_thromboembolismDabigatran_and_thromboembolism:_analysis_of_case_histories_for_risk_factors
+:Dabigatran_and_thromboembolism:_analysis_of_case_histories_for_risk_factors rdf:type owl:NamedIndividual ,
+                                                                                      OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                             OpenPVSignal:refers_to_author :Dr_Ruth_Savage ,
+                                                                                                           :Mr_Daniele_Sartori ,
+                                                                                                           :Ms_Marilina_Castellano ;
+                                                                             OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                             OpenPVSignal:has_creation_date "01/06/2016" ;
+                                                                             OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                                                             rdfs:label "Dabigatran and thromboembolism: analysis of case histories for risk factors" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
