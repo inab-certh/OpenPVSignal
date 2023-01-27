@@ -1,0 +1,777 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                               rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/325793/"^^xsd:anyURI ;
+                                                                               rdfs:label "Etanercept and ophthalmic herpes"^^xsd:Literal ;
+                                                                               owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Axial_spondyloarthritis
+:Axial_spondyloarthritis rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Indication ;
+                         OpenPVSignal:has_MedDRA_code 10071400 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Axial spondyloarthritis" ;
+                         rdfs:label "axial spondyloarthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Dr._Eugène_van_Puijenbroek
+:Dr._Eugène_van_Puijenbroek rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Author ;
+                            OpenPVSignal:has_affiliation "the Netherlands Pharmacovigilance Centre Lareb" ;
+                            OpenPVSignal:has_first_name "Eugène" ;
+                            OpenPVSignal:has_last_name "van Puijenbroek" ;
+                            rdfs:label "Dr. Eugène van Puijenbroek" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Etanercept_and_ophthalmic_herpes
+:Etanercept_and_ophthalmic_herpes rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                  OpenPVSignal:refers_to_author :Dr._Eugène_van_Puijenbroek ,
+                                                                :Sarah_Watson ;
+                                  OpenPVSignal:refers_to_signal :pv_signal ;
+                                  mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                  OpenPVSignal:has_creation_date "01/07/2019" ;
+                                  OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                  rdfs:label "Etanercept and ophthalmic herpes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#IC_etanercept_and_ophthalmic_herpes_zoster
+:IC_etanercept_and_ophthalmic_herpes_zoster rdf:type owl:NamedIndividual ,
+                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                            OpenPVSignal:has_expected_count "4.1"^^xsd:float ;
+                                            OpenPVSignal:refers_to_number_of_reports 50 ;
+                                            rdfs:label "IC for etanercept and ophthalmic herpes zoster" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Introduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ,
+                                    :Ref.4 ,
+                                    :Ref.5 ,
+                                    :Ref.6 ;
+                      OpenPVSignal:has_content """Etanercept is a human tumour necrosis factor receptor p75 Fc fusion protein produced by recombinant DNA technology in a Chinese hamster ovary mammalian expression system. It is indicated for the treatment of rheumatoid arthritis, juvenile idiopathic arthritis, psoriatic arthritis, axial spondyloarthritis, ankylosing spondylitis and psoriasis.1
+Herpes zoster (shingles) is a common disorder in primary care and is caused by the Varicella-Zoster Virus (VZV). One fifth of the population, mainly elderly people, will present with this neurocutaneous infection during their lifetime. Most immunocompetent patients will experience spontaneous and complete recovery within a few weeks. Some, however, will develop complications such as post-herpetic neuralgia and, in cases of ophthalmic herpes zoster, sight-threatening eye problems.2 A related DNA virus is Herpes Simplex Virus (HSV), that infects humans by direct contact of skin or of mucous membrane with lesions or secretions holding viruses. HSV type 1 is primarily responsible for orofacial and ocular infections and may cause ophthalmic herpes without the need for a primary ocular HSV infection. HSV type 2, which is generally transmitted sexually will only rarely infect the eye if orofacial contact is made with genital lesions, and is sometimes transmitted to neonates as they pass through the birth canal of a mother with an active genital HSV type 2 infection.3
+Conjunctivitis is seen in nearly all ophthalmic herpes zoster patients. More severe disorders include keratitis, uveitis and optic neuritis.
+Untreated, these latter diagnoses might lead to permanently affected eyesight. Without an early diagnosis of ophthalmic herpes and subsequent antiviral treatment, about half of all patients will develop eye disorders of various kinds.2 Both VZV and HSV may cause severe corneal infections.
+Although the pattern of the corneal manifestations differs, both types of herpes keratitis may result in potentially devastating complications for which immediate ophthalmological treatment is needed.4,5 For HSV, as well as for HZV, the incidence of infections is increased in immunocompromised persons.6""" ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.1 ,
+                                        :Ref.7 ;
+                          OpenPVSignal:has_content """In the section for adverse reactions in the UK Summary of Product Characteristics for etanercept, herpes zoster is mentioned under serious infections; “opportunistic infections have been reported in association with etanercept, including invasive fungal, parasitic (including protozoal) and viral (including herpes zoster)…”. Herpes simplex is not mentioned in the label.1 However, due to the immunosuppressive nature of etanercept, reactivation of this virus is not unlikely.
+The patient information leaflet for the same product under “Serious side effects” states that you may need urgent medical attention if you show “signs of nerve disorders, such as numbness or tingling, changes in vision, eye pain, or onset of weakness in an arm or leg” and infections are listed as common. Under “Uncommon” side effects eye inflammation (not further specified) is given, and under “Rare” side effects nervous system disorders (… inflammation of the nerves of the eyes…) is listed.7 However, for a patient, this information might seem unspecific and may not be perceived as a sign of a potentially serious ophthalmological disorder, with the risk of permanent damage.""" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Mechanism_of_etanercept
+:Mechanism_of_etanercept rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         mp:references :Ref.1 ;
+                         OpenPVSignal:has_content "Etanercept is a human tumour necrosis factor receptor p75 Fc fusion protein produced by recombinant DNA technology in a Chinese hamster ovary mammalian expression system." ;
+                         rdfs:label "Mechanism of etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Nervous_system_disorders
+:Nervous_system_disorders rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10029205 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Nervous system disorders" ;
+                          rdfs:label "nervous system disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Overall_reports_in__VigiBase
+:Overall_reports_in__VigiBase rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:refers_to_adverse_effect :ophthalmicHerpesZoster ;
+                              OpenPVSignal:refers_to_drug :etanercept ;
+                              OpenPVSignal:has_count 50 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Overall reports in  VigiBase etanercept & opthalmic herpes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Pathology_of_Herpes_zoster
+:Pathology_of_Herpes_zoster rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Free_text_reporting_element ;
+                            OpenPVSignal:refers_to_adverse_effect :conjunctivitis ,
+                                                                  :herpesZoster ,
+                                                                  :hsvInfection ,
+                                                                  :keratitis ,
+                                                                  :ophthalmicHerpesZoster ,
+                                                                  :opticNeuritis ,
+                                                                  :uveitis ;
+                            mp:references :Ref.2 ,
+                                          :Ref.3 ,
+                                          :Ref.4 ,
+                                          :Ref.5 ,
+                                          :Ref.6 ;
+                            OpenPVSignal:has_content """Herpes zoster (shingles) is a common disorder in primary care and is caused by the Varicella-Zoster Virus (VZV). One fifth of the population, mainly elderly people, will present with this neurocutaneous infection during their lifetime. Most immunocompetent patients will experience spontaneous and complete recovery within a few weeks. Some, however, will develop complications such as post-herpetic neuralgia and, in cases of ophthalmic herpes zoster, sight-threatening eye problems.2 A related DNA virus is Herpes Simplex Virus (HSV), that infects humans by direct contact of skin or of mucous membrane with lesions or secretions holding viruses. HSV type 1 is primarily responsible for orofacial and ocular infections and may cause ophthalmic herpes without the need for a primary ocular HSV infection. HSV type 2, which is generally transmitted sexually will only rarely infect the eye if orofacial contact is made with genital lesions, and is sometimes transmitted to neonates as they pass through the birth canal of a mother with an active genital HSV type 2 infection.3 Conjunctivitis is seen in nearly all ophthalmic herpes zoster patients. More severe disorders include keratitis, uveitis and optic neuritis.
+Untreated, these latter diagnoses might lead to permanently affected eyesight. Without an early diagnosis of ophthalmic herpes and subsequent antiviral treatment, about half of all patients will develop eye disorders of various kinds.2 Both VZV and HSV may cause severe corneal infections.
+Although the pattern of the corneal manifestations differs, both types of herpes keratitis may result in potentially devastating complications for which immediate ophthalmological treatment is needed.4,5 For HSV, as well as for HZV, the incidence of infections is increased in immunocompromised persons.6""" ;
+                            rdfs:label "Herpes zoster pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 39 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 85 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_3
+:Patient_3 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_4
+:Patient_4 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 48 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_5
+:Patient_5 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 60 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_6
+:Patient_6 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Patient_7
+:Patient_7 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "electronic Medicines Compendium: Summary of Product Characteristics for etanercept (Benepali). Available from: https://www.medicines.org.uk/emc/product/ 2708/smpc. Accessed: May 2018" ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Opstelten W, Zaal MJ. Managing ophthalmic herpes zoster in primary care. BMJ. 16 Jul 2005;331(7509):147- 151." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wang JC. Herpes Simplex Virus (HSV) Keratitis. Available from: https://emedicine.medscape.com/article/11 94268-overview. Accessed: June 2018." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Li JY Herpes zoster ophthalmicus: acute keratitis. Curr Opin Ophthalmol. 2018 Jul;29(4):328-333." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kalezic T, Mazen M, Kuklinski E, Asbell P. Herpetic eye disease study: lessons learned. Curr Opin Ophthalmol. 2018 Jul;29(4):340-346." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "JT Schiffer, L Corey. Herpes Simplex Virus. Ch 136 1943-62. AND RJ Whitley. Varicella-Zoster Virus. Ch 137 1963-69. In: Mandell, Douglas, and Bennett’s Principles and Practice of infectious diseases. Edited by GL Mandell, JE Bennett, 7th ed. Churchill Livingstone Elsevier, Philadelphia 2010 ISBN-978-0- 4430-6839-3." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "electronic Medicines Compendium: Patient information leaflet for etanercept (Benepali). Available from: https://www.medicines.org.uk/emc/files/p il.2708.pdf. Accessed: May 2018." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :ophthalmicHerpesZoster ,
+                                                :ulcerative_keratitis ;
+          OpenPVSignal:refers_to_patient :Patient_1 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cornealScar ,
+                                                :ophthalmicHerpesZoster ,
+                                                :retinal_haemorrhage ,
+                                                :uveitis ;
+          OpenPVSignal:refers_to_patient :Patient_2 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_3
+:Report_3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :corneal_graft_rejection ,
+                                                :ophthalmicHerpesZoster ;
+          OpenPVSignal:refers_to_patient :Patient_3 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_4
+:Report_4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :corneal_disorder ,
+                                                :necrotising_scleritis ,
+                                                :ophthalmicHerpesZoster ,
+                                                :uveitis ;
+          OpenPVSignal:refers_to_patient :Patient_4 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_5
+:Report_5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cataract ,
+                                                :glaucoma ,
+                                                :ophthalmicHerpesZoster ;
+          OpenPVSignal:refers_to_patient :Patient_5 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_6
+:Report_6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :glaucomatocyclitis_crisis ,
+                                                :ophthalmicHerpesZoster ;
+          OpenPVSignal:refers_to_patient :Patient_6 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Report_7
+:Report_7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :cornealScar ,
+                                                :ophthalmicHerpesZoster ;
+          OpenPVSignal:refers_to_patient :Patient_7 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+          OpenPVSignal:has_reporter_type "patient" ;
+          rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content """As of 3 May 2018, there were 50 reports of ophthalmic herpes for etanercept in VigiBase, the WHO global database of individual case safety reports. Based on the overall reporting of adverse reactions for etanercept and on the adverse reaction ophthalmic herpes on its own in VigiBase,
+4.1 reports were statistically expected for the drug– adverse drug reaction (ADR) combination based on the disproportionality measure (IC). The reports originated from Europe and the US. Forty-five reports were classified as serious. Several ophthalmic disorders were co-reported, all in patients with a non-specified ocular herpes infection. These concerned a 39-year-old male with ulcerative keratitis, an 85-year-old female with a retinal haemorrhage, corneal scar and uveitis, a male, age not reported, who experienced a corneal graft rejection, a 48-year-old male with uveitis, corneal disorder and necrotising scleritis that needed a scleral patch graft, a consumer report concerning a 60-year-old woman who co-reported cataract and glaucoma, a consumer report concerning a female of unknown age with glaucomatocyclitic crisis (Posner-Schlossman Syndrome) and finally one consumer report concerning a male, age not reported, with recurrent ophthalmic herpes resulting in a corneal scar outside visual field. With the exception of glaucomatocyclitic crisis, the co-reported terms may result either directly or indirectly from an ophthalmic herpes infection.
+Of the 24 cases with a documented outcome, 13 reports stated that the patients had Not Recovered from the event at the time the report was submitted, one Recovered with sequalae, seven reported that they had Recovered and three were Recovering at the time of reporting. Some reports also describe the situation of the patients. In one case, the patient stopped the treatment on their own initiative, after a severe episode of cold sores in the mouth, nose and ears, which was co- reported with “cold sores in the eye”. On the other hand, two patients are described as requesting continued treatment despite serious adverse reactions, since the treatment was working so well. One patient did not consider the ophthalmic herpes to be serious.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Reports_with_not_recovered_as_outcome
+:Reports_with_not_recovered_as_outcome rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :Overall_reports_in__VigiBase ;
+                                       OpenPVSignal:has_count 13 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                       rdfs:label "Reports with not recovered as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Reports_with_recovered_as_outcome
+:Reports_with_recovered_as_outcome rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :Overall_reports_in__VigiBase ;
+                                   OpenPVSignal:has_count 7 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                   rdfs:label "Reports with recovered as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Reports_with_recovering_with_sequalae
+:Reports_with_recovering_with_sequalae rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :Overall_reports_in__VigiBase ;
+                                       OpenPVSignal:has_count 1 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+                                       rdfs:label "Reports with recovering with sequalae" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Reports_with_revovering_as_outcome
+:Reports_with_revovering_as_outcome rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :Overall_reports_in__VigiBase ;
+                                    OpenPVSignal:has_count 3 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                                    rdfs:label "Reports with revovering as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Sarah_Watson
+:Sarah_Watson rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Author ;
+              OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+              OpenPVSignal:has_first_name "Sarah" ;
+              OpenPVSignal:has_last_name "Watson" ;
+              rdfs:label "Sarah Watson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Summary
+:Summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Adverse reactions of etanercept such as opportunistic infections and eye inflammation are mentioned in the patient information leaflet and herpes zoster is included in the label. The risk of acquiring a herpes infection in the eye and the potential severity of that infection is however not mentioned in the patient information leaflet of etanercept. Information about the risks of ophthalmic herpes is important for an early diagnosis, as more severe forms of ophthalmic herpes can, if left untreated, permanently affect the eyesight." ;
+         rdfs:label "Summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#UK_SmPc_for_etanercept
+:UK_SmPc_for_etanercept rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001197 ,
+                                 OpenPVSignal:Structured_Product_Labels_information ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :Nervous_system_disorders ,
+                                                              :Visual_impairment ,
+                                                              :Weakness_of_arms ,
+                                                              :Weakness_of_limbs ,
+                                                              :eyePain ,
+                                                              :eye_inflammation ,
+                                                              :fungal_infection ,
+                                                              :herpesZoster ,
+                                                              :numbness ,
+                                                              :parasitic_infection ,
+                                                              :tingling ,
+                                                              :viral_infection ,
+                                                              :weakness ;
+                        OpenPVSignal:refers_to_drug :etanercept ;
+                        mp:references :Ref.1 ,
+                                      :Ref.7 ;
+                        OpenPVSignal:has_content """In the section for adverse reactions in the UK Summary of Product Characteristics for etanercept, herpes zoster is mentioned under serious infections; \"opportunistic infections have been reported in association with etanercept, including invasive fungal, parasitic (including protozoal) and viral (including herpes zoster)…”. Herpes simplex is not mentioned in the label.1 However, due to the immunosuppressive nature of etanercept, reactivation of this virus is not unlikely.
+The patient information leaflet for the same product under “Serious side effects” states that you may need urgent medical attention if you show “signs of nerve disorders, such as numbness or tingling, changes in vision, eye pain, or onset of weakness in an arm or leg” and infections are listed as common. Under “Uncommon” side effects eye inflammation (not further specified) is given, and under “Rare” side effects nervous system disorders (… inflammation of the nerves of the eyes…) is listed.7""" ;
+                        rdfs:label "UK SmPc for etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Visual_impairment
+:Visual_impairment rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10047571 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                   rdfs:label "visual impairment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Weakness_of_arms
+:Weakness_of_arms rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10050379 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Weakness of arms" ;
+                  rdfs:label "weakness of arms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#Weakness_of_limbs
+:Weakness_of_limbs rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10047868 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Weakness of limbs" ;
+                   rdfs:label "weakness of limbs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#ankylosingSpondylitis
+:ankylosingSpondylitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Indication ;
+                       OpenPVSignal:has_ICD_code "M45" ;
+                       OpenPVSignal:has_MedDRA_code 10002556 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Ankylosing spondylitis" ;
+                       rdfs:label "ankylosing spondylitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#cataract
+:cataract rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code " H26.9" ;
+          OpenPVSignal:has_MedDRA_code 10007739 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Cataract" ;
+          rdfs:label "cataract" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Conclusion ;
+            OpenPVSignal:has_content "Although infections and eye inflammation are listed in the patient information leaflet for etanercept, without clear information about the risk of acquiring ophthalmic herpes and more specifically, the risks of leaving it untreated, there is a risk of permanent damage to the sight of the patients who are not treated in time." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#conjunctivitis
+:conjunctivitis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "H10.30" ;
+                OpenPVSignal:has_MedDRA_code 10010741 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Conjunctivitis" ;
+                rdfs:label "conjunctivitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#cornealScar
+:cornealScar rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "H17" ;
+             OpenPVSignal:has_MedDRA_code 10011044 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Corneal scar" ;
+             rdfs:label "corneal scar" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#corneal_disorder
+:corneal_disorder rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "H18.9" ;
+                  OpenPVSignal:has_MedDRA_code 10061453 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Corneal disorder" ;
+                  rdfs:label "corneal disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#corneal_graft_rejection
+:corneal_graft_rejection rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "T86.840" ;
+                         OpenPVSignal:has_MedDRA_code 10011017 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Corneal graft rejection" ;
+                         rdfs:label "corneal graft rejection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#etanercept
+:etanercept rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:concerns_indication_for_use :Axial_spondyloarthritis ,
+                                                     :ankylosingSpondylitis ,
+                                                     :juvenileIdiopathicArthritis ,
+                                                     :psoriasis ,
+                                                     :psoriaticArthritis ,
+                                                     :rheumatoidArthritis ;
+            OpenPVSignal:has_mechanism :Mechanism_of_etanercept ;
+            OpenPVSignal:has_ATC_code "L04AB01" ;
+            rdfs:label "etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#eyePain
+:eyePain rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H57.10" ;
+         OpenPVSignal:has_MedDRA_code 10015958 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Eye pain" ;
+         rdfs:label "eye pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#eye_inflammation
+:eye_inflammation rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10015943 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Eye inflammation" ;
+                  rdfs:label "eye inflammation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#fungal_infection
+:fungal_infection rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "B35.9" ;
+                  OpenPVSignal:has_MedDRA_code 10017533 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Fungal infection" ;
+                  rdfs:label "fungal infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#glaucoma
+:glaucoma rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "H40" ;
+          OpenPVSignal:has_MedDRA_code 10018304 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Glaucoma" ;
+          rdfs:label "glaucoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#glaucomatocyclitis_crisis
+:glaucomatocyclitis_crisis rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "H40.40" ;
+                           OpenPVSignal:has_MedDRA_code 10018333 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Glaucomatocyclitic crises" ;
+                           rdfs:label "glaucomatocyclitis crises" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#herpesZoster
+:herpesZoster rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "B02.9" ;
+              OpenPVSignal:has_MedDRA_code 10019974 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Herpes zoster" ;
+              rdfs:label "herpes zoster" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#hsvInfection
+:hsvInfection rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "B00.9" ;
+              OpenPVSignal:has_MedDRA_code 10019948 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Herpes simplex" ;
+              rdfs:label "hsv infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#juvenileIdiopathicArthritis
+:juvenileIdiopathicArthritis rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Indication ;
+                             OpenPVSignal:has_ICD_code "M08.00" ;
+                             OpenPVSignal:has_MedDRA_code 10059176 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Juvenile idiopathic arthritis" ;
+                             rdfs:label "juvenile idiopathic arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#keratitis
+:keratitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H16.8" ;
+           OpenPVSignal:has_MedDRA_code 10023332 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Keratitis" ;
+           rdfs:label "keratitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#necrotising_scleritis
+:necrotising_scleritis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "H15.099" ;
+                       OpenPVSignal:has_MedDRA_code 10048851 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Necrotizing scleritis" ;
+                       rdfs:label "necrotising scleritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#numbness
+:numbness rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R20.1" ;
+          OpenPVSignal:has_MedDRA_code 10020937 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Hypoaesthesia" ;
+          rdfs:label "numbness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#ophthalmicHerpesZoster
+:ophthalmicHerpesZoster rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "B02.39" ;
+                        OpenPVSignal:has_MedDRA_code 10030865 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Ophthalmic herpes zoster" ;
+                        rdfs:label "ophthalmic herpes zoster" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#opticNeuritis
+:opticNeuritis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "H46.9" ;
+               OpenPVSignal:has_MedDRA_code 10030942 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Optic neuritis" ;
+               rdfs:label "optic neuritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#parasitic_infection
+:parasitic_infection rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "B89" ;
+                     OpenPVSignal:has_MedDRA_code 10021857 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Infection parasitic" ;
+                     rdfs:label "parasitic infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#psoriasis
+:psoriasis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L40" ;
+           OpenPVSignal:has_MedDRA_code 10037153 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Psoriasis" ;
+           rdfs:label "psoriasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#psoriaticArthritis
+:psoriaticArthritis rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "L40.50" ;
+                    OpenPVSignal:has_MedDRA_code 10037160 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Psoriatic arthropathy" ;
+                    rdfs:label "psoriatic arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#pv_signal
+:pv_signal rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Signal ;
+           OpenPVSignal:Free_text_reporting_element :Introduction_content ,
+                                                    :Pathology_of_Herpes_zoster ,
+                                                    :Reports_in_VigiBase ,
+                                                    :Summary ,
+                                                    :conclusion ;
+           OpenPVSignal:is_supported_by_individual_case_report :Report_1 ,
+                                                               :Report_2 ,
+                                                               :Report_3 ,
+                                                               :Report_4 ,
+                                                               :Report_5 ,
+                                                               :Report_6 ,
+                                                               :Report_7 ;
+           OpenPVSignal:is_supported_by_statistical_entity :IC_etanercept_and_ophthalmic_herpes_zoster ,
+                                                           :Overall_reports_in__VigiBase ,
+                                                           :Reports_with_not_recovered_as_outcome ,
+                                                           :Reports_with_recovered_as_outcome ,
+                                                           :Reports_with_recovering_with_sequalae ,
+                                                           :Reports_with_revovering_as_outcome ;
+           OpenPVSignal:refers_to_adverse_effect :herpesZoster ,
+                                                 :ophthalmicHerpesZoster ;
+           OpenPVSignal:refers_to_drug :etanercept ;
+           OpenPVSignal:refers_to_primary_suspect_drug :etanercept ;
+           mp:supportedByData :UK_SmPc_for_etanercept ;
+           OpenPVSignal:initially_identified_on "01/07/2019" ;
+           rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#retinal_haemorrhage
+:retinal_haemorrhage rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "H35.60" ;
+                     OpenPVSignal:has_MedDRA_code 10038867 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Retinal hemorrhage" ;
+                     rdfs:label "retinal haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#rheumatoidArthritis
+:rheumatoidArthritis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "M06.9" ;
+                     OpenPVSignal:has_MedDRA_code 10039073 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Rheumatoid arthritis" ;
+                     rdfs:label "rheumatoid arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#tingling
+:tingling rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R20.2" ;
+          OpenPVSignal:has_MedDRA_code 10033775 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Paraesthesia" ;
+          rdfs:label "tingling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#ulcerative_keratitis
+:ulcerative_keratitis rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "H16.0" ;
+                      OpenPVSignal:has_MedDRA_code 10064996 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Ulcerative keratitis" ;
+                      rdfs:label "ulcerative keratitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#uveitis
+:uveitis rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "H44139" ;
+         OpenPVSignal:has_MedDRA_code 10046851 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Uveitis" ;
+         rdfs:label "uveitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#viral_infection
+:viral_infection rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "B34.9" ;
+                 OpenPVSignal:has_MedDRA_code 10047461 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Viral infection" ;
+                 rdfs:label "viral infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_3_etanercept_ophthalmicHerpes.owl#weakness
+:weakness rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "weakness" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

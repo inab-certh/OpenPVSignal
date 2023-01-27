@@ -1,0 +1,34 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+
+# Test Case: A "Drug Usage" instance has to be defined with at least one of the following information:
+#	- dosage
+# 	- intake forme
+# 	- exposure time 
+# 	- indication	
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Drug_Usage ;
+sh:or (
+	[ sh:property[
+		sh:path OpenPVSignal:refers_to_dosage ;	
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path OpenPVSignal:concerns_indication_for_us;
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path OpenPVSignal:is_related_with_drug_intake_form ;
+		sh:minCount 1;
+		]
+	]
+	[ sh:property [
+		sh:path OpenPVSignal:is_related_with_drug_exposure ;
+		sh:minCount 1;
+		]
+	]	).

@@ -1,0 +1,1847 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder> rdf:type owl:Ontology ;
+                                                                            owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                            rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255501/"^^xsd:anyURI ;
+                                                                            rdfs:label "Brentuximab and Hepatic disorders"^^xsd:Literal ;
+                                                                            owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Acute_cholecystitis
+:Acute_cholecystitis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10000691 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Acute cholecystitis" ;
+                     rdfs:label "acute cholecystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Brentuximab_and_hepatic_disorders
+:Brentuximab_and_hepatic_disorders rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                   OpenPVSignal:refers_to_author :Dr_Ruth_Savage ;
+                                   OpenPVSignal:refers_to_signal :pvSignal ;
+                                   OpenPVSignal:has_creation_date "01/05/2015" ;
+                                   OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                   rdfs:label "Brentuximab and hepatic disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :Ref.5 ;
+                         OpenPVSignal:has_content """The pattern of reports in Vigibase® indicates that where there is an increase in hepatic transaminases these tend to occur with each three weekly brentuximab dose. In some patients this reaction subsides despite continued treatment. In others, more rarely, it may persist and quite rapidly lead to hepatitis.
+Only one fatality could be assessed as “possibly” related to brentuximab use. Brentuximab is indicated for extremely ill patients with advanced lymphomas and a history of chemotherapy and stem cell transplants. For this reason, sepsis and disease progression were clear alternative explanations in a number of fatal. reports. Others were not sufficiently well-documented to make an assessment. However, it is also possible that the patient’s underlying disease and its consequences may obscure a causal association between serious hepatic disorders and brentuximab.
+Several patients were taking fluconazole for fungal or yeast infection or prophylaxis. Fluconazole itself is hepatotoxic. Also a small fraction of the MMAE that is released from brentuximab in the cell is a substrate for CYP3A4/5. Caution is advised when using brentuximab together with fluconazole, a moderate CYP3A4 inhibitor, as concomitant use with ketoconazole (a potent CYP3A4 inhibitor) increased MMAE exposure by approximately 34%.5 It is possible that fluconazole inhibition of MMAE metabolism may have played a role in Report 5 (Table 2) where the patient became rapidly worse and in Group 3 (Table 1) there was a report of mixed liver injury and icterus. This patient was able to continue brentuximab without further hepatic problems but had received fluconazole with the first dose. However, the dates of administration of the latter were unclear.
+
+Several reports indicated benefit from brentuximab use and it is important not to discontinue it unnecessarily. However, the Vigibase® reports support the manufacturer’s recommendation that liver function should be closely monitored. This will identify patients who experience progressive increases in hepatic enzymes and develop other hepatic abnormalities beyond the commonly occurring mild increases in transaminases.""" ;
+                         rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#DosageForBrentuximab
+:DosageForBrentuximab rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :brentuximab ;
+                      OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21DaysIntervalsBetweenAdministrations> ;
+                      OpenPVSignal:has_content """The recommended dose is
+1.8 mg/kg administered only as an intravenous infusion over 30 minutes every three weeks. Treatment should be continued until a maximum of 16 cycles, disease progression or unacceptable toxicity.""" ;
+                      OpenPVSignal:has_dosage_unit "mg/kg" ;
+                      OpenPVSignal:has_value 1.8 ;
+                      OpenPVSignal:refers_to_dose_value "1.8 mg/kg" ;
+                      rdfs:label "Dosage for Brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Dose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :brentuximab ;
+       OpenPVSignal:has_dosage_unit "mg/kg" ;
+       OpenPVSignal:has_value 1.8 ;
+       OpenPVSignal:refers_to_dose_value "1.8 mg/kg" ;
+       rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Dose3
+:Dose3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :brentuximab ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 50 ;
+       OpenPVSignal:refers_to_dose_value "50 mg" ;
+       rdfs:label "Dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Dose5
+:Dose5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :brentuximab ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 135 ;
+       OpenPVSignal:refers_to_dose_value "135 mg" ;
+       rdfs:label "Dose 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Dose6
+:Dose6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :brentuximab ;
+       OpenPVSignal:has_dosage_unit "mg" ;
+       OpenPVSignal:has_value 164.5 ;
+       OpenPVSignal:refers_to_dose_value "164.5 mg" ;
+       rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Dr_Ruth_Savage
+:Dr_Ruth_Savage rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Author ;
+                OpenPVSignal:has_affiliation "New Zealand" ;
+                OpenPVSignal:has_first_name "Ruth" ;
+                OpenPVSignal:has_last_name "Savage" ;
+                rdfs:label "Dr Ruth Savage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#EMA_SPCs_for_brentuximab
+:EMA_SPCs_for_brentuximab rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Structured_Product_Labels_information ;
+                          OpenPVSignal:refers_to_drug :brentuximab ;
+                          mp:references :Ref.1 ;
+                          OpenPVSignal:has_content "The EMA Summary of Product Characteristics for Adcetris (brentuximab vedotin) indicates that elevations in alanine aminotransferase (ALT) and aspartate aminotransferase (AST) have been reported in > 1/100 to < 1/10 patients and advises that liver function should be routinely monitored in patients receiving brentuximab.1" ;
+                          rdfs:label "EMA SPCs for brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#IncreaseOfMMAEDuringConcomitantUseOfbrentuximab-cetoconazole
+:IncreaseOfMMAEDuringConcomitantUseOfbrentuximab-cetoconazole rdf:type owl:NamedIndividual ,
+                                                                       OpenPVSignal:Statistical_Entity ;
+                                                              mp:references :Ref.5 ;
+                                                              OpenPVSignal:has_content "Several patients were taking fluconazole for fungal or yeast infection or prophylaxis. Fluconazole itself is hepatotoxic. Also a small fraction of the MMAE that is released from brentuximab in the cell is a substrate for CYP3A4/5. Caution is advised when using brentuximab together with fluconazole, a moderate CYP3A4 inhibitor, as concomitant use with ketoconazole (a potent CYP3A4 inhibitor) increased MMAE exposure by approximately 34%. " ;
+                                                              OpenPVSignal:has_value 0.34 ;
+                                                              rdfs:label "Increase of MMAE during concomitant use of brentuximab-cetoconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ;
+                     OpenPVSignal:has_content """Brentuximab vedotin is a CD30 directed monoclonal antibody indicated for the treatment of anaplastic large T cell systemic malignant lymphoma after failure of at least one prior multi- agent chemotherapy regimen and Hodgkin’s Lymphoma after failure of autologous stem cell transplant (ASCT) or after failure of at least two prior multi-agent chemotherapy regimens in patients who are not ASCT candidates.1 Brentuximab vedotin consists of three components: the chimeric IgG1 antibody cAC10 which is specific for human CD30; the microtubule disrupting agent MMAE; and a protease-cleavable linker that covalently attaches MMAE to cAC10.
+Once the ADC-CD30 complex enters the cell,
+MMAE is released.2 The recommended dose is
+1.8 mg/kg administered only as an intravenous infusion over 30 minutes every three weeks. Treatment should be continued until a maximum of 16 cycles, disease progression or unacceptable toxicity.
+In the first quarter of 2014 the combination brentuximab - hepatocellular damage was highlighted in the WHO Global ICSR database, Vigibase®, using the vigiRank screening method.3 On examining the eight reports in this combination it became apparent that the WHO-ART preferred term “hepatocellular damage” included reports recording a range of hepatic reactions from increased serum hepatic transaminases to acute hepatic failure. In the light of this finding it was considered appropriate to consider all of the Vigibase® reports of suspected adverse reactions to brentuximab in the Liver and biliary System Organ Class (SOC) to determine if there was evidence of serious hepatic reactions.""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.4 ;
+                        OpenPVSignal:has_content "The EMA Summary of Product Characteristics for Adcetris (brentuximab vedotin) indicates that elevations in alanine aminotransferase (ALT) and aspartate aminotransferase (AST) have been reported in > 1/100 to < 1/10 patients and advises that liver function should be routinely monitored in patients receiving brentuximab.1 The US FDA indicated that it was monitoring brentuximab and hepatotoxicity as a potential safety issue in January 2014.4 Other relevant adverse effects of brentuximab are fever and neutropenia and increased susceptibility to infection.1" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#MechanismOfAEInductionDuringBrentuximabAndFluconazoleco-administration
+:MechanismOfAEInductionDuringBrentuximabAndFluconazoleco-administration rdf:type owl:NamedIndividual ,
+                                                                                 obo:OAE_0001182 ,
+                                                                                 OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                        OpenPVSignal:refers_to_adverse_effect :hepatitisFulminant ;
+                                                                        OpenPVSignal:has_content "Several patients were taking fluconazole for fungal or yeast infection or prophylaxis. Fluconazole itself is hepatotoxic. Also a small fraction of the MMAE that is released from brentuximab in the cell is a substrate for CYP3A4/5. Caution is advised when using brentuximab together with fluconazole, a moderate CYP3A4 inhibitor, as concomitant use with ketoconazole (a potent CYP3A4 inhibitor) increased MMAE exposure by approximately 34%. It is possible that fluconazole inhibition of MMAE metabolism may have played a role in Report 5 (Table 2) where the patient became rapidly worse and in Group 3 (Table 1) there was a report of mixed liver injury and icterus. This patient was able to continue brentuximab without further hepatic problems but had received fluconazole with the first dose. However, the dates of administration of the latter were unclear." ,
+                                                                                                 "The MMAE component of brentuximab is a substrate for CYP3A4 so that its metabolism may have been inhibited by fluconazole which could be important if the suspected hepatic reactions to brentuximab are dose-related." ;
+                                                                        rdfs:label "Mechanism of AE induction during brentuximab and fluconazole co-administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#MechanismOfBrentuximab
+:MechanismOfBrentuximab rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ;
+                        OpenPVSignal:has_content "Brentuximab vedotin is a CD30 directed monoclonal antibody indicated for the treatment of anaplastic large T cell systemic malignant lymphoma after failure of at least one prior multi- agent chemotherapy regimen and Hodgkin’s Lymphoma after failure of autologous stem cell transplant (ASCT) or after failure of at least two prior multi-agent chemotherapy regimens in patients who are not ASCT candidates.1 Brentuximab vedotin consists of three components: the chimeric IgG1 antibody cAC10 which is specific for human CD30; the microtubule disrupting agent MMAE; and a protease-cleavable linker that covalently attaches MMAE to cAC10. Once the ADC-CD30 complex enters the cell, MMAE is released.2" ;
+                        rdfs:label "Mechanism of Brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 26 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 23 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 25 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 29 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 31 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EMA. SmPC for Adcetris 50 mg 2014. URL: http://www.ema.europa.eu/docs/en_GB/document _library/ EPAR_-_Product_Information/human/ 002455/ WC500135055.pdf. Accessed: 19 October 2014." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FDA. Adcetris Label 2011 [updated 08/2013]. URL:http://www.accessdata.fda.gov/drugsatfda_d ocs/label/2013/125388s045lbl.pdf. Accessed:19 October 2014." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Caster O, Juhlin K, Watson S, Noren GN. Improved statistical signal detection in pharmacovigilance by combining multiple strength-of-evidence aspects in vigiRank. Drug Saf. 2014;37(8):617-28." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FDA. Potential Signals of Serious Risks/New Safety Information Identified by the FDA Adverse Event Reporting System (FAERS) between January – March 2014 2014 [updated 16/06/2014 ]. URL: http://www. fda.gov/drugs/guidancecompliance regulatoryinformation/surveillance/adversedrugeff ects/ucm398223.htm. Accesed: 19 October 2014." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Roerig. Product Information: DIFLUCAN(R) oral tablets, oral suspension, intravenous infusion injection, fluconazole oral tablets, oral suspension, intravenous infusion injection. New York 2014." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_1_info ;
+         OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ,
+                                               :hepatocellularDamage ,
+                                               :polyneuropathy ;
+         OpenPVSignal:refers_to_concomitant_drug :aciclovir ,
+                                                 :omeprazole ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sulfamethoxazole/Trimethoprim> ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :brentuximab ;
+         OpenPVSignal:time_to_onset :timeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_2_info ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :asthenia ,
+                                               :bilirubinaemia ,
+                                               :fever ,
+                                               :hepatocellularDamage ,
+                                               :injection_site_inflammation ,
+                                               :liver_fatty ,
+                                               :serumIronincreased ,
+                                               :sgotIncreased ,
+                                               :sgptIncreased ;
+         OpenPVSignal:refers_to_concomitant_drug :methotrexate ,
+                                                 :sirolimus ,
+                                                 :tacrolimus ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :brentuximab ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_2 ;
+         OpenPVSignal:time_to_onset :timeToOnset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_3_info ;
+         OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ;
+         OpenPVSignal:refers_to_concomitant_drug :aciclovir ,
+                                                 :omeprazole ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sulfamethoxazole/Trimethoprim> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_3 ;
+         OpenPVSignal:time_to_onset :timeToOnset3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_4_info ;
+         OpenPVSignal:refers_to_adverse_effect :graftVersusHostDisease ,
+                                               :hepaticFunctionAbnormal ,
+                                               :hepatocellularDamage ,
+                                               :thrombocytopenia ,
+                                               :weight_decreased ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:time_to_onset :timeToOnset4 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_5_info ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :hepaticEnzymesIncreased ,
+                                               :hepatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :aciclovir ,
+                                                 :fluconazole ,
+                                                 :prednisone ,
+                                                 :vitaminK ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_5 ;
+         OpenPVSignal:time_to_onset :timeToOnset5 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_6_info ;
+         OpenPVSignal:refers_to_adverse_effect :hepatitisCholestatic ;
+         OpenPVSignal:refers_to_concomitant_drug :paracetamol ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_6 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :clemastine ;
+         OpenPVSignal:time_to_onset :timeToOnset6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """After the removal of duplicates 55 reports were identified in the Vigibase® SOC Liver and biliary system disorders in which brentuximab was suspect. The reports were divided into pathological categories that allowed a distinction between increased hepatic transaminases and more serious reports and between various types of hepatic pathology. The divisions were as follows, with numbers of reports and fatalities in parentheses.
+1.	Non-specific hepatic reactions: i.e. the pattern of underlying liver dysfunction or pathology was not described. (10, 6)
+2.	Increased hepatic enzymes/transaminases with no mention of increased bilirubin, alkaline phosphatase or other hepatic abnormalities. (15, 1)
+3.	Increased hepatic transaminases together with increased bilirubin and/or alkaline phosphatase or other hepatic abnormalities. (13, 3)
+4.	Cholestatic hepatitis (2, 0)
+Further categories identified were cholelithiasis and gall bladder disorders (eight reports), jaundice or hyperbilirubinaemia (two), hepatic cirrhosis (two), hepatic steatosis (two), hepatomegaly (one). These reports were not thought to be related to brentuximab use either because the duration of use made a causal association improbable or there were clear alternative explanations.
+Table 1 summarises the reports in Groups 1 to 4 and further details are discussed below. The indications and doses are not discussed separately as, where recorded, they were usually in keeping with the product information. Brentuximab is usually administered intravenously at 21 day intervals.
+Group 3. Increased hepatic transaminases and other hepatic abnormalities
+The 13 reports in this group include three fatalities. Alternative explanations for two of the fatalities were pulmonary aspergillosis and necrotising vasculitis. However, one patient who died developed elevated transaminases and severe diarrhoea within three weeks of his first brentuximab infusion. The second infusion was given and he rapidly developed fulminant hepatitis. Although the patient had received chemotherapy and an autologous stem cell transplant previously and was taking other medicines that included fluconazole he had no history of hepatic dysfunction. Of the ten patients who survived five had alternative explanations for hepatic  dysfunction  including  sepsis (two), febrile neutropenia (one), and hepatobiliary disorders unlikely to be causally related to short term brentuximab use (two). Of the five other patients who survived, two recovered or were recovering on stopping brentuximab. One of these patients had a liver biopsy finding suggestive of drug-related disease. Another patient with a similar biopsy finding continued brentuximab and developed severe thrombocytopenia but no further mention was made of the hepatic dysfunction.
+
+Group 4. Cholestatic hepatitis
+There were two reports. One was of intrahepatic cholestasis reported with acute cholecystitis. The duration of brentuximab use was not recorded and it is possible that underlying cholelithiasis was the cause. The other patient developed cholestatic hepatitis with abdominal pain and jaundice seven days after starting brentuximab. He had developed a mild cholestasis after the first dose and this was more pronounced seven days after the dose and became severe after the second three-weekly dose. Extensive investigations did not reveal an alternative explanation. He had not recovered at the time of reporting but this was only nine days after the second dose. Clemastine was recorded as co-suspect but was started the day of the second infusion.
+
+Reports of particular interest
+Table 2 shows six reports from the groups described above. Three of the reports contain evidence of improvement on brentuximab discontinuation and three reports are of serious or fatal hepatic disorders where confounding factors appear less likely than brentuximab to be the cause.
+Reports 1, 2 and 3 describe increased hepatic transaminases improving on brentuximab discontinuation which is in keeping with product
+
+
+Group 1. Non-specific hepatic reactions
+These ten reports included a high proportion of serious reactions, six were fatal. For five of the six reports of death there was an alternative or contributory explanation for the hepatic disorders, including sepsis and disease progression, and for the other insufficient information to establish causality. There was no information on dechallenge outcome for the four patients who survived. However, two did not have obvious alternative explanations. One of these had “cytolytic hepatitis” as well as pancreatitis and cholelithiasis and developed hepatic encephalopathy.
+
+Group 2. Increased hepaticenzymes/ transaminases only
+There were 15 reports in this group. Two reports for children aged three years were in this group, although it is possible these were duplicate reports. The median age of the adults was 29 years. There was one fatality but the report was insufficiently documented to draw any conclusions about cause of death and causality. These reports represent a documented adverse reaction to brentuximab as discussed above. However, two patients had symptoms suggestive of hepatitis, these were abdominal pain in one and vomiting, diarrhoea and myalgia in the other. Information about outcome was provided in four reports. One patient recovered on stopping brentuximab after four doses. Transaminases had increased three to six fold after each dose. One, who had co-incident abdominal pain, recovered from increased transaminases over two months while brentuximab was continued although extensive investigations did not reveal an alternative cause for the hepatic derangement or the abdominal pain. Another patient developed increased transaminases after the first two cycles of brentuximab but not after the third. One patient did not recover on stopping brentuximab. Finally, two patients had serious infection, a possible alternative explanation for the increase in hepatic enzymes.
+
+. Group 3. Increased hepatic transaminases and other hepatic abnormalities
+The 13 reports in this group include three fatalities. Alternative explanations for two of the fatalities were pulmonary aspergillosis and necrotising vasculitis. However, one patient who died developed elevated transaminases and severe diarrhoea within three weeks of his first brentuximab infusion. The second infusion was given and he rapidly developed fulminant hepatitis. Although the patient had received chemotherapy and an autologous stem cell transplant previously and was taking other medicines that included fluconazole he had no history of hepatic dysfunction. Of the ten patients who survived five had alternative explanations for hepatic  dysfunction  including  sepsis (two), febrile neutropenia (one), and hepatobiliary disorders unlikely to be causally related to short term brentuximab use (two). Of the five other patients who survived, two recovered or were recovering on stopping brentuximab. One of these patients had a liver biopsy finding suggestive of drug-related disease. Another patient with a similar biopsy finding continued brentuximab and developed severe thrombocytopenia but no further mention was made of the hepatic dysfunction.
+
+Group 4. Cholestatic hepatitis
+There were two reports. One was of intrahepatic cholestasis reported with acute cholecystitis. The duration of brentuximab use was not recorded and it is possible that underlying cholelithiasis was the cause. The other patient developed cholestatic hepatitis with abdominal pain and jaundice seven days after starting brentuximab. He had developed a mild cholestasis after the first dose and this was more pronounced seven days after the dose and became severe after the second three-weekly dose. Extensive investigations did not reveal an alternative explanation. He had not recovered at the time of reporting but this was only nine days after the second dose. Clemastine was recorded as co-suspect but was started the day of the second infusion.
+
+Reports of particular interest
+Table 2 shows six reports from the groups described above. Three of the reports contain evidence of improvement on brentuximab discontinuation and three reports are of serious or fatal hepatic disorders where confounding factors appear less likely than brentuximab to be the cause.
+Reports 1, 2 and 3 describe increased hepatic transaminases improving on brentuximab discontinuation which is in keeping with product information. However in report 2 the patient also had increased serum bilirubin and symptoms suggestive of hepatitis and in report 3 serum alkaline phosphatase was also increased. In each of these reports there is also a pattern of increases after each administration of brentuximab.
+Reports 4, 5 and 6 do not show clear evidence of improvement on brentuximab discontinuation but they do demonstrate hepatitis, one fatal, with little evidence of alternative causes. Fluconazole was listed as a concomitant medicine with no administration dates in the report of rapidly developing fatal fulminant hepatitis. The MMAE component of brentuximab is a substrate for CYP3A4 so that its metabolism may have been inhibited by fluconazole which could be important if the suspected hepatic reactions to brentuximab are dose-related.
+""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestaticHepatitis
+:ReportsWithCholestaticHepatitis rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:refers_to_adverse_effect :hepatitisCholestatic ;
+                                 OpenPVSignal:refers_to_drug :brentuximab ;
+                                 OpenPVSignal:has_count 2 ;
+                                 OpenPVSignal:has_count_of_men 2 ;
+                                 OpenPVSignal:has_max_age "51.0"^^xsd:float ;
+                                 OpenPVSignal:has_median_age "41.0"^^xsd:float ;
+                                 OpenPVSignal:has_min_age "31.0"^^xsd:float ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "Reports with cholestatic hepatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_21DaysDurationOfUse
+:ReportsWithCholestatichepatitis_21DaysDurationOfUse rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                                     time:hasDurationDescription <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21_days_duration> ;
+                                                     OpenPVSignal:has_count 2 ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "Reports with cholestatic hepatitis_21 days duration of use" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_brentuximabAsTheSoleSuspect
+:ReportsWithCholestatichepatitis_brentuximabAsTheSoleSuspect rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                                             OpenPVSignal:has_count 1 ;
+                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                             rdfs:label "Reports with cholestatic hepatitis_brentuximab as the sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_fatalOutcomes
+:ReportsWithCholestatichepatitis_fatalOutcomes rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                               OpenPVSignal:has_count 0 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "Reports with cholestatic hepatitis_fatal outcomes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_noRecovery
+:ReportsWithCholestatichepatitis_noRecovery rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                            OpenPVSignal:has_count 1 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                            rdfs:label "Reports with cholestatic hepatitis_no recovery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_withConfoundersNonFatal
+:ReportsWithCholestatichepatitis_withConfoundersNonFatal rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                                         OpenPVSignal:has_count 1 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         rdfs:label "Reports with cholestatic hepatitis_with confounders non fatal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithCholestatichepatitis_within7DaysTimeToOnset
+:ReportsWithCholestatichepatitis_within7DaysTimeToOnset rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Reports_group ;
+                                                        OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                                        OpenPVSignal:time_to_onset :TimeToOnset7Days ;
+                                                        OpenPVSignal:has_count 1 ;
+                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                        rdfs:label "Reports with cholestatic hepatitis_within 7 days time to onset " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticenzymes_transaminasesonly_ageInfo
+:ReportsWithIncreasedHepaticenzymes_transaminasesonly_ageInfo rdf:type owl:NamedIndividual ,
+                                                                       OpenPVSignal:Reports_group ;
+                                                              OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                              OpenPVSignal:has_count 12 ;
+                                                              OpenPVSignal:has_max_age "64.0"^^xsd:float ;
+                                                              OpenPVSignal:has_median_age "24.5"^^xsd:float ;
+                                                              OpenPVSignal:has_min_age "3.0"^^xsd:float ;
+                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                              rdfs:label "Reports with Increased hepatic enzymes_ transaminases only_age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_TransaminasesOnly
+:ReportsWithIncreasedhepaticenzymes_TransaminasesOnly rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Reports_group ;
+                                                      OpenPVSignal:refers_to_adverse_effect :transaminasesIncreased ;
+                                                      OpenPVSignal:refers_to_drug :brentuximab ;
+                                                      OpenPVSignal:has_count 15 ;
+                                                      OpenPVSignal:has_count_of_men 6 ;
+                                                      OpenPVSignal:has_count_of_women 7 ;
+                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                      rdfs:label "Reports with Increased hepaticenzymes_ transaminases only" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_TransaminasesOnlyAndFatalOutcomes
+:ReportsWithIncreasedhepaticenzymes_TransaminasesOnlyAndFatalOutcomes rdf:type owl:NamedIndividual ,
+                                                                               OpenPVSignal:Reports_group ;
+                                                                      OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                      OpenPVSignal:has_count 1 ;
+                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                      OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                                      rdfs:label "Reports with Increased hepaticenzymes_ transaminases only and fatal outcomes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_7Days
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_7Days rdf:type owl:NamedIndividual ,
+                                                                     OpenPVSignal:Reports_group ;
+                                                            OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                            OpenPVSignal:has_count 2 ;
+                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                            rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_7 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_BrentuximabAsTheSoleSuspect
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_BrentuximabAsTheSoleSuspect rdf:type owl:NamedIndividual ,
+                                                                                           OpenPVSignal:Reports_group ;
+                                                                                  OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                  OpenPVSignal:has_count 14 ;
+                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                  rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_Brentuximab as the sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_notRecovered
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_notRecovered rdf:type owl:NamedIndividual ,
+                                                                            OpenPVSignal:Reports_group ;
+                                                                   OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                   OpenPVSignal:has_count 1 ;
+                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                   OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                                                   rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_not recovered" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recovered
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recovered rdf:type owl:NamedIndividual ,
+                                                                         OpenPVSignal:Reports_group ;
+                                                                OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                OpenPVSignal:has_count 1 ;
+                                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                                rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_recovered" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recoveredAndBrentuximabContinued
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recoveredAndBrentuximabContinued rdf:type owl:NamedIndividual ,
+                                                                                                OpenPVSignal:Reports_group ;
+                                                                                       OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                       OpenPVSignal:has_count 2 ;
+                                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                       OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                                                                                       rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_recovered and brentuximab continued" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_singleDose
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_singleDose rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                 OpenPVSignal:has_count 3 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_single dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset19Days
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset19Days rdf:type owl:NamedIndividual ,
+                                                                                 OpenPVSignal:Reports_group ;
+                                                                        OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                        OpenPVSignal:time_to_onset :TimeToOnset19Days ;
+                                                                        OpenPVSignal:has_count 1 ;
+                                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                        rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_time to onset 19 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset7Days
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset7Days rdf:type owl:NamedIndividual ,
+                                                                                OpenPVSignal:Reports_group ;
+                                                                       OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                       OpenPVSignal:time_to_onset :TimeToOnset7Days ;
+                                                                       OpenPVSignal:has_count 1 ;
+                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                       rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_time to onset 7 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_abdominalPain
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_abdominalPain rdf:type owl:NamedIndividual ,
+                                                                                             OpenPVSignal:Reports_group ;
+                                                                                    OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                    OpenPVSignal:refers_to_adverse_effect :abdominalPain ;
+                                                                                    OpenPVSignal:has_count 1 ;
+                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                    rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_fatal
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_fatal rdf:type owl:NamedIndividual ,
+                                                                                     OpenPVSignal:Reports_group ;
+                                                                            OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                            OpenPVSignal:has_count 0 ;
+                                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                            rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_with confounders_fatal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_hepaticEnzymeIncreased
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_hepaticEnzymeIncreased rdf:type owl:NamedIndividual ,
+                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                             OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                             OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ;
+                                                                                             OpenPVSignal:has_count 3 ;
+                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                             rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_hepatic enzyme increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_noFatal
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_noFatal rdf:type owl:NamedIndividual ,
+                                                                                       OpenPVSignal:Reports_group ;
+                                                                              OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                              OpenPVSignal:has_count 3 ;
+                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                              rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_with confounders_no fatal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_transaminasesIncreased
+:ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_transaminasesIncreased rdf:type owl:NamedIndividual ,
+                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                             OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                             OpenPVSignal:refers_to_adverse_effect :transaminasesIncreased ;
+                                                                                             OpenPVSignal:has_count 5 ;
+                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                             rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_transaminases increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticReactions
+:ReportsWithNon-specificHepaticReactions rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:refers_to_adverse_effect :unspercified_hepatic_disorder ;
+                                         OpenPVSignal:refers_to_drug :brentuximab ;
+                                         OpenPVSignal:has_count 10 ;
+                                         OpenPVSignal:has_count_of_men 5 ;
+                                         OpenPVSignal:has_count_of_women 3 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "Reports with Non-specific hepatic reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticReactionsAndFatalOutcomes
+:ReportsWithNon-specificHepaticReactionsAndFatalOutcomes rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Reports_group ;
+                                                         OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                         OpenPVSignal:has_count 6 ;
+                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                         rdfs:label "Reports with Non-specific hepatic reactions and fatal outcomes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-25_69DaysDosingRegiment
+:ReportsWithNon-specificHepaticreactions-25_69DaysDosingRegiment rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                 OpenPVSignal:has_count 2 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "Reports with Non-specific hepatic reactions-25_69 days dosing regiment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-BrentuximabAsTheSoleSuspect
+:ReportsWithNon-specificHepaticreactions-BrentuximabAsTheSoleSuspect rdf:type owl:NamedIndividual ,
+                                                                              OpenPVSignal:Reports_group ;
+                                                                     OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                     OpenPVSignal:has_count 10 ;
+                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                     rdfs:label "Reports with Non-specific hepatic reactions-Brentuximab as the sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-HepaticDisease
+:ReportsWithNon-specificHepaticreactions-HepaticDisease rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Reports_group ;
+                                                        OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                        OpenPVSignal:refers_to_adverse_effect :hepaticDisease ;
+                                                        OpenPVSignal:has_count 1 ;
+                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                        rdfs:label "Reports with Non-specific hepatic reactions-hepatic disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-SingleDose
+:ReportsWithNon-specificHepaticreactions-SingleDose rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                    OpenPVSignal:has_count 4 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "Reports with Non-specific hepatic reactions-Single dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-ageInfo
+:ReportsWithNon-specificHepaticreactions-ageInfo rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                 OpenPVSignal:has_count 7 ;
+                                                 OpenPVSignal:has_max_age "65.0"^^xsd:float ;
+                                                 OpenPVSignal:has_median_age "46.5"^^xsd:float ;
+                                                 OpenPVSignal:has_min_age "24.0"^^xsd:float ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "Reports with Non-specific hepatic reactions-age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-biluribinaemiaAndPhosphataseAlkalineIncreasedAndProthrombinDecreased
+:ReportsWithNon-specificHepaticreactions-biluribinaemiaAndPhosphataseAlkalineIncreasedAndProthrombinDecreased rdf:type owl:NamedIndividual ,
+                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                              OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                                                              OpenPVSignal:refers_to_adverse_effect :bilirubinaemia ,
+                                                                                                                                                    :phosphataseAlkalineIncreased ,
+                                                                                                                                                    :prothrombinDecreased ;
+                                                                                                              OpenPVSignal:has_count 1 ;
+                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                              rdfs:label "Reports with Non-specific hepatic reactions-biluribinaemia and phosphatase alkaline increased and prothrombin decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-hepaticFailureAndAcuteHepaticFailure
+:ReportsWithNon-specificHepaticreactions-hepaticFailureAndAcuteHepaticFailure rdf:type owl:NamedIndividual ,
+                                                                                       OpenPVSignal:Reports_group ;
+                                                                              OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                              OpenPVSignal:refers_to_adverse_effect :acuteHepaticFailure ,
+                                                                                                                    :hepaticFailure ;
+                                                                              OpenPVSignal:has_count 4 ;
+                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                              rdfs:label "Reports with Non-specific hepatic reactions-hepatic failure and acute hepatic failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-hepaticFunctionAbnormal
+:ReportsWithNon-specificHepaticreactions-hepaticFunctionAbnormal rdf:type owl:NamedIndividual ,
+                                                                          OpenPVSignal:Reports_group ;
+                                                                 OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                 OpenPVSignal:refers_to_adverse_effect :hepaticFunctionAbnormal ;
+                                                                 OpenPVSignal:has_count 3 ;
+                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                 rdfs:label "Reports with Non-specific hepatic reactions-hepatic function abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-liverDisorder
+:ReportsWithNon-specificHepaticreactions-liverDisorder rdf:type owl:NamedIndividual ,
+                                                                OpenPVSignal:Reports_group ;
+                                                       OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                       OpenPVSignal:refers_to_adverse_effect :liverDisorder ;
+                                                       OpenPVSignal:has_count 1 ;
+                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                       rdfs:label "Reports with Non-specific hepatic reactions-liver disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-reportsWithConfoundersFatal
+:ReportsWithNon-specificHepaticreactions-reportsWithConfoundersFatal rdf:type owl:NamedIndividual ,
+                                                                              OpenPVSignal:Reports_group ;
+                                                                     OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                     OpenPVSignal:has_count 5 ;
+                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                     rdfs:label "Reports with Non-specific hepatic reactions-reports with confounders fatal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithNon-specificHepaticreactions-reportsWithConfoundersNonFatal
+:ReportsWithNon-specificHepaticreactions-reportsWithConfoundersNonFatal rdf:type owl:NamedIndividual ,
+                                                                                 OpenPVSignal:Reports_group ;
+                                                                        OpenPVSignal:is_subgroup_of :ReportsWithNon-specificHepaticReactions ;
+                                                                        OpenPVSignal:has_count 2 ;
+                                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                        rdfs:label "Reports with Non-specific hepatic reactions-reports with confounders non fatal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Reports_with_-Brentuximab_as_the_sole_suspect
+:Reports_with_-Brentuximab_as_the_sole_suspect rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                               OpenPVSignal:has_count 12 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Brentuximab as the sole suspect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Reports_with_cholestatic_hepatitis_Cholecystitis_acute_with_intrahepatic_cholestasis
+:Reports_with_cholestatic_hepatitis_Cholecystitis_acute_with_intrahepatic_cholestasis rdf:type owl:NamedIndividual ,
+                                                                                               OpenPVSignal:Reports_group ;
+                                                                                      OpenPVSignal:is_subgroup_of :ReportsWithCholestaticHepatitis ;
+                                                                                      OpenPVSignal:refers_to_adverse_effect :Acute_cholecystitis ,
+                                                                                                                            :intrahepatic_cholestasis ;
+                                                                                      OpenPVSignal:has_count 1 ;
+                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                      rdfs:label "Reports with cholestatic hepatitis_Cholecystitis acute with intrahepatic cholestasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Response_from_Takeda_and_Seattle_Genetics
+:Response_from_Takeda_and_Seattle_Genetics rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                           OpenPVSignal:refers_to_pharmacovigilance_signal_report :Brentuximab_and_hepatic_disorders ;
+                                           OpenPVSignal:has_content """Response from Takeda and Seattle Genetics
+In response to the WHO signal report of Hepatic Disorders associated with brentuximab vedotin, the Marketing Authorization Holders [MAH (Takeda/ Seattle Genetics)] acknowledge the data described in the report and describe below the actions taken to mitigate this risk.
+Currently, brentuximab vedotin is authorised for the treatment of adult patients with relapsed/refractory Hodgkin Disease (r/r HL) following autologous stem cell transplant (ASCT) or following at least two prior therapies when ASCT or multi-agent chemotherapy is not a treatment option, and adult patients with r/r systemic Anaplastic Large Cell Lymphoma (sALCL). Therefore, this product is used in patients with aggressive malignancies whose disease has not responded to or has progressed through other standard therapies. These patients have extremely limited treatment options.
+Hepatotoxicity and liver function abnormalities have been reported during investigational and commercial use of brentuximab vedotin. These events have been continuously monitored by the MAH as part of the safety surveillance and risk management process for the product. Although, in many cases, other alternative causes of hepatotoxicity may have been contributory (e.g. cholestasis from liver lesion compression, graft- versus-host-disease, underlying liver disease, viral hepatitis, sepsis, concomitant medication) the MAH agrees that a possible causal relationship between brentuximab vedotin and hepatobilliary events cannot be excluded. Thus, labelling changes are ongoing in order to inform physicians and patients of the potential risk of hepatotoxicity and to be alert to symptoms that may indicate an early onset of this risk.
+The WHO signal report also suggests a potential drug interaction between brentuximab vedotin and fluconazole, a moderate inhibitor of CYP3A4/5 (enzymes that metabolize MMAE). As described in the reference safety information for brentuximab vedotin, the coadministration of strong CYP3A4/5 inhibitors (e.g. ketoconazole) with brentuximab vedotin resulted in a moderate increase in the exposure to MMAE. Therefore, a potential drug interaction with fluconazole cannot be excluded and is being monitored as part of routine pharmacovigilance activities for brentuximab vedotin.
+The MAH will continue to closely monitor the severity, frequency and outcome of all future reports of hepatotoxicity and liver function abnormalities through routine pharmacovigilance to assess any further impact on the benefit-risk profile of brentuximab vedotin. Additionally, the MAH has implemented enhanced safety surveillance activities to further characterize hepatotoxicity events associated with brentuximab vedotin use including the following: creation of a hepatic disorders targeted questionnaire for
+follow-up of reported cases; use of Standard MedDRA Queries and other internal signal detection tools for monthly analysis of cases in the global drug safety database; and quarterly reviews of the FAERS and VigiBase® data for signals of disproportionate reporting. Actions including additional risk minimization measures will be taken should any new and significant safety issue arise that is considered to change the benefit risk.
+The potential risk of hepatotoxicity does not alter the overall favourable benefit-risk profile of brentuximab vedotin treatment in patients with r/r HL or sALCL.""" ;
+                                           rdfs:label "Response from Takeda and Seattle Genetics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Brentuximab is a CD30 directed monoclonal antibody indicated for the treatment of anaplastic large T cell systemic malignant lymphoma and Hodgkin’s Lymphoma after failure of prior treatments. Increased hepatic transaminases is a listed adverse reaction for brentuximab in the EMA SPC. Other relevant adverse effects of brentuximab are fever, neutropenia, pancreatitis and increased susceptibility to infection. Recent reports in the WHO Global ICSR database, Vigibase®, of serious hepatobiliary disorder associated with brentuximab use led to a review of all the 55 reports for brentuximab in the liver and biliary WHO-ART System Organ Class. Reports were categorised according to ADR terms into various hepatic pathological categories and assessed for causality. Serious or fatal hepatic clinical events frequently occurred in patients who were seriously ill because of lymphoma progression or infection both of which could have affected the liver. Some were also taking potentially hepatotoxic medicines as well as brentuximab. However, six reports of hepatic disorders occurring in a clear temporal relationship with brentuximab use and without documented alternative explanations are of particular interest: three patients developed an increase in hepatic transaminases and recovered upon discontinuation of brentuximab, while the other three cases provide evidence that brentuximab may lead to more severe hepatic damage. An interaction between brentuximab and fluconazole may have contributed to the suspected reaction in two reports." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#TimeToOnset19Days
+:TimeToOnset19Days rdf:type owl:NamedIndividual ,
+                            time:DurationDescription ;
+                   time:nominalPosition "days" ;
+                   time:numericPosition 19 ;
+                   rdfs:label "Time to onset 19 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#TimeToOnset1Day
+:TimeToOnset1Day rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 1 ;
+                 rdfs:label "Time to onset 1 day" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#TimeToOnset7Days
+:TimeToOnset7Days rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 7 ;
+                  rdfs:label "Time to onset 7 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#USA_FDA_for_brentuximab
+:USA_FDA_for_brentuximab rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Structured_Product_Labels_information ;
+                         OpenPVSignal:refers_to_drug :brentuximab ;
+                         mp:references :Ref.4 ;
+                         OpenPVSignal:has_content "The US FDA indicated that it was monitoring brentuximab and hepatotoxicity as a potential safety issue in January 2014.4" ;
+                         rdfs:label "USA FDA for brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#UsageOfBrentuximab
+:UsageOfBrentuximab rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :anaplasticLargeTCellSystemicMalignantLymphoma ,
+                                                             <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Hodgkin’sLymphoma> ;
+                    OpenPVSignal:is_related_with_drug_intake :intravenous_infusion ;
+                    OpenPVSignal:refers_to_dosage :DosageForBrentuximab ;
+                    OpenPVSignal:refers_to_drug :brentuximab ;
+                    rdfs:label "Usage of brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10 " ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#aciclovir
+:aciclovir rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "D06BB03" ;
+           rdfs:label "aciclovir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#acuteHepaticFailure
+:acuteHepaticFailure rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "K72.00" ;
+                     OpenPVSignal:has_MedDRA_code 10000804 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Acute hepatic failure" ;
+                     rdfs:label "acute hepatic failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#alternative_explanations
+:alternative_explanations rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001182 ;
+                          OpenPVSignal:has_content "Alternative explanations for two of the fatalities were pulmonary aspergillosis and necrotising vasculitis. Of the ten patients who survived five had alternative explanations for hepatic dysfunction including sepsis (two), febrile neutropenia (one), and hepatobiliary disorders unlikely to be causally related to short term brentuximab use (two)." ;
+                          rdfs:label "alternative explanations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#anaplasticLargeTCellSystemicMalignantLymphoma
+:anaplasticLargeTCellSystemicMalignantLymphoma rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Indication ;
+                                               OpenPVSignal:has_ICD_code "C84.6" ;
+                                               OpenPVSignal:has_MedDRA_code 10002227 ;
+                                               OpenPVSignal:has_MedDRA_prefered_term "Anaplastic large cell lymphoma T- and null-cell types" ;
+                                               rdfs:label "anaplastic large T cell systemic malignant lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53.1" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#bilirubinaemia
+:bilirubinaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "E80.7" ;
+                OpenPVSignal:has_MedDRA_code 10020578 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperbilirubinaemia" ;
+                rdfs:label "bilirubinaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#brentuximab
+:brentuximab rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfAEInductionDuringBrentuximabAndFluconazoleco-administration ,
+                                        :MechanismOfBrentuximab ;
+             OpenPVSignal:has_ATC_code "L01XC12" ;
+             rdfs:label "brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_1_info
+:case_1_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content """Increased enzymes x 3-6 ULN after each administration, polyneuropathy worsened after each dose.
+Stopped after 4th dose and recovered from both increased hepatic enzymes and polyneuropathy.""" ;
+             rdfs:label "case 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_2_info
+:case_2_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Liver function tests normal pre 1st dose. ALT and AST increased then improved prior to 2nd dose. Approximately two weeks after 2nd dose bilirubin increased then admission for fever, weakness, abnormal liver function tests. Liver biopsy reported as non-specific, probably drug-induced Mild hepatic steatosis, mildly increased iron stores, scattered inflammatory cells" ;
+             rdfs:label "case 2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_3_info
+:case_3_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Enzymes increased x 2-3 ULN 10-15 days after each administration" ;
+             rdfs:label "case 3 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_4_info
+:case_4_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Liver biopsy showed no GvHD but “potential drug reaction”" ;
+             rdfs:label "case 4 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_5_info
+:case_5_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content """Transaminases increased and abdominal pain, then diarrhoea and bilirubin inreased. Two days after 2nd dose developed fulminant hepatitis. No previous hepatic abnormalities despite stem cell transplant, chemotherapy and fluconazole. Aciclovir, fluconazole, prednisone for neoplasm prophylaxis. Vitamin 
+K for INR 1.3 to 1.4 with no evidence of liver disease.""" ;
+             rdfs:label "case 5 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#case_6_info
+:case_6_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content """Mild cholestatasis since day of 1st dose, more pronounced after seven days, more severe after 2nd infusion (3 weeks after 1st)
+Viral serology negative.""" ;
+             rdfs:label "case 6 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#cholecystectomy
+:cholecystectomy rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code " Z90.49" ;
+                 OpenPVSignal:has_MedDRA_code 10008611 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Cholecystectomy" ;
+                 rdfs:label "cholecystectomy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#cholelithiasis
+:cholelithiasis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "K80" ;
+                OpenPVSignal:has_MedDRA_code 10008629 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cholelithiasis" ;
+                rdfs:label "cholelithiasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#clemastine
+:clemastine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D04AA14" ,
+                                      "R06AA04" ,
+                                      "R06AA54" ;
+            rdfs:label "clemastine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R19.7" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#fluconazole
+:fluconazole rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfAEInductionDuringBrentuximabAndFluconazoleco-administration ;
+             OpenPVSignal:has_ATC_code "D01AC15" ,
+                                       "J01RA07" ,
+                                       "J02AC01" ;
+             rdfs:label "fluconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#graftVersusHostDisease
+:graftVersusHostDisease rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "D89.813" ;
+                        OpenPVSignal:has_MedDRA_code 10018651 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Graft versus host disease" ;
+                        rdfs:label "graft versus host disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticDisease
+:hepaticDisease rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "K76.9" ;
+                OpenPVSignal:has_MedDRA_code 10024670 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Liver disorder" ;
+                rdfs:label "hepatic disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticEnzymesDeregulatedDueToBrentuximab
+:hepaticEnzymesDeregulatedDueToBrentuximab rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Statistical_Entity ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty OpenPVSignal:has_value ;
+                                                      owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                                           owl:onDatatype xsd:decimal ;
+                                                                           owl:withRestrictions ( [ xsd:minInclusive 0.01
+                                                                                                  ]
+                                                                                                  [ xsd:maxInclusive 0.1
+                                                                                                  ]
+                                                                                                )
+                                                                         ]
+                                                    ] ;
+                                           OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ;
+                                           OpenPVSignal:refers_to_drug :brentuximab ;
+                                           mp:references :Ref.1 ;
+                                           rdfs:label "hepatic enzymes deregulated due to Brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticEnzymesIncreased
+:hepaticEnzymesIncreased rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "R94.5" ;
+                         OpenPVSignal:has_MedDRA_code 10060795 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic enzyme increased" ;
+                         rdfs:label "hepatic enzymes increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticFailure
+:hepaticFailure rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "K72.90" ;
+                OpenPVSignal:has_MedDRA_code 10019663 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hepatic failure" ;
+                rdfs:label "hepatic failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticFunctionAbnormal
+:hepaticFunctionAbnormal rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "R94.5" ;
+                         OpenPVSignal:has_MedDRA_code 10019670 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic function abnormal" ;
+                         rdfs:label "hepatic function abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepaticSteatosis
+:hepaticSteatosis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "K76.0" ;
+                  OpenPVSignal:has_MedDRA_code 10019708 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hepatic steatosis" ;
+                  rdfs:label "hepatic steatosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepatitis
+:hepatitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "B19.9" ;
+           OpenPVSignal:has_MedDRA_code 10019717 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hepatitis" ;
+           rdfs:label "hepatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepatitisCholestatic
+:hepatitisCholestatic rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "K71.0" ;
+                      OpenPVSignal:has_MedDRA_code 10019754 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hepatitis cholestatic" ;
+                      rdfs:label "hepatitis cholestatic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepatitisFulminant
+:hepatitisFulminant rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "K72.90" ;
+                    OpenPVSignal:has_MedDRA_code 10019772 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Hepatitis fulminant" ;
+                    rdfs:label "hepatitis fulminant" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#hepatocellularDamage
+:hepatocellularDamage rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "K76.9" ;
+                      OpenPVSignal:has_MedDRA_code 10019837 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Hepatocellular injury" ;
+                      rdfs:label "hepatocellular damage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#increasedSusceptibilityToInfection
+:increasedSusceptibilityToInfection rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Adverse_Effect ;
+                                    OpenPVSignal:has_MedDRA_code 10021866 ;
+                                    OpenPVSignal:has_MedDRA_prefered_term "Infection susceptibility increased" ;
+                                    rdfs:label "increased susceptibility to infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#injection_site_inflammation
+:injection_site_inflammation rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect ;
+                             OpenPVSignal:has_ICD_code "T80.89XA" ;
+                             OpenPVSignal:has_MedDRA_code 10022078 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Injection site inflammation" ;
+                             rdfs:label "injection site inflammation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#intrahepatic_cholestasis
+:intrahepatic_cholestasis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10008638 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Cholestasis intrahepatic" ;
+                          rdfs:label "intrahepatic cholestasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#intravenous_infusion
+:intravenous_infusion rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Intake_Form ;
+                      OpenPVSignal:refers_to_form_of_intake "injected (intraveneous)" ;
+                      rdfs:label "intravenous infusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#liverDisorder
+:liverDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K76.9" ;
+               OpenPVSignal:has_MedDRA_code 10024670 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Liver disorder" ;
+               rdfs:label "liver disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#liver_fatty
+:liver_fatty rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10024680 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Liver fatty" ;
+             rdfs:label "liver fatty" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#methotrexate
+:methotrexate rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "L01BA01" ,
+                                        "L04AX03" ;
+              rdfs:label "methotrexate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#myalgia
+:myalgia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "M79.1" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#neutropenia
+:neutropenia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "D70.9" ;
+             OpenPVSignal:has_MedDRA_code 10029354 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Neutropenia" ;
+             rdfs:label "neutropenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ,
+                                      "A02BD01" ,
+                                      "A02BD05" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01 " ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#phosphataseAlkalineIncreased
+:phosphataseAlkalineIncreased rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "R74.8" ;
+                              OpenPVSignal:has_MedDRA_code 10059570 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Blood alkaline phosphatase increased" ;
+                              rdfs:label "phosphatase alkaline increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#polyneuropathy
+:polyneuropathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "G62.9" ;
+                OpenPVSignal:has_MedDRA_code 10036105 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Polyneuropathy" ;
+                rdfs:label "polyneuropathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#prednisone
+:prednisone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A07EA03" ,
+                                      "H02AB07" ;
+            rdfs:label "prednisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#prothrombinDecreased
+:prothrombinDecreased rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "R79.1" ;
+                      OpenPVSignal:has_MedDRA_code 10037050 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Prothrombin level decreased" ;
+                      rdfs:label "prothrombin decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ;
+          OpenPVSignal:is_supported_by_statistical_entity :ReportsWithCholestaticHepatitis ,
+                                                          :ReportsWithCholestatichepatitis_21DaysDurationOfUse ,
+                                                          :ReportsWithCholestatichepatitis_brentuximabAsTheSoleSuspect ,
+                                                          :ReportsWithCholestatichepatitis_fatalOutcomes ,
+                                                          :ReportsWithCholestatichepatitis_noRecovery ,
+                                                          :ReportsWithCholestatichepatitis_withConfoundersNonFatal ,
+                                                          :ReportsWithCholestatichepatitis_within7DaysTimeToOnset ,
+                                                          :ReportsWithIncreasedHepaticenzymes_transaminasesonly_ageInfo ,
+                                                          :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ,
+                                                          :ReportsWithIncreasedhepaticenzymes_TransaminasesOnlyAndFatalOutcomes ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_7Days ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_BrentuximabAsTheSoleSuspect ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_notRecovered ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recovered ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_recoveredAndBrentuximabContinued ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_singleDose ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset19Days ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_timeToOnset7Days ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_abdominalPain ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_fatal ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_hepaticEnzymeIncreased ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_noFatal ,
+                                                          :ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_transaminasesIncreased ,
+                                                          :ReportsWithNon-specificHepaticReactions ,
+                                                          :ReportsWithNon-specificHepaticReactionsAndFatalOutcomes ,
+                                                          :ReportsWithNon-specificHepaticreactions-25_69DaysDosingRegiment ,
+                                                          :ReportsWithNon-specificHepaticreactions-BrentuximabAsTheSoleSuspect ,
+                                                          :ReportsWithNon-specificHepaticreactions-HepaticDisease ,
+                                                          :ReportsWithNon-specificHepaticreactions-SingleDose ,
+                                                          :ReportsWithNon-specificHepaticreactions-ageInfo ,
+                                                          :ReportsWithNon-specificHepaticreactions-biluribinaemiaAndPhosphataseAlkalineIncreasedAndProthrombinDecreased ,
+                                                          :ReportsWithNon-specificHepaticreactions-hepaticFailureAndAcuteHepaticFailure ,
+                                                          :ReportsWithNon-specificHepaticreactions-hepaticFunctionAbnormal ,
+                                                          :ReportsWithNon-specificHepaticreactions-liverDisorder ,
+                                                          :ReportsWithNon-specificHepaticreactions-reportsWithConfoundersFatal ,
+                                                          :ReportsWithNon-specificHepaticreactions-reportsWithConfoundersNonFatal ,
+                                                          :Reports_with_-Brentuximab_as_the_sole_suspect ,
+                                                          :Reports_with_cholestatic_hepatitis_Cholecystitis_acute_with_intrahepatic_cholestasis ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_10MonthsIntermittently> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_21To98Days> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Bilirubinaemia> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholecystectomy> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholelithiasis> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepaticSteatosis> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepatitisFulminant> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOTIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_fatalOutcomes> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_hepaticEnzymesIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_recovered_recovering> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_singleDose> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset10_30Days> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset1Day> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_transaminasesIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndFatalOutcome> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndNonFatalOutcome> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased&Bilirubinaemia> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOT,SGPTIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_63To322Days(15cycles)> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_SGOT&SGPTIncreased> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_vomiting,diarrhoea,Myalgia> ;
+          OpenPVSignal:refers_to_adverse_effect :liverDisorder ;
+          OpenPVSignal:refers_to_drug :brentuximab ;
+          mp:supportedByData :EMA_SPCs_for_brentuximab ,
+                             :MechanismOfAEInductionDuringBrentuximabAndFluconazoleco-administration ,
+                             :USA_FDA_for_brentuximab ,
+                             :alternative_explanations ,
+                             :relevant_adverse_effects_of_brentuximab ,
+                             :sepsisAndDiseaseProgressionAsTheCauseOfTheAE ;
+          OpenPVSignal:initially_identified_on "01/05/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#relevant_adverse_effects_of_brentuximab
+:relevant_adverse_effects_of_brentuximab rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Warning_Information ;
+                                         OpenPVSignal:refers_to_adverse_effect :fever ,
+                                                                               :increasedSusceptibilityToInfection ,
+                                                                               :neutropenia ;
+                                         OpenPVSignal:refers_to_drug :brentuximab ;
+                                         mp:references :Ref.1 ;
+                                         OpenPVSignal:has_content "Other relevant adverse effects of brentuximab are fever and neutropenia and increased susceptibility to infection.1" ;
+                                         rdfs:label "relevant adverse effects of brentuximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sepsisAndDiseaseProgressionAsTheCauseOfTheAE
+:sepsisAndDiseaseProgressionAsTheCauseOfTheAE rdf:type owl:NamedIndividual ,
+                                                       obo:OAE_0001182 ;
+                                              OpenPVSignal:has_content "Only one fatality could be assessed as “possibly” related to brentuximab use. Brentuximab is indicated for extremely ill patients with advanced lymphomas and a history of chemotherapy and stem cell transplants. For this reason, sepsis and disease progression were clear alternative explanations in a number of fatal. reports " ;
+                                              rdfs:label "sepsis and disease progression as the cause of the AE" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#serumIronincreased
+:serumIronincreased rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10040310 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Serum iron increased" ;
+                    rdfs:label "serum iron increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sgotIncreased
+:sgotIncreased rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R74.0" ;
+               OpenPVSignal:has_MedDRA_code 10003481 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Aspartate aminotransferase increased" ;
+               rdfs:label "sgot increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sgptIncreased
+:sgptIncreased rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R74.0" ;
+               OpenPVSignal:has_MedDRA_code 10001551 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Alanine aminotransferase increased" ;
+               rdfs:label "sgpt increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sirolimus
+:sirolimus rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "L04AA10" ,
+                                     "S01XA23" ;
+           rdfs:label "sirolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#tacrolimus
+:tacrolimus rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D11AH01" ,
+                                      "L04AD02" ;
+            rdfs:label "tacrolimus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#thrombocytopenia
+:thrombocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D69.6" ;
+                  OpenPVSignal:has_MedDRA_code 10043554 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Thrombocytopenia" ;
+                  rdfs:label "Thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset1
+:timeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Within one year" ;
+              time:nominalPosition "years" ;
+              time:numericPosition 1 ;
+              rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset2
+:timeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 7 ;
+              rdfs:label "time to onset 2 " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset3
+:timeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "10 to 15 days" ;
+              rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset4
+:timeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "10 to 40 days" ;
+              rdfs:label "time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset5
+:timeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "After first dose" ;
+              rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#timeToOnset6
+:timeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "Within 7 days" ;
+              time:nominalPosition "days" ;
+              time:numericPosition 7 ;
+              rdfs:label "time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#time_to_onset_10_to_30_days
+:time_to_onset_10_to_30_days rdf:type owl:NamedIndividual ,
+                                      time:DurationDescription ;
+                             OpenPVSignal:has_content "10 to 30 days" ;
+                             rdfs:label "time to onset 10 to 30 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#transaminasesIncreased
+:transaminasesIncreased rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "R74.0" ;
+                        OpenPVSignal:has_MedDRA_code 10054889 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Transaminases increased" ;
+                        rdfs:label "transaminases increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#unspercified_hepatic_disorder
+:unspercified_hepatic_disorder rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect ;
+                               OpenPVSignal:has_MedDRA_code 10019653 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Hepatic disorder NOS" ;
+                               rdfs:label "unspercified hepatic disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#usage_for_report_2
+:usage_for_report_2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose2 ;
+                    OpenPVSignal:refers_to_drug :brentuximab ;
+                    rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#usage_for_report_3
+:usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose3 ;
+                    OpenPVSignal:refers_to_drug :brentuximab ;
+                    rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#usage_for_report_5
+:usage_for_report_5 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose5 ;
+                    OpenPVSignal:refers_to_drug :brentuximab ;
+                    rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#usage_for_report_6
+:usage_for_report_6 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose6 ;
+                    OpenPVSignal:refers_to_drug :brentuximab ;
+                    rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#vitaminK
+:vitaminK rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B02BA" ;
+          rdfs:label "vitamin k" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#weight_decreased
+:weight_decreased rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ATC_code "R63. 4" ;
+                  OpenPVSignal:has_MedDRA_code 10047895 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Weight decreased" ;
+                  rdfs:label "weight decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21DaysIntervalsBetweenAdministrations
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21DaysIntervalsBetweenAdministrations> rdf:type owl:NamedIndividual ,
+                                                                                                                          time:DurationDescription ;
+                                                                                                                 time:nominalPosition "weeks" ;
+                                                                                                                 time:numericPosition 3 ;
+                                                                                                                 rdfs:label "3 weeks interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21_days_duration
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#21_days_duration> rdf:type owl:NamedIndividual ,
+                                                                                                     time:DurationDescription ;
+                                                                                            time:nominalPosition "days" ;
+                                                                                            time:numericPosition 21 ;
+                                                                                            rdfs:label "21 days duration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Hodgkin’sLymphoma
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#Hodgkin’sLymphoma> rdf:type owl:NamedIndividual ,
+                                                                                                      OpenPVSignal:Indication ;
+                                                                                             OpenPVSignal:has_ICD_code "C81.90" ;
+                                                                                             OpenPVSignal:has_MedDRA_code 10020206 ;
+                                                                                             OpenPVSignal:has_MedDRA_prefered_term "Hodgkin's disease" ;
+                                                                                             rdfs:label "Hodgkin’s Lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                      OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ,
+                                                                                                                                                                                                                                            :unspercified_hepatic_disorder ;
+                                                                                                                                                                                                      OpenPVSignal:refers_to_drug :brentuximab ;
+                                                                                                                                                                                                      OpenPVSignal:has_count 13 ;
+                                                                                                                                                                                                      OpenPVSignal:has_count_of_men 9 ;
+                                                                                                                                                                                                      OpenPVSignal:has_count_of_women 4 ;
+                                                                                                                                                                                                      OpenPVSignal:has_max_age "70.0"^^xsd:float ;
+                                                                                                                                                                                                      OpenPVSignal:has_median_age "36.0"^^xsd:float ;
+                                                                                                                                                                                                      OpenPVSignal:has_min_age "17.0"^^xsd:float ;
+                                                                                                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                      rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_10MonthsIntermittently
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_10MonthsIntermittently> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                             OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                             OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                             rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_10 months intermittently" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_21To98Days
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_21To98Days> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                          OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                 OpenPVSignal:has_count 4 ;
+                                                                                                                                                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                 rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_21 to 98 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Bilirubinaemia
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Bilirubinaemia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                              OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                     OpenPVSignal:refers_to_adverse_effect :bilirubinaemia ;
+                                                                                                                                                                                                                     OpenPVSignal:has_count 3 ;
+                                                                                                                                                                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                     rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Bilirubinaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholecystectomy
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholecystectomy> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                      OpenPVSignal:refers_to_adverse_effect :cholecystectomy ;
+                                                                                                                                                                                                                      OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                      rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Cholecystectomy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholelithiasis
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_Cholelithiasis> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                              OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                     OpenPVSignal:refers_to_adverse_effect :cholelithiasis ;
+                                                                                                                                                                                                                     OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                     rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Cholelithiasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepaticSteatosis
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepaticSteatosis> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                       OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                       OpenPVSignal:refers_to_adverse_effect :hepaticSteatosis ;
+                                                                                                                                                                                                                       OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                       rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Hepatic steatosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepatitisFulminant
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_HepatitisFulminant> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                         OpenPVSignal:refers_to_adverse_effect :hepatitisFulminant ;
+                                                                                                                                                                                                                         OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                         rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Hepatitis fulminant" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                                   OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                                   OpenPVSignal:refers_to_adverse_effect :phosphataseAlkalineIncreased ;
+                                                                                                                                                                                                                                   OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                                   rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Phosphatase alkaline increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOTIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOTIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                    OpenPVSignal:refers_to_adverse_effect :sgotIncreased ;
+                                                                                                                                                                                                                    OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                    rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_SGOT increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_fatalOutcomes
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_fatalOutcomes> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                    OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                    OpenPVSignal:has_count 3 ;
+                                                                                                                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                    OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                                                                                                                                                                                                    rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_fatal outcomes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_hepaticEnzymesIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_hepaticEnzymesIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                       OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                              OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                              OpenPVSignal:refers_to_adverse_effect :hepaticEnzymesIncreased ;
+                                                                                                                                                                                                                              OpenPVSignal:has_count 3 ;
+                                                                                                                                                                                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                              rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_hepatic enzymes increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_recovered_recovering
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_recovered_recovering> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                    OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                           OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                           OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                                                                                                                                                                                                           rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_recovered_recovering" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_singleDose
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_singleDose> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                          OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                 OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                 OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                 rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_single dose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset10_30Days
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset10_30Days> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                    OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                           OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                           OpenPVSignal:time_to_onset :time_to_onset_10_to_30_days ;
+                                                                                                                                                                                                                           OpenPVSignal:has_count 1 ;
+                                                                                                                                                                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                           rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_time to onset 10_30 days" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset1Day
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_timeToOnset1Day> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                      OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                      OpenPVSignal:time_to_onset :TimeToOnset1Day ;
+                                                                                                                                                                                                                      OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                      rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_time to onset 1 day" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_transaminasesIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_transaminasesIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                      OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                             OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                             OpenPVSignal:refers_to_adverse_effect :transaminasesIncreased ;
+                                                                                                                                                                                                                             OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                             rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_transaminases increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndFatalOutcome
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndFatalOutcome> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                              OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                                     OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                                     OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                                     rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_with confounders and fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndNonFatalOutcome
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_withConfoundersAndNonFatalOutcome> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                                 OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                                        OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                                        OpenPVSignal:has_count 5 ;
+                                                                                                                                                                                                                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                                        rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_with confounders and non fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased&Bilirubinaemia
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_PhosphataseAlkalineIncreased&Bilirubinaemia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                                           OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                                                  OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                                                  OpenPVSignal:refers_to_adverse_effect :bilirubinaemia ,
+                                                                                                                                                                                                                                                                                        :phosphataseAlkalineIncreased ;
+                                                                                                                                                                                                                                                  OpenPVSignal:has_count 2 ;
+                                                                                                                                                                                                                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                                                  rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_Phosphatase alkaline increased & Bilirubinaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOT,SGPTIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticabnormalities_SGOT,SGPTIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                                  OpenPVSignal:Reports_group ;
+                                                                                                                                                                                                                         OpenPVSignal:is_subgroup_of <http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedHepaticTransaminasesTogetherWithIncreasedBilirubinand/orAlkalinePhosphataseOrOtherHepaticAbnormalities> ;
+                                                                                                                                                                                                                         OpenPVSignal:refers_to_adverse_effect :sgotIncreased ,
+                                                                                                                                                                                                                                                               :sgptIncreased ;
+                                                                                                                                                                                                                         OpenPVSignal:has_count 7 ;
+                                                                                                                                                                                                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                                                                         rdfs:label "Reports with Hepatic transaminases increased and other hepatic abnormalities_SGOT, SGPT increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_63To322Days(15cycles)
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_63To322Days(15cycles)> rdf:type owl:NamedIndividual ,
+                                                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                                                      OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                                                                                      OpenPVSignal:has_count 3 ;
+                                                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                      rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_63 to 322 days (15 cycles)" ,
+                                                                                                                                                                 "ReportsWithIncreasedhepaticenzymes Transaminasesonly 63To322Days(15cycles)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_SGOT&SGPTIncreased
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_SGOT&SGPTIncreased> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                                                                   OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                                                                                                   OpenPVSignal:refers_to_adverse_effect :sgotIncreased ,
+                                                                                                                                                                                                         :sgptIncreased ;
+                                                                                                                                                                   OpenPVSignal:has_count 7 ;
+                                                                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                   rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_SGOT & SGPT increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_vomiting,diarrhoea,Myalgia
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#ReportsWithIncreasedhepaticenzymes_Transaminasesonly_withconfounders_vomiting,diarrhoea,Myalgia> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                    OpenPVSignal:Reports_group ;
+                                                                                                                                                                           OpenPVSignal:is_subgroup_of :ReportsWithIncreasedhepaticenzymes_TransaminasesOnly ;
+                                                                                                                                                                           OpenPVSignal:refers_to_adverse_effect :diarrhoea ,
+                                                                                                                                                                                                                 :myalgia ,
+                                                                                                                                                                                                                 :vomiting ;
+                                                                                                                                                                           OpenPVSignal:has_count 1 ;
+                                                                                                                                                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                                                           rdfs:label "Reports with Increased hepaticenzymes_ transaminases only_vomiting, diarrhoea, myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sulfamethoxazole/Trimethoprim
+<http://purl.org/OpenPVSignal/Signals/2015_2_brentuximab_hepatic_disorder#sulfamethoxazole/Trimethoprim> rdf:type owl:NamedIndividual ,
+                                                                                                                  OpenPVSignal:Drug ;
+                                                                                                         OpenPVSignal:has_ATC_code "J01EE01" ;
+                                                                                                         rdfs:label "sulfamethoxazole/trimethoprim" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

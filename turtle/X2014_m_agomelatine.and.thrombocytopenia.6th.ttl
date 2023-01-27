@@ -1,0 +1,1854 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia> rdf:type owl:Ontology ;
+                                                                            owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                        mp: ;
+                                                                            rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255511/"^^xsd:anyURI ;
+                                                                            rdfs:label "Agomelatine and thrombocytopenia"^^xsd:Literal ;
+                                                                            owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#AgomelatineMechanism
+:AgomelatineMechanism rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Mechanism ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ;
+                      OpenPVSignal:has_content "Agomelatine, the first melatonergic antidepressant, was designed to improve depressed states by resynchronizing perturbed biological rhythms. Its ‘synergistic’ agonist properties at melatonin receptors (MT1/MT2) plus antagonist properties at 5-hydroxytryptamine 2C (5-HT2C) receptors account for its beneficial influence on depressed states.1 The 5-HT2C receptor inhibits the release of norepinephrine and dopamine. By antagonizing the 5-HT2C receptor, agomelatine disrupts the previous inhibition effect, resulting in the release of norepinephrine and dopamine and increasing their extracellular levels.  Drugs that inhibit or induce the cytochrome P450 isoenzyme CYP1A2 have the potential to interact with agomelatine.2" ;
+                      rdfs:label "Agomelatine mechanism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Agomelatine_and_thrombocytopenia
+:Agomelatine_and_thrombocytopenia rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                  OpenPVSignal:refers_to_author :Anita_Conforti ,
+                                                                :Ermelinda_Viola ;
+                                  OpenPVSignal:refers_to_signal :pvSignal ;
+                                  OpenPVSignal:has_creation_date "01/12/2014" ;
+                                  OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                  rdfs:label "Agomelatine and thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Anita_Conforti
+:Anita_Conforti rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Author ;
+                OpenPVSignal:has_first_name "Anita" ;
+                OpenPVSignal:has_last_name "Conforti" ;
+                rdfs:label "Dr. Anita Conforti" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#AverageTimeToOnset
+:AverageTimeToOnset rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    time:nominalPosition "days" ;
+                    time:numericPosition 77 ;
+                    rdfs:label "Average time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DiscussionAndConclusionContent
+:DiscussionAndConclusionContent rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Conclusion ,
+                                         OpenPVSignal:Discussion ;
+                                mp:references :Ref.10 ,
+                                              :Ref.11 ,
+                                              :Ref.9 ;
+                                OpenPVSignal:has_content """As of May 2014, there were 12 cases of thrombocytopenia associated with agomelatine from seven different countries in VigiBase®.
+Agomelatine was considered the only suspected drug in 10 cases and in four of them it was the only reported drug. In three cases positive dechallenges were stated. The time to onset of the reports in VigiBase® was consistent with literature data: onset of non-immune thrombocytopenia is generally slow, often several weeks, while the mean delay in onset of immune-mediated thrombocytopenia in individual patients ranges from hours to several years.9
+Recent studies have demonstrated the direct interaction of melatonin with platelets: at physiological concentration it promotes platelet aggregation; on the other hand, at pharmacological doses a possible mechanism of toxicity on platelet was pointed out.10,11 In 2013, Girish et al attributed to melatonin, at pharmacological doses, a significant increase of generation of intracellular reactive oxygen species (ROS) and Ca2+, facilitating mitochondrial membrane depolarization, cytochrome c release, caspase activation, protein phosphorylation and phosphatidylserine externalization. According to the authors, the elevated rate of platelet apoptosis has far- reaching consequences including thrombocytopenia.11
+Although there was a negative IC value (-1.25 (IC025-0.39) as well as confounding concomitant drugs or medical history in some of the cases, the reports in VigiBase® altogether and the current published studies related to melatonin suggest that agomelatine, by its melatonergic activity, may play a contributory role in the development of thrombocytopenia.""" ;
+                                rdfs:label "Discussion and conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose1
+:Dose1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 50 ;
+       OpenPVSignal:refers_to_dose_value "50 mg" ;
+       rdfs:label "Dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose10
+:Dose10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :agomelatine ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 25 ;
+        OpenPVSignal:refers_to_dose_value "25 mg" ;
+        rdfs:label "Dose 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose11
+:Dose11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :agomelatine ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 25 ;
+        OpenPVSignal:refers_to_dose_value "25 mg" ;
+        rdfs:label "Dose 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose12
+:Dose12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Dosage ;
+        OpenPVSignal:refers_to_drug :agomelatine ;
+        OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+        OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+        OpenPVSignal:has_value 50 ;
+        OpenPVSignal:refers_to_dose_value "50 mg" ;
+        rdfs:label "Dose 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose2
+:Dose2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose3
+:Dose3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose4
+:Dose4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose5
+:Dose5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose6
+:Dose6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose7
+:Dose7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose8
+:Dose8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Dose9
+:Dose9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Dosage ;
+       OpenPVSignal:refers_to_drug :agomelatine ;
+       OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+       OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+       OpenPVSignal:has_value 25 ;
+       OpenPVSignal:refers_to_dose_value "25 mg" ;
+       rdfs:label "Dose 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment1
+:DurationOfTreatment1 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 128 ;
+                      rdfs:label "Duration of treatment 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment10
+:DurationOfTreatment10 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 85 ;
+                       rdfs:label "Duration of treatment 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment11
+:DurationOfTreatment11 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 270 ;
+                       rdfs:label "Duration of treatment 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment12
+:DurationOfTreatment12 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 42 ;
+                       rdfs:label "Duration of treatment 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment2
+:DurationOfTreatment2 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 10 ;
+                      rdfs:label "Duration of treatment 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment3
+:DurationOfTreatment3 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 67 ;
+                      rdfs:label "Duration of treatment 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment6
+:DurationOfTreatment6 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 60 ;
+                      rdfs:label "Duration of treatment 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#DurationOfTreatment7
+:DurationOfTreatment7 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 24 ;
+                      rdfs:label "Duration of treatment 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#EMAApprovedDosageForAgomelatine
+:EMAApprovedDosageForAgomelatine rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ;
+                                 OpenPVSignal:refers_to_drug :agomelatine ;
+                                 OpenPVSignal:refers_to_interval_between_administrations :oneDayIntervalsBetweenAdministrations ;
+                                 OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                                 OpenPVSignal:has_value 25 ,
+                                                        50 ;
+                                 OpenPVSignal:refers_to_dose_value "25 mg" ,
+                                                                   "50 mg" ;
+                                 rdfs:label "EMA approved dosage for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#EMAReportSeptember2013
+:EMAReportSeptember2013 rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001197 ,
+                                 OpenPVSignal:Literature_information ;
+                        OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                        OpenPVSignal:refers_to_drug :agomelatine ;
+                        mp:references :Ref.8 ;
+                        OpenPVSignal:has_content "In September 2013 the EMA also presented an overview of agomelatine, including two cases of thrombocytopenic purpura. In both cases positive dechallenges were reported but overall the evidence was not considered sufficient to conclude that there was an association. The MAH was requested to keep agomelatine and thrombocytopenic purpura under close monitoring.8" ;
+                        rdfs:label "EMA report September 2013" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ermelinda_Viola
+:Ermelinda_Viola rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Author ;
+                 OpenPVSignal:has_first_name "Ermelinda" ;
+                 OpenPVSignal:has_last_name "Viola" ;
+                 rdfs:label "Ermelinda Viola" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#IC025ForAgomelatineAndThrombocytopenia
+:IC025ForAgomelatineAndThrombocytopenia rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                                        OpenPVSignal:refers_to_drug :agomelatine ;
+                                        OpenPVSignal:refers_to_information_component :ICForAgomelatineAndThrombocytopenia ;
+                                        OpenPVSignal:has_value -0.39 ;
+                                        rdfs:label "IC025 for agomelatine and thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ICForAgomelatineAndThrombocytopenia
+:ICForAgomelatineAndThrombocytopenia rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                     OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                                     OpenPVSignal:refers_to_drug :agomelatine ;
+                                     OpenPVSignal:has_value -1.25 ;
+                                     rdfs:label "IC for agomelatine and thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ;
+                     OpenPVSignal:has_content """Agomelatine, the first melatonergic antidepressant, was designed to improve depressed states by resynchronizing perturbed biological rhythms. Its ‘synergistic’ agonist properties at melatonin receptors (MT1/MT2) plus antagonist properties at 5-hydroxytryptamine 2C (5-HT2C) receptors account for its beneficial influence on depressed states.1 The 5-HT2C receptor inhibits the release of norepinephrine and dopamine. By antagonizing the 5-HT2C receptor, agomelatine disrupts the previous inhibition effect, resulting in the release of norepinephrine and dopamine and increasing their extracellular levels. Drugs that inhibit or induce the cytochrome P450 isoenzyme CYP1A2 have the potential to interact with agomelatine.2
+Since 2009 agomelatine has centralized marketing authorization in the European Union by the EMA for the treatment of major depressive disorders in patients over 18 years in a dosage of 25-50 mg orally once daily. It is also marketed in Australia and Latin American countries but is not approved in the USA. The development for the US market was discontinued in October 2011, when the negative results of phase III clinical trials (randomized, double-blind, placebo-controlled studies) became available.3 The most common adverse effects that occur within the first few weeks of agomelatine treatment are transient nausea and dizziness, which are usually mild or moderate. Other gastrointestinal disturbances, headache, somnolence, insomnia, migraine, hyperhidrosis, back pain and fatigue are also reported as being common adverse effects.4
+Thrombocytopenia is a decrease in the number of circulating platelets below 150,000/mcL, potentially resulting in abnormal coagulation and manifesting as a bleeding diathesis. Causes of thrombocytopenia are varied, and can be either endogenous or exogenous. It can arise from decreased platelet production (as in congenital or acquired thrombocytopenia (e.g. bone marrow infiltration)), platelet sequestration (as in splenomegaly), secondary to platelet loss, as from massive blood loss (e.g. consumptive or dilutional) or increased platelet destruction by immune or non-immune mechanisms; with all these conditions occurring in combination in certain disease settings. Common precipitating factors include drugs, infections, trauma, neoplasms, and vasculitis. Immune-mediated thrombocytopenia, also called idiopathic thrombocytopenia (ITP), and thrombotic thrombocytopenic purpura (TTP) are the major types of thrombocytopenic disorders.
+ITP is the autoimmune destruction of platelets and
+is managed with immunosuppression, while TTP is the microvascular consumption of platelets and can be associated with anemia, renal failure and fever. It is a medical emergency and is managed with plasma exchange. Due to the short life span of platelets, clinical symptoms of thrombocytopenia can develop quickly, resulting in bleeding emergencies. Spontaneous bleeding is usually associated with platelet counts less than 50,000/mcL.5""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#LarebReportNovember2011
+:LarebReportNovember2011 rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001197 ;
+                         OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+                         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                         OpenPVSignal:refers_to_drug :agomelatine ;
+                         mp:references :Ref.7 ;
+                         OpenPVSignal:has_content "In March 2011 the Netherlands Pharmacovigilance Centre Lareb published an overview on 39 received reports related to the use of agomelatine. These reports contained a total of 93 possible adverse drug reactions including two cases of thrombocytopenia. In the overview they said that thrombocytopenia will be monitored, and possibly analysed in the future" ;
+                         rdfs:label "Lareb report November 2011" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ListedAEForAgomelatin
+:ListedAEForAgomelatin rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Structured_Product_Labels_information ;
+                       mp:references :Ref.6 ;
+                       OpenPVSignal:has_content "Thrombocytopenia is not listed among undesirable effects in the UKSPC for agomelatine." ;
+                       rdfs:label "UKSPC for agomelatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.5 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ;
+                        OpenPVSignal:has_content "Thrombocytopenia is not listed among undesirable effects in the UKSPC for agomelatine.6 Many agomelatine placebo-controlled and active comparator trials have been published, in which the most common adverse effects reported were headache, dizziness, somnolence, diarrhoea, nausea, sedation, fatigue and insomnia.5 There are no published cases of agomelatine and thrombocytopenia or thrombocytopenic purpura in the literature. In March 2011 the Netherlands Pharmacovigilance Centre Lareb published an overview on 39 received reports related to the use of agomelatine. These reports contained a total of 93 possible adverse drug reactions including two cases of thrombocytopenia. In the overview they said that thrombocytopenia will be monitored, and possibly analysed in the future.7 In September 2013 the EMA also presented an overview of agomelatine, including two cases of thrombocytopenic purpura. In both cases positive dechallenges were reported but overall the evidence was not considered sufficient to conclude that there was an association. The MAH was requested to keep agomelatine and thrombocytopenic purpura under close monitoring.8" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#OverallReportsAfterDuplicateRemoval
+:OverallReportsAfterDuplicateRemoval rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                                     OpenPVSignal:refers_to_drug :agomelatine ;
+                                     OpenPVSignal:has_count 12 ;
+                                     OpenPVSignal:has_count_of_men 6 ;
+                                     OpenPVSignal:has_count_of_women 6 ;
+                                     OpenPVSignal:has_max_age "87.0"^^xsd:float ;
+                                     OpenPVSignal:has_median_age "46.0"^^xsd:float ;
+                                     OpenPVSignal:has_min_age "18.0"^^xsd:float ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Overall reports after duplicate removal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 41 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 76 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 52 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 23 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 87 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 49 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 27 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 48 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 18 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 65 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#PossibleMechanismOfAgomelatinTriggeringThrombocytopenia
+:PossibleMechanismOfAgomelatinTriggeringThrombocytopenia rdf:type owl:NamedIndividual ,
+                                                                  OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+                                                         mp:references :Ref.10 ,
+                                                                       :Ref.11 ;
+                                                         OpenPVSignal:has_content "Recent studies have demonstrated the direct interaction of melatonin with platelets: at physiological concentration it promotes platelet aggregation; on the other hand, at pharmacological doses a possible mechanism of toxicity on platelet was pointed out.10,11 In 2013, Girish et al attributed to melatonin, at pharmacological doses, a significant increase of generation of intracellular reactive oxygen species (ROS) and Ca2+, facilitating mitochondrial membrane depolarization, cytochrome c release, caspase activation, protein phosphorylation and phosphatidylserine externalization. According to the authors, the elevated rate of platelet apoptosis has far- reaching consequences including thrombocytopenia.11" ;
+                                                         rdfs:label "Possible mechanism of agomelatin triggering Thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "de Bodinat C, Guardiola-Lemaitre B, Mocaër E,Renard P, Muñoz C, Millan MJ. Agomelatine, the first melatonergic antidepressant: discovery, characterization and development. Nat Rev Drug Discov. 2010 Aug;9(8):628-42." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kornblihtt LI, Finocchiaro L, Molinas FC. Inhibitory effect of melatonin on platelet activation inducedby collagen and arachidonic acid. J Pineal Res. 1993 May;14(4):184-91." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Girish KS, Paul M, Thushara RM, Hemshekhar M, Shanmuga Sundaram M, Rangappa KS, et al. Melatonin elevates apoptosis in human platelets via ROS mediated mitochondrial damage. Biochem Biophys Res Commun. 2013 Aug 16;438(1):198- 204." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Plesničar BK. Efficacy and tolerability of agomelatine in the treatment of depression. Patient Prefer Adherence. 2014 May 2;8:603-12." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Smeraldi E, Delmonte D. Agomelatine in depression. Expert Opin Drug Saf. 2013 Nov;12(6):873-80." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Micromedex® Solutions. URL: http://www.micromedex-solutions.com Accessed: 9 June 2014." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kaplan RN, Bussel JB. Differential diagnosis and management of thrombocytopenia in childhood. Pediatr Clin North Am. 2004;51(4):1109-40." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK SPC of Valdoxan® URL: https://www.medicines.org.uk/emc/medicine/218 30/SPC/Valdoxan Accessed: 16 June 2014." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Netherlands Pharmacovigilance Centre Lareb. URL:http://www.lareb.nl/Signalen/kwb_2011_3_a gome-(2) Accessed: 17 July 2014." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency, Pharmacovigilance Risk Assessment Committee, Valdoxan/Thymanax, Assessment report for a variation including a contraindication. URL: http://www.ema.europa.eu/docs/en_GB/document_library/EPAR_-_Assessment_ Report_-_Variation/human/000915/WC500157713.pdf Accessed: 16 June 2014." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kenney B, Stack G. Drug-induced thrombocytopenia. Arch Pathol Lab Med. 2009 Feb;133(2):309-14." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anorexia ,
+                                               :fever ,
+                                               :hepaticFunctionAbnormal ,
+                                               :myalgia ,
+                                               :rashErythematous ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_1 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :atorvastatin ,
+                                                       :carbamazepine ,
+                                                       :diazepam ,
+                                                       :reboxetine ,
+                                                       :zolpidem ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         time:hasDurationDescription :DurationOfTreatment1 ;
+         OpenPVSignal:has_reporter_type "pharmacist" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_10 ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :acetylsalicylicAcid ;
+          OpenPVSignal:time_to_onset :TimeToOnset10 ;
+          time:hasDurationDescription :DurationOfTreatment10 ;
+          OpenPVSignal:has_reporter_type "physician" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :fall ,
+                                                :haematoma ,
+                                                :influenza-LikeSymptoms ,
+                                                :medicationError ,
+                                                :thrombocytopenia ;
+          OpenPVSignal:refers_to_concomitant_drug :bisoprolol ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_11 ;
+          OpenPVSignal:time_to_onset :TimeToOnset11 ;
+          time:hasDurationDescription :DurationOfTreatment11 ;
+          OpenPVSignal:has_reporter_type "physician" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+          OpenPVSignal:refers_to_concomitant_drug :budesonide ,
+                                                  :desloratadine ,
+                                                  :triamcinolone ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#sodiumbicarbonate/Potassiumchloride/Sodiumchloride/macrogol> ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_12 ;
+          OpenPVSignal:time_to_onset :TimeToOnset12 ;
+          time:hasDurationDescription :DurationOfTreatment12 ;
+          OpenPVSignal:has_reporter_type "pharmacist" ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                               :leucopenia ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :bumetanide ,
+                                                 :perindopril ,
+                                                 :primidone ,
+                                                 :repaglinide ,
+                                                 :simvastatin ,
+                                                 :sotalol ,
+                                                 :trazodone ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levodopa/BenserazideHydrochloride> ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         time:hasDurationDescription :DurationOfTreatment2 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :impotence ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_3 ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         time:hasDurationDescription :DurationOfTreatment3 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :corticosteroids ,
+                                                 :etoricoxib ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_4 ;
+         OpenPVSignal:time_to_onset :TimeToOnset4 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :info_case_5 ;
+         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :budesonide ,
+                                                 :cortisone ,
+                                                 :formoterol ,
+                                                 :hydrochlorothiazide ,
+                                                 :lisinopril ,
+                                                 :verapamil ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_5 ;
+         OpenPVSignal:time_to_onset :TimeToOnset5 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :fever ,
+                                               :leucopenia ,
+                                               :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_6 ;
+         OpenPVSignal:time_to_onset :TimeToOnset6 ;
+         time:hasDurationDescription :DurationOfTreatment6 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+         OpenPVSignal:refers_to_concomitant_drug :cefuroxime ,
+                                                 :metamizole ,
+                                                 :omeprazole ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levothyroxinesodium/potassiumIodide> ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_7 ;
+         OpenPVSignal:time_to_onset :TimeToOnset7 ;
+         time:hasDurationDescription :DurationOfTreatment7 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_8 ;
+         OpenPVSignal:time_to_onset :TimeToOnset8 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_for_report_9 ;
+         OpenPVSignal:time_to_onset :TimeToOnset9 ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromBelgium
+:ReportsFromBelgium rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Belgium" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Belgium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                    OpenPVSignal:has_count 6 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromItaly
+:ReportsFromItaly rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromNetherlands
+:ReportsFromNetherlands rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Netherlands" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Netherlands" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromPortugal
+:ReportsFromPortugal rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                     OpenPVSignal:has_count 1 ;
+                     OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Portugal" ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports from Portugal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsFromSwitzerland
+:ReportsFromSwitzerland rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Switzerland" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from Switzerland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of 21 May 2014, there were 14 ICSRs of thrombocytopenia (WHO-ART preferred term) in association with agomelatine in the WHO Global ICSR Database, VigiBase®. The related term thrombocytopenic purpura was also searched for in VigiBase® but there were no reports of this association.
+Two duplicates were excluded and the remaining 12 reports are summarized in Table 1. The reports were submitted from seven countries; six cases from Germany and one from Australia, Belgium, Italy, Netherlands, Portugal and Switzerland. The age of the patients was reported in all 12 cases and ranged from 18 to 87 years with a median age of 46 years. Gender was equally distributed.
+Duration of exposure to agomelatine ranged from 10 days to 9 months. Four reports did not provide this information. Time to onset ranged from 6 days to approximately 10 months with an average of 77 days. Agomelatine was considered the only suspected drug in 10 cases and in four of them it was the only reported drug. Concomitant drugs for which the UK Summary of Product Characteristics (UK SPC) and Micromedex list ‘thrombocytopenia’ are included in six cases (cases 1, 2, 4, 5, 7 and 10). In three cases (cases 2, 3 and 5) the patient had a medical history of thrombocytopenia, and in two of these cases (cases 3 and 5) the reported term was thrombocytopenia aggravated. Three cases (cases 6, 10 and 12) reported a positive dechallenge, while in four cases (cases 1, 2, 3 and 7) there was a negative dechallenge. No fatal cases were reported. In case 7 the reporter stated a non-serious thrombocytopenia related to agomelatine while in cases 8 and 5 the reporters assessed the role of agomelatine in thrombocytopenia as rather unlikely. In cases 4 and 8 the patients were recovering even though the agomelatine treatment was maintained (in case 8 the treatment was interrupted but then reintroduced after a couple days). In case 5 the agomelatine dose was not changed and the patient did not recover but the sender stated that, according to the oncologist, the role of agomelatine was rather unlikely, as the worsening of thrombocytopenia could be the natural evolution of the idiopathic thrombocytopenia (natural variation between 30.000 and 150.000), or the consequence of cortisone dose decrease.""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsWithAgomelatineAsTheOnlySuspectDrug
+:ReportsWithAgomelatineAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :OverallReportsAfterDuplicateRemoval ;
+                                            OpenPVSignal:has_count 10 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "Reports with agomelatine as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#ReportsWithPositiveDechallenge
+:ReportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsAfterDuplicateRemoval ;
+                                OpenPVSignal:has_count 3 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Response_from_Servier
+:Response_from_Servier rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                       OpenPVSignal:refers_to_pharmacovigilance_signal_report :Agomelatine_and_thrombocytopenia ;
+                       OpenPVSignal:has_content """Response from Servier
+Regarding the signal “Trombocytopenia”, all sources were considered and are presented thereafter:
+
+Pharmacology
+Agomelatine is a naphthalene derivative (1) that retains a similar binding affinity as melatonin but possesses both melatonin agonist and 5-HT2C antagonist properties (2, 3).
+At physiological and pharmacological concentrations, melatonin displays antioxidant and direct reactive oxygen species (ROS) scavenger effects (4), as well as antiapoptotic effects or proapoptotic cell actions (5).
+In the study performed by Girish et al (6,) melatonin was found to trigger platelet apoptosis at a concentration-range 10-100µM. These concentrations are in agreement with in vivo melatonin tissue-levels, reaching micromolar concentrations (7), however, more than 10 times higher than plasma levels of agomelatine after oral administration of the highest daily therapeutic dose 50mg of agomelatine in patients (internal data).
+Thereby, agomelatine, although acting as MT1/MT2 melatonergic receptors agonist, is not expected to play a contributory role in the development of thrombocytopenia.
+
+
+Toxicology
+Agomelatine was tested in a number of toxicity studies in rats and monkeys with daily oral administrations over 4, 13, 26 and 52 weeks at doses ranging from 25 to 750mg/kg/day in rats and from 60 to 720mg/kg/day in monkeys. A 4- week study via intravenous route (2 to 60 mg/kg/day) was also performed in each of these species. In all these studies, platelet counts were quantified, either as a terminal measurement or regularly over the course of the studies. In addition, daily clinical observations were performed in all animals and histology was performed for various tissues, including those which could reflect a platelet disorder, namely bone marrow and spleen.
+Over this comprehensive toxicology program, in any of the studies and any of the treated animals, no clinical sign suggesting a platelet disorder (e.g. purpura, petechia, spontaneous bleeding, haemorrhages), no quantitative anomaly in platelet counts or volumes (when measured), no salient spleen weight variation and no histological finding on bone marrow or spleen were detected.
+A special study in juvenile rats was performed with agomelatine, with oral daily administration for 10 weeks starting 7days postpartum (5-150 mg/kg/day), and again, there was no indication for an effect of the drug on platelets.
+A 4-week special study was performed in the rat with melatonin at 250 and 750mg/kg, and no decrease in platelets was observed at any dose.
+Therefore, the lack of any toxicological effect for agomelatine or melatonin regarding platelet counts and related data supports a lack of contributory role of agomelatine in the development of thrombocytopenia.
+
+
+Clinical trial data
+In the agomelatine development program, 14377 patients were included: 8693 on agomelatine, 1886 on placebo (and 3798 on comparators). The incidence of emergent Thrombocytopenia or related events was similar in the agomelatine and placebo groups, 0.09% and 0.11% respectively. In the overall development, 3.10% of patients exposed to agomelatine presented at least one value of platelet lower than 150 G/L versus 4.04% in patients exposed to placebo.
+
+
+ 
+Post-marketing data
+Search was performed on the following preferred terms: thrombocytopenia, Immune Thrombocytopenic purpura and platelet count decreased.
+From Market Authorisation (19-FEB-2009) up to 25-AUG-2014, 30 cases were reported (including the 12 cases mentioned by Uppsala): 16 Thrombocytopenia, 2 Immune Thrombocytopenic purpura and 12 Platelet count decreased. i.e. an overall reported incidence of 2.1 / 100 000 patient-years.
+Analysis of the 30 cases is displayed thereafter:
+
+
+
+Population	-	20 Females /10 Males
+-	Median age: 48.5 years
+
+
+Time to onset	•	within 1 week: 3
+•	between 1 week and 1 month: 9
+•	between 1 month and 3 months: 8
+•	over 3 months: 7
+•	unknown: 3
+
+
+Platelet value	<20 G/L: 3
+]20-100] G/L: 16
+>100 G/L: 7
+Unknown: 4
+ 
+
+
+
+
+
+Three cases did not present alternative causes, that is absence of relevant medical history, context or concomitant drugs likely to induce thrombocytopenia
+•	One patient (case 12 in the signal) experienced thrombocytopenia 42 days after starting valdoxan, platelet value decreased again after valdoxan withdrawal, and patient recovered one month later.
+•	One patient (case 8 in the signal) experienced platelet decrease around 90 G/L about 2 months after starting valdoxan. Patient was recovering albeit valdoxan dosage was increased.
+•	In the remaining case (case 9 in the signal), patient’s presented low platelet value (140 G/L) before valdoxan treatment, no investigation was performed and action taken regarding valdoxan was unknown.
+
+
+In conclusion, review of post-marketing did not raise new safety concerns:
+- Low incidence of events: 2.1/100 000 PY,
+-	No cases with a “likely” or “possible” causa lity assessment
+-	In 90% of the cases, confounding factors such as relevant medical history and/or rele vant context and/or concomitant treatment(s) known to induce such events were present.
+
+
+Conclusion
+There is no pharmacological data or toxicological data in favour of deleterious actions of agomelatine on platelet functions. Additionally, no safety concern regarding “Thrombocytopenia” was raised with agomelatine from clinical data or post- marketing surveillance
+Thus the signal “Thrombocytopenia” was refuted and closed. This event will remain under close monitoring.
+References
+1.	de Bodinat et al. Nat Rev Drug Discov 2010, 9:628-642.
+2.	Ettaoussi et al. Eur J Med Chem 2012, 49:310- 323.
+3.	Racagni et al. The World J Biol Psychiatry 2011, 12:574- 587.
+4.	Slominski et al. Mol Cell Endocrinol 2012, 351:152-166.
+5.	Hardeland et al. Progress in Neurobiology 2011, vol. 93, no. 3, pp. 350–384.
+6.	Girish et al. Biochem Biophys Res Commun 2013, 438:198-204.
+7.	AcuñaCastroviejo et al. Cell Mol Life Sci 2014, 71:2997- 3025.""" ;
+                       rdfs:label "Response from Servier" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Agomelatine is a melatonergic drug used in patients with major depression. The mechanism of agomelatine’s antidepressant effect is attributed to its action on melatonergic receptors (MT1/MT2) present in the CNS, as well as to its 5-HT2C antagonism. By improving sleep and resynchronizing disrupted circadian rhythms, agomelatine exertsits novel mode of antidepressant action. After excluding two duplicates, 12 reports of thrombocytopenia associated with agomelatine from seven different countries were available for assessment in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase®. The pattern of time to onset of the reports was consistent with thrombocytopenia. Although in some cases there were concomitant drugs that may affect the platelet homeostasis, the analysis of the case reports suggests there is cause for further investigation. Agomelatine and thrombocytopenia was placed under monitoring by Lareb in 2011, and in 2013 the EMA requested the marketing authorization holder (MAH) to keep agomelatine and thrombocytopenic purpura under close monitoring." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#Thrombocytopenia_pathobiology
+:Thrombocytopenia_pathobiology rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Free_text_reporting_element ;
+                               OpenPVSignal:refers_to_adverse_effect :idiopathicThrombocytopenia ,
+                                                                     :thrombocytopenia ,
+                                                                     :thromboticThrombocytopenicPurpura ;
+                               mp:references :Ref.5 ;
+                               OpenPVSignal:has_content """\"Thrombocytopenia is a decrease in the number of circulating platelets below 150,000/mcL, potentially resulting in abnormal coagulation and manifesting as a bleeding diathesis. Causes of thrombocytopenia are varied, and can be either endogenous or exogenous. It can arise from decreased platelet production (as in congenital or acquired thrombocytopenia (e.g. bone marrow infiltration)), platelet sequestration (as in splenomegaly), secondary to platelet loss, as from massive blood loss (e.g. consumptive or dilutional) or increased platelet destruction by immune or non-immune mechanisms; with all these conditions occurring in combination in certain disease settings. Common precipitating factors include drugs, infections, trauma, neoplasms, and vasculitis. Immune-mediated thrombocytopenia, also called idiopathic thrombocytopenia (ITP), and thrombotic thrombocytopenic purpura (TTP) are the major types of thrombocytopenic disorders.
+ITP is the autoimmune destruction of platelets and
+is managed with immunosuppression, while TTP is the microvascular consumption of platelets and can be associated with anemia, renal failure and fever. It is a medical emergency and is managed with plasma exchange. Due to the short life span of platelets, clinical symptoms of thrombocytopenia can develop quickly, resulting in bleeding emergencies. Spontaneous bleeding is usually associated with platelet counts less than 50,000/mcL.5\"""" ;
+                               rdfs:label "Thrombocytopenia pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 121 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset10
+:TimeToOnset10 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "days" ;
+               time:numericPosition 85 ;
+               rdfs:label "Time to onset 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset11
+:TimeToOnset11 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "days" ;
+               time:numericPosition 150 ;
+               rdfs:label "Time to onset 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset12
+:TimeToOnset12 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               time:nominalPosition "days" ;
+               time:numericPosition 42 ;
+               rdfs:label "Time to onset 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 6 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 39 ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset4
+:TimeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 300 ;
+              rdfs:label "Time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset5
+:TimeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 26 ;
+              rdfs:label "Time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset6
+:TimeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 60 ;
+              rdfs:label "Time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset7
+:TimeToOnset7 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 22 ;
+              rdfs:label "Time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset8
+:TimeToOnset8 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 59 ;
+              rdfs:label "Time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#TimeToOnset9
+:TimeToOnset9 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 13 ;
+              rdfs:label "Time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#agomelatine
+:agomelatine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :AgomelatineMechanism ,
+                                        :PossibleMechanismOfAgomelatinTriggeringThrombocytopenia ;
+             OpenPVSignal:has_ATC_code "N06AX22" ;
+             rdfs:label "agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D649" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R630" ;
+          OpenPVSignal:has_MedDRA_code 10002646 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Anorexia" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#atorvastatin
+:atorvastatin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "C10AA05" ,
+                                        "C10BA05" ,
+                                        "C10BX03" ,
+                                        "C10BX06" ,
+                                        "C10BX08" ,
+                                        "C10BX11" ;
+              rdfs:label "atorvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#backPain
+:backPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "M54.5" ;
+          OpenPVSignal:has_MedDRA_code 10003988 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Back pain" ;
+          rdfs:label "back pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#budesonide
+:budesonide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A07EA06" ,
+                                      "D07AC09" ,
+                                      "R01AD05" ,
+                                      "R03BA02" ;
+            rdfs:label "budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#bumetanide
+:bumetanide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA02" ,
+                                      "C03CB02" ,
+                                      "C03EB02" ,
+                                      "G01AE10" ;
+            rdfs:label "bumetanide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#carbamazepine
+:carbamazepine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AF01" ;
+               rdfs:label "carbamazepine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#cefuroxime
+:cefuroxime rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "J01DC02" ,
+                                      "S01AA27" ;
+            rdfs:label "cefuroxime" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#common_ADRs_of_agomelatine
+:common_ADRs_of_agomelatine rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Clinical_trial_information ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :backPain ,
+                                                                  :diarrhoea ,
+                                                                  :dizziness ,
+                                                                  :fatigue ,
+                                                                  :gastrointestinal_disturbance ,
+                                                                  :headache ,
+                                                                  :hyperhidrosis ,
+                                                                  :insomnia ,
+                                                                  :migraine ,
+                                                                  :nausea ,
+                                                                  :sedation ,
+                                                                  :somnolence ;
+                            OpenPVSignal:refers_to_drug :agomelatine ;
+                            mp:references :Ref.4 ,
+                                          :Ref.5 ;
+                            OpenPVSignal:has_content "Many agomelatine placebo-controlled and active comparator trials have been published, in which the most common adverse effects reported were headache, dizziness, somnolence, diarrhoea, nausea, sedation, fatigue and insomnia.5" ,
+                                                     "The most common adverse effects that occur within the first few weeks of agomelatine treatment are transient nausea and dizziness, which are usually mild or moderate. Other gastrointestinal disturbances, headache, somnolence, insomnia, migraine, hyperhidrosis, back pain and fatigue are also reported as being common adverse effects.4" ;
+                            rdfs:label "common ADRs of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#corticosteroids
+:corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "H02" ;
+                 rdfs:label "corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#cortisone
+:cortisone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "H02AB10" ,
+                                     "S01BA03" ;
+           rdfs:label "cortisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#desloratadine
+:desloratadine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "R06AX27" ;
+               rdfs:label "desloratadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R197" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#diazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#etoricoxib
+:etoricoxib rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M01AH05" ;
+            rdfs:label "etoricoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#fall
+:fall rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "W19" ;
+      OpenPVSignal:has_MedDRA_code 10016173 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Fall" ;
+      rdfs:label "fall" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R509" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#formoterol
+:formoterol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC13" ,
+                                      "R03AK07" ,
+                                      "R03AK08" ,
+                                      "R03AK09" ,
+                                      "R03AK11" ,
+                                      "R03AL05" ;
+            rdfs:label "formoterol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#gastrointestinal_disturbance
+:gastrointestinal_disturbance rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_MedDRA_code 10017949 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal disturbance" ;
+                              rdfs:label "gastrointestinal disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#haematoma
+:haematoma rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "M7981" ;
+           OpenPVSignal:has_MedDRA_code 10018852 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Haematoma" ;
+           rdfs:label "haematoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#hepaticFunctionAbnormal
+:hepaticFunctionAbnormal rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "R945" ;
+                         OpenPVSignal:has_MedDRA_code 10019670 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Hepatic function abnormal" ;
+                         rdfs:label "hepatic function abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#hyperhidrosis
+:hyperhidrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R61" ;
+               OpenPVSignal:has_MedDRA_code 10020642 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperhidrosis" ;
+               rdfs:label "hyperhidrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#idiopathicThrombocytopenia
+:idiopathicThrombocytopenia rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_MedDRA_code 10051057 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Idiopathic thrombocytopenia" ;
+                            rdfs:label "idiopathic thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#impotence
+:impotence rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10021550 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Impotence" ;
+           rdfs:label "impotence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#influenza-LikeSymptoms
+:influenza-LikeSymptoms rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10022009 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Influenza-like symptoms" ;
+                        rdfs:label "influenza like symptoms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#info_case_5
+:info_case_5 rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 5 the agomelatine dose was not changed and the patient did not recover but the sender stated that, according to the oncologist, the role of agomelatine was rather unlikely, as the worsening of thrombocytopenia could be the natural evolution of the idiopathic thrombocytopenia (natural variation between 30.000 and 150.000), or the consequence of cortisone dose decrease." ;
+             rdfs:label "info case 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#insomnia
+:insomnia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G470" ;
+          OpenPVSignal:has_MedDRA_code 10022437 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Insomnia" ;
+          rdfs:label "insomnia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#leucopenia
+:leucopenia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "D72819" ;
+            OpenPVSignal:has_MedDRA_code 10024384 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Leukopenia" ;
+            rdfs:label "leucopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#lisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03" ,
+                                      "C09BA03" ,
+                                      "C09BB03" ,
+                                      "C10BX07" ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#medicationError
+:medicationError rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "M62838" ;
+                 OpenPVSignal:has_MedDRA_code 10027091 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Medication error" ;
+                 rdfs:label "medication error" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#metamizole
+:metamizole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N02BB02" ,
+                                      "N02BB52" ,
+                                      "N02BB72" ;
+            rdfs:label "metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#migraine
+:migraine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G43909" ;
+          OpenPVSignal:has_MedDRA_code 10027599 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Migraine" ;
+          rdfs:label "migraine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#myalgia
+:myalgia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "M791" ;
+         OpenPVSignal:has_MedDRA_code 10028411 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Myalgia" ;
+         rdfs:label "myalgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ,
+                                      "A02BD01" ,
+                                      "A02BD05" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#oneDayIntervalsBetweenAdministrations
+:oneDayIntervalsBetweenAdministrations rdf:type owl:NamedIndividual ,
+                                                time:DurationDescription ;
+                                       time:nominalPosition "days" ;
+                                       time:numericPosition 1 ;
+                                       rdfs:label "one day intervals between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#perindopril
+:perindopril rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C09AA04" ,
+                                       "C09BA04" ,
+                                       "C09BB04" ,
+                                       "C09BX01" ,
+                                       "C09BX02" ,
+                                       "C10BX11" ;
+             rdfs:label "perindopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#primidone
+:primidone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N03AA03" ,
+                                     "N05CB01" ;
+           rdfs:label "primidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ,
+                                                   :Thrombocytopenia_pathobiology ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForAgomelatineAndThrombocytopenia ,
+                                                          :ICForAgomelatineAndThrombocytopenia ,
+                                                          :OverallReportsAfterDuplicateRemoval ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromBelgium ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromItaly ,
+                                                          :ReportsFromNetherlands ,
+                                                          :ReportsFromPortugal ,
+                                                          :ReportsFromSwitzerland ,
+                                                          :ReportsWithAgomelatineAsTheOnlySuspectDrug ,
+                                                          :ReportsWithPositiveDechallenge ;
+          OpenPVSignal:refers_to_adverse_effect :thrombocytopenia ;
+          OpenPVSignal:refers_to_drug :agomelatine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          mp:supportedByData :EMAReportSeptember2013 ,
+                             :LarebReportNovember2011 ,
+                             :ListedAEForAgomelatin ,
+                             :common_ADRs_of_agomelatine ;
+          OpenPVSignal:initially_identified_on "01/12/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#rashErythematous
+:rashErythematous rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "L539" ;
+                  OpenPVSignal:has_MedDRA_code 10037855 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Rash erythematous" ;
+                  rdfs:label "rash erythematous" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#reboxetine
+:reboxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX18" ;
+            rdfs:label "reboxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#repaglinide
+:repaglinide rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BD14" ,
+                                       "A10BX02" ;
+             rdfs:label "repaglinide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#sedation
+:sedation rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "F13.20" ;
+          OpenPVSignal:has_MedDRA_code 10039897 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Sedation" ;
+          rdfs:label "sedation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#sotalol
+:sotalol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C07AA07" ,
+                                   "C07AA57" ,
+                                   "C07BA07" ;
+         rdfs:label "sotalol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#thrombocytopenia
+:thrombocytopenia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D696" ;
+                  OpenPVSignal:has_MedDRA_code 10043554 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Thrombocytopenia" ;
+                  rdfs:label "thrombocytopenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#thromboticThrombocytopenicPurpura
+:thromboticThrombocytopenicPurpura rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Adverse_Effect ;
+                                   OpenPVSignal:has_ICD_code "M31.1" ;
+                                   OpenPVSignal:has_MedDRA_code 10043648 ;
+                                   OpenPVSignal:has_MedDRA_prefered_term "Thrombotic thrombocytopenic purpura" ;
+                                   rdfs:label "thrombotic thrombocytopenic purpura" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#trazodone
+:trazodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06AX05" ,
+                                     "N06AX05 " ;
+           rdfs:label "trazodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#triamcinolone
+:triamcinolone rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A01AC01" ,
+                                         "C05AA12" ,
+                                         "D07AB09" ,
+                                         "D07BB03" ,
+                                         "D07CB01" ,
+                                         "D07XB02" ,
+                                         "H02AB08" ,
+                                         "R01AD11" ,
+                                         "R03BA06" ,
+                                         "S01BA05" ,
+                                         "S02CA04" ;
+               rdfs:label "triamcinolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose1 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_10
+:usage_for_report_10 rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:refers_to_dosage :Dose10 ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     rdfs:label "usage for report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_11
+:usage_for_report_11 rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:refers_to_dosage :Dose11 ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     rdfs:label "usage for report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_12
+:usage_for_report_12 rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:refers_to_dosage :Dose12 ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     rdfs:label "usage for report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_2
+:usage_for_report_2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose2 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_3
+:usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose3 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_4
+:usage_for_report_4 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose4 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_5
+:usage_for_report_5 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose5 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_6
+:usage_for_report_6 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose6 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_7
+:usage_for_report_7 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose7 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_8
+:usage_for_report_8 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose8 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_for_report_9
+:usage_for_report_9 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:refers_to_dosage :Dose9 ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage for report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#usage_of_agomelatine
+:usage_of_agomelatine rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:concerns_indication_for_use :depression ;
+                      OpenPVSignal:refers_to_dosage :EMAApprovedDosageForAgomelatine ;
+                      OpenPVSignal:refers_to_drug :agomelatine ;
+                      rdfs:label "usage of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#verapamil
+:verapamil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C08DA01" ,
+                                     "C08DA51" ,
+                                     "C09BB10" ;
+           rdfs:label "verapamil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levodopa/BenserazideHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levodopa/BenserazideHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                                      OpenPVSignal:Drug ;
+                                                                                                             OpenPVSignal:has_ATC_code "N04BA02" ;
+                                                                                                             rdfs:label "levodopa/ benserazide hydrochloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levothyroxinesodium/potassiumIodide
+<http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#levothyroxinesodium/potassiumIodide> rdf:type owl:NamedIndividual ,
+                                                                                                                        OpenPVSignal:Drug ;
+                                                                                                               OpenPVSignal:has_ATC_code "H03AA01" ,
+                                                                                                                                         "V03AB21" ;
+                                                                                                               rdfs:label "levothyroxine sodium / potassium iodide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#sodiumbicarbonate/Potassiumchloride/Sodiumchloride/macrogol
+<http://purl.org/OpenPVSignal/Signals/2014_6_agomelatine_thrombocytopenia#sodiumbicarbonate/Potassiumchloride/Sodiumchloride/macrogol> rdf:type owl:NamedIndividual ,
+                                                                                                                                                OpenPVSignal:Drug ;
+                                                                                                                                       OpenPVSignal:has_ATC_code "A06AD15" ,
+                                                                                                                                                                 "B05XA01" ,
+                                                                                                                                                                 "B05XA02" ,
+                                                                                                                                                                 "B05XA03" ;
+                                                                                                                                       rdfs:label "sodium bicarbonate/ potassium chloride/ sodium chloride/macrogol" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

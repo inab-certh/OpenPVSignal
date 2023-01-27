@@ -1,0 +1,1997 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                               rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255489/"^^xsd:anyURI ;
+                                                                               rdfs:label "Lamivudine and hearing decreased"^^rdfs:Literal ;
+                                                                               owl:versionInfo "draft-v0.95-20211008"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#BradfordHillCriteriaAssessment
+:BradfordHillCriteriaAssessment rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001197 ;
+                                mp:references :Ref.28 ;
+                                OpenPVSignal:has_content "Using the Bradford Hill criteria, the consistency observed by the reports across the 13 countries underscores the importance of this combination.28 " ;
+                                rdfs:label "Bradford Hill criteria assessment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ChronicHepatitis
+:ChronicHepatitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "B18.0" ;
+                  OpenPVSignal:has_MedDRA_code 10008910 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Chronic hepatitis B" ;
+                  rdfs:label "Chronic hepatitis B" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Cohen_report
+:Cohen_report rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001197 ;
+              OpenPVSignal:refers_to_adverse_effect :HIV ,
+                                                    :hearingLoss ;
+              mp:references :Ref.9 ;
+              OpenPVSignal:has_content "Cohen et al. characterised hearing loss associated with HIV infection as having any of the following attributes: unilateral or bilateral, progressive or sudden in onset, conductive or sensorineural or mixed.9" ;
+              rdfs:label "Cohen report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#CranialNerveDisorder
+:CranialNerveDisorder rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "G52.9" ;
+                      OpenPVSignal:has_MedDRA_code 10061093 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Cranial nerve disorder" ;
+                      rdfs:label "cranial nerve disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ethambutol
+:Ethambutol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "J04AK02" ,
+                                      "J04AK02 " ;
+            rdfs:label "ethambutol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#FatalCasesForHearingDecreased
+:FatalCasesForHearingDecreased rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :overallReportsForLamivudineAndHearingDecreased ;
+                               OpenPVSignal:has_count 1 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Fatal cases for hearing decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#FirstReportsForHearingLossInHIVPatients
+:FirstReportsForHearingLossInHIVPatients rdf:type owl:NamedIndividual ,
+                                                  obo:OAE_0001197 ;
+                                         OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+                                         mp:references :Ref.18 ,
+                                                       :Ref.8 ,
+                                                       :Ref.9 ;
+                                         OpenPVSignal:has_content "Hearing dysfunction was one of the clinical manifestations realised as soon as the various subspecialties in medicine appreciated the manifold presentation of HIV/AIDS, with the prevalence of hearing defects put at 27.5 - 33.5% in the late 1980s to early 1990s, and sudden hearing loss reported by Real et al. in 1987." ;
+                                         rdfs:label "First reports for hearing loss in HIV patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#HAART
+:HAART rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_ATC_code "J05AR" ;
+       rdfs:label "Antivirals for treatment of HIV infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#HIV
+:HIV rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Adverse_Effect ,
+              OpenPVSignal:Indication ;
+     OpenPVSignal:has_ICD_code "B20" ;
+     OpenPVSignal:has_MedDRA_code 10000565 ;
+     OpenPVSignal:has_MedDRA_prefered_term "Acquired immunodeficiency syndrome" ;
+     rdfs:label "HIV" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#InVitroAssays
+:InVitroAssays rdf:type owl:NamedIndividual ,
+                        obo:OAE_0001197 ;
+               OpenPVSignal:refers_to_adverse_effect :ototoxicity ;
+               OpenPVSignal:refers_to_class <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Non-Nucleoside_Reverse_Transcriptase_Inhibitors_(NNRTI)> ,
+                                            <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> ,
+                                            <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Protease_Inhibitors_(PI)> ;
+               OpenPVSignal:refers_to_drug :abacavir ,
+                                           :lamivudine ,
+                                           :zidovudine ;
+               mp:references :Ref.25 ,
+                             :Ref.26 ;
+               OpenPVSignal:has_content "In a very elaborate in vitro study, 14 antiretroviral drugs across the various classes of NRTI, NtRTI, NNRTI and PI, as well as combinations of these drugs were investigated using the HEI-OC1 auditory cells (cell viability, flow cytometry, and caspases 3/7-activation). While all the ARTs showed some degree of cytotoxicity, the high degree of toxicity shown by some lamivudine-containing combinations, abacavir/lamivudine (Epzicom®), abacavir/lamivudine/zidovudine (Trizivir®) among others, was of particular interest.25 However, using other cell lines such as the human hepatoma cells, Venhoff et al. reported minimal toxicity of tenofovir and lamivudine, a moderate effect for emtricitabine and a strongly impaired proliferation of cells with abacavir and zidovudine. The authors noted that the interaction amongst the NRTIs appeared to be unpredictable. 26 " ;
+               rdfs:label "In vitro assays" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Isoniazid
+:Isoniazid rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J04AC01" ;
+           rdfs:label "Isoniazid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#KakudaDataForMitochondria
+:KakudaDataForMitochondria rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001125 ;
+                           mp:references :Ref.27 ;
+                           OpenPVSignal:has_content "Kakuda highlighted the hierarchy of mitochondrial DNA polymerase gamma inhibition: zalcitabine > didanosine > stavudine > lamivudine > zidovudine > abacavir.27  " ;
+                           rdfs:label "Kakuda data for mitochondria " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#KohanReports
+:KohanReports rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001197 ;
+              OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+              mp:references :Ref.20 ;
+              OpenPVSignal:has_content "Though these early clinical presentations appeared to precede the effective introduction of the ARTs, in 1998 Kohan et al. highlighted ototoxic medications as a possible cause.20  " ;
+              rdfs:label "Kohan reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Lamivudine_and_hearing_decreased
+:Lamivudine_and_hearing_decreased rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                  OpenPVSignal:refers_to_author :Prof_Ambrose_O_Isah ;
+                                  OpenPVSignal:refers_to_signal :pvSignal ;
+                                  mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                  OpenPVSignal:has_creation_date "18/5/2017" ;
+                                  OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                  rdfs:label "Lamivudine and hearing decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.12 ,
+                                        :Ref.14 ,
+                                        :Ref.15 ,
+                                        :Ref.16 ,
+                                        :Ref.17 ,
+                                        :Ref.18 ,
+                                        :Ref.19 ,
+                                        :Ref.2 ,
+                                        :Ref.20 ,
+                                        :Ref.21 ,
+                                        :Ref.22 ,
+                                        :Ref.23 ,
+                                        :Ref.24 ,
+                                        :Ref.25 ,
+                                        :Ref.26 ,
+                                        :Ref.27 ,
+                                        :Ref.3 ,
+                                        :Ref.8 ,
+                                        :Ref.9 ;
+                          OpenPVSignal:has_content """The product labels for lamivudine, approved by various regulatory agencies, including EMA, FDA and Health Canada, do not list decreased hearing as an adverse drug reaction.14-16 Martindale also does not give this as an adverse drug reaction.17 Hearing dysfunction was one of the clinical manifestations realised as soon as the various subspecialties in medicine appreciated the manifold presentation of HIV/AIDS, with the prevalence of hearing defects put at 27.5 - 33.5% in the late 1980s to early 1990s, and sudden hearing loss reported by Real et al. in 1987.8,9,18 The disparity in prevalence is heightened by the disclosure of 2% in an Indian series.19 Though these early clinical presentations appeared to precede the effective introduction of the ARTs, in 1998 Kohan et al. highlighted ototoxic medications as a possible cause.20 The introduction of the HAART regimen, soon after the approval of lamivudine, implied that lamivudine was used from the beginning in combination therapy, not allowing for the identification of any peculiar adverse effects.2,3 The overall dramatic life-threatening nature of HIV/AIDS also meant that the health of nonvital sensory organs was given minimal consideration. In one of the early studies on hearing loss following the introduction of the ARTs, Marra et al. conducted a case control study which showed that 29% of patients had hearing loss, this being most pronounced in patients on ARTs.8 Identified risk and confounding factors included age (>35 years) and infections. In 1997, Monte et al. reported the sudden onset of hearing loss in a 31-year-old African woman diagnosed HIV positive occurring 10 days after  
+being placed on zalcitabine, an NRTI. Despite stopping the drug the hearing loss persisted.21 In another remarkable case-report, Rey et al. highlighted a case from France of a 23-year-old female medical student who was administered ART combination of stavudine-lamivudine-nevirapine for post-exposure prophylaxis. She was prescribed nevirapine for four days and the other two for one month. Less than two weeks after the end of NRTI treatment she developed sudden bilateral hearing loss, with partial recovery after several months. No abnormality was found despite an in-depth investigation. She remained HIV negative after six months.22 It is likely that this patient is case 12 of the VigiBase® case series in Table 1. 
+In 2001, Smidon et al. reported three cases of possible ototoxicity from NRTIs.12 In one of the cases the audiology record of a patient on zidovudine monotherapy (pre-HAART era) revealed a decline in hearing over a nine-year period from near upper limits of normal to severe bilateral deafness. There were no associated opportunistic infections though he had suffered from noise exposure a decade earlier. In another case in this series, a 49-year-old veteran initiated with efavirenz, stavudine, lamivudine and sulphamethoxazole/trimethoprim developed symptoms about four months after commencement which worsened over a two-month period. On discontinuation of stavudine and start of zidovudine, there was partial resolution of symptoms after one month. It was postulated that myriad factors, including ageing, infection and hearing loss, were associated with mitochondrial DNA mutations, and since NRTIs cause mitochondria toxicity, synergy with mitochondrial abnormalities induced by these factors may produce enhanced auditory dysfunction as has been earlier reported.23 Schouten et al. performed a longitudinal, prospective study of the hearing changes following zidovudine and didanosine therapy, both NRTIs, over a 32-week period. This study measured changes in hearing levels at all frequencies and also in low- and high-frequency, pure tone averages. No significant changes were observed. Lamivudine was not evaluated in this study.24 In a very elaborate in vitro study, 14 antiretroviral drugs across the various classes of NRTI, NtRTI, NNRTI and PI, as well as combinations of these drugs were investigated using the HEI-OC1 auditory cells (cell viability, flow cytometry, and caspases 3/7-activation). While all the ARTs showed some degree of cytotoxicity, the high degree of toxicity shown by some lamivudine-containing combinations, abacavir/lamivudine (Epzicom®), abacavir/lamivudine/zidovudine (Trizivir®) among others, was of particular interest.25 However, using other cell lines such as the human hepatoma cells, Venhoff et al. reported minimal toxicity of tenofovir and lamivudine, a moderate effect for emtricitabine and a strongly impaired proliferation of cells with abacavir and zidovudine. The authors noted that the interaction amongst the NRTIs appeared to be unpredictable.26 In another earlier study, Kakuda highlighted the hierarchy of mitochondrial DNA polymerase gamma inhibition: zalcitabine > didanosine > stavudine > lamivudine > zidovudine > abacavir.27 From the above in vitro studies, it is possible that lamivudine alone or in combination with other ARTs may exert toxic effects by its action on the mitochondria of cochlear cells – a known pathway for ototoxicity.""" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#LongitudinalStudy
+:LongitudinalStudy rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001182 ;
+                   OpenPVSignal:refers_to_drug :didanosine ,
+                                               :zidovudine ;
+                   OpenPVSignal:has_content "Furthermore, a 32-week longitudinal study with zidovudine/didanosine, using a battery of auditory tests, did not show significant changes in hearing" ;
+                   rdfs:label "Longitudinal study " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#MarraData
+:MarraData rdf:type owl:NamedIndividual ,
+                    obo:OAE_0001197 ;
+           OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+           OpenPVSignal:refers_to_class :HAART ;
+           mp:references :Ref.8 ;
+           OpenPVSignal:has_content "In one of the early studies on hearing loss following the introduction of the ARTs, Marra et al. conducted a case control study which showed that 29% of patients had hearing loss, this being most pronounced in patients on ARTs.8  Identified risk and confounding factors included age (>35 years) and infections" ;
+           rdfs:label "Marra data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Mechanism_of_lamivudine
+:Mechanism_of_lamivudine rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         mp:references :Ref.1 ,
+                                       :Ref.2 ,
+                                       :Ref.3 ,
+                                       :Ref.4 ,
+                                       :Ref.5 ;
+                         OpenPVSignal:has_content "Lamivudine is used in combination therapy as backbone with other Nucleoside or Nucleotide Reverse Transcriptase Inhibitors (NRTI or NtRTI), with medicines of other classes notably the Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTI) and Protease Inhibitors (PI). The essential mechanism of action of lamivudine is by conversion intracellularly into its triphosphate form which competes with cytosine triphosphate for incorporation into the developing viral DNA strand. Consequently, the developing DNA chain terminates and arrests the development of the viral DNA. Toxicity of lamivudine results from mitochondrial dysfunction as it reduces mitochondrial DNA (mDNA) levels in various tissues, including the cochlear, via polymerase gamma (γ) – inhibition.4,5" ;
+                         rdfs:label "Mechanism of lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#MonteData
+:MonteData rdf:type owl:NamedIndividual ,
+                    obo:OAE_0001197 ;
+           OpenPVSignal:concerns_indication_for_use :HIV ;
+           OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+           OpenPVSignal:refers_to_drug :zalcitavine ;
+           mp:references :Ref.21 ;
+           OpenPVSignal:has_content "n 1997, Monte et al. reported the sudden onset of hearing loss in a 31-year-old African woman diagnosed HIV positive occurring 10 days after   being placed on zalcitabine, an NRTI. Despite stopping the drug the hearing loss persisted" ;
+           rdfs:label "Monte data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#OmanCaseControlStudy
+:OmanCaseControlStudy rdf:type owl:NamedIndividual ,
+                               obo:OAE_0001125 ;
+                      OpenPVSignal:refers_to_adverse_effect :ChronicHepatitis ,
+                                                            :hearingLoss ;
+                      mp:references :Ref.7 ;
+                      OpenPVSignal:has_content "Of interest is a case control study from Oman, which showed a significant hearing loss in 95 patients with hepatitis B infection. " ;
+                      rdfs:label "Oman case control study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ototoxicity_pf_Lamivudine
+:Ototoxicity_pf_Lamivudine rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect_Mechanism ;
+                           OpenPVSignal:has_content "From the above in vitro studies, it is possible that lamivudine alone or in combination with other ARTs may exert toxic effects by its action on the mitochondria of cochlear cells – a known pathway for ototoxicity." ;
+                           rdfs:label "Ototoxicity of Lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Overall_reports
+:Overall_reports rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:refers_to_drug :lamivudine ;
+                 OpenPVSignal:has_count 45 ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Overall reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 35 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 39 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 24 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 39 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 49 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 51 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient16
+:Patient16 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 47 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient17
+:Patient17 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 35 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient18
+:Patient18 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 53 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient19
+:Patient19 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 47 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 9 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 25 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 27 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 38 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 57 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 41 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 43 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PercentageOfPatientsHIVHavingHearingLoss
+:PercentageOfPatientsHIVHavingHearingLoss rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Statistical_Entity ;
+                                          OpenPVSignal:refers_to_adverse_effect :HIV ,
+                                                                                :hearingLoss ;
+                                          mp:references :Ref.8 ,
+                                                        :Ref.9 ;
+                                          OpenPVSignal:has_content "27.5 - 33.5%" ;
+                                          rdfs:label "Percentage of patients HIV having hearing loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PercentageOfPatientsHIVHavingHearingloss-dataFromMarra
+:PercentageOfPatientsHIVHavingHearingloss-dataFromMarra rdf:type owl:NamedIndividual ,
+                                                                 OpenPVSignal:Statistical_Entity ;
+                                                        OpenPVSignal:has_content "0.29" ;
+                                                        rdfs:label "Percentage of patients HIV having hearing loss-data from Marra" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PotentialConfoundersInTheCaseOfHIVPatientsExperiencingHearingLossApartFromLamivudine
+:PotentialConfoundersInTheCaseOfHIVPatientsExperiencingHearingLossApartFromLamivudine rdf:type owl:NamedIndividual ,
+                                                                                               obo:OAE_0001182 ;
+                                                                                      OpenPVSignal:has_content "However, many health professionals realise that there may be a complex interplay of factors, including but not limited to a direct action of the virus causing the primary disease, opportunistic and other infections, (accelerated) ageing, environmental noise, past injuries with the ototoxic effect of medicines used in the treatment of HIV/AIDS and opportunistic infections (aminoglycosides for tuberculosis, amphotericin b for fungal infections). The impact of any given factor may be more profound depending on prevailing circumstances where they may chronically impair hearing or abruptly disrupt the process.  " ;
+                                                                                      rdfs:label "Potential Confounders in the case of HIV patients experiencing hearing loss apart from lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PotentialInteractionsAmongLamivudineAndNRTIOrNtRTIs
+:PotentialInteractionsAmongLamivudineAndNRTIOrNtRTIs rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                     mp:references :Ref.30 ;
+                                                     OpenPVSignal:has_content "The co-prescription of lamivudine with other NRTIs or NtRTIs might suggest the possibility of some interaction predisposing patients to high toxic levels. However, this class of medicines is not metabolised by the cytochrome P450 enzyme system and lamivudine is mainly (70%) eliminated by the kidneys " ;
+                                                     rdfs:label "Potential interactions among lamivudine and NRTI or NtRTIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Product_labels_for_lamivudine
+:Product_labels_for_lamivudine rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Structured_Product_Labels_information ;
+                               OpenPVSignal:refers_to_drug :lamivudine ;
+                               mp:references :Ref.14 ,
+                                             :Ref.15 ,
+                                             :Ref.16 ;
+                               OpenPVSignal:has_content "The product labels for lamivudine, approved by various regulatory agencies, including EMA, FDA and Health Canada, do not list decreased hearing as an adverse drug reaction.14-16" ;
+                               rdfs:label "Product labels for lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Prof_Ambrose_O_Isah
+:Prof_Ambrose_O_Isah rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Author ;
+                     OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                     OpenPVSignal:has_first_name "Ambrose" ;
+                     OpenPVSignal:has_last_name "O Isah" ;
+                     rdfs:label "Prof Ambrose O Isah" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Palmisano L, Vella S. A brief history of antiretroviral therapy of HIV infection: success and challenges. Ann Ist Super Sanita. 2011;47(1):44-8." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Khoza-Shangase K. An analysis of auditory manifestations in a group of adults with AIDS prior to antiretroviral therapy. Afr J Infec Dis. 2011;5(1):11-22." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Khoza-Shangase K. Is there a need for ototoxicity monitoring in patients with HIV/AIDS? Afr J Pharm Pharmac. 2010;4(9):574-9." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Smidon J, Watters D, Bartlett S, and Connick E. Ototoxicity associated with use of Nucleoside Reverse Transcriptase Inhibitors: A report of 3 possible cases and review of the literature. HIV/AIDS. CID 2001;32:1623-6." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Mohammadkhani G, Pourbakht A, Khanavi M, Faghihzadeh S. Protective Effect of Silymarin on Noise- Induced Hearing Loss in Guinea Pigs. Iran Red Cres Med J. 15(11):e8890." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "European Medicines Agency: Summary of Product Characteristics for lamivudine (Epivir®). Available from: http://www.ema. europa.eu/docs/en_GB/document_ library/ EPAR_-_Product_Information/human/000107/ WC500027572.pdf. Accessed: September 2016." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "US Food and Drug Administration: Product label for lamivudine (Epivir®). Available from: https://dailymed. nlm.nih.gov/dailymed/ drugInfo.cfm?setid=89226149-47fa-4f7d-bb1f- 1aa7034486b8. Accessed: September 2016." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Health Canada: Product Monograph for lamivudine (3TC®). Available from: https://health-products.canada.ca/dpd-bdpp/ info.do?code=19614&lang=en. Accessed: September 2016." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sweetman SC (ed). Martindale: The Complete Drug Reference. [online] London: Pharmaceutical Press. Accessed: September 2016." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Real R, Thomas M, Gerwin JM. Sudden hearing loss and acquired immunodeficiency syndrome. Otolaryngol Head Neck Surg. 1987;97(4):409- 12." ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Prasad HKC, Bhojwan KM, Shenoy V, Prasad SC. HIV manifestations in otolaryngology. Am J of Otolaryngol. 2006;27:179-85." ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hammer SM, Squire KE, Hughes MD, Grimes JM, Demeter LM, Currier JS et al. A controlled trial of two nucleoside analogues plus Indinavir in persons with Human Immunodeficiency Virus infection and CD4 cell counts of 200 per cubic millimetre or less. N Engl J Med. 1997;337:725-33." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kohan D, Rothstein SG, Cohen NL. Otologic disease in patients with acquired immunodeficiency syndrome. Ann Otol Rhinol Laryngol. 1988;97:636-40." ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Monte S, Fenwick JD, Monteiro EF. Irreversible ototoxicity associated with zalcitabine. Int J STD and AIDS. 1997;8:201-2." ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Rey D, Heritier AL, Lang JM. Severe ototoxicity in a health worker who received postexposure prophylaxis with stavudine, lamivudine and nevirapine after occupational exposure to HIV. CID 2002;34:418." ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.23
+:Ref.23 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kujoth GC, Hiona A, Pugh TD, Someya S, Panzer K, Wohlgemuth SE et al. Mitochondrial DNA Mutations, Oxidative Stress, and Apoptosis in Mammalian Aging. Science. 2005;309(5733):481-4." ;
+        rdfs:label "Ref.23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.24
+:Ref.24 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Schouten JT, Lockhart DW, Rees TS, Collier AC, Marra CM. A prospective study of hearing changes after beginning zidovudine or didanosine in HIV-1 treatment- naïve people. BMC Infectious Diseases. 2006;6:28-34." ;
+        rdfs:label "Ref.24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.25
+:Ref.25 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Thein P, Kalinec GM, Park C, Kalinec F. In vitro Assessment of Antiretroviral Drugs demonstrates potential for ototoxicity. Hear Res. 2014;310:27-35." ;
+        rdfs:label "Ref.25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.26
+:Ref.26 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Venhoff N, Setzer B, Melkaoui K, Walker UA. Mitochondrial toxicity of tenofovir, emtricitabine and abacavir alone and in combination with additional nucleoside reverse transcriptase inhibitors. Antivir Ther. 2007;12:1075-85." ;
+        rdfs:label "Ref.26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.27
+:Ref.27 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kakuda TN. Pharmacology of nucleoside and nucleotide reverse transcriptase inhibitor-induced mitochondrial toxicity. Clin Ther. 2000;22(6):685-708." ;
+        rdfs:label "Ref.27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.28
+:Ref.28 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Hill AB. The Environment and Disease: Association or Causation? Pro R Soc Med. 1965;58(5):295-300." ;
+        rdfs:label "Ref.28" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.29
+:Ref.29 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Harris T, Bardien S, Schaaf HS, Petersen L, de Jong G, Fagan JJ. Aminoglycoside- induced hearing loss in HIV-positive and HIV-negative multidrug-resistant tuberculosis patients. S Afr Med J. 2012;102:363-6." ;
+        rdfs:label "Ref.29" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Gullick RM, Mellors JW, Havlir D, Eron JJ, Gonzalez C, McMahon D et al. Treatment with Indinavir, Zidovudine and Lamivudine in Adults with Human Immunodeficiency Virus infection and prior antiretroviral therapy. N Engl J Med. 1997;337:734-9." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.30
+:Ref.30 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Johnson MA, Moore KH, Yuen GJ, Bye A, Pakes GE. Clinical pharmacokinetics of lamivudine. Clin Pharmacokinet. Jan 1999;36(1):41-66." ;
+        rdfs:label "Ref.30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.31
+:Ref.31 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Yuen GJ, Weller S, Pakes GE. A review of the pharmacokinetics of abacavir. Clin Pharmacokinet. 2008;47(6):351-71." ;
+        rdfs:label "Ref.31" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.32
+:Ref.32 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Cvetkovic RS, Goa KL. Lopinavir/ritonavir: a review of its use in the management of HIV infection. Drugs. 2003;63(8):769- 802." ;
+        rdfs:label "Ref.32" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Feng JY, Johnson AA, Johnsoni KA, Anderson KS. Insights into the Molecular Mechanism of Mitochondrial Toxicity by AIDS Drugs. J Biol Chem. 2001;276(26):23832-7." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Lewis W, Dalakas MC. Mitochondrial toxicity of antiviral drugs. Nat Med. 1995;1(5):417-22." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Lok ASF, Lai C, Leung N, Yao G, Cui Z, Schiff ER et al. Long-Term Safety of Lamivudine Treatment in Patients with Chronic Hepatitis B. Gastroenterology. 2003;125:1714-22." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Nasab MS, Fathololoomi MR, Alizamir A. Association between Hepatitis B and Hearing Status Oman Med J. 2012;27(5):418-20." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Marra CM, Wechkin HA, Longstreth WT, Rees TS, Syapin CL, Gates GA. Hearing Loss and Antiretroviral Therapy in Patients Infected with HIV-1. Arch Neurol. 1997;54:407-10." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Cohen BE, Durstenfeld A, Roehm C. Viral causes of Hearing Loss: A Review for Hearing Health Professionals. Trends in Hearing. 2014;18:1-17." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForReport1 ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :asthenia ,
+                                               :dizziness ,
+                                               :earDisorderNos ,
+                                               :fatigue ,
+                                               :hearing_decreased ,
+                                               :torticollis ;
+         OpenPVSignal:refers_to_concomitant_drug :SilybumMarianum ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :nevirapine ,
+                                                        :tenofovir ;
+          OpenPVSignal:time_to_onset :TimeToOnset10 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :abacavir ,
+                                                        :fosamprenavir ,
+                                                        :ritonavir ;
+          OpenPVSignal:time_to_onset :TimeToOnset11 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :infoForReport12 ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :nevirapine ,
+                                                        :stavudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset12 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :abacavir ,
+                                                        :nelfinavir ;
+          OpenPVSignal:time_to_onset :TimeToOnset13 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :Tinnitus ,
+                                                :conditionAggravated ,
+                                                :deafness ,
+                                                :ototoxicity ;
+          OpenPVSignal:refers_to_concomitant_drug :efavirenz ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :stavudine ,
+                                                        :zidovudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset14 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :infoForReport15 ;
+          OpenPVSignal:refers_to_adverse_effect :Tinnitus ,
+                                                :conditionAggravated ,
+                                                :deafness ,
+                                                :neuropathyPeripheral ,
+                                                :ototoxicity ,
+                                                :vitaminB12Deficiency ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :abacavir ,
+                                                        :didanosine ,
+                                                        :stavudine ,
+                                                        :zidovudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset15 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report16
+:Report16 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :infoForReport16 ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ,
+                                                :ototoxicity ;
+          OpenPVSignal:refers_to_patient :Patient16 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :didanosine ,
+                                                        :efavirenz ,
+                                                        :hydroxycarbamide ,
+                                                        :stavudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset16 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report17
+:Report17 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                                :blindness ,
+                                                :deafness ,
+                                                :fatigue ,
+                                                :headache ,
+                                                :visionAbnormal ;
+          OpenPVSignal:refers_to_patient :Patient17 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :fluconazole ,
+                                                        :indinavir ,
+                                                        :zidovudine ,
+                                                        <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+          OpenPVSignal:time_to_onset :TimeToOnset17 ;
+          OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+          rdfs:label "Report 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report18
+:Report18 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :CranialNerveDisorder ,
+                                                :deafness ;
+          OpenPVSignal:refers_to_patient :Patient18 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :ritonavir ,
+                                                        :zidovudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset18 ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report19
+:Report19 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :infoForReport19 ;
+          OpenPVSignal:refers_to_adverse_effect :deafness ,
+                                                :earDisorderNos ;
+          OpenPVSignal:refers_to_patient :Patient19 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :ritonavir ,
+                                                        :stavudine ;
+          OpenPVSignal:time_to_onset :TimeToOnset19 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+          rdfs:label "Report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hearing_decreased ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :abacavir ,
+                                                       <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ritonavir/lopinavir> ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hearing_decreased ;
+         OpenPVSignal:refers_to_concomitant_drug :nevirapine ,
+                                                 :stavudine ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :hearing_decreased ;
+         OpenPVSignal:refers_to_concomitant_drug :nevirapine ,
+                                                 :zidovudine ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset4 ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForReport5 ;
+         OpenPVSignal:refers_to_adverse_effect :Tinnitus ,
+                                               :hearing_decreased ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset5 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :Tinnitus ,
+                                               :hearing_decreased ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :ritonavir ,
+                                                       :tenofovir ,
+                                                       :tipranavir ,
+                                                       <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#levodopa/benserazideHydrochloride> ,
+                                                       <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+         OpenPVSignal:time_to_onset :TimeToOnset6 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForReport7 ;
+         OpenPVSignal:refers_to_adverse_effect :deafness ,
+                                               :hearing_decreased ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :amphotericinB ,
+                                                       :stavudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset7 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForReport8 ;
+         OpenPVSignal:refers_to_adverse_effect :hearing_decreased ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :Ethambutol ,
+                                                       :Isoniazid ,
+                                                       :indinavir ,
+                                                       :pyrazinamide ,
+                                                       :zidovudine ;
+         OpenPVSignal:time_to_onset :TimeToOnset8 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :Tinnitus ,
+                                               :arthralgia ,
+                                               :deafness ,
+                                               :paraesthesia ;
+         OpenPVSignal:refers_to_concomitant_drug <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :tenofovir ;
+         OpenPVSignal:time_to_onset :TimeToOnset9 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ReportsWithNevirapine
+:ReportsWithNevirapine rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :Overall_reports ;
+                       OpenPVSignal:refers_to_drug :nevirapine ;
+                       OpenPVSignal:has_count 4 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with nevirapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ReportsWithRitonavir
+:ReportsWithRitonavir rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :Overall_reports ;
+                      OpenPVSignal:refers_to_drug :ritonavir ;
+                      OpenPVSignal:has_count 5 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports with ritonavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ReportsWithStavudine
+:ReportsWithStavudine rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :Overall_reports ;
+                      OpenPVSignal:refers_to_drug :stavudine ;
+                      OpenPVSignal:has_count 7 ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports with stavudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ReportsWithZidovudine
+:ReportsWithZidovudine rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :Overall_reports ;
+                       OpenPVSignal:refers_to_drug :zidovudine ;
+                       OpenPVSignal:has_count 6 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with zidovudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.13 ;
+                     OpenPVSignal:has_content """Reports in VigiBase®
+As of June 2016 VigiBase® contained 45 ICSRs, after exclusion of six suspected duplicate reports, with lamivudine and the WHO-ART High Level Term (HLT) hearing decreased, entered over a period of almost 19 years (May 1997 to April 2016). Of these, 26 reported the preferred term (PT) hearing decreased, 19 deafness, and 1 deafness nerve (one case reported both hearing decreased and deafness and is hereafter counted only in the deafness category). The PT hearing decreased included at the Included Term (IT) level the following terms: auditory hypoacuity (1 case); hearing decreased (15); hearing impaired (7); and hypoacusis (2), while the PT deafness included at the IT level the following terms: deafness (14 cases); deafness unilateral (2); and hearing loss sudden (3). There were nine ‘serious’ cases and one death coreported with hearing decreased (PT) and another nine for deafness (PT) with no reported deaths. The reports included 12 males and 13 females aged 0- 62 years (hearing decreased); 16 males and 3 females aged 0-60 years (deafness); and one male aged 42 years (deafness nerve). The ICSRs were from 13 countries in five continents, showing a fairly global distribution: Africa (Nigeria, South Africa); Asia (South Korea, Japan); Europe (Belgium, Germany, France, Spain and Switzerland); North America (Canada, USA); Latin America (Peru) and Oceania (Australia). The documentation grading of the ICSRs, as determined by the vigiGradeTM completeness score, ranged from 0.18-1.0. Nineteen reports contained sufficient information for more in depth assessment and these are shown in Table 1. The remaining 26 ICSRs (18 mentioning hearing decreased, 7 deafness, and the case with deafness nerve reported) had incomplete relevant fields, especially dates of drug administration and event onset. A feature for nearly all the 19 cases was the use of the HAART regimen with multiple ART medicines. There were mainly co-prescriptions with stavudine (7 cases), zidovudine (6), ritonavir (5), and nevirapine (4). The additional medicines coprescribed with lamivudine were as recommended for the standard HAART regimen for the treatment of HIV/AIDS. In six cases sulphamethoxazole/ trimethoprim was co-prescribed. Two cases reported medicines with high ototoxic potential: anti-tuberculosis treatment (case 8) and amphotericin b (case 7) for fungal infection. The outcomes of the cases were as follows: recovered (1 case), recovering or recovered with sequelae (8), not recovered (3) and unknown (7). Unfortunately, dechallenge information was unclear in most of the reports of recovery or partial recovery. However, one report (case 19) mentioned a positive dechallenge. Three case reports are of interest because HIV/ AIDS was unlikely to be the cause of hearing loss. In one (case 12) HAART was given for post-exposure prophylaxis. Onset of the deafness was two to three weeks after the medicines were discontinued and the patient subsequently was recovering. The other two patients were given lamivudine monotherapy for chronic hepatitis at a lower dose of 100 mg daily (cases 1 and 5). It is of interest that one of these patients (case 1) was also on an herbal medicine with possible otoprotective effect, Silybum marianum, and had a time to onset of 5 years.13 The time to onset of the event for all the cases ranged from 4 days to 5 years (median 9 months). The other patient treated for hepatitis continued lamivudine and had not recovered at the time of reporting.""" ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_auditory_hypoacuity
+:Reports_with_auditory_hypoacuity rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                  OpenPVSignal:refers_to_adverse_effect :auditory_hypoacuity ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Reports with auditory hypoacuity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_deafness_unilateral
+:Reports_with_deafness_unilateral rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                  OpenPVSignal:refers_to_adverse_effect :deafness_unilateral ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Reports with deafness unilateral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_hearing_impaired
+:Reports_with_hearing_impaired rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :Overall_reports ;
+                               OpenPVSignal:refers_to_adverse_effect :hearing_impaired ;
+                               OpenPVSignal:has_count 7 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with hearing impaired" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_hearing_loss_sudden
+:Reports_with_hearing_loss_sudden rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                  OpenPVSignal:refers_to_adverse_effect :hearing_loss_sudden ;
+                                  OpenPVSignal:has_count 3 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "Reports with hearing loss sudden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_hypoacusis
+:Reports_with_hypoacusis rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :Overall_reports ;
+                         OpenPVSignal:refers_to_adverse_effect :hypoacusis ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with hypoacusis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ReyData
+:ReyData rdf:type owl:NamedIndividual ,
+                  obo:OAE_0001197 ;
+         OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+         OpenPVSignal:refers_to_drug :lamivudine ,
+                                     :nevirapine ,
+                                     :stavudine ;
+         mp:references :Ref.22 ;
+         OpenPVSignal:has_content "In another remarkable case-report, Rey et al. highlighted a case from France of a 23-year-old female medical student who was administered ART combination of stavudine-lamivudine-nevirapine for post-exposure prophylaxis. She was prescribed nevirapine for four days and the other two for one month. Less than two weeks after the end of NRTI treatment she developed sudden bilateral hearing loss, with partial recovery after several months. No abnormality was found despite an in-depth investigation. She remained HIV negative after six months.22 It is likely that this patient is case 12 of the VigiBase® case series in Table 1 " ;
+         rdfs:label "Rey data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#SchoutenData
+:SchoutenData rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001182 ;
+              OpenPVSignal:refers_to_class <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> ;
+              OpenPVSignal:refers_to_drug :didanosine ,
+                                          :zidovudine ;
+              mp:references :Ref.24 ;
+              OpenPVSignal:has_content "Schouten et al. performed a longitudinal, prospective study of the hearing changes following zidovudine and didanosine therapy, both NRTIs, over a 32-week period. This study measured changes in hearing levels at all frequencies and also in low- and high-frequency, pure tone averages. No significant changes were observed. Lamivudine was not evaluated in this study. 24 " ;
+              rdfs:label "Schouten data" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#SilybumMarianum
+:SilybumMarianum rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A05BA03 " ;
+                 rdfs:label "silybum marianum" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#SmidonReference
+:SmidonReference rdf:type owl:NamedIndividual ,
+                          obo:OAE_0001197 ;
+                 OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+                 OpenPVSignal:refers_to_class :HAART ,
+                                              <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> ;
+                 OpenPVSignal:refers_to_drug :zidovudine ;
+                 mp:references :Ref.12 ;
+                 OpenPVSignal:has_content "In 2001, Smidon et al. reported three cases of possible ototoxicity from NRTIs.12 In one of the cases the audiology record of a patient on zidovudine monotherapy (pre-HAART era) revealed a decline in hearing over a nine-year period from near upper limits of normal to severe bilateral deafness. There were no associated opportunistic infections though he had suffered from noise exposure a decade earlier" ,
+                                          "Smidon et al. was early to highlight this possibility in three case reports following ARTs. He noted confounding factors in the interpretation of the findings notably prior hearing loss from other causes including infections, history of noise exposure and older patients (≥35years)." ;
+                 rdfs:label "Smidon reference" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "5 years " ;
+              time:nominalPosition "years" ;
+              time:numericPosition 5 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset10
+:TimeToOnset10 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "4 years " ;
+               time:nominalPosition "years" ;
+               time:numericPosition 4 ;
+               rdfs:label "Time to onset 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset11
+:TimeToOnset11 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "14 months " ;
+               time:nominalPosition "months" ;
+               time:numericPosition 14 ;
+               rdfs:label "Time to onset 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset12
+:TimeToOnset12 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content """2 months
+(2-3 weeks after
+withdrawal)""" ;
+               time:nominalPosition "months" ;
+               time:numericPosition 2 ;
+               rdfs:label "Time to onset 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset13
+:TimeToOnset13 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "3 months " ;
+               time:nominalPosition "months" ;
+               time:numericPosition 3 ;
+               rdfs:label "Time to onset 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset14
+:TimeToOnset14 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "3-15 months* " ;
+               rdfs:label "Time to onset 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset15
+:TimeToOnset15 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "1-24 months* " ;
+               rdfs:label "Time to onset 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset16
+:TimeToOnset16 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "1-24 months* " ;
+               rdfs:label "Time to onset 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset17
+:TimeToOnset17 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "10 months " ;
+               time:nominalPosition "months" ;
+               time:numericPosition 10 ;
+               rdfs:label "Time to onset 17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset18
+:TimeToOnset18 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "2 months " ;
+               time:nominalPosition "months" ;
+               time:numericPosition 2 ;
+               rdfs:label "Time to onset 18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset19
+:TimeToOnset19 rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:has_content "4 days " ;
+               time:nominalPosition "days" ;
+               time:numericPosition 4 ;
+               rdfs:label "Time to onset 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "2 months " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 2 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "7 months " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 7 ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset4
+:TimeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "3 years " ;
+              time:nominalPosition "years" ;
+              time:numericPosition 3 ;
+              rdfs:label "Time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset5
+:TimeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "9 months " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 9 ;
+              rdfs:label "Time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset6
+:TimeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "10 months " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 10 ;
+              rdfs:label "Time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset7
+:TimeToOnset7 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "4 years " ;
+              time:nominalPosition "years" ;
+              time:numericPosition 4 ;
+              rdfs:label "Time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset8
+:TimeToOnset8 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "1 month " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 1 ;
+              rdfs:label "Time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#TimeToOnset9
+:TimeToOnset9 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "5 months " ;
+              time:nominalPosition "months" ;
+              time:numericPosition 5 ;
+              rdfs:label "Time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Tinnitus
+:Tinnitus rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "H93.1" ;
+          OpenPVSignal:has_MedDRA_code 10043882 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Tinnitus" ;
+          rdfs:label "tinnitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Usage_of_Lamivudine
+:Usage_of_Lamivudine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Usage ;
+                     OpenPVSignal:concerns_indication_for_use :ChronicHepatitis ,
+                                                              :HIV ;
+                     OpenPVSignal:refers_to_drug :lamivudine ;
+                     rdfs:label "Usage of Lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#VigiGradeTMCompletenessScore
+:VigiGradeTMCompletenessScore rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Statistical_Entity ;
+                              OpenPVSignal:has_content "0,18-1,0" ;
+                              rdfs:label "VigiGrade TM completeness score" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#abacavir
+:abacavir rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "J05AF06" ;
+          rdfs:label "abacavir" ,
+                     "abacavir  " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#amphotericinB
+:amphotericinB rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "J02AA01 " ;
+               rdfs:label "amphotericin b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D64.9" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#arthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M26.62" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#auditory_hypoacuity
+:auditory_hypoacuity rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10003787 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Auditory hypoacuity" ;
+                     rdfs:label "auditory hypoacuity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#blindness
+:blindness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "H54" ;
+           OpenPVSignal:has_MedDRA_code 10005169 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Blindness" ;
+           rdfs:label "blindness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Conclusion ;
+            OpenPVSignal:has_content "The evidence from VigiBase® and the fulfilment of most of the Bradford Hill criteria suggests an association between lamivudine and decreased hearing. The reports from 13 countries gives credence to the strength of the association and consistency. The biological plausibility, coherence and temporality of the association is evident from the mitochondrial toxicity of lamivudine and the exposure to event time observed. The fewer reports from patients being treated for chronic hepatitis, with a lower dose of lamivudine, may suggest a biological gradient. Other experimental findings - in vitro and clinical - and the analogy drawn from ototoxicity of anti-tuberculosis medicines further strengthen the evidence. Limitations are a lack of specificity as in most cases lamivudine was given in a HAART combination, although the lack of a consistent pattern of combinations in the reports suggests a role for lamivudine, and unclear documentation of dechallenge in most patients. Occurrence of decreased hearing in lamivudine monotherapy for chronic hepatitis in two cases lends further support of the association, while co-administration with other ART medicines in the majority of the cases might suggest a class effect or possibly potentiation. It would neither be ethical to use the medicines (NRTIs) as monotherapy in the treatment of retroviral disease to further confirm this effect, nor would it be prudent not to highlight this possible association. In effect, while the underlying primary disease in HIV/AIDS patients remains a possible cause, the role of the ART medicines should be given due consideration especially in susceptible patients." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#conditionAggravated
+:conditionAggravated rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code " F91.8" ;
+                     OpenPVSignal:has_MedDRA_code 10010264 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Condition aggravated" ;
+                     rdfs:label "condition aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#deafness
+:deafness rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "H91.90" ;
+          OpenPVSignal:has_MedDRA_code 10011878 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Deafness" ;
+          rdfs:label "deafness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#deafnessNerve
+:deafnessNerve rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10011889 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Deafness nerve" ;
+               rdfs:label "deafness nerve" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#deafness_unilateral
+:deafness_unilateral rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10048812 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Deafness unilateral" ;
+                     rdfs:label "deafness unilateral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#didanosine
+:didanosine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> ;
+            OpenPVSignal:has_ATC_code "J05AF02" ;
+            rdfs:label "didanosine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#discussion
+:discussion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Discussion ;
+            mp:references :Ref.13 ,
+                          :Ref.22 ,
+                          :Ref.23 ,
+                          :Ref.28 ,
+                          :Ref.29 ,
+                          :Ref.30 ,
+                          :Ref.31 ,
+                          :Ref.32 ;
+            OpenPVSignal:has_content "Human interaction and communication is facilitated by the sense of hearing. The lamivudine - hearing decreased combination poses a dilemma in the face of the standard of care which requires the use of a minimum of a triple regimen. The actions - beneficial and adverse - are inextricably linked since they act by the same mechanism. However, many health professionals realise that there may be a complex interplay of factors, including but not limited to a direct action of the virus causing the primary disease, opportunistic and other infections, (accelerated) ageing, environmental noise, past injuries with the ototoxic effect of medicines used in the treatment of HIV/AIDS and opportunistic infections (aminoglycosides for tuberculosis, amphotericin b for fungal infections). The impact of any given factor may be more profound depending on prevailing circumstances where they may chronically impair hearing or abruptly disrupt the process. Despite the difficulties of identifying and isolating these confounders, numerous findings suggest an effect by the ARTs, notably lamivudine, on auditory function. Using the Bradford Hill criteria, the consistency observed by the reports across the 13 countries underscores the importance of this combination.28 The number of cases assessed in-depth are limited by the quality of the ICSRs, with a number of reports excluded from further assessment due to the absence of important data such as the start and end dates of medication, time to onset of event, outcomes etc. The number may also be limited by low reporting from countries especially in Africa where the volume of ART use is high but the pharmacovigilance systems rudimentary. In this case series lamivudine was suspected to cause auditory dysfunction with varying levels of severity. As mentioned above the suggested mechanism of action is by the drug-induced mitochondrial DNA reduction, which gives credence to a biological plausibility, further supported by the link with ageing found in the primary disease state.23 The series may also suggest some biological gradient through the observation of limited cases from patients treated for chronic hepatitis with a much lower dose than those for HIV/AIDS. The experimental findings from the in vitro models highlighted the effects of lamivudine and other ARTs on cell assays. Again the outcome following dechallenge in one case is also suggestive of an association. Of interest is the finding of the enhanced effect of lamivudine containing combinations. This is also found in the database where ICSRs of lamivudine - hearing decreased exceeds those of other ARTs, although this observation must be interpreted with caution due to lack of denominator data. Furthermore, a 32-week longitudinal study with zidovudine/didanosine, using a battery of auditory tests, did not show significant changes in hearing. An interesting observation is the temporality with a time to onset ranging from 4 days to 5 years (median 9 months). The herbal medicine Silybum marianum used by the patient with the longest time to onset of 5 years has been shown in animal studies to protect against noise induced hearing loss.13 The occurrence of the event seems to occur against a background of the disease process. The other factors at play might include the genetic susceptibility of the patient, concomitant infections and the interaction with other medicines including the HAART drugs. The sudden onset found in some instances might support this, as in the case of the HIV negative medical student administered post-exposure prophylaxis.22 Incidence of hearing loss doubles in HIV positive patients with tuberculosis treated with ARTs. In this series there were three cases treated with anti-tuberculosis drugs. An analogy could also be inferred from the aminoglycoside-induced ototoxicity which involves the cochlear neuroepithelium leading to sensorineural hearing loss. The action on the mitochondria in the genetically pre-disposed patients can also be profound.29 The co-prescription of lamivudine with other NRTIs or NtRTIs might suggest the possibility of some interaction predisposing patients to high toxic levels. However, this class of medicines is not metabolised by the cytochrome P450 enzyme system and lamivudine is mainly (70%) eliminated by the kidneys.30 No significant pharmacokinetic interaction is known to occur with zidovudine or abacavir.31 It is also unlikely to interact with the protease inhibitors including lopinavir/ritonavir used predominantly in this series.32 However an increase in the AUC and decreased renal clearance was observed when co-administered with trimethoprim, while the inverse does not occur.30 A number of HIV/AIDS patients are co-administered co-trimoxazole, as was the case in this series. The low reporting rate from countries where there is a high burden of HIV/AIDS might be due to the rudimentary pharmacovigilance systems and the low index of suspicion of this event which has not been accorded due priority for the disease." ;
+            rdfs:label "discussion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#earDisorderNos
+:earDisorderNos rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code " H91.90" ;
+                OpenPVSignal:has_MedDRA_code 10014004 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Ear disorder" ;
+                rdfs:label "ear disorder nos" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#efavirenz
+:efavirenz rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AG03 " ;
+           rdfs:label "efavirenz" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#fluconazole
+:fluconazole rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "J02AC01 " ;
+             rdfs:label "fluconazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#fosamprenavir
+:fosamprenavir rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "J05AE07 " ;
+               rdfs:label "fosamprenavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hearingLoss
+:hearingLoss rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             rdfs:label "hearing loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hearing_decreased
+:hearing_decreased rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "H91.90" ;
+                   OpenPVSignal:has_MedDRA_code 10048865 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Hypoacusis" ;
+                   rdfs:label "hearing decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hearing_impaired
+:hearing_impaired rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_MedDRA_code 10019245 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Hearing impaired" ;
+                  rdfs:label "hearing impaired" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hearing_loss_sudden
+:hearing_loss_sudden rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10061373 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Sudden hearing loss" ;
+                     rdfs:label "hearing loss sudden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hydroxycarbamide
+:hydroxycarbamide rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "L01XX05 " ;
+                  rdfs:label "hydroxycarbamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#hypoacusis
+:hypoacusis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10048865 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Hypoacusis" ;
+            rdfs:label "hypoacusis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#indinavir
+:indinavir rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AE02" ;
+           rdfs:label "indinavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport1
+:infoForReport1 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "It is of interest that one of these patients (case 1) was also on an herbal medicine with possible otoprotective effect, Silybum marianum, and had a time to onset of 5 years.13" ,
+                                         "Treatment for chronic hepatitis" ;
+                rdfs:label "info for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport12
+:infoForReport12 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Case_Report_Information ;
+                 OpenPVSignal:has_content "In one (case 12) HAART was given for post-exposure prophylaxis. Onset of the deafness was two to three weeks after the medicines were discontinued and the patient subsequently was recovering." ,
+                                          "Post-exposure prophylaxis" ;
+                 rdfs:label "info for report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport15
+:infoForReport15 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Case_Report_Information ;
+                 OpenPVSignal:has_content "Reactions started before introduction of abacavir, zidovudine and didanosine" ;
+                 rdfs:label "info for report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport16
+:infoForReport16 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Case_Report_Information ;
+                 OpenPVSignal:has_content "Reactions started before introduction of didanosine, hydroxycarbamide and efavirenz" ;
+                 rdfs:label "info for report 16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport19
+:infoForReport19 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Case_Report_Information ;
+                 OpenPVSignal:has_content "Positive dechallenge" ;
+                 rdfs:label "info for report 19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport5
+:infoForReport5 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "Treatment for chronic hepatitis" ;
+                rdfs:label "info for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport7
+:infoForReport7 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "Antifungal therapy" ;
+                rdfs:label "info for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#infoForReport8
+:infoForReport8 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Case_Report_Information ;
+                OpenPVSignal:has_content "Anti-tuberculosis therapy" ;
+                rdfs:label "info for report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.10 ,
+                            :Ref.11 ,
+                            :Ref.12 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ,
+                            :Ref.7 ,
+                            :Ref.8 ,
+                            :Ref.9 ;
+              OpenPVSignal:has_content """Introduction 
+The drug-event combination of lamivudine and hearing decreased was prioritised for further clinical review in a signal detection screening of VigiBase®, the WHO international database of suspected adverse drug reactions, in September 2015. The screening focused on drug-event combinations sensitive to reporting patterns in mainly Africa, Asia, and Latin America and the Caribbean. Lamivudine is a nucleoside reverse transcriptase inhibitor (a cytidine analogue), first manufactured in 1988, and approved for use in 1995 by the U.S. Food and Drug Administration (FDA). Its introduction into the therapeutic management of HIV/AIDS coincided with the introduction of the Highly Active Antiretroviral Therapy (HAART) regimen which ended the era of zidovudine monotherapy.1-3 The lamivudine/zidovudine combination was approved soon after by the FDA in 1997. Lamivudine is used in combination therapy as backbone with other Nucleoside or Nucleotide Reverse Transcriptase Inhibitors (NRTI or NtRTI), with medicines of other classes notably the Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTI) and Protease Inhibitors (PI). The essential mechanism of action of lamivudine is by conversion intracellularly into its triphosphate form which competes with cytosine triphosphate for incorporation into the developing viral DNA strand. Consequently, the developing DNA chain terminates and arrests the development of the viral DNA. Toxicity of lamivudine results from mitochondrial dysfunction as it reduces mitochondrial DNA (mDNA) levels in various tissues, including the cochlear, via polymerase gamma (γ) – inhibition.4,5 The other use of lamivudine is in the treatment of chronic hepatitis B.6 However, the dosage regimen used in this instance is lower than that for the treatment of HIV/ AIDS. Of interest is a case control study from Oman, which showed a significant hearing loss in 95 patients with hepatitis B infection.7 Decreased hearing could be a peculiar druginduced reaction, the occurrence of which could ultimately result in defective communication. The observation of this reaction in HIV/AIDS patients followed the success of therapy which prolonged the life of these patients. It became necessary to address the quality of life of patients who hitherto had succumbed to their disease. Since its recognition, studies have shown that a substantial proportion of patients (27.5 - 33.5%) with HIV/AIDS do suffer from hearing loss in the course of the disease.8,9 There remains the ongoing debate as to the burden of hearing impairment in antiretroviral therapy (ART)-naïve patients.10 The potential for a drug-induced hearing loss in an HIV-infected individual at any stage of the disease was reported to be relatively high.11 Smidon et al. was early to highlight this possibility in three case reports following ARTs. He noted confounding factors in the interpretation of the findings notably prior hearing loss from other causes including infections, history of noise exposure and older patients (≥35years).12 Conclusions could not be reached from these early observations. Cohen et al. characterised hearing loss associated with HIV infection as having any of the following attributes: unilateral or bilateral, progressive or sudden in onset, conductive or sensorineural or mixed.9""" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#lamivudine
+:lamivudine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :HAART ;
+            OpenPVSignal:has_mechanism :Mechanism_of_lamivudine ,
+                                       :Ototoxicity_pf_Lamivudine ,
+                                       :PotentialInteractionsAmongLamivudineAndNRTIOrNtRTIs ;
+            OpenPVSignal:has_ATC_code "J05AF05 " ;
+            rdfs:label "lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#nelfinavir
+:nelfinavir rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "J05AE04" ;
+            rdfs:label "nelfinavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#neuropathyPeripheral
+:neuropathyPeripheral rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "G90.09" ;
+                      OpenPVSignal:has_MedDRA_code 10029331 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Neuropathy peripheral" ;
+                      rdfs:label "neuropathy peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#nevirapine
+:nevirapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "J05AG01" ;
+            rdfs:label "nevirapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ototoxicity
+:ototoxicity rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code " H91.03" ;
+             OpenPVSignal:has_MedDRA_code 10033109 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Ototoxicity" ;
+             rdfs:label "ototoxicity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#overallReportsForLamivudineAndDeafness
+:overallReportsForLamivudineAndDeafness rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                        OpenPVSignal:refers_to_adverse_effect :deafness ;
+                                        OpenPVSignal:refers_to_drug :lamivudine ;
+                                        OpenPVSignal:has_count 19 ;
+                                        OpenPVSignal:has_count_of_men 16 ;
+                                        OpenPVSignal:has_count_of_women 3 ;
+                                        OpenPVSignal:has_max_age 60 ;
+                                        OpenPVSignal:has_min_age 0 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "overall reports for lamivudine and deafness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#overallReportsForLamivudineAndDeafnessNerve
+:overallReportsForLamivudineAndDeafnessNerve rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                             OpenPVSignal:refers_to_adverse_effect :deafnessNerve ;
+                                             OpenPVSignal:refers_to_drug :lamivudine ;
+                                             OpenPVSignal:has_count 1 ;
+                                             OpenPVSignal:has_count_of_men 1 ;
+                                             OpenPVSignal:has_max_age 42 ;
+                                             OpenPVSignal:has_median_age "42.0"^^xsd:float ;
+                                             OpenPVSignal:has_min_age 42 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "overall reports for lamivudine and deafness nerve" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#overallReportsForLamivudineAndHearingDecreased
+:overallReportsForLamivudineAndHearingDecreased rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                                OpenPVSignal:refers_to_adverse_effect :hearing_decreased ;
+                                                OpenPVSignal:refers_to_drug :lamivudine ;
+                                                OpenPVSignal:has_count 26 ;
+                                                OpenPVSignal:has_count_of_men 12 ;
+                                                OpenPVSignal:has_count_of_women 13 ;
+                                                OpenPVSignal:has_max_age 62 ;
+                                                OpenPVSignal:has_min_age 0 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "overall reports for lamivudine and hearing decreased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#paraesthesia
+:paraesthesia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R20.2" ;
+              OpenPVSignal:has_MedDRA_code 10033775 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Paraesthesia" ;
+              rdfs:label "paraesthesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Reports_in_Vigibase ,
+                                                   :conclusion ,
+                                                   :discussion ,
+                                                   :introduction ,
+                                                   :summary ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report16 ,
+                                                              :Report17 ,
+                                                              :Report18 ,
+                                                              :Report19 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :FatalCasesForHearingDecreased ,
+                                                          :Overall_reports ,
+                                                          :PercentageOfPatientsHIVHavingHearingLoss ,
+                                                          :PercentageOfPatientsHIVHavingHearingloss-dataFromMarra ,
+                                                          :ReportsWithNevirapine ,
+                                                          :ReportsWithRitonavir ,
+                                                          :ReportsWithStavudine ,
+                                                          :ReportsWithZidovudine ,
+                                                          :Reports_with_auditory_hypoacuity ,
+                                                          :Reports_with_deafness_unilateral ,
+                                                          :Reports_with_hearing_impaired ,
+                                                          :Reports_with_hearing_loss_sudden ,
+                                                          :Reports_with_hypoacusis ,
+                                                          :VigiGradeTMCompletenessScore ,
+                                                          :overallReportsForLamivudineAndDeafness ,
+                                                          :overallReportsForLamivudineAndDeafnessNerve ,
+                                                          :overallReportsForLamivudineAndHearingDecreased ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_sulphamethoxazole_/_trimethoprim> ;
+          OpenPVSignal:refers_to_adverse_effect :hearingLoss ;
+          OpenPVSignal:refers_to_drug :lamivudine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :lamivudine ;
+          mp:supportedByData :BradfordHillCriteriaAssessment ,
+                             :Cohen_report ,
+                             :FirstReportsForHearingLossInHIVPatients ,
+                             :InVitroAssays ,
+                             :KakudaDataForMitochondria ,
+                             :KohanReports ,
+                             :LongitudinalStudy ,
+                             :MarraData ,
+                             :MonteData ,
+                             :OmanCaseControlStudy ,
+                             :PotentialConfoundersInTheCaseOfHIVPatientsExperiencingHearingLossApartFromLamivudine ,
+                             :PotentialInteractionsAmongLamivudineAndNRTIOrNtRTIs ,
+                             :Product_labels_for_lamivudine ,
+                             :ReyData ,
+                             :SchoutenData ,
+                             :SmidonReference ,
+                             <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#DataWithefavirenz,stavudine,Lamivudine> ,
+                             <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PharmacokineticInteractionsAmongLamivudineAndzidovudine,abacavir,LopinavirAndRitonavir> ;
+          OpenPVSignal:initially_identified_on "18/5/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#pyrazinamide
+:pyrazinamide rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J04AK01" ;
+              rdfs:label "pyrazinamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ritonavir
+:ritonavir rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AE03" ;
+           rdfs:label "ritonavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#stavudine
+:stavudine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AF04 " ;
+           rdfs:label "stavudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Lamivudine is a nucleoside reverse transcriptase inhibitor indicated for the treatment of HIV/AIDS as a component of the multi-drug highly active antiretroviral therapy (HAART) regimen, and also for the treatment of hepatitis B. The WHO international database of suspected adverse drug reactions, VigiBase®, holds 45 reports of lamivudine and hearing decreased which is not labelled as an adverse drug reaction. The individual case safety reports (ICSRs) are from 13 countries across all continents. After exclusion of poor quality reports, 19 of the ICSRs were evaluated in depth. In these, lamivudine was mostly co-prescribed with other ARTs, notably stavudine, zidovudine, ritonavir, and nevirapine. The time to onset ranged from 4 days to 5 years (median 9 months) with the main cluster at 2 to 10 months. The country-spread buttressed the strength and consistency of the association. The biological plausibility, coherence and temporality of the association is evident from the mitochondrial toxicity of lamivudine and the exposure to event time observed. The smaller number of reports from patients being treated for hepatitis B on a lower dose of lamivudine may suggest a biological gradient. The importance of the experimental findings of the effect of lamivudine in vitro on a cochlear cell model further supports the association; coupled with the occurrence of hearing impairment in a medical student following the use of lamivudine, stavudine, and nevirapine for post-exposure prophylaxis. Despite the inability to fully dissociate the effects of the co-administered ARTs, against a background of the confounding effects of the primary disease, the evidence is suggestive of a possible causal effect relationship of the lamivudine-hearing decreased combination." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#tenofovir
+:tenofovir rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "J05AF07 " ;
+           rdfs:label "tenofovir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#tipranavir
+:tipranavir rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "J05AE09 " ;
+            rdfs:label "tipranavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#torticollis
+:torticollis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "M43.6" ;
+             OpenPVSignal:has_MedDRA_code 10044074 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Torticollis" ;
+             rdfs:label "torticollis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#visionAbnormal
+:visionAbnormal rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "H54" ;
+                OpenPVSignal:has_MedDRA_code 10047571 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Visual impairment" ;
+                rdfs:label "vision abnormal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#vitaminB12Deficiency
+:vitaminB12Deficiency rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "D51.9" ;
+                      OpenPVSignal:has_MedDRA_code 10047609 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Vitamin B12 deficiency" ;
+                      rdfs:label "Vitamin B12 deficiency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#zalcitavine
+:zalcitavine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "J05AF03 " ;
+             rdfs:label "zalcitavine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#zidovudine
+:zidovudine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> ;
+            OpenPVSignal:has_ATC_code "J05AF01" ;
+            rdfs:label "zidovudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#DataWithefavirenz,stavudine,Lamivudine
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#DataWithefavirenz,stavudine,Lamivudine> rdf:type owl:NamedIndividual ,
+                                                                                                                              obo:OAE_0001197 ;
+                                                                                                                     OpenPVSignal:refers_to_drug :efavirenz ,
+                                                                                                                                                 :lamivudine ,
+                                                                                                                                                 :stavudine ,
+                                                                                                                                                 <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+                                                                                                                     mp:references :Ref.23 ;
+                                                                                                                     OpenPVSignal:has_content "In another case in this series, a 49-year-old veteran initiated with efavirenz, stavudine, lamivudine and sulphamethoxazole/trimethoprim developed symptoms about four months after commencement which worsened over a two-month period. On discontinuation of stavudine and start of zidovudine, there was partial resolution of symptoms after one month. It was postulated that myriad factors, including ageing, infection and hearing loss, were associated with mitochondrial DNA mutations, and since NRTIs cause mitochondria toxicity, synergy with mitochondrial abnormalities induced by these factors may produce enhanced auditory dysfunction as has been earlier reported.23  " ;
+                                                                                                                     rdfs:label "Data with efavirenz, stavudine, lamivudine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Non-Nucleoside_Reverse_Transcriptase_Inhibitors_(NNRTI)
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Non-Nucleoside_Reverse_Transcriptase_Inhibitors_(NNRTI)> rdf:type owl:NamedIndividual ,
+                                                                                                                                               OpenPVSignal:DrugClass ;
+                                                                                                                                      OpenPVSignal:has_ATC_code "J05AG " ;
+                                                                                                                                      rdfs:label "Non-Nucleoside Reverse Transcriptase Inhibitors (NNRTI)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Nucleoside/Nucleotide_Reverse_Transcriptase_Inhibitors_(NRTI_or_NtRTI)> rdf:type owl:NamedIndividual ,
+                                                                                                                                                              OpenPVSignal:DrugClass ;
+                                                                                                                                                     OpenPVSignal:has_mechanism :PotentialInteractionsAmongLamivudineAndNRTIOrNtRTIs ;
+                                                                                                                                                     OpenPVSignal:has_ATC_code "J05AF" ;
+                                                                                                                                                     rdfs:label "Nucleoside/Nucleotide Reverse Transcriptase Inhibitors (NRTI or NtRTI)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PharmacokineticInteractionsAmongLamivudineAndzidovudine,abacavir,LopinavirAndRitonavir
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#PharmacokineticInteractionsAmongLamivudineAndzidovudine,abacavir,LopinavirAndRitonavir> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                              obo:OAE_0001197 ;
+                                                                                                                                                                     mp:references :Ref.32 ;
+                                                                                                                                                                     OpenPVSignal:has_content "No significant pharmacokinetic interaction is known to occur with zidovudine or abacavir.31 It is also unlikely to interact with the protease inhibitors including lopinavir/ritonavir used predominantly in this series" ;
+                                                                                                                                                                     rdfs:label "Pharmacokinetic interactions among lamivudine and zidovudine, abacavir, lopinavir and ritonavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Protease_Inhibitors_(PI)
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Protease_Inhibitors_(PI)> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:DrugClass ;
+                                                                                                       OpenPVSignal:has_ATC_code "J05AE" ;
+                                                                                                       rdfs:label "Protease Inhibitors (PI)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_sulphamethoxazole_/_trimethoprim
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#Reports_with_sulphamethoxazole_/_trimethoprim> rdf:type owl:NamedIndividual ,
+                                                                                                                                     OpenPVSignal:Reports_group ;
+                                                                                                                            OpenPVSignal:is_subgroup_of :Overall_reports ;
+                                                                                                                            OpenPVSignal:refers_to_drug <http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> ;
+                                                                                                                            OpenPVSignal:has_count 6 ;
+                                                                                                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                            rdfs:label "Reports with sulphamethoxazole / trimethoprim" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#levodopa/benserazideHydrochloride
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#levodopa/benserazideHydrochloride> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Drug ;
+                                                                                                                OpenPVSignal:has_ATC_code "N04BA02 " ;
+                                                                                                                rdfs:label "levodopa/benserazide hydrochloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ritonavir/lopinavir
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#ritonavir/lopinavir> rdf:type owl:NamedIndividual ,
+                                                                                                           OpenPVSignal:Drug ;
+                                                                                                  OpenPVSignal:has_ATC_code "J05AR10" ;
+                                                                                                  rdfs:label "ritonavir/lopinavir" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim
+<http://purl.org/OpenPVSignal/Signals/2017_1_lamivudine_hearingDecreased.owl#sulphamethoxazole/trimethoprim> rdf:type owl:NamedIndividual ,
+                                                                                                                      OpenPVSignal:Drug ;
+                                                                                                             OpenPVSignal:has_ATC_code "J01EE01" ;
+                                                                                                             rdfs:label "sulphamethoxazole/trimethoprim" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

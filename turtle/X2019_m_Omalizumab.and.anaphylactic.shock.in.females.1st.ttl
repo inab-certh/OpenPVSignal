@@ -1,0 +1,582 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl> rdf:type owl:Ontology ;
+                                                                                 owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                 rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/311036/"^^xsd:anyURI ;
+                                                                                 rdfs:label "Omalizumab and anaphylactic shock in females"^^rdfs:Literal ;
+                                                                                 owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#AnaphylacticShock
+:AnaphylacticShock rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T88.6" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10002199 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Anaphylactic shock" ;
+                   rdfs:label "Anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+                           mp:references :Ref.11 ,
+                                         :Ref.12 ,
+                                         :Ref.13 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anaphylactic shock is a very serious clinical condition, with a high risk of death, that is unlikely to be confounded with other adverse reactions. As omalizumab is administered subcutaneously, an anaphylactic reaction with shock takes place in a narrow time window, from few minutes to some hours. After the review of the imputability of all cases, the difference between males and females in the number of anaphylactic shock is still large. In the literature we did not find any studies that investigated the association between the use of omalizumab and gender differences in the occurrence of anaphylaxis. Two studies showed a greater frequency of anaphylaxis for females among users of N-acetylcysteine12 and of neuromuscular blocking drugs.13 Recently, a study on mice has shown an increase in the severity of anaphylaxis associated with the estrogens.11 The authors deemed that the anaphylactic response was more pronounced in female than in male mice. The presence of an animal model that suggests a gender difference in the sensitivity to anaphylaxis can be regarded as supportive of the biological plausibility of the signal. However, it is also important to consider that, as clearly indicated by UMC colleagues, the process of signal detection requires that a significant number of subgroups are routinely screened for a large number of drugs and suspected reactions. This process inevitably carries a risk of highlighting anomalous findings only by chance (false positive signals). In conclusion, in my opinion the possible signal “anaphylactic shock - omalizumab - female gender”, even though potentially attributable to the role of chance, should be taken into account. It would be useful to assess the consistency of the signal over time and, if confirmed, to carry out ad hoc observational studies." ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Dosage_of_omalizumab
+:Dosage_of_omalizumab rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Dosage> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :allergicAsthma ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_interval_between_administrations> <http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#2_weeks_intervals> ,
+                                                                                                                 <http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#4_weeks_intervals> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The dose applied for is 150 – 375 mg subcutaneously, every two or four weeks, depending on the baseline serum total IgE level, measured before the start of the treatment, and body weight." ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dose_value> "150 mg" ,
+                                                                                           "375 mg" ;
+                      rdfs:label "Dosage of omalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Dr_Mauro_Venegoni
+:Dr_Mauro_Venegoni rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Italy" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Mauro" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Venegoni" ;
+                   rdfs:label "Dr Mauro Venegoni" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#EU_SPCs
+:EU_SPCs rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+         mp:references :Ref.1 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In the EU SPCs “Anaphylaxis” is mentioned. The EU SPC evaluates, on the basis of an exposure amounting to 566,923 patients/year, a reporting rate of 0.2%. However, there is no specific mention that females could be at an increased risk for anaphylactic shock.1" ;
+         rdfs:label "EU SPCs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Literature_information> ;
+                          mp:references :Ref.1 ,
+                                        :Ref.10 ,
+                                        :Ref.11 ,
+                                        :Ref.4 ,
+                                        :Ref.5 ,
+                                        :Ref.6 ,
+                                        :Ref.7 ,
+                                        :Ref.8 ,
+                                        :Ref.9 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anaphylaxis is labelled in the US Summary of Product Characteristics (SPCs) with a boxed warning that suggests measures to cope with this risk.4 In the EU SPCs “Anaphylaxis” is mentioned. The EU SPC evaluates, on the basis of an exposure amounting to 566,923 patients/year, a reporting rate of 0.2%. However, there is no specific mention that females could be at an increased risk for anaphylactic shock.1 Several studies are present in the literature, indicating a higher incidence of anaphylaxis in the female gender in association with food,5 drugs6-8 and contrast media.9 On the other hand, in another study, males were more implicated in anaphylaxis.10 Recently, an in vivo study using mice, suggested that females are more prone to anaphylactic shock, providing a possible mechanistic explanation. The greater severity of anaphylaxis in female mice was eliminated after pretreatment with an estrogen receptor antagonist or ovariectomy, but restored after administration of estradiol in ovariectomized mice, demonstrating that the sex-specific differences were attributable to the female steroid estradiol.11" ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_subject> "Literature and Labelling" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Mechanism_of_Omalizumab
+:Mechanism_of_Omalizumab rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :introduction ;
+                         mp:references :Ref.1 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Omalizumab is a recombinant humanized anti-IgE antibody that inhibits the activity of IgE, thus preventing the binding of IgE to high-affinity IgE receptor (FcεRI) on the surface of mast cells and basophils. The reductions in surface bound IgE on FcεRI bearing cells limits the release of mediators of the allergic response." ;
+                         rdfs:label "Mechanism of Omalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Omalizumab
+:Omalizumab rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :allergicAsthma ,
+                                                                                        :chronicSpontaneousUrticaria ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_Omalizumab ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "subcutaneous" ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "R03DX05" ;
+            rdfs:label "Omalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Omalizumab_and_anaphylactic_shock_in_females_WHO_UMC_report
+:Omalizumab_and_anaphylactic_shock_in_females_WHO_UMC_report rdf:type owl:NamedIndividual ,
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Dr_Mauro_Venegoni ;
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :PV_signal_for_Omalizumab_and_anaphylactic_shock_in_females ;
+                                                             mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/03/2019"^^xsd:date ;
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association probable" ;
+                                                             rdfs:label "Omalizumab and anaphylactic shock in females WHO UMC report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Omalizumab_intake_form
+:Omalizumab_intake_form rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Intake_Form> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "subcutaneous" ;
+                        rdfs:label "Omalizumab intake form" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#OverallVigibaseReports
+:OverallVigibaseReports rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :asthma ,
+                                                                                                    :chronicSpontaneousUrticaria ,
+                                                                                                    :mastocytosis ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 105 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 14 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 91 ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_expected_count_of_men> "32.0"^^xsd:float ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_expected_count_of_women> "61.0"^^xsd:float ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                        rdfs:label "Overall Vigibase reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#PV_signal_for_Omalizumab_and_anaphylactic_shock_in_females
+:PV_signal_for_Omalizumab_and_anaphylactic_shock_in_females rdf:type owl:NamedIndividual ,
+                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Discussion_and_conclusion ,
+                                                                                                                                        :Pathophysiology_of_anaphylactic_shock ,
+                                                                                                                                        :Results ,
+                                                                                                                                        :introduction ,
+                                                                                                                                        :summary ;
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :OverallVigibaseReports ,
+                                                                                                                                               :Reporting_rate ,
+                                                                                                                                               :ReportsJudgedDoubtfulFromImputabilityProcess ,
+                                                                                                                                               :ReportsJudgedPossibleFromImputabilityProcess ,
+                                                                                                                                               :ReportsJudgedProbableFromImputabilityProcess ,
+                                                                                                                                               :ReportsJudgedUnrelatedFromImputabilityProcess ,
+                                                                                                                                               :ReportsNotAssessable ;
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                                                            mp:supportedByData :EU_SPCs ,
+                                                                               :Studies_indicating_higher_incidence_in_females ,
+                                                                               :Study_indicating_higher_incidence_in_males ,
+                                                                               :US_SPCs ,
+                                                                               :mouse_model_for_anaphylaxis ;
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/03/2019" ;
+                                                            rdfs:label "PV signal for Omalizumab and anaphylactic shock in females" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Pathophysiology_of_anaphylactic_shock
+:Pathophysiology_of_anaphylactic_shock rdf:type owl:NamedIndividual ,
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """\"Anaphylactic shock is a severe clinical
+manifestation that occurs suddenly and may cause death. It typically causes more than one of the
+following: an itchy rash, throat or tongue swelling,
+shortness of breath, vomiting, lightheadedness,
+low blood pressure and loss of consciousness.
+These symptoms occur typically over minutes to
+hours. Many drugs can induce anaphylactic shock,
+either with an immunological or an “idiosyncratic”
+(not immunological) mechanism.\"""" ;
+                                       rdfs:label "Pathophysiology of anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "1. European Medicines Agency: Summary of Product Characteristics for omalizumab (Xolair®). Available from: http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_- _Product_Information/ human/000606/WC500057298.pdf. Accessed: 6 March 2018. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "10. Kim SY, Kim MH, Cho YJ. Different clinical features of anaphylaxis according to cause and risk factors for severe reactions. Allergol Int. 2018 Jan;67(1):96-102. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "11. Hox V, Desai A, Bandara G, Gilfillan AM, Metcalfe DD, Olivera A. Estrogen increases the severity of anaphylaxis in female mice through enhanced endothelial nitric oxide synthase expression and nitric oxide production. J Allergy Clin Immunol. 2015 Mar;135(3):729-36. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "12. Pakravan N, Waring WS, Sharma S, Ludlam C, Megson I, Bateman DN. Risk factors and mechanisms of anaphylactoid reactions to acetylcysteine in acetaminophen overdose. Clin Toxicol (Phila). 2008 Sep;46(8):697-702. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "13. Light KP, Lovell AT, Butt H, Fauvel NJ, Holdcroft A. Adverse effects of neuromuscular blocking agents based on yellow card reporting in the U.K.: are there differences between males and females? Pharmacoepidemiol Drug Saf. 2006 Mar;15(3):151-60. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "2. Committee for Medicinal Products for Human Use. November 2005 Plenary Meeting. Monthly Report. Available from: http://www.ema.europa.eu/docs/ en_GB/document_library/Committee_meeting _ report/2009/10/WC500006374.pdf. Accessed: 6 March 2018. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "3. Committee for Medicinal Products for Human Use. Summary of opinion: omalizumab (Xolair®), 2014. Available from: http://www.ema.europa.eu/docs/ en_GB/document_library/Summary_of_opinion / human/000606/WC500160092.pdf. Accessed: 6 March 2018. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "4. US Food and Drug Administration: Product label for omalizumab (Xolair®). Available from: https://www.accessdata.fda.gov/drugsatfda_d ocs/ label/2016/103976s5225lbl.pdf. Accessed: 6 March 2018. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "5. Ross MP, Ferguson M, Street D, Klontz K, Schroeder T, Luccioli S. Analysis of foodallergic and anaphylactic events in the National Electronic Injury Surveillance System. J Allergy Clin Immunol. 2008;21:166–71. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "6. Webb LM, Lieberman P. Anaphylaxis: a review of 601 cases. Ann Allergy Asthma Immunol. 2006;97:39–43. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "7. Liew WK, Williamson E, Tang ML. Anaphylaxis fatalities and admissions in Australia. J Allergy Clin Immunol. 2009;123:434–42. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "8. International Collaborative Study of Severe Anaphylaxis. Risk of anaphylaxis in a hospital population in relation to the use of various drugs: an international study. Pharmacoepidemiol Drug Saf. 2003; 12:195– 202. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "9. Kvedariene V, Martins P, Rouanet L, Demoly P. Diagnosis of iodinated contrast media hypersensitivity: results of a 6-year period. Clin Exp Allergy. 2006;36:1072–7. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Reporting_rate
+:Reporting_rate rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Statistical_Entity> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 0.002 ;
+                rdfs:label "Reporting rate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#ReportsJudgedDoubtfulFromImputabilityProcess
+:ReportsJudgedDoubtfulFromImputabilityProcess rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallVigibaseReports ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 3 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 0 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 3 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_evaluation> "Doubtful" ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                              rdfs:label "Reports judged Doubtful from imputability process" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#ReportsJudgedPossibleFromImputabilityProcess
+:ReportsJudgedPossibleFromImputabilityProcess rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallVigibaseReports ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 15 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 2 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 13 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_evaluation> "Possible" ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                              rdfs:label "Reports judged Possible from imputability process" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#ReportsJudgedProbableFromImputabilityProcess
+:ReportsJudgedProbableFromImputabilityProcess rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallVigibaseReports ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 34 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 7 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 27 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_evaluation> "Probable" ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                              rdfs:label "Reports judged Probable from imputability process" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#ReportsJudgedUnrelatedFromImputabilityProcess
+:ReportsJudgedUnrelatedFromImputabilityProcess rdf:type owl:NamedIndividual ,
+                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallVigibaseReports ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 10 ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 2 ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 8 ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_evaluation> "Unrelated" ;
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                               rdfs:label "Reports judged Unrelated from imputability process" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#ReportsNotAssessable
+:ReportsNotAssessable rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallVigibaseReports ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 43 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 3 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 40 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_evaluation> "Not assessable" ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                      rdfs:label "Reports Not assessable " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Results
+:Results rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """The case series consisted of 91 reports vs 61
+expected for females and 14 vs 32 expected for
+males from VigiBase, the WHO global database of
+individual case safety reports (ICSRs).b All cases
+have been reviewed to determine the imputability
+on the basis of the data contained in the reports,
+with or without narrative.
+Among the cases which report the indication of use,
+the majority were being treated for asthma, the
+rest mainly for chronic idiopathic urticaria, and a
+few for mastocytosis.
+At the end of the imputability process, cases
+judged “possible” or “probable” came to nine for
+males and 40 for females (Table 1), with a M/F
+ratio of 1:4.4 instead of 1:6.5 (still a fairly high
+ratio). Three cases in males and 40 in females were
+judged “not assessable”, because of lack of data to
+carry out an imputability decision, but also because
+of data erased from reports for reasons of privacy.
+Two cases concerning males and 11 concerning
+females resulted in “unrelated” or “doubtful”. Cases
+with anaphylactic shock that occurred more than 24
+hours after the omalizumab administration were
+considered as “unrelated”.We have compared the male reports for this drugADR combination and the disease status: they
+were very similar to the female subgroup of
+interest (the indication for omalizumab being in
+both severe asthma). We also did not find any
+alternative reason to explain why the female
+subgroup stood out in this drug-ADR combination.""" ;
+         rdfs:label "Results" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Studies_indicating_higher_incidence_in_females
+:Studies_indicating_higher_incidence_in_females rdf:type owl:NamedIndividual ,
+                                                         <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                                                mp:references :Ref.12 ,
+                                                              :Ref.13 ,
+                                                              :Ref.5 ,
+                                                              :Ref.6 ,
+                                                              :Ref.7 ,
+                                                              :Ref.8 ,
+                                                              :Ref.9 ;
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """Several studies are present in the literature, indicating a higher incidence of anaphylaxis in the female gender in association with food,5 drugs6-8 and contrast media.9
+Two studies showed a greater frequency of anaphylaxis for females among users of N-acetylcysteine12 and of neuromuscular blocking drugs.13""" ;
+                                                rdfs:label "Studies indicating higher incidence in females" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Study_indicating_higher_incidence_in_males
+:Study_indicating_higher_incidence_in_males rdf:type owl:NamedIndividual ,
+                                                     <http://purl.obolibrary.org/obo/OAE_0001182> ;
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                                            mp:references :Ref.10 ;
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "On the other hand, in another study, males were more implicated in anaphylaxis.10" ;
+                                            rdfs:label "Study indicating higher incidence in males" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#US_SPCs
+:US_SPCs rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+         mp:references :Ref.4 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anaphylaxis is labelled in the US Summary of Product Characteristics (SPCs) with a boxed warning that suggests measures to cope with this risk.4" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/United_States" ;
+         rdfs:label "US SPCs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Upsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Upsalla Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Usage_of_omalizumab
+:Usage_of_omalizumab rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :allergicAsthma ,
+                                                                                                 :chronicSpontaneousUrticaria ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_drug_intake> :Omalizumab_intake_form ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dosage> :Dosage_of_omalizumab ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Omalizumab ;
+                     rdfs:label "Usage of omalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#allergicAsthma
+:allergicAsthma rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "J45" ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10001705 ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Allergic asthma" ;
+                rdfs:label "allergic asthma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#asthma
+:asthma rdf:type owl:NamedIndividual ,
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "J45" ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10003553 ;
+        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Asthma" ;
+        rdfs:label "asthma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#chronicSpontaneousUrticaria
+:chronicSpontaneousUrticaria rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "L50.8" ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10072757 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Chronic spontaneous urticaria" ;
+                             rdfs:label "chronic spontaneous urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anaphylactic shock is a severe clinical manifestation that occurs suddenly and may cause a Clarified following company response to signal death. It typically causes more than one of the following: an itchy rash, throat or tongue swelling, shortness of breath, vomiting, lightheadedness, low blood pressure and loss of consciousness. These symptoms occur typically over minutes to hours.  Many drugs can induce anaphylactic shock, either with an immunological or an “idiosyncratic” (not immunological) mechanism. Omalizumab is a recombinant humanized anti-IgE antibody that inhibits the activity of IgE, thus preventing the binding of IgE to high-affinity IgE receptor (FcεRI) on the surface of mast cells and basophils. The reductions in surface bound IgE on FcεRI bearing cells limits the release of mediators of the allergic response. 1 Omalizumab is indicated as add-on therapy to improve asthma control in adult and adolescent patients (12 years of age and above) with severe persistent allergic asthma.  The dose applied for is 150 – 375 mg subcutaneously, every two or four weeks, depending on the baseline serum total IgE level, measured before the start of the treatment, and body weight . The drug has been approved in the EU since October 2005.2 Since 2014 in the EU, omalizumab is also indicated as add-on therapy for the treatment of chronic spontaneous urticaria in adult and adolescent patients (12 years and above) with inadequate response to H1 antihistamine treatment .3 A suspected signal (combination of omalizumab and anaphylactic shock in females) arose from a screening conducted in October 2017 at the Uppsala Monitoring Centre (UMC), when the analyses focused on various drug-ADR combinations. Different covariates such as age, BMI, gender and country were analyzed. The aim was to detect potential signals for subgroups of patients (e.g. underweight/overweight for the BMI covariate) and to characterize possible risk factors for adverse drug reactions. The combination omalizumab and anaphylactic shock stood out for females when compared to the overall reporting rate of the female subgroup." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#mastocytosis
+:mastocytosis rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "Q82.2" ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10026891 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Mastocytosis" ;
+              rdfs:label "mastocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#mouse_model_for_anaphylaxis
+:mouse_model_for_anaphylaxis rdf:type owl:NamedIndividual ,
+                                      <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :AnaphylacticShock ;
+                             mp:references :Ref.11 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """Recently, an in vivo study using 
+mice, suggested that females are more prone to 
+anaphylactic shock, providing a possible 
+mechanistic explanation. The greater severity of 
+anaphylaxis in female mice was eliminated after 
+pretreatment with an estrogen receptor antagonist 
+or ovariectomy, but restored after administration of 
+estradiol in ovariectomized mice, demonstrating 
+that the sex-specific differences were attributable 
+to the female steroid estradiol.11
+Recently, a study on mice has shown an increase
+in the severity of anaphylaxis associated with the
+estrogens.11 The authors deemed that the
+anaphylactic response was more pronounced in
+female than in male mice.""" ;
+                             rdfs:label "mouse model for anaphylaxis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Summary> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Omalizumab is an anti-IgE antibody indicated for moderate to severe persistent allergic asthma and chronic idiopathic urticaria resistant to H1 antihistamine treatment. One of the adverse reactions of omalizumab is anaphylaxis, and in particular anaphylactic shock, which occurs suddenly and may cause death. Anaphylaxis is labelled in the US Summary of Product Characteristics (SPCs) and in the EU SPCs. A screening conducted in October 2017 at the Uppsala Monitoring Centre (UMC), utilizing VigiBase, the WHO global database of individual case safety reports (ICSRs), showed a large gender asymmetry of cases of anaphylactic shock among users of omalizumab (91 reports vs 61 expected for females; and 14 reports vs 32 expected for males)a. All reports of “omalizumab – anaphylactic shock” present in VigiBase have been reviewed to determine the imputability on the basis of the data contained in the reports, with or without narrative. At the end of the imputability process, nine reports for males and 40 for females were judged as “possible” or “probable”, with a M/F ratio of 1:4.4 instead of 1:6.5. Therefore, the difference between males and females in the number of anaphylactic shock remains large even after the analysis of the imputability. Recently, one in vivo study using mice suggested that females are more prone to anaphylactic shock, providing a possible mechanistic explanation. The presence of an animal model that suggests a gender difference in the sensitivity to anaphylaxis can be regarded as supportive of the biological plausibility of the signal. However, it is also important to consider that the process of signal detection requires that a significant number of subgroups are routinely screened for a large number of drugs and suspected reactions. This process inevitably carries a risk of highlighting anomalous findings only by chance (false positive signals). In conclusion, the signal “anaphylactic shock - omalizumab - female gender”, even though potentially attributable to the role of chance, should be taken into account and the consistency of the signal over time should be assessed." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#2_weeks_intervals
+<http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#2_weeks_intervals> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.w3.org/2006/time#DurationDescription> ;
+                                                                                                  <http://www.w3.org/2006/time#weeks> 2 ;
+                                                                                                  rdfs:label "2 weeks intervals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#4_weeks_intervals
+<http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#4_weeks_intervals> rdf:type owl:NamedIndividual ,
+                                                                                                           <http://www.w3.org/2006/time#DurationDescription> ;
+                                                                                                  <http://www.w3.org/2006/time#weeks> 4 ;
+                                                                                                  rdfs:label "4 weeks intervals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Xolair®_(omalizumab)_Novartis_comment_on_draft_Signal_from_UMC_–_WHO_Collaborating_Centre_for__International_Drug_Monitoring
+<http://purl.org/OpenPVSignal/Signals/2019_1_omalizumab_anaphylactic_shock.owl#Xolair®_(omalizumab)_Novartis_comment_on_draft_Signal_from_UMC_–_WHO_Collaborating_Centre_for__International_Drug_Monitoring> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Response_to_Pharmacovigilance_Signal_Report> ;
+                                                                                                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_pharmacovigilance_signal_report> :Omalizumab_and_anaphylactic_shock_in_females_WHO_UMC_report ;
+                                                                                                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """Xolair® (omalizumab) Novartis comment on draft Signal from UMC – WHO Collaborating Centre for International Drug Monitoring Chief Medical Office and Patient Safety. 
+Response document. 23-March-2018. Property of Novartis. Confidential. May not be used, divulged, published or otherwise disclosed without the consent of Novartis
+
+Background 
+The signal report by the Uppsala Monitoring Centre (UMC) investigated the number of Individual Case Safety Reports (ICSRs) of anaphylactic shock reported for female and male omalizumab users. They observed a gender asymmetry with 4.4-6.5 times more female than male ICSRs which was discussed in the context of published animal and human data providing potential explanations for a higher anaphylaxis risk in women. The signal could not be validated with available data. UMC finally concluded that, the possible signal “anaphylactic shock - omalizumab - female gender” though potentially attributable to the role of chance, should be taken into account. It would be useful to assess the consistency of the signal over time. 
+
+Evaluation by Novartis 
+Anaphylaxis including anaphylactic shock is a known and well-characterized identified risk for omalizumab by: 1) a large clinical trial database (>15,500 patients) 2) post-marketing exposure (>950,000 PTY) and two specific observational studies - XPAND (Lieberman 2016) and XPAND 2 (Lieberman 2017). Gender asymmetry in reporting of anaphylaxis with Xolair is not a new finding. In the XPAND study (a case controlled study) it was observed that there were more females (N=27) [90%] who experienced anaphylaxis than male (N=3). A similar finding was observed in the XPAND 2 study Male/Female (M/F) ratio: 1:5.25 (16% vs. 84%). A preponderance of female anaphylaxis case subjects has also been reported previously from omalizumab anaphylaxis case data in the FDA adverse event reporting system (AERS) from 2003-2006 (82% female, Limb 2007) and 2007-2008 (76% female, Lin 2009). The analysis done by UMC is based on the M/F ratio of absolute number of ICSRs in Vigibase and does not consider the back ground population or the extent of exposure by M/F. A M/F ratio based on the absolute number of anaphylaxis reports for omalizumab ignoring any gender difference in the treated population is only an appropriate measure of risk ratio if, • Overall number of omalizumab reports for females and males is the same • There is no gender-specific differential reporting However, the M/F ratio in omalizumab prescribing data (PSUR with cut-off date 31 Dec 2017) is approximately 1:2.1 (32% male vs. 67% female; gender unknown in 1%). Thus, based on prescriptions, approximately two fold more reports are expected for females (if nondifferential reporting). We also see the same pattern in all adverse events reported in Novartis Safety Database with an M/F ratio of 1:2.3 (18,866 males vs 43,872 females).
+
+Novartis safety database 
+Cumulatively until 31 Dec 2017, the Novartis Safety database included 191 cases of MedDRA PT “Anaphylactic shock’. Gender was reported in 181 cases (153 female and 28 male). The reported indication was asthma in 60%, CSU in 18% and other indications in 22% of the reports. The M/F ratio of anaphylactic shock cases was 1:5.5 (28/153) which is in line with UMC’s observation. To take into account that omalizumab is prescribed two times more often two females (67%) than to males (32%), Novartis has calculated the reporting rate (RR) of anaphylactic shock by gender based on post-marketing exposure (Table 2-1). Based on the RR, the M/F ratio reduced to 1:2.6 (0.09/0.24).
+
+Literature 
+Gonzalez-Perez et al. 2010 investigated the risk of anaphylaxis in large cohorts of patients with and without asthma based on the UK THIN (The Health Improvement Network) database. They found women with severe asthma are at approximately 2- fold higher risk of anaphylaxis than men with severe asthma (Incidence rate ratio: 1.91; 95% CI: 1.18-3.15). This study also showed that the risk difference between male and female was higher in the age group of 10-59 years. The risk difference was reduced extensively in the age group 60 years and beyond. A review article (M Tejedor-Alonso 2015) looked into the epidemiology of anaphylaxis based on data published in last 10 years. Several publications who examined a representative sample from primary care in UK, found that the frequency of anaphylaxis is greater in males until 10-15 year of age but women experienced more episodes after the age of 15 years. The in vivo study (Hox V et al, 2015) demonstrated sex-dependent differences in a Passive Systemic Anaphylaxis (PSA) mouse model, along with role that estradiol may play in the severity and/or duration of anaphylaxis. The investigators have identified a possible mechanism of action, an estradiol-dependent upregulation of eNOS (endothelial nitric oxide synthase) and nitric oxide production affecting the severity and/or duration of anaphylaxis in female versus male mice.
+
+Discussion and Conclusion 
+The risk of anaphylaxis including anaphylactic shock is an identified risk for omalizumab and well characterized. The current risk minimization measures in the labeling documents are adequate to manage the risk. Novartis acknowledges the higher reporting of anaphylactic shock in females compared to male in the terms of absolute number of cases (M/F = 1:5.5 based on Novartis safety database without immutability). However, comparing RRs by exposure, the M/F ratio became 1:2.6. This ratio is consistent with the higher anaphylaxis risk in women with severe asthma. (Gonzalez-Perez 2010) and possible mechanistic evidence is also available (Hox V 2015). In conclusion, an excess risk of anaphylaxis attributable to omalizumab in females, i.e. the possible signal of “anaphylactic shock - omalizumab - female gender”, could not be confirmed with the available data. Novartis will continue to monitor this safety observation over time through routine signal detection process.
+
+Reference (available upon request)
+1. Brown AFT, McKinnon D and Chu K. Emergency department anaphylaxis: A review of 142 patients in a single year. J Allergy Clin Immunol 2001; 108: 861-866. 
+2. Gonzalez Perez et al. Anaphylaxis epidemiology in patients with and patients without asthma: A United Kingdom database review. Journal of Allergy and Clinical Immunology, 2010 Volume 125, Number 5. 
+3. Hox V, Desai A, Bandara G, Gilfillan AM, Metcalfe DD, Olivera A. Estrogen increases the severity of anaphylaxis in female mice through enhanced endothelial nitric oxide synthase expression and nitric oxide production. J Allergy Clin Immunol. 2015 Mar;135(3):729-36. 
+4. Lieberman PL, Jones I, Rajwanshi R, Rosén K, Umetsu DT. Anaphylaxis associated with omalizumab administration: Risk factors and patient characteristics. J Allergy Clin Immunol. 2017 Dec;140(6):1734-36.e4. 
+5. Lieberman PL, Umetsu DT, Carrigan GJ, Rahmaoui A. Anaphylactic reactions associated with omalizumab administration: Analysis of a case-control study. J Allergy Clin Immunol. 2016 Sep;138(3):913-915.e2. 
+6. Limb S, Starke P, Lee C, et al. Delayed onset and protracted progression of anaphylaxis after omalizumab administration in patients with asthma. J Allergy Clin Immunol 2007; 120(6): 1378−1381. 
+7. Lin RY, Rodriguez-Baez G, Bhargave GA. Omalizumab-associated anaphylactic reactions reported between January 2007 and June 2008. Ann Allergy Asthma Immunol 2009; 103: 442-445. 
+8. Mukhopadhyay S, Nigam A (2017). Xolair Periodic Safety Update Report. Period covered: 01 Jan 2017 - 31 Dec 2017. Issued: 18 Feb 2017. 
+9. Tejedor-Alonso MA, Moro-Moro M, Mugica-Garcia. Epidemiology ofAnaphylaxis: Contributions From the Last 10 Years; J Investig Allergol Clin Immunol 2015; Vol. 25(3): 163-175.""" ;
+                                                                                                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "23/03/2018" ;
+                                                                                                                                                                                                             rdfs:label "Xolair® (omalizumab) Novartis comment" ,
+                                                                                                                                                                                                                        "Xolair® (omalizumab) Novartis comment on draft Signal from UMC – WHO Collaborating Centre for  International Drug Monitoring" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,1822 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl> rdf:type owl:Ontology ;
+                                                                                            owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                            rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/272294"^^xsd:anyURI ;
+                                                                                            rdfs:label "Natalizumab and rapidly evolving central nervous system lymphoma"^^rdfs:Literal ;
+                                                                                            owl:versionInfo "draft-v0.95-20210312"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name
+OpenPVSignal:has_first_name rdfs:subPropertyOf OpenPVSignal:has_content .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on
+OpenPVSignal:initially_identified_on rdfs:subPropertyOf time:inXSDgYearMonth .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#age_40_44
+:age_40_44 rdf:type owl:Class ;
+           rdfs:subClassOf obo:PATO_0000011 ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty OpenPVSignal:has_age ;
+                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                  owl:onDatatype xsd:integer ;
+                                                  owl:withRestrictions ( [ xsd:minInclusive 40
+                                                                         ]
+                                                                         [ xsd:maxInclusive 44
+                                                                         ]
+                                                                       )
+                                                ]
+                           ] .
+
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CNSL_pathophysiology
+:CNSL_pathophysiology rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Free_text_reporting_element ;
+                      OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                      mp:references :Ref.10 ,
+                                    :Ref.11 ,
+                                    :Ref.12 ,
+                                    :Ref.13 ,
+                                    :Ref.14 ,
+                                    :Ref.4 ,
+                                    :Ref.7 ,
+                                    :Ref.8 ,
+                                    :Ref.9 ;
+                      OpenPVSignal:has_content "Primary central nervous system lymphoma (CNSL) is mainly of the diffuse large B-cell type.4 It is a rare disease with incidence rates higher in males than females (0.8 vs 0.5 per 100,000 person-years)5 and the median age of diagnosis is 65 years. The incidence rate in the age range between 55 and 64 year-olds is 0.85 (0.83-0.93, 95% CI) per 100,000, in the age range 45 to 54 years it is 0.45 (0.42-0.48, 95% CI) per 100,000, the rate from ages 35 to 44 is 0.27 per 100,000 (0.25-0.30, 95% CI), and between 20 and 34 years the rate is 0.11 (0.10-0.12, 95% CI).6 The most prominent risk factor for primary CNSL is immunosuppression, e.g. AIDS-related.7 Epstein-Barr virus (EBV) has been consistently found in immunosuppressed primary CNSL patients, although immunosuppression may also promote CNSL in EBV-negative patients.8 EBV positive lymphomas in the central nervous system of immunocompetent individuals are rare and usually secondary to lymphomas originating elsewhere.9,10 Diagnostic imaging of CNSL and MS can overlap and one may be misinterpreted for the other. Both conditions initially respond well to high doses of steroids. Brain biopsy can rule out MS if a present lymphoma has not been significantly affected by steroid treatment.11 Development of malignancies in MS has been linked to immunosuppressive therapies, but not significantly associated with immunomodulators.12 MS patients were in the past considered to be at a lower risk of malignancies13 , though recently an increase in breast cancer risk has been pointed out.14" ;
+                      rdfs:label "CNSL pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentOnReportFromLiterature1
+:CommentOnReportFromLiterature1 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                mp:references :Ref.16 ;
+                                OpenPVSignal:has_content "An abstract reports two cases (not included in the case series) with sparse information, one of which concerned a 38-year-old woman diagnosed with primary CNSL 22 months after starting natalizumab, which concludes that CNSL should be carefully considered in patients suspected of having MS, and that biopsies should be considered in patients with unusual lesions. It also adds that natalizumab should be used with care if CNSL is suspected as it decreases immunosurveillance and allows lesions to expand rapidly" ;
+                                rdfs:label "Comment on report from literature 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentOnReportFromLiterature2
+:CommentOnReportFromLiterature2 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                mp:references :Ref.18 ;
+                                OpenPVSignal:has_content "An additional case was presented by Phan-Ba et al: a 40-year-old male, complaining of blurred vision, headaches and attention disorder and with a 20- year history of MS was treated with two courses of natalizumab after two high steroid pulses. An EBV negative CNSL was diagnosed and treated with polychemotherapy, leading to reduction of tumour mass. The authors suggested a natalizumabdependent lymphomagenesis to be unlikely, instead discussing its potential to speed up lymphoma progression.18  " ;
+                                rdfs:label "Comment on report from literature 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport1
+:CommentsRegardingReport1 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """EBV negative
+HIV negative
+Azathioprine one month washout before
+natalizumab treatment""" ;
+                          rdfs:label "Comments regarding  report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport10
+:CommentsRegardingReport10 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content """Diagnosis confirmed through biopsy
+Lesion detected by MRI which grew
+“rapidly” after therapy with natalizumab
+Causality according to reporter: unrelated
+despite reporter noted deterioration of
+condition""" ;
+                           rdfs:label "Comments regarding  report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport11
+:CommentsRegardingReport11 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content """Age at higher risk for CNSL Sjögren’s
+syndrome as added risk
+Time of diagnosis: approximately 2 weeks""" ;
+                           rdfs:label "Comments regarding  report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport12
+:CommentsRegardingReport12 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content """Age at higher risk for CNSL
+Limited number of cycles strongly argue
+against a role of natalizumab""" ;
+                           rdfs:label "Comments regarding  report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport2
+:CommentsRegardingReport2 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Treatedwithinterferonbeta1b,later
+withbeta 1a and steroids for flare ups.
+Discontinuation of previous
+treatments in favor of natalizumab
+Lymphoma confirmed by biopsy""" ;
+                          rdfs:label "Comments regarding  report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport3
+:CommentsRegardingReport3 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Three years before diagnosis 4 doses of
+mitoxantrone received.
+Six months before diagnosis, patient MRI
+did not show lymphoma.
+EBV IgG present
+EBV IgMabsent
+HIV negative""" ;
+                          rdfs:label "Comments regarding  report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport4
+:CommentsRegardingReport4 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Diagnosis confirmed through
+biopsy JC negative
+EBV negative
+Cumulative dose of 12 g of azathioprine,
+stopped four years before natalizumab
+first dose""" ;
+                          rdfs:label "Comments regarding  report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport5
+:CommentsRegardingReport5 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content "Age at higher risk for CNSL " ;
+                          rdfs:label "Comments regarding  report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport6
+:CommentsRegardingReport6 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Ageathigherriskfor
+CNSL Biopsy
+confirmed CNSL
+JC negative ruled out suspicion of PML""" ;
+                          rdfs:label "Comments regarding  report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport7
+:CommentsRegardingReport7 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Initially diagnosed with MS, treated with
+natalizumab. Drug was stopped when MS
+was “later discovered” to be CNSL""" ;
+                          rdfs:label "Comments regarding  report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport8
+:CommentsRegardingReport8 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Initially diagnosed with MS,
+treated with natalizumab. Suspect
+of misdiagnosis
+Treatment interrupted after MRI and
+biopsy confirmed CNSL.
+Causality unrelated.""" ;
+                          rdfs:label "Comments regarding  report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#CommentsRegardingReport9
+:CommentsRegardingReport9 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Case_Report_Information ;
+                          OpenPVSignal:has_content """Diagnosis confirmed through biopsy
+Attention deficit disorder
+Familial history of epilepsy 16 year
+history of MS
+Status epilepticus triggered
+hospitalization and diagnosis of
+lymphoma
+Causality was reported as unrelated""" ;
+                          rdfs:label "Comments regarding  report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Confidence_Interval_for_20-34
+:Confidence_Interval_for_20-34 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Confidence_interval_0.95 ;
+                               OpenPVSignal:has_lower_limit 0.1 ;
+                               OpenPVSignal:has_upper_limit 0.12 ;
+                               rdfs:label "Confidence Interval for 20-34" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Confidence_Interval_for_35-44
+:Confidence_Interval_for_35-44 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Confidence_interval_0.95 ;
+                               OpenPVSignal:has_lower_limit 0.25 ;
+                               OpenPVSignal:has_upper_limit 0.30 ;
+                               rdfs:label "Confidence Interval for 35-44" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Confidence_Interval_for_45-54
+:Confidence_Interval_for_45-54 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Confidence_interval_0.95 ;
+                               OpenPVSignal:has_lower_limit 0.42 ;
+                               OpenPVSignal:has_upper_limit 0.48 ;
+                               rdfs:label "Confidence Interval for 45-54" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Confidence_Interval_for_55-64
+:Confidence_Interval_for_55-64 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Confidence_interval_0.95 ;
+                               OpenPVSignal:has_lower_limit 0.83 ;
+                               OpenPVSignal:has_upper_limit 0.93 ;
+                               rdfs:label "Confidence Interval for 55-64" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Differential_diagnosis_between_MS_and_CNSL
+:Differential_diagnosis_between_MS_and_CNSL rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Free_text_reporting_element ;
+                                            rdfs:label "Differential diagnosis between MS and CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Discussion_and_Conclusion
+:Discussion_and_Conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.19 ,
+                                         :Ref.20 ,
+                                         :Ref.21 ,
+                                         :Ref.22 ,
+                                         :Ref.23 ,
+                                         :Ref.24 ;
+                           OpenPVSignal:has_content "CNSL has so far not been noted as an issue in long-term study results on the safety of natalizumab.19,20 This is not to be expected in smaller studies considering the rarity of the disease per se. The cases in VigiBase, which complement the ones found in the reviewed literature, may still support a potential association between the medicinal product and the events. The occurrence of 12 cases of uncommon malignancy in temporal relation to treatment with natalizumab raises questions on the possibility of causality. Six of the cases (cases 1, 2, 3, 4, 8, 9) occurred in patients far below the median age of CNSL diagnosis, five of which showed a consistent time to diagnosis pattern with a median of three administrations and hence only three months prior to the diagnosis. These six patients were not reported to be immunocompromised. The reporters of three cases (cases 8, 9, 10) considered the CNSL to be unrelated to natalizumab. Two cases (cases 11 and 12) were identified only after one dose of treatment making a role of natalizumab less plausible. In addition, a patient’s age could increase the risk of independent development of CNSL, which should also be accounted for in cases 5 and 6 (albeit these two were diagnosed within median range of treatment duration). A clinical finding reported to be indicative of an immunosuppression-related lymphoma is the presence of EBV: two cases (cases 1 and 4) were found to be EBV negative and another one (case 3) did not have an active EBV infection. Epstein-Barr virus can be identified in almost every (99%) patient affected by MS.21 Given that profound immunosuppression can induce CNSL and that MS patients are treated with immunosuppressive agents, it should also be noted that previous treatments such as azathioprine may have oncogenic effects.22 Nevertheless, natalizumab is not known to induce strong immunosuppression, moreover in the patient who had been treated with azathioprine the cumulative dosage was low (12 grams). Cases 7 and 8 both report the events as patients being misdiagnosed with MS, later changed to CNSL. These findings highlight the necessity of thorough differential diagnostic investigations. It is worth noting that in most cases the patients have been diagnosed with MS several years before the initiation of natalizumab or the occurrence of CNSL. This may either point in the direction of a causal role of the drug or in a confounding by indication; the reason for the initiation of a new drug being an as yet undetected or misdiagnosed CNSL. The reason for changing to, or initiation of natalizumab is not clearly stated in any of the reports, however, the approved indication for natalizumab is second-line treatment for patients in whom first-line treatments have failed and for patients with rapidly evolving severe relapsing remitting MS. However, in some of the cases (cases 1 and 3), there is documentation of a thorough investigation before the initiation of the drug (e.g. MRI, biopsy) without any indication of an existing CNSL before start of treatment with the drug. In light of this, a hypothesis could be that natalizumab may play a role in the rapid progression of a pre-existing cerebral lymphoma. This could be supported by the mechanism through which natalizumab exerts therapeutic action, which might also make it a promoter of malignant cell growth by reducing CNS immunosurveillance. Within the case series, the original extract of case 10 reports a rapid growth of a previously identified lesion after two infusions of natalizumab, compatible with the history of the case presented by Phan Ba et al. In conclusion, despite uncertainties regarding a causal role of natalizumab in the rapid progression of central nervous system lymphoma23, 24, the addition of VigiBase data to existing literature case reports may add sufficient evidence to discuss the need for an update of the safety profile of natalizumab. The presented case series includes CNSL patients well below the median age of diagnosis, not reported to have been immunocompromised at the time of investigations and with consistent time to diagnosis. Moreover, a natalizumab-induced reduction in CNS immunosurveillance is proposed as a plausible biological mechanism for the evolution or potentiation of CNSL. Confounding due to missed CNSL diagnosis and attribution of symptoms to MS progression as opposed to CNSL growth/progression should be accounted for. At the same time there appears to be a need for thorough diagnostic investigations before initiating natalizumab as a second or later line of treatment in MS, given the overlapping symptoms and imaging of the two conditions, the apparent improvement of CNSL lesions after steroid treatment and the possibility that natalizumab may have a role in rapid progression of CNSLs." ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Dr_Birgitta_Grundmark
+:Dr_Birgitta_Grundmark rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                       OpenPVSignal:has_first_name "Birgitta" ;
+                       OpenPVSignal:has_last_name "Grundmark" ;
+                       rdfs:label "Dr Birgitta Grundmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient1
+:DurationOfTreatmentForPatient1 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "21 cycles " ;
+                                rdfs:label "Duration of treatment for patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient10
+:DurationOfTreatmentForPatient10 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Case_Report_Information ;
+                                 OpenPVSignal:has_content "2 cycles " ;
+                                 rdfs:label "Duration of treatment for patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient11
+:DurationOfTreatmentForPatient11 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Case_Report_Information ;
+                                 OpenPVSignal:has_content "1 cycle " ;
+                                 rdfs:label "Duration of treatment for patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient12
+:DurationOfTreatmentForPatient12 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Case_Report_Information ;
+                                 OpenPVSignal:has_content "1 cycle " ;
+                                 rdfs:label "Duration of treatment for patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient2
+:DurationOfTreatmentForPatient2 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "7 cycles " ;
+                                rdfs:label "Duration of treatment for patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient3
+:DurationOfTreatmentForPatient3 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "7 cycles " ;
+                                rdfs:label "Duration of treatment for patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient4
+:DurationOfTreatmentForPatient4 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient5
+:DurationOfTreatmentForPatient5 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient6
+:DurationOfTreatmentForPatient6 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient7
+:DurationOfTreatmentForPatient7 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient8
+:DurationOfTreatmentForPatient8 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#DurationOfTreatmentForPatient9
+:DurationOfTreatmentForPatient9 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Case_Report_Information ;
+                                OpenPVSignal:has_content "3 cycles " ;
+                                rdfs:label "Duration of treatment for patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Duration_of_natalizumab_treatment
+:Duration_of_natalizumab_treatment rdf:type owl:NamedIndividual ,
+                                            time:DurationDescription ;
+                                   OpenPVSignal:has_content "The duration of natalizumab treatment before diagnosis ranged from 1 to 21 cycles, with a median of 3" ;
+                                   rdfs:label "Duration of natalizumab treatment" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#EU_SmPc_for_natalizumab
+:EU_SmPc_for_natalizumab rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Structured_Product_Labels_information ;
+                         OpenPVSignal:refers_to_drug :natalizumab ;
+                         mp:references :Ref.2 ;
+                         OpenPVSignal:has_content "The EU SmPC for natalizumab states the following regarding malignancies: “No differences in incidence rates or the nature of malignancies between natalizumab- and placebo-treated patients were observed over two years of treatment. However, observation over longer treatment periods is required before any effect of natalizumab on malignancies can be excluded”. The summary safety profile further states: “in placebo-controlled trials in 1,617 MS patients treated with natalizumab for up to two years (placebo: 1,135)”.2" ;
+                         rdfs:label "EU SmPc for natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ICForNatalizumabAndCNLSVigibaseQ32013
+:ICForNatalizumabAndCNLSVigibaseQ32013 rdf:type owl:NamedIndividual ,
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                       OpenPVSignal:refers_to_drug :natalizumab ;
+                                       OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                       OpenPVSignal:has_value 3.12 ;
+                                       rdfs:label "IC for natalizumab and CNLS Vigibase  Q3 2013" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ICForNatalizumabAndCNLSVigibaseQ32016
+:ICForNatalizumabAndCNLSVigibaseQ32016 rdf:type owl:NamedIndividual ,
+                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                       OpenPVSignal:refers_to_drug :natalizumab ;
+                                       OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                       OpenPVSignal:has_value 3.18 ;
+                                       rdfs:label "IC for natalizumab and CNLS Vigibase  Q3 2016" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Intravenous_administration_of_natalizumab
+:Intravenous_administration_of_natalizumab rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Drug_Intake_Form ;
+                                           OpenPVSignal:refers_to_drug :natalizumab ;
+                                           OpenPVSignal:refers_to_form_of_intake "injected (intraveneous)" ;
+                                           rdfs:label "Intravenous administration of natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.15 ,
+                                        :Ref.16 ,
+                                        :Ref.17 ,
+                                        :Ref.18 ,
+                                        :Ref.2 ;
+                          OpenPVSignal:has_content "The EU SmPC for natalizumab states the following regarding malignancies: “No differences in incidence rates or the nature of malignancies between natalizumab- and placebo-treated patients were observed over two years of treatment. However, observation over longer treatment periods is required before any effect of natalizumab on malignancies can be excluded”. The summary safety profile further states: “in placebo-controlled trials in 1,617 MS patients treated with natalizumab for up to two years (placebo: 1,135)”.2 Known active malignancies are, as per the EU SmPC, listed as contraindications while the US FDA label lists lymphoma as a contraindication to treatment.15 A literature review revealed five case reports documenting CNSL in association with natalizumab. Four of them have been identified as cases already present in VigiBase (see “Literature Reference” column in Table 1), based on patient demographics, concomitant drugs, reported events and case narratives. An abstract reports two cases (not included in the case series) with sparse information, one of which concerned a 38-year-old woman diagnosed with primary CNSL 22 months after starting natalizumab, which concludes that CNSL should be carefully considered in patients suspected of having MS, and that biopsies should be considered in patients with unusual lesions. It also adds that natalizumab should be used with care if CNSL is suspected as it decreases immunosurveillance and allows lesions to expand rapidly.16 The index case, brought forward by Schweikert et al, concerns a 40-year-old male who developed CNSL after 21 doses of natalizumab. The patient was initially diagnosed with MS through MRI and CSF analysis at the age of 37 and responded well to methylprednisolone. He underwent treatment with interferon beta-1a after a year and was later diagnosed with remitting relapsing MS after an MRI showed new white matter lesions. A brain biopsy was performed, which was consistent with MS. Treatment with interferon was suspended and azathioprine was started. The worsening of his condition prompted new methylprednisolone pulses and after a one-month washout period from azathioprine the patient was started on natalizumab. Roughly two years later, a new brain biopsy showed a diagnosis of CNSL, and natalizumab was discontinued. PCR for EBV was negative, as well as HIV tests, suggesting immunocompetence and arguing against an immunosuppression-related lymphoma.17 An additional case was presented by Phan-Ba et al: a 40-year-old male, complaining of blurred vision, headaches and attention disorder and with a 20- year history of MS was treated with two courses of natalizumab after two high steroid pulses. An EBV negative CNSL was diagnosed and treated with polychemotherapy, leading to reduction of tumour mass. The authors suggested a natalizumab-dependent lymphomagenesis to be unlikely, instead discussing its potential to speed up lymphoma progression.18" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Mechanism_of_natalizumab
+:Mechanism_of_natalizumab rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ,
+                                        :Ref.2 ;
+                          OpenPVSignal:has_content "Natalizumab is a recombinant humanized antibody that prevents lymphocytes from entering the central nervous system (CNS) and the small intestine.1 Natalizumab selectively binds to the α4 subunit of the α4b1 integrin complex (Very Late Antigen, VLA4) inhibiting its interaction with vascular cell adhesion molecule 1 (VCAM-1), thus interfering with the extravasation of lymphocytes. It thereby reduces inflammatory activity in the brain, for instance in multiple sclerosis (MS)." ;
+                          rdfs:label "Mechanism of natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#More_info_for_report_1
+:More_info_for_report_1 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Case_Report_Information ;
+                        mp:references :Ref.17 ;
+                        OpenPVSignal:has_content "The index case, brought forward by Schweikert et al, concerns a 40-year-old male who developed CNSL after 21 doses of natalizumab. The patient was initially diagnosed with MS through MRI and CSF analysis at the age of 37 and responded well to methylprednisolone. He underwent treatment with interferon beta-1a after a year and was later diagnosed with remitting relapsing MS after an MRI showed new white matter lesions. A brain biopsy was performed, which was consistent with MS. Treatment with interferon was suspended and azathioprine was started. The worsening of his condition prompted new methylprednisolone pulses and after a one-month washout period from azathioprine the patient was started on natalizumab. Roughly two years later, a new brain biopsy showed a diagnosis of CNSL, and natalizumab was discontinued. PCR for EBV was negative, as well as HIV tests, suggesting immunocompetence and arguing against an immunosuppression-related lymphoma.17" ;
+                        rdfs:label "More info for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Mr_Daniele_Sartori
+:Mr_Daniele_Sartori rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Author ;
+                    OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                    OpenPVSignal:has_first_name "Daniele" ;
+                    OpenPVSignal:has_last_name "Sartori" ;
+                    rdfs:label "Mr Daniele Sartori" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Multiple_sclerosis_pathophysiology
+:Multiple_sclerosis_pathophysiology rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Free_text_reporting_element ;
+                                    OpenPVSignal:refers_to_adverse_effect :multipleSclerosis ;
+                                    mp:references :Ref.3 ;
+                                    OpenPVSignal:has_content "MS is an autoimmune chronic inflammatory condition, the pathogenesis of which is still to be fully characterized, but it is accompanied by a dysregulation of the blood-brain barrier leading to an increased permeability and trafficking of lymphocytes. Natalizumab has positive effects in MS, thanks to its VLA4-VCAM-1 complex inhibiting action. In healthy individuals, the vascular parenchyma of the blood–brain barrier restricts the access to the CNS, making it an immunoprivileged site. VCAM-1 is minimally expressed on endothelial blood brain barrier cells, but pro-inflammatory stimuli (such as tumour necrosis factors or interleukins) and chronic inflammatory conditions (such as MS) trigger its upregulation, facilitating lymphocyte entry into the CNS.3" ;
+                                    rdfs:label "Multiple sclerosis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Natalizumab_and_rapidly_evolving_central_nervous_system_lymphoma
+:Natalizumab_and_rapidly_evolving_central_nervous_system_lymphoma rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                                  OpenPVSignal:refers_to_author :Dr_Birgitta_Grundmark ,
+                                                                                                :Mr_Daniele_Sartori ;
+                                                                  OpenPVSignal:refers_to_signal :pvSignal ;
+                                                                  mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                                                  OpenPVSignal:has_creation_date "1/11/2017"^^xsd:date ;
+                                                                  OpenPVSignal:has_overall_conclusion "Further investigation needed" ;
+                                                                  rdfs:label "Natalizumab and rapidly evolving central nervous system lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 41 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 56 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 59 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 40 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 28 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 42 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 55 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 58 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ,
+                   :age_40_44 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 45 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 39 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#PatientFromLiterature1
+:PatientFromLiterature1 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 38 ;
+                        OpenPVSignal:has_gender "female" ;
+                        rdfs:label "Patient from literature 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#PatientFromLiterature2
+:PatientFromLiterature2 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 40 ;
+                        OpenPVSignal:has_gender "male" ;
+                        rdfs:label "Patient from literature 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Proposed_mechanism_behind_natalizumab_and_CNSL
+:Proposed_mechanism_behind_natalizumab_and_CNSL rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                                OpenPVSignal:has_content "This could be supported by the mechanism through which natalizumab exerts therapeutic action, which might also make it a promoter of malignant cell growth by reducing CNS immunosurveillance.  Within the case series, the original extract of case 10 reports a rapid growth of a previously identified lesion after two infusions of natalizumab, compatible with the history of the case presented by Phan Ba et al." ;
+                                                rdfs:label "Proposed mechanism behind natalizumab and CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ransohoff RM. Natalizumab for Multiple Sclerosis. N Engl J Med. 2007;356(25):2622-9. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Krogh-Jensen M, Johansen P, D’Amore F. Primary central nervous system lymphomas in immunocompetent individuals: histology, Epstein-Barr virus genome, Ki-67 proliferation index, p53 and bcl-2 gene expression. Leuk Lymphoma. 1998;30(1- 2):131-42. " ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Hunt MA, Jahnke K, Murillo TP, Neuwelt EA. Distinguishing primary central nervous system lymphoma from other central nervous system diseases: a neurosurgical perspective on diagnostic dilemmas and approaches. Neurosurgical focus. 2006;21(5):E3. " ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lebrun C, Vermersch P, Brassat D, Defer G, Rumbach L, Clavelou P, et al. Cancer and multiple sclerosis in the era of diseasemodifying treatments. J Neurol. 2011;258(7):1304-11. " ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kingwell E, Bajdik C, Phillips N, Zhu F, Oger J, Hashimoto S, et al. Cancer risk in multiple sclerosis: findings from British Columbia, Canada. Brain 2012 Oct;135(10):2973-9. " ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sun LM, Lin CL, Chung CJ, Liang JA, Sung FC, Kao CH. Increased breast cancer risk for patients with multiple sclerosis: a nationwide population-based cohort study. Eur J Neurol. 2014 Feb;21(2):238-44. " ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "US Food and Drug Administration: Product label for natalizumab (Tysabri®). Available from: http://www.accessdata. fda.gov/drugsatfda_docs/label/2016/12510 4s953s955lbl.pdf. Accessed: 19 October 2016. " ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Longbrake E, Schmidt R, Cross A, Alvarez E. Primary Central Nervous System Lymphoma Mimicking Multiple Sclerosis With Spontaneously Remitting Lesions. Neurology 2014 April;82(10) Suppl. P5.172. " ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Schweikert A, Kremer M, Ringel F, Liebig T, Duyster J, Stüve O, et al. Primary central nervous system lymphoma in a patient treated with natalizumab. Ann Neurol. 2009 Sep;66(3):403-6. " ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Phan-Ba R, Bisig B, Deprez M, De Prijck B, Delrue G, Herens C, et al. Primary central nervous system lymphoma in a patient treated with natalizumab. Ann Neurol. 2011;69(6):1060- 1. " ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Butzkueven H, Kappos L, Pellegrini F, Trojano M, Wiendl H, Patel RN, et al. Efficacy and safety of natalizumab in multiple sclerosis: interim observational programme results. J Neurol Neurosurg Psychiatry. 2014;85(11):1190-7. " ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Electronic Medicines Compendium: Summary of Product characteristics for natalizumab (Tysabri®). Available from: https://www. medicines.org.uk/emc/medicine/18447. Accessed: 2016-10-19. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Planas R, Martin R, Sospedra M. Long-term safety and efficacy of natalizumab in relapsingremitting multiple sclerosis: impact on quality of life. Patient related outcome measures. 2014;5:25-33. " ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sumaya CV, Myers LW, Ellison GW. Epstein-Barr virus anti-bodies in multiple sclerosis. Arch Neurol. 1980;37(2):94-6. " ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kandiel A, Fraser AG, Korelitz BI, Brensinger C, Lewis JD. Increased risk of lymphoma among inflammatory bowel disease patients treated with azathioprine and 6-mercaptopurine. Gut. 2005;54(8):1121-5. " ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.23
+:Ref.23 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ransohoff RM. Natalizumab, multiple sclerosis, and primary central nervous system lymphoma: enigma, wrapped in mystery, enclosed in conundrum. Ann Neurol. 2009;66(3):259-61. " ;
+        rdfs:label "Ref.23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.24
+:Ref.24 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Bozic C, LaGuette J, Panzara MA, Sandrock AW. Natalizumab and central nervous system lymphoma: no clear association. Ann Neurol. 2009;66(3):261-2. " ;
+        rdfs:label "Ref.24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.25
+:Ref.25 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Na A, Hall N, Kavar B, King J. Central nervous system lymphoma associated with natalizumab. J Clin Neurosci. 2014 Jun;21(6):1068-70. " ;
+        rdfs:label "Ref.25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.26
+:Ref.26 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Matzke M, Schreiber S, Elolf E, Metz I, Mawrin C, Heinze HJ, et al. Natalizumabassociated central nervous system lymphoma?--another patient. Mult Scler. 2012;18(11):1653-4. " ;
+        rdfs:label "Ref.26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.27
+:Ref.27 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sharaf N, Shaunak S. Patient developed primary CNS lymphoma after three courses of natalizumab. J Neurol Neurosurg Psychiatry. 2012;83(Suppl 2):A20. " ;
+        rdfs:label "Ref.27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Steffen BJ, Butcher EC, Engelhardt B. Evidence for involvement of ICAM-1 and VCAM-1 in lymphocyte interaction with endothelium in experimental autoimmune encephalomyelitis in the central nervous system in the SJL/J mouse. Am J Pathol. 1994;145(1):189-201. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hattab EM, Martin SE, Al-Khatib SM, Kupsky WJ, Vance GH, Stohler RA, et al. Most primary central nervous system diffuse large B-cell lymphomas occurring in immunocompetent individuals belong to the nongerminal center subtype: a retrospective analysis of 31 cases. Mod Pathol. 2010;23(2):235-43. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "O’Neill BP, Decker PA, Tieu C, Cerhan JR. The changing incidence of primary central nervous system lymphoma is driven primarily by the changing incidence in young and middle-aged men and differs from time trends in systemic diffuse large B-cell non-Hodgkin’s lymphoma. Am J Hematol. 2013;88(12):997-1000. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ostrom QT, Gittleman H, Liao P, Rouse C, Chen Y, Dowling J, et al. CBTRUS statistical report: primary brain and central nervous system tumors diagnosed in the United States in 2007- 2011. Neuro-oncology. 2014;16 Suppl 4:iv1- 63. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Villano JL, Koshy M, Shaikh H, Dolecek TA, McCarthy BJ. Age, gender, and racial differences in incidence and survival in primary CNS lymphoma. Br J Cancer. 2011;105(9):1414-8. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Bashir RM, Hochberg FH, Harris NL, Purtilo D. Variable expression of Epstein-Barr virus genome as demonstrated by in situ hybridization in central nervous system lymphomas in immunocompromised patients. Mod Pathol. 1990;3(4):429-34. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Commins DL. Pathology of primary central nervous system lymphoma. Neurosurgical focus. 2006;21(5):E2. " ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#RelapsingMultipleSclerosis
+:RelapsingMultipleSclerosis rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Indication ;
+                            OpenPVSignal:has_ICD_code "G35" ;
+                            OpenPVSignal:has_MedDRA_code 10080700 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Relapsing multiple sclerosis" ;
+                            rdfs:label "Relapsing multiple sclerosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport1 ,
+                                                      :DurationOfTreatmentForPatient1 ,
+                                                      :More_info_for_report_1 ;
+         OpenPVSignal:refers_to_adverse_effect :b-cellLymphoma ,
+                                               :cerebralLymphoma ,
+                                               <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ,
+                                               <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#nonhodgkin’sLymphoma> ;
+         OpenPVSignal:refers_to_concomitant_drug :antidepressants ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         mp:references :Ref.17 ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport10 ,
+                                                       :DurationOfTreatmentForPatient10 ;
+          OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport11 ,
+                                                       :DurationOfTreatmentForPatient11 ;
+          OpenPVSignal:refers_to_adverse_effect :RelapsingMultipleSclerosis ,
+                                                :pneumonia ,
+                                                :postLumbarPunctureSyndrome ,
+                                                <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+          OpenPVSignal:refers_to_concomitant_drug :cyclophosphamide ,
+                                                  :fluoxetine ,
+                                                  :modafinil ,
+                                                  :prednisone ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+          OpenPVSignal:refers_to_unconfirmed_adverse_effect :infection ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport12 ,
+                                                       :DurationOfTreatmentForPatient12 ;
+          OpenPVSignal:refers_to_adverse_effect :acuteRespiratoryFailure ,
+                                                <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+          OpenPVSignal:refers_to_concomitant_drug :omeprazole ,
+                                                  :pravastatin ,
+                                                  :risedronicAcid ,
+                                                  :temazepam ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#hydrochlorothiazide/olmesartan> ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport2 ,
+                                                      :DurationOfTreatmentForPatient2 ;
+         OpenPVSignal:refers_to_adverse_effect :cerebralLymphoma ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport3 ,
+                                                      :DurationOfTreatmentForPatient3 ;
+         OpenPVSignal:refers_to_adverse_effect :cerebralLymphoma ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         mp:references :Ref.25 ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport4 ,
+                                                      :DurationOfTreatmentForPatient4 ;
+         OpenPVSignal:refers_to_adverse_effect :death ,
+                                               :diffuseLargeBCellLymphoma ;
+         OpenPVSignal:refers_to_concomitant_drug :interferonBeta1a ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :azathioprine ,
+                                                       :methylprednisolone ;
+         mp:references :Ref.26 ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport5 ,
+                                                      :DurationOfTreatmentForPatient5 ;
+         OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         mp:references :Ref.27 ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport6 ,
+                                                      :DurationOfTreatmentForPatient6 ;
+         OpenPVSignal:refers_to_adverse_effect :acuteConfusionState ,
+                                               :bladderInfection ,
+                                               :brainLesion ,
+                                               <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport7 ,
+                                                      :DurationOfTreatmentForPatient7 ;
+         OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+         OpenPVSignal:refers_to_medication_error :medicationError ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport8 ,
+                                                      :DurationOfTreatmentForPatient8 ;
+         OpenPVSignal:refers_to_adverse_effect :diffuseLargeBCellLymphoma ,
+                                               :enterococcalBacteraemia ,
+                                               :urinaryTractInfectionPseudomonal ,
+                                               <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+         OpenPVSignal:refers_to_concomitant_drug :baclofen ,
+                                                 :pantoprazole ,
+                                                 :paracetamol ,
+                                                 :sertraline ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CommentsRegardingReport9 ,
+                                                      :DurationOfTreatmentForPatient9 ;
+         OpenPVSignal:refers_to_adverse_effect :bradyarrhythmia ,
+                                               :convulsion ,
+                                               :multipleSclerosis ,
+                                               <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+         OpenPVSignal:refers_to_concomitant_drug :amitriptyline ,
+                                                 :clonazepam ,
+                                                 :colecalciferol ,
+                                                 :esomeprazole ,
+                                                 :hydrocortisone ,
+                                                 :levetiracetam ,
+                                                 :lorazepam ,
+                                                 :methylprednisolone ,
+                                                 :ondansetron ,
+                                                 :oxycodone ,
+                                                 :phenytoin ,
+                                                 :prednisone ,
+                                                 :tocopherol ,
+                                                 :tramadol ,
+                                                 :zolpidem ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#amphetamine/dextromethamphetamine> ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ethinylestradiol/drospirenone> ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportFromLiterature1
+:ReportFromLiterature1 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:VigiBase_Report ;
+                       OpenPVSignal:has_free_text_reporting_element :CommentOnReportFromLiterature1 ;
+                       OpenPVSignal:refers_to_patient :PatientFromLiterature1 ;
+                       OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+                       OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                       rdfs:label "Report from literature 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportFromLiterature2
+:ReportFromLiterature2 rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:VigiBase_Report ;
+                       OpenPVSignal:concerns_indication_for_use :multipleSclerosis ;
+                       OpenPVSignal:has_free_text_reporting_element :CommentOnReportFromLiterature2 ;
+                       OpenPVSignal:refers_to_patient :PatientFromLiterature2 ;
+                       OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+                       OpenPVSignal:refers_to_unconfirmed_adverse_effect :attention_disorder ,
+                                                                         :blurred_vision ,
+                                                                         :headache ;
+                       rdfs:label "Report from literature 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                      OpenPVSignal:has_count 1 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsFromFrance
+:ReportsFromFrance rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/France" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from France" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsFromUK
+:ReportsFromUK rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+               OpenPVSignal:has_count 3 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from UK" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                OpenPVSignal:has_count 5 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsWithNatalizumabAsTheOnlySuspectDrug
+:ReportsWithNatalizumabAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+                                            OpenPVSignal:has_count 11 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "Reports with Natalizumab as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ReportsWithOtherDrugsAsco-suspects
+:ReportsWithOtherDrugsAsco-suspects rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :overallReportsInVigibase ;
+                                    OpenPVSignal:refers_to_secondary_suspect_drug :azathioprine ,
+                                                                                  :cytarabine ,
+                                                                                  :interferonBeta1a ,
+                                                                                  :methylprednisolone ,
+                                                                                  :v ;
+                                    OpenPVSignal:has_count 1 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with other drugs as co-suspects" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "As of May 2015, there were a total of 16 cases of natalizumab in association with the MedDRA preferred term “Central nervous system lymphoma” in VigiBase, the WHO global database of individual case safety reports; after removal of duplicates 12 cases remained. All cases were serious, save one, the seriousness of which was not reported. The countries of origin were: United States (n=5), United Kingdom (n=3), Germany (n=2), Australia and France (1 each). The combination had been highlighted in Q3 2013 with an IC of 3.12. As a comparison, as of June 2016, there were 247 reports of CNSL in VigiBase, 141 reported in relation with immunosuppressants, 84 with anti-neoplastics (mainly reporting progressive lymphoma disease) and 26 with immunostimulants. As of Q3 2016, the combination natalizumab-central nervous system lymphoma has an IC of 3.18. In the case series considered, eight patients were female and four were males. Their average and median age were 46 and 44 years respectively, age ranging from 28 to 59 years. Natalizumab was the only suspected drug in 11 reports and in the remaining one methylprednisolone, azathioprine, interferon beta-1a, methotrexate and cytarabine were cosuspects (although the last two were given as CNSL therapy). The duration of natalizumab treatment before diagnosis ranged from 1 to 21 cycles, with a median of 3. CNSL cases reported with natalizumab are summarized in Table 1." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Risk_of_MS_patients_for_cancer
+:Risk_of_MS_patients_for_cancer rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Literature_information ;
+                                mp:references :Ref.13 ,
+                                              :Ref.14 ;
+                                OpenPVSignal:has_content "'The duration of natalizumab treatment before diagnosis ranged from 1 to 21 cycles, with a median of 3. CNSL cases reported with natalizumab are summarized in Table 1." ;
+                                rdfs:label "Risk of MS patients for cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#US_FDA_label_for_natalizumab
+:US_FDA_label_for_natalizumab rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Structured_Product_Labels_information ;
+                              OpenPVSignal:refers_to_drug :natalizumab ;
+                              mp:references :Ref.15 ;
+                              OpenPVSignal:has_content "Known active malignancies are, as per the EU SmPC, listed as contraindications while the US FDA label lists lymphoma as a contraindication to treatment.15" ;
+                              rdfs:label "US FDA label for natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Upsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Usage_of_Natalizumab
+:Usage_of_Natalizumab rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:is_related_with_drug_intake :Intravenous_administration_of_natalizumab ;
+                      OpenPVSignal:refers_to_dosage :dosage_of_natalizumab ;
+                      OpenPVSignal:refers_to_drug :natalizumab ;
+                      rdfs:label "Usage of Natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#acuteConfusionState
+:acuteConfusionState rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "F05" ;
+                     OpenPVSignal:has_MedDRA_code 10010305 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+                     rdfs:label "acute confusion state" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#acuteRespiratoryFailure
+:acuteRespiratoryFailure rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "J96.00" ;
+                         OpenPVSignal:has_MedDRA_code 10001053 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "acute respiratory failure" ;
+                         rdfs:label "acute respiratory failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#amitriptyline
+:amitriptyline rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N06AA09" ;
+               rdfs:label "amitriptyline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#antidepressants
+:antidepressants rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N06A" ;
+                 rdfs:label "antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#attention_disorder
+:attention_disorder rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10013496 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Disturbance in attention" ;
+                    rdfs:label "attention disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#azathioprine
+:azathioprine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "L04AX01" ;
+              rdfs:label "azathioprine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#b-cellLymphoma
+:b-cellLymphoma rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "C85.12" ;
+                OpenPVSignal:has_MedDRA_code 10003899 ;
+                OpenPVSignal:has_MedDRA_prefered_term "B-cell lymphoma" ;
+                rdfs:label "b-cell lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#baclofen
+:baclofen rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "M03BX01 " ;
+          rdfs:label "baclofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#bladderInfection
+:bladderInfection rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "N30.90" ;
+                  OpenPVSignal:has_MedDRA_code 10011781 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Cystitis" ;
+                  rdfs:label "bladder infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#blurred_vision
+:blurred_vision rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_MedDRA_code 10005886 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Blurred vision" ;
+                rdfs:label "blurred vision" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#bradyarrhythmia
+:bradyarrhythmia rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R00.1" ;
+                 OpenPVSignal:has_MedDRA_code 10049765 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "bradyarrhythmia" ;
+                 rdfs:label "bradyarrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#brainLesion
+:brainLesion rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "G96.9" ;
+             OpenPVSignal:has_MedDRA_code 10051290 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Central nervous system lesion" ;
+             rdfs:label "brain lesion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#cerebralLymphoma
+:cerebralLymphoma rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "C85.89" ;
+                  OpenPVSignal:has_MedDRA_code 10007953 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Central nervous system lymphoma" ;
+                  rdfs:label "cerebral lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#clonazepam
+:clonazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AE01" ;
+            rdfs:label "clonazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#colecalciferol
+:colecalciferol rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11CC05" ;
+                rdfs:label "colecalciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#convulsion
+:convulsion rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G40.909" ;
+            OpenPVSignal:has_MedDRA_code 10039906 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Seizure" ;
+            rdfs:label "convulsion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#cyclophosphamide
+:cyclophosphamide rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "L01AA01" ;
+                  rdfs:label "cyclophosphamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#cytarabine
+:cytarabine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "L01BC01" ;
+            rdfs:label "cytarabine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#death
+:death rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R99" ;
+       OpenPVSignal:has_MedDRA_code 10011906 ;
+       OpenPVSignal:has_MedDRA_prefered_term "death" ;
+       rdfs:label "death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#diffuseLargeBCellLymphoma
+:diffuseLargeBCellLymphoma rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "C83.3" ;
+                           OpenPVSignal:has_MedDRA_code 10012818 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Diffuse large B-cell lymphoma" ;
+                           rdfs:label "diffuse large b cell lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#dosage_of_natalizumab
+:dosage_of_natalizumab rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Dosage ;
+                       OpenPVSignal:refers_to_drug :natalizumab ;
+                       OpenPVSignal:refers_to_interval_between_administrations :one_month_interval_between_administrations ;
+                       OpenPVSignal:has_content "Treatment is administered through intravenous infusions of 300 mg once per month" ;
+                       OpenPVSignal:has_dosage_unit "mg" ;
+                       OpenPVSignal:has_value 300 ;
+                       OpenPVSignal:refers_to_dose_value "300 mg" ;
+                       rdfs:label "dosage of natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#enterococcalBacteraemia
+:enterococcalBacteraemia rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "B95.2" ;
+                         OpenPVSignal:has_MedDRA_code 10014885 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "enterococcal bacteraemia" ;
+                         rdfs:label "enterococcal bacteraemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#epstein-barrVirusAssociatedLymphoma
+:epstein-barrVirusAssociatedLymphoma rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Potential_Confounder ;
+                                     OpenPVSignal:has_ICD_code "B27.99" ;
+                                     OpenPVSignal:has_MedDRA_code 10071441 ;
+                                     OpenPVSignal:has_MedDRA_prefered_term "Epstein-Barr virus associated lymphoma" ;
+                                     rdfs:label "epstein-barr virus associated lymphoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#esomeprazole
+:esomeprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC05" ,
+                                        "A02BC05 " ;
+              rdfs:label "esomeprazole" ,
+                         "esomeprazole " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#evidence_to_reject_the_signal_2-EBV
+:evidence_to_reject_the_signal_2-EBV rdf:type owl:NamedIndividual ,
+                                              obo:OAE_0001182 ;
+                                     OpenPVSignal:has_potential_confounding_factor :epstein-barrVirusAssociatedLymphoma ;
+                                     OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                     mp:references :Ref.21 ,
+                                                   :Ref.22 ;
+                                     OpenPVSignal:has_content "A clinical finding reported to be indicative of an immunosuppression-related lymphoma is the presence of EBV: two cases (cases 1 and 4) were found to be EBV negative and another one (case 3) did not have an active EBV infection. Epstein-Barr virus can be identified in almost every (99%) patient affected by MS.21 Given that profound immunosuppression can induce CNSL and that MS patients are treated with immunosuppressive agents, it should also be noted that previous treatments such as azathioprine may have oncogenic effects" ;
+                                     rdfs:label "EBV as a possible confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#fluoxetine
+:fluoxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB03" ;
+            rdfs:label "fluoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#hydrocortisone
+:hydrocortisone rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "H02AB09 " ,
+                                          "H02AB09 " ;
+                rdfs:label "hydrocortisone" ,
+                           "hydrocortisone " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidenceRateInTheAgeRangeBetween55And64year-oldsForCNSL
+:incidenceRateInTheAgeRangeBetween55And64year-oldsForCNSL rdf:type owl:NamedIndividual ,
+                                                                   OpenPVSignal:Incidence ;
+                                                          OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                                          OpenPVSignal:refers_to_confidence_interval :Confidence_Interval_for_55-64 ;
+                                                          OpenPVSignal:has_max_age 64 ;
+                                                          OpenPVSignal:has_min_age 55 ;
+                                                          OpenPVSignal:has_value 0.0000085 ;
+                                                          rdfs:label "incidence rate in the age range between 55 and 64 year-olds for CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidenceRateInTheAgeRangeBetweenInTheAgeRange20And34YearsYearsForCNSL
+:incidenceRateInTheAgeRangeBetweenInTheAgeRange20And34YearsYearsForCNSL rdf:type owl:NamedIndividual ,
+                                                                                 OpenPVSignal:Incidence ;
+                                                                        OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                                                        OpenPVSignal:refers_to_confidence_interval :Confidence_Interval_for_20-34 ;
+                                                                        OpenPVSignal:has_max_age 34 ;
+                                                                        OpenPVSignal:has_min_age 20 ;
+                                                                        OpenPVSignal:has_value 0.0000011 ;
+                                                                        rdfs:label "incidence rate in the age range between in the age range 20 and 34 years for CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidenceRateInTheAgeRangeBetweenInTheAgeRange35To44YearsForCNSL
+:incidenceRateInTheAgeRangeBetweenInTheAgeRange35To44YearsForCNSL rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Incidence ;
+                                                                  OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                                                  OpenPVSignal:refers_to_confidence_interval :Confidence_Interval_for_35-44 ;
+                                                                  OpenPVSignal:has_max_age 44 ;
+                                                                  OpenPVSignal:has_min_age 35 ;
+                                                                  OpenPVSignal:has_value 0.0000027 ;
+                                                                  rdfs:label "incidence rate in the age range between in the age range 35 to 44  years for CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidenceRateInTheAgeRangeBetweenInTheAgeRange45To54YearsForCNSL
+:incidenceRateInTheAgeRangeBetweenInTheAgeRange45To54YearsForCNSL rdf:type owl:NamedIndividual ,
+                                                                           OpenPVSignal:Incidence ;
+                                                                  OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                                                  OpenPVSignal:refers_to_confidence_interval :Confidence_Interval_for_45-54 ;
+                                                                  OpenPVSignal:has_max_age 54 ;
+                                                                  OpenPVSignal:has_min_age 45 ;
+                                                                  OpenPVSignal:has_value 0.0000045 ;
+                                                                  rdfs:label "incidence rate in the age range between in the age range 45 to 54 years for CNSL" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidenceRateOfCNSL
+:incidenceRateOfCNSL rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Incidence ;
+                     OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                     OpenPVSignal:has_gender "male" ;
+                     OpenPVSignal:has_value 0.000008 ;
+                     rdfs:label "incidence rate of CNSL for males" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#incidence_rate_of_CNSL_for_females
+:incidence_rate_of_CNSL_for_females rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Incidence ;
+                                    OpenPVSignal:refers_to_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                                    OpenPVSignal:has_gender "female" ;
+                                    OpenPVSignal:has_value 0.000005 ;
+                                    rdfs:label "incidence rate of CNSL for females" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#infection
+:infection rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "A49.9" ;
+           OpenPVSignal:has_MedDRA_code 10021789 ;
+           OpenPVSignal:has_MedDRA_prefered_term "infection" ;
+           rdfs:label "infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#interferonBeta1a
+:interferonBeta1a rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "L03AB07 " ;
+                  rdfs:label "interferon beta 1a" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.10 ,
+                            :Ref.11 ,
+                            :Ref.12 ,
+                            :Ref.13 ,
+                            :Ref.14 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ,
+                            :Ref.7 ,
+                            :Ref.8 ,
+                            :Ref.9 ;
+              OpenPVSignal:has_content "Natalizumab is a recombinant humanized antibody that prevents lymphocytes from entering the central nervous system (CNS) and the small intestine.1 Natalizumab selectively binds to the 4 subunit of the 4b1 integrin complex (Very Late Antigen, VLA4) inhibiting its interaction with vascular cell adhesion molecule 1 (VCAM-1), thus interfering with the extravasation of lymphocytes. It thereby reduces inflammatory activity in the brain, for instance in multiple sclerosis (MS). Treatment is administered through intravenous infusions of 300 mg once per month.2 Natalizumab’s approved indications are relapsing remitting MS, and in the United States also Crohn’s disease. It is mainly used for the treatment of MS which is mirrored in that in over 90% of the total number of case reports for natalizumab in VigiBase (121,115 reports as of Q3 2016) MS is stated as the indication for treatment. MS is an autoimmune chronic inflammatory condition, the pathogenesis of which is still to be fully characterized, but it is accompanied by a dysregulation of the blood-brain barrier leading to an increased permeability and trafficking of lymphocytes. Natalizumab has positive effects in MS, thanks to its VLA4-VCAM-1 complex inhibiting action. In healthy individuals, the vascular parenchyma of the blood–brain barrier restricts the access to the CNS, making it an immunoprivileged site. VCAM-1 is minimally expressed on endothelial blood brain barrier cells, but pro-inflammatory stimuli (such as tumour necrosis factors or interleukins) and chronic inflammatory conditions (such as MS) trigger its upregulation, facilitating lymphocyte entry into the CNS.3 Primary central nervous system lymphoma (CNSL) is mainly of the diffuse large B-cell type.4 It is a rare disease with incidence rates higher in males than females (0.8 vs 0.5 per 100,000 personyears)5 and the median age of diagnosis is 65 years. The incidence rate in the age range between 55 and 64 year-olds is 0.85 (0.83-0.93, 95% CI) per 100,000, in the age range 45 to 54 years it is 0.45 (0.42-0.48, 95% CI) per 100,000, the rate from ages 35 to 44 is 0.27 per 100,000 (0.25-0.30, 95% CI), and between 20 and 34 years the rate is 0.11 (0.10-0.12, 95% CI).6 The most prominent risk factor for primary CNSL is immunosuppression, e.g. AIDS-related.7 EpsteinBarr virus (EBV) has been consistently found in immunosuppressed primary CNSL patients, although immunosuppression may also promote CNSL in EBV-negative patients.8 EBV positive lymphomas in the central nervous system of immunocompetent individuals are rare and usually secondary to lymphomas originating elsewhere.9,10 Diagnostic imaging of CNSL and MS can overlap and one may be misinterpreted for the other. Both conditions initially respond well to high doses of steroids. Brain biopsy can rule out MS if a present lymphoma has not been significantly affected by steroid treatment.11 Development of malignancies in MS has been linked to immunosuppressive therapies, but not significantly associated with immunomodulators.12 MS patients were in the past considered to be at a lower risk of malignancies13, though recently an increase in breast cancer risk has been pointed out.14" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#levetiracetam
+:levetiracetam rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N03AX14" ;
+               rdfs:label "levetiracetam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ;
+           rdfs:label "lorazepam" ,
+                      "lorazepam " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#medicationError
+:medicationError rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Medication_Errors ;
+                 OpenPVSignal:has_ICD_code "T88.7" ;
+                 OpenPVSignal:has_MedDRA_code 10027091 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Medication error" ;
+                 rdfs:label "medication error" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#methylprednisolone
+:methylprednisolone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "D07AA01" ;
+                    rdfs:label "methylprednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#modafinil
+:modafinil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06BA07 " ;
+           rdfs:label "modafinil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#multipleSclerosis
+:multipleSclerosis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "G35" ;
+                   OpenPVSignal:has_MedDRA_code 10028245 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "multiple sclerosis" ;
+                   rdfs:label "multiple sclerosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#natalizumab
+:natalizumab rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:concerns_indication_for_use :RelapsingMultipleSclerosis ,
+                                                      <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Crohn’s_disease> ;
+             OpenPVSignal:has_mechanism :Mechanism_of_natalizumab ,
+                                        :Proposed_mechanism_behind_natalizumab_and_CNSL ;
+             OpenPVSignal:has_content "Diagnostic imaging of CNSL and MS can overlap and one may be misinterpreted for the other. Both conditions initially respond well to high doses of steroids. Brain biopsy can rule out MS if a present lymphoma has not been significantly affected by steroid treatment.11" ;
+             OpenPVSignal:has_ATC_code "L04AA23" ;
+             rdfs:label "natalizumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#omeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01 " ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ondansetron
+:ondansetron rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A04AA01 " ;
+             rdfs:label "ondansetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#one_month_interval_between_administrations
+:one_month_interval_between_administrations rdf:type owl:NamedIndividual ,
+                                                     time:DurationDescription ;
+                                            time:nominalPosition "months" ;
+                                            time:numericPosition 1 ;
+                                            rdfs:label "one month interval between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#overallReportsInVigibase
+:overallReportsInVigibase rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:refers_to_drug :natalizumab ;
+                          OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+                          OpenPVSignal:has_average_age 46 ;
+                          OpenPVSignal:has_count 12 ;
+                          OpenPVSignal:has_count_of_men 4 ;
+                          OpenPVSignal:has_count_of_women 8 ;
+                          OpenPVSignal:has_max_age 59 ;
+                          OpenPVSignal:has_median_age 44 ;
+                          OpenPVSignal:has_min_age 28 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#oxycodone
+:oxycodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02AA05 " ;
+           rdfs:label "oxycodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:refers_to_author :Dr_Birgitta_Grundmark ,
+                                            :Mr_Daniele_Sartori ;
+              OpenPVSignal:has_creation_date "01/11/2017"^^xsd:date ;
+              OpenPVSignal:has_ATC_code "A02BC02" ;
+              rdfs:label "pantoprazole " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#paracetamol
+:paracetamol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02BE01 " ;
+             rdfs:label "paracetamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#phenytoin
+:phenytoin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N03AB02" ;
+           rdfs:label "phenytoin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#pneumonia
+:pneumonia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "J18.9" ;
+           OpenPVSignal:has_MedDRA_code 10035664 ;
+           OpenPVSignal:has_MedDRA_prefered_term "pneumonia" ;
+           rdfs:label "pneumonia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#postLumbarPunctureSyndrome
+:postLumbarPunctureSyndrome rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "G97.1" ;
+                            OpenPVSignal:has_MedDRA_code 10060854 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "post lumbar puncture syndrome" ;
+                            rdfs:label "post lumbar puncture syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#pravastatin
+:pravastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA03" ;
+             rdfs:label "pravastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#prednisone
+:prednisone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "S02BA03" ;
+            rdfs:label "prednisone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :CNSL_pathophysiology ,
+                                                   :Differential_diagnosis_between_MS_and_CNSL ,
+                                                   :Discussion_and_Conclusion ,
+                                                   :Multiple_sclerosis_pathophysiology ,
+                                                   :Reports_in_Vigibase ,
+                                                   :introduction ,
+                                                   :summary ;
+          OpenPVSignal:has_free_text_reporting_element :EU_SmPc_for_natalizumab ,
+                                                       :US_FDA_label_for_natalizumab ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ,
+                                                              :ReportFromLiterature1 ,
+                                                              :ReportFromLiterature2 ;
+          OpenPVSignal:is_supported_by_statistical_entity :ICForNatalizumabAndCNLSVigibaseQ32013 ,
+                                                          :ICForNatalizumabAndCNLSVigibaseQ32016 ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromFrance ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromUK ,
+                                                          :ReportsFromUSA ,
+                                                          :ReportsWithNatalizumabAsTheOnlySuspectDrug ,
+                                                          :ReportsWithOtherDrugsAsco-suspects ,
+                                                          :incidenceRateInTheAgeRangeBetween55And64year-oldsForCNSL ,
+                                                          :incidenceRateInTheAgeRangeBetweenInTheAgeRange20And34YearsYearsForCNSL ,
+                                                          :incidenceRateInTheAgeRangeBetweenInTheAgeRange35To44YearsForCNSL ,
+                                                          :incidenceRateInTheAgeRangeBetweenInTheAgeRange45To54YearsForCNSL ,
+                                                          :incidenceRateOfCNSL ,
+                                                          :incidence_rate_of_CNSL_for_females ,
+                                                          :overallReportsInVigibase ;
+          OpenPVSignal:refers_to_drug :natalizumab ;
+          OpenPVSignal:refers_to_primary_suspect_drug :natalizumab ;
+          OpenPVSignal:refers_to_unconfirmed_adverse_effect <http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> ;
+          mp:supportedByData :evidence_to_reject_the_signal_2-EBV ;
+          OpenPVSignal:initially_identified_on "1/11/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#risedronicAcid
+:risedronicAcid rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "M05BA07" ;
+                rdfs:label "risedronic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#summary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Natalizumab is an 4b1-integrin inhibitor which limits lymphocyte passage through the blood–brain barrier. With its immunomodulation properties it is approved and mainly used for the treatment of multiple sclerosis (MS). In the United States it is approved also for Crohn’s disease. As of May 2015 there were 16 cases of central nervous system lymphoma (CNSL) in association with natalizumab reported to VigiBase, the WHO global database of individual case safety reports, originating from five countries. The combination was highlighted in VigiBase with an IC value of 3.12 in the third quarter of 2013. A literature review has brought forward five cases, four of which are included in the VigiBase case series here presented. After the elimination of duplicates and the gathering of literature cases, 12 cases have been considered for discussion. The age of the patients ranges from 28 to 59 years, with a median of 44 years. None of the patients was reported to be immunocompromised. Patients were diagnosed with CNSL after the third dose in six cases, after the seventh in two, while in three patients a biopsy was performed before the third. Only one case reflected a longer treatment of 21 cycles before the onset of CNSL. Differential diagnosis between CNSL and MS may be difficult, which has to be taken into account when assessing the signal. A consistent pattern of very short duration of treatment before diagnosis, apparent abrupt and rapid development of disease, a median age of reported cases outside high  incidence age ranges and altered immunosurveillance in the CNS mediated by natalizumab in immunocompetent patients suggest that natalizumab potentially has a role in a rapid progression of CNSL." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#temazepam
+:temazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CD07 " ;
+           rdfs:label "temazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#tocopherol
+:tocopherol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A11HA03 " ;
+            rdfs:label "tocopherol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#urinaryTractInfectionPseudomonal
+:urinaryTractInfectionPseudomonal rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Adverse_Effect ;
+                                  OpenPVSignal:has_ICD_code "B96.5" ;
+                                  OpenPVSignal:has_MedDRA_code 10062279 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "urinary tract infection pseudomonal" ;
+                                  rdfs:label "urinary tract infection pseudomonal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#v
+:v rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Drug ;
+   OpenPVSignal:has_ATC_code "L04AX03" ;
+   rdfs:label "methotrexate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Crohn’s_disease
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#Crohn’s_disease> rdf:type owl:NamedIndividual ,
+                                                                                                                    OpenPVSignal:Indication ;
+                                                                                                           OpenPVSignal:has_ICD_code "K50" ;
+                                                                                                           OpenPVSignal:has_MedDRA_code 10011401 ;
+                                                                                                           OpenPVSignal:has_MedDRA_prefered_term "Crohn's disease" ;
+                                                                                                           rdfs:label "Crohn’s disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#amphetamine/dextromethamphetamine
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#amphetamine/dextromethamphetamine> rdf:type owl:NamedIndividual ,
+                                                                                                                                      OpenPVSignal:Drug ;
+                                                                                                                             OpenPVSignal:has_ATC_code "N06BA01" ,
+                                                                                                                                                       "N06BA02" ;
+                                                                                                                             rdfs:label "amphetamine / dextromethamphetamine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#centralNervousSystemLymphoma(cnsl)> rdf:type owl:NamedIndividual ,
+                                                                                                                                       OpenPVSignal:Adverse_Effect ;
+                                                                                                                              OpenPVSignal:has_ICD_code "C85.89" ;
+                                                                                                                              OpenPVSignal:has_MedDRA_code 10007953 ;
+                                                                                                                              OpenPVSignal:has_MedDRA_prefered_term "Central nervous system lymphoma" ;
+                                                                                                                              rdfs:label "central nervous system lymphoma (cnsl)" ,
+                                                                                                                                         "centralNervousSystemLymphoma(cnsl)" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ethinylestradiol/drospirenone
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#ethinylestradiol/drospirenone> rdf:type owl:NamedIndividual ,
+                                                                                                                                  OpenPVSignal:Drug ;
+                                                                                                                         OpenPVSignal:has_ATC_code "G03AC10" ,
+                                                                                                                                                   "G03CA01" ,
+                                                                                                                                                   "QG03AA12" ;
+                                                                                                                         rdfs:label "ethinylestradiol / drosperidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#hydrochlorothiazide/olmesartan
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#hydrochlorothiazide/olmesartan> rdf:type owl:NamedIndividual ,
+                                                                                                                                   OpenPVSignal:Drug ;
+                                                                                                                          OpenPVSignal:has_ATC_code "C03AA03" ,
+                                                                                                                                                    "C08CA01" ,
+                                                                                                                                                    "C09CA08" ,
+                                                                                                                                                    "C09DX03" ;
+                                                                                                                          rdfs:label "hydrochlorothiazide / olmesartan medoxomil / amlodipine besilate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#nonhodgkin’sLymphoma
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#nonhodgkin’sLymphoma> rdf:type owl:NamedIndividual ,
+                                                                                                                         OpenPVSignal:Adverse_Effect ;
+                                                                                                                OpenPVSignal:has_ICD_code "C85.9" ;
+                                                                                                                OpenPVSignal:has_MedDRA_code 10029547 ;
+                                                                                                                OpenPVSignal:has_MedDRA_prefered_term "Non-Hodgkin's lymphoma" ;
+                                                                                                                rdfs:label "non hodgkin’s lymphoma" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#hydrochlorothiazide/Olmesartan> rdfs:label "hydrochlorothiazide/ olmesartan" .
+
+
+<http://purl.org/OpenPVSignal/Signals/2017_6_natalizumab_centralNervousSystemLymphoma.owl#medoxomil/AmlodipineBesilate> rdfs:label "medoxomil/ amlodipine besilate" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

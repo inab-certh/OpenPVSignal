@@ -1,0 +1,958 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia> rdf:type owl:Ontology ;
+                                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                    mp: ;
+                                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255516/"^^xsd:anyURI ;
+                                                                                        rdfs:label "Parathyroid Hormone and Myocardial Ischaemia"^^xsd:Literal ;
+                                                                                        owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Common_AE
+:Common_AE rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Clinical_trial_information ,
+                    OpenPVSignal:Warning_Information ;
+           OpenPVSignal:refers_to_adverse_effect :asthenia ,
+                                                 :backPain ,
+                                                 :constipation ,
+                                                 :diarrhoea ,
+                                                 :dizziness ,
+                                                 :dyspepsia ,
+                                                 :fatigue ,
+                                                 :headache ,
+                                                 :hypercalcemia ,
+                                                 :hypercalciuria ,
+                                                 :injectionSiteErythema ,
+                                                 :muscleCramp ,
+                                                 :nausea ,
+                                                 :painInExtremity ,
+                                                 :palpitation ,
+                                                 :vomiting ;
+           OpenPVSignal:refers_to_drug :parathyroidHormone ;
+           mp:references :Ref.2 ;
+           rdfs:label "Common AE" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """Case reports in VigiBase suggest that there is a possible signal for the association of parathyroid hormone and angina pectoris, myocardial ischaemia or myocardial infarction. PTH was the only drug suspected in all 10 cases. There were only a small number of concomitant drugs reported and few other reactions were reported.
+Time to onset is not particularly suggestive of a signal in that, apart from three cases in which the onset was four days, 11 days and 10 weeks, onset was many months with a median time to onset of five months which seems long for a drug-induced effect.
+If, however, the mechanism of the effect is related to serum levels of PTH, then the long time to onset may be explained by the time required for PTH levels to reach a particular level.
+Dechallenge is suggestive of a signal. There were four cases with recovery and in three of those cases, the drug was withdrawn. In the other case with recovery, the drug was continued. In the two cases where the outcome was fatal, the drug was withdrawn in one case and the fate of the drug was unknown in the other. For an acute event such as myocardial infarction, however, recovery after drug withdrawal is not as meaningful as it is for an ongoing reaction such as angina.
+The product information does not mention myocardial ischaemia but it is known that there are PTH receptors in the heart and it has been reported that there may be a role for PTH in the development of CHD so a mechanism for the development of myocardial ischaemia is possible. There may, of course be other explanations for the reactions reported in this case series. Most of the patients were elderly. In some of the cases, there are possible alternative explanations such as chronic obstructive pulmonary disease in Case 5, stress in Case 6 and a history of transient ischaemic attacks, ischaemic cardiomyopathy and pulmonary fibrosis in Case 9. All cases, however, had PTH as the only suspected drug and the cases in VigiBase suggest that the association of myocardial infarction with PTH should be further reviewed.
+""" ;
+                         rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Dr_Ian_Boyd
+:Dr_Ian_Boyd rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Author ;
+             OpenPVSignal:has_affiliation "Australia" ;
+             OpenPVSignal:has_first_name "Ian" ;
+             OpenPVSignal:has_last_name "Boyd" ;
+             rdfs:label "Dr Ian Boyd" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#IC025OfPTHAndAnginaPectoris
+:IC025OfPTHAndAnginaPectoris rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                             OpenPVSignal:refers_to_adverse_effect :anginaPectoris ;
+                             OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                             OpenPVSignal:refers_to_information_component :ICOfPTHAndAnginaPectoris ;
+                             OpenPVSignal:has_content "0.25" ;
+                             rdfs:label "IC025 of PTH and angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ICOfPTHAndAnginaPectoris
+:ICOfPTHAndAnginaPectoris rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                          OpenPVSignal:refers_to_adverse_effect :anginaPectoris ;
+                          OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                          OpenPVSignal:has_content "1.95" ;
+                          rdfs:label "IC of PTH and angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ;
+                     OpenPVSignal:has_content """Parathyroid hormone (PTH) is the most important endocrine regulator of calcium and phosphorus concentration in extracellular fluid. This hormone is secreted from cells of the parathyroid glands and finds its major target cells in bone and kidney.1 Physiological actions of PTH include stimulation of bone formation by direct effects on bone forming cells (osteoblasts) indirectly increasing the intestinal absorption of calcium and the tubular reabsorption of calcium and excretion of phosphate by the kidney. The therapeutic product is recombinant human PTH which is identical to the full-length native 84-amino acid polypeptide. It is indicated for the treatment of osteoporosis in postmenopausal women at high risk of fractures. A significant reduction in the incidence of vertebral, but not hip fractures has been demonstrated.2
+Very common adverse effects reported in clinical trials included hypercalcaemia and/or hypercalciuria which reflect the known pharmacodynamic actions of PTH in the gastrointestinal tract, the kidney, and the bone. The only other very commonly reported ADR was nausea. Also reported commonly in clinical trials were nervous system disorders such as headache and dizziness, gastrointestinal disorders such as vomiting, diarrhoea, constipation and dyspepsia, musculoskeletal and connective tissue disorders such as muscle cramp, pain in extremity, and back pain, general disorders such as injection site erythema, fatigue and asthenia, and cardiac disorders such as palpitation.2
+Myocardial ischaemia is an inadequate coronary blood supply resulting in oxygen deprivation of the myocardium.3 Angina pectoris is a symptom of myocardial ischaemia. It is characterized by attacks of precordial retrosternal pain or tightness, sometimes radiating into the back and often into the neck and the left shoulder and arm, and often precipitated by effort or excitement. It is frequently experienced in myocardial ischaemia, occurring when myocardial oxygen demand exceeds supply. It can be precipitated by increased oxygen demand (exercise) as well as by reduced supply (coronary vasoconstriction). It is associated with disturbed myocardial function.3
+Angina symptoms can be caused or aggravated by drugs, including vasodilating agents, which in the presence of coronary artery obstruction may lead to more marked dilatation of healthy vessels and thereby reduce blood flow in the diseased areas, thus leading to a so-called 'steal phenomenon'.
+
+Sometimes for the differential diagnosis, chest pain of non-cardiac origin must be excluded. Myocardial infarction is myocardial necrosis resulting from inadequate blood supply. It represents in most cases the most severe stage of ischaemic heart disease resulting from coronary atherosclerosis. It may, however, also occur as a consequence of embolization or severe spasm of a coronary artery.3
+""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.4 ,
+                                      :Ref.5 ,
+                                      :Ref.6 ;
+                        OpenPVSignal:has_content """The product literature does not refer to angina pectoris, myocardial ischaemia or myocardial infarction. The only cardiac disorder that was reported in clinical trials was palpitations, noticeable changes in the heartbeat. There are also no reports in the literature which link angina, myocardial ischaemia or myocardial infarction with PTH. It has been noted that PTH raises the plasma calcium level by causing release of calcium from the bones, increases the absorption of calcium from the small intestine, and reduces the renal excretion of calcium. In addition to these classical PTH target organs, it appears that PTH may have effects on other tissues as well. Accordingly, PTH receptors have been demonstrated in the heart, and in vitro, PTH induces hypertrophy of cardiomyocytes.4
+It has also been found that a rise in serum levels of PTH was common and related to the severity of disease and mortality in a mixed emergency department population which consisted of a broad spectrum of 140 acutely ill patients suffering from common diseases such as stroke, acute abdominal disorders, obstructive lung diseases, heart failure, acute myocardial infarction, angina pectoris, trauma and infectious diseases.5 It is also known that primary hyperparathyroidism (PHPT) is associated with hypertension, coronary atherosclerosis and other cardiovascular diseases. In a population-based cross-sectional study, the Tromso Study involving 27159 subjects aged 25- 79 years, when stratified for age, the rate of coronary heart disease (CHD) was found to be higher in the subjects with serum PTH > 6.8 picomole/liter (pmol/L) than in those with normal or low serum PTH levels. The authors concluded that serum PTH predicts CHD in subjects with calcium levels within the reference range.6 This may indicate a role for PTH in the development of CHD.
+""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#MechanismOfPTH
+:MechanismOfPTH rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Mechanism ;
+                mp:references :Ref.1 ;
+                OpenPVSignal:has_content "Parathyroid hormone (PTH) is the most important endocrine regulator of calcium and phosphorus concentration in extracellular fluid. This hormone is secreted from cells of the parathyroid glands and finds its major target cells in bone and kidney.1 Physiological actions of PTH include stimulation of bone formation by direct effects on bone forming cells (osteoblasts) indirectly increasing the intestinal absorption of calcium and the tubular reabsorption of calcium and excretion of phosphate by the kidney. The therapeutic product is recombinant human PTH which is identical to the full-length native 84-amino acid polypeptide." ;
+                rdfs:label "Mechanism of PTH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#MyocardialIschaemia
+:MyocardialIschaemia rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:refers_to_adverse_effect :anginaPectoris ,
+                                                           :coronaryVasoconstriction ,
+                                                           :myocardialIschemia ;
+                     mp:references :Ref.3 ;
+                     OpenPVSignal:has_content "Myocardial ischaemia is an inadequate coronary blood supply resulting in oxygen deprivation of the myocardium.3 Angina pectoris is a symptom of myocardial ischaemia. It is characterized by attacks of precordial retrosternal pain or tightness, sometimes radiating into the back and often into the neck and the left shoulder and arm, and often precipitated by effort or excitement. It is frequently experienced in myocardial ischaemia, occurring when myocardial oxygen demand exceeds supply. It can be precipitated by increased oxygen demand (exercise) as well as by reduced supply (coronary vasoconstriction). It is associated with disturbed myocardial function.3 Angina symptoms can be caused or aggravated by drugs, including vasodilating agents, which in the presence of coronary artery obstruction may lead to more marked dilatation of healthy vessels and thereby reduce blood flow in the diseased areas, thus leading to a so-called 'steal phenomenon'. Sometimes for the differential diagnosis, chest pain of non-cardiac origin must be excluded. Myocardial infarction is myocardial necrosis resulting from inadequate blood supply. It represents in most cases the most severe stage of ischaemic heart disease resulting from coronary atherosclerosis. It may, however, also occur as a consequence of embolization or severe spasm of a coronary artery.3" ;
+                     rdfs:label "Myocardial ischaemia pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#PTHInAcutelyIllPatients
+:PTHInAcutelyIllPatients rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001197 ;
+                         OpenPVSignal:refers_to_adverse_effect :abdominal_disorder ,
+                                                               :acuteMyocardialInfarction ,
+                                                               :anginaPectoris ,
+                                                               :heartFailure ,
+                                                               :infectious_disease ,
+                                                               :obstructive_lung_disease ,
+                                                               :stroke ,
+                                                               :trauma ;
+                         mp:references :Ref.5 ;
+                         OpenPVSignal:has_content "It has also been found that a rise in serum levels of PTH was common and related to the severity of disease and mortality in a mixed emergency department population which consisted of a broad spectrum of 140 acutely ill patients suffering from common diseases such as stroke, acute abdominal disorders, obstructive lung diseases, heart failure, acute myocardial infarction, angina pectoris, trauma and infectious diseases" ;
+                         rdfs:label "PTH in acutely ill patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#PTH_and_cardiac_hypertrophy
+:PTH_and_cardiac_hypertrophy rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Warning_Information ;
+                             OpenPVSignal:refers_to_adverse_effect :cardiac_hypertrophy ;
+                             OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                             mp:references :Ref.4 ;
+                             OpenPVSignal:has_content "Accordingly, PTH receptors have been demonstrated in the heart, and in vitro, PTH induces hypertrophy of cardiomyocytes.4" ;
+                             rdfs:label "PTH and cardiac hypertrophy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Parathyroid_Hormone_and_Myocardial_Ischaemia
+:Parathyroid_Hormone_and_Myocardial_Ischaemia rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                              OpenPVSignal:refers_to_author :Dr_Ian_Boyd ;
+                                              OpenPVSignal:refers_to_signal :pvSignal ;
+                                              OpenPVSignal:has_creation_date "01/03/2014" ;
+                                              OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                              rdfs:label "Parathyroid Hormone and Myocardial Ischaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#PossibleMechanismOfPTHTriggeringTheAEOfInterest
+:PossibleMechanismOfPTHTriggeringTheAEOfInterest rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                 OpenPVSignal:refers_to_adverse_effect :cardiomyopathy ;
+                                                 mp:references :Ref.4 ;
+                                                 OpenPVSignal:has_content "It has been noted that PTH raises the plasma calcium level by causing release of calcium from the bones, increases the absorption of calcium from the small intestine, and reduces the renal excretion of calcium. In addition to these classical PTH target organs, it appears that PTH may have effects on other tissues as well. Accordingly, PTH receptors have been demonstrated in the heart, and in vitro, PTH induces hypertrophy of cardiomyocytes.4" ;
+                                                 rdfs:label "Possible mechanism of PTH triggering the AE of interest" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content """Bowen RA, Austgen L, Rouge M. Pathophysiology of the endocrine system: parathyroid hormone. URL:http://www.vivo.colostate.edu/hbooks/pathphys/ endocrine/thyroid/pth.html?.
+Accessed: 8 July 2013.""" ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency Summary of Product Characteristics for Parathyroid hormone (Preotact) URL: http://www.ema.europa.eu/ema. Accessed: 8 July 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Council for International Organizations of Medical Sciences (CIOMS). Reporting Adverse Drug Reactions: Definitions of Terms and Criteria for their Use. CIOMS, Geneva, 1999. URL: http://www.cioms.ch/publications/ reporting_adverse_drug.pdf.Accessed: 8 July 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Saleh FN, Schirmer H, Sundsfjord J, Jorde R. Parathyroid hormone and left ventricular hypertrophy. Eur Heart J. 2003 Nov;24(22):2054- 60." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Carlstedt F, Lind L, Wide L, Lindahl B, Hanni A, Rastad J, et.al. Serum levels of parathyroid hormone are related to the mortality and severity of illness in patients in the emergency department. Eur J Clin Invest. 1997 Dec;27(12):977-81." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kamycheva E, Sundsfjord J, Jorde R. Serum parathyroid hormone levels predict coronary heart disease: the Troms0 Study. Eur J Prevent Cardiol. 2004;11:69-74." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ReportsFromDenmark
+:ReportsFromDenmark rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Denmark" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Denmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                    OpenPVSignal:has_count 5 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ReportsFromIreland
+:ReportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                    OpenPVSignal:has_count 2 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ReportsFromMexico
+:ReportsFromMexico rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Mexico" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Mexico" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#ReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content """As of 2 July 2013 there are four Individual Case Safety Reports (ICSRs) of angina pectoris, five ICSRs of myocardial infarction and one ICSR of myocardial ischaemia in association with PTH in the WHO Global ICSR Database, VigiBaseTM (Table 1). The association with angina pectoris has an IC value of 1.95 with an IC025 value of 0.25. The IC value is negative for myocardial infarction and myocardial ischaemia. The reports were submitted from Germany (five cases), Ireland (two), Denmark, Mexico and Spain (one case each). The patients ranged in age from 66 to 81 years with a median of 75 years in the seven cases which provided the information and all 10 patients were female, as expected from the indication of the drug.
+PTH was the only drug suspected in all 10 cases. Concomitant drugs were reported in four of the 10 cases and included calcium/calciferol combinations in three cases. PTH was reported to have been administered subcutaneously in all seven cases which provided this information. The indication for use was stated in eight reports and was, as expected, for treatment of osteoporosis. Time to onset was reported in eight of the reports and ranged from 10 days to one year (median five months).
+The outcome was stated in six reports. Four of these patients were reported as recovered and the outcome was fatal in the other two reports. In the four cases with recovery, PTH was withdrawn in three cases and continued in the other case. In the two fatal cases, the drug was withdrawn in one case and the fate of the drug was unknown in the other case. The drug was withdrawn in two of the cases where the outcome was unknown, continued in one of the cases where the outcome was unknown and in the fourth case, both the outcome and the fate of the drug were unknown.
+There were few other reactions reported. In two cases where myocardial infarction was reported, hypercalcaemia was also reported. In one of these cases, diarrhoea and heart disorder were also reported.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#Response_from_Takeda_Pharma
+:Response_from_Takeda_Pharma rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                             OpenPVSignal:has_content "Background Information The Signal team at the Uppsala Monitoring Centre (the UMC) has identified that case reports in VigiBase™ suggest that there is a possible signal for the association of parathyroid hormone and angina pectoris, myocardial ischaemia or myocardial infarction. Namely, as of 02 July 2013 there are four Individual Case Safety Reports (ICSRs) of angina pectoris, five ICSRs of myocardial infarction and one ICSR of myocardial ischaemia in statistical association with PTH in VigiBase. The association with angina pectoris has an IC value of 1.95 with an IC025 value of 0.25. However, the IC value is negative for myocardial infarction and myocardial ischaemia, indicating no relationship between the administration of PTH and such cardiac ischemic related events in this database. The indication for use of Preotact® (rhPTH[1-84]) is osteoporosis in postmenopausal woman at high risk of fractures. Thus, the population of concern is female, mainly elderly patients. Presented here is a summary of clinical trial data, post-marketing surveillance reporting, and epidemiological evidence not showing any evidence of this potential signal and supporting the cardiovascular safety of Preotact in patients with osteoporosis. Osteoporosis Clinical Trial Data In the recombinant human parathyroid hormone (rhPTH[1-84]) summary of clinical safety, pooled data from the Phase 2 and 3 placebocontrolled studies in subjects with osteoporosis were presented. Most of the subjects (n = 2530 of the 3121) in the pooled analysis came from Study ALX1-11-93001 (TOP), which was 18 months in duration. Study CL1-11-008 (CAP) contributed 374 subjects and was of 6 months duration and the Phase 2 dose ranging study (ALX1-11-821) contributed 217 subjects and was of 12 months duration. Given that the studies in this analysis were randomized, prospective, placebo-controlled and of relatively long duration (up to 18 months), it represents the best information to date regarding any potential effect of rhPTH(1-84) on cardiovascular safety in patients with osteoporosis. All doses in placebocontrolled studies were 100 ug daily except for the Phase 2 dose-ranging trial where doses of 50, 75, and 100 ug were administered. A summary of the incidence of on-treatment, treatment-emergent serious adverse events (TESAEs) of cardiac disorders by treatment group for the placebo-controlled dataset is presented in Table 1 below Overall, the frequency of subjects with any TESAE was slightly lower in the rhPTH(184) group. The incidence of cardiac ischaemic-related TESAEs of angina pectoris, unstable angina, myocardial infarction, coronary artery disease and coronary artery occlusion in the rhPTH(1-84)-treated subjects was comparable to or lower than that in placebo subjects. Table 2 shows the incidence of cardiac ischaemic-related on-treatment, treatment-emergent adverse events (TEAEs) (serious and non-serious) in the placebo-controlled dataset in osteoporosis. Again, the incidence of such cardiac ischemic adverse events in rhPTH(1-84)-treated subjects was comparable to or lower than that for placebo subjects. Post-marketing Data As of 24 April 2013, rhPTH(1-84) (Preotact®) has been marketed in 15 countries for the treatment of osteoporosis at a labeled dose of 100 ug/day. Based on the number of units of Preotact sold, the patient exposure is estimated to be approximately 61,091 patient years of treatment. As reported in the Periodic Safety Update Reports (PSURs), the reported serious cardiovascular-related cases (Table 1) were not unexpected considering the advanced age and prevalence of cardiovascular disease in the patient population treated with Preotact. Moreover, as reported most of the subjects had prior history or risk factors for the adverse event in question or were taking concomitant medications which could cause or contribute to the event. Epidemiological Studies in Cardiovascular Disease Incidence A comparison with the expected incidence of coronary ischaemic events in the EU and US does not show an increase in the number of observed cases of angina pectoris, myocardial ischemia, or myocardial infarction in the VigiBase. Summary and Discussion Based on a thorough medical evaluation of the available data, including a pooled analysis of randomized, prospective placebo-controlled trials, there is currently no evidence for a direct causal relationship between angina pectoris, myocardial infarction, myocardial ischaemia nor any cardiac adverse event and PTH(1-84) treatment in patients with osteoporosis. Two of the three cardiac ischemic events noted in the VigiBase for Preotact, myocardial ischemia and myocardial infarction, had negative IC values indicating no association. Epidemiologic data indicate that the number of cardiac ischemic related events noted in VigiBase for Preotact are within or lower than expected based on published cardiac event rates. Given the aforementioned lines of evidence, no signal for cardiac ischemic-related adverse effects of Preotact in osteoporosis patients can be discerned at the present time. Accordingly, no changes to the reference safety information for Preotact is at present considered necessary." ;
+                             rdfs:label "Response from Takeda Pharma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Parathyroid hormone (PTH) is the most important endocrine regulator of calcium and phosphorus concentration in extracellular fluid. This hormone is secreted from cells of the parathyroid glands and finds its major target cells in bone and kidney. Physiological actions of PTH include stimulation of bone formation by direct effects on bone forming cells (osteoblasts). This indirectly increases the intestinal absorption of calcium and the tubular reabsorption of calcium and excretion of phosphate by the kidney. The hormone is indicated for the treatment of osteoporosis in postmenopausal women at high risk of fractures.
+In the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase™ there are currently (2 July 2013) four ICSRs of angina pectoris, five ICSRs of myocardial infarction and one ICSR of myocardial ischaemia in association with PTH. The reports are from Germany, Denmark, Ireland, Mexico and Spain. The association with angina has an IC value of 1.95 with an IC025 value of 0.25; The IC value is negative for myocardial infarction and myocardial ischaemia. PTH was the only drug suspected in all 10 cases. The outcome was stated in six ICSRs. The patients were reported as recovered in four cases and the outcome was fatal in two cases.
+Case reports in VigiBase suggest that there is a signal for the association of parathyroid hormone and reactions suggesting myocardial ischaemia including angina pectoris and myocardial infarction. There were only a small number of concomitant drugs reported and few other reactions were reported in addition to the cardiac reactions. Time to onset is not particularly suggestive of a signal but if the mechanism of the effect is related to serum levels of PTH, then the long time to onset may be explained by the time required for PTH levels to reach a particular level. Dechallenge is suggestive of a signal and in three cases recovery was reported after withdrawal of the drug.
+The product information does not mention myocardial ischaemia, angina pectoris or myocardial infarction but it is known that there are PTH receptors in the heart and it has been reported that there may be a role for PTH in the development of Coronary Heart Disease so a mechanism for the development of myocardial ischaemia is possible.
+ """ ;
+                rdfs:label "Summary Content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#TromsoStudy
+:TromsoStudy rdf:type owl:NamedIndividual ,
+                      obo:OAE_0001197 ;
+             OpenPVSignal:refers_to_adverse_effect :coronaryHeartDisease ;
+             OpenPVSignal:refers_to_drug :parathyroidHormone ;
+             mp:references :Ref.6 ;
+             OpenPVSignal:has_content "It is also known that primary hyperparathyroidism (PHPT) is associated with hypertension, coronary atherosclerosis and other cardiovascular diseases. In a population-based cross-sectional study, the Tromso Study involving 27159 subjects aged 25- 79 years, when stratified for age, the rate of coronary heart disease (CHD) was found to be higher in the subjects with serum PTH > 6.8 picomole/liter (pmol/L) than in those with normal or low serum PTH levels. The authors concluded that serum PTH predicts CHD in subjects with calcium levels within the reference range.6 This may indicate a role for PTH in the development of CHD." ;
+             rdfs:label "Tromso study" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#abdominal_disorder
+:abdominal_disorder rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10072818 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Abdominal disorder" ;
+                    rdfs:label "abdominal disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#acuteMyocardialInfarction
+:acuteMyocardialInfarction rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "I219" ;
+                           OpenPVSignal:has_MedDRA_code 10000891 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Acute myocardial infarction" ;
+                           rdfs:label "acute myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#anginaPectoris
+:anginaPectoris rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I209" ;
+                OpenPVSignal:has_MedDRA_code 10002383 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+                rdfs:label "angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#backPain
+:backPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "M545" ;
+          OpenPVSignal:has_MedDRA_code 10003988 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Back pain" ;
+          rdfs:label "back pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#calciumSupplements
+:calciumSupplements rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "A11CC05" ,
+                                              "A12AA " ;
+                    rdfs:label "calcium / calciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#cardiac_hypertrophy
+:cardiac_hypertrophy rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10007572 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cardiac hypertrophy" ;
+                     rdfs:label "cardiac hypertrophy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#cardiomyopathy
+:cardiomyopathy rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I429" ;
+                OpenPVSignal:has_MedDRA_code 10007636 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiomyopathy" ;
+                rdfs:label "cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#confoundingInTheSignal
+:confoundingInTheSignal rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001182 ;
+                        OpenPVSignal:has_content "There may, of course be other explanations for the reactions reported in this case series. Most of the patients were elderly. In some of the cases, there are possible alternative explanations such as chronic obstructive pulmonary disease in Case 5, stress in Case 6 and a history of transient ischaemic attacks, ischaemic cardiomyopathy and pulmonary fibrosis in Case 9. All cases, however, had PTH as the only suspected drug and the cases in VigiBase suggest that the association of myocardial infarction with PTH should be further reviewed." ;
+                        rdfs:label "confounding in the signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K590" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#coronaryHeartDisease
+:coronaryHeartDisease rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I2510" ;
+                      OpenPVSignal:has_MedDRA_code 10011078 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Coronary artery disease" ;
+                      rdfs:label "coronary heart disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#coronaryVasoconstriction
+:coronaryVasoconstriction rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I67.84" ;
+                          OpenPVSignal:has_MedDRA_code 10047139 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Vasoconstriction" ;
+                          rdfs:label "coronary vasoconstriction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R19.7" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#dyspepsia
+:dyspepsia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K30" ;
+           OpenPVSignal:has_MedDRA_code 10013946 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dyspepsia" ;
+           rdfs:label "dyspepsia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#fatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#heartFailure
+:heartFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I50" ;
+              OpenPVSignal:has_MedDRA_code 10007554 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+              rdfs:label "heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#heart_disease
+:heart_disease rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10019276 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Heart disease, unspecified" ;
+               rdfs:label "heart disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#hypercalcemia
+:hypercalcemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "E8352" ;
+               OpenPVSignal:has_MedDRA_code 10020583 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypercalcaemia" ;
+               rdfs:label "hypercalcemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#hypercalciuria
+:hypercalciuria rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R82.994" ;
+                OpenPVSignal:has_MedDRA_code 10020590 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hypercalciuria" ;
+                rdfs:label "hypercalciuria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#infectious_disease
+:infectious_disease rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10021789 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Infection" ;
+                    rdfs:label "infectious disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#injectionSiteErythema
+:injectionSiteErythema rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "T80.62XA" ;
+                       OpenPVSignal:has_MedDRA_code 10022061 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Injection site erythema" ;
+                       rdfs:label "injection site erythema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#muscleCramp
+:muscleCramp rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "M62838" ;
+             OpenPVSignal:has_MedDRA_code 10028334 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Muscle spasms" ;
+             rdfs:label "muscle cramp" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#myocardialInfarction
+:myocardialInfarction rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I219" ;
+                      OpenPVSignal:has_MedDRA_code 10028596 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Myocardial infarction" ;
+                      rdfs:label "myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#myocardialIschemia
+:myocardialIschemia rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code "I219" ;
+                    OpenPVSignal:has_MedDRA_code 10028600 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Myocardial ischaemia" ;
+                    rdfs:label "myocardial ischemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#obstructive_lung_disease
+:obstructive_lung_disease rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10013108 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Disease obstructive lung" ;
+                          rdfs:label "obstructive lung disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#osteoporosis
+:osteoporosis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "M81.0" ;
+              OpenPVSignal:has_MedDRA_code 10031282 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Osteoporosis" ;
+              rdfs:label "osteoporosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#painInExtremity
+:painInExtremity rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "M79606" ;
+                 OpenPVSignal:has_MedDRA_code 10033425 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pain in extremity" ;
+                 rdfs:label "pain in extremity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#palpitation
+:palpitation rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R002" ;
+             OpenPVSignal:has_MedDRA_code 10033557 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+             rdfs:label "palpitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#parathyroidHormone
+:parathyroidHormone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_mechanism :MechanismOfPTH ,
+                                               :PossibleMechanismOfPTHTriggeringTheAEOfInterest ;
+                    OpenPVSignal:has_ATC_code "H05AA03" ;
+                    rdfs:label "parathyroid hormone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :MyocardialIschaemia ,
+                                                   :Reports_in_VigiBase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025OfPTHAndAnginaPectoris ,
+                                                          :ICOfPTHAndAnginaPectoris ,
+                                                          :ReportsFromDenmark ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromIreland ,
+                                                          :ReportsFromMexico ,
+                                                          :ReportsFromSpain ,
+                                                          :reportsAnalyzedPthAndMyocardialIschaemia ,
+                                                          :reportsOfAnginaPectorisAndPTH ,
+                                                          :reportsOfMyocardialInfarctionAndPTH ,
+                                                          :reportsOfMyocardialIschaemia ,
+                                                          :reportsWithConcomittantDrugs ,
+                                                          :reportsWithContinuationOfDrugAndUnknownOutcome ,
+                                                          :reportsWithFatalOutcomeAsOutcome ,
+                                                          :reportsWithNegativeDechallenge ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithRecoveryAsOutcome ,
+                                                          :reportsWithSubcutaneousAdministration ,
+                                                          :reportsWithTimeToOnsetInfo ,
+                                                          :reportsWithUnknownOutcomeAndDechallenge ,
+                                                          :reports_with_age_info ,
+                                                          :reports_with_diarrhoea_and_heart_disease ,
+                                                          :reports_with_hypercalcaemia ,
+                                                          :reports_with_osteoporosis_as_indication ,
+                                                          :reports_woth_unknown_outcome_and_drug_fate ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_calcium/calciferol_combinations> ;
+          OpenPVSignal:refers_to_adverse_effect :anginaPectoris ,
+                                                :myocardialInfarction ,
+                                                :myocardialIschemia ;
+          OpenPVSignal:refers_to_drug :parathyroidHormone ;
+          OpenPVSignal:refers_to_primary_suspect_drug :parathyroidHormone ;
+          mp:supportedByData :Common_AE ,
+                             :PTHInAcutelyIllPatients ,
+                             :PTH_and_cardiac_hypertrophy ,
+                             :TromsoStudy ,
+                             :confoundingInTheSignal ;
+          OpenPVSignal:initially_identified_on "01/03/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsAnalyzedPthAndMyocardialIschaemia
+:reportsAnalyzedPthAndMyocardialIschaemia rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:refers_to_adverse_effect :anginaPectoris ,
+                                                                                :myocardialInfarction ,
+                                                                                :myocardialIschemia ;
+                                          OpenPVSignal:refers_to_primary_suspect_drug :parathyroidHormone ;
+                                          OpenPVSignal:has_count 10 ;
+                                          OpenPVSignal:has_count_of_women 10 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "overall reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsOfAnginaPectorisAndPTH
+:reportsOfAnginaPectorisAndPTH rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                               OpenPVSignal:refers_to_adverse_effect :anginaPectoris ;
+                               OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                               OpenPVSignal:has_count 4 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports of angina pectoris and PTH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsOfMyocardialInfarctionAndPTH
+:reportsOfMyocardialInfarctionAndPTH rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                     OpenPVSignal:refers_to_adverse_effect :myocardialInfarction ;
+                                     OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                                     OpenPVSignal:has_count 5 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "reports of myocardial infarction and PTH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsOfMyocardialIschaemia
+:reportsOfMyocardialIschaemia rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                              OpenPVSignal:refers_to_adverse_effect :myocardialIschemia ;
+                              OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports of myocardial ischaemia and PTH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithConcomittantDrugs
+:reportsWithConcomittantDrugs rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                              OpenPVSignal:has_count 4 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports with concomittant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithContinuationOfDrugAndUnknownOutcome
+:reportsWithContinuationOfDrugAndUnknownOutcome rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :reports_woth_unknown_outcome_and_drug_fate ;
+                                                OpenPVSignal:has_count 1 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                OpenPVSignal:refers_to_dechallenge_process "false"^^xsd:boolean ;
+                                                OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                                rdfs:label "reports with continuation of drug and unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithFatalOutcomeAsOutcome
+:reportsWithFatalOutcomeAsOutcome rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                  rdfs:label "reports with fatal outcome as outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithNegativeDechallenge
+:reportsWithNegativeDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsWithFatalOutcomeAsOutcome ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "death" ;
+                                rdfs:label "reports with negative dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                OpenPVSignal:has_count 3 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                rdfs:label "reports with positive dechallenge " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithRecoveryAsOutcome
+:reportsWithRecoveryAsOutcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                              rdfs:label "reports with recovery without drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithSubcutaneousAdministration
+:reportsWithSubcutaneousAdministration rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_related_with_drug_intake :subcutaneous_administration ;
+                                       OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                       OpenPVSignal:has_count 7 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "reports with subcutaneous administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithTimeToOnsetInfo
+:reportsWithTimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                            OpenPVSignal:time_to_onset :timeToOnsetContent ;
+                            OpenPVSignal:has_count 8 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reportsWithUnknownOutcomeAndDechallenge
+:reportsWithUnknownOutcomeAndDechallenge rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                         OpenPVSignal:has_count 2 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+                                         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                         rdfs:label "reports with unknown outcome and dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_age_info
+:reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                       OpenPVSignal:has_count 7 ;
+                       OpenPVSignal:has_max_age 81 ;
+                       OpenPVSignal:has_median_age 75 ;
+                       OpenPVSignal:has_min_age 66 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_diarrhoea_and_heart_disease
+:reports_with_diarrhoea_and_heart_disease rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                          OpenPVSignal:refers_to_adverse_effect :diarrhoea ,
+                                                                                :heart_disease ;
+                                          OpenPVSignal:has_count 1 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "reports with diarrhoea and heart disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_hypercalcaemia
+:reports_with_hypercalcaemia rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                             OpenPVSignal:refers_to_adverse_effect :hypercalcemia ;
+                             OpenPVSignal:has_count 2 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with hypercalcaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_osteoporosis_as_indication
+:reports_with_osteoporosis_as_indication rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Reports_group ;
+                                         OpenPVSignal:concerns_indication_for_use :osteoporosis ;
+                                         OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                         OpenPVSignal:has_count 8 ;
+                                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                         rdfs:label "reports with osteoporosis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_woth_unknown_outcome_and_drug_fate
+:reports_woth_unknown_outcome_and_drug_fate rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                            OpenPVSignal:has_count 2 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                            rdfs:label "reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#stroke
+:stroke rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "I639" ;
+        OpenPVSignal:has_MedDRA_code 10008190 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Cerebrovascular accident" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#subcutaneous_administration
+:subcutaneous_administration rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Drug_Intake_Form ;
+                             OpenPVSignal:refers_to_drug :parathyroidHormone ;
+                             OpenPVSignal:refers_to_form_of_intake "subcutaneous" ;
+                             rdfs:label "subcutaneous administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#timeToOnsetContent
+:timeToOnsetContent rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2006/time#DurationDescription> ;
+                    OpenPVSignal:has_content "Time to onset was reported in eight of the reports and ranged from 10 days to one year (median five months)." ;
+                    rdfs:label "time to onset content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#trauma
+:trauma rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "T1490XA" ;
+        OpenPVSignal:has_MedDRA_code 10022116 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Injury" ;
+        rdfs:label "trauma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#useOfPTH
+:useOfPTH rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug_Usage ;
+          OpenPVSignal:concerns_indication_for_use :osteoporosis ;
+          OpenPVSignal:refers_to_drug :parathyroidHormone ;
+          mp:references :Ref.2 ;
+          rdfs:label "usage of PTH" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ,
+                                    "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_calcium/calciferol_combinations
+<http://purl.org/OpenPVSignal/Signals/2014_1_pamindronic_hormone_myocardial_ischaemia#reports_with_calcium/calciferol_combinations> rdf:type owl:NamedIndividual ,
+                                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                                    OpenPVSignal:is_subgroup_of :reportsAnalyzedPthAndMyocardialIschaemia ;
+                                                                                                                                    OpenPVSignal:refers_to_concomitant_drug :calciumSupplements ;
+                                                                                                                                    OpenPVSignal:has_count 3 ;
+                                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                    rdfs:label "reports with calcium/calciferol combinations" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

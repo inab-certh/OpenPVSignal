@@ -1,0 +1,2040 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged> rdf:type owl:Ontology ;
+                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255519"^^xsd:anyURI ;
+                                                                        rdfs:label "Agomelatine and QT prolonged"^^xsd:Literal ;
+                                                                        owl:versionInfo "draft-v0.95-20210611"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Agomelatine_and_QT_prolonged
+:Agomelatine_and_QT_prolonged rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                              OpenPVSignal:refers_to_author :Dr_Raquel_Herrera_Comoglio ;
+                              OpenPVSignal:refers_to_signal :pvSignal ;
+                              OpenPVSignal:has_creation_date "1/1/2013" ;
+                              OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                              rdfs:label "Agomelatine and QT prolonged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Congenital_LQTS
+:Congenital_LQTS rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Potential_Confounder ;
+                 OpenPVSignal:has_MedDRA_code 10057926 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Long QT syndrome congenital" ;
+                 rdfs:label "Congenital LQTS" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#DiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :Ref.1 ,
+                                       :Ref.13 ,
+                                       :Ref.16 ,
+                                       :Ref.17 ,
+                                       :Ref.18 ,
+                                       :Ref.19 ,
+                                       :Ref.2 ,
+                                       :Ref.20 ,
+                                       :Ref.21 ,
+                                       :Ref.3 ,
+                                       :Ref.4 ;
+                         OpenPVSignal:has_content """Drug-induced LQTS can be caused by cardiovascular and non-cardiovascular drugs. The cardiovascular side effects of older antidepressants, such as tricyclic anti-depressants, are well established and are known to be linked to their capacity to inhibit cardiac and vascular ion channels. Other newer antidepressant agents, such as selective serotonin reuptake inhibitors, mirtazapine and venlafaxine, also share antagonistic proper- ties with regard to voltage- dependent ion channels in different tissues.13 Agomelatine, similarly to mianserin and mirtazapine, has a serotonin 5-HT2C antagonist effect.1,3,4 Both mianserin and mirtazapine can prolong the QTc interval.16,17,18
+Drug-induced LQTS results from the association of predisposing factors to a drug acting as an environmental stressor. Predisposing factors include female sex, congenital LQTS, electrolyte disturbances and high drug levels.
+In the reviewed ICSRs, exposure to normal doses of agomelatine was the only suspected cause of QTc prolongation in two patients with congenital LQTS. Overdose of agomelatine was reported as the only suspected cause of QT prolongation in patients with multiple drug intentional overdoses. All patients were on previous therapy with other agents. The role of concomitant medication and risk factors is discussed below:
+In case 0 (likely a duplicate of case 2), agomelatine was prescribed to a 58 year old female patient treated with fentanyl and ramipril; a causal link is supported by time to onset, (17 days), risk factors, and reversibility of the adverse reaction. Case 2 (from literature) reports that agomelatine was prescribed to a 58 year old female patient on treatment with venlafaxine, ramipril and fentanyl. Both antidepressants, venlafaxine and agomelatine, were reported as suspected to cause the QTc prolongation. For concomitant drugs, no other pharmacodynamic interactions seem to be likely, and fentanyl, an opiod agent, has also been suggested to have neutral or even some protective effect against QTc prolongation. The patient started therapy with venlafaxine and a borderline QTc interval prolongation was diagnosed. Increased doses did not worsen the effect on QT, and QTc was normalized on venlafaxine 75 mg. Venlafaxine was later stopped because of lack of effect.
+Agomelatine was first started, concomitantly with venlafaxine, at 25 mg and after 10 days augmen- ted to 50 mg. QTc interval prolongation was found 17 days after initiation of agomelatine therapy and seven days after the dose change to 50 mg. It increased to 477 milliseconds at day 31 (day 21 of 50 mg dosage). The dose of agomelatine was reduced and the QTc inter- val prolongation normalized seven days after the dose reduction.
+The dose effect on QTc interval supports a causal relationship. It is unclear whether the effect could be caused by both agents in a synergistic manner when administered concomitantly, but the reaction did remain under agomelatine therapy when venlafaxine had been already stopped.
+In case 1, agomelatine was administered to a female patient with congenital LQTS treated with bisoprolol. The time to onset (eight days) and the underlying condition support a causal relationship with agomelatine.
+In case 3, a female patient died after the introduction of an antidepressant therapy with low dose escitalopram and 25 mg of agomelatine added to her previous long term medication with lanzoprazole and hydrochlorothiazide/irbesartan. A review found that escitalopram has a small effect on the QTc interval and a prolonged QTc was seen in 2 to 14% of escitalopram overdose cases, without serious cardiac sequelae.19 In this ICSR, in addition to the suspected co-administered escitalopram, female gender and hypothetical (but not reported) electrolyte disturbances (possibly caused by hydrochlorothiazide and vomiting) are risk factors for QT prolongation, and may have played a role in the fatal outcome. Concerning pharmacokinetic interactions, lanzoprazole as well as all proton-pump inhibitors (PPIs) may inhibit CYP2C19 which metabolizes escitalopram20 (together with CYP2D6) and also plays a minor role in agomelatine’s metabolism.1,2,3,4 Irbesartan has a modest affinity for CYP1A2, suggesting that the theoretical potential for drug interactions is likely to be quite low for the main CYP metabolizing agomelatine, but it has been shown to inhibit tolbutamide methylhydroxylation more potently, suggesting that it could play a role in inhibiting CYP2C9 agomelatine metabolism.
+It has been observed that patients can present different responses to diverse QT-prolonging drugs.21 In case 4, agomelatine was given to a patient treated with ami- sulpride for psychoaffective disorder and with meto- prolol for congenital LQTS. Treatment with ami- sulpride dated from the previous year (2010), and QT prolongation was reported as caused by agomelatine only. In case 8, where quetiapine 600 mg was added to agomelatine, it cannot be ruled out that agomelatine played some role in the QT prolongation.
+Concerning cases reporting intentional overdose, the possible causality of agomelatine overdose is confounded by concomitant ingestion of other agents known to be QT prolonging. In case 5, chlorprothixene (also overdosed) and prothipendyl can both cause QT prolongation, therefore an additive effect is likely; as well as in the other two cases, where both patients also ingested other agents known to be QT prolonging (3000 mg of trimipramine in case 6 and an unspecified dose of ziprasidone in case 7). In spite of this confounding, due to overdoses of agomelatine, the role played by agomelatine cannot be ruled out.
+The analysis of these ICSRs suggests that agomelatine might prolong the QT interval in patients with predisposing risk factors or overdose.
+""" ;
+                         rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose1Agomelatine
+:Dose1Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25 mg" ;
+                  rdfs:label "Dose 1 Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose1Bisoprolol
+:Dose1Bisoprolol rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Dosage ;
+                 OpenPVSignal:refers_to_drug :bisoprolol ;
+                 OpenPVSignal:has_dosage_unit "mg" ;
+                 OpenPVSignal:has_value 2.5 ;
+                 OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+                 rdfs:label "Dose 1 Bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose2Agomelatine
+:Dose2Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25 mg" ;
+                  rdfs:label "Dose 2a Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose2Ramipril
+:Dose2Ramipril rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Dosage ;
+               OpenPVSignal:refers_to_drug :ramipril ;
+               OpenPVSignal:has_dosage_unit "mg" ;
+               OpenPVSignal:has_value 10 ;
+               OpenPVSignal:refers_to_dose_value "10 mg" ;
+               rdfs:label "Dose 2 Ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose2Venlafaxine
+:Dose2Venlafaxine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :venlafaxine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 75 ;
+                  OpenPVSignal:refers_to_dose_value "75 mg" ;
+                  rdfs:label "Dose 2a Venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose2aFentanyl
+:Dose2aFentanyl rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :fentanyl ;
+                OpenPVSignal:has_dosage_unit "μg" ;
+                OpenPVSignal:has_value 25 ;
+                OpenPVSignal:refers_to_dose_value "25 μg" ;
+                rdfs:label "Dose 2a Fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose2bFentanyl
+:Dose2bFentanyl rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :fentanyl ;
+                OpenPVSignal:has_dosage_unit "μg" ;
+                OpenPVSignal:has_value 50 ;
+                OpenPVSignal:refers_to_dose_value "50 μg" ;
+                rdfs:label "Dose 2b Fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose3Agomelatine
+:Dose3Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25 mg" ;
+                  rdfs:label "Dose 3 Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose3Escitalopram
+:Dose3Escitalopram rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :escitalopram ;
+                   OpenPVSignal:has_dosage_unit "mg" ;
+                   OpenPVSignal:has_value 5 ;
+                   OpenPVSignal:refers_to_dose_value "5 mg" ;
+                   rdfs:label "Dose 3 Escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose4Agomelatine
+:Dose4Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25mg" ;
+                  rdfs:label "Dose 4a Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose4aAmisulpride
+:Dose4aAmisulpride rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :amisulpride ;
+                   OpenPVSignal:has_dosage_unit "mg" ;
+                   OpenPVSignal:has_value 200 ;
+                   OpenPVSignal:refers_to_dose_value "200 mg" ;
+                   rdfs:label "Dose 4a Amisulpride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose4bAmisulpride
+:Dose4bAmisulpride rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :amisulpride ;
+                   OpenPVSignal:has_dosage_unit "mg" ;
+                   OpenPVSignal:has_value 100 ;
+                   OpenPVSignal:refers_to_dose_value "100 mg" ;
+                   rdfs:label "Dose 4b Amisulpride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose5Agomelatine
+:Dose5Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25 mg" ;
+                  rdfs:label "Dose 5a Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose5Chlorprothixene
+:Dose5Chlorprothixene rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Dosage ;
+                      OpenPVSignal:refers_to_drug :chlorprothixene ;
+                      OpenPVSignal:has_dosage_unit "mg" ;
+                      OpenPVSignal:has_value 30 ;
+                      OpenPVSignal:refers_to_dose_value "30 mg" ;
+                      rdfs:label "Dose 5 Chlorprothixene" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose6Agomelatine
+:Dose6Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 350 ;
+                  OpenPVSignal:refers_to_dose_value "350 mg" ;
+                  rdfs:label "Dose 6 Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose6Lorazepam
+:Dose6Lorazepam rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :lorazepam ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 90 ;
+                OpenPVSignal:refers_to_dose_value "90 mg" ;
+                rdfs:label "Dose 6 Lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose6Trimipramine
+:Dose6Trimipramine rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :trimipramine ;
+                   OpenPVSignal:has_dosage_unit "mg" ;
+                   OpenPVSignal:has_value 3000 ;
+                   OpenPVSignal:refers_to_dose_value "3000 mg" ;
+                   rdfs:label "Dose 6 Trimipramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose6Zopiclone
+:Dose6Zopiclone rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :zopiclone ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 150 ;
+                OpenPVSignal:refers_to_dose_value "150 mg" ;
+                rdfs:label "Dose 6 Zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose8Agomelatine
+:Dose8Agomelatine rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Dosage ;
+                  OpenPVSignal:refers_to_drug :agomelatine ;
+                  OpenPVSignal:has_dosage_unit "mg" ;
+                  OpenPVSignal:has_value 25 ;
+                  OpenPVSignal:refers_to_dose_value "25 mg" ;
+                  rdfs:label "Dose 8 Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose8Diazepam
+:Dose8Diazepam rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Dosage ;
+               OpenPVSignal:refers_to_drug :diazepam ;
+               OpenPVSignal:has_dosage_unit "mg" ;
+               OpenPVSignal:has_value 60 ;
+               OpenPVSignal:refers_to_dose_value "60 mg" ;
+               rdfs:label "Dose 8 Diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose8Lorazepam
+:Dose8Lorazepam rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :lorazepam ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 6 ;
+                OpenPVSignal:refers_to_dose_value "6 mg" ;
+                rdfs:label "Dose 8 Lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose8Quetiapine
+:Dose8Quetiapine rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Dosage ;
+                 OpenPVSignal:refers_to_drug :quetiapine ;
+                 OpenPVSignal:has_dosage_unit "mg" ;
+                 OpenPVSignal:has_value 600 ;
+                 OpenPVSignal:refers_to_dose_value "600 mg" ;
+                 rdfs:label "Dose 8 Quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose8Zolpidem
+:Dose8Zolpidem rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Dosage ;
+               OpenPVSignal:refers_to_drug :zolpidem ;
+               OpenPVSignal:has_dosage_unit "mg" ;
+               OpenPVSignal:has_value 80 ;
+               OpenPVSignal:refers_to_dose_value "80 mg" ;
+               rdfs:label "Dose 8 Zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose_2b_Agomelatine
+:Dose_2b_Agomelatine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 50 ;
+                     OpenPVSignal:refers_to_dose_value "50 mg" ;
+                     rdfs:label "Dose 2b Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose_2b_Venlafaxine
+:Dose_2b_Venlafaxine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :venlafaxine ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 300 ;
+                     OpenPVSignal:refers_to_dose_value "300 mg" ;
+                     rdfs:label "Dose 2b Venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose_4b_Agomelatine
+:Dose_4b_Agomelatine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 50 ;
+                     OpenPVSignal:refers_to_dose_value "50 mg" ;
+                     OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+                     rdfs:label "Dose 4b Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose_5b_Agomelatine
+:Dose_5b_Agomelatine rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ;
+                     OpenPVSignal:refers_to_drug :agomelatine ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:has_value 700 ;
+                     OpenPVSignal:refers_to_dose_value "700 mg" ;
+                     rdfs:label "Dose 5b Agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dr_Raquel_Herrera_Comoglio
+:Dr_Raquel_Herrera_Comoglio rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Author ;
+                            OpenPVSignal:has_first_name "Raquel" ;
+                            OpenPVSignal:has_last_name "Herrera Comoglio" ;
+                            rdfs:label "Dr Raquel Herrera Comoglio" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Drug-induced_long_qt_by_antidepressants
+:Drug-induced_long_qt_by_antidepressants rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Adverse_Effect_Mechanism ;
+                                         OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                         mp:references :Ref.13 ;
+                                         OpenPVSignal:has_content "Drug-induced LQTS can be caused by cardiovascular and non-cardiovascular drugs. The cardiovascular side effects of older antidepressants, such as tricyclic anti-depressants, are well established and are known to be linked to their capacity to inhibit cardiac and vascular ion channels. Other newer antidepressant agents, such as selective serotonin reuptake inhibitors, mirtazapine and venlafaxine, also share antagonistic proper- ties with regard to voltage- dependent ion channels in different tissues.13" ;
+                                         rdfs:label "Drug-induced long qt by antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#IC025_for_agomelatine_and_qt_prolonged
+:IC025_for_agomelatine_and_qt_prolonged rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                        OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                        OpenPVSignal:refers_to_drug :agomelatine ;
+                                        OpenPVSignal:refers_to_information_component :IC_for_agomelatine_and_qt_prolonged ;
+                                        OpenPVSignal:has_value 1.29 ;
+                                        OpenPVSignal:refers_to_number_of_reports 9 ;
+                                        rdfs:label "IC025 for agomelatine and qt prolonged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#IC_for_agomelatine_and_qt_prolonged
+:IC_for_agomelatine_and_qt_prolonged rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                     OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                     OpenPVSignal:refers_to_drug :agomelatine ;
+                                     OpenPVSignal:has_value 2.38 ;
+                                     OpenPVSignal:refers_to_number_of_reports 9 ;
+                                     rdfs:label "IC for agomelatine and qt prolonged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.10 ,
+                                   :Ref.11 ,
+                                   :Ref.12 ,
+                                   :Ref.13 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content """Agomelatine is a synthetic analogue of the hormone melatonin that regulates various circadian rhythms including sleep-wake cycles. It is used as an anti- depressant with a novel mechanism of action. It acts as a potent melatonin receptor agonist drug (MT1 and MT2), and similarly to currently used antidepressant drugs, mianserin and mirtazapine, it also binds to and inhibits
+5-HT2C receptor subtypes. Agomelatine was approved by centralized procedure as an antidepressant agent in the EU in February 2009, and in Australia late 2010; it has not been approved in the USA to date.1,2,3,4
+In in vitro assays, CYP1A2 was responsible for the major metabolism of agomelatine, whereas CYP2C9 and CYP2C19 were found likely to be of potential relevance only at higher agomelatine concentrations. The concomitant use of potent CYP1A2 inhibitors (e.g. fluvoxamine, ciprofloxacin) is contraindicated.
+The prolongation of cardiac repolarization in Long QT Syndrome (LQTS) is reflected in the surface electro- cardiogram, expressed as the QT interval corrected by the heart rate (QTc).5 QT lengthening can result from several factors: some medications, congenital LQTS, clinically significant bradycardia or heart disease, electrolyte imbalance (hypokalaemia, hypomagnesaemia or hypocalcaemia), and/or pharmacokinetic/ pharmacodynamic interactions.6,7,8 Long QTc can lead to a life-threatening polymorphic ventricular tachycardia known as Torsade de Pointes (TdP) that may cause sudden death, but this relationship is not always straightforward.8
+Long QTc can be congenital or acquired. Drug therapy is the most common cause of the acquired Long QT Syndrome (aLQTS). Virtually all drugs that cause aLQTS reduce the delayed rectifier potassium current (IKr) and prolong the cardiac action potential; case series support the idea that genetic variants in ion channels can increase the risk.8 Some drugs prolong QTc in a dose- dependent manner; others do so at any dose.
+Most patients that develop drug-induced TdP have underlying risk factors. Female sex is the most common.
+The most common class of drugs implicated in aLQTS is QT prolonging anti-arrhythmic drugs; in particular IKr blockers such as sotalol, dofetilide, quinidine and ibutilide, but this proarrhythmia can also occur with non-cardiovascular drugs, especially antipsychotics and antidepressants.8,9,10,11,12,13
+The effects of agomelatine on QT interval were evaluated in two specific premarketing studies. The first study included only 13 subjects and agomelatine did not seem to cause any clinically meaningful changes in cardiac depolarization. The second study was conducted in response to regulatory requirements and included 56 subjects (28 males and 28 females). The results showed that single doses of agomelatine 50 mg and 400 mg fulfilled the demands set out in the CHMP/ICH/2/04 “Note for guidance on the clinical evaluation of QT/ QTc interval prolongation and proarrhythmic potential for non-antiarrhythmic drugs”.2,4
+""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#LQTSSyndromePathology
+:LQTSSyndromePathology rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Free_text_reporting_element ;
+                       OpenPVSignal:refers_to_adverse_effect :longQtSyndrome ;
+                       mp:references :Ref.10 ,
+                                     :Ref.11 ,
+                                     :Ref.12 ,
+                                     :Ref.13 ,
+                                     :Ref.5 ,
+                                     :Ref.6 ,
+                                     :Ref.7 ,
+                                     :Ref.8 ,
+                                     :Ref.9 ;
+                       OpenPVSignal:has_content """The prolongation of cardiac repolarization in Long QT Syndrome (LQTS) is reflected in the surface electro- cardiogram, expressed as the QT interval corrected by the heart rate (QTc).5 QT lengthening can result from several factors: some medications, congenital LQTS, clinically significant bradycardia or heart disease, electrolyte imbalance (hypokalaemia, hypomagnesaemia or hypocalcaemia), and/or pharmacokinetic/ pharmacodynamic interactions.6,7,8 Long QTc can lead to a life-threatening polymorphic ventricular tachycardia known as Torsade de Pointes (TdP) that may cause sudden death, but this relationship is not always straightforward.8 Long QTc can be congenital or acquired. Drug therapy is the most common cause of the acquired Long QT Syndrome (aLQTS). Virtually all drugs that cause aLQTS reduce the delayed rectifier potassium current (IKr) and prolong the cardiac action potential; case series support the idea that genetic variants in ion channels can increase the risk.8 Some drugs prolong QTc in a dose- dependent manner; others do so at any dose.
+Most patients that develop drug-induced TdP have underlying risk factors. Female sex is the most common.
+The most common class of drugs implicated in aLQTS is QT prolonging anti-arrhythmic drugs; in particular IKr blockers such as sotalol, dofetilide, quinidine and ibutilide, but this proarrhythmia can also occur with non-cardiovascular drugs, especially antipsychotics and antidepressants.8,9,10,11,12,13""" ;
+                       rdfs:label "LQTS syndrome pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    obo:OAE_0001182 ;
+           OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+           OpenPVSignal:refers_to_drug :agomelatine ;
+           mp:references :Ref.1 ,
+                         :Ref.2 ;
+           OpenPVSignal:has_content "QTc prolongation is not mentioned in the EMA Product Information, or in the EMA Public Assessment Report, as an adverse effect of agomelatine.1,2" ;
+           rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.14 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ;
+                        OpenPVSignal:has_content """A PubMed search, using terms “agomelatine\" and \"QT prolongation” retrieved only one result, a case report describing case 2 in this case series.14 The same case was also mentioned in an article from 2011.3
+QTc prolongation is not mentioned in the EMA Product Information, or in the EMA Public Assessment Report, as an adverse effect of agomelatine.1,2""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#MechanismOfAgomelatine
+:MechanismOfAgomelatine rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        OpenPVSignal:has_content """Agomelatine is a synthetic analogue of the hormone melatonin that regulates various circadian rhythms including sleep-wake cycles. It is used as an anti- depressant with a novel mechanism of action. It acts as a potent melatonin receptor agonist drug (MT1 and MT2), and similarly to currently used antidepressant drugs, mianserin and mirtazapine, it also binds to and inhibits
+5-HT2C receptor subtypes. """ ;
+                        rdfs:label "Mechanism of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 39 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 58 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 76 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 45 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 28 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 55 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 32 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 45 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#PharmacokineticProfileOfAgomelatine
+:PharmacokineticProfileOfAgomelatine rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Mechanism ;
+                                     OpenPVSignal:has_content "In in vitro assays, CYP1A2 was responsible for the major metabolism of agomelatine, whereas CYP2C9 and CYP2C19 were found likely to be of potential relevance only at higher agomelatine concentrations. The concomitant use of potent CYP1A2 inhibitors (e.g. fluvoxamine, ciprofloxacin) is contraindicated." ;
+                                     rdfs:label "Pharmacokinetic profile of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#PotentialPharmacokineticInteractionForlansoprazol-agomelatine
+:PotentialPharmacokineticInteractionForlansoprazol-agomelatine rdf:type owl:NamedIndividual ,
+                                                                        OpenPVSignal:Mechanism ;
+                                                               mp:references :Ref.1 ,
+                                                                             :Ref.2 ,
+                                                                             :Ref.20 ,
+                                                                             :Ref.3 ,
+                                                                             :Ref.4 ;
+                                                               OpenPVSignal:has_content "Concerning pharmacokinetic interactions, lanzoprazole as well as all proton-pump inhibitors (PPIs) may inhibit CYP2C19 which metabolizes escitalopram20 (together with CYP2D6) and also plays a minor role in agomelatine’s metabolism.1,2,3,4 Irbesartan has a modest affinity for CYP1A2, suggesting that the theoretical potential for drug interactions is likely to be quite low for the main CYP metabolizing agomelatine, but it has been shown to inhibit tolbutamide methylhydroxylation more potently, suggesting that it could play a role in inhibiting CYP2C9 agomelatine metabolism." ;
+                                                               rdfs:label "Potential pharmacokinetic interaction for lansoprazol-agomelatine-escitalopram-irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Premarketing_studies
+:Premarketing_studies rdf:type owl:NamedIndividual ,
+                               obo:OAE_0001182 ;
+                      OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                      OpenPVSignal:refers_to_drug :agomelatine ;
+                      mp:references :Ref.2 ,
+                                    :Ref.4 ;
+                      OpenPVSignal:has_content "The effects of agomelatine on QT interval were evaluated in two specific premarketing studies. The first study included only 13 subjects and agomelatine did not seem to cause any clinically meaningful changes in cardiac depolarization. The second study was conducted in response to regulatory requirements and included 56 subjects (28 males and 28 females). The results showed that single doses of agomelatine 50 mg and 400 mg fulfilled the demands set out in the CHMP/ICH/2/04 “Note for guidance on the clinical evaluation of QT/ QTc interval prolongation and proarrhythmic potential for non-antiarrhythmic drugs”.2,4" ;
+                      rdfs:label "Premarketing studies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EMA Product Information for agomelatine (Valdoxan) URL: http://www.ema.europa.eu. Accessed: 25 April 2013." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Raj SR, Stein CM, Saavedra PJ, Roden DM. Cardiovascular effects of non-cardiovascular drugs. Circulation 2009 Sep 22;120(12):1123-32." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Stöllberger C, Huber JO, Finsterer J. Antipsychotic drugs and QT prolongation. Int Clin Psychopharmacol. 2005 Sep;20(5):243-51." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Wenzel-Seifert K, Wittmann M, Haen E. QTc prolon- gation by psychotropic drugs and the risk of torsade de pointes. Dtsch Arztebl Int. 2011 Oct;108(41):687-93." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Sala M, Coppa F, Cappucciati C, Brambilla P, d'Allio G, Caverzasi E, et al. Antidepressants: their effects on cardiac channels, QT prolongation and torsade de pointes. Curr Opin Investig Drugs. 2006 Mar;7(3):256-63." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kozian R, Syrbe G. QTc prolongation during treatment with agomelatine. Psychiatr Prax. 2010 Nov;37(8):405-7." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Howland RH. Critical appraisal and update on the cli- nical utility of agomelatine, a melatonergic agonist, for the treatment of major depressive disease in adults. Neuropsychiatr Dis Treat. 2009 Nov 3;5:563-76." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Scherer D, von Löwenstern K, Zitron E, Scholz EP, Bloehs R, Kathöfer S, et al. Inhibition of car- diac hERG potassium channels by tetracyclic antidepressant mianserin. Naunyn Schmiedebergs Arch Pharmacol. 2008 Jul;378(1):73-83." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Waring WS, Graham A, Gray J, Wilson AD, Howell C, Bateman DN. Evaluation of a QT nomogram for risk assessment after antidepressant overdose. Br J Clin Pharmacol. 2010 Dec;70(6):881-5." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Goodnick PJ, Jerry J, Parra F. Psychotropic drugs and the ECG: focus on the QTc interval. Expert Opin Pharmacother. 2002 May;3(5):479- 98." ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Howland RH. A question about the potential cardiac toxicity of escitalopram. J Psychosoc Nurs Ment Health Serv. 2012 Apr;50(4):17-20." ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EMA CHMP Assessment Report for agomelatine (Valdoxan). 20 November 2008. URL: http://www.ema.europa.eu.Accessed: 25 April 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Huezo-Diaz P, Perroud N, Spencer EP, Smith R, Sim S, Virding S, et al. CYP2C19 genotype predicts steady state escitalopram concentration in GENDEP. J Psychopharmacol. 2012 Mar;26(3):398-407." ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lazarczyk MJ, Bhuiyan ZA, Perrin N, Giannakopoulos P. Selective acquired long QT syndrome (saLQTS) upon risperidone treatment. BMC Psychiatry. 2012 Dec 5;12:220." ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Howland RH. A benefit-risk assessment of agomela- tine in the treatment of major depression. Drug Safety 2011 Sep 1;34(9):709- 31." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Australian Public Assessment Report for agomelatine (Valdoxan) URL: http://www.tga.gov.au/industry/pm-auspar.htm. Accessed: 25 April 2013." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kallergis EM, Goudis CA, Simantirakis EN, Kochiadakis GE, Vardas PE. Mechanisms, risk factors, and management of acquired long QT syndrome: a comprehensive review. ScientificWorldJournal. 2012 Apr 19; Article ID 212178." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "De Ponti F, Poluzzi E, Cavalli A, Recanatini M, Montanaro N. Safety of non-antiarrhythmic drugs that prolong the QT interval or induce torsade de pointes. Drug Safety 2002 April;25(4):263-86." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Weissenburger J, Davy JM. Torsades de pointes. EMC - Cardiologie-Angéiologie 2004 May;1(2):123-39." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Kannankeril P, Roden DM, Darbar D. Drug- induced long QT syndrome. Pharmacol Rev. 2010 Dec; 62(4):760-81." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Gupta A, Lawrence AT, Krishnan K, Kavinsky CJ, Trohman RG. Current concepts in the mechanisms and management of drug-induced QT prolongation and torsade de pointes. Am Heart J. 2007 Jun;153(6):891-9." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_1_info ;
+         OpenPVSignal:has_potential_confounding_factor :Congenital_LQTS ;
+         OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report1 ,
+                                                    :agomelatine_usage_for_Report1_1 ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_0-2_info ;
+         OpenPVSignal:refers_to_adverse_effect :medicineIneffective ,
+                                               :qtProlonged ;
+         OpenPVSignal:refers_to_concomitant_drug :fentanyl ,
+                                                 :ramipril ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report2 ,
+                                                    :agomelatine_usage_for_Report2_1 ,
+                                                    :agomelatine_usage_for_Report2_2 ,
+                                                    :usage_of_report_2_for_venlafaxine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :venlafaxine ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         OpenPVSignal:refers_to_partial_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_3_info ;
+         OpenPVSignal:refers_to_adverse_effect :constipation ,
+                                               :convulsionsGrandMal ,
+                                               :qtProlonged ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_concomitant_drug :hydrochlorothiazide ,
+                                                 :lansoprazole ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report3 ,
+                                                    :agomelatine_usage_for_Report3_1 ,
+                                                    :agomelatine_usage_for_Report3_3 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :escitalopram ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_4_info ;
+         OpenPVSignal:has_potential_confounding_factor :Congenital_LQTS ;
+         OpenPVSignal:refers_to_adverse_effect :fracture ,
+                                               :impulseControlDisorder ,
+                                               :qtProlonged ;
+         OpenPVSignal:refers_to_concomitant_drug :amisulpride ,
+                                                 :metoprolol ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report4 ,
+                                                    :agomelatine_usage_for_Report4_2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset4 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_5_info ;
+         OpenPVSignal:refers_to_adverse_effect :intentionalOverdose ,
+                                               :qtProlonged ,
+                                               :somnolence ,
+                                               :suicideAttempt ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :chlorprothixene ,
+                                                 :diclofenac ,
+                                                 :prothipendyl ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report5_1 ,
+                                                    :agomelatine_usage_for_Report5_2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset5 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_6_info ;
+         OpenPVSignal:refers_to_adverse_effect :coma ,
+                                               :conditionAggravated ,
+                                               :multipleDrugOverdose ,
+                                               :qtProlonged ,
+                                               :somnolence ;
+         OpenPVSignal:refers_to_concomitant_drug :lorazepam ,
+                                                 :trimipramine ,
+                                                 :zopiclone ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report6 ,
+                                                    :agomelatine_usage_for_Report6_1 ,
+                                                    :agomelatine_usage_for_Report6_2 ,
+                                                    :agomelatine_usage_for_Report6_3 ;
+         OpenPVSignal:time_to_onset :TimeToOnset6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_7_info ;
+         OpenPVSignal:refers_to_adverse_effect :coma ,
+                                               :intentionalOverdose ,
+                                               :qtProlonged ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :ibuprofen ,
+                                                       :lamotrigine ,
+                                                       :pregabalin ,
+                                                       :venlafaxine ,
+                                                       :ziprasidone ;
+         OpenPVSignal:time_to_onset :TimeToOnset7 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_8_info ;
+         OpenPVSignal:refers_to_adverse_effect :agitation ,
+                                               :conditionAggravated ,
+                                               :diarrhea ,
+                                               :dizziness ,
+                                               :insomnia ,
+                                               :migraineAggravated ,
+                                               :qtProlonged ,
+                                               :sleepDisorder ;
+         OpenPVSignal:refers_to_concomitant_drug :diazepam ,
+                                                 :lorazepam ,
+                                                 :zolpidem ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+         OpenPVSignal:refers_to_reported_drug_usage :agomelatine_usage_for_Report8 ,
+                                                    :agomelatine_usage_for_Report8_1 ,
+                                                    :agomelatine_usage_for_Report8_2 ,
+                                                    :agomelatine_usage_for_Report8_3 ,
+                                                    :agomelatine_usage_for_Report8_4 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :quetiapine ;
+         OpenPVSignal:time_to_onset :TimeToOnset8 ;
+         OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.11 ;
+                   OpenPVSignal:has_content """Up to 25 January 2013, a total of nine Individual Case Safety Reports (ICSRs) of agomelatine and QT prolonged were submitted to the WHO Global ICSR Database, VigiBaseTM. The IC value for the combination was 2.38 and the IC025 1.29. An overview of these case reports’ main characteristics is displayed in Table 1. All ICSRs are from Europe, most come from Germany (seven out of nine, including one report from literature), one from Italy and one from Spain. The ICSRs were entered into VigiBase from July 2010 to April 2012.
+The reporters are physicians, except for one from literature and one from a consumer. Case 2 and case 0 (from a German physician) seem to be duplicates. The case has also been published in a review, which provides more precise and thoroughly documented data. Due to this we will consider only eight cases. Seven out of eight cases concerned female patients and there was one male patient. There was only one patient older than 60 years (a 76 year old woman), the male patient was 28 years old and the other patients were aged in the range 32-58 years.
+The 76 year old woman died after 16 days of concomitant therapy of escitalopram and agomelatine at lowest doses. Both drugs had been added to non psychotropic therapy (irbesartan/hydrochlorothiazide and lanzoprazole) and had been administered for 14 days, when QT prolongation was diagnosed. In five of eight cases the patients recovered from QT prolongation.
+All eight cases mentioned concomitant drugs. Two patients had a medical history of congenital LQTS, and both were on beta-blocker therapy (bisoprolol and metoprolol respectively). Although seven cases reported concomitant administration of other drugs associated with QT prolongation, agomelatine was the only suspected medication in four cases. Concomitant medication included psychotropic drugs in seven cases. No ICSRs mentioned any antiarrhythmic, antibiotic, antiemetic, antineoplastic or any other non psychotropic drugs previously known to cause QT prolongation as concomitant medication.
+Agomelatine was added to previous non psychotropic therapy in three cases. In case 1, agomelatine was added as the only psychotropic medication eight days prior to the reaction. In the other two cases agomelatine was added in combination with another psychotropic agent to previous non psychotropic therapy. In case 3 (time to onset: eight days), agomelatine was prescribed together with escitalopram to a female patient on previous therapy not associated with QT prolongation. In case 5, agomelatine 25 mg was prescribed on an unspecified date; the patient ingested a massive dose of agomelatine together with two antipsychotics, chlorprothixene and prothipendyl, in a suicide attempt the day before the adverse reaction was detected.
+Agomelatine was added to previous therapy with agents known/reported as potential QT-prolonging agents in two cases. In case 2 (report from the literature), agomelatine was prescribed to a patient on previous therapy with venlafaxine,
+together with a fentanyl and ramipril long-term therapy. In case 4, agomelatine was prescribed to a patient with congenital LQTS on previous therapy with amisulpride and metoprolol. On the other hand, in case 8, quetiapine 600 mg was prescribed to a female patient on long-term therapy with agomelatine (nine months).
+Seven cases reported concomitant psychotropic therapy with antidepressants or antipsychotics. In three of the seven cases agomelatine was the only suspected drug, although administered concomitantly with amisulpride, chlorprothixene, prothipendyl and trimipramine. References from the literature and product information report QT prolongation in association with venlafaxine, escitalopram, amisulpride, chlorprothixene, prothipendyl, trimipramine, ziprasidone and quetiapine.11
+There are three cases reporting overdose (two reported as intentional overdose, one of them also states suicide attempt, the third is reported with the MedDRA term multiple drug overdose). Case 5, a 28 year old male patient, attempted suicide by taking one packet of acetylsalicylic acid, 30 tablets of chlorprothixene, pro- thipendyl and one packet of agomelatine (700 mg) in one day; previous concomitant administration of diclofenac is mentioned. Case 7, a 32 year old woman, ingested unspecified overdoses of psychotropic medicines (agomelatine, ziprasidone, pregabalin, lamotrigine, venlafaxine) together with ibuprofen, and all medicines were reported as suspected. In case 6, the patient ingested 90 mg of lorazepam, 150 mg of zopiclone, 3000 mg of trimipramine and 350 mg of agomelatine. All three patients recovered from QT prolongation, two patients recovered after one day, and one patient recovered after two days. Although all three patients took other drugs that have previously been associated with QT prolongation, agomelatine was reported as the only suspected drug in two cases (cases 5 and 6).
+""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Response_from_Servier
+:Response_from_Servier rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                       OpenPVSignal:refers_to_pharmacovigilance_signal_report :Agomelatine_and_QT_prolonged ;
+                       OpenPVSignal:has_content """Response from Servier
+Agomelatine has no binding interaction with the hERG potassium channels, whose inhibition can lead to prolonged QT interval. Based on these in vitro results, it seems unlikely that agomelatine could prolong QT intervals.
+During the agomelatine development program, two specific studies were performed to evaluate cardiovascular safety in healthy volunteers. The first was a cross-over randomized, double blind, placebo-controlled study in 13 volunteers, exposed to single dose of 100 and 200mg of agomelatine, versus placebo. The administration of 100 or 200mg of agomelatine did not significantly prolong the ventricular repolarisation time.
+The second (“thorough QT/QTc study”), was carried out according to the ICH E14 Guideline. It was a cross-over randomized study in 56 healthy young volunteers (28 males and 28 females) exposed to single oral maximal therapeutic (50mg) and supra-therapeutic (400mg) doses of agomelatine, placebo and single oral 400mg dose of moxifloxacin (positive control). The absence of effect on QT/QTc interval observed in the first study was confirmed in the second, even at supra- therapeutic dose up to 400mg of agomelatine.
+From Market Authorisation (19-FEB-2009) to 19- FEB-2013 (PSUR 6 data-lock point), 11 cases of Electrocardiogram QT prolonged and 1 case of Long QT syndrome were reported to the MAH, i.e. a reported incidence of 1.4 case / 100 000 patient- years.
+Out of these 12 cases, 6 occurred in a context of over- dose:
+•	5 occurred in a multiple drug overdose, with a drug likely to induce of favor a conduction disorder concomitantly taken with agomelatine (trimipramine twice, bupropion, chlorprothixene and venlafaxine).
+•	1 case occurred in association with severe alcohol poisoning.
+In these cases, the suspected amount of agomelatine varied from 350mg to 3500mg. In the Summary of Product Characteristics (SmPC) of agomelatine, a case of ingestion of 2450mg without subsequent cardiovascular abnormalities was reported.
+These 6 cases represented 4.2% of the 142 cases of agomelatine overdose received since Market Authorisation (68 cases of agomelatine overdose and 74 cases of multiple drug overdoses). No cardiac safety concern raised from the analysis of the 136 other cases of agomelatine overdose.
+The remaining 6 cases of prolonged QT not occurring in a context of drug overdose are as follows:
+ 
+
+
+•	Medical history/context:
+-	2 cases in patients with medical history of congenital / Long QT syndrome
+-	1 case in a patient concomitantly treated with Quetiapine, for which prolonged QT is listed.
+-	1 case in an elderly patient, in a context of diabetic hyperosmolar coma
+-	2 cases (1 case in a context of atrioventricular node ablation, in a patient treated with amiodarone) were poorly documented (e.g. missing ECGs). The role of agomelatine was subsequently difficult to assess.
+
+•	3 cases of positive dechallenge were observed, with no case of positive or negative rechallenge.
+•	Outcome: 3 patients recovered, 3 were not recovered at the time of the report
+These 6 cases were reviewed by Prof. Christian Funck-Brentano, independent Cardiologist and Clinical Pharmacologist. Out of these 6 cases, 3 were assessed as not related to agomelatine:
+•	In 1 case, the patient was concomitantly treated with amisulpride, a drug known to prolong QT and cause Torsades de Pointes
+•	In 1 case, the patient was concomitantly treated with quetiapine, a drug known to prolong QT/ QTc by 5 to 15 ms
+•	In 1 case, there was in fact no clinically significant QTc change, using the Fridericia correction formula, a formula which is widely accepted as limiting the biases introduced by the Bazett formula
+Two poorly documented cases were considered as not assessable.
+In the remaining case, no document is available in support of the diagnosis of QT prolongation (heart rate, corrected QT not provided): the patient presented with hyperglycemic hyperosmolar nonketotic syndrome. Severe potassium deficit often occurs in hyperglycaemic hyperosmolar state and, although no indication is given in the report on kalemia, it is likely that QT prolongation, if any, was due to hypokalemia. The presumed cause of the hyperglycemic hyperosmolar nonketotic coma was not indicated and could have multiple origins.
+Overall, the role of agomelatine in these 12 cases seems to be unlikely. Based on the current clinical data and review of cases received from postmarketing surveillance, QT prolonged was not considered as a signal for agomelatine. This event will remain under close monitoring.
+Response from Servier
+Agomelatine has no binding interaction with the hERG potassium channels, whose inhibition can lead to prolonged QT interval. Based on these in vitro results, it seems unlikely that agomelatine could prolong QT intervals.
+During the agomelatine development program, two specific studies were performed to evaluate cardiovascular safety in healthy volunteers. The first was a cross-over randomized, double blind, placebo-controlled study in 13 volunteers, exposed to single dose of 100 and 200mg of agomelatine, versus placebo. The administration of 100 or 200mg of agomelatine did not significantly prolong the ventricular repolarisation time.
+The second (“thorough QT/QTc study”), was carried out according to the ICH E14 Guideline. It was a cross-over randomized study in 56 healthy young volunteers (28 males and 28 females) exposed to single oral maximal therapeutic (50mg) and supra-therapeutic (400mg) doses of agomelatine, placebo and single oral 400mg dose of moxifloxacin (positive control). The absence of effect on QT/QTc interval observed in the first study was confirmed in the second, even at supra- therapeutic dose up to 400mg of agomelatine.
+From Market Authorisation (19-FEB-2009) to 19- FEB-2013 (PSUR 6 data-lock point), 11 cases of Electrocardiogram QT prolonged and 1 case of Long QT syndrome were reported to the MAH, i.e. a reported incidence of 1.4 case / 100 000 patient- years.
+Out of these 12 cases, 6 occurred in a context of over- dose:
+•	5 occurred in a multiple drug overdose, with a drug likely to induce of favor a conduction disorder concomitantly taken with agomelatine (trimipramine twice, bupropion, chlorprothixene and venlafaxine).
+•	1 case occurred in association with severe alcohol poisoning.
+In these cases, the suspected amount of agomelatine varied from 350mg to 3500mg. In the Summary of Product Characteristics (SmPC) of agomelatine, a case of ingestion of 2450mg without subsequent cardiovascular abnormalities was reported.
+These 6 cases represented 4.2% of the 142 cases of agomelatine overdose received since Market Authorisation (68 cases of agomelatine overdose and 74 cases of multiple drug overdoses). No cardiac safety concern raised from the analysis of the 136 other cases of agomelatine overdose.
+The remaining 6 cases of prolonged QT not occurring in a context of drug overdose are as follows:
+ 
+
+
+•	Medical history/context:
+-	2 cases in patients with medical history of congenital / Long QT syndrome
+-	1 case in a patient concomitantly treated with Quetiapine, for which prolonged QT is listed.
+-	1 case in an elderly patient, in a context of diabetic hyperosmolar coma
+-	2 cases (1 case in a context of atrioventricular node ablation, in a patient treated with amiodarone) were poorly documented (e.g. missing ECGs). The role of agomelatine was subsequently difficult to assess.
+
+•	3 cases of positive dechallenge were observed, with no case of positive or negative rechallenge.
+•	Outcome: 3 patients recovered, 3 were not recovered at the time of the report
+These 6 cases were reviewed by Prof. Christian Funck-Brentano, independent Cardiologist and Clinical Pharmacologist. Out of these 6 cases, 3 were assessed as not related to agomelatine:
+•	In 1 case, the patient was concomitantly treated with amisulpride, a drug known to prolong QT and cause Torsades de Pointes
+•	In 1 case, the patient was concomitantly treated with quetiapine, a drug known to prolong QT/ QTc by 5 to 15 ms
+•	In 1 case, there was in fact no clinically significant QTc change, using the Fridericia correction formula, a formula which is widely accepted as limiting the biases introduced by the Bazett formula
+Two poorly documented cases were considered as not assessable.
+In the remaining case, no document is available in support of the diagnosis of QT prolongation (heart rate, corrected QT not provided): the patient presented with hyperglycemic hyperosmolar nonketotic syndrome. Severe potassium deficit often occurs in hyperglycaemic hyperosmolar state and, although no indication is given in the report on kalemia, it is likely that QT prolongation, if any, was due to hypokalemia. The presumed cause of the hyperglycemic hyperosmolar nonketotic coma was not indicated and could have multiple origins.
+Overall, the role of agomelatine in these 12 cases seems to be unlikely. Based on the current clinical data and review of cases received from postmarketing surveillance, QT prolonged was not considered as a signal for agomelatine. This event will remain under close monitoring.""" ;
+                       rdfs:label "Response from Servier" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Seretonin_5-HT2C_antagonist__effect
+:Seretonin_5-HT2C_antagonist__effect rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Adverse_Effect_Mechanism ;
+                                     mp:references :Ref.1 ,
+                                                   :Ref.3 ,
+                                                   :Ref.4 ;
+                                     OpenPVSignal:has_content "Agomelatine, similarly to mianserin and mirtazapine, has a serotonin 5-HT2C antagonist effect.1,3,4" ;
+                                     rdfs:label "Serotonin 5-HT2C antagonist effect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Agomelatine is a synthetic analogue of the hormone melatonin used to treat major depressive disorder. QT prolongation is a proarrhythmic cardiac repolarization disturbance that can be congenital or induced by stressors, especially several drugs. Many drugs including antiarrhythmic agents, antipsychotics and antidepressants have been associated with QT prolongation.
+On 25 January 2013, there were nine Individual Case Safety Reports (ICSRs) reporting the combination between agomelatine and QT prolonged in the WHO Global ICSR Database, VigiBase™. This possible association is not listed in the product information for agomelatine and only one published case report was found in a literature search. The ICSRs from VigiBase present cases in which agomelatine has been suspected as the cause of QT prolongation in patients with risk factors (female gender, congenital Long QT Syndrome), co- administration of other agents previously associated with QT prolongation, or intentional overdose. The analysis of these case reports suggests that agomelatine might prolong the QT interval in patients with predisposing risk factors or overdose.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "8 days" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 8 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "17 days from the 25 mg dose and 7 days from 50 mg dose" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 17 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "8 days" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 8 ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset4
+:TimeToOnset4 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "Approximately 3 months" ;
+              <http://www.w3.org/2006/time#nominalPosition> "months" ;
+              <http://www.w3.org/2006/time#numericPosition> 3 ;
+              rdfs:label "Time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset5
+:TimeToOnset5 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "1 day (after over- dose)" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 1 ;
+              rdfs:label "Time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset6
+:TimeToOnset6 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "Same day as over- dose" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 0 ;
+              rdfs:label "Time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset7
+:TimeToOnset7 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "1 day" ;
+              <http://www.w3.org/2006/time#nominalPosition> "days" ;
+              <http://www.w3.org/2006/time#numericPosition> 1 ;
+              rdfs:label "Time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#TimeToOnset8
+:TimeToOnset8 rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2006/time#DurationDescription> ;
+              OpenPVSignal:has_content "10 months" ;
+              <http://www.w3.org/2006/time#nominalPosition> "months" ;
+              <http://www.w3.org/2006/time#numericPosition> 10 ;
+              rdfs:label "Time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R451" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine
+:agomelatine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismOfAgomelatine ,
+                                        :PharmacokineticProfileOfAgomelatine ,
+                                        :PotentialPharmacokineticInteractionForlansoprazol-agomelatine ,
+                                        :Seretonin_5-HT2C_antagonist__effect ;
+             OpenPVSignal:has_ATC_code "N06AX22" ;
+             rdfs:label "agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report1
+:agomelatine_usage_for_Report1 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose1Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 1 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report1_1
+:agomelatine_usage_for_Report1_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose1Bisoprolol ;
+                                 OpenPVSignal:refers_to_drug :bisoprolol ;
+                                 rdfs:label "usage of report 1 for bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report2
+:agomelatine_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose2Agomelatine ,
+                                                             :Dose_2b_Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 2 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report2_1
+:agomelatine_usage_for_Report2_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose2Ramipril ;
+                                 OpenPVSignal:refers_to_drug :ramipril ;
+                                 rdfs:label "usage of report 2 for ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report2_2
+:agomelatine_usage_for_Report2_2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose2aFentanyl ,
+                                                               :Dose2bFentanyl ;
+                                 OpenPVSignal:refers_to_drug :fentanyl ;
+                                 rdfs:label "usage of report 2 for fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report3
+:agomelatine_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose3Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 3 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report3_1
+:agomelatine_usage_for_Report3_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose3Escitalopram ;
+                                 OpenPVSignal:refers_to_drug :escitalopram ;
+                                 rdfs:label "usage of report 3 for escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report3_3
+:agomelatine_usage_for_Report3_3 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage <http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose3Hydroclorothiazide/Irbesartan> ;
+                                 OpenPVSignal:refers_to_drug :hydrochlorothiazide ;
+                                 rdfs:label "usage of report 3 for hydrochlorothiazide / irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report4
+:agomelatine_usage_for_Report4 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose4Agomelatine ,
+                                                             :Dose_4b_Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 4 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report4_2
+:agomelatine_usage_for_Report4_2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose4aAmisulpride ,
+                                                               :Dose4bAmisulpride ;
+                                 OpenPVSignal:refers_to_drug :amisulpride ;
+                                 rdfs:label "usage of report 4 for amisulpride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report5_1
+:agomelatine_usage_for_Report5_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose5Agomelatine ,
+                                                               :Dose_5b_Agomelatine ;
+                                 OpenPVSignal:refers_to_drug :agomelatine ;
+                                 rdfs:label "usage of report 5 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report5_2
+:agomelatine_usage_for_Report5_2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose5Chlorprothixene ;
+                                 OpenPVSignal:refers_to_drug :chlorprothixene ;
+                                 rdfs:label "usage of report 5 for chlorprothixene" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report6
+:agomelatine_usage_for_Report6 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose6Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 6 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report6_1
+:agomelatine_usage_for_Report6_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose6Lorazepam ;
+                                 OpenPVSignal:refers_to_drug :lorazepam ;
+                                 rdfs:label "usage of report 6 for lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report6_2
+:agomelatine_usage_for_Report6_2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose6Trimipramine ;
+                                 OpenPVSignal:refers_to_drug :trimipramine ;
+                                 rdfs:label "usage of report 6 for trimipramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report6_3
+:agomelatine_usage_for_Report6_3 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose6Zopiclone ;
+                                 OpenPVSignal:refers_to_drug :zopiclone ;
+                                 rdfs:label "usage of report 6 for zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report8
+:agomelatine_usage_for_Report8 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :Dose8Agomelatine ;
+                               OpenPVSignal:refers_to_drug :agomelatine ;
+                               rdfs:label "usage of report 8 for agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report8_1
+:agomelatine_usage_for_Report8_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose8Diazepam ;
+                                 OpenPVSignal:refers_to_drug :diazepam ;
+                                 rdfs:label "usage of report 8 for diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report8_2
+:agomelatine_usage_for_Report8_2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose8Lorazepam ;
+                                 OpenPVSignal:refers_to_drug :lorazepam ;
+                                 rdfs:label "usage of report 8 for lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report8_3
+:agomelatine_usage_for_Report8_3 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose8Quetiapine ;
+                                 OpenPVSignal:refers_to_drug :quetiapine ;
+                                 rdfs:label "usage of report 8 for quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#agomelatine_usage_for_Report8_4
+:agomelatine_usage_for_Report8_4 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :Dose8Zolpidem ;
+                                 OpenPVSignal:refers_to_drug :zolpidem ;
+                                 rdfs:label "usage of report 8 for zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#amisulpride
+:amisulpride rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AL05" ;
+             rdfs:label "amisulpride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#antidepressants
+:antidepressants rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_mechanism :Drug-induced_long_qt_by_antidepressants ;
+                 OpenPVSignal:has_ATC_code "N06A" ;
+                 rdfs:label "antidepressants" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#antipsychotics
+:antipsychotics rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:DrugClass ;
+                OpenPVSignal:has_ATC_code "N05A" ;
+                rdfs:label "antipsychotics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_0-2_info
+:case_0-2_info rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Case_Report_Information ;
+               OpenPVSignal:has_content "In case 0 (likely a duplicate of case 2),  agomelatine was prescribed to a 58 year old  female patient treated with fentanyl and ramipril;  a causal link is supported by time to onset, (17  days), risk factors, and reversibility of the adverse  reaction. Case 2 (from literature) reports that  agomelatine was prescribed to a 58 year old  female patient on treatment with venlafaxine,  ramipril and fentanyl. Both antidepressants,  venlafaxine and agomelatine, were reported as  suspected to cause the QTc prolongation. For  concomitant drugs, no other pharmacodynamic  interactions seem to be likely, and fentanyl, an  opiod agent, has also been suggested to have  neutral or even some protective effect against QTc  prolongation. The patient started therapy with  venlafaxine and a borderline QTc interval  prolongation was diagnosed. Increased doses did  not worsen the effect on QT, and QTc was  normalized on venlafaxine 75 mg. Venlafaxine was  later stopped because of lack of effect.  Agomelatine was first started, concomitantly with  venlafaxine, at 25 mg and after 10 days augmented to 50 mg. QTc interval prolongation was found  17 days after initiation of agomelatine therapy and seven days after the dose change to 50 mg. It  increased to 477 milliseconds at day 31 (day 21 of  50 mg dosage). The dose of agomelatine was  reduced and the QTc inter- val prolongation  normalized seven days after the dose reduction.  The dose effect on QTc interval supports a causal  relationship. It is unclear whether the effect could  be caused by both agents in a synergistic manner  when administered concomitantly, but the reaction  did remain under agomelatine therapy when  venlafaxine had been already stopped." ;
+               rdfs:label "case 0-2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_1_info
+:case_1_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 1, agomelatine was administered to a female patient with congenital LQTS treated with bisoprolol. The time to onset (eight days) and the underlying condition support a causal relationship with agomelatine." ;
+             rdfs:label "case 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_3_info
+:case_3_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 3, a female patient died after the introduction of an antidepressant therapy with low dose escitalopram and 25 mg of agomelatine added to her previous long term medication with lanzoprazole and hydrochlorothiazide/irbesartan. In this ICSR, in addition to the suspected co-administered escitalopram, female gender and hypothetical (but not reported) electrolyte disturbances (possibly caused by hydrochlorothiazide and vomiting) are risk factors for QT prolongation, and may have played a role in the fatal outcome." ;
+             rdfs:label "case 3 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_4_info
+:case_4_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 4, agomelatine was given to a patient treated with ami- sulpride for psychoaffective disorder and with meto- prolol for congenital LQTS. Treatment with ami- sulpride dated from the previous year (2010), and QT prolongation was reported as caused by agomelatine only." ;
+             rdfs:label "case 4 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_5_info
+:case_5_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Case 5, a 28 year old male patient, attempted suicide by taking one packet of acetylsalicylic acid, 30 tablets of chlorprothixene, pro- thipendyl and one packet of agomelatine (700 mg) in one day; previous concomitant administration of diclofenac is mentioned." ,
+                                      "In case 5, chlorprothixene (also overdosed) and prothipendyl can both cause QT prolongation, therefore an additive effect is likely;" ;
+             rdfs:label "case 5 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_6_info
+:case_6_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 6, the patient ingested 90 mg of lorazepam, 150 mg of zopiclone, 3000 mg of trimipramine and 350 mg of agomelatine." ,
+                                      "as well as in the other two cases, where both patients also ingested other agents known to be QT prolonging (3000 mg of trimipramine in case 6" ;
+             rdfs:label "case 6 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_7_info
+:case_7_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "Case 7, a 32 year old woman, ingested unspecified overdoses of psychotropic medicines (agomelatine, ziprasidone, pregabalin, lamotrigine, venlafaxine) together with ibuprofen, and all medicines were reported as suspected." ,
+                                      "as well as in the other two cases, where both patients also ingested other agents known to be QT prolonging (3000 mg of trimipramine in case 6 and an unspecified dose of ziprasidone in case 7)." ;
+             rdfs:label "case 7 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#case_8_info
+:case_8_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 8, where quetiapine 600 mg was added to agomelatine, it cannot be ruled out that agomelatine played some role in the QT prolongation." ;
+             rdfs:label "case 8 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#chlorprothixene
+:chlorprothixene rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "N05AF03" ;
+                 rdfs:label "chlorprothixene" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#coma
+:coma rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "R40" ;
+      OpenPVSignal:has_MedDRA_code 10010071 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Coma" ;
+      rdfs:label "coma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#conditionAggravated
+:conditionAggravated rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "F918" ;
+                     OpenPVSignal:has_MedDRA_code 10010264 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Condition aggravated" ;
+                     rdfs:label "condition aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K590" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#convulsionsGrandMal
+:convulsionsGrandMal rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10010918 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Convulsions grand mal" ;
+                     rdfs:label "convulsions grand mal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#diarrhea
+:diarrhea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R197" ;
+          OpenPVSignal:has_MedDRA_code 10012735 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+          rdfs:label "diarrhea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#diazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#diclofenac
+:diclofenac rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "D11AX18" ,
+                                      "M01AB05" ,
+                                      "M01AB55" ,
+                                      "M02AA15" ,
+                                      "S01BC03" ,
+                                      "S01CC01" ;
+            rdfs:label "diclofenac" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#electrolyte_disturbance
+:electrolyte_disturbance rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Potential_Confounder ;
+                         OpenPVSignal:has_MedDRA_code 10014417 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Electrolyte disturbance" ;
+                         rdfs:label "electrolyte disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#escitalopram
+:escitalopram rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :PotentialPharmacokineticInteractionForlansoprazol-agomelatine ;
+              OpenPVSignal:has_ATC_code "N06AB10" ;
+              rdfs:label "escitalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#fentanyl
+:fentanyl rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AH01" ,
+                                    "N01AH51" ,
+                                    "N02AB03" ;
+          rdfs:label "fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#fracture
+:fracture rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "S32.9XXA" ;
+          OpenPVSignal:has_MedDRA_code 10017076 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Fracture" ;
+          rdfs:label "fracture" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#hydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ,
+                                               "C03AB03" ,
+                                               "C03AX01" ,
+                                               "C03EA01" ,
+                                               "C09DA04" ,
+                                               "C09DB05" ,
+                                               "C09DX01" ,
+                                               "C09DX03" ,
+                                               "C09XA52" ,
+                                               "C09XA54" ,
+                                               "G01AE10" ;
+                     rdfs:label "hydrochlorothiazide / irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#ibuprofen
+:ibuprofen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01EB16" ,
+                                     "G02CC01" ,
+                                     "M01AE01" ,
+                                     "M01AE51" ,
+                                     "M02AA13" ,
+                                     "R02AX02" ;
+           rdfs:label "ibuprofen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#impulseControlDisorder
+:impulseControlDisorder rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10061215 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Impulse-control disorder" ;
+                        rdfs:label "impulse control disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#insomnia
+:insomnia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "G470" ;
+          OpenPVSignal:has_MedDRA_code 10022437 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Insomnia" ;
+          rdfs:label "insomnia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#intentionalOverdose
+:intentionalOverdose rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "T50992A" ;
+                     OpenPVSignal:has_MedDRA_code 10022523 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Intentional overdose" ;
+                     rdfs:label "intentional overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#irbesartan
+:irbesartan rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :PotentialPharmacokineticInteractionForlansoprazol-agomelatine ;
+            OpenPVSignal:has_ATC_code "C09CA04" ;
+            rdfs:label "irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#lamotrigine
+:lamotrigine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N03AX09" ;
+             rdfs:label "lamotrigine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#lansoprazole
+:lansoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :PotentialPharmacokineticInteractionForlansoprazol-agomelatine ;
+              OpenPVSignal:has_ATC_code "A02BC03" ,
+                                        "A02BC53" ,
+                                        "A02BD02" ,
+                                        "A02BD03" ,
+                                        "A02BD07" ,
+                                        "A02BD09" ,
+                                        "A02BD10" ;
+              rdfs:label "lansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#literature_and_product_info_for_QT_prolongation
+:literature_and_product_info_for_QT_prolongation rdf:type owl:NamedIndividual ,
+                                                          obo:OAE_0001182 ,
+                                                          OpenPVSignal:Warning_Information ;
+                                                 OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                                 OpenPVSignal:refers_to_drug :amisulpride ,
+                                                                             :chlorprothixene ,
+                                                                             :escitalopram ,
+                                                                             :prothipendyl ,
+                                                                             :quetiapine ,
+                                                                             :trimipramine ,
+                                                                             :venlafaxine ,
+                                                                             :ziprasidone ;
+                                                 mp:references :Ref.11 ;
+                                                 OpenPVSignal:has_content "References from the literature and product information report QT prolongation in association with venlafaxine, escitalopram, amisulpride, chlorprothixene, prothipendyl, trimipramine, ziprasidone and quetiapine.11" ;
+                                                 rdfs:label "literature and product info for QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#longQtSyndrome
+:longQtSyndrome rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I45.81" ;
+                OpenPVSignal:has_MedDRA_code 10024803 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Long QT syndrome" ;
+                rdfs:label "long qt syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#lorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#medicineIneffective
+:medicineIneffective rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10013709 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Drug ineffective" ;
+                     rdfs:label "medicine ineffective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#mianserin
+:mianserin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_mechanism :Seretonin_5-HT2C_antagonist__effect ;
+           OpenPVSignal:has_ATC_code "N06AX03" ;
+           rdfs:label "mianserin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#mianserin_and_mirtazapine_qt_prolongation
+:mianserin_and_mirtazapine_qt_prolongation rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Warning_Information ;
+                                           OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                           OpenPVSignal:refers_to_drug :mianserin ,
+                                                                       :mirtazapine ;
+                                           mp:references :Ref.16 ,
+                                                         :Ref.17 ,
+                                                         :Ref.18 ;
+                                           OpenPVSignal:has_content "Both mianserin and mirtazapine can prolong the QTc interval.16,17,18" ;
+                                           rdfs:label "mianserin and mirtazapine qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#migraineAggravated
+:migraineAggravated rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10027600 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Migraine aggravated" ;
+                    rdfs:label "migraine aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Drug-induced_long_qt_by_antidepressants ,
+                                        :Seretonin_5-HT2C_antagonist__effect ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#multipleDrugOverdose
+:multipleDrugOverdose rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10057867 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Multiple drug overdose" ;
+                      rdfs:label "multiple drug overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#overdose
+:overdose rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ,
+                   OpenPVSignal:Potential_Confounder ;
+          OpenPVSignal:has_ICD_code "T50901A" ;
+          OpenPVSignal:has_MedDRA_code 10033295 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Overdose" ;
+          rdfs:label "overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#predisposing_factors
+:predisposing_factors rdf:type owl:NamedIndividual ,
+                               obo:OAE_0001182 ;
+                      OpenPVSignal:has_potential_confounding_factor :Congenital_LQTS ,
+                                                                    :electrolyte_disturbance ,
+                                                                    :overdose ;
+                      OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                      OpenPVSignal:has_content "Drug-induced LQTS results from the association of predisposing factors to a drug acting as an environmental stressor. Predisposing factors include female sex, congenital LQTS, electrolyte disturbances and high drug levels." ;
+                      rdfs:label "predisposing factors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#pregabalin
+:pregabalin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX16" ;
+            rdfs:label "pregabalin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#prothipendyl
+:prothipendyl rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N05AX07" ;
+              rdfs:label "prothipendyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :IntroductionContent ,
+                                                   :LQTSSyndromePathology ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025_for_agomelatine_and_qt_prolonged ,
+                                                          :IC_for_agomelatine_and_qt_prolonged ,
+                                                          :reportsFromGermany ,
+                                                          :reportsInVigibaseForAgomelatineAndQtProlongued ,
+                                                          :reportsWithAgomelatineAsTheOnlySuspectDrug ,
+                                                          :reportsWithNoDuplicates ,
+                                                          :reportsWithOverdose ,
+                                                          :reportsWithRecoveryFromQtProlongation ,
+                                                          :reports_from_Italy ,
+                                                          :reports_from_Spain ,
+                                                          :reports_from_consumers ,
+                                                          :reports_from_literature ,
+                                                          :reports_from_physicians ,
+                                                          :reports_with_concomitant_psychotropic__therapy_with_antidepressants_or_antipsychotics ;
+          OpenPVSignal:refers_to_adverse_effect :longQtSyndrome ;
+          OpenPVSignal:refers_to_drug :agomelatine ;
+          OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+          mp:supportedByData :Labelling ,
+                             :Premarketing_studies ,
+                             :literature_and_product_info_for_QT_prolongation ,
+                             :mianserin_and_mirtazapine_qt_prolongation ,
+                             :predisposing_factors ,
+                             :review_for_escitalopram_and_QT_prolongation ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#qtProlonged
+:qtProlonged rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I4581" ;
+             OpenPVSignal:has_MedDRA_code 10014387 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Electrocardiogram QT prolonged" ;
+             rdfs:label "qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#quetiapine
+:quetiapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH04" ;
+            rdfs:label "quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                    OpenPVSignal:has_count 7 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsInVigibaseForAgomelatineAndQtProlongued
+:reportsInVigibaseForAgomelatineAndQtProlongued rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                                OpenPVSignal:refers_to_drug :agomelatine ;
+                                                OpenPVSignal:has_count 9 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Europe" ;
+                                                rdfs:label "reports in vigibase for agomelatine and qt prolongued" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsWithAgomelatineAsTheOnlySuspectDrug
+:reportsWithAgomelatineAsTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                                            OpenPVSignal:refers_to_primary_suspect_drug :agomelatine ;
+                                            OpenPVSignal:has_count 4 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports with agomelatine as the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsWithNoDuplicates
+:reportsWithNoDuplicates rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                         OpenPVSignal:has_count 8 ;
+                         OpenPVSignal:has_count_of_men 1 ;
+                         OpenPVSignal:has_count_of_women 7 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports with no duplicates" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsWithOverdose
+:reportsWithOverdose rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :reportsWithOverdose ;
+                     OpenPVSignal:refers_to_adverse_effect :overdose ;
+                     OpenPVSignal:has_count 3 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "reports with overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reportsWithRecoveryFromQtProlongation
+:reportsWithRecoveryFromQtProlongation rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                                       OpenPVSignal:has_count 5 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                       rdfs:label "reports with recovery from qt prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_from_Italy
+:reports_from_Italy rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Italy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_from_Spain
+:reports_from_Spain rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_from_consumers
+:reports_from_consumers rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:has_reporter_type "patient" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports from consumers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_from_literature
+:reports_from_literature rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:has_reporter_type "other" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports from literature" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_from_physicians
+:reports_from_physicians rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibaseForAgomelatineAndQtProlongued ;
+                         OpenPVSignal:has_count 7 ;
+                         OpenPVSignal:has_reporter_type "physician" ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "reports from physicians" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#reports_with_concomitant_psychotropic__therapy_with_antidepressants_or_antipsychotics
+:reports_with_concomitant_psychotropic__therapy_with_antidepressants_or_antipsychotics rdf:type owl:NamedIndividual ,
+                                                                                                OpenPVSignal:Reports_group ;
+                                                                                       OpenPVSignal:is_subgroup_of :reportsWithNoDuplicates ;
+                                                                                       OpenPVSignal:refers_to_concomitant_drug :antidepressants ,
+                                                                                                                               :antipsychotics ;
+                                                                                       OpenPVSignal:has_count 7 ;
+                                                                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                       rdfs:label "reports with concomitant psychotropic  therapy with antidepressants or antipsychotics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#review_for_escitalopram_and_QT_prolongation
+:review_for_escitalopram_and_QT_prolongation rdf:type owl:NamedIndividual ,
+                                                      obo:OAE_0001182 ;
+                                             OpenPVSignal:refers_to_adverse_effect :qtProlonged ;
+                                             OpenPVSignal:refers_to_drug :escitalopram ;
+                                             mp:references :Ref.19 ;
+                                             OpenPVSignal:has_content "A review found that escitalopram has a small effect on the QTc interval and a prolonged QTc was seen in 2 to 14% of escitalopram overdose cases, without serious cardiac sequelae.19" ;
+                                             rdfs:label "review for escitalopram and QT prolongation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#sleepDisorder
+:sleepDisorder rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "G479" ;
+               OpenPVSignal:has_MedDRA_code 10040984 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Sleep disorder" ;
+               rdfs:label "sleep disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#somnolence
+:somnolence rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R40" ;
+            OpenPVSignal:has_MedDRA_code 10041349 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Somnolence" ;
+            rdfs:label "somnolence" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#suicideAttempt
+:suicideAttempt rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "T1491" ;
+                OpenPVSignal:has_MedDRA_code 10042464 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Suicide attempt" ;
+                rdfs:label "suicide attempt" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#trimipramine
+:trimipramine rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "N06AA06" ;
+              rdfs:label "trimipramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#usageOfAgomelatine
+:usageOfAgomelatine rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :depression ;
+                    OpenPVSignal:refers_to_drug :agomelatine ;
+                    rdfs:label "usage of agomelatine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#usage_of_report_2_for_venlafaxine
+:usage_of_report_2_for_venlafaxine rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Drug_Usage ;
+                                   OpenPVSignal:refers_to_dosage :Dose2Venlafaxine ,
+                                                                 :Dose_2b_Venlafaxine ;
+                                   OpenPVSignal:refers_to_drug :venlafaxine ;
+                                   rdfs:label "usage of report 2 for venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Drug-induced_long_qt_by_antidepressants ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#ziprasidone
+:ziprasidone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AE04" ;
+             rdfs:label "ziprasidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#zolpidem
+:zolpidem rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05CF02" ;
+          rdfs:label "zolpidem" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#zopiclone
+:zopiclone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CF01" ;
+           rdfs:label "zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose3Hydroclorothiazide/Irbesartan
+<http://purl.org/OpenPVSignal/Signals/2013_4_agomelatine_QT_prolonged#Dose3Hydroclorothiazide/Irbesartan> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:Dosage ;
+                                                                                                          OpenPVSignal:refers_to_drug :hydrochlorothiazide ;
+                                                                                                          OpenPVSignal:has_dosage_unit "mg" ;
+                                                                                                          OpenPVSignal:has_value 150 ;
+                                                                                                          OpenPVSignal:refers_to_dose_value "150 mg" ;
+                                                                                                          rdfs:label "Dose 3 Hydroclorothiazide / Irbesartan" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

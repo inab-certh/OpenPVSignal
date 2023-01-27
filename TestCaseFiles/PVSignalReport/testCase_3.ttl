@@ -1,0 +1,15 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+
+# Test Case: A "Pharmacovigilance Signal Report" instance has to be defined with a creation date 
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Pharmacovigilance_Signal_Report ;
+sh:property[
+		sh:path OpenPVSignal:has_creation_date ;	
+		sh:minCount 1;
+		sh:severity sh:Violation ; 
+		sh:message "A Pharmacovigilance Signal Report instance has to be defined with a creation date"
+].

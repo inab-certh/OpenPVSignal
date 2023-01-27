@@ -1,0 +1,792 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl> rdf:type owl:Ontology ;
+                                                                                    owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                                mp: ;
+                                                                                    rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/272293/"^^xsd:anyURI ;
+                                                                                    rdfs:label "Complete loss of libido reported for women on systemic hormonal contraceptive"^^rdfs:Literal ;
+                                                                                    owl:versionInfo "draft-v0.95-20211008"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Complete_loss_of_libido_reported_for_women_on_systemic_hormonal_contraceptive
+:Complete_loss_of_libido_reported_for_women_on_systemic_hormonal_contraceptive rdf:type owl:NamedIndividual ,
+                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Ms_Sarah_Watson ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pvSignal ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/09/2017"^^xsd:date ;
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                                                               mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                                               rdfs:label "Complete loss of libido reported for women on systemic hormonal contraceptive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Contraception
+:Contraception rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10010808 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Contraception" ;
+               rdfs:label "contraception" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Depression_as_a_confounder
+:Depression_as_a_confounder rdf:type owl:NamedIndividual ,
+                                     <http://purl.obolibrary.org/obo/OAE_0001182> ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_potential_confounding_factor> :depression ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Although depression could be a confounder for loss of libido, there is a sufficient number of reports in VigiBase without this confounder present." ;
+                            rdfs:label "Depression as a confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Discussion
+:Discussion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Discussion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Different needs among women and couples influence their decision on which contraceptive method to use. The potential risk of hormonal contraceptives influencing their libido needs to be communicated to women when prescribing, to enable women who experience this problem to reconsider their choice of contraceptive method. In a response to one of the patient reports the manufacturer made the following statement: “Since ‘libido decreased’ is listed, therefore loss of libido is considered listed”. However, this does not seem to be sufficiently informative to patients. Although depression could be a confounder for loss of libido, there is a sufficient number of reports in VigiBase without this confounder present. There are also several with depression co-reported that have recorded positive dechallenges." ;
+            rdfs:label "Discussion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Hormonal_contraceptives
+:Hormonal_contraceptives rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03A" ;
+                         rdfs:label "Hormonal contraceptives for systemic use" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDesogestrel
+:IC50ForDesogestrel rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :desogestrel ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 3.84 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 23 ;
+                    rdfs:label "IC025 for Desogestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEtonorgestrel
+:IC50ForEtonorgestrel rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :etonorgestrel ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 2.04 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 43 ;
+                      rdfs:label "IC025 for Etonorgestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForLevonorgestrel
+:IC50ForLevonorgestrel rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :levonorgestrel ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 3.37 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 406 ;
+                       rdfs:label "IC025 for Levonorgestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForMedoxprogesterone
+:IC50ForMedoxprogesterone rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :medoxprogesterone ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 2.8 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 87 ;
+                          rdfs:label "IC025 for Medoxprogesterone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Ms_Sarah_Watson
+:Ms_Sarah_Watson rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Sarah" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Watson" ;
+                 rdfs:label "Ms Sarah Watson" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido
+:OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido rdf:type owl:NamedIndividual ,
+                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 694 ;
+                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                  rdfs:label "Overall reports in vigibase for hormonal contraceptives and loss of libido" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Positive_IC025
+:Positive_IC025 rdf:type owl:NamedIndividual ,
+                         <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "All have a positive IC025 value, which means that the adverse reaction is reported more often for that drug than what would be expected compared to the background of the database, with a statistical significance.3" ;
+                mp:references :Ref.3 ;
+                rdfs:label "Positive IC025" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Electronic Medicines Compendium: Summary of Product Characteristics for systemic hormonal contraceptives. Available from: www.medicnies.org.uk/ emc/. Accessed: 1 November 2016." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "US DailyMed: Product label for systemic hormonal contraceptives. Available from: https://dailymed.nlm.nih. gov/dailymed/. Accessed: 1 November 2016." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Norén GN, Hopstadius J, Bate A. Shrinkage observed-to-expected ratios for robust and transparent large-scale pattern discovery. Stat Methods Med Res. Feb 2013;22(1):57-69." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :case_1_info ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :patient_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_reported_drug_usage> :usage_for_report_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :time_to_onset_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :case_2_info ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :bleeding ,
+                                                                                   :completeLossOfLibido ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :patient_2 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#time_to_onset> :time_to_onset_2 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Report_3
+:Report_3 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_free_text_reporting_element> :case_3_info ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :patient_3 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Hormonal_contraceptives ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "recovery with sequelae" ;
+          rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDesogestrel
+:ReportsForDesogestrel rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :desogestrel ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 23 ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                       rdfs:label "Reports for Desogestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEtonorgestrel
+:ReportsForEtonorgestrel rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :etonorgestrel ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 43 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                         rdfs:label "Reports for Etonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForLevonorgestrel
+:ReportsForLevonorgestrel rdf:type owl:NamedIndividual ,
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :levonorgestrel ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 406 ;
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                          rdfs:label "Reports for Levonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForLibidoDecreasedAndHormonalContraceptives
+:ReportsForLibidoDecreasedAndHormonalContraceptives rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :decreasedLibido ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 1743 ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                    rdfs:label "Reports for libido decreased and hormonal contraceptives" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForLibidoIncreasedAndHormonalContraceptives
+:ReportsForLibidoIncreasedAndHormonalContraceptives rdf:type owl:NamedIndividual ,
+                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :increasedLibido ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 55 ;
+                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                    rdfs:label "Reports for libido increased and hormonal contraceptives" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForMedoxprogesterone
+:ReportsForMedoxprogesterone rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :medoxprogesterone ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 87 ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                             rdfs:label "Reports for Medoxprogesterone " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsWithDepressionAsAConfounder
+:ReportsWithDepressionAsAConfounder rdf:type owl:NamedIndividual ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_potential_confounding_factor> :depression ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :depression ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 245 ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                    rdfs:label "Reports with depression as a confounder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsWithDepressionco-reported
+:ReportsWithDepressionco-reported rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_potential_confounding_factor> :depression ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :ReportsWithPositiveDechallenge ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :depression ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 44 ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                  rdfs:label "Reports with depression co-reported" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsWithPositiveDechallenge
+:ReportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 112 ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome> "positive - condition not applied" ;
+                                rdfs:label "Reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsWithPositiveRechallenge
+:ReportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 2 ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_rechallenge_outcome> "positive rechallenge - condition appeared again" ;
+                                rdfs:label "Reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "As of 6 October 2016, there were 694 reports of loss of libido for hormonal contraceptives for systemic use (ATC code G03A) in VigiBase, the WHO global database of individual case safety reports (ICSRs). The top 10 reported drugs within this category are shown in Table 1. All have a positive IC025 value, which means that the adverse reaction is reported more often for that drug than what would be expected compared to the background of the database, with a statistical significance.3 The reports originate from all continents. Most of the reports concern women in the 18 to 44 age group (65%, with an even distribution within the age group), which is consistent with the age group most commonly using hormonal contraceptives. The five most commonly co-reported terms are depression, headache, mood swings, weight increased and anxiety. Depression is a confounder for loss of libido and was co-reported on 245 of the reports. The term “libido decreased” has 1743 reports for hormonal contraceptives for systemic use in VigiBase, and “libido increased” has 55 reports. Whether or not decrease and loss of libido are more common as adverse drug reactions than an increase in libido, or that they are a more serious problem which makes patients more prone to report, is not possible to say from this data. The majority of the 694 reports in VigiBase lack information about any actions taken with the hormonal contraceptives. There are, however, 114 reports where the causal relationship between the drug and the adverse drug reaction is strengthened by positive de- or rechallenges of loss of libido. For 112 of the reports, there is a recorded positive dechallenge and two of them documents a positive rechallenge. Reports with depression co-reported are included in these figures and concern 44 of these reports. Seventy-seven of the 112 reports were submitted by consumers/non health professionals. The women describe in their own words how the complete loss of libido affected their lives and that they were not aware of a possible correlation to their contraceptive. One user switched from an oral contraceptive with which she had experienced a decrease in libido to another oral contraceptive and as a result suffered a complete loss of libido during a period of one year. Once she had stopped the second contraceptive regime for a month, her libido returned and she realised that the loss of libido probably was related to her contraceptive drug. She questioned the information about this potential side effect and commented that the pills are of no use when you experience this adverse drug reaction: “Why use birth control pills if you never want to have sex?”. The risk of non-compliance in cases like this is quite evident if the primary reason for the patient to take the contraceptive is to prevent a pregnancy. Another female described how her libido gradually disappeared over two years while taking her hormonal contraceptive. When she started to have unexpected bleedings, she stopped taking the contraceptive and her libido returned completely after about one week. A third woman explained that her libido did return after discontinuation of the hormonal contraceptive, but that she was still struggling in her sex life because the reaction to the effects of the contraceptive had become associated with so many negative emotions." ;
+                     mp:references :Ref.3 ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Reports_with_women_in_the_18_to_44_age_group
+:Reports_with_women_in_the_18_to_44_age_group rdf:type owl:NamedIndividual ,
+                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 451 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 451 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_max_age> 44 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_min_age> 18 ;
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                              rdfs:label "Reports with women in the 18 to 44 age group" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Response_from_manifacturer
+:Response_from_manifacturer rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Response_to_Pharmacovigilance_Signal_Report> ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In a response to one of the patient reports the manufacturer made the following statement: “Since ‘libido decreased’ is listed, therefore loss of libido is considered listed”" ;
+                            rdfs:label "Response from manifacturer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#SmPC_and_PIL_for_systemic_hormonal_contraceptives
+:SmPC_and_PIL_for_systemic_hormonal_contraceptives rdf:type owl:NamedIndividual ,
+                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ;
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :decreasedLibido ,
+                                                                                                                            :increasedLibido ;
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Although the terms 'decreased libido', 'increased libido' or 'changes in libido' are covered in most summary of product characteristics and patient information leaflets for systemic hormonal contraceptives, a complete loss of libido as reported and described by these patients is rarely mentioned.1,2" ;
+                                                   mp:references :Ref.1 ,
+                                                                 :Ref.2 ;
+                                                   rdfs:label "SmPC and PIL for systemic hormonal contraceptives" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#Usage_of_hormonal_contraceptives
+:Usage_of_hormonal_contraceptives rdf:type owl:NamedIndividual ,
+                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :Contraception ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Hormonal_contraceptives ;
+                                  rdfs:label "Usage of hormonal contraceptives" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#bleeding
+:bleeding rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10005103 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Bleeding" ;
+          rdfs:label "bleeding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#case_1_info
+:case_1_info rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "One user switched from an oral contraceptive with which she had experienced a decrease in libido to another oral contraceptive and as a result suffered a complete loss of libido during a period of one year. Once she had stopped the second contraceptive regime for a month, her libido returned and she realised that the loss of libido probably was related to her contraceptive drug. She questioned the information about this potential side effect and commented that the pills are of no use when you experience this adverse drug reaction: “Why use birth control pills if you never want to have sex?”. The risk of non-compliance in cases like this is quite evident if the primary reason for the patient to take the contraceptive is to prevent a pregnancy." ;
+             rdfs:label "case 1 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#case_2_info
+:case_2_info rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Another female described how her libido gradually disappeared over two years while taking her hormonal contraceptive. When she started to have unexpected bleedings, she stopped taking the contraceptive and her libido returned completely after about one week." ;
+             rdfs:label "case 2 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#case_3_info
+:case_3_info rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A third woman explained that her libido did return after discontinuation of the hormonal contraceptive, but that she was still struggling in her sex life because the reaction to the effects of the contraceptive had become associated with so many negative emotions." ;
+             rdfs:label "case 3 info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#completeLossOfLibido
+:completeLossOfLibido rdf:type owl:NamedIndividual ,
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R68.82" ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10024870 ;
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Loss of libido" ;
+                      rdfs:label "loss of libido" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "These reports highlight the importance of helping consumers make well-informed decisions about their treatments and being aware of potential adverse reactions.Users who lose their libido while on these contraceptives might need to change their method of birth control in order to sustain their life quality and reduce the risk of noncompliance. A clearer message in the patient information leaflet about the potential loss of libido is recommended ." ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#contraceptives_and_libido
+:contraceptives_and_libido rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ,
+                                                                                                    :decreasedLibido ;
+                           rdfs:label "contraceptives and libido" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#decreasedLibido
+:decreasedLibido rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R68.82" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10024419 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Libido decreased" ;
+                 rdfs:label "decreased libido" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#depression
+:depression rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Potential_Confounder> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F32" ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10012378 ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#desogestrel
+:desogestrel rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AC09" ;
+             rdfs:label "desogestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#etonorgestrel
+:etonorgestrel rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AC08" ;
+               rdfs:label "etonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#evidence_in_favor_of_signal_1
+:evidence_in_favor_of_signal_1 rdf:type owl:NamedIndividual ,
+                                        <http://purl.obolibrary.org/obo/OAE_0001197> ;
+                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Although depression could be a confounder for loss of libido, there is a sufficient number of reports in VigiBase without this confounder present." ;
+                               rdfs:label "evidence in favor of signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#increasedLibido
+:increasedLibido rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "F66" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10024421 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Libido increased" ;
+                 rdfs:label "increased libido" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The MedDRA preferred term 'loss of libido' was initialy highlighted for two systemic hormonal contraceptives (desogestrel and ethinylestradiol/ levonorgestrel) in the joint UMC/Lareb signal detection sprint focusing on patient reports that took place in October 2016. Although the terms 'decreased libido', 'increased libido' or 'changes in libido' are covered in most summary of product characteristics and patient information leaflets for systemic hormonal contraceptives, a complete loss of libido as reported and described by these patients is rarely mentioned.1,2 Many health-care professionals may know that most systemic hormonal contraceptives are known to be able to affect the libido and in some cases cause a complete loss of libido. The full extent of this effect does not, however, always seem to be known among the women using these products. A decrease in libido, as listed in many of the patient information leaflets, may be acceptable to some patients, but a loss of libido as an adverse effect of contraceptive use would be less so." ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#levonorgestrel
+:levonorgestrel rdf:type owl:NamedIndividual ,
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AD01" ;
+                rdfs:label "levonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#medoxprogesterone
+:medoxprogesterone rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AC06" ;
+                   rdfs:label "medoxprogesterone " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#oral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Intake_Form> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#patient_1
+:patient_1 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#patient_2
+:patient_2 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#patient_3
+:patient_3 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Discussion ,
+                                                                                      :Reports_in_Vigibase ,
+                                                                                      :conclusion ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_individual_case_report> :Report_1 ,
+                                                                                                 :Report_2 ,
+                                                                                                 :Report_3 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :IC50ForDesogestrel ,
+                                                                                             :IC50ForEtonorgestrel ,
+                                                                                             :IC50ForLevonorgestrel ,
+                                                                                             :IC50ForMedoxprogesterone ,
+                                                                                             :OverallReportsInVigibaseForHormonalContraceptivesAndLossOfLibido ,
+                                                                                             :ReportsForDesogestrel ,
+                                                                                             :ReportsForEtonorgestrel ,
+                                                                                             :ReportsForLevonorgestrel ,
+                                                                                             :ReportsForLibidoDecreasedAndHormonalContraceptives ,
+                                                                                             :ReportsForLibidoIncreasedAndHormonalContraceptives ,
+                                                                                             :ReportsForMedoxprogesterone ,
+                                                                                             :ReportsWithDepressionAsAConfounder ,
+                                                                                             :ReportsWithDepressionco-reported ,
+                                                                                             :ReportsWithPositiveDechallenge ,
+                                                                                             :ReportsWithPositiveRechallenge ,
+                                                                                             :Reports_with_women_in_the_18_to_44_age_group ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDesogestrel/Ethinylestradiol> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDrospirenone/Ethinylestradiol> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Etonorgestrel> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Levonorgestrel> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Noregelgestromin> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Norgestimate> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDesogestrel/Ethinylestradiol> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDrospirenone/Ethinylestradiol> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Etonorgestrel> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Levonorgestrel> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Noregelgestromin> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Norgestimate> ,
+                                                                                             <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsSubmittedByconsumers/nonHealthProfessionals> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :decreasedLibido ,
+                                                                                   :increasedLibido ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+          mp:supportedByData :Depression_as_a_confounder ,
+                             :Positive_IC025 ,
+                             :SmPC_and_PIL_for_systemic_hormonal_contraceptives ,
+                             :contraceptives_and_libido ,
+                             :evidence_in_favor_of_signal_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/09/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#time_to_onset_1
+:time_to_onset_1 rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 <http://www.w3.org/2006/time#nominalPosition> "years" ;
+                 <http://www.w3.org/2006/time#numericPosition> 1 ;
+                 rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#time_to_onset_2
+:time_to_onset_2 rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2006/time#DurationDescription> ;
+                 <http://www.w3.org/2006/time#nominalPosition> "years" ;
+                 <http://www.w3.org/2006/time#numericPosition> 2 ;
+                 rdfs:label "time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#usage_for_report_1
+:usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Usage> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_drug_intake> :oral_administration ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_class> :Hormonal_contraceptives ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Hormonal_contraceptives ;
+                    rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDesogestrel/Ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDesogestrel/Ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#desogestrel/ethinylestradiol> ;
+                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 0.2 ;
+                                                                                                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 7 ;
+                                                                                                                       rdfs:label "IC025 for Desogestrel/Ethinylestradiol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDrospirenone/Ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForDrospirenone/Ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#drospirenone/ethinylestradiol> ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 1.68 ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 52 ;
+                                                                                                                        rdfs:label "IC025 for Drospirenone/Ethinylestradiol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Etonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Etonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/etonorgestrel> ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 2.22 ;
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 31 ;
+                                                                                                                         rdfs:label "IC025 for Ethinylestradiol/Etonorgestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Levonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Levonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/Levonorgestrel> ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 1.9 ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 29 ;
+                                                                                                                          rdfs:label "IC025 for Ethinylestradiol/Levonorgestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Noregelgestromin
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Noregelgestromin> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/noregelgestromin> ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 0.47 ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 16 ;
+                                                                                                                            rdfs:label "IC025 for Ethinylestradiol/Noregelgestromin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Norgestimate
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#IC50ForEthinylestradiol/Norgestimate> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/norgestimate> ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 1.11 ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_number_of_reports> 9 ;
+                                                                                                                        rdfs:label "IC025 for Ethinylestradiol/Norgestimate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDesogestrel/Ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDesogestrel/Ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#desogestrel/ethinylestradiol> ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 7 ;
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                          rdfs:label "Reports for Desogestrel/Ethinylestradiol " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDrospirenone/Ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForDrospirenone/Ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#drospirenone/ethinylestradiol> ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 52 ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                           rdfs:label "Reports for Drospirenone/Ethinylestradiol " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Etonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Etonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/etonorgestrel> ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 31 ;
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                            rdfs:label "Reports for Ethinylestradiol/Etonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Levonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Levonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/levonorgestrel> ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 29 ;
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                             rdfs:label "Reports for Ethinylestradiol/Levonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Noregelgestromin
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Noregelgestromin> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/norgestimate> ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 16 ;
+                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                               rdfs:label "Reports for Ethinylestradiol/Noregelgestromin " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Norgestimate
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsForEthinylestradiol/Norgestimate> rdf:type owl:NamedIndividual ,
+                                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :completeLossOfLibido ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> <http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/norgestimate> ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 9 ;
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                           rdfs:label "Reports for Ethinylestradiol/Norgestimate " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsSubmittedByconsumers/nonHealthProfessionals
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ReportsSubmittedByconsumers/nonHealthProfessionals> rdf:type owl:NamedIndividual ,
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :ReportsWithPositiveDechallenge ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 77 ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_reporter_type> "other" ,
+                                                                                                                                                                                                        "patient" ;
+                                                                                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                                                                                      rdfs:label "Reports submitted by consumers/non health professionals " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#desogestrel/ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#desogestrel/ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AA09" ;
+                                                                                                                rdfs:label "desogestrel/ethinylestradiol " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#drospirenone/ethinylestradiol
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#drospirenone/ethinylestradiol> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AA12" ;
+                                                                                                                 rdfs:label "drospirenone/ethinylestradiol " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/Levonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/Levonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AA07" ;
+                                                                                                                   rdfs:label "ethinylestradiol/ levonorgestrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/etonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/etonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G02BB01" ;
+                                                                                                                  rdfs:label "ethinylestradiol/etonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/levonorgestrel
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/levonorgestrel> rdf:type owl:NamedIndividual ,
+                                                                                                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "‎G03AA07‎" ;
+                                                                                                                   rdfs:label "ethinylestradiol/levonorgestrel " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/noregelgestromin
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/noregelgestromin> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AA13" ;
+                                                                                                                     rdfs:label "ethinylestradiol/noregelgestromin " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/norgestimate
+<http://purl.org/OpenPVSignal/Signals/2017_5_hormonalContraceptive_libidoLoss.owl#ethinylestradiol/norgestimate> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :Hormonal_contraceptives ;
+                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "G03AA11" ,
+                                                                                                                                                                              "G03AB11" ;
+                                                                                                                 rdfs:label "ethinylestradiol/norgestimate " .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

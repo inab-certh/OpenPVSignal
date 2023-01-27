@@ -1,0 +1,40 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+
+# Test Case: An "ADR" instance has to have an ICD or a MedDRA code 
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Adverse_Effect ;
+sh:or (
+	[sh:property[
+		sh:path OpenPVSignal:has_ICD_code ;	
+		sh:minCount 1;
+		sh:datatype xsd:string ;
+		sh:message "A ADR instance has to have a code and it must be a string";
+		];
+	sh:property[
+		sh:path rdfs:label ;
+		sh:minCount 1;
+		sh:message "A ADR instance has to have a label";
+		]
+		]
+	[sh:property[
+		sh:path OpenPVSignal:has_MedDRA_code ;	
+		sh:minCount 1;
+		sh:datatype xsd:integer ;
+		sh:message "MedDRA code is missing, or not an integer";
+		];
+	sh:property [
+		sh:path OpenPVSignal:has_MedDRA_prefered_term ;    
+		sh:maxCount 1 ;
+		sh:minCount 1 ;
+		sh:datatype xsd:string ;
+		sh:message "MedDRA preferred term is missing, or not a string";
+		]
+		]
+	)
+.

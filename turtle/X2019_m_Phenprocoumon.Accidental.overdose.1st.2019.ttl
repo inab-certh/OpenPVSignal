@@ -1,0 +1,261 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl> rdf:type owl:Ontology ;
+                                                                                     owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                     rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/312111/"^^xsd:anyURI ;
+                                                                                     rdfs:label "Phenprocoumon - Accidental overdose"^^rdfs:Literal ;
+                                                                                     owl:versionInfo "draft-v0.95-20210520"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#AccidentalOverdose
+:AccidentalOverdose rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Medication_Errors> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T50.901A" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10000381 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Accidental overdose" ;
+                    rdfs:label "Accidental overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Alem_Zekarias
+:Alem_Zekarias rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Uppsala Monitoring Centre" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Alem" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Zekarias" ;
+               rdfs:label "Alem Zekarias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#AtrialFibrillation
+:AtrialFibrillation rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I48" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10003658 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Info_for_patient_1
+:Info_for_patient_1 rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient_1 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "An 80-year-old female developed a massive urinary tract haemorrhage after an accidental intake of three tablets of the generic medicine at the same time as she continued taking the medicine she had been on for the last eight years. This confusion caused a life-threatening situation." ;
+                    rdfs:label "Info for patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Info_for_patient_2
+:Info_for_patient_2 rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Case_Report_Information> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient_2 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "A further, 88-year-old female patient, whose therapy was changed from her regular medicine to a generic substitute, left her confused and she mixed up the package design with that of her concomitant medications. The error was noticed during a check-up with a coagulation screen corrected accordingly." ;
+                    rdfs:label "Info for patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#InternalHemorrhage
+:InternalHemorrhage rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R58" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10075192 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Internal haemorrhage" ;
+                    rdfs:label "Internal hemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Mechanism_of_phenprocoumon
+:Mechanism_of_phenprocoumon rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                            mp:references :Ref.1 ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Phenprocoumon is a long-acting vitamin K antagonist approved to treat and prevent thromboembolic disease. The oral anticoagulant is also indicated in patients diagnosed with atrial fibrillation for the prevention of ischemic stroke. Phenprocoumon and any other drugs in the anti coagulant family act by preventing further extension of a formed clot thus preventing secondary thromboembolic consequences which may lead to serious, sometimes fatal outcomes.1" ;
+                            rdfs:label "Mechanism of phenprocomoun" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Overall_reports_in_VigiBase_of_phenprocoumon_and_accidental_overdose
+:Overall_reports_in_VigiBase_of_phenprocoumon_and_accidental_overdose rdf:type owl:NamedIndividual ,
+                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :InternalHemorrhage ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Phenprocoumon ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :AccidentalOverdose ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 19 ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 9 ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 10 ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_max_age> 89 ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_min_age> 63 ;
+                                                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                                      rdfs:label "Overall reports in VigiBase of phenprocoumon and accidental overdose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Patient_1
+:Patient_1 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 80 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Patient_2
+:Patient_2 rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Patient> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_age> 88 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_gender> "female" ;
+           rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Phenprocoumon
+:Phenprocoumon rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :AtrialFibrillation ,
+                                                                                           :ischemic_stroke ,
+                                                                                           :thromboembolic_disease ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#hasClass> :vitamin_K_antagonists ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_phenprocoumon ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "B01AA04" ;
+               rdfs:label "Phenprocoumon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "https://www.drugbank.ca/drugs/DB00946. Accessed February 2018." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Report_1
+:Report_1 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :urinary_tract_haemorrhage ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :AccidentalOverdose ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient_1 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Phenprocoumon ;
+          rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Report_2
+:Report_2 rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#VigiBase_Report> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :AccidentalOverdose ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_patient> :Patient_2 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_primary_suspect_drug> :Phenprocoumon ;
+          rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Reports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """In VigiBase, the WHO global database of individual case safety reports (ICSRs), there are, as of February 2018, 19 cases with the drug phenprocoumon and the preferred term accidental overdose. The cases involve patients of 63 to 89 years of age, ten females and nine males.
+The majority of the reports describe how phenprocoumon had been switched at a pharmacy to a generic brand with similar drug name, appearance and dosing, causing the patient to misunderstand the new dose regime, leading to overdose and internal haemorrhage. Twelve cases described patients taking two anticoagulants at the same time, the original one prescribed plus the generic, instead of only one of them, or taking a higher dose than prescribed of one of the drugs because of a mix-up of medications, causing a synergistic effect leading to a higher risk for haemorrhage. An 80-year-old female developed a massive urinary tract haemorrhage after an accidental intake of three tablets of the generic medicine at the same time as she continued taking the medicine she had been on for the last eight years. This confusion caused a life-threatening situation.
+A further, 88-year-old female patient, whose therapy was changed from her regular medicine to a generic substitute, left her confused and she mixed up the package design with that of her concomitant medications. The error was noticed during a check-up with a coagulation screen corrected accordingly.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#conclusion
+:conclusion rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Conclusion> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anticoagulated patients are a vulnerable group requiring coagulation monitoring by health-care professionals to achieve the optimal pharmacological effect without causing bleeding. The population treated is generally elderly and takes these drugs in combination with other medication, thus increasing the risk of confusion and medication error. Switching products at the pharmacy level requires adequate information and reassurance that the patient has fully understood the dosing and monitoring instructions essential to prevent harm, including life-threatening events" ;
+            rdfs:label "conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Phenprocoumon is a long-acting vitamin K antagonist approved to treat and prevent thromboembolic disease. The oral anticoagulant is also indicated in patients diagnosed with atrial fibrillation for the prevention of ischemic stroke. Phenprocoumon and any other drugs in the anti- coagulant family act by preventing further extension of a formed clot thus preventing secondary thromboembolic consequences which may lead to serious, sometimes fatal outcomes.1" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#ischemic_stroke
+:ischemic_stroke rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I63.9" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10055221 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Ischemic stroke" ;
+                 rdfs:label "ischemic stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Reports_in_VigiBase ,
+                                                                                      :conclusion ,
+                                                                                      :introduction ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_individual_case_report> :Report_1 ,
+                                                                                                 :Report_2 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :Overall_reports_in_VigiBase_of_phenprocoumon_and_accidental_overdose ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :InternalHemorrhage ,
+                                                                                   :urinary_tract_haemorrhage ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Phenprocoumon ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_medication_error> :AccidentalOverdose ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "1/5/2019" ;
+          rdfs:label "pvSignal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#thromboembolic_disease
+:thromboembolic_disease rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I74" ,
+                                                                                     "I82" ;
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10043566 ,
+                                                                                        "Thromboembolism" ;
+                        rdfs:label "thromboembolic disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#urinary_tract_haemorrhage
+:urinary_tract_haemorrhage rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R31.9" ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10019591 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Hemorrhage urinary tract" ;
+                           rdfs:label "urinary tract haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#vitamin_K_antagonists
+:vitamin_K_antagonists rdf:type owl:NamedIndividual ,
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#DrugClass> ;
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "B01AA" ;
+                       rdfs:label "vitamin K antagonists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Phenprocoumon_–_Accidental_overdose
+<http://purl.org/OpenPVSignal/Signals/2019_2_phenprocoumon_accidental_overdose.owl#Phenprocoumon_–_Accidental_overdose> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Alem_Zekarias ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pvSignal ;
+                                                                                                                        mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "1/5/2019"^^xsd:date ;
+                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                                                                                                        rdfs:label "Phenprocoumon – Accidental overdose" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

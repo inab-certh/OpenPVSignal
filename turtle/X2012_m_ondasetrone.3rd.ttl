@@ -1,0 +1,1676 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome> .
+
+<http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome> rdf:type owl:Ontology ;
+                                                                              owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                          mp: ;
+                                                                              rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255528/"^^xsd:anyURI ;
+                                                                              rdfs:label "Ondansetron and serotonin syndrome"^^xsd:Literal ;
+                                                                              owl:versionInfo "draft-v0.95-20211013"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedBy
+mp:supportedBy rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosage_4_32
+:dosage_4_32 rdf:type owl:Class ;
+             rdfs:subClassOf OpenPVSignal:Dosage ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty OpenPVSignal:has_value ;
+                               owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                    owl:onDatatype xsd:integer ;
+                                                    owl:withRestrictions ( [ xsd:minInclusive 4
+                                                                           ]
+                                                                           [ xsd:maxInclusive 32
+                                                                           ]
+                                                                         )
+                                                  ]
+                             ] ;
+             owl:disjointWith :dosage_56_64 .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosage_56_64
+:dosage_56_64 rdf:type owl:Class ;
+              rdfs:subClassOf OpenPVSignal:Dosage ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty OpenPVSignal:has_value ;
+                                owl:someValuesFrom [ rdf:type rdfs:Datatype ;
+                                                     owl:onDatatype xsd:integer ;
+                                                     owl:withRestrictions ( [ xsd:minInclusive 56
+                                                                            ]
+                                                                            [ xsd:maxInclusive 64
+                                                                            ]
+                                                                          )
+                                                   ]
+                              ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ADR_for_ondasetron
+:ADR_for_ondasetron rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Structured_Product_Labels_information ;
+                    OpenPVSignal:refers_to_adverse_effect :constipation ,
+                                                          :dizziness ,
+                                                          :dyskinesia ,
+                                                          :dystonic_reaction ,
+                                                          :flushing ,
+                                                          :headache ,
+                                                          :oculogyricCrisis ,
+                                                          :seizures ,
+                                                          :sensation_of_warmth ;
+                    OpenPVSignal:refers_to_drug :ondansetron ;
+                    rdfs:label "UK SPC for ondasetron and ADRs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   mp:references :Ref.4 ;
+                   OpenPVSignal:has_content "VigiBase case reports, together with published case reports, indicate that ondansetron may contribute to the development of the serotonin syndrome in susceptible patients concomitantly receiving other drugs affecting the serotonin system. Additional cases on other 5-HT3 antagonists in VigiBase might indicate a possible class effect. Ondansetron is sometimes mentioned in association with the serotonin syndrome in the literature and there are some published case reports, however nothing is mentioned about serotonin toxicity in the product labelling for ondansetron. Serotonin syndrome is not an idiopathic drug reaction, but it is predictable and preventable4, and therefore patient safety would be served if it was considered to also be mentioned in the product labelling." ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.1 ,
+                                 :Ref.10 ,
+                                 :Ref.13 ,
+                                 :Ref.7 ;
+                   OpenPVSignal:has_content """VigiBase contains nine ICSRs of serotonin syndrome in association with ondansetron use, many of them quite complex and with alternative explanations. Seven of the cases describe a plausible time to onset, as the reaction occurred on the same day or the day after ondansetron was first administered to the patient. Several cases report a positive dechallenge but it is impossible to fully evaluate this information since not only ondansetron but also other suspect drugs were withdrawn.
+Seven of the cases report other drugs that, alone or in combination with other drugs, are known to have the ability to cause serotonin syndrome. Co- administration of different drugs affecting the serotonergic system is a known risk of developing the syndrome. It is not possible to completely assess the involvement of ondansetron in the cases including several other suspect drugs, but it is also impossible to rule out that ondansetron had a contributory role. Interestingly, some of the cases have no or only one other suspect drug in addition to ondansetron.
+A mechanism for a suggested increased vulnerability to serotonin syndrome when concomitantly using 5-HT3 antagonists and other serotonergic drugs might be that blocking of the 5-HT3 receptor subtype, and at the same time increasing the levels of serotonin, results in excessive serotonin to other serotonin receptor subtypes (including 5-HT1A and 5-HT2A).7,10 A pharmacokinetic interaction might also be considered, as ondansetron is metabolized by
+cytochrome P-450 enzymes; CYP3A4, CYP2D6 and
+CYP1A21.
+Two of the cases concern children and in both cases ondansetron is the only drug administered. Although there are certain circumstances complicating the assessment of these cases, i.e. history of malignant hyperthermia and overdose, it should be considered whether ondansetron may cause the serotonin syndrome without co- administration of other drugs affecting the serotonin system and whether children might be at higher risk of serotonin toxicity from ondansetron only.
+Ondansetron is a widely used drug, however, the number of reports of ondansetron associated with serotonin syndrome in VigiBase is quite low. This might indicate that an association between the drug and the ADR is rare, but it should also be considered that serotonin syndrome is not always recognized as a diagnosis and hence not reported as such. Mackay et al. found that awareness of the serotonin syndrome among prescribing doctors was poor; 85% of general practitioners in the United Kingdom were unaware of the syndrome as a diagnosis.13""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Interaction_between_venlafaxine_and_methylthioninium
+:Interaction_between_venlafaxine_and_methylthioninium rdf:type owl:NamedIndividual ,
+                                                               OpenPVSignal:Adverse_Drug-Drug_interaction ;
+                                                      OpenPVSignal:refers_to_interacting_drug :methylthioninium ,
+                                                                                              :venlafaxine ;
+                                                      rdfs:label "Interaction between venlafaxine and methylthioninium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ;
+                     OpenPVSignal:has_content """Ondansetron is a potent, highly selective serotonin receptor subtype 5-HT3 antagonist. Therapeutic indications include the management of nausea and vomiti.ng induced by cytotoxic chemotherapy and radiotherapy (for patients aged 6 months and older), and the prevention and treatment of post- operative nausea and vomiting (for patients aged one month and older).1,2 The recommended adult dose ranges from a single dose of 4 mg to 32 mg a day.1
+Serotonin syndrome is a drug-induced condition resulting from use of medications that increase the level of intrasynaptic serotonin, primarily acting at serotonin receptor subtype 5-HT2A and possibly 5- HT1A.3,4 Several drugs have, either alone or in combination, been associated with the syndrome, including monoamine oxidase inhibitors (MAOIs), selective serotonin re-uptake inhibitors (SSRIs), serotonin-norepinephrine re-uptake inhibitors (SNRIs), tricyclic antidepressants (TCAs), and opioids.3 The diagnosis is clinical and symptoms include mental status alterations (agitation and confusion), autonomic signs (fever, diaphoresis, tachypnoea and tachycardia) and neuromuscular changes (tremor, clonus, myoclonus, hyperreflexia and rigidity).3 The onset of symptoms is usually rapid.
+Mason et al. found that patients with serotonin syndrome most often presented within 24 hours of medication initiation, an overdose or a change in dosing.5 Symptoms usually resolve within 24 hours after discontinuation of serotonergic drugs and the initiation of supportive therapy, but symptoms may last longer after use of drugs with long elimination half-life or active metabolites.4""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    obo:OAE_0001197 ;
+           OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+           OpenPVSignal:refers_to_drug :ondansetron ;
+           mp:references :Ref.10 ,
+                         :Ref.11 ,
+                         :Ref.12 ,
+                         :Ref.4 ,
+                         :Ref.6 ,
+                         :Ref.7 ,
+                         :Ref.8 ,
+                         :Ref.9 ;
+           OpenPVSignal:has_content "Ondansetron is sometimes mentioned in association with the serotonin syndrome in the literature, and there are some published case reports.4,6-12" ;
+           rdfs:label "Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.10 ,
+                                      :Ref.11 ,
+                                      :Ref.12 ,
+                                      :Ref.2 ,
+                                      :Ref.4 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """Ondansetron is sometimes mentioned in association with the serotonin syndrome in the literature, and there are some published case reports.4,6-12 Nothing, however, is mentioned about serotonin toxicity neither in the UK Summary of Product Characteristics (SPC) nor in the US FDA product labelling.1,2 This is also the case for other 5-HT3 antagonists, including dolasetron, granisetron, tropisetron and palonosetron.
+The following nervous system disorders are listed as adverse drug reactions (ADRs) in the ondansetron UK SPC: headache, seizures, movement disorders including extrapyramidal reactions (such as dystonic reactions, oculogyric crisis and dyskinesia), and dizziness during intravenous administration. Other ADRs listed as common for ondansetron (frequency >1/100 and
+<1/10) are sensation of warmth or flushing, constipation and local injection site reactions. Concomitant use with apomorphine is contra- indicated, based on reports of profound hypotension and loss of consciousness.1
+Five case reports on serotonin syndrome associated with the use of ondansetron were found published in the literature.7-12 Four of the cases were identified in VigiBase and are further described in the next section. The fifth case involves a 12 year old male patient seriously ill with disseminated Ewing's Sarcoma, receiving mirtazapine and morphine in addition to chemotherapy. The following day after starting ondansetron he was confused and tremulous with myoclonus. Ondansetron and mirtazapine were both discontinued, and the reaction resolved with a single dose of droperidol the following day.
+Mirtazapine was reintroduced several days later
+without problem.7""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#MAOIs_and_serotonin_syndrome
+:MAOIs_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                              OpenPVSignal:refers_to_class :monoamine_oxidase_inhibitors ;
+                              rdfs:label "MAOIs and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Mackay_et_al_report
+:Mackay_et_al_report rdf:type owl:NamedIndividual ,
+                              obo:OAE_0001125 ;
+                     OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                     mp:references :Ref.13 ;
+                     OpenPVSignal:has_content "Mackay et al. found that awareness of the serotonin syndrome among prescribing doctors was poor; 85% of general practitioners in the United Kingdom were unaware of the syndrome as a diagnosis.13" ;
+                     rdfs:label "Mackay et al report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#MechanismOfOndasetron
+:MechanismOfOndasetron rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Mechanism ;
+                       rdfs:label "Mechanism of ondasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ondansetron_and_serotonin_syndrome
+:Ondansetron_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                    OpenPVSignal:refers_to_signal :pvSignal ;
+                                    OpenPVSignal:has_creation_date "01/06/2012" ;
+                                    OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                    rdfs:label "Ondansetron and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Opioids
+:Opioids rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:DrugClass ;
+         OpenPVSignal:has_ATC_code "N02A" ;
+         rdfs:label "Opioids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Opioids_and_serotonin_syndrome
+:Opioids_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Warning_Information ;
+                                OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                OpenPVSignal:refers_to_class :Opioids ;
+                                rdfs:label "Opioids and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PatientWithGranisetron1
+:PatientWithGranisetron1 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Patient ;
+                         OpenPVSignal:has_age 11 ;
+                         OpenPVSignal:has_gender "female" ;
+                         rdfs:label "Patient with granisetron 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PatientWithGranisetron2
+:PatientWithGranisetron2 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Patient ;
+                         OpenPVSignal:has_age 69 ;
+                         OpenPVSignal:has_gender "female" ;
+                         rdfs:label "Patient with granisetron 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PatientWithGranisetron3
+:PatientWithGranisetron3 rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Patient ;
+                         OpenPVSignal:has_age 12 ;
+                         OpenPVSignal:has_gender "male" ;
+                         rdfs:label "Patient with granisetron 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseCase1
+:PublishedVigibaseCase1 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 49 ;
+                        OpenPVSignal:has_gender "female" ;
+                        rdfs:label "Published Vigibase case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseCase2
+:PublishedVigibaseCase2 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 44 ;
+                        OpenPVSignal:has_gender "female" ;
+                        rdfs:label "Published Vigibase case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseCase3
+:PublishedVigibaseCase3 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 5 ;
+                        OpenPVSignal:has_gender "male" ;
+                        rdfs:label "Published Vigibase case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseCase4
+:PublishedVigibaseCase4 rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Patient ;
+                        OpenPVSignal:has_age 1 ;
+                        OpenPVSignal:has_gender "male" ;
+                        rdfs:label "Published Vigibase case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseReport1
+:PublishedVigibaseReport1 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:has_free_text_reporting_element :infoForPublishedVigibaseCase1 ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_patient :PublishedVigibaseCase1 ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                          OpenPVSignal:refers_to_reported_drug_usage :usage_for_published_in_Vigibase_report_1 ;
+                          OpenPVSignal:refers_to_secondary_suspect_drug :methylthioninium ,
+                                                                        :paroxetine ;
+                          OpenPVSignal:time_to_onset :timeToOnsetForPublishedVigibaseCase1 ;
+                          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                          rdfs:label "Published Vigibase Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseReport2
+:PublishedVigibaseReport2 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:has_free_text_reporting_element :infoForPublishedVigibaseCase2 ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_interacting_drug :duloxetine ,
+                                                                  :fentanyl ,
+                                                                  :lithium ,
+                                                                  :ondansetron ,
+                                                                  :quetiapine ;
+                          OpenPVSignal:refers_to_patient :PublishedVigibaseCase2 ;
+                          OpenPVSignal:refers_to_reported_drug_usage :usage_for_published_Vigibase_report_2 ;
+                          OpenPVSignal:refers_to_secondary_suspect_drug :desflurane ,
+                                                                        :hydromorphone ,
+                                                                        :propofol ,
+                                                                        :rocuronium ,
+                                                                        <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#paracetamol/hydrocodorate> ;
+                          OpenPVSignal:time_to_onset :timeToOnsetForPublishedVigibaseCase2 ;
+                          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                          rdfs:label "Published Vigibase Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseReport3
+:PublishedVigibaseReport3 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:has_free_text_reporting_element :infoForPublishedVigibaseCase3 ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_patient :PublishedVigibaseCase3 ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                          OpenPVSignal:refers_to_reported_drug_usage :usage_for_published_Vigibase_report_3 ;
+                          OpenPVSignal:time_to_onset :timeToOnsetForPublishedVigibaseCase3 ;
+                          OpenPVSignal:refers_to_outcome_after_action "death" ;
+                          rdfs:label "Published Vigibase Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#PublishedVigibaseReport4
+:PublishedVigibaseReport4 rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:has_free_text_reporting_element :infoForPublishedVigibaseCase4 ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_patient :PublishedVigibaseCase4 ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                          OpenPVSignal:refers_to_reported_drug_usage :usage_for_published_Vigibase_report_4 ;
+                          OpenPVSignal:time_to_onset :timeToOnsetForPublishedVigibaseCase4 ;
+                          OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                          rdfs:label "Published Vigibase Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Published_Vigibase_Report_5
+:Published_Vigibase_Report_5 rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:VigiBase_Report ;
+                             OpenPVSignal:has_free_text_reporting_element :info_for_published_vigibase_case_5 ;
+                             OpenPVSignal:refers_to_adverse_effect :confusion ,
+                                                                   :myoclonus ,
+                                                                   :serotoninSyndrome ,
+                                                                   :tremor ;
+                             OpenPVSignal:refers_to_concomitant_drug :morphine ;
+                             OpenPVSignal:refers_to_patient :Published_Vigibase_case_5 ;
+                             OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                             OpenPVSignal:refers_to_secondary_suspect_drug :mirtazapine ;
+                             OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                             rdfs:label "Published Vigibase Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Published_Vigibase_case_5
+:Published_Vigibase_case_5 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Patient ;
+                           OpenPVSignal:has_age 12 ;
+                           OpenPVSignal:has_gender "male" ;
+                           rdfs:label "Published Vigibase case 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "UK SPC. URL: http://www.medicines.org.uk/emc/. Accessed: 14 February 2012." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Altman CS, Jahangiri MF. Serotonin syndrome in the perioperative period. Anesth Analg 2010; 110(2): 526-8." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Gener B, Burns JM, Griffin S, Boyer EW Administration of Ondansetron Is Associated With Lethal Outcome. Pediatrics 2010; 125;e1514." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "George M, Al-Duaij N, O'Donnel KA, Shannon MW Obtunation and seizure following ondasetron overdose in an infant. Clin Toxicol 2008; 10(46)." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Mackay FJ, Dunn NR, Mann RD. Antidepressants and the serotonin syndrome in general practice. BRIT J GEN PRACT 1999; 871-874." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA product labelling. URL: http://www.accessdata. fda.gov/scripts/cder/drugsatfda/. Accessed: 23 March 2012." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sun-Edelstein C, Tepper SJ, Shapiro RE. Drug-induced serotonin syndrome: a review. Expert Opin Drug Saf 2008; 7(5):587-596." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Boyer EW, Shannon M. The Serotonin Syndrome. N Engl J Med 2005; 352:1112- 1120." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mason PJ, Morris VA, Balcezak TJ. Serotonin syndrome. Presentation of 2 cases and review of the literature. Medicine (Baltimore). 2000; 79(4):201-9." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Merck Manual. URL: http://www.merckmanuals.com/ professional/index.html. Accessed: 14 February 2012." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Turkel SB, Nadala JG, Wincor MZ. Possible serotonin syndrome in association with 5-HT3 antagonist agents. Psychosomatics 2001; 42(3):258-60." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Stanford BJ, Stanford SC. Postoperative delirium indicating an adverse drug interaction involving the selective serotonin reuptake inhibitor, paroxetine? J Psychopharmacol 1999; 13(3):313-317." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Stanford SC, Stanford BJ, Gillman PK. Risk of severe serotonin toxicity following co- administration of methylene blue and serotonin reuptake inhibitors: an update on a case report of post-operative delirium. J Psychopharmacol 2010; 24: 1433." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Report_1_with_dolasetron
+:Report_1_with_dolasetron rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :dolasetron ;
+                          OpenPVSignal:refers_to_secondary_suspect_drug :sertraline ;
+                          rdfs:label "Report 1 with dolasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Report_1_with_granisetron
+:Report_1_with_granisetron rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:VigiBase_Report ;
+                           OpenPVSignal:has_free_text_reporting_element :infoForCaseWthGranisetron1 ;
+                           OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                           OpenPVSignal:refers_to_concomitant_drug :fentanyl ,
+                                                                   :granisetron ;
+                           OpenPVSignal:refers_to_patient :PatientWithGranisetron1 ;
+                           mp:references :Ref.7 ;
+                           rdfs:label "Report 1 with granisetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Report_2_with_dolasetron
+:Report_2_with_dolasetron rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:VigiBase_Report ;
+                          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                          OpenPVSignal:refers_to_primary_suspect_drug :dolasetron ;
+                          OpenPVSignal:refers_to_secondary_suspect_drug :sertraline ;
+                          rdfs:label "Report 2 with dolasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Report_2_with_granisetron
+:Report_2_with_granisetron rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:VigiBase_Report ;
+                           OpenPVSignal:has_free_text_reporting_element :infoForCaseWthGranisetron2 ;
+                           OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                           OpenPVSignal:refers_to_drug_drug_interaction :Interaction_between_venlafaxine_and_methylthioninium ;
+                           OpenPVSignal:refers_to_patient :PatientWithGranisetron2 ;
+                           OpenPVSignal:refers_to_primary_suspect_drug :granisetron ,
+                                                                       :methylthioninium ,
+                                                                       :sufentanil ,
+                                                                       :venlafaxine ;
+                           rdfs:label "Report 2 with granisetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Report_3_with_granisetron
+:Report_3_with_granisetron rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:VigiBase_Report ;
+                           OpenPVSignal:has_free_text_reporting_element :infoForCaseWthGranisetron3 ;
+                           OpenPVSignal:refers_to_adverse_effect :neurolepticMalignantSyndrome ,
+                                                                 :serotoninSyndrome ;
+                           OpenPVSignal:refers_to_concomitant_drug :fentanyl ;
+                           OpenPVSignal:refers_to_patient :PatientWithGranisetron3 ;
+                           OpenPVSignal:refers_to_primary_suspect_drug :granisetron ,
+                                                                       :olanzapine ;
+                           rdfs:label "Report 3 with granisetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.7 ;
+                   OpenPVSignal:has_content "After exclusion of duplicate reports, there are nine unique individual case safety reports (ICSRs) of ondansetron associated with the serotonin syndrome in the WHO Global ICSR database, VigiBase™, as of January 2012. The cases originate from seven different countries; United States, Canada, Spain, New Zealand, Germany, United Kingdom and Australia. Six of the patients are females and three are males. Patient age ranges from 12 months to 69 years. Five of the cases have a time to onset reported; the reaction then started on the day of the first ondansetron administration or on the following day. In the adult cases, ondansetron dose ranges from a single dose of 4 mg up to 16 mg daily. The characteristics of the individual cases are listed in Table 1 (unpublished cases) and Table 2 (published cases). In addition to the information available on the cases in VigiBase, further information has been retrieved from original reports received from the national pharmacovigilance centres from which the reports originated, or from the published case reports. In addition to the ondansetron case reports, there are five cases of other 5-HT3 antagonists associated with serotonin syndrome in VigiBase (one duplicate excluded). Three cases include granisetron and two cases dolasetron. One case was found published in literature and reports an 11 year-old female with acute lymphoblastic leukemia. The patient developed symptoms of serotonin syndrome when a worsening medical condition led to compromised endothelial function, coinciding with the use of granisetron and fentanyl.7 The second case reports a 69 year-old female. Suspected drugs include granisetron, venlafaxine, sufentanil and methylthioninium and the reporter mentions the suspicion of interaction between venlafaxine and methylthioninium, with contributions from the other drugs. Venlafaxine had been used for almost one year when adding the other three drugs and serotonin syndrome started with a latency of hours after start of the new drugs. The third case reports a 12 year-old male with acute lymphatic leukaemia. Granisetron and olanzapine were reported as suspected drugs, but many concomitant drugs were also mentioned, including fentanyl and other anaesthetics. Neuroleptic malignant syndrome was reported as an additional ADR. The two cases involving dolasetron report sertraline as a co-suspected drug. These reports are very poorly documented." ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#SMRIs_and_serotonin_syndrome
+:SMRIs_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                              OpenPVSignal:refers_to_class :SNRIs ;
+                              rdfs:label "SNRIs and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#SNRIs
+:SNRIs rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_ATC_code "N06AX" ;
+       rdfs:label "SNRIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#SSRIs
+:SSRIs rdf:type owl:NamedIndividual ,
+                OpenPVSignal:DrugClass ;
+       OpenPVSignal:has_ATC_code "N06AB" ;
+       rdfs:label "SSRIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#SSRIs_and_serotonin_syndrome
+:SSRIs_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Warning_Information ;
+                              OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                              OpenPVSignal:refers_to_class :SSRIs ;
+                              rdfs:label "SSRIs and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Serotonin_syndrome_pathophysiology
+:Serotonin_syndrome_pathophysiology rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Free_text_reporting_element ;
+                                    OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                    mp:references :Ref.3 ,
+                                                  :Ref.4 ,
+                                                  :Ref.5 ;
+                                    OpenPVSignal:has_content "Serotonin syndrome is a drug-induced condition resulting from use of medications that increase the level of intrasynaptic serotonin, primarily acting at serotonin receptor subtype 5-HT2A and possibly 5- HT1A. 3,4 Several drugs have, either alone or in combination, been associated with the syndrome, including monoamine oxidase inhibitors (MAOIs), selective serotonin re-uptake inhibitors (SSRIs), serotonin-norepinephrine re-uptake inhibitors (SNRIs), tricyclic antidepressants (TCAs), and opioids.3 The diagnosis is clinical and symptoms include mental status alterations (agitation and confusion), autonomic signs (fever, diaphoresis, tachypnoea and tachycardia) and neuromuscular changes (tremor, clonus, myoclonus, hyperreflexia and rigidity).3 The onset of symptoms is usually rapid. Mason et al. found that patients with serotonin syndrome most often presented within 24 hours of medication initiation, an overdose or a change in dosing.5 Symptoms usually resolve within 24 hours after discontinuation of serotonergic drugs and the initiation of supportive therapy, but symptoms may last longer after use of drugs with long elimination half-life or active metabolites.4" ;
+                                    rdfs:label "Serotonin syndrome pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Ondansetron is a potent, highly selective serotonin (5-HT3) receptor antagonist. Ondansetron is sometimes mentioned in association with serotonin syndrome in the literature, and there are some published case reports. Nothing, however, is mentioned about serotonin toxicity neither in the UK Summary of Product Characteristics (SPC) nor in the US FDA product labelling. There are nine individual case safety reports (ICSRs) in VigiBase, out of which four have been published in literature. In addition to the ondansetron cases, there are five cases of other 5-HT3 antagonists associated with serotonin syndrome in VigiBase; three cases with granisetron and two cases with dolasetron. VigiBase case reports, together with published case reports, indicate that ondansetron may contribute to the development of the serotonin syndrome in susceptible patients concomitantly receiving other drugs affecting the serotonin system." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#TCAs
+:TCAs rdf:type owl:NamedIndividual ,
+               OpenPVSignal:DrugClass ;
+      OpenPVSignal:has_ATC_code "N06AX" ;
+      rdfs:label "TCAs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#TCAs_and_serotonin_syndrome
+:TCAs_and_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Warning_Information ;
+                             OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                             OpenPVSignal:refers_to_class :TCAs ;
+                             rdfs:label "TCAs and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Vigibase-Patient1
+:Vigibase-Patient1 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Patient ;
+                   OpenPVSignal:has_age 30 ;
+                   OpenPVSignal:has_gender "male" ;
+                   rdfs:label "Vigibase-Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Vigibase-Patient2
+:Vigibase-Patient2 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Patient ;
+                   OpenPVSignal:has_age 56 ;
+                   OpenPVSignal:has_gender "female" ;
+                   rdfs:label "Vigibase-Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Vigibase-Patient3
+:Vigibase-Patient3 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Patient ;
+                   OpenPVSignal:has_age 35 ;
+                   OpenPVSignal:has_gender "female" ;
+                   rdfs:label "Vigibase-Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Vigibase-Patient4
+:Vigibase-Patient4 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Patient ;
+                   OpenPVSignal:has_age 69 ;
+                   OpenPVSignal:has_gender "female" ;
+                   rdfs:label "Vigibase-Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Vigibase-Patient5
+:Vigibase-Patient5 rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Patient ;
+                   OpenPVSignal:has_age 63 ;
+                   OpenPVSignal:has_gender "female" ;
+                   rdfs:label "Vigibase-Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#VigibaseReport1
+:VigibaseReport1 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                 OpenPVSignal:refers_to_concomitant_drug :clonazepam ,
+                                                         :docusate ,
+                                                         :hydromorphone ;
+                 OpenPVSignal:refers_to_patient :Vigibase-Patient1 ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                 OpenPVSignal:refers_to_reported_drug_usage :ondasetron_usage_for_VigibaseReport1 ;
+                 OpenPVSignal:refers_to_secondary_suspect_drug :mirtazapine ;
+                 OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                 rdfs:label "Vigibase Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#VigibaseReport2
+:VigibaseReport2 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                 OpenPVSignal:refers_to_concomitant_drug :haloperidol ;
+                 OpenPVSignal:refers_to_patient :Vigibase-Patient2 ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                 OpenPVSignal:refers_to_reported_drug_usage :ondasetron_usage_for_VigibaseReport2 ;
+                 OpenPVSignal:refers_to_secondary_suspect_drug :fentanyl ,
+                                                               :oxycodone ,
+                                                               :tramadol ;
+                 OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                 OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                 rdfs:label "Vigibase Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#VigibaseReport3
+:VigibaseReport3 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:has_free_text_reporting_element :infoForVigibaseCase3 ;
+                 OpenPVSignal:refers_to_concomitant_drug :morphine ;
+                 OpenPVSignal:refers_to_patient :Vigibase-Patient3 ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                 OpenPVSignal:refers_to_reported_drug_usage :ondasetron_usage_for_VigibaseReport3 ;
+                 OpenPVSignal:refers_to_secondary_suspect_drug :venlafaxine ;
+                 OpenPVSignal:time_to_onset :vigibase-timeToOnset3 ;
+                 OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                 OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                 rdfs:label "Vigibase Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#VigibaseReport4
+:VigibaseReport4 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:refers_to_concomitant_drug :diazepam ,
+                                                         :phenelzine ;
+                 OpenPVSignal:refers_to_patient :Vigibase-Patient4 ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                 OpenPVSignal:refers_to_reported_drug_usage :ondasetron_usage_for_VigibaseReport4 ;
+                 OpenPVSignal:refers_to_secondary_suspect_drug :oxycodone ;
+                 OpenPVSignal:time_to_onset :vigibase-timeToOnset4 ;
+                 OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                 OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                 rdfs:label "Vigibase Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#VigibaseReport5
+:VigibaseReport5 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:VigiBase_Report ;
+                 OpenPVSignal:refers_to_concomitant_drug :metoprolol ,
+                                                         :nifedipine ,
+                                                         <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#hydrochlorothiazide/irbesartan> ;
+                 OpenPVSignal:refers_to_patient :Vigibase-Patient5 ;
+                 OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+                 OpenPVSignal:refers_to_secondary_suspect_drug :metoclopramide ,
+                                                               :sertraline ;
+                 OpenPVSignal:time_to_onset :vigibase-timeToOnset5 ;
+                 OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                 OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                 rdfs:label "Vigibase Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#agitation
+:agitation rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R451" ;
+           OpenPVSignal:has_MedDRA_code 10001497 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Agitation" ;
+           rdfs:label "agitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#clonazepam
+:clonazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AE01" ;
+            rdfs:label "clonazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#clonus
+:clonus rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10009346 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Clonus" ;
+        rdfs:label "clonus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#confusion
+:confusion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F448" ;
+           OpenPVSignal:has_MedDRA_code 10010305 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+           rdfs:label "confusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K590" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#desflurane
+:desflurane rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N01AB07" ;
+            rdfs:label "desflurane" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#diaphoresis
+:diaphoresis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10012703 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Diaphoresis" ;
+             rdfs:label "diaphoresis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#diazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#docusate
+:docusate rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A06AA02" ;
+          rdfs:label "docusate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dolasetron
+:dolasetron rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A04AA04" ;
+            rdfs:label "dolasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosageForPublishedVigibaseCase1
+:dosageForPublishedVigibaseCase1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ;
+                                 OpenPVSignal:refers_to_drug :ondansetron ;
+                                 OpenPVSignal:has_content "Single dose of 4 mg" ;
+                                 OpenPVSignal:has_dosage_unit "mg" ;
+                                 OpenPVSignal:has_value 4 ;
+                                 OpenPVSignal:refers_to_dose_value "4 mg" ;
+                                 rdfs:label "dosage for published vigibase case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosageForPublishedVigibaseCase2
+:dosageForPublishedVigibaseCase2 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ;
+                                 OpenPVSignal:refers_to_drug :ondansetron ;
+                                 OpenPVSignal:has_content "Single dose of 4 mg" ;
+                                 OpenPVSignal:has_dosage_unit "mg" ;
+                                 OpenPVSignal:has_value 4 ;
+                                 OpenPVSignal:refers_to_dose_value "4 mg" ;
+                                 rdfs:label "dosage for published vigibase case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosageForPublishedVigibaseCase3
+:dosageForPublishedVigibaseCase3 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ;
+                                 OpenPVSignal:refers_to_drug :ondansetron ;
+                                 OpenPVSignal:has_content "Single dose of 2 mg" ;
+                                 OpenPVSignal:has_dosage_unit "mg" ;
+                                 OpenPVSignal:has_value 2 ;
+                                 OpenPVSignal:refers_to_dose_value "2 mg" ;
+                                 rdfs:label "dosage for published vigibase case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosageForPublishedVigibaseCase4
+:dosageForPublishedVigibaseCase4 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Dosage ,
+                                          :dosage_56_64 ;
+                                 OpenPVSignal:refers_to_drug :ondansetron ;
+                                 OpenPVSignal:has_content "Single dose of 56-64 mg" ;
+                                 OpenPVSignal:has_dosage_unit "mg" ;
+                                 OpenPVSignal:refers_to_dose_value "56 mg" ,
+                                                                   "64 mg" ;
+                                 rdfs:label "dosage for published vigibase case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dosageOfOndasetrone
+:dosageOfOndasetrone rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Dosage ,
+                              :dosage_4_32 ;
+                     OpenPVSignal:refers_to_interval_between_administrations :one_day_interval_administration ;
+                     mp:referencedBy :Ref.1 ;
+                     OpenPVSignal:has_content "The recommended adult dose ranges from a single dose of 4 mg to 32 mg a day.1" ;
+                     OpenPVSignal:has_dosage_unit "mg" ;
+                     OpenPVSignal:refers_to_dose_value "32 mg" ,
+                                                       "4 mg" ;
+                     rdfs:label "dosage of ondasetrone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#duloxetine
+:duloxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AX21" ;
+            rdfs:label "duloxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dyskinesia
+:dyskinesia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G24.01 " ;
+            OpenPVSignal:has_MedDRA_code 10013916 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Dyskinesia" ;
+            rdfs:label "dyskinesia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#dystonic_reaction
+:dystonic_reaction rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10013986 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Dystonic reaction" ;
+                   rdfs:label "dystonic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#eight_hours_interval_administration
+:eight_hours_interval_administration rdf:type owl:NamedIndividual ,
+                                              time:DurationDescription ;
+                                     time:nominalPosition "hours" ;
+                                     time:numericPosition 8 ;
+                                     rdfs:label "eight hours interval administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#fentanyl
+:fentanyl rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AH01" ,
+                                    "N01AH51" ,
+                                    "N02AB03" ;
+          rdfs:label "fentanyl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#fever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R509" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#flushing
+:flushing rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R232" ;
+          OpenPVSignal:has_MedDRA_code 10016825 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Flushing" ;
+          rdfs:label "flushing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#granisetron
+:granisetron rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A04AA02" ;
+             rdfs:label "granisetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#haloperidol
+:haloperidol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AD01" ;
+             rdfs:label "haloperidol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#headache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#hydromorphone
+:hydromorphone rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "N02AA03" ,
+                                         "N02AG04" ;
+               rdfs:label "hydromorphone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#hyperreflexia
+:hyperreflexia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R29.2" ;
+               OpenPVSignal:has_MedDRA_code 10020745 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperreflexia" ;
+               rdfs:label "hyperreflexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForCaseWthGranisetron1
+:infoForCaseWthGranisetron1 rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Case_Report_Information ;
+                            OpenPVSignal:has_content "One case was found published in literature and reports an 11 year-old female with acute lymphoblastic leukemia. The patient developed symptoms of serotonin syndrome when a worsening medical condition led to compromised endothelial function, coinciding with the use of granisetron and fentanyl.7" ;
+                            rdfs:label "info for case wth granisetron 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForCaseWthGranisetron2
+:infoForCaseWthGranisetron2 rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Case_Report_Information ;
+                            OpenPVSignal:has_content "The second case reports a 69 year-old female. Suspected drugs include granisetron, venlafaxine, sufentanil and methylthioninium and the reporter mentions the suspicion of interaction between venlafaxine and methylthioninium, with contributions from the other drugs. Venlafaxine had been used for almost one year when adding the other three drugs and serotonin syndrome started with a latency of hours after start of the new drugs." ;
+                            rdfs:label "info for case wth granisetron 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForCaseWthGranisetron3
+:infoForCaseWthGranisetron3 rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Case_Report_Information ;
+                            OpenPVSignal:has_content "The third case reports a 12 year-old male with acute lymphatic leukaemia. Granisetron and olanzapine were reported as suspected drugs, but many concomitant drugs were also mentioned, including fentanyl and other anaesthetics. Neuroleptic malignant syndrome was reported as an additional ADR." ;
+                            rdfs:label "info for case wth granisetron 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForPublishedVigibaseCase1
+:infoForPublishedVigibaseCase1 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               mp:references :Ref.8 ,
+                                             :Ref.9 ;
+                               OpenPVSignal:has_content "Serotonin toxicity suggested being due to interaction between methylthioninium and paroxetine. The authors did not exclude that interaction between ondansetron and residual paroxetine could increase the vulnerability to serotonin toxicity (paroxetine withdrawn two days before reaction onset).8,9" ;
+                               rdfs:label "info for published vigibase case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForPublishedVigibaseCase2
+:infoForPublishedVigibaseCase2 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               mp:references :Ref.10 ;
+                               OpenPVSignal:has_content """Medical history included major
+depression, polysubstance abuse and overdose.
+Paracetamol/Hydrocodorate first administered second day after
+reaction onset.10""" ;
+                               rdfs:label "info for published vigibase case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForPublishedVigibaseCase3
+:infoForPublishedVigibaseCase3 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               mp:references :Ref.11 ;
+                               OpenPVSignal:has_content "Medical history included malignant hyperthermia (MH). Authors suggested that a putative episode of MH, not serotonin syndrome, was triggered by ondansetron.11" ;
+                               rdfs:label "info for published vigibase case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForPublishedVigibaseCase4
+:infoForPublishedVigibaseCase4 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Case_Report_Information ;
+                               mp:references :Ref.12 ;
+                               OpenPVSignal:has_content "Accidental intake by healthy infant, overdose.12" ;
+                               rdfs:label "info for published vigibase case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#infoForVigibaseCase3
+:infoForVigibaseCase3 rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Case_Report_Information ;
+                      OpenPVSignal:has_content "Serotonin reaction possibly attributed to venlafaxine and ondansetron mentioned by reporter, but subsequently the patient's physician reported that the events probably were related to another medication (unspecified)." ;
+                      rdfs:label "info for vigibase case  3 " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#info_for_published_vigibase_case_5
+:info_for_published_vigibase_case_5 rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Case_Report_Information ;
+                                    OpenPVSignal:has_content "The fifth case involves a 12 year old male patient seriously ill with disseminated Ewing's Sarcoma, receiving mirtazapine and morphine in addition to chemotherapy. The following day after starting ondansetron he was confused and tremulous with myoclonus. Ondansetron and mirtazapine were both discontinued, and the reaction resolved with a single dose of droperidol the following day. Mirtazapine was reintroduced several days later without problem.7" ;
+                                    rdfs:label "info for published vigibase case 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#lithium
+:lithium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "D11AX04" ,
+                                   "N05AN01" ;
+         rdfs:label "lithium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#mechanism_of_serotonin_syndrome
+:mechanism_of_serotonin_syndrome rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Adverse_Effect_Mechanism ;
+                                 OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                 mp:references :Ref.3 ,
+                                               :Ref.4 ;
+                                 OpenPVSignal:has_content "Serotonin syndrome is a drug-induced condition resulting from use of medications that increase the level of intrasynaptic serotonin, primarily acting at serotonin receptor subtype 5-HT2A and possibly 5-HT1A.3,4" ;
+                                 rdfs:label "mechanism of serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#methylthioninium
+:methylthioninium rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "V03AB17" ;
+                  rdfs:label "methylthioninium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#metoclopramide
+:metoclopramide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A03FA01" ;
+                rdfs:label "metoclopramide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#monoamine_oxidase_inhibitors
+:monoamine_oxidase_inhibitors rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:DrugClass ;
+                              OpenPVSignal:has_ATC_code "N06AF" ;
+                              rdfs:label "MAOIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#morphine
+:morphine rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A07DA52" ,
+                                    "N02AA01" ,
+                                    "N02AA51" ,
+                                    "N02AG01" ;
+          rdfs:label "morphine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#myoclonus
+:myoclonus rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "G253" ;
+           OpenPVSignal:has_MedDRA_code 10028622 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Myoclonus" ;
+           rdfs:label "myoclonus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#neurolepticMalignantSyndrome
+:neurolepticMalignantSyndrome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Adverse_Effect ;
+                              OpenPVSignal:has_ICD_code "G210" ;
+                              OpenPVSignal:has_MedDRA_code 10029282 ;
+                              OpenPVSignal:has_MedDRA_prefered_term "Neuroleptic malignant syndrome" ;
+                              rdfs:label "neuroleptic malignant syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#nifedipine
+:nifedipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA05" ,
+                                      "C08CA55" ,
+                                      "C08GA01" ;
+            rdfs:label "nifedipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#oculogyricCrisis
+:oculogyricCrisis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R293" ;
+                  OpenPVSignal:has_MedDRA_code 10030071 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Oculogyric crisis" ;
+                  rdfs:label "oculogyric crisis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#olanzapine
+:olanzapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH03" ;
+            rdfs:label "olanzapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ondansetron
+:ondansetron rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Serotonin_(5HT3)_antagonists> ;
+             OpenPVSignal:has_mechanism :MechanismOfOndasetron ,
+                                        :proposedMechanismOfOndasetronTriggeringSerotonineSyndrome ;
+             OpenPVSignal:has_ATC_code "A04AA01" ;
+             rdfs:label "ondansetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ondasetron_usage_for_VigibaseReport1
+:ondasetron_usage_for_VigibaseReport1 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Drug_Usage ;
+                                      OpenPVSignal:refers_to_dosage :vigibase-dose1 ;
+                                      OpenPVSignal:refers_to_drug :ondansetron ;
+                                      rdfs:label "usage for Vigibase report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ondasetron_usage_for_VigibaseReport2
+:ondasetron_usage_for_VigibaseReport2 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Drug_Usage ;
+                                      OpenPVSignal:refers_to_dosage :vigibase-dose2 ;
+                                      OpenPVSignal:refers_to_drug :ondansetron ;
+                                      rdfs:label "usage for Vigibase Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ondasetron_usage_for_VigibaseReport3
+:ondasetron_usage_for_VigibaseReport3 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Drug_Usage ;
+                                      OpenPVSignal:refers_to_dosage :vigibase-dose3 ;
+                                      OpenPVSignal:refers_to_drug :ondansetron ;
+                                      rdfs:label "usage for Vigibase report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#ondasetron_usage_for_VigibaseReport4
+:ondasetron_usage_for_VigibaseReport4 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Drug_Usage ;
+                                      OpenPVSignal:refers_to_dosage :vigibase-dose4 ;
+                                      OpenPVSignal:refers_to_drug :ondansetron ;
+                                      rdfs:label "usage for Vigibase report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#one_day_interval_administration
+:one_day_interval_administration rdf:type owl:NamedIndividual ,
+                                          time:DurationDescription ;
+                                 time:nominalPosition "days" ;
+                                 time:numericPosition 1 ;
+                                 rdfs:label "one day interval administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#oxycodone
+:oxycodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02AA05" ,
+                                     "N02AA55" ;
+           rdfs:label "oxycodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#paroxetine
+:paroxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB05" ;
+            rdfs:label "paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#phenelzine
+:phenelzine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AF03" ;
+            rdfs:label "phenelzine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#postoperative_nausea
+:postoperative_nausea rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Indication ;
+                      OpenPVSignal:has_MedDRA_code 10036285 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Postoperative nausea" ;
+                      rdfs:label "postoperative nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#postoperative_vomiting
+:postoperative_vomiting rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Indication ;
+                        OpenPVSignal:has_MedDRA_code 10036238 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Postoperative vomiting" ;
+                        rdfs:label "postoperative vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#propofol
+:propofol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N01AX10" ;
+          rdfs:label "propofol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#proposedMechanismOfOndasetronTriggeringSerotonineSyndrome
+:proposedMechanismOfOndasetronTriggeringSerotonineSyndrome rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                           OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                                           mp:references :Ref.1 ,
+                                                                         :Ref.10 ,
+                                                                         :Ref.7 ;
+                                                           OpenPVSignal:has_content "A mechanism for a suggested increased vulnerability to serotonin syndrome when concomitantly using 5-HT3 antagonists and other serotonergic drugs might be that blocking of the 5-HT3 receptor subtype, and at the same time increasing the levels of serotonin, results in excessive serotonin to other serotonin receptor subtypes (including 5-HT1A and 5-HT2A).7,10 A pharmacokinetic interaction might also be considered, as ondansetron is metabolized by cytochrome P-450 enzymes; CYP3A4, CYP2D6 and CYP1A21." ;
+                                                           rdfs:label "proposed mechanism of ondasetron triggering serotonine syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :Serotonin_syndrome_pathophysiology ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :PublishedVigibaseReport1 ,
+                                                              :PublishedVigibaseReport2 ,
+                                                              :PublishedVigibaseReport3 ,
+                                                              :PublishedVigibaseReport4 ,
+                                                              :Published_Vigibase_Report_5 ,
+                                                              :Report_1_with_dolasetron ,
+                                                              :Report_1_with_granisetron ,
+                                                              :Report_2_with_dolasetron ,
+                                                              :Report_2_with_granisetron ,
+                                                              :Report_3_with_granisetron ,
+                                                              :VigibaseReport1 ,
+                                                              :VigibaseReport2 ,
+                                                              :VigibaseReport3 ,
+                                                              :VigibaseReport4 ,
+                                                              :VigibaseReport5 ;
+          OpenPVSignal:is_supported_by_statistical_entity :reportsInVigibaseForOndansetronAndSerotoninSyndrome ,
+                                                          :reportsOfHT3AntagonistsAndSerotoninSyndrome ,
+                                                          :reportsWithDolasetron ,
+                                                          :reportsWithGranisetron ;
+          OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+          OpenPVSignal:refers_to_drug :ondansetron ;
+          OpenPVSignal:refers_to_primary_suspect_drug :ondansetron ;
+          mp:supportedByData :ADR_for_ondasetron ,
+                             :Labelling ,
+                             :MAOIs_and_serotonin_syndrome ,
+                             :Mackay_et_al_report ,
+                             :Opioids_and_serotonin_syndrome ,
+                             :SMRIs_and_serotonin_syndrome ,
+                             :SSRIs_and_serotonin_syndrome ,
+                             :TCAs_and_serotonin_syndrome ;
+          OpenPVSignal:initially_identified_on "01/06/2012" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#quetiapine
+:quetiapine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05AH04" ;
+            rdfs:label "quetiapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#reportsInVigibaseForOndansetronAndSerotoninSyndrome
+:reportsInVigibaseForOndansetronAndSerotoninSyndrome rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                                     OpenPVSignal:refers_to_drug :ondansetron ;
+                                                     OpenPVSignal:has_count 9 ;
+                                                     OpenPVSignal:has_count_of_men 3 ;
+                                                     OpenPVSignal:has_count_of_women 6 ;
+                                                     OpenPVSignal:has_max_age "69.0"^^xsd:float ;
+                                                     OpenPVSignal:has_min_age "1.0"^^xsd:float ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "reports in vigibase for ondansetron and serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#reportsOfHT3AntagonistsAndSerotoninSyndrome
+:reportsOfHT3AntagonistsAndSerotoninSyndrome rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:refers_to_adverse_effect :serotoninSyndrome ;
+                                             OpenPVSignal:refers_to_class <http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Serotonin_(5HT3)_antagonists> ;
+                                             OpenPVSignal:has_count 5 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "reports of HT3 antagonists and serotonin syndrome " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#reportsWithDolasetron
+:reportsWithDolasetron rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :reportsOfHT3AntagonistsAndSerotoninSyndrome ;
+                       OpenPVSignal:refers_to_drug :dolasetron ;
+                       OpenPVSignal:has_count 2 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with dolasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#reportsWithGranisetron
+:reportsWithGranisetron rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsOfHT3AntagonistsAndSerotoninSyndrome ;
+                        OpenPVSignal:refers_to_drug :granisetron ;
+                        OpenPVSignal:has_count 3 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with granisetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#rigidity
+:rigidity rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "M629" ;
+          OpenPVSignal:has_MedDRA_code 10028330 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Muscle rigidity" ;
+          rdfs:label "rigidity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#rocuronium
+:rocuronium rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "M03AC09" ;
+            rdfs:label "rucoronium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#seizures
+:seizures rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R569" ;
+          OpenPVSignal:has_MedDRA_code 10039906 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Seizure" ;
+          rdfs:label "seizures" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#sensation_of_warmth
+:sensation_of_warmth rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10040006 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Sensation of warmth" ;
+                     rdfs:label "sensation of warmth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#serotoninSyndrome
+:serotoninSyndrome rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:refers_to_adverse_effect :agitation ,
+                                                         :clonus ,
+                                                         :confusion ,
+                                                         :diaphoresis ,
+                                                         :fever ,
+                                                         :hyperreflexia ,
+                                                         :myoclonus ,
+                                                         :rigidity ,
+                                                         :tachycardia ,
+                                                         :tachypnea ,
+                                                         :tremor ;
+                   OpenPVSignal:has_ICD_code "T43221A" ;
+                   OpenPVSignal:has_MedDRA_code 10040108 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Serotonin syndrome" ;
+                   rdfs:label "serotonin syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#sertraline
+:sertraline rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB06" ;
+            rdfs:label "sertraline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#sufentanil
+:sufentanil rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N01AH03" ;
+            rdfs:label "sufentanil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#tachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R000" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#tachypnea
+:tachypnea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R0682" ;
+           OpenPVSignal:has_MedDRA_code 10043089 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Tachypnoea" ;
+           rdfs:label "tachypnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#timeToOnsetForPublishedVigibaseCase1
+:timeToOnsetForPublishedVigibaseCase1 rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      OpenPVSignal:has_content "Hours Methylthioninium : Hours" ;
+                                      rdfs:label "time to onset for published vigibase case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#timeToOnsetForPublishedVigibaseCase2
+:timeToOnsetForPublishedVigibaseCase2 rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      OpenPVSignal:has_content """1 hour
+Fentanyl, Propofol,
+Rocuronium,
+Desflurane,
+Hydromorphone:
+
+Hours
+Duloxetine,
+Lithium,
+Quetiapine: >11 months""" ;
+                                      rdfs:label "time to onset for published vigibase case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#timeToOnsetForPublishedVigibaseCase3
+:timeToOnsetForPublishedVigibaseCase3 rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      OpenPVSignal:has_content "3 hours" ;
+                                      time:nominalPosition "hours" ;
+                                      time:numericPosition 3 ;
+                                      rdfs:label "time to onset for published vigibase case 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#timeToOnsetForPublishedVigibaseCase4
+:timeToOnsetForPublishedVigibaseCase4 rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      OpenPVSignal:has_content "20 minutes" ;
+                                      time:nominalPosition "minutes" ;
+                                      time:numericPosition 20 ;
+                                      rdfs:label "time to onset for published vigibase case 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#tramadol
+:tramadol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N02AX02" ,
+                                    "N02AX52" ;
+          rdfs:label "tramadol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R251" ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#twelve_hours_interval_administration
+:twelve_hours_interval_administration rdf:type owl:NamedIndividual ,
+                                               time:DurationDescription ;
+                                      time:nominalPosition "hours" ;
+                                      time:numericPosition 12 ;
+                                      rdfs:label "twelve hours interval administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#usageOfOndasetron
+:usageOfOndasetron rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug_Usage ;
+                   OpenPVSignal:concerns_indication_for_use :nausea ,
+                                                            :postoperative_nausea ,
+                                                            :postoperative_vomiting ,
+                                                            :vomiting ;
+                   OpenPVSignal:refers_to_drug :ondansetron ;
+                   OpenPVSignal:refers_to_reported_drug_usage :usageOfOndasetron ;
+                   OpenPVSignal:has_content "Therapeutic indications include the management of nausea and vomiting induced by cytotoxic chemotherapy and radiotherapy (for patients aged 6 months and older), and the prevention and treatment of post-operative nausea and vomiting (for patients aged one month and older).1,2" ;
+                   rdfs:label "usage of ondasetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#usage_for_published_Vigibase_report_2
+:usage_for_published_Vigibase_report_2 rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Drug_Usage ;
+                                       OpenPVSignal:refers_to_dosage :dosageForPublishedVigibaseCase2 ;
+                                       OpenPVSignal:refers_to_drug :ondansetron ;
+                                       rdfs:label "usage for published Vigibase report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#usage_for_published_Vigibase_report_3
+:usage_for_published_Vigibase_report_3 rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Drug_Usage ;
+                                       OpenPVSignal:refers_to_dosage :dosageForPublishedVigibaseCase3 ;
+                                       OpenPVSignal:refers_to_drug :ondansetron ;
+                                       rdfs:label "usage for published Vigibase report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#usage_for_published_Vigibase_report_4
+:usage_for_published_Vigibase_report_4 rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Drug_Usage ;
+                                       OpenPVSignal:refers_to_dosage :dosageForPublishedVigibaseCase4 ;
+                                       OpenPVSignal:refers_to_drug :ondansetron ;
+                                       rdfs:label "usage for published Vigibase report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#usage_for_published_in_Vigibase_report_1
+:usage_for_published_in_Vigibase_report_1 rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Drug_Usage ;
+                                          OpenPVSignal:refers_to_dosage :dosageForPublishedVigibaseCase1 ;
+                                          OpenPVSignal:refers_to_drug :ondansetron ;
+                                          rdfs:label "usage for published Vigibase report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#venlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-dose1
+:vigibase-dose1 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :ondansetron ;
+                OpenPVSignal:refers_to_interval_between_administrations :one_day_interval_administration ;
+                OpenPVSignal:has_content "16 mg daily" ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 16 ;
+                OpenPVSignal:refers_to_dose_value "16 mg" ;
+                rdfs:label "vigibase-dose 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-dose2
+:vigibase-dose2 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :ondansetron ;
+                OpenPVSignal:has_content "As necessary" ;
+                rdfs:label "vigibase-dose 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-dose3
+:vigibase-dose3 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :ondansetron ;
+                OpenPVSignal:refers_to_interval_between_administrations :eight_hours_interval_administration ;
+                OpenPVSignal:has_content "3 mg three times per day" ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 3 ;
+                OpenPVSignal:refers_to_dose_value "3 mg" ;
+                rdfs:label "vigibase-dose 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-dose4
+:vigibase-dose4 rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Dosage ;
+                OpenPVSignal:refers_to_drug :ondansetron ;
+                OpenPVSignal:refers_to_interval_between_administrations :twelve_hours_interval_administration ;
+                OpenPVSignal:has_content "4 mg twice daily" ;
+                OpenPVSignal:has_dosage_unit "mg" ;
+                OpenPVSignal:has_value 4 ;
+                OpenPVSignal:refers_to_dose_value "4 mg" ;
+                rdfs:label "vigibase-dose 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-timeToOnset3
+:vigibase-timeToOnset3 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "0 days (after third injection within 12- hour period)" ;
+                       time:nominalPosition "hours" ;
+                       time:numericPosition 12 ;
+                       rdfs:label "vigibase-time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-timeToOnset4
+:vigibase-timeToOnset4 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "1 day Oxycodone: 1 day" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 1 ;
+                       rdfs:label "vigibase-time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vigibase-timeToOnset5
+:vigibase-timeToOnset5 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "0 days Metoclopramide: 0 days Sertraline: Years" ;
+                       rdfs:label "vigibase-time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Indication ;
+          OpenPVSignal:has_ICD_code "R1110" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Serotonin_(5HT3)_antagonists
+<http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#Serotonin_(5HT3)_antagonists> rdf:type owl:NamedIndividual ,
+                                                                                                                   OpenPVSignal:DrugClass ;
+                                                                                                          OpenPVSignal:has_ATC_code "A04AA" ;
+                                                                                                          rdfs:label "Serotonin (5HT3) antagonists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#hydrochlorothiazide/irbesartan
+<http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#hydrochlorothiazide/irbesartan> rdf:type owl:NamedIndividual ,
+                                                                                                                     OpenPVSignal:Drug ;
+                                                                                                            OpenPVSignal:has_ATC_code "C09DA04" ;
+                                                                                                            rdfs:label "hydrochlorothiazide / irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#paracetamol/hydrocodorate
+<http://purl.org/OpenPVSignal/Signals/2012_3_ondansetron_serotonin_syndrome#paracetamol/hydrocodorate> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:Drug ;
+                                                                                                       OpenPVSignal:has_ATC_code "N02BE01" ;
+                                                                                                       rdfs:label "paracetamol / hydrocodorate" .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:acuteLymphaticLeukaemia OpenPVSignal:has_ICD_code "C91.00" ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Acute lymphocytic leukaemia" ;
+                         rdfs:label "acute lymphatic leukaemia" ;
+                         OpenPVSignal:has_MedDRA_code 10000846 .
+
+
+:confused rdfs:label "confused" ;
+          OpenPVSignal:has_ICD_code "F448" ;
+          OpenPVSignal:has_MedDRA_prefered_term "Confusional state" ;
+          OpenPVSignal:has_MedDRA_code 10010305 .
+
+
+:neurolepticMalignant rdfs:label "neuroleptic malignant" ;
+                      OpenPVSignal:has_ICD_code "G210" ;
+                      OpenPVSignal:has_MedDRA_code 10029282 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Neuroleptic malignant syndrome" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,0 +1,1515 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena> rdf:type owl:Ontology ;
+                                                                   owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                   rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255518/"^^xsd:anyURI ;
+                                                                   rdfs:label "Roflumilast and Melaena"^^xsd:Literal ;
+                                                                   owl:versionInfo "draft-v0.95-20210614"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+prov:Organization rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#CHMPReport
+:CHMPReport rdf:type owl:NamedIndividual ,
+                     obo:OAE_0001197 ;
+            OpenPVSignal:refers_to_class :fgd ;
+            mp:references :Ref.3 ;
+            OpenPVSignal:has_content """In an assessment of roflumilast made by The Committee for Medicinal Products for Human Use (CHMP) of the European Medicines Agency, it was pointed out that increased gastric acid secretion and delayed gastric emptying were observed during safety pharmacology studies. These effects were possibly related to the class of PDE4 inhibitors.3
+Moreover, according to CHMP, morphological changes in the GI tract (erosion and ulceration) were seen in both rats and monkeys in higher doses.3""" ;
+            rdfs:label "CHMP report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ClinicalTrialDataFromCilomilast
+:ClinicalTrialDataFromCilomilast rdf:type owl:NamedIndividual ,
+                                          obo:OAE_0001197 ,
+                                          OpenPVSignal:Clinical_trial_information ;
+                                 OpenPVSignal:refers_to_adverse_effect :melena ;
+                                 OpenPVSignal:refers_to_class :fgd ;
+                                 mp:references :Ref.10 ;
+                                 OpenPVSignal:has_content "Returning to the potential GI class adverse effects of PDE4 inhibitors, a somewhat different explanation was offered recently. It was pointed out that for second-generation PDE4 inhibitors, including roflumilast, GI disturbances were the most prevalent adverse drug reactions (ADRs). They could be accounted for by the ubiquitous distribution of PDE4 isoforms across many tissues. The most worrying potential toxicity generic to such PDE4 inhibitors could be arteritis. In recent human clinical trials with some PDE4 inhibitors the main reason for drop-outs was an incidence of colitis, raising the possibility that it was secondary to arteritis. In clinical trials with cilomilast, another PDE4 inhibitor, GI adverse effects including melaena did occur and were monitored with colonoscopy. Although the findings did not establish a relationship between melaena and vasculitis, the FDA concluded, from the low number of cases, that there was insufficient evidence to rule it out in humans.10" ;
+                                 rdfs:label "Clinical trial data from PDE4 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Clinical_trial_for_roflumilast_summary
+:Clinical_trial_for_roflumilast_summary rdf:type owl:NamedIndividual ,
+                                                 obo:OAE_0001182 ,
+                                                 OpenPVSignal:Clinical_trial_information ;
+                                        OpenPVSignal:refers_to_adverse_effect :melena ;
+                                        OpenPVSignal:refers_to_drug :roflumilast ;
+                                        OpenPVSignal:has_content "One could summarise the analysis of the three clinical trial reports by saying that there is no convincing evidence for the causal relationship between roflumilast treatment and melaena. However, if there is a pharmacologically plausible explanation for a causal relationship between a medicine and an event, the fact that other plausible explanations may also exist is not enough to rule out the possibility of an ADR completely." ;
+                                        rdfs:label "Clinical trial for roflumilast summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content """Conclusion
+Causal relationships between PDE inhibitors (including roflumilast) and various GI adverse reactions have pre¬viously been established. Although melaena is one of the rare but plausible sequelae of these GI conditions, which is not in itself a new adverse reaction but an easily recognisable symptom that is not yet labelled, the reports discussed here suggest that it is worth listing as a rare ADR of roflumilast.""" ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#DiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.10 ,
+                                 :Ref.11 ,
+                                 :Ref.3 ,
+                                 :Ref.4 ,
+                                 :Ref.5 ;
+                   OpenPVSignal:has_content """Discussion
+It is worth starting the assessment with the three cases describing clinical trial patients, in which the reporting physicians classified the melaena as not related to roflumilast treatment. If the casual relationship between roflumilast administration and melaena could be completely ruled out in these three cases, the remaining three cases might not generate a signal.
+According to the narrative in ICSR 2, the patient went to the outpatient clinic 19 days after the first dose of roflumilast because of bowel movement difficulties (constipation and delayed gastric emptying are accepted ADRs of roflumilast3). The patient had also experienced, among other symptoms, blood in stool with known haemorrhoids two days after the first dose of roflumilast. When roflumilast treatment was discontinued the symptoms stopped. When roflumilast was resumed intermittently, the symptoms re-appeared. According to the reporter, the concurrent haemorrhoids provided a more plausible alternative explanation for the occurrence of blood in the stool than roflumilast treatment. However, this conclusion requires closer scrutiny. The original reported term used by the investigator was \"faecal occult blood (FOB) with known haemorrhoids\". FOB means small amounts of blood, not visible to the eye, in the stool indicating that bleeding has occurred somewhere in the upper or lower GI tract.11 In this case it might have been caused by the mild proctitis (inflammation of the rectum) that was also reported. The reporting physician pointed out that FOB might be a sign of the proctitis (i.e. haematochezia and not melaena); however, it would not explain why the patient, after discontinuation of the therapy \"had recovered\" and then, when roflumilast was later resumed, the symptoms re-appeared. Roflumilast is known to cause constipation and delayed gastric emptying (so possibly also has a more global effect on gut motility). Haemorrhoids are exacerbated by constipation, and the patient has a past history of haemorrhoids. However, there is no mention of haemorrhoids in the examination findings but a colonoscopy revealed proctitis. The patient reported blood in the stool only two days after the first dose of roflumilast, which may be too soon for the drug to have caused constipation. The proctitis appears to be a more plausible explanation for the visible blood in the stool, but it is not clear that the roflumilast caused the proctitis.
+In ICSR 3 the patient, treated concomitantly with phenprocoumon, started roflumilast therapy on 23 February. On 17 May he was admitted to hospital and reported having had melaena for approximately four weeks. He also had a medical history of chronic gastritis. Roflumilast (and perhaps phenprocoumon) therapy was discontinued on 17 May. Gastroscopy did not reveal a source of haemorrhage in the upper GI tract. The patient was diagnosed with diverticulosis and a solitary polyp in the ascending colon. Phenprocoumon therapy was then reintroduced (there are no exact dates in the report, but it seems to have occurred earlier than the reintroduction of roflumilast). Roflumilast was resumed on 2 June but was discontinued on 17 October at the patient's request. According to the reporting physician, other plausible explanations, such as phenprocoumon therapy and undiagnosed GI haemorrhage, make a causal relationship between roflumilast treatment and melaena unlikely. However, roflumilast may have been responsible for the gastritis or have exacerbated it, which could have led to the mentioned GI haemorrhage (causing melaena). If this were the case, phenprocoumon may have made the symptoms worse.
+The patient in ICSR 4 developed duodenal ulcers, erosive antral gastritis, upper gastrointestinal haemorrhage and tarry stool approximately two months after the first dose of roflumilast.
+Roflumilast was discontinued and the patient recovered. The symptoms then re-occurred upon re-challenge. The sender commented on the case that, in the absence of any pharmacological indication that roflumilast could favour the occurrence of the patient's symptoms, the concurrent erosive antral gastritis provided a more plausible explanation. However, as described above, the literature states that PDE inhibitors are expected to increase gastric acid secretion (which may lead to other GI disturbances). Thus, there may be a plausible pharmacological explanation, and the causality chain, gastritis — duodenal ulcer
+— GI haemorrhage — melaena, is at least not impossible.
+One could summarise the analysis of the three clinical trial reports by saying that there is no convincing evidence for the causal relationship between roflumilast treatment and melaena. However, if there is a pharmacologically plausible explanation for a causal relationship between a medicine and an event, the fact that other plausible explanations may also exist is not enough to rule out the possibility of an ADR completely.
+Tiptropium may cause blood in faeces from the lower GI tract. Although the patient in ICSR 1 was treated with tiotropium, the reporter, a physician, was unlikely to have confused melaena with haematochezia. It is worth noting that the reporter in ICSR 7 was not a health care professional, and bleeding from the lower GI tract in this case might have been mistaken for melaena.
+Because of the confounding concomitant medication (tiotropium, acetylsalicylic acid and warfarin), ICSR 6 provides no convincing evidence of a causal relationship.
+If one assesses the issue in a narrower context,
+i.e. whether a causal relationship between roflumilast administration and melaena can be established solely on the basis of the reports, the result would be controversial. Four patients of the assessed six (ICSRs 2, 3, 4 and 6) suffered from illnesses (proctitis, GI neoplasm, duodenal ulcer) and/or were treated with anticoagulant drugs that could also account for the melaena.
+On the other hand, if one assesses the possible relationship between a group of possibly interrelated GI adverse effects assuming that their single root cause can be the administration of roflumilast (or, in general, of PDE inhibitors) and their possible manifestations including melaena, the causality is plausible. It has been shown previously that GI adverse effects of PDE inhibitors have been suspected with various mechanisms for decades.4,5,10 These mechanisms, increased gastric acid production (described as \"possibly related to the class of the compound\" by the CHMP) and/or arteritis, may lead to manifestations of the various GI reactions reported (duodenal ulcer, gastritis, diverticulosis etc.); with consequent, melaena particularly in sensitive patients (for example when treated with anticoagulants). The fact that the GI manifestations have been reported as adverse effects and not as concomitant sicknesses in all cases, seem to support this explanation.
+It is almost a philosophical question that, if the above analysis is true, what should be called \"the\" adverse reaction; the increased gastric acid production and/or its possible sequel: the gastric ulcer, and/or its plausible consequence: the intestinal haemorrhage, and/or its symptom: the melaena?
+One possible answer is that, since patients are now being encouraged to report their drug adverse effects; listing of those symptoms that may be easily self-diagnosed may be advocated.
+
+
+ 
+""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage1
+:Dosage1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_1 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         rdfs:label "Dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage2
+:Dosage2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_2 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         OpenPVSignal:refers_to_rechallenge_process "true"^^xsd:boolean ;
+         rdfs:label "Dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage3
+:Dosage3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_3 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         rdfs:label "Dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage4
+:Dosage4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_4 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         OpenPVSignal:refers_to_rechallenge_process "true"^^xsd:boolean ;
+         rdfs:label "Dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage5
+:Dosage5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_5 ;
+         rdfs:label "Dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage6
+:Dosage6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_6 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         rdfs:label "Dosage 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dosage7
+:Dosage7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         OpenPVSignal:refers_to_interval_between_administrations :Interval_for_dosage_7 ;
+         OpenPVSignal:has_dosage_unit "μg" ;
+         OpenPVSignal:has_value 500 ;
+         OpenPVSignal:refers_to_dose_value "500 μg" ;
+         rdfs:label "Dosage 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Dr_Paal_Tamas
+:Dr_Paal_Tamas rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Author ;
+               OpenPVSignal:has_affiliation "Hungary" ;
+               OpenPVSignal:has_first_name "Tamás" ;
+               OpenPVSignal:has_last_name "Paál" ;
+               rdfs:label "Dr. Tamás Paál" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#EuropeanSummaryOfProductCharacteristics
+:EuropeanSummaryOfProductCharacteristics rdf:type owl:NamedIndividual ,
+                                                  obo:OAE_0001197 ,
+                                                  OpenPVSignal:Structured_Product_Labels_information ;
+                                         OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+                                         OpenPVSignal:refers_to_class :fgd ;
+                                         mp:references :Ref.6 ;
+                                         OpenPVSignal:has_content """Such changes were not normally expected at therapeutic doses in humans, yet the approved European Summary of Product Characteristics contains, in addition to the adverse reactions gastritis (uncommon, i.e.
+>1/1,000 - <1/100) and constipation (rare, i.e.
+>1/10,000 -<1/1,000), haematochezia as a rare ADR.6""" ;
+                                         rdfs:label "European Summary of Product Characteristics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#FreeTextReportsInVigibase
+:FreeTextReportsInVigibase rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Free_text_reporting_element ;
+                           OpenPVSignal:has_content """From November 2010 to January 2013, seven Individual Case Safety Reports (ICSRs) (IC 1.23, IC025 -0.03) in the WHO Global ICSR Database, VigiBase™, raised the possibility of a causal relationship between roflumilast administration and the adverse effect melaena. The ICSRs are summarised in Table 1.
+Before starting any assessment, it should be noted that there are similarities between the ICSRs 4 and 5 (female, 77 years old, 68 kg, same reactions, same dates of treatment and onset of reaction) that suggest that they describe the same case, even if the ICSRs come from different countries. For this reason, only the ICSR 4 was used for further evaluation.
+It should also be considered that there are three ICSRs (2, 3 and 4) related to patients involved in clinical trials with roflumilast. In these cases, the reporting physician(s) classified the melaena as not related to the drug. According to the reporters, these patients had other alternative plausible explanations for the development of the event, such as suspicion of an upper GI haemorrhage (even if not diagnosed), possibility of concurrent haemorrhoids and/or active duodenal ulcer as well as concomitant treatment with an anticoagulant (phenprocoumon).""" ;
+                           rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#HarrisReport
+:HarrisReport rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001197 ;
+              OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+              OpenPVSignal:refers_to_class :fgd ;
+              mp:references :Ref.4 ;
+              OpenPVSignal:has_content "Harris et al. described stimulation of hydrochloric acid production by methylxanthines in the isolated frog gastric mucosa by inhibition of PDE that destroys cAMP." ;
+              rdfs:label "Harris report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#IC025ForRoflumilastAndMelaena
+:IC025ForRoflumilastAndMelaena rdf:type owl:NamedIndividual ,
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                               OpenPVSignal:refers_to_adverse_effect :melena ;
+                               OpenPVSignal:refers_to_drug :roflumilast ;
+                               OpenPVSignal:refers_to_interval_between_administrations :ICForRoflumilastAndMelaena ;
+                               OpenPVSignal:has_value -0.03 ;
+                               OpenPVSignal:refers_to_number_of_reports 7 ;
+                               rdfs:label "IC025 for roflumilast and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ICForRoflumilastAndMelaena
+:ICForRoflumilastAndMelaena rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                            OpenPVSignal:refers_to_adverse_effect :melena ;
+                            OpenPVSignal:refers_to_drug :roflumilast ;
+                            OpenPVSignal:has_value 1.23 ;
+                            OpenPVSignal:refers_to_number_of_reports 7 ;
+                            rdfs:label "IC for roflumilast and melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_1
+:Interval_for_dosage_1 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 4 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_2
+:Interval_for_dosage_2 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 4 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_3
+:Interval_for_dosage_3 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 84 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_4
+:Interval_for_dosage_4 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 77 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_5
+:Interval_for_dosage_5 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 75 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_6
+:Interval_for_dosage_6 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 60 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Interval_for_dosage_7
+:Interval_for_dosage_7 rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2006/time#DurationDescription> ;
+                       <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                       <http://www.w3.org/2006/time#numericDuration> 30 ;
+                       <http://www.w3.org/2006/time#numericPosition> 1 ;
+                       rdfs:label "Interval for dosage 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ;
+                     OpenPVSignal:has_content """Roflumilast is a selective, long-acting inhibitor of the enzyme phosphodiesterase (PDE) type 4. PDE4 is an important regulator of cyclic adenosine monophosphate (cAMP) involved in inflammatory processes. Inhibition of PDE4 reduces the breakdown of cAMP, which in turn down-regulates the inflammatory process. It is administered orally for the treatment of inflammatory conditions of the lung such as chronic obstructive pulmonary disease (COPD).1
+Melaena means black, tarry faeces, associated with gastrointestinal (GI) haemorrhage. It should be distinguished from haematochezia, which is passage of bright red blood originating from the lower GI tract. The black colour is caused by enzymatic oxidation of the iron in haemoglobin. Only blood that originates from a higher source (such as stomach or small intestine) or very slow bleeding from the lower GI source allow enough time for this enzymatic breakdown.2""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.10 ,
+                                      :Ref.3 ,
+                                      :Ref.4 ,
+                                      :Ref.5 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """In an assessment of roflumilast made by The Committee for Medicinal Products for Human Use (CHMP) of the European Medicines Agency, it was pointed out that increased gastric acid secretion and delayed gastric emptying were observed during safety pharmacology studies. These effects were possibly related to the class of PDE4 inhibitors.3 Indeed, such effects of PDE inhibitors have been known for over forty years. For instance, Harris et al. described stimulation of hydrochloric acid production by methylxanthines in the isolated frog gastric mucosa by inhibition of PDE that destroys cAMP.4 Scratcherd et al. found proof that methylxanthines can both initiate gastric secretion and potentiate histaminic- stimulated gastric secretion.5 Moreover, according to CHMP, morphological changes in the GI tract (erosion and ulceration) were seen in both rats and monkeys in higher doses.3 Such changes were not normally expected at therapeutic doses in humans, yet the approved European Summary of Product Characteristics contains, in addition to the adverse reactions gastritis (uncommon, i.e.
+>1/1,000 - <1/100) and constipation (rare, i.e.
+>1/10,000 -<1/1,000), haematochezia as a rare ADR.6
+Assessing the concomitant medication in the reports in Table 1, it is evident that all reported patients took either blood anticoagulants (discussed above) or another drug that might have caused blood in the stool. Tiotropium may cause constipation and intestinal obstruction, which may lead to hard and bloody stools.7 Similarly, known ADRs of azithromycin are bloody diarrhoea and constipation.8 Constipation may also lead to haemorrhoids (swollen veins in the rectum).9 However, blood in the stool formed this way can better be classified as haematochezia than melaena.
+Returning to the potential GI class adverse effects of PDE4 inhibitors, a somewhat different explanation was offered recently. It was pointed out that for second-generation PDE4 inhibitors, including roflumilast, GI disturbances were the most prevalent adverse drug reactions (ADRs).
+They could be accounted for by the ubiquitous distribution of PDE4 isoforms across many tissues. The most worrying potential toxicity generic to such PDE4 inhibitors could be arteritis. In recent human clinical trials with some PDE4 inhibitors the main reason for drop-outs was an incidence of colitis, raising the possibility that it was secondary to arteritis. In clinical trials with cilomilast, another PDE4 inhibitor, GI adverse effects including melaena did occur and were monitored with colonoscopy. Although the findings did not establish a relationship between melaena and vasculitis, the FDA concluded, from the low number of cases, that there was insufficient evidence to rule it out in humans.10""" ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#MechanismContent
+:MechanismContent rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Mechanism ;
+                  mp:references :Ref.1 ;
+                  OpenPVSignal:has_content "Roflumilast is a selective, long-acting inhibitor of the enzyme phosphodiesterase (PDE) type 4. PDE4 is an important regulator of cyclic adenosine monophosphate (cAMP) involved in inflammatory processes. Inhibition of PDE4 reduces the breakdown of cAMP, which in turn down-regulates the inflammatory process. It is administered orally for the treatment of inflammatory conditions of the lung such as chronic obstructive pulmonary disease (COPD).1" ;
+                  rdfs:label "Mechanism of roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Melaena
+:Melaena rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Free_text_reporting_element ;
+         OpenPVSignal:is_part_of :IntroductionContent ;
+         OpenPVSignal:refers_to_adverse_effect :melena ;
+         mp:references :Ref.2 ;
+         OpenPVSignal:has_content "Melaena means black, tarry faeces, associated with gastrointestinal (GI) haemorrhage. It should be distinguished from haematochezia, which is passage of bright red blood originating from the lower GI tract. The black colour is caused by enzymatic oxidation of the iron in haemoglobin. Only blood that originates from a higher source (such as stomach or small intestine) or very slow bleeding from the lower GI source allow enough time for this enzymatic breakdown.2" ;
+         rdfs:label "Melaena pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Oral_administration_of_roflumilast
+:Oral_administration_of_roflumilast rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Drug_Intake_Form ;
+                                    OpenPVSignal:refers_to_drug :roflumilast ;
+                                    OpenPVSignal:refers_to_form_of_intake "oral" ;
+                                    rdfs:label "Oral administration of roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 78 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 63 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 71 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 77 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 77 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 80 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Giembycz MA, Fiel SK. Roflumilast: first phosphodies-terase 4 inhibitor approved for treatment of COPD. Drug Des Devel Ther. 2010;4:147-58." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Giembycz MA. An update and appraisal of the cilo-milast Phase III clinical development programme for chronic obstructive pulmonary disease. Br J Clin Pharmacol. 2006;62:138-52." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Faecal occult blood. Lab Tests Online. URL: http:// www.labtestsonline.org.au/understanding/analytes/fobt/ tab/all?pnnpreview=1. Accessed: 25 January 2013." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Melaena. URL: http://www.gpnotebook.co.uk/simplepage.cfm?ID =-2087059454. Accessed: 17 December 2012." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "European Medicines Agency CHMP Assessment report: Daxas.URL: http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_-_Public_assessment_report/ human/001179/WC500095213.pdf. Accessed: 24 April" ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Harris JB, Nigon K, Alonso D. Adenosine-3-5'- monophosphate: intracellular mediator for methyl xanthine stimulation of gastric secretion. Gastroenterology 1969;57:377-84." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Scratcherd T, Case RM. The role of cyclic adeno-sine-3'-5'-monophosphate (AMP) in gastrointestinal secretion. Gut. 1969;957-61. URL: http://www.ncbi. nlm.nih.gov/pmc/articles/PMC1553053. Accessed: 19 December 2012." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Summary of Product Characteristics for roflumilast (Daxas) URL: http://www.ema.europa.eu/docs/en_GB/document_library/EPARProduct_Information/human/001179/WC5000 95209.pdf. Accessed: 17 December 2012." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Tiotropium Side Effects.URL: http://www.drugs.com/sfx/tiotropium-side-effects.html.Accessed: 20 December 2012." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Azithromycin Side Effects.URL: http://www.drugs.com/sfx/azithromycin- side-effects.html.Accessed: 20 December 2012." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Haemorrhoids. URL: http://www.ncbi.nlm.nih.gov/pub- medhealth/PMH0001337. Accessed: 20 December 2012." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_concomitant_drug :tiotropium ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone/salmeterol> ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:has_reporter_type "physician" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForICSR2 ;
+         OpenPVSignal:refers_to_adverse_effect :cholecystitis ,
+                                               :constipation ,
+                                               :depression ,
+                                               :diverticula ,
+                                               :melena ,
+                                               :nausea ,
+                                               :paroniria ,
+                                               :proctitis ;
+         OpenPVSignal:refers_to_concomitant_drug :cefixime ,
+                                                 :phenazone ,
+                                                 :tiotropium ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fenoterol/ipratropium> ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#hydrochlorothiazide/Ramipril> ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:has_reporter_type "clinical trial report" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForICSR3 ;
+         OpenPVSignal:refers_to_adverse_effect :anemia ,
+                                               :anorexia ,
+                                               :chestPain ,
+                                               :diverticulosisColonic ,
+                                               :dyspnea ,
+                                               :giNeoplasmBenign ,
+                                               :melena ;
+         OpenPVSignal:refers_to_concomitant_drug :allopurinol ,
+                                                 :digitoxin ,
+                                                 :furosemide ,
+                                                 :insulin ,
+                                                 :mirtazapine ,
+                                                 :pantoprazole ,
+                                                 :phenprocoumon ,
+                                                 :pravastatin ,
+                                                 :ramipril ,
+                                                 :salbutamol ,
+                                                 :tiotropium ,
+                                                 :valsartan ,
+                                                 :verapamil ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#budesonide/Formoterol> ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone/salmeterol> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:has_reporter_type "clinical trial report" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :infoForICSR4 ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :duodenalUlcer ,
+                                               :gastritis ,
+                                               :giHaemorrhage ,
+                                               :melena ,
+                                               :nausea ;
+         OpenPVSignal:refers_to_concomitant_drug :azithromycin ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:has_reporter_type "clinical trial report" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :duodenalUlcer ,
+                                               :gastritis ,
+                                               :giHaemorrhage ,
+                                               :melena ,
+                                               :nausea ;
+         OpenPVSignal:refers_to_concomitant_drug :azithromycin ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :dizziness ,
+                                               :melena ,
+                                               :nausea ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :calcium ,
+                                                 :cyano-Cobalamin ,
+                                                 :digoxin ,
+                                                 :f ,
+                                                 :famotidine ,
+                                                 :fluoxetine ,
+                                                 :fluticasone ,
+                                                 :magnesium ,
+                                                 :metoprolol ,
+                                                 :rosuvastatin ,
+                                                 :tiotropium ,
+                                                 :warfarin ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :bismuth ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                               :backPain ,
+                                               :gastritis ,
+                                               :melena ;
+         OpenPVSignal:refers_to_concomitant_drug :deflazacort ,
+                                                 :ketotifen ,
+                                                 :lercanidipine ,
+                                                 :risedronicAcid ,
+                                                 :tiotropium ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone/salmeterol> ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:has_reporter_type "patient" ;
+         OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Italy" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ReportsInVigibaseForRoflumilastAndMelaena
+:ReportsInVigibaseForRoflumilastAndMelaena rdf:type owl:NamedIndividual ,
+                                                    OpenPVSignal:Reports_group ;
+                                           OpenPVSignal:refers_to_adverse_effect :melena ;
+                                           OpenPVSignal:refers_to_drug :roflumilast ;
+                                           OpenPVSignal:has_count 7 ;
+                                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                           rdfs:label "Reports in vigibase for roflumilast and Melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Reports_from_clinical_trials
+:Reports_from_clinical_trials rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :ReportsInVigibaseForRoflumilastAndMelaena ;
+                              OpenPVSignal:has_count 3 ;
+                              OpenPVSignal:has_reporter_type "clinical trial report" ;
+                              rdfs:label "Reports from clinical trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Response_from_Forest_Laboratories
+:Response_from_Forest_Laboratories rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                   OpenPVSignal:refers_to_pharmacovigilance_signal_report :Roflumilastm_and_Melaena ;
+                                   OpenPVSignal:has_content """Response from Forest Laboratories
+COPD patients have been shown to have an increased incidence of gastroduodenal erosions and ulcers (Fukumura et al. 1992).
+Epidemiological studies show an increased risk of upper GI bleeding amongst COPD patients who are not exposed to roflumilast with an almost two-fold risk compared to controls [HR:1.93, 95% CI:1.73- 2.17] (Huang et al. 2012). Although the primary etiology of these erosions/ulcers is the hypersecretion of gastric acid induced by hypoxemia or hypercapnia, additional risk factors include advanced age, male gender, smoking history, comorbidities of heart failure, chronic renal disease, hypertension, diabetes, and the use of ulcerogenic medications.
+Roflumilast, a selective phosphodiesterase type 4 (PDE4) inhibitor indicated for severe COPD, was first approved in 2010 and is now marketed in 43 countries. Through 2012, exposure is estimated at 286,000 patient-years. A search of the roflumilast global safety database identified 5 cases of \"melaena\", 4 of which are medically-confirmed.
+Events occurred in patients aged 60-80 years with latencies between 4 days and 4 months with no clear pattern. Reports of these events present confounding factors that could account for the melaena, including co-morbid conditions (e.g.; duodenal ulcer, gastritis, proctitis, heart failure), a previous history of gastrointestinal bleeding, and/or co-suspect medications (e.g., anticoagulants, ASA, azithromycin).
+Statistical signal detection efforts using the Empirica Signal tool, with data from VigiBase™ and AERS, did not identify a statistical signal (EB05 >2) for \"melaena\" or any of the preferred terms that comprise the GI haemorrhage SMQ.
+Rates of upper GI AEs associated with haemorrhage, including \"melaena\", from the COPD clinical development program were infrequent and slightly lower in roflumilast than in placebo.
+15/6,563 COPD subjects exposed to roflumilast (0.23%) reported terms indicative of upper GI haemorrhage compared to 18/5, 491 placebo- treated subjects (0.33%). \"Melaena\", specifically, was reported in 2 subjects in each arm with roflumilast (0.03%) and placebo (0.04%).
+Systematic hemoccult testing, conducted in five placebo-controlled studies with roflumilast, and follow-up gastrointestinal investigations (colonoscopy) to detect GI bleeding, revealed no difference from placebo.
+Biologically, while first generation PDE4 inhibitors were reported to increase acid secretion due to gastric parietal cell stimulation, less activity is expected with later-generation inhibitors, including roflumilast, due to lower-affinity binding at the rolipram binding site in the gastric glands. Indeed, cilomilast revealed improved GI tolerability and, in
+ 
+
+
+phase 1 studies, had no effect on gastric pH in healthy subjects (Houghton et al. 2006). Subacute and chronic toxicity studies of roflumilast in mice, hamsters, and dogs revealed no histological changes in the glandular stomach or intestine suggestive of GI toxicity. GI changes were seen in rats and monkeys at doses 50- to 200- times above the clinical dose of 500 [ig/day. These data demonstrated that roflumilast, at therapeutic doses, is unlikely to significantly stimulate acid secretion or produce GI bleeding.
+
+Conclusion
+The available evidence does not suggest a causal relationship between the occurrence of melaena and the use of roflumilast. Upper GI haemorrhage is known to be increased in the COPD population. The cases of melaena identified (5 cases out of 286,000 patient-years of exposure) are confounded and occur at a rate which is anticipated in a COPD population. Additionally, evidence from pre-clinical and controlled clinical studies does not support an association.
+Nevertheless, the MAHs are committed to the close monitoring of AE reports of melaena through their routine pharmacovigilance processes.
+
+References
+1.	Fukumura M, Machida M, Koide K, Yoshiike Y, Mizuno T, and Shindo K (1992), Peptic Ulceration in Patients with Chronic Obstructive Pulmonary Disease. Digestive Endoscopy, 4: 417-420. doi: 10.1111/j.1443-1661.1992. tb00107.
+2.	Houghton LA, Atkinson W, Whorwell PJ, Morris J, Murdoch RD, Cooper SM, et al. Effects of cilomilast, a selective phosphodiesterase 4 inhibitor, on esophageal motility and pH, and orocecal and colonic transit: two single-center, randomized, double-blind, placebo-controlled, two- part crossover studies in healthy volunteers. Clin Ther. 2006 Apr;28(4):569-81.
+3.	Huang KW, Luo JC, Leu HB, Lin HC, Lee FY, Chan WL, et al. Chronic obstructive pulmonary disease: an independent risk factor for peptic ulcer bleeding: a nationwide population-based study. Aliment Pharmacol Ther 2012 Apr;35(7):796-802.""" ;
+                                   rdfs:label "Response from Forest Laboratories" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Roflumilastm_and_Melaena
+:Roflumilastm_and_Melaena rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                          OpenPVSignal:refers_to_author :Dr_Paal_Tamas ;
+                          OpenPVSignal:refers_to_signal :pvSignal ;
+                          mp:publishedBy :Uppsala_Monitoring_Centre ;
+                          OpenPVSignal:has_creation_date "01/10/2013" ;
+                          OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                          rdfs:label "Roflumilastm and Melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ScratcherdReport
+:ScratcherdReport rdf:type owl:NamedIndividual ,
+                           obo:OAE_0001197 ;
+                  OpenPVSignal:is_part_of :LiteratureAndLabelling ;
+                  OpenPVSignal:refers_to_class :fgd ;
+                  mp:references :Ref.5 ;
+                  OpenPVSignal:has_content "Scratcherd et al. found proof that methylxanthines can both initiate gastric secretion and potentiate histaminic- stimulated gastric secretion.5 " ;
+                  rdfs:label "Scratcherd report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Summary
+From November 2010 to January 2013, seven Individual Case Safety Reports (ICSRs) of melaena in association with roflumilast were entered into the WHO Global ICSR Database, VigiBase™, raising the possibility of a causal relationship.
+Although melaena in some of these cases could have been caused by the patients' concomitant conditions (e.g. gastrointestinal neoplasm, duodenal ulcer, and proctitis) or their concurrent medication (e.g. anticoagulant drugs), a causal relationship cannot be ruled out. It is known that phosphodiesterase inhibitors, the group of drugs to which roflumilast belongs, may cause gastrointestinal disturbances (duodenal ulcer, colitis), and melaena is an easily diagnosable symptom of these adverse conditions.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_1
+:Usage_for_report_1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage1 ;
+                    rdfs:label "Usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_2
+:Usage_for_report_2 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage2 ;
+                    rdfs:label "Usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_3
+:Usage_for_report_3 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage3 ;
+                    rdfs:label "Usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_4
+:Usage_for_report_4 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage4 ;
+                    rdfs:label "Usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_5
+:Usage_for_report_5 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage5 ;
+                    rdfs:label "Usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_6
+:Usage_for_report_6 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage6 ;
+                    rdfs:label "Usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#Usage_for_report_7
+:Usage_for_report_7 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Oral_administration_of_roflumilast ;
+                    OpenPVSignal:refers_to_dosage :Dosage7 ;
+                    rdfs:label "Usage for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#WarningForAzithromycin
+:WarningForAzithromycin rdf:type owl:NamedIndividual ,
+                                 obo:OAE_0001182 ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :bloodyDiarrhoea ,
+                                                              :constipation ,
+                                                              :hemorrhoids ;
+                        OpenPVSignal:refers_to_drug :azithromycin ;
+                        mp:references :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """Similarly, known ADRs of azithromycin are bloody diarrhoea and constipation.8
+ Constipation may also lead to haemorrhoids (swollen veins in the rectum).9""" ;
+                        rdfs:label "Warning for azithromycin " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#WarningForPDE4Inhibitors
+:WarningForPDE4Inhibitors rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001197 ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_class :fgd ;
+                          mp:references :Ref.10 ,
+                                        :Ref.4 ,
+                                        :Ref.5 ;
+                          OpenPVSignal:has_content "It has been shown previously that GI adverse effects of PDE inhibitors have been suspected with various mechanisms for decades.4,5,10 These mechanisms, increased gastric acid production (described as \"possibly related to the class of the compound\" by the CHMP) and/or arteritis, may lead to manifestations of the various GI reactions reported (duodenal ulcer, gastritis, diverticulosis etc.); with consequent, melaena particularly in sensitive patients (for example when treated with anticoagulants). The fact that the GI manifestations have been reported as adverse effects and not as concomitant sicknesses in all cases, seem to support this explanation." ;
+                          rdfs:label "Warning for PDE4 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#WarningInfoForTiotropium
+:WarningInfoForTiotropium rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001182 ,
+                                   OpenPVSignal:Warning_Information ;
+                          OpenPVSignal:refers_to_adverse_effect :bloodInStool ,
+                                                                :constipation ,
+                                                                :intestinalObstruction ;
+                          OpenPVSignal:refers_to_drug :tiotropium ;
+                          mp:references :Ref.7 ;
+                          OpenPVSignal:has_content "Tiotropium may cause constipation and intestinal obstruction, which may lead to hard and bloody stools.7" ;
+                          rdfs:label "Warning info for tiotropium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#allopurinol
+:allopurinol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "M04AA01" ,
+                                       "M04AA51" ;
+             rdfs:label "allopurinol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#anemia
+:anemia rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "D64.9" ;
+        OpenPVSignal:has_MedDRA_code 10002034 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+        rdfs:label "anemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#anorexia
+:anorexia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R63.0" ;
+          OpenPVSignal:has_MedDRA_code 10061428 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Decreased appetite" ;
+          rdfs:label "anorexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#azithromycin
+:azithromycin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J01FA10" ,
+                                        "J01RA07" ,
+                                        "S01AA26" ;
+              rdfs:label "azithromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#backPain
+:backPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "M54.5" ;
+          OpenPVSignal:has_MedDRA_code 10003988 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Back pain" ;
+          rdfs:label "back pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#bismuth
+:bismuth rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A02BX05" ;
+         rdfs:label "bismuth" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#bloodInStool
+:bloodInStool rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K92.1" ;
+              OpenPVSignal:has_MedDRA_code 10018836 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Haematochezia" ;
+              rdfs:label "blood in stool" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#bloodyDiarrhoea
+:bloodyDiarrhoea rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R19.7" ;
+                 OpenPVSignal:has_MedDRA_code 10012741 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea haemorrhagic" ;
+                 rdfs:label "bloody diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#calcium
+:calcium rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A11AA02" ,
+                                   "A11GB01" ,
+                                   "M05BB01" ,
+                                   "M05BB02" ,
+                                   "M05BB04" ,
+                                   "M05BB05" ,
+                                   "M05BB08" ;
+         OpenPVSignal:has_MedDRA_code 10005392 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Blood calcium" ;
+         rdfs:label "calcium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#cefixime
+:cefixime rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "J01DD08" ;
+          rdfs:label "cefixime" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#chestPain
+:chestPain rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R07" ;
+           OpenPVSignal:has_MedDRA_code 10008479 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Chest pain" ;
+           rdfs:label "chest pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#cholecystitis
+:cholecystitis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K81" ;
+               OpenPVSignal:has_MedDRA_code 10008612 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Cholecystitis" ;
+               rdfs:label "cholecystitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#chronicObstructivePulmonaryDisease
+:chronicObstructivePulmonaryDisease rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Indication ;
+                                    OpenPVSignal:has_ICD_code "J44.9" ;
+                                    OpenPVSignal:has_MedDRA_code 10009033 ;
+                                    OpenPVSignal:has_MedDRA_prefered_term "Chronic obstructive pulmonary disease" ;
+                                    rdfs:label "chronic obstructive pulmonary disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#constipation
+:constipation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K59.0" ;
+              OpenPVSignal:has_MedDRA_code 10010774 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Constipation" ;
+              rdfs:label "constipation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#cyano-Cobalamin
+:cyano-Cobalamin rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "B03BA01" ;
+                 rdfs:label "cyanocobalamin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#deflazacort
+:deflazacort rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "H02AB13" ;
+             rdfs:label "deflazacort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#depression
+:depression rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "F33" ;
+            OpenPVSignal:has_MedDRA_code 10012378 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Depression" ;
+            rdfs:label "depression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#digitoxin
+:digitoxin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C01AA04" ;
+           rdfs:label "digitoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#digoxin
+:digoxin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C01AA05" ;
+         rdfs:label "digoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#diverticula
+:diverticula rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "K57" ;
+             OpenPVSignal:has_MedDRA_code 10013530 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Diverticula" ;
+             rdfs:label "diverticula" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#diverticulosisColonic
+:diverticulosisColonic rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "K57.10" ;
+                       OpenPVSignal:has_MedDRA_code 10009993 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Colonic diverticulosis" ;
+                       rdfs:label "diverticulosis colonic" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#duodenalUlcer
+:duodenalUlcer rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K26.9" ;
+               OpenPVSignal:has_MedDRA_code 10013836 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Duodenal ulcer" ;
+               rdfs:label "duodenal ulcer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#dyspnea
+:dyspnea rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R06.0" ;
+         OpenPVSignal:has_MedDRA_code 10013968 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+         rdfs:label "dyspnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#f
+:f rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Drug ;
+   OpenPVSignal:has_ATC_code "C10AX06" ;
+   rdfs:label "fish oil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#famotidine
+:famotidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA03" ,
+                                      "A02BA53" ;
+            rdfs:label "famotidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fgd
+:fgd rdf:type owl:NamedIndividual ,
+              OpenPVSignal:Drug_Class_Effect_Information ;
+     OpenPVSignal:has_ATC_code "R03D" ;
+     rdfs:label "PDE4 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluoxetine
+:fluoxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB03" ,
+                                      "N06CA03" ;
+            rdfs:label "fluoxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone
+:fluticasone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "D07AC17" ,
+                                       "R01AD08" ,
+                                       "R01AD58" ,
+                                       "R03AK06" ,
+                                       "R03AK11" ,
+                                       "R03BA05" ;
+             rdfs:label "fluticasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#furosemide
+:furosemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA01" ,
+                                      "C03CB01" ,
+                                      "C03EB01" ,
+                                      "G01AE10" ;
+            rdfs:label "furosemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#gastritis
+:gastritis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K29.70" ;
+           OpenPVSignal:has_MedDRA_code 10017853 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Gastritis" ;
+           rdfs:label "gastritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#giHaemorrhage
+:giHaemorrhage rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "K92.2" ;
+               OpenPVSignal:has_MedDRA_code 10017955 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Gastrointestinal haemorrhage" ;
+               rdfs:label "gi haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#giNeoplasmBenign
+:giNeoplasmBenign rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "D13.1" ;
+                  OpenPVSignal:has_MedDRA_code 10060996 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Benign gastrointestinal neoplasm" ;
+                  rdfs:label "gi neoplasm benign" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#hemorrhoids
+:hemorrhoids rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "K64.8" ;
+             OpenPVSignal:has_MedDRA_code 10019022 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Haemorrhoids" ;
+             rdfs:label "hemorrhoids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#infoForICSR2
+:infoForICSR2 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "the patient went to the outpatient clinic 19 days after the first dose of roflumilast because of bowel movement difficulties (constipation and delayed gastric emptying are accepted ADRs of roflumilast3). The patient had also experienced, among other symptoms, blood in stool with known haemorrhoids two days after the first dose of roflumilast. When roflumilast treatment was discontinued the symptoms stopped. When roflumilast was resumed intermittently, the symptoms re-appeared. According to the reporter, the concurrent haemorrhoids provided a more plausible alternative explanation for the occurrence of blood in the stool than roflumilast treatment. However, this conclusion requires closer scrutiny. The original reported term used by the investigator was \"faecal occult blood (FOB) with known haemorrhoids\". FOB means small amounts of blood, not visible to the eye, in the stool indicating that bleeding has occurred somewhere in the upper or lower GI tract.11 In this case it might have been caused by the mild proctitis (inflammation of the rectum) that was also reported. The reporting physician pointed out that FOB might be a sign of the proctitis (i.e. haematochezia and not melaena); however, it would not explain why the patient, after discontinuation of the therapy \"had recovered\" and then, when roflumilast was later resumed, the symptoms re-appeared. Roflumilast is known to cause constipation and delayed gastric emptying (so possibly also has a more global effect on gut motility). Haemorrhoids are exacerbated by constipation, and the patient has a past history of haemorrhoids. However, there is no mention of haemorrhoids in the examination findings but a colonoscopy revealed proctitis. The patient reported blood in the stool only two days after the first dose of roflumilast, which may be too soon for the drug to have caused constipation. The proctitis appears to be a more plausible explanation for the visible blood in the stool, but it is not clear that the roflumilast caused the proctitis" ;
+              rdfs:label "info for ICSR 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#infoForICSR3
+:infoForICSR3 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content "In ICSR 3 the patient, treated concomitantly with phenprocoumon, started roflumilast therapy on 23 February. On 17 May he was admitted to hospital and reported having had melaena for approximately four weeks. He also had a medical history of chronic gastritis. Roflumilast (and perhaps phenprocoumon) therapy was discontinued on 17 May. Gastroscopy did not reveal a source of haemorrhage in the upper GI tract. The patient was diagnosed with diverticulosis and a solitary polyp in the ascending colon. Phenprocoumon therapy was then reintroduced (there are no exact dates in the report, but it seems to have occurred earlier than the reintroduction of roflumilast). Roflumilast was resumed on 2 June but was discontinued on 17 October at the patient's request. According to the reporting physician, other plausible explanations, such as phenprocoumon therapy and undiagnosed GI haemorrhage, make a causal relationship between roflumilast treatment and melaena unlikely. However, roflumilast may have been responsible for the gastritis or have exacerbated it, which could have led to the mentioned GI haemorrhage (causing melaena). If this were the case, phenprocoumon may have made the symptoms worse." ;
+              rdfs:label "info for ICSR 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#infoForICSR4
+:infoForICSR4 rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Case_Report_Information ;
+              OpenPVSignal:has_content """The patient in ICSR 4 developed duodenal ulcers, erosive antral gastritis, upper gastrointestinal haemorrhage and tarry stool approximately two months after the first dose of roflumilast.
+Roflumilast was discontinued and the patient recovered. The symptoms then re-occurred upon re-challenge. The sender commented on the case that, in the absence of any pharmacological indication that roflumilast could favour the occurrence of the patient's symptoms, the concurrent erosive antral gastritis provided a more plausible explanation. However, as described above, the literature states that PDE inhibitors are expected to increase gastric acid secretion (which may lead to other GI disturbances). Thus, there may be a plausible pharmacological explanation, and the causality chain, gastritis — duodenal ulcer
+— GI haemorrhage — melaena, is at least not impossible.""" ;
+              rdfs:label "info for ICSR 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#insulin
+:insulin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_MedDRA_code 10005605 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Blood insulin" ;
+         rdfs:label "insulin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#intestinalObstruction
+:intestinalObstruction rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "K56.609" ;
+                       OpenPVSignal:has_MedDRA_code 10022687 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Intestinal obstruction" ;
+                       rdfs:label "intestinal obstruction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ketotifen
+:ketotifen rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "R06AX17" ,
+                                     "S01GX08" ;
+           rdfs:label "ketotifen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#lercanidipine
+:lercanidipine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C08CA13" ,
+                                         "C09BB02" ,
+                                         "C09DB08" ;
+               rdfs:label "lercanidipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#magnesium
+:magnesium rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_MedDRA_code 10005651 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Blood magnesium" ;
+           rdfs:label "magnesium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#melena
+:melena rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "K92.1" ;
+        OpenPVSignal:has_MedDRA_code 10027141 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Melaena" ;
+        rdfs:label "melaena" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#metoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#mirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#pantoprazole
+:pantoprazole rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A02BC02" ,
+                                        "A02BD04" ,
+                                        "A02BD11" ;
+              rdfs:label "pantoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#paroniria
+:paroniria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "F51.5" ;
+           OpenPVSignal:has_MedDRA_code 10029412 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Nightmare" ;
+           rdfs:label "paroniria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#phenazone
+:phenazone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N02BB01" ;
+           rdfs:label "phenazone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#phenprocoumon
+:phenprocoumon rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "B01AA04" ;
+               rdfs:label "phenprocoumon" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#pravastatin
+:pravastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA03" ,
+                                       "C10BA03" ,
+                                       "C10BX02" ;
+             rdfs:label "pravastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#proctitis
+:proctitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "K51.20" ;
+           OpenPVSignal:has_MedDRA_code 10036774 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Proctitis" ;
+           rdfs:label "proctitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                   :FreeTextReportsInVigibase ,
+                                                   :IntroductionContent ,
+                                                   :Melaena ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ForRoflumilastAndMelaena ,
+                                                          :ICForRoflumilastAndMelaena ,
+                                                          :ReportsInVigibaseForRoflumilastAndMelaena ,
+                                                          :Reports_from_clinical_trials ;
+          OpenPVSignal:refers_to_adverse_effect :melena ;
+          OpenPVSignal:refers_to_drug :roflumilast ;
+          OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+          mp:supportedByData :CHMPReport ,
+                             :ClinicalTrialDataFromCilomilast ,
+                             :Clinical_trial_for_roflumilast_summary ,
+                             :EuropeanSummaryOfProductCharacteristics ,
+                             :HarrisReport ,
+                             :ScratcherdReport ,
+                             :WarningForAzithromycin ,
+                             :WarningForPDE4Inhibitors ,
+                             :WarningInfoForTiotropium ;
+          OpenPVSignal:initially_identified_on "01/10/2013" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#ramipril
+:ramipril rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C09AA05" ,
+                                    "C09BA05" ,
+                                    "C09BB05" ,
+                                    "C09BB07" ,
+                                    "C10BX04" ,
+                                    "C10BX06" ;
+          rdfs:label "ramipril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#risedronicAcid
+:risedronicAcid rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "M05BA07" ;
+                rdfs:label "Risedronic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#roflumilast
+:roflumilast rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:concerns_indication_for_use :chronicObstructivePulmonaryDisease ;
+             OpenPVSignal:hasClass :fgd ;
+             OpenPVSignal:has_mechanism :MechanismContent ;
+             OpenPVSignal:has_ATC_code "R03DX07" ;
+             rdfs:label "roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#rosuvastatin
+:rosuvastatin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "C10AA07" ,
+                                        "C10BA06" ,
+                                        "C10BX05" ,
+                                        "C10BX07" ,
+                                        "C10BX09" ,
+                                        "C10BX10" ,
+                                        "G01AE10" ;
+              rdfs:label "rosuvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#salbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ,
+                                      "R03AK04" ,
+                                      "R03AL02" ,
+                                      "R03CC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#tiotropium
+:tiotropium rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03BB04" ;
+            rdfs:label "tiotropium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#valsartan
+:valsartan rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C09CA03" ,
+                                     "C09DA03" ,
+                                     "C09DB01" ,
+                                     "C09DB08" ,
+                                     "C09DX01" ,
+                                     "C09DX02" ,
+                                     "C09DX04" ,
+                                     "C10BX10" ;
+           rdfs:label "valsartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#verapamil
+:verapamil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C08DA01" ,
+                                     "C08DA51" ,
+                                     "C09BB10" ;
+           rdfs:label "verapamil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#warfarin
+:warfarin rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "B01AA03" ;
+          rdfs:label "warfarin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#budesonide/Formoterol
+<http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#budesonide/Formoterol> rdf:type owl:NamedIndividual ,
+                                                                                                 OpenPVSignal:Drug ;
+                                                                                        OpenPVSignal:has_ATC_code "R03AC13" ,
+                                                                                                                  "R03AK07" ,
+                                                                                                                  "R03BA02" ;
+                                                                                        rdfs:label "budesonide / formoterol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fenoterol/ipratropium
+<http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fenoterol/ipratropium> rdf:type owl:NamedIndividual ,
+                                                                                                 OpenPVSignal:Drug ;
+                                                                                        OpenPVSignal:has_ATC_code "R03AL01" ,
+                                                                                                                  "R03BB01" ,
+                                                                                                                  "R03CC04" ;
+                                                                                        rdfs:label "fenoterol / ipratropium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone/salmeterol
+<http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#fluticasone/salmeterol> rdf:type owl:NamedIndividual ,
+                                                                                                  OpenPVSignal:Drug ;
+                                                                                         OpenPVSignal:has_ATC_code "R03AC12" ,
+                                                                                                                   "R03AK06" ,
+                                                                                                                   "R03BA05" ;
+                                                                                         rdfs:label "fluticasone / salmeterol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#hydrochlorothiazide/Ramipril
+<http://purl.org/OpenPVSignal/Signals/2013_5_roflumilast_melaena#hydrochlorothiazide/Ramipril> rdf:type owl:NamedIndividual ,
+                                                                                                        OpenPVSignal:Drug ;
+                                                                                               OpenPVSignal:has_ATC_code "C03AA03" ,
+                                                                                                                         "C09AA05" ,
+                                                                                                                         "C09BA05" ,
+                                                                                                                         "C09BX03" ;
+                                                                                               rdfs:label "hydrochlorothiazide / ramipril" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

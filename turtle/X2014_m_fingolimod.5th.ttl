@@ -1,0 +1,1281 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                       mp: ;
+                                                                           rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255512/"^^xsd:anyURI ;
+                                                                           rdfs:label "Fingolimod and T wave inversion"^^rdfs:Literal ;
+                                                                           owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionAE_mechanism_for_fingolimod
+:AE_mechanism_for_fingolimod rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect_Mechanism ;
+                             OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                                                   :bradyarrhythmia ;
+                             mp:references :ref11 ;
+                             OpenPVSignal:has_content "The drug’s effect on the sphingosine 1-phosphate receptors could theoretically provide an explanation for this as these receptors are also present in the atrial myocytes and nodal cells.11" ;
+                             rdfs:label "AE mechanism for fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionAortic_regurgitation
+:Aortic_regurgitation rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_MedDRA_code 10002904 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Aortic regurgitation" ;
+                      rdfs:label "aortic regurgitation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionDiscussion_and_Conclusion
+:Discussion_and_Conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :ref11 ;
+                           OpenPVSignal:has_content """Fingolimod is known to affect the heart rate as  it may cause bradyarrhythmias and AV block in the initial stages of treatment. The drug’s effect on the sphingosine 1-phosphate receptors could theoretically provide an explanation for this as these receptors are also present in the atrial myocytes and nodal cells.11
+The 27 ICSRs on fingolimod and T wave inversion stand out as statistically significant in the VigiBase dataset and the drug is the sole suspected drug in 26 of these cases. The large proportion of women in the ICSRs may be explained by the disease being more common  in women than men. In 13 of the cases where time to onset was recorded, the reaction was seen within two days. 19 out of 27 cases list information on the patients' medical history.
+Hypertension was mentioned in four cases, three patients were reported as smoking and another three as former smokers.
+Hyperlipidaemia was  reported  for  three patients and coronary  artery disease in two more cases. Of these two patients, one was diagnosed with coronary artery disease after ECG changes were recorded during FDO. Five ICSRs explicitly mention that the patients had  no preexisting cardiac morbidity or cardiac risk factors. The lack of treatment dates for the concomitant drugs that can induce arrhythmias complicates the assessment but as all these cases date after the introduction of FDO, it can be assumed that the ECG  changes reported were new observations even in those cases where there is no reference to a pre-treatment ECG.
+In 14 cases the severity of the ADRs reported, including bradyarrhythmias and signs of myocardial ischemia (two patients), caused a withdrawal of the drug. There was a positive dechallenge on six of the ICSRs, only three patients were reported to have reco- vered without changes to therapy. The cases in VigiBase suggest that there is a possible causal relationship between fingolimod and T wave inversion and further investigation is warranted.""" ;
+                           rdfs:label "Discussion and Conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionDose_of_fingolimod
+:Dose_of_fingolimod rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Dosage ;
+                    OpenPVSignal:refers_to_interacting_drug :one_day_intervals_between_administrations ;
+                    OpenPVSignal:has_dosage_unit "mg" ;
+                    OpenPVSignal:has_value 0.5 ;
+                    OpenPVSignal:refers_to_dose_value "0.5 mg" ;
+                    rdfs:label "Dose of fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionECGRecommendation1
+:ECGRecommendation1 rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Warning_Information ;
+                    OpenPVSignal:refers_to_drug :fingolimod ;
+                    mp:references :ref7 ,
+                                  :ref8 ;
+                    OpenPVSignal:has_content "Following the unexplained death of a patient within 24 hours of receiving the first dose of fingolimod at the end of 2011, US and European regulatory authorities recommended a baseline electrocardiogram (ECG) before start of treatment and a close cardiac monitoring of all patients in the first six hours after receiving the first dose (a first dose observation, FDO) and in some cases for longer.7,8" ;
+                    rdfs:label "ECG recommendation 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionFingolimod_and_T_wave_inversion
+:Fingolimod_and_T_wave_inversion rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                 OpenPVSignal:refers_to_author :Uppsala_Monitoring_Centre ;
+                                 OpenPVSignal:refers_to_signal :pvSignal ;
+                                 mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                 OpenPVSignal:has_creation_date "01/11/2014"^^xsd:date ;
+                                 OpenPVSignal:has_overall_conclusion "causal association probable" ;
+                                 rdfs:label "Fingolimod and T wave inversion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionHyperventilation_syndrome
+:Hyperventilation_syndrome rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_MedDRA_code 10020911 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Hyperventilation syndrome" ;
+                           rdfs:label "hyperventilation syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionIC025ValueOfFingolimodAndTWaveInversion
+:IC025ValueOfFingolimodAndTWaveInversion rdf:type owl:NamedIndividual ,
+                                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                         OpenPVSignal:refers_to_adverse_effect :tWaveInversion ;
+                                         OpenPVSignal:refers_to_drug :fingolimod ;
+                                         OpenPVSignal:refers_to_information_component :ICValueOfFingolimodAndTWaveInversion ;
+                                         OpenPVSignal:has_value 3.11 ;
+                                         rdfs:label "IC025 value of fingolimod and t wave inversion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionICValueOfFingolimodAndTWaveInversion
+:ICValueOfFingolimodAndTWaveInversion rdf:type owl:NamedIndividual ,
+                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                      OpenPVSignal:refers_to_adverse_effect :T_wave_inversion ;
+                                      OpenPVSignal:refers_to_drug :fingolimod ;
+                                      OpenPVSignal:has_value 3.7 ;
+                                      rdfs:label "IC value of fingolimod and t wave inversion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionLabelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ,
+                    OpenPVSignal:Warning_Information ;
+           OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                                 :bradyarrhythmia ;
+           OpenPVSignal:refers_to_drug :fingolimod ;
+           mp:references :ref5 ,
+                         :ref6 ;
+           OpenPVSignal:has_content "Neither T wave inversion nor myocardial ischaemia is labelled in the UK Summary of Product Characteristics (SPC) or the US FDA Product Label for fingolimod. There is however an increased risk of bradyarrhytmia and AV block and the labelling information specifically recommends that all patients starting on fingolimod treatment should have an initial predose ECG and be further monitored for at least six hours." ;
+           rdfs:label "Labelling for fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionLiteratureInfo
+:LiteratureInfo rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001197 ;
+                OpenPVSignal:has_content "One recently published cohort study has, however, identified an increased risk of myocardial infarction, stroke and heart failure in MS patients compared to a control group without MS. The study took into account co-morbidities such as diabetes, hypertension, chronic obstructive pulmonary disease (COPD), deep vein thrombosis and others but did not adjust for risk factors such as obesity and smoking.11" ;
+                rdfs:label "Literature info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionLiterature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :ref12 ;
+                          OpenPVSignal:has_content "Neither T wave inversion nor myocardial ischaemia is labelled in the UK Summary of Product Characteristics (SPC) or the US FDA Product Label for fingolimod. There is however an increased risk of bradyarrhytmia and AV block and the labelling information specifically recommends that all patients starting on fingolimod treatment should have an initial predose ECG and be further monitored for at least six hours. Clinical trials identified symptomatic bradycardia in 0.5% of patients receiving fingolimod compared to none on placebo. The maximum decrease in heart rate usually occurred after six hours and usually improved after this. In some cases however a second period of heart rate decrease occurred within the first 24 hours and/or after  the second dose. With continuous treatment the heart rate returned to baseline within a month. First degree AV block was reported in 0.1% of patients starting treat- ment with fingolimod whilst there were no cases for the  placebo group and the same result was recorded for second degree AV block. The AV block was usually resolved within the first 24 hours. The post marketing experience reveals third degree AV blocks, AV blocks with conjunctional delay, transient asystole, syncope and unexplained death although confounders such as concomitant medications or pre-existing disease makes this an uncertain relationship to fingolimod. Patients on drugs that prolong the QT interval should be monito- red closely for the first 24 hours after starting treatment with fingolimod due to the association with torsades de pointes in patients with bradycardia.5, 6 In a randomized phase IV study of 783 patients where three quarters received fingolimod and one quarter standard disease modifying therapy for six months, one patient was found to have biphasic T waves.12" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionMS_and_cardiac_disease
+:MS_and_cardiac_disease rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :heartFailure ,
+                                                              :multipleSclerosis ,
+                                                              :myocardialInfarction ,
+                                                              :stroke ;
+                        mp:references :ref11 ;
+                        OpenPVSignal:has_content "Multiple sclerosis (MS), the condition being treated with fingolimod, has so far not been associated with an increased incidence of cardiac disease. One recently published cohort study has, however, identified an increased risk of myocardial infarction, stroke and heart failure in MS patients compared to a control group without MS. The study took into account co-morbidities such as diabetes, hypertension, chronic obstructive pulmonary disease (COPD), deep vein thrombosis and others but did not adjust for risk factors such as obesity and smoking.11" ;
+                        rdfs:label "MS and cardiac disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionMechanism_of_fingolimod
+:Mechanism_of_fingolimod rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         mp:references :ref1 ,
+                                       :ref2 ;
+                         OpenPVSignal:has_content "Fingolimod is an immunomodulating drug used as single treatment of relapsing multiple sclerosis." ,
+                                                  "The active metabolite fingolimod phosphate binds to sphingosine 1- phosphate receptors and reduces the number of lymphocytes in the peripheral blood. Although the exact mechanism is not known it is believed that fingolimod prevents the lymphocytes from moving into the central nervous system." ;
+                         rdfs:label "Mechanism of fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionReports_in_VigiBase
+:Reports_in_VigiBase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content """Since February 2012 (after the introduction of FDO), 27 Individual Case Safety Reports (ICSRs) on fin- golimod in association with T wave inversion have been reported to the WHO Global ICSR Database, VigiBase®. The majority of the ICSRs are from the USA (17) and the other countries represented are Germany (four), Canada (three), Finland, Ireland and the UK (one each). In December 2013 the IC value was
+3.70 and the IC025 was 3.11. Age was mentioned in 23 ICSRs, ranging from 20 to 76 years old with a median age of 47. Women were represented in 22 ICSRs, only four cases were for men and one case had no gender stated.
+Concomitant drugs were listed in 18 of the ICSRs and in all but two; the patients were taking drugs that are known to cause cardiac disturbances. The concomitant drugs reported included amantadine amlodipine, atropine sulphate/dephenoxylate HCl, bupropion, celecoxib, citalopram, clonazepam, desipramine, donepezil, doxepin, epinephrine, gabapentin, hydroxychloroquine, interferon beta-1b, ondansetron, oxymorphone, paroxetine, levothyroxine, lorazepam, methylprednisolone- modafinil, naproxen, salbutamol, simvastatin, tadalafil, topiramate, trazodone and venlafaxine. Treatment dates were generally lacking for these drugs.
+The dose was given in 25 of the ICSRs, all stating the recommended daily dose. Time to onset was recorded in 20 of the cases, ranging from reaction occurring on the same day up to five months. In 13 cases the reaction occurred on or within two days of FDO, but in seven cases the reaction was seen at a later stage. The drug was withdrawn in 14 cases and of these five patients had recovered whilst three had not at the time of reporting. For the remaining six patients the outcome was unknown or not recorded. In seven cases the treatment had not been changed, three of these patients recovered and for the other four the outcome was unknown. The remaining six cases lacked information on any action taken regarding the medication and the outcome was recorded as unknown in five cases and not recovered in one case. Two reports listed that a rechallenge was made and in one case there was no recurrence of the event, whilst there was no information about the outcome in the other case.
+Only two patients showed clinical signs of myocardial ischaemia (chest pain, dyspnoea) and both had risk factors for coronary artery disease such as heavy smoking and hyperlipidaemia. One further patient had diffuse episodes of chest pain but a concomitant lung infection. All other patients were asymptomatic and in all cases where further investigations such as echocardiogram, cardiac enzymes and/or coronary angiography were reported as performed, the results were negative with the exception of one asymptomatic patient who was found to have extensive obstructive coronary disease and underwent a threefold coronary by-pass.
+No ICSR mentioned alternative aetiologies for T wave inversion.""" ;
+                     rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionResponse_from_Novartis
+:Response_from_Novartis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                        OpenPVSignal:refers_to_signal :pvSignal ;
+                        OpenPVSignal:has_content """Response from Novartis
+In response to a WHO signal evaluation on disproportionate reporting of T-wave inversion in patients treated with fingolimod 0.5mg (approved dose in relapsing MS), Novartis presents the Company  analysis  of this signal.  To  date, 89,500 patients have been  treated with fingolimod including > 15,000 in clinical trials for a total of ~137,000 patient treatment-years.
+Based on this review, Novartis does not believe the finding of isolated T-wave changes are related to fingolimod treatment.
+
+Background
+Fingolimod induces a transient dose-dependent reduction in heart rate and AV conduction upon treatment initiation. Fingolimod’s product information recom- mends first-dose monitoring in all patients, which was updated in 2012 to include ECGs before and 6 hours after fingolimod initiation.
+
+Significance of T-wave inversion
+In most cases,  T-wave  inversion  is non- specific and associated with physiological conditions. These conditions include orthostatic changes, hyperventilation,  electrolyte imbalance, vagal reflex, cold water and anxiety. Food ingestion is one of the most common causes of T-wave inversion  in  healthy individuals (Okada et al  1994).  T-wave inversion can also be  associated  with myocardial ischemia (with ST suppression), myocardial infarction (with Q waves and ST elevation) or cardiac conditions such as hypertension, left ventricular hypertrophy or cardiomyopathy. Isolated T-wave inversion in asymptomatic adults is usually a normal variant (Fisch, 1997). T-wave changes should be interpreted with caution and should always be correlated with the other clinical and diagnostic findings (echocardiography, coronary angiography, cardiac enzymes etc.)
+
+Preclinical data
+In preclinical toxicity testing, no T-wave  inversion was observed in rats, guinea pigs, dogs or monkey.
+
+Clinical trial data
+Cardiovascular safety including ECGs was extensively assessed in a large number of patients under controlled conditions in fingolimod clinical studies (treatment duration was 6-24 months). Throughout the clinical program, ECGs were read by the treating physician and analyzed by an independent.
+
+Table 1 Adverse events of T-wave inversion in fingolimod controlled clinical trials
+ 
+
+	Placebo
+
+N = 966	Fingolimod 0.5mg
+
+N = 1364	Fingolimod 1.25mg
+
+N = 1367
+T-wave inversion	2	0	1
+
+
+
+Table 2 T-wave inversion in controlled clinical trials
+
+Time of the ECG	Placebo
+
+n/N (%)	Fingolimod 0.5mg
+
+n/N (%)	Fingolimod 1.25mg
+
+n/N (%)
+Baseline
+Day 1 (predose)	7/866 (0.8)	7/1211 (0.6)	7/1312 (0.5)
+Day 1 (6h post-dose)	12/855 (1.4)	11/1193 (0.9)	10/1298 (0.8)
+Month 1	8/847 (0.9)	18/1184 (1.5)	15/1275 (1.2)
+Month 6	8/796 (1.0)	19/1105 (1.7)	19/1156 (1.6)
+Month 12	5/635 (0.8)	16/1028 (1.6)	11/976 (1.1)
+Month 18	2/344 (0.6)	4/377	(1.1)	7/330	(2.1)
+Month 24	9/539 (1.7)	4/574	(0.7)	8/521	(1.5)
+ISS update 2012
+N = number of patients; n = total cases of T-wave inversion; % = total cases of T-wave inversion /number of patients
+
+
+
+
+ 
+ECG laboratory. T-wave  inversions  reported as adverse events  (AEs) are presented in Table 1 whereas T-wave inversion detected as ECG abnormality are presented in Table 2. In the majority of cases, the  investigators  did not consider isolated T-wave inversion clinically relevant, thus warranting reporting as AEs.
+In controlled clinical studies, there were no cases of AE related to ‘T-wave inversion’ with the approved 0.5 mg dose of fingolimod in 1,364 patients.
+
+When data from non-controlled clinical trials  is also considered, the frequency of AE reported as T-wave inversion was 2/8,978 patients for the 0.5 mg dose.
+
+ECGs were assessed at predetermined time- points in the placebo-controlled pivotal clinical studies (Table 2). The frequency of T-wave inversion at baseline was similar between the treatment groups and placebo. At 6 hours post- dose on day 1, near the peak cardiac effect of
+ 
+fingolimod (peak bradycardia is observed  at 4-5 hours post-dose), Twave inversion on placebo (1.4%) exceeded the frequency of fingolimod 0.5 mg (0.9%) and fingolimod 1.25 mg (0.8%). Overall, as shown in Table 2, T- wave inversion was reported in the placebo group at a range of 0.8% to 1.7%, which was compara- ble to the 0.5 mg dose (0.6% to 1.7%) and the 1.25 mg dose (0.5% to 2.1%), over the 24-month period. The frequency of T- wave inversion on placebo reflects both the baseline prevalence and the range of these abnor- malities in the absence of active drug.
+There is no indi- cation of a dose-response or a temporal relationship to treatment.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	 
+Individual case safety reports from Novartis safety database
+There are 26 cases of T-wave inversion out of ~ 89,500 treated patients (spontaneous, clinical trial, literature) in the Novartis safety database. All but two cases were reported  after  2012, when the label update for first- dose monitoring (including ECG) was implemented.
+
+The onset latency was known in 23 cases. In about 50% (11/23) of cases, the event occurred during the first two days of treatment, presumably in the context of first-dose monitoring. Only eight events occurred beyond the first month of treatment initiation.
+
+In 17 of 26 cases, the T-wave inversion in ECG was confounded by cardiac disease or preexisting abnormal ECG. In 4 cases, the information was insufficient to assess, and in the remaining 5 cases, “T-wave inversion” was an asymptomatic non-specific finding. Dechallenge and rechallenge evidence was equivocal.
+
+Overall, the review of the 26 cases provides limited additional information.
+
+Conclusions
+The thorough analysis of all available evidence presented above does not indicate a causal relationship between T-wave inversion and fingolimod treatment.
+ 
+
+•	No evidence of T-wave inversion in pre- clinical toxicity studies (across species)
+•	Extensive ECG monitoring in large controlled clinical trials revealed comparable frequency of
+•	T-wave inversion between fingolimod and placebo
+•	In the post-marketing setting, T-wave inversion is rarely reported and two-thirds of reported events are confounded by pre- existing cardiac diseases
+Fingolimod product information requires intense ECG monitoring for all patients at treatment initiation which is uncommon. In this context, and in the absence of a signal for ischemic heart disease or other pathologies that may manifest as T-wave inversions, Novartis believes this signal raised by disproportionality analysis can be explained by surveillance and reporting bias.
+
+
+References
+1.	Fisch C (1997). T-wave abnormalities due to extracardiac “Functional” causes. ACC curr. Jour. Rev 101-4
+2.	Okada M et al. (1994) Clinical Implications of
+Isolated T wave Inversion in Adults : Electrocardiographic
+Differentiation of the Underlying Causes of this pheno- menon. J. Am Coll Card 24:739-45""" ;
+                        rdfs:label "Response from Novartis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionSubarachnoid_haemorrhage
+:Subarachnoid_haemorrhage rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10042316 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Subarachnoid haemorrhage" ;
+                          rdfs:label "subarachnoid haemorrhage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionT_wave_inversion
+:T_wave_inversion rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Free_text_reporting_element ;
+                  OpenPVSignal:refers_to_adverse_effect :tWaveInversion ;
+                  mp:references :ref9 ;
+                  OpenPVSignal:has_content "\"The T wave in an ECG reflects the repolarization of the ventricles and is normally concordant with the QRS complex.  Opposite polarity (i.e. negative T waves in leads with positive QRS complexes) can indicate myocardial ischaemia.9 T wave inversion is also associated with hypertrophic cardiomyopathy, aortic regurgitation, pulmonary embolism, sepsis, hyperventilation syndrome, subarachnoid haemorrhage and severe\"" ;
+                  rdfs:label "T wave inversion pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionT_wave_inversion_associations_with_other_ADRs
+:T_wave_inversion_associations_with_other_ADRs rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Warning_Information ;
+                                               OpenPVSignal:refers_to_adverse_effect :Aortic_regurgitation ,
+                                                                                     :Hyperventilation_syndrome ,
+                                                                                     :Subarachnoid_haemorrhage ,
+                                                                                     :hypocalcaemia ,
+                                                                                     :pericarditis ,
+                                                                                     :pulmonary_embolism ,
+                                                                                     :sepsis ,
+                                                                                     :tWaveInversion ,
+                                                                                     <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#Hypertrophic_cardiomyopathy'> ;
+                                               mp:references :ref10 ;
+                                               OpenPVSignal:has_content "T wave inversion is also associated with hypertrophic cardiomyopathy, aortic regurgitation, pulmonary embolism, sepsis, hyperventilation syndrome, subarachnoid haemorrhage and severe hypocalcaemia. Patients with pericarditis can show flattened to invert T waves." ;
+                                               rdfs:label "T wave inversion associations with other ADRs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionUppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionamantadine
+:amantadine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N04BB01" ;
+            rdfs:label "amantadine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionamlodipine
+:amlodipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA01" ,
+                                      "C08GA02" ,
+                                      "C09BB03" ,
+                                      "C09BB04" ,
+                                      "C09BB07" ,
+                                      "C09BX01" ,
+                                      "C09DB01" ,
+                                      "C09DB02" ,
+                                      "C09DB04" ,
+                                      "C09DB05" ,
+                                      "C09DB06" ,
+                                      "C09DB07" ,
+                                      "C09DX01" ,
+                                      "C09DX03" ,
+                                      "C09XA53" ,
+                                      "C09XA54" ,
+                                      "C10BX03" ,
+                                      "C10BX07" ,
+                                      "C10BX09" ,
+                                      "C10BX11" ;
+            rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionavBlock
+:avBlock rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "I442" ;
+         OpenPVSignal:has_MedDRA_code 10003671 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Atrioventricular block" ;
+         rdfs:label "av block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionavBlocksWithConjunctionalDelay
+:avBlocksWithConjunctionalDelay rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Adverse_Effect ;
+                                OpenPVSignal:has_MedDRA_code 10003671 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Atrioventricular block" ;
+                                rdfs:label "av blocks with conjunctional delay" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionbackPain
+:backPain rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "M54.5" ;
+          OpenPVSignal:has_MedDRA_code 10003988 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Back pain" ;
+          rdfs:label "back pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionbradyarrhythmia
+:bradyarrhythmia rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "R00.1" ;
+                 OpenPVSignal:has_MedDRA_code 10049765 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Bradyarrhythmia" ;
+                 rdfs:label "bradyarrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionbradycardia
+:bradycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R001" ;
+             OpenPVSignal:has_MedDRA_code 10006093 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Bradycardia" ;
+             rdfs:label "bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionbupropion
+:bupropion rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A08AA62" ,
+                                     "N06AX12" ;
+           rdfs:label "bupropion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioncelecoxib
+:celecoxib rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G01AE10" ,
+                                     "L01XX33" ,
+                                     "M01AH01" ;
+           rdfs:label "celecoxib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioncitalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionclinical_trial_info
+:clinical_trial_info rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Clinical_trial_information ;
+                     OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                                           :bradyarrhythmia ;
+                     OpenPVSignal:refers_to_drug :fingolimod ;
+                     OpenPVSignal:has_content "Clinical trials identified symptomatic bradycardia in 0.5% of patients receiving fingolimod compared to none on placebo. The maximum decrease in heart rate usually occurred after six hours and usually improved after this. In some cases however a second period of heart rate decrease occurred within the first 24 hours and/or after the second dose. With continuous treatment the heart rate returned to baseline within a month. First degree AV block was reported in 0.1% of patients starting treatment with fingolimod whilst there were no cases for the placebo group and the same result was recorded for second degree AV block. The AV block was usually resolved within the first 24 hours." ;
+                     rdfs:label "clinical trial info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionclonazepam
+:clonazepam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AE01" ;
+            rdfs:label "clonazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioncommonADROfFingolimod
+:commonADROfFingolimod rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Warning_Information ;
+                       OpenPVSignal:refers_to_adverse_effect :backPain ,
+                                                             :cough ,
+                                                             :diarrhoea ,
+                                                             :headache ,
+                                                             :increasedLiverEnzymes ,
+                                                             :influenza ;
+                       OpenPVSignal:refers_to_drug :fingolimod ;
+                       mp:references :ref5 ,
+                                     :ref6 ;
+                       OpenPVSignal:has_content "Common adverse drug reactions are back pain, cough, diarrhoea, head ache, influenza and increased liver enzymes.5,6" ;
+                       rdfs:label "common ADR of fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioncough
+:cough rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R05" ;
+       OpenPVSignal:has_MedDRA_code 10011224 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Cough" ;
+       rdfs:label "cough" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiondesipramine
+:desipramine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AA01" ;
+             rdfs:label "desipramine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiondiarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R197" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiondonepezil
+:donepezil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06DA02" ,
+                                     "N06DA52" ,
+                                     "N06DA53" ;
+           rdfs:label "donepezil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiondoxepin
+:doxepin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "N06AA12" ;
+         rdfs:label "doxepin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionepinephrine
+:epinephrine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A01AD01" ,
+                                       "B02BC09" ,
+                                       "C01CA24" ,
+                                       "R01AA14" ,
+                                       "R03AA01" ,
+                                       "R03AK01" ,
+                                       "S01EA01" ,
+                                       "S01EA51" ;
+             rdfs:label "epinephrine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionfingolimod
+:fingolimod rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :AE_mechanism_for_fingolimod ,
+                                       :Mechanism_of_fingolimod ;
+            OpenPVSignal:has_ATC_code "L04AA27" ;
+            rdfs:label "fingolimod" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionfingolimod_usage
+:fingolimod_usage rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug_Usage ;
+                  OpenPVSignal:concerns_indication_for_use :multipleSclerosis ;
+                  OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                  OpenPVSignal:refers_to_dosage :Dose_of_fingolimod ;
+                  OpenPVSignal:refers_to_drug :fingolimod ;
+                  rdfs:label "fingolimod usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionfrequenceOfPatientsInClinicalTrialsReportingFirstDegreeAVBlock
+:frequenceOfPatientsInClinicalTrialsReportingFirstDegreeAVBlock rdf:type owl:NamedIndividual ,
+                                                                         OpenPVSignal:Statistical_Entity ;
+                                                                OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                                                                OpenPVSignal:refers_to_drug :fingolimod ;
+                                                                OpenPVSignal:has_value 0.001 ;
+                                                                rdfs:label "frequence of patients in clinical trials reporting first degree AV block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionfrequenceOfPatientsInClinicalTrialsReportingSymptomaticBradycardia
+:frequenceOfPatientsInClinicalTrialsReportingSymptomaticBradycardia rdf:type owl:NamedIndividual ,
+                                                                             OpenPVSignal:Statistical_Entity ;
+                                                                    OpenPVSignal:refers_to_adverse_effect :bradycardia ;
+                                                                    OpenPVSignal:refers_to_drug :fingolimod ;
+                                                                    OpenPVSignal:has_value 0.005 ;
+                                                                    rdfs:label "frequence of patients in clinical trials reporting symptomatic bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiongabapentin
+:gabapentin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX12" ;
+            rdfs:label "gabapentin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionheadache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R51" ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionheartFailure
+:heartFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I50" ;
+              OpenPVSignal:has_MedDRA_code 10007554 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+              rdfs:label "heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionhydroxychloroquine
+:hydroxychloroquine rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "P01BA02" ;
+                    rdfs:label "hydroxychloroquine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionhypocalcaemia
+:hypocalcaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_MedDRA_code 10020947 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hypocalcaemia" ;
+               rdfs:label "hypocalcaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionincreasedLiverEnzymes
+:increasedLiverEnzymes rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "R945" ;
+                       OpenPVSignal:has_MedDRA_code 10060795 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Hepatic enzyme increased" ;
+                       rdfs:label "increased liver enzymes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioninfluenza
+:influenza rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "J11.1" ;
+           OpenPVSignal:has_MedDRA_code 10022000 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Influenza" ;
+           rdfs:label "influenza" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversioninterferonbeta-1b
+:interferonbeta-1b rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug ;
+                   OpenPVSignal:has_ATC_code "L03AB08" ;
+                   rdfs:label "interferon beta-1b" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionintroduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :ref1 ,
+                            :ref10 ,
+                            :ref11 ,
+                            :ref2 ,
+                            :ref3 ,
+                            :ref4 ,
+                            :ref5 ,
+                            :ref6 ,
+                            :ref7 ,
+                            :ref8 ,
+                            :ref9 ;
+              OpenPVSignal:has_content """Fingolimod is an immunomodulating drug used as single treatment of relapsing multiple sclerosis. It was first approved in the US in 2010 and in the EU the following year. The active metabolite fingolimod phosphate binds to sphingosine 1- phosphate receptors and reduces the number of lymphocytes in the peripheral blood. Although the exact mechanism is not known it is believed that fingolimod prevents the lymphocytes from moving into the central nervous system.1,2 Fingolimod given orally in a daily dose of 0.5 mg has shown to reduce the relapse frequency compared to placebo and interferon beta-1a.3,4 Common adverse drug reactions are back pain, cough, diarrhoea, head ache, influenza and increased liver enzymes.5,6 Following the unexplained death of a patient within 24 hours of receiving the first dose of fingolimod at the end of 2011, US and European regulatory authorities recommended a baseline electrocardiogram (ECG) before start of treatment and a close cardiac monitoring of all patients in the first six hours after receiving the first dose (a first dose observation, FDO) and in some cases for longer.7,8
+
+The T wave in an ECG reflects the repolarization of the ventricles and is normally concordant with the QRS complex.  Opposite polarity (i.e. negative T waves in leads with positive QRS complexes) can indicate myocardial ischaemia.9 T wave inversion is also associated with
+hypertrophic cardiomyopathy, aortic regurgitation, pulmonary embolism, sepsis, hyperventilation syndrome, subarachnoid haemorrhage and severe hypocalcaemia. Patients with pericarditis can show flattened to invert T waves. Anterolateral T wave inversion can be physiological in children and adolescents as well as in well trained athletes (so called athlete’s heart).10
+Multiple sclerosis (MS), the condition being treated with fingolimod, has so far not been associated with an increased incidence of cardiac disease. One recently published cohort study has, however, identified an increased risk of myocardial infarction, stroke and heart failure in MS patients compared to a control group without MS. The study took into account co-morbidities such as diabetes, hypertension, chronic obstructive pulmonary disease (COPD), deep vein thrombosis and others but did not adjust for risk factors such as obesity and smoking.11""" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionlevothyroxine
+:levothyroxine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "H03AA01" ;
+               rdfs:label "levothyroxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionlorazepam
+:lorazepam rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05BA06" ,
+                                     "N05BA56" ;
+           rdfs:label "lorazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionmethylprednisolone
+:methylprednisolone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "D07AA01" ,
+                                              "D10AA02" ,
+                                              "H02AB04" ;
+                    rdfs:label "methylprednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionmodafenil
+:modafenil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06BA07" ;
+           rdfs:label "modafenil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionmultipleSclerosis
+:multipleSclerosis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "G35" ;
+                   OpenPVSignal:has_MedDRA_code 10028245 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Multiple sclerosis" ;
+                   rdfs:label "multiple sclerosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionmyocardialInfarction
+:myocardialInfarction rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I21.9" ;
+                      OpenPVSignal:has_MedDRA_code 10028596 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Myocardial infarction" ;
+                      rdfs:label "myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionnaproxen
+:naproxen rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "G02CC02" ,
+                                    "M01AE02" ,
+                                    "M01AE52" ,
+                                    "M01AE56" ,
+                                    "M02AA12" ;
+          rdfs:label "naproxen" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionondansetron
+:ondansetron rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A04AA01" ;
+             rdfs:label "ondansetron" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionone_day_intervals_between_administrations
+:one_day_intervals_between_administrations rdf:type owl:NamedIndividual ,
+                                                    time:DurationDescription ;
+                                           time:nominalPosition "days" ;
+                                           time:numericPosition 1 ;
+                                           rdfs:label "one day intervals between administrations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionoral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_drug :fingolimod ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionoxymorphone
+:oxymorphone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N02A" ;
+             rdfs:label "oxymorphone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionparoxetine
+:paroxetine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB05" ;
+            rdfs:label "paroxetine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionpericarditis
+:pericarditis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I30.9" ;
+              OpenPVSignal:has_MedDRA_code 10034484 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pericarditis" ;
+              rdfs:label "pericarditis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionphase_IV_trial
+:phase_IV_trial rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Clinical_trial_information ;
+                OpenPVSignal:refers_to_adverse_effect :tWaveInversion ;
+                OpenPVSignal:refers_to_drug :fingolimod ;
+                mp:references :ref12 ;
+                OpenPVSignal:has_content "In a randomized phase IV study of 783 patients where three quarters received fingolimod and one quarter standard disease modifying therapy for six months, one patient was found to have biphasic T waves.12" ;
+                rdfs:label "phase IV trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionpostMarketingExperience
+:postMarketingExperience rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001197 ;
+                         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                                               :avBlocksWithConjunctionalDelay ,
+                                                               :syncope ,
+                                                               :transientAsystole ,
+                                                               :unexplained_death ;
+                         OpenPVSignal:has_content "The post marketing experience reveals third degree AV blocks, AV blocks with conjunctional delay, transient asystole, syncope and unexplained death although confounders such  as concomitant medications or pre-existing disease makes this an uncertain relationship to fingolimod" ;
+                         rdfs:label "post marketing experience" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionpulmonary_embolism
+:pulmonary_embolism rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10037377 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Pulmonary embolism" ;
+                    rdfs:label "pulmonary embolism" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionpvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Discussion_and_Conclusion ,
+                                                   :Reports_in_VigiBase ,
+                                                   :T_wave_inversion ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025ValueOfFingolimodAndTWaveInversion ,
+                                                          :ICValueOfFingolimodAndTWaveInversion ,
+                                                          :frequenceOfPatientsInClinicalTrialsReportingFirstDegreeAVBlock ,
+                                                          :frequenceOfPatientsInClinicalTrialsReportingSymptomaticBradycardia ,
+                                                          :reportsFromCanada ,
+                                                          :reportsFromFinland ,
+                                                          :reportsFromGermany ,
+                                                          :reportsFromIreland ,
+                                                          :reportsFromUk ,
+                                                          :reportsFromUsa ,
+                                                          :reportsOfFingolimodAndTWaveInversion ,
+                                                          :reportsWithNoDechallenge ,
+                                                          :reportsWithRechallenge ,
+                                                          :reportsWithRecovery ,
+                                                          :reports_with_age_info ,
+                                                          :reports_with_dose_info ,
+                                                          :reports_with_time_to_onset_info ,
+                                                          :reports_with_uknown_outcome ,
+                                                          :reports_with_unknown_dechallenge ,
+                                                          :reports_with_unknown_rechallenge ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsThatrecovered/positiveDechallenge> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsWithNorecovery/negativeDechallenge> ;
+          OpenPVSignal:refers_to_adverse_effect :tWaveInversion ;
+          OpenPVSignal:refers_to_drug :fingolimod ;
+          OpenPVSignal:refers_to_primary_suspect_drug :fingolimod ;
+          mp:supportedByData :ECGRecommendation1 ,
+                             :Labelling ,
+                             :LiteratureInfo ,
+                             :MS_and_cardiac_disease ,
+                             :T_wave_inversion_associations_with_other_ADRs ,
+                             :clinical_trial_info ,
+                             :commonADROfFingolimod ,
+                             :phase_IV_trial ,
+                             :postMarketingExperience ;
+          OpenPVSignal:initially_identified_on "01/11/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref1
+:ref1 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "DrugDex on Fingolimod. URL: http://www.micro- medexsolutions.com Accessed: 19 Sept 2013." ;
+      rdfs:label "ref1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref10
+:ref10 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "The Merck Manual on T wave inversion URL: http:// www.merckmanuals.com/professional/search.html?st=T+wave&start=1&context=%2Fprofessional Accessed: 5 December 2012." ;
+       rdfs:label "ref10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref11
+:ref11 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Jadidi E, Mohammadi M, Moradi T. High risk of car- diovascular diseases after diagnosis of multiple sclerosis. Mult Scler. 2013 Sep; 19(10):1336-40." ;
+       rdfs:label "ref11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref12
+:ref12 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Consortium of Multiple Sclerosis Centres. Heart effects of fingolimod may resolve within six hours. Neurology Reviews 2013 21(9):26. URL: http://www.neurologyre- views.com/topics/multiple- sclerosis-ms/article/heart- effects-of-fingolimod- may-resolve-within-six-hours.html Accessed: 25 September 2013." ;
+       rdfs:label "ref12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref2
+:ref2 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Fingolimod therapy for multiple sclerosis. URL: http:// www.medscape.com/viewarticle/805134_5 Accessed: 25 September 2013." ;
+      rdfs:label "ref2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref3
+:ref3 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Kappos L, Radue EW, O’Connor P, Polman C, Hohlfield R, Calabresi P et al. A placebo-controlled trial of oral fingolimod in relapsing multiple sclerosis. N Engl J Med. 2010 Feb 4; 362(5):387-401." ;
+      rdfs:label "ref3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref4
+:ref4 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Cohen JA, Barkhof F, Comi G, Hartung HP, Khatri BO, Montalban X et al. Oral fingolimod or intramuscular interferon for relapsing multiple sclerosis. N Engl J Med. 2010 Feb 4; 362(5):402-15." ;
+      rdfs:label "ref4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref5
+:ref5 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "UK SPC on Fingolimod (Gilenya). URL: http://www. medicines.org.uk. Accessed: 19 September 2013." ;
+      rdfs:label "ref5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref6
+:ref6 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "US FDA Label for Fingolimod (Gilenya).URL: http:// www.accessdata.fda.gov Accessed: 19 September 2013." ;
+      rdfs:label "ref6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref7
+:ref7 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "US FDA Drug Safety Communication online on Fingolimod. URL://http://www.fda.gov/Drugs/ DrugSafety/ucm284240.htm Accessed: 5 December 2013." ;
+      rdfs:label "ref7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref8
+:ref8 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "EMA press release online on Fingolimod. URL: http:// www.ema.europa.eu/ema/index.jsp?curl=pages/ news_and_events/news/2012/01/news_detail_001425. jsp&mid=WC0b01ac058004d5c1 Accessed: 5 December 2013." ;
+      rdfs:label "ref8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionref9
+:ref9 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Tabers medical dictionary online on t wave inversion.URL: www.tabers.com. Accessed: 19 September 2013" ;
+      rdfs:label "ref9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromCanada
+:reportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                   OpenPVSignal:has_count 3 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "reports from canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromFinland
+:reportsFromFinland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Finland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from finland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromGermany
+:reportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                    OpenPVSignal:has_count 4 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromIreland
+:reportsFromIreland rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Ireland" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "reports from ireland" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromUk
+:reportsFromUk rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+               OpenPVSignal:has_count 1 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "reports from uk" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsFromUsa
+:reportsFromUsa rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                OpenPVSignal:has_count 17 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "reports from usa" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsOfFingolimodAndTWaveInversion
+:reportsOfFingolimodAndTWaveInversion rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:refers_to_adverse_effect :tWaveInversion ;
+                                      OpenPVSignal:refers_to_concomitant_drug :amantadine ,
+                                                                              :amlodipine ,
+                                                                              :bupropion ,
+                                                                              :celecoxib ,
+                                                                              :citalopram ,
+                                                                              :clonazepam ,
+                                                                              :desipramine ,
+                                                                              :donepezil ,
+                                                                              :doxepin ,
+                                                                              :epinephrine ,
+                                                                              :gabapentin ,
+                                                                              :hydroxychloroquine ,
+                                                                              :interferonbeta-1b ,
+                                                                              :levothyroxine ,
+                                                                              :lorazepam ,
+                                                                              :methylprednisolone ,
+                                                                              :modafenil ,
+                                                                              :naproxen ,
+                                                                              :ondansetron ,
+                                                                              :oxymorphone ,
+                                                                              :paroxetine ,
+                                                                              :salbutamol ,
+                                                                              :simvastatin ,
+                                                                              :tadalafil ,
+                                                                              :topiramate ,
+                                                                              :trazodone ,
+                                                                              :venlafaxine ,
+                                                                              <http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#atropinesulphate/dephenoxylateHCl> ;
+                                      OpenPVSignal:refers_to_primary_suspect_drug :fingolimod ;
+                                      OpenPVSignal:has_count 27 ;
+                                      OpenPVSignal:has_count_of_men 4 ;
+                                      OpenPVSignal:has_count_of_women 22 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "overall reports of fingolimod and t wave inversion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsWithNoDechallenge
+:reportsWithNoDechallenge rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                          OpenPVSignal:has_count 7 ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          OpenPVSignal:refers_to_dechallenge_process "false"^^xsd:boolean ;
+                          rdfs:label "reports with no dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsWithRechallenge
+:reportsWithRechallenge rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        OpenPVSignal:refers_to_rechallenge_outcome "negative rechallenge - condition not appeared" ;
+                        rdfs:label "reports with negative rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreportsWithRecovery
+:reportsWithRecovery rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :reportsWithNoDechallenge ;
+                     OpenPVSignal:has_count 3 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                     rdfs:label "reports with recovery without drug withdrawl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_age_info
+:reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                       OpenPVSignal:has_count 23 ;
+                       OpenPVSignal:has_max_age 76 ;
+                       OpenPVSignal:has_median_age 47 ;
+                       OpenPVSignal:has_min_age 20 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_dose_info
+:reports_with_dose_info rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                        OpenPVSignal:refers_to_dosage :Dose_of_fingolimod ;
+                        OpenPVSignal:has_count 25 ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "reports with dose info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_time_to_onset_info
+:reports_with_time_to_onset_info rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                                 OpenPVSignal:time_to_onset :time_to_onset ;
+                                 OpenPVSignal:has_count 20 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_uknown_outcome
+:reports_with_uknown_outcome rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :reportsWithNoDechallenge ;
+                             OpenPVSignal:has_count 4 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                             rdfs:label "reports with uknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_unknown_dechallenge
+:reports_with_unknown_dechallenge rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                                  OpenPVSignal:has_count 6 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                                  rdfs:label "reports with unknown dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionreports_with_unknown_rechallenge
+:reports_with_unknown_rechallenge rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+                                  rdfs:label "reports with unknown rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionsalbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC02" ,
+                                      "R03AK04" ,
+                                      "R03AL02" ,
+                                      "R03CC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionsepsis
+:sepsis rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_MedDRA_code 10040047 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Sepsis" ;
+        rdfs:label "sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionsimvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionstroke
+:stroke rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "I63.9" ;
+        OpenPVSignal:has_MedDRA_code 10042244 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Stroke" ;
+        rdfs:label "stroke" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionsummary
+:summary rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Summary ;
+         OpenPVSignal:has_content "Fingolimod is an immunomodulating drug used for treatment of multiple sclerosis. From February 2012 until December 2013, 27 Individual Case Safety Reports (ICSRs) of T wave inversion in association with fingolimod were submitted to the WHO Global Individual Case Safety Report Database, VigiBase®. The drug is known to cause bradyarrhythmias and AV block within the first few hours of the initial dose, but labelling or literature information does not mention the occurrence of inverted T waves. Although there were in some cases concomitant drugs that may affect the heart rate and a few patients had pre- disposing factors, the analysis of the case reports suggests there is cause for further investigation." ;
+         rdfs:label "summary" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionsyncope
+:syncope rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R55" ;
+         OpenPVSignal:has_MedDRA_code 10042772 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Syncope" ;
+         rdfs:label "syncope" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontWaveInversion
+:tWaveInversion rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R94.31" ;
+                OpenPVSignal:has_MedDRA_code 10014395 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Electrocardiogram T wave inversion" ;
+                rdfs:label "t wave inversion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontadalafil
+:tadalafil rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G04BE08" ;
+           rdfs:label "tadalafil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontime_to_onset
+:time_to_onset rdf:type owl:NamedIndividual ,
+                        time:DurationDescription ;
+               OpenPVSignal:refers_to_adverse_effect :T_wave_inversion ;
+               OpenPVSignal:refers_to_drug :fingolimod ;
+               OpenPVSignal:has_content "\"Time to onset was recorded in 20 of the cases, ranging from reaction occurring on the same day up to five months. In 13 cases the reaction occurred on or within two days of FDO, but in seven cases the reaction was seen at a later stage.\"" ;
+               rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontopiramate
+:topiramate rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N03AX11" ;
+            rdfs:label "topiramate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontransientAsystole
+:transientAsystole rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I46.9" ;
+                   OpenPVSignal:has_MedDRA_code 10003586 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Asystole" ;
+                   rdfs:label "transient asystole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversiontrazodone
+:trazodone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N06AX05" ;
+           rdfs:label "trazodone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionunexplained_death
+:unexplained_death rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_MedDRA_code 10052809 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Death unexplained" ;
+                   rdfs:label "unexplained death" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversionvenlafaxine
+:venlafaxine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX16" ;
+             rdfs:label "venlafaxine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#Hypertrophic_cardiomyopathy'
+<http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#Hypertrophic_cardiomyopathy'> rdf:type owl:NamedIndividual ,
+                                                                                                                OpenPVSignal:Adverse_Effect ;
+                                                                                                       OpenPVSignal:has_MedDRA_code 10020871 ;
+                                                                                                       OpenPVSignal:has_MedDRA_prefered_term "Hypertrophic cardiomyopathy" ;
+                                                                                                       rdfs:label "hypertrophic cardiomyopathy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#atropinesulphate/dephenoxylateHCl
+<http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#atropinesulphate/dephenoxylateHCl> rdf:type owl:NamedIndividual ,
+                                                                                                                     OpenPVSignal:Drug ;
+                                                                                                            OpenPVSignal:has_ATC_code "L03AB07 " ;
+                                                                                                            rdfs:label "atropine sulphate/dephenoxylate HCl" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsThatrecovered/positiveDechallenge
+<http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsThatrecovered/positiveDechallenge> rdf:type owl:NamedIndividual ,
+                                                                                                                            OpenPVSignal:Reports_group ;
+                                                                                                                   OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                                                                                                                   OpenPVSignal:has_count 5 ;
+                                                                                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                   OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                                                                                                   OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                                                                                                   rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsWithNorecovery/negativeDechallenge
+<http://purl.org/OpenPVSignal/Signals/2014_5_fingolimod_T_wave_inversion#reportsWithNorecovery/negativeDechallenge> rdf:type owl:NamedIndividual ,
+                                                                                                                             OpenPVSignal:Reports_group ;
+                                                                                                                    OpenPVSignal:is_subgroup_of :reportsOfFingolimodAndTWaveInversion ;
+                                                                                                                    OpenPVSignal:has_count 3 ;
+                                                                                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                    OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+                                                                                                                    OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                                                                                                    rdfs:label "reports with negative dechallenge" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

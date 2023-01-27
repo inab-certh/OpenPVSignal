@@ -1,0 +1,538 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                               rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/275697/"^^xsd:anyURI ;
+                                                                               rdfs:label "Metamizole - Documented hypersensitivity to administered product"^^rdfs:Literal ;
+                                                                               owl:versionInfo "draft-v0.95-20210226"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+<http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/referencedBy
+mp:referencedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Organization
+<http://www.w3.org/ns/prov#Organization> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#AcutePain
+:AcutePain rdf:type owl:NamedIndividual ,
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G89.1" ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10033371 ;
+           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Pain" ;
+           rdfs:label "Acute Pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Asystole
+:Asystole rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "I46" ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10003586 ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Asystole" ;
+          rdfs:label "Asystole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ChronicPain
+:ChronicPain rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Indication> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "G89.2" ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10049475 ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Chronic pain" ;
+             rdfs:label "Chronic Pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Dr_Alem_Zakarias
+:Dr_Alem_Zakarias rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Author> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_affiliation> "Upsalla Monitoring Centre" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_first_name> "Alem" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_last_name> "Zekarias" ;
+                  rdfs:label "Dr Alem Zekarias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Drug_withdrawal
+:Drug_withdrawal rdf:type owl:NamedIndividual ,
+                          <http://purl.obolibrary.org/obo/OAE_0001197> ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :agranulocytosis ,
+                                                                                          :anaphylaxis ,
+                                                                                          :bloodDyscrasias ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                 mp:references :Ref.3 ,
+                               :Ref.5 ,
+                               :Ref.6 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Countries such as Japan, the United States of America, the United Kingdom, Sweden, Australia and Iran have withdrawn the drug from the market due to the risk of agranulocytosis and anaphylaxis. In the US the drug was withdrawn in 1977. This decision was based on studies that showed a 0.79%-0.86% frequency rate of metamizole-induced agranulocytosis together with a 0.57% mortality rate. In Sweden metamizole was first withdrawn 1974, due to an estimated incidence of agranulocytosis of 1 in 3,000 patients. The drug was then re-approved in 1995 because a much lower incidence rate was seen in an International Agranulocytosis and Aplastic Anaemia Study. A couple years after the second approval, the drug was once again withdrawn due to spontaneous reporting of blood dyscrasias.3,5,6" ;
+                 rdfs:label "Drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Dyspnea
+:Dyspnea rdf:type owl:NamedIndividual ,
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "R06.00" ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013968 ;
+         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Dyspnoea" ;
+         rdfs:label "Dyspnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#FrequencyRateOfAgranulocytosisInSweden
+:FrequencyRateOfAgranulocytosisInSweden rdf:type owl:NamedIndividual ,
+                                                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Incidence> ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :agranulocytosis ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "1 in 3.000" ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 0.0003 ;
+                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Sweden" ;
+                                        rdfs:label "Incidence of agranulocytosis in Sweden" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#FrequencyRateOfAgranulocytosisInUS
+:FrequencyRateOfAgranulocytosisInUS rdf:type owl:NamedIndividual ,
+                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Prevalence> ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :agranulocytosis ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "This decision was based on studies that showed a 0.79%-0.86% frequency rate of metamizole-induced agranulocytosis together with a 0.57% mortality rate." ;
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/United_States" ;
+                                    rdfs:label "Frequency rate and mortality rate of agranulocytosis in US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#FrequencyRateOfAnaphylacticReaction
+:FrequencyRateOfAnaphylacticReaction rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Prevalence> ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :anaphylacticShock ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                     mp:referencedBy :Ref.3 ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "The risk for developing an anaphylactic reaction has been estimated to be 1 in 5,000 treated patients given the drug parenterally" ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 0.0002 ;
+                                     rdfs:label "Frequency rate of anaphylactic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Hypersensitivity
+:Hypersensitivity rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T78.40" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10013700 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Drug hypersensitivity" ;
+                  rdfs:label "Hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Intravenous_administration_of_metamizole
+:Intravenous_administration_of_metamizole rdf:type owl:NamedIndividual ,
+                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Intake_Form> ;
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "injected (intraveneous)" ;
+                                          rdfs:label "Intravenous administration of metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#LowWhiteCellCount
+:LowWhiteCellCount rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "D72.819" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10047942 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> """	
+White blood cell count decreased""" ;
+                   rdfs:label "Low white cell count" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Mechanism_of_Metamizole
+:Mechanism_of_Metamizole rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Mechanism> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_part_of> :introduction ;
+                         mp:references :Ref.1 ,
+                                       :Ref.2 ,
+                                       :Ref.3 ,
+                                       :Ref.4 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Metamizole contains the active substance dipyrone. The drug is a non-opioid agent with antiinflammatory, analgesics, spasmolytic and antipyretic properties indicated to treat both acute and chronic pain in human and in veterinary medicine.1,2 Metamizole is available in different formulations, both as a prescription and as an over-the-counter medicine, in several countries." ;
+                         rdfs:label "Mechanism of Metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Metamizole
+:Metamizole rdf:type owl:NamedIndividual ,
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug> ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#concerns_indication_for_use> :AcutePain ,
+                                                                                        :ChronicPain ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_mechanism> :Mechanism_of_Metamizole ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Stevens-JohnsonSyndrome ,
+                                                                                     :anaphylacticShock ;
+            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code> "N02BB02" ,
+                                                                         "N02BB52" ,
+                                                                         "N02BB72" ;
+            rdfs:label "Metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Oral_administration_of_metamizole
+:Oral_administration_of_metamizole rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Drug_Intake_Form> ;
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_form_of_intake> "oral" ;
+                                   rdfs:label "Oral administration of metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#OverallReportsInVigibaseForMetamizoleAndHypersensitivity
+:OverallReportsInVigibaseForMetamizoleAndHypersensitivity rdf:type owl:NamedIndividual ,
+                                                                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypersensitivity ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 19 ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_men> 4 ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count_of_women> 15 ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_max_age> 93 ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_min_age> 24 ;
+                                                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                                                          rdfs:label "Overall reports in Vigibase for Metamizole and hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Jasiecka A., Maslanka T., Jaroszewski, J.J. Pharmacological characteristics of metamizole. Polish Journal of Veterinary Sciences Vol. 17, No. 1 (2014), 207–214. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Arslan S., Ucar R., Caliskaner Zafer A. IgEMediated Reaction to Metamizole: Evaluation of a Patient with Severe Anaphylaxis. The Eurasian Journal of Medicine Vol 48, No 2 (2016). " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Machado-Alba J-E., Urbano-Garzon S-F., Gallo-Gomez Y-N., Zuluaica S., Henao Y., Parrado-Fajardo I-Y. Severe anaphylaxis reaction from dipyrone without history of hypersensitivity. Case report. Colombian Journal of Anesthesiolog. 2017;45(s1):8-11. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "https://www.sciencedirect.com/topics/pharmac ology-toxicology-and-pharmaceuticalscience/metamizole. Accessed: March 2018. " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "No authors listed. Risk of agranulocytosis and aplastic anemia. A first report of their relation to drug use with special reference to analgesics. The International Agranulocytosis and Apl0astic Anemia Study. JAMA. 1986;256(13): 1749-1757. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Nikolova I., Petkova V., Tencheva J., Benbasat N., Voinikov J., Danchev N. Metamizole: A Review Profile of a Well-Known “Forgotten” Drug. Part II: Clinical Profile, Biotechnology and Biotechnological Equipment, 272, 3605-3619. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Bibliographic_reference> ;
+       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Switzerland Medicines Agency: Summary of Product Characteristics for metamizole. Available from: http://www.swissmedicinfo.ch/default.aspx Accessed: February 2018. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 7 ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Germany" ;
+                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 12 ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_country> "http://dbpedia.org/resource/Spain" ;
+                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_database> "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithAgranulocytosis
+:ReportsWithAgranulocytosis rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :LowWhiteCellCount ,
+                                                                                                     :agranulocytosis ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 3 ;
+                            rdfs:label "Reports with agranulocytosis/ low white cell count" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithAnaphylacticShock
+:ReportsWithAnaphylacticShock rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :anaphylacticShock ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 5 ;
+                              rdfs:label "Reports with anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithAsystole
+:ReportsWithAsystole rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :ReportsWithAnaphylacticShock ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Asystole ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 2 ;
+                     rdfs:label "Reports with asystole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithDyspnoia
+:ReportsWithDyspnoia rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Dyspnea ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 2 ;
+                     rdfs:label "Reports with dyspnea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithHypersensitivity
+:ReportsWithHypersensitivity rdf:type owl:NamedIndividual ,
+                                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypersensitivity ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 19 ;
+                             rdfs:label "Reports with hypersensitivity" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithMildSkinReactions
+:ReportsWithMildSkinReactions rdf:type owl:NamedIndividual ,
+                                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :SkinReactions ;
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 7 ;
+                              rdfs:label "Reports with mild skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithParenteralAdministration
+:ReportsWithParenteralAdministration rdf:type owl:NamedIndividual ,
+                                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_drug_intake> :Intravenous_administration_of_metamizole ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 5 ;
+                                     rdfs:label "Reports with intravenous administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithPerOsAdministration
+:ReportsWithPerOsAdministration rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_related_with_drug_intake> :Oral_administration_of_metamizole ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 13 ;
+                                rdfs:label "Reports with per os administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithPositiveOutcome
+:ReportsWithPositiveOutcome rdf:type owl:NamedIndividual ,
+                                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_count> 17 ;
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "recovery with no further information" ;
+                            rdfs:label "Reports with positive outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#ReportsWithUnknownOutcome
+:ReportsWithUnknownOutcome rdf:type owl:NamedIndividual ,
+                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Reports_group> ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_subgroup_of> :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_value> 2 ;
+                           <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_outcome_after_action> "unknown" ;
+                           rdfs:label "Reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> ;
+                     mp:references :Ref.3 ,
+                                   :Ref.7 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "In VigiBase, the WHO database for international drug monitoring, there are 19 individual case safety reports submitted from Spain (12 cases) and Germany (7) describing problems related to hypersensitivity together with metamizole as of February 2018 . All patients, 15 females and 4 males, were between 24 and 93 years of age, with one of unknown age, who received metamizole despite having a documented hypersensitivity to the drug . Most of the patients (13) received the drug orally while five of them had an intravenous administration. In one case the route of administration is unknown.  Five patients suffered anaphylactic shock, two of them with asystole, seven suffered mild skin reactions, two had dyspnea. In three cases agranulocytosis/low white cell count was reported, and a similar reaction was noted in these patients’ medical history. In two patients the reaction is not described in detail. Seventeen patients recovered, and in two cases the outcome was not reported ." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#SkinReactions
+:SkinReactions rdf:type owl:NamedIndividual ,
+                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T78.40XA" ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10040914 ;
+               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Skin reaction" ;
+               rdfs:label "Skin reactions" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#SmPC_for_metamizole
+:SmPC_for_metamizole rdf:type owl:NamedIndividual ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Structured_Product_Labels_information> ,
+                              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :anaphylaxis ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                     mp:references :Ref.3 ,
+                                   :Ref.7 ;
+                     <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> "Anaphylactic reactions with metamizole are described in detail in the Summary of Product Characteristics.3,7" ;
+                     rdfs:label "SmPC for metamizole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Stevens-JohnsonSyndrome
+:Stevens-JohnsonSyndrome rdf:type owl:NamedIndividual ,
+                                  <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "L51.1" ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10042033 ;
+                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Stevens-Johnson syndrome" ;
+                         rdfs:label "Stevens-Johnson syndrome " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Upsalla_Monitoring_Centre
+:Upsalla_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/ns/prov#Organization> ;
+                           rdfs:label "Upsalla Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#agranulocytosis
+:agranulocytosis rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "D70.9" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10001507 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Agranulocytosis" ;
+                 rdfs:label "agranulocytosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#anaphylacticShock
+:anaphylacticShock rdf:type owl:NamedIndividual ,
+                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T88.6" ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10002199 ;
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Anaphylactic shock" ;
+                   rdfs:label "anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#anaphylaxis
+:anaphylaxis rdf:type owl:NamedIndividual ,
+                      <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "T88.6" ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10002218 ;
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> """	
+Anaphylaxis""" ;
+             rdfs:label "anaphylaxis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#bloodDyscrasias
+:bloodDyscrasias rdf:type owl:NamedIndividual ,
+                          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Adverse_Effect> ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code> "D75.9" ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code> 10005495 ;
+                 <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term> "Blood dyscrasia" ;
+                 rdfs:label "blood dyscrasias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Introduction> ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ;
+              <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """Metamizole contains the active substance dipyrone. The drug is a non-opioid agent with antiinflammatory, analgesics, spasmolytic and antipyretic properties indicated to treat both acute and chronic pain in human and in veterinary medicine .1,2 Metamizole is available in different formulations, both as a prescription and as an over-the-counter medicine, in several countries .3,4 Countries such as Japan, the United States of America, the United Kingdom, Sweden, Australia and Iran have withdrawn the drug from the market due to the risk of agranulocytosis and anaphylaxis.  In the US the drug was withdrawn in 1977. This decision was based on studies that showed a 0.79%-0.86% frequency rate of metamizole induced agranulocytosis together with a 0.57% mortality rate.  In Sweden metamizole was first withdrawn 1974, due to an estimated incidence of agranulocytosis of 1 in 3,000 patients. The drug was then re-approved in 1995 because a much lower incidence rate was seen in an International Agranulocytosis and Aplastic Anaemia Study. A couple years after the second approval, the drug was once again withdrawn due to spontaneous reporting of blood dyscrasias.3,5,6  It is known that metamizole can cause severe adverse reactions such as Stevens-Johnson syndrome and anaphylactic shock, with fatal consequences. The risk for developing an
+anaphylactic reaction has been estimated to be 1 in
+5,000 treated patients given the drug parenterally.3""" ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Signal> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element> :Reports_in_Vigibase ,
+                                                                                      :introduction ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :FrequencyRateOfAgranulocytosisInSweden ,
+                                                                                             :FrequencyRateOfAgranulocytosisInUS ,
+                                                                                             :FrequencyRateOfAnaphylacticReaction ,
+                                                                                             :OverallReportsInVigibaseForMetamizoleAndHypersensitivity ,
+                                                                                             :ReportsFromGermany ,
+                                                                                             :ReportsFromSpain ,
+                                                                                             :ReportsWithAgranulocytosis ,
+                                                                                             :ReportsWithAnaphylacticShock ,
+                                                                                             :ReportsWithAsystole ,
+                                                                                             :ReportsWithDyspnoia ,
+                                                                                             :ReportsWithHypersensitivity ,
+                                                                                             :ReportsWithMildSkinReactions ,
+                                                                                             :ReportsWithParenteralAdministration ,
+                                                                                             :ReportsWithPerOsAdministration ,
+                                                                                             :ReportsWithPositiveOutcome ,
+                                                                                             :ReportsWithUnknownOutcome ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Hypersensitivity ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+          mp:supportedByData :Drug_withdrawal ,
+                             :SmPC_for_metamizole ,
+                             <http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#metamizole_and_SJS/anaphylactic_shock> ;
+          <http://purl.org/OpenPVSignal/OpenPVSignal.owl#initially_identified_on> "01/10/2018" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Metamizole_–_Documented_hypersensitivity_to_administered_product
+<http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#Metamizole_–_Documented_hypersensitivity_to_administered_product> rdf:type owl:NamedIndividual ,
+                                                                                                                                                        <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Pharmacovigilance_Signal_Report> ;
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_author> :Dr_Alem_Zakarias ;
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_signal> :pvSignal ;
+                                                                                                                                               mp:publishedBy :Upsalla_Monitoring_Centre ;
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_creation_date> "01/10/2018"^^xsd:date ;
+                                                                                                                                               <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_overall_conclusion> "causal association" ;
+                                                                                                                                               rdfs:label "Metamizole – Documented hypersensitivity to administered product" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#metamizole_and_SJS/anaphylactic_shock
+<http://purl.org/OpenPVSignal/Signals/2018_5_metamizole_hypersensitivity.owl#metamizole_and_SJS/anaphylactic_shock> rdf:type owl:NamedIndividual ,
+                                                                                                                             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Warning_Information> ;
+                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#is_supported_by_statistical_entity> :FrequencyRateOfAnaphylacticReaction ;
+                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_adverse_effect> :Stevens-JohnsonSyndrome ,
+                                                                                                                                                                                             :anaphylacticShock ;
+                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_drug> :Metamizole ;
+                                                                                                                    mp:references :Ref.3 ;
+                                                                                                                    <http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_content> """\"It is known that metamizole can cause severe
+adverse reactions such as Stevens-Johnson
+syndrome and anaphylactic shock, with fatal
+consequences. The risk for developing an
+anaphylactic reaction has been estimated to be 1 in
+5,000 treated patients given the drug parenterally.3\"""" ;
+                                                                                                                    rdfs:label "metamizole and SJS/anaphylactic shock" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

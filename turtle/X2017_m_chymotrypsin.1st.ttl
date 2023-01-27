@@ -1,0 +1,1169 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix opv: <http://inab.certh.gr/OpenPVSignal> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@prefix openpvsignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@base <http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl> .
+
+<http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl> rdf:type owl:Ontology ;
+                                                                                   owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                                   rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255489/"^^xsd:anyURI ;
+                                                                                   rdfs:label "Chymotrypsin and anaphylactic shock, a continuing safety issue"^^rdfs:Literal ;
+                                                                                   owl:versionInfo "draft-v0.95-20211008"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/supportedByData
+mp:supportedByData rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/mp/citation
+mp:citation rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Anaphylactic_shock_pathophysiology
+:Anaphylactic_shock_pathophysiology rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Free_text_reporting_element ;
+                                    OpenPVSignal:refers_to_adverse_effect :anaphylacticShock ;
+                                    OpenPVSignal:has_content "Anaphylactic shock is a severe and potentially fatal form of anaphylaxis, an allergic reaction. It can occur within seconds or minutes, up to hours, of exposure to the allergen. Signs and symptoms of anaphylaxis typically include more than one of the following: angioedema, urticaria, dyspnoea, wheezing, and hypoxemia, nausea, vomiting, abdominal pain, diarrhoea, light-headedness, dizziness, syncope, tachycardia, and in the most severe cases where the blood pressure is considerably affected, shock." ;
+                                    rdfs:label "Anaphylactic shock pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ChymotrypsinAndAnaphylacticShock
+:ChymotrypsinAndAnaphylacticShock rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Warning_Information ;
+                                  OpenPVSignal:refers_to_adverse_effect :anaphylacticShock ;
+                                  OpenPVSignal:refers_to_drug :chymotrypsin ;
+                                  mp:citation "Websites presenting product information for chymotrypsin usually contain warnings and information on serious and severe allergic side effects; in most web sources anaphylactic shock is specifically mentioned. " ;
+                                  rdfs:label "Chymotrypsin and anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ChymotrypsinUsage
+:ChymotrypsinUsage rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug_Usage ;
+                   OpenPVSignal:concerns_indication_for_use :abscesses ,
+                                                            :acutePharyngitis ,
+                                                            :acutesalpingo-oophoritis ,
+                                                            :adhesiveOtitis ,
+                                                            :allergenicity ,
+                                                            :anaphylacticShock ,
+                                                            :anthraxes ,
+                                                            :arthritis ,
+                                                            :cataractSurgery ,
+                                                            :cheloidScars ,
+                                                            :chronicBronchitis ,
+                                                            :eschars ,
+                                                            :exocrine_pancreatic_insufficiency ,
+                                                            :fallopianTubeObstruction ,
+                                                            :fibrinousInflammatoryProcesses ,
+                                                            :furuncles ,
+                                                            :haematomas ,
+                                                            :haemorrhoids ,
+                                                            :inflammation ,
+                                                            :laryngitis ,
+                                                            :oedemas ,
+                                                            :pelvicInfections ,
+                                                            :periarthritis ,
+                                                            :pharyngitis ,
+                                                            :post-operativeanti-InflammatoryTreatmentForOedema ,
+                                                            :post-partumMammaryEngorgement ,
+                                                            :prophylacticChemotherapy ,
+                                                            :sinusitis ,
+                                                            :superficialInjuryOfHead ,
+                                                            :superficialInjuryOfTrunk ,
+                                                            :suppurativePneumonias ,
+                                                            :syringitis ,
+                                                            :traumaticIridocyclitis ,
+                                                            :tubalSterility ,
+                                                            :ulcers ,
+                                                            <http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#dupuytren’sContracture> ;
+                   OpenPVSignal:refers_to_drug :chymotrypsin ;
+                   rdfs:label "Chymotrypsin usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Chymotrypsin_and_anaphylactic_shock
+:Chymotrypsin_and_anaphylactic_shock rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                     OpenPVSignal:refers_to_author :Dr_Birgitta_Grundmark ,
+                                                                   :Prof_Ambrose_O_Isah ;
+                                     OpenPVSignal:refers_to_signal :pvSignal ;
+                                     mp:publishedBy :Uppsala_Monitoring_Centre ;
+                                     OpenPVSignal:has_creation_date "01/03/2017"^^xsd:date ;
+                                     OpenPVSignal:has_overall_conclusion "causal association most probable" ;
+                                     rdfs:label "Chymotrypsin and anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#CommerciallyAvailableChymotrypsinMedication
+:CommerciallyAvailableChymotrypsinMedication rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Free_text_reporting_element ;
+                                             OpenPVSignal:has_content "Examples of its indications when in use in Europe, according to accessed approval documentation for products Kymo-Trypure, Chymar, Chymarex and Biozyme" ;
+                                             rdfs:label "Commercially available chymotrypsin medication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content "While chymotrypsin as a single ingredient medicinal product has been replaced with other drugs with more positive risk-benefit profiles on the European and US markets, the substance appears still to be extensively used elsewhere, and thus not only in the countries from where the latest case reports in the detected case series originate, one example being Nigeria. Considering the ever-present underreporting and the apparent widespread use, including in some resource-limited settings with less well-established ADR reporting systems, it is likely that unreported cases of anaphylactic shock are occurring in such countries in addition to the ones which have already reported cases into VigiBase®. Hence, potentially fatal anaphylactic shocks in relation to chymotrypsin use may be appearing where the facilities for successful treatment of it may be lacking, making it particularly dangerous. We believe that in light of this reaction, continuing use of chymotrypsin is of concern in resourcelimited settings and should be re-evaluated in countries where it is still available, taking into consideration the respective national pharmacotherapeutic and clinical access situation and tradition. " ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Dr_Birgitta_Grundmark
+:Dr_Birgitta_Grundmark rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Author ;
+                       OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                       OpenPVSignal:has_first_name "Birgitta" ;
+                       OpenPVSignal:has_last_name "Grundmark" ;
+                       rdfs:label "Dr Birgitta Grundmark" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#MechanismOfChymotrypsin
+:MechanismOfChymotrypsin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         OpenPVSignal:has_content "Chymotrypsin is a digestive proteolytic pancreatic enzyme, present as one of several components of animal pancreas extracts indicated for the treatment of exocrine pancreatic insufficiency" ;
+                         rdfs:label "Mechanism of chymotrypsin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock
+:OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock rdf:type owl:NamedIndividual ,
+                                                                      OpenPVSignal:Reports_group ;
+                                                             OpenPVSignal:is_subgroup_of :Overall_reports_in_vigibase_with_chymotrypsin ;
+                                                             OpenPVSignal:refers_to_adverse_effect :anaphylacticShock ;
+                                                             OpenPVSignal:refers_to_drug :chymotrypsin ;
+                                                             OpenPVSignal:has_count 25 ;
+                                                             OpenPVSignal:has_count_of_men 6 ;
+                                                             OpenPVSignal:has_count_of_women 19 ;
+                                                             OpenPVSignal:has_max_age 71 ;
+                                                             OpenPVSignal:has_median_age "36.0"^^xsd:float ;
+                                                             OpenPVSignal:has_min_age 1 ;
+                                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                             rdfs:label "Overall reports in vigibase for chemotrypsin and anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Overall_reports_in_vigibase_with_chymotrypsin
+:Overall_reports_in_vigibase_with_chymotrypsin rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:refers_to_drug :chymotrypsin ;
+                                               OpenPVSignal:has_count 317 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               rdfs:label "Overall reports in vigibase with chymotrypsin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Prof_Ambrose_O_Isah
+:Prof_Ambrose_O_Isah rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Author ;
+                     OpenPVSignal:has_affiliation "Uppsala Monitoring Centre" ;
+                     OpenPVSignal:has_first_name "Ambrose" ;
+                     OpenPVSignal:has_last_name "Isah" ;
+                     rdfs:label "Prof Ambrose O Isah" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Product description, Alpha chymotrypsin. Available from: http://www.amoun.com/leapportfolio-project/alpha-chymotrypsin. Accessed: 23 September 2016. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Effect of Acupuncture on Incomplete Fallopian Tube Obstructive Infertility: Study protocol for trial. Available from: https://clinicaltrials.gov/ct2/show/ NCT02320006. Accessed: 27 September 2016. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Evaluation of Allergenicity of Hypoallergenic Peanut Product in Peanut Allergic Subjects (peanut). Available from: https://clinicaltrials.gov/ct2/show/ NCT01489514. Accessed: 27 September 2016." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Viswanatha Swamy AH, Patil PA. Effect of Some Clinically Used Proteolytic Enzymes on Inflammation in Rats. Indian J Pharm Sci. 2008 Jan-Feb;70(1):114-7." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ottaggio G, Sirito G, Mantegazza F. The cure of pelvic inflammations with the use of proteolytic enzymes. Treatment of adnexitis with proteolytic enzymes. Minerva Ginecol. 1971 Sep 30;23(18):736-40. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Fuchs K, Paldi E, Abramovici H, Peretz BA, Brandes JM. Treatment of occluded tubes by hydrotubation. Report of 94 cases of hydrotubation. Int J Fertil. 1971 JanMar;16(1):15-8. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Zadorozhna TD, Ivaniuta LI. Effect of chymotrypsin on the course of inflammation process under experimental conditions. Pediatr Akus Ginekol. 1970 Jan-Feb;1:50-2. " ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ottaviani A, Cis C. The use of alphachymotrypsin in recent and long-standing salpingitis. Arch Ital Otol Rinol Laringol. 1963 Jan-Feb;74:172-8. " ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrmThailand
+:ReportsFrmThailand rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Thailand" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Thailand" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom1974
+:ReportsFrom1974 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "1974"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 1974" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom1983
+:ReportsFrom1983 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "1983"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 1983" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom1991
+:ReportsFrom1991 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "1991"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 1991" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom1995
+:ReportsFrom1995 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "1995"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 1995" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom1998
+:ReportsFrom1998 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "1998"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 1998" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2004
+:ReportsFrom2004 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 1 ;
+                 OpenPVSignal:has_creation_date "2004"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2004" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2010
+:ReportsFrom2010 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 2 ;
+                 OpenPVSignal:has_creation_date "2010"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2010" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2012
+:ReportsFrom2012 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 3 ;
+                 OpenPVSignal:has_creation_date "2012"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2012" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2013
+:ReportsFrom2013 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 2 ;
+                 OpenPVSignal:has_creation_date "2013"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2013" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2014
+:ReportsFrom2014 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 5 ;
+                 OpenPVSignal:has_creation_date "2014"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2014" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2015
+:ReportsFrom2015 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 4 ;
+                 OpenPVSignal:has_creation_date "2015"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2015" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFrom2016
+:ReportsFrom2016 rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 3 ;
+                 OpenPVSignal:has_creation_date "2016"^^xsd:date ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from 2016" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFromChina
+:ReportsFromChina rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                  OpenPVSignal:has_count 9 ;
+                  OpenPVSignal:refers_to_country "https://dbpedia.org/resource/China" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from China" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsFromVietnam
+:ReportsFromVietnam rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                    OpenPVSignal:has_count 7 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Vietnam" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Vietnam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsInEgypt
+:ReportsInEgypt rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                OpenPVSignal:has_count 3 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Egypt" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from Egypt" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsInFrance
+:ReportsInFrance rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Reports_group ;
+                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                 OpenPVSignal:has_count 3 ;
+                 OpenPVSignal:refers_to_country "http://dbpedia.org/resource/France" ;
+                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                 rdfs:label "Reports from France" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsInGermany
+:ReportsInGermany rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsInRomania
+:ReportsInRomania rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Romania" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Romania" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsInVigiBase
+:ReportsInVigiBase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """In the 25 reports, the median age of the patients is 36 years with a range of 1-71 years. Most of the reports, 76%, concern women. Indication for treatment in the 10 cases where this is stated are: acute salpingo-oophoritis (1 case), haemorrhoids (1), post-operative anti- inflammatory treatment for oedema (2), inflammation n o s (1), superficial injury of head (1), superficial injury of trunk (1), acute pharyngitis (1), and prophylactic chemotherapy (2, where the chemotherapy appears to refer to co-prescribed antibiotics). An antibiotic is co-prescribed in many of the cases. The dosage form, where this is noted, is intramuscular injection (9 cases), intravenous injection (2), subcutaneous injection (1), topical (1) and oral administration (1). In a majority of the reports (20 cases) chymotrypsin is the only suspected drug. There appears to be a fatal outcome in one of the cases although a narrative for this, the very first one, reported from the Federal Republic of Germany in 1974, is lacking. In a few cases a co-suspect drug, usually an antibiotic, was administered, but since anaphylactic shock is indeed an acknowledged risk of chymotrypsin the causality is not discussed further for the reported cases. 
+""" ;
+                   rdfs:label "Reports in VigiBase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsOfAcutePharyngitis
+:ReportsOfAcutePharyngitis rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:concerns_indication_for_use :acutePharyngitis ;
+                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                           OpenPVSignal:has_count 1 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports with acute pharyngitis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsOfProphylacticChemotherapy
+:ReportsOfProphylacticChemotherapy rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:concerns_indication_for_use :prophylacticChemotherapy ;
+                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                   OpenPVSignal:has_count 2 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "Reports with prophylactic chemotherapy as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithAcutesalpingo-oophoritisAsIndication
+:ReportsWithAcutesalpingo-oophoritisAsIndication rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:concerns_indication_for_use :acutesalpingo-oophoritis ;
+                                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                                 OpenPVSignal:has_count 1 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "Reports with acute salpingo-oophoritis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithChymotrypsinBeingTheOnlySuspectDrug
+:ReportsWithChymotrypsinBeingTheOnlySuspectDrug rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                                OpenPVSignal:refers_to_primary_suspect_drug :chymotrypsin ;
+                                                OpenPVSignal:has_count 20 ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "Reports with chymotrypsin being the only suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithHaemorrhoids
+:ReportsWithHaemorrhoids rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:concerns_indication_for_use :haemorrhoids ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with haemorrhoids as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithInflammationNOS
+:ReportsWithInflammationNOS rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:concerns_indication_for_use :inflammation ;
+                            OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                            OpenPVSignal:has_count 1 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "Reports with inflammation NOS as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithIntramuscularAdministration
+:ReportsWithIntramuscularAdministration rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                        OpenPVSignal:has_count 9 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        OpenPVSignal:refers_to_form_of_intake "injected (intramuscular)" ;
+                                        rdfs:label "Reports with intramuscular administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithIntravenousInjection
+:ReportsWithIntravenousInjection rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                 OpenPVSignal:has_count 2 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 OpenPVSignal:refers_to_form_of_intake "injected (intraveneous)" ;
+                                 rdfs:label "Reports with intravenous injection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithOralAdministration
+:ReportsWithOralAdministration rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                               OpenPVSignal:has_count 1 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               OpenPVSignal:refers_to_form_of_intake "oral" ;
+                               rdfs:label "Reports with oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithSubcutaneousInjection
+:ReportsWithSubcutaneousInjection rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_form_of_intake "subcutaneous" ;
+                                  rdfs:label "Reports with subcutaneous injection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithSuperficialInjuryOfTrunk
+:ReportsWithSuperficialInjuryOfTrunk rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:concerns_indication_for_use :superficialInjuryOfTrunk ;
+                                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                     OpenPVSignal:has_count 1 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Reports with superficial injury of trunk as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithSuperficialInjuryToTheHead
+:ReportsWithSuperficialInjuryToTheHead rdf:type owl:NamedIndividual ,
+                                                OpenPVSignal:Reports_group ;
+                                       OpenPVSignal:concerns_indication_for_use :superficialInjuryOfHead ;
+                                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                       OpenPVSignal:has_count 1 ;
+                                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                       rdfs:label "Reports with superficial injury of head as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithTopicalAdministration
+:ReportsWithTopicalAdministration rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_form_of_intake "topical (skin)" ;
+                                  rdfs:label "Reports with topical administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ReportsWithpost-operativeanti-InflammatoryTreatmentForOedema
+:ReportsWithpost-operativeanti-InflammatoryTreatmentForOedema rdf:type owl:NamedIndividual ,
+                                                                       OpenPVSignal:Reports_group ;
+                                                              OpenPVSignal:concerns_indication_for_use :post-operativeanti-InflammatoryTreatmentForOedema ;
+                                                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ;
+                                                              OpenPVSignal:has_count 2 ;
+                                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                              rdfs:label "Reports with post-operative anti-inflammatory treatment for oedema as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "During a UMC signal detection screening in September 2015, focused on reporting patterns in Latin America, Africa and Asia for both newly marketed drugs and drugs which had been on the market for longer periods of time, the safety issue concerning anaphylactic shock in relation to single agent chymotrypsin was noted. While this serious adverse reaction from chymotrypsin is by no means a newly discovered one, a recent increase in reporting indicates a continuing safety issue worth addressing. It remains an issue in the parts of the world where the product is still on the market. " ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#TheVigibasePerspective
+:TheVigibasePerspective rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Free_text_reporting_element ;
+                        OpenPVSignal:has_content "VigiBase®, the WHO international database of suspected adverse drug reactions, contains 25 cases of anaphylactic shock in relation to single-ingredient chymotrypsin treatment, which have been reported between 1974 and 2016 (Figure 1). 76% (19) of the cases have been submitted since 2010, almost exclusively from a few member states in Asia and Africa as they have entered the WHO Programme for International Drug Monitoring and subsequently started actively submitting their cases to VigiBase®. The 25 reports originate from China (9 cases), Thailand (1), Vietnam (7), Egypt (3), France (3), Romania (1) and Germany (1). A further 11 cases reported were for multi-enzyme extracts used to treat exocrine pancreatic insufficiency but these are not discussed further here. To put these figures into context, as of 1 September 2016, the total number of ICSRs submitted for chymotrypsin for any ADR in VigiBase® is 317. 71% of these have been submitted since 2010, almost exclusively from Asia and Africa. " ;
+                        rdfs:label "The Vigibase perspective" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#abdominalPain
+:abdominalPain rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R10.9" ;
+               OpenPVSignal:has_MedDRA_code 10000081 ;
+               OpenPVSignal:has_MedDRA_prefered_term "abdominal pain" ;
+               rdfs:label "abdominal pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#abscesses
+:abscesses rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L02" ;
+           OpenPVSignal:has_MedDRA_code 10042343 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Subcutaneous abscess" ;
+           rdfs:label "abscesses" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#acutePharyngitis
+:acutePharyngitis rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "J02.9" ;
+                  OpenPVSignal:has_MedDRA_code 10001002 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Acute pharyngitis" ;
+                  rdfs:label "acute pharyngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#acutesalpingo-oophoritis
+:acutesalpingo-oophoritis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Indication ;
+                          OpenPVSignal:has_ICD_code "N70.93" ;
+                          OpenPVSignal:has_MedDRA_code 10049677 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Salpingo-oophoritis" ;
+                          rdfs:label "acute salpingo-oophoritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#adhesiveOtitis
+:adhesiveOtitis rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Indication ;
+                OpenPVSignal:has_ICD_code "H74.1" ;
+                OpenPVSignal:has_MedDRA_code 10033071 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Otitis" ;
+                rdfs:label "adhesive otitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#allergenicity
+:allergenicity rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "T78.40XA" ;
+               OpenPVSignal:has_MedDRA_code 10001718 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Allergic reaction" ;
+               rdfs:label "Allergic reaction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#anaphylacticShock
+:anaphylacticShock rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "T78.2" ;
+                   OpenPVSignal:has_MedDRA_code 10002199 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "anaphylactic shock" ;
+                   rdfs:label "anaphylactic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#angioedema
+:angioedema rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "T78.3XXA" ;
+            OpenPVSignal:has_MedDRA_code 10002424 ;
+            OpenPVSignal:has_MedDRA_prefered_term "angioedema" ;
+            rdfs:label "angioedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#anthraxes
+:anthraxes rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "A22.9" ;
+           OpenPVSignal:has_MedDRA_code 10002713 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Anthrax" ;
+           rdfs:label "anthraxes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#arthritis
+:arthritis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "M13" ;
+           OpenPVSignal:has_MedDRA_code 10003246 ;
+           OpenPVSignal:has_MedDRA_prefered_term "arthritis" ;
+           rdfs:label "arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#cataractSurgery
+:cataractSurgery rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Indication ;
+                 OpenPVSignal:has_ICD_code "Z98.49" ;
+                 OpenPVSignal:has_MedDRA_code 10063797 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Cataract operation" ;
+                 rdfs:label "cataract surgery" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#cheloidScars
+:cheloidScars rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "L91.0" ;
+              OpenPVSignal:has_MedDRA_code 10023330 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Keloid scar" ;
+              rdfs:label "cheloid scars" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#chronicBronchitis
+:chronicBronchitis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "J42" ;
+                   OpenPVSignal:has_MedDRA_code 10006458 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Bronchitis chronic" ;
+                   rdfs:label "chronic bronchitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#chymotrypsin
+:chymotrypsin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :MechanismOfChymotrypsin ;
+              OpenPVSignal:has_ATC_code "B06AA04" ;
+              rdfs:label "chymotrypsin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#diarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R19.7" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#dizziness
+:dizziness rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R42" ;
+           OpenPVSignal:has_MedDRA_code 10013573 ;
+           OpenPVSignal:has_MedDRA_prefered_term "dizziness" ;
+           rdfs:label "dizziness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#dyspnoea
+:dyspnoea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R06.00" ;
+          OpenPVSignal:has_MedDRA_code 10013968 ;
+          OpenPVSignal:has_MedDRA_prefered_term "dyspnoea" ;
+          rdfs:label "dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#eschars
+:eschars rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Indication ;
+         OpenPVSignal:has_ICD_code "R23.4" ;
+         OpenPVSignal:has_MedDRA_code 10051814 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Eschar" ;
+         rdfs:label "eschars" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#exocrine_pancreatic_insufficiency
+:exocrine_pancreatic_insufficiency rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Indication ;
+                                   OpenPVSignal:has_MedDRA_code 10073392 ;
+                                   OpenPVSignal:has_MedDRA_prefered_term "Pancreatic exocrine insufficiency" ;
+                                   rdfs:label "exocrine pancreatic insufficiency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#fallopianTubeObstruction
+:fallopianTubeObstruction rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Indication ;
+                          OpenPVSignal:has_ICD_code "N97.1" ;
+                          OpenPVSignal:has_MedDRA_code 10065789 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "fallopian tube obstruction" ;
+                          rdfs:label "fallopian tube obstruction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#fibrinousInflammatoryProcesses
+:fibrinousInflammatoryProcesses rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Indication ;
+                                OpenPVSignal:has_ICD_code "G72.49" ;
+                                OpenPVSignal:has_MedDRA_code 10051011 ;
+                                OpenPVSignal:has_MedDRA_prefered_term "Fibrinous bronchitis" ;
+                                rdfs:label "fibrinous inflammatory processes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#furuncles
+:furuncles rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "L02.92" ;
+           OpenPVSignal:has_MedDRA_code 10017553 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Furuncle" ;
+           rdfs:label "furuncles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#haematomas
+:haematomas rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_MedDRA_code 10018852 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Haematoma" ;
+            rdfs:label "haematomas" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#haemorrhoids
+:haemorrhoids rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_ICD_code "K64.9" ;
+              OpenPVSignal:has_MedDRA_code 10019022 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Haemorrhoids" ;
+              rdfs:label "haemorrhoids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#hypoxemia
+:hypoxemia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R09.02" ;
+           OpenPVSignal:has_MedDRA_code 10021143 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Hypoxia" ;
+           rdfs:label "hypoxemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#inflammation
+:inflammation rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ;
+              OpenPVSignal:has_MedDRA_code 10061218 ;
+              OpenPVSignal:has_MedDRA_prefered_term "inflammation" ;
+              rdfs:label "inflammation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#introduction
+:introduction rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Introduction ;
+              mp:references :Ref.1 ,
+                            :Ref.2 ,
+                            :Ref.3 ,
+                            :Ref.4 ,
+                            :Ref.5 ,
+                            :Ref.6 ,
+                            :Ref.7 ,
+                            :Ref.8 ;
+              OpenPVSignal:has_content "Chymotrypsin is a digestive proteolytic pancreatic enzyme, present as one of several components of animal pancreas extracts indicated for the treatment of exocrine pancreatic insufficiency. Apart from this essential usage, chymotrypsin as a single ingredient medicinal product has been and is still used in parts of the world for various indications outside the gastrointestinal tract. In Europe and the USA, products containing solely chymotrypsin appear generally to have been withdrawn during the 1970-80s, according to the Swedish Medical Products Agency (MPA). Reasons for withdrawal are not always clear, but include commercial ones and the replacement of chymotrypsin with other, more modern products. Examples of its indications when in use in Europe, according to accessed approval documentation for products Kymo-Trypure, Chymar, Chymarex and Biozyme, provided by the MPA, were: to reduce trauma during cataract surgery, as an anti-inflammatory agent in relation to surgery or traumatic injuries, and as topical treatment of complicated wounds. In parts of Africa and Asia, chymotrypsin is still available for topical and per-oral use as well as an injectable drug. Since regulatory approval differs internationally, and online labelling data is not readily available, a comprehensive assessment of the current use of chymotrypsin is difficult to make. However, information suggests that indications for use in countries where it is still on the market vary immensely, and include the following: as an anti-inflammatory agent, often in combination with antibiotics, for the resorption of inflammatory, postoperative and post-traumatic haematomas and oedemas, to dissolve in situ fibrinous inflammatory processes, in pelvic infections and inflammatory conditions including subsequent tubal sterility, in post-partum mammary engorgement, to dissolve airway secretions in chronic bronchitis and suppurative pneumonias, sinusitis, laryngitis and pharyngitis, in adhesive otitis, and syringitis, for arthritis, periarthritis, and Dupuytren’s contracture, anthraxes, furuncles, abscesses, ulcers, eschars, and cheloid scars.1 Some Chinese sources mention its use in ophthalmic surgery, to reduce traumatic iridocyclitis, for local inflammation, secretion and oedema. Intravenous injection is discouraged due to the risk of serious side effects, and instead intramuscular injection is advised. There appears to be some activity regarding clinical trials with chymotrypsin. Public databases list a Chinese study in an adult population on fallopian tube obstruction where chymotrypsin is noted as part of the standard background treatment.2 There is also a mention of a study on alimentary allergens in food products being treated with chymotrypsin to reduce allergenicity.3 The use of chymotrypsin as an anti-inflammatory agent has some scientific basis, including recent pre-clinical studies of its anti-inflammatory activity.4 The use as a proteolytic enzyme to alleviate the symptoms of infections and effects of tubal occlusion also has some support in older sources.5,6,7,8 Anaphylactic shock is a severe and potentially fatal form of anaphylaxis, an allergic reaction. It can occur within seconds or minutes, up to hours, of exposure to the allergen. Signs and symptoms of anaphylaxis typically include more than one of the following: angioedema, urticaria, dyspnoea, wheezing, and hypoxemia, nausea, vomiting, abdominal pain, diarrhoea, light-headedness, dizziness, syncope, tachycardia, and in the most severe cases where the blood pressure is considerably affected, shock. Websites presenting product information for chymotrypsin usually contain warnings and information on serious and severe allergic side effects; in most web sources anaphylactic shock is specifically mentioned." ;
+              rdfs:label "introduction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#laryngitis
+:laryngitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "J04.0, J37.0" ;
+            OpenPVSignal:has_MedDRA_code 10023874 ;
+            OpenPVSignal:has_MedDRA_prefered_term "laryngitis" ;
+            rdfs:label "laryngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#light-headedness
+:light-headedness rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R43" ;
+                  OpenPVSignal:has_MedDRA_code 10024461 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Light headedness" ;
+                  rdfs:label "light-headedness" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11.0" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#oedemas
+:oedemas rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Indication ;
+         OpenPVSignal:has_ICD_code "R60.9" ;
+         OpenPVSignal:has_MedDRA_code 10030095 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Oedema" ;
+         rdfs:label "oedemas" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#pelvicInfections
+:pelvicInfections rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ;
+                  OpenPVSignal:has_ICD_code "N73.9" ;
+                  OpenPVSignal:has_MedDRA_code 10058674 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Pelvic infection" ;
+                  rdfs:label "pelvic infections" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#periarthritis
+:periarthritis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_ICD_code "M77.20" ;
+               OpenPVSignal:has_MedDRA_code 10034464 ;
+               OpenPVSignal:has_MedDRA_prefered_term "periarthritis" ;
+               rdfs:label "periarthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#pharyngitis
+:pharyngitis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Indication ;
+             OpenPVSignal:has_ICD_code "J02.9" ;
+             OpenPVSignal:has_MedDRA_code 10034835 ;
+             OpenPVSignal:has_MedDRA_prefered_term "pharyngitis" ;
+             rdfs:label "pharyngitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#post-operativeanti-InflammatoryTreatmentForOedema
+:post-operativeanti-InflammatoryTreatmentForOedema rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Indication ;
+                                                   OpenPVSignal:has_ICD_code "R60.0" ;
+                                                   rdfs:label "post-operative anti-inflammatory treatment for oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#post-partumMammaryEngorgement
+:post-partumMammaryEngorgement rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Indication ;
+                               OpenPVSignal:has_ICD_code "O92.79" ;
+                               OpenPVSignal:has_MedDRA_code 10026733 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Mammary hypertrophy" ;
+                               rdfs:label "post-partum mammary engorgement" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#prophylacticChemotherapy
+:prophylacticChemotherapy rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Indication ;
+                          OpenPVSignal:has_ICD_code "Z29.8" ;
+                          OpenPVSignal:has_MedDRA_code 10036895 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Prophylactic chemotherapy" ;
+                          rdfs:label "prophylactic chemotherapy " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Anaphylactic_shock_pathophysiology ,
+                                                   :CommerciallyAvailableChymotrypsinMedication ,
+                                                   :ConclusionContent ,
+                                                   :ReportsInVigiBase ,
+                                                   :SummaryContent ,
+                                                   :TheVigibasePerspective ,
+                                                   :introduction ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseForChemotrypsinAndAnaphylacticShock ,
+                                                          :Overall_reports_in_vigibase_with_chymotrypsin ,
+                                                          :ReportsFrmThailand ,
+                                                          :ReportsFrom1974 ,
+                                                          :ReportsFrom1983 ,
+                                                          :ReportsFrom1991 ,
+                                                          :ReportsFrom1995 ,
+                                                          :ReportsFrom1998 ,
+                                                          :ReportsFrom2004 ,
+                                                          :ReportsFrom2010 ,
+                                                          :ReportsFrom2012 ,
+                                                          :ReportsFrom2013 ,
+                                                          :ReportsFrom2014 ,
+                                                          :ReportsFrom2015 ,
+                                                          :ReportsFrom2016 ,
+                                                          :ReportsFromChina ,
+                                                          :ReportsFromVietnam ,
+                                                          :ReportsInEgypt ,
+                                                          :ReportsInFrance ,
+                                                          :ReportsInGermany ,
+                                                          :ReportsInRomania ,
+                                                          :ReportsOfAcutePharyngitis ,
+                                                          :ReportsOfProphylacticChemotherapy ,
+                                                          :ReportsWithAcutesalpingo-oophoritisAsIndication ,
+                                                          :ReportsWithChymotrypsinBeingTheOnlySuspectDrug ,
+                                                          :ReportsWithHaemorrhoids ,
+                                                          :ReportsWithInflammationNOS ,
+                                                          :ReportsWithIntramuscularAdministration ,
+                                                          :ReportsWithIntravenousInjection ,
+                                                          :ReportsWithOralAdministration ,
+                                                          :ReportsWithSubcutaneousInjection ,
+                                                          :ReportsWithSuperficialInjuryOfTrunk ,
+                                                          :ReportsWithSuperficialInjuryToTheHead ,
+                                                          :ReportsWithTopicalAdministration ,
+                                                          :ReportsWithpost-operativeanti-InflammatoryTreatmentForOedema ,
+                                                          :totalNumberOfICSRsSubmittedForChemotrypsinIn2016 ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalPain ,
+                                                :anaphylacticShock ,
+                                                :angioedema ,
+                                                :diarrhoea ,
+                                                :dizziness ,
+                                                :dyspnoea ,
+                                                :hypoxemia ,
+                                                :light-headedness ,
+                                                :nausea ,
+                                                :shock ,
+                                                :syncope ,
+                                                :tachycardia ,
+                                                :urticaria ,
+                                                :vomiting ,
+                                                :wheezing ;
+          OpenPVSignal:refers_to_drug :chymotrypsin ;
+          OpenPVSignal:refers_to_primary_suspect_drug :chymotrypsin ;
+          mp:supportedByData :ChymotrypsinAndAnaphylacticShock ,
+                             :websites_product_info ;
+          OpenPVSignal:initially_identified_on "01/03/2017" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#shock
+:shock rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R57.9" ;
+       OpenPVSignal:has_MedDRA_code 10040560 ;
+       OpenPVSignal:has_MedDRA_prefered_term "shock" ;
+       rdfs:label "shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#sinusitis
+:sinusitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Indication ;
+           OpenPVSignal:has_ICD_code "J01.90, J32.9" ;
+           OpenPVSignal:has_MedDRA_code 10040753 ;
+           OpenPVSignal:has_MedDRA_prefered_term "sinusitis" ;
+           rdfs:label "sinusitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#superficialInjuryOfHead
+:superficialInjuryOfHead rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Indication ;
+                         OpenPVSignal:has_ICD_code "S00 " ;
+                         OpenPVSignal:has_MedDRA_code 10019196 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Head injury" ;
+                         rdfs:label "superficial injury of head" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#superficialInjuryOfTrunk
+:superficialInjuryOfTrunk rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Indication ;
+                          OpenPVSignal:has_ICD_code "T09" ;
+                          OpenPVSignal:has_MedDRA_code 10078730 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Trunk injury" ;
+                          rdfs:label "superficial injury of trunk" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#suppurativePneumonias
+:suppurativePneumonias rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Indication ;
+                       OpenPVSignal:has_ICD_code "J18.9" ;
+                       OpenPVSignal:has_MedDRA_code 10060946 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Pneumonia bacterial" ;
+                       rdfs:label "suppurative pneumonias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#syncope
+:syncope rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R55" ;
+         OpenPVSignal:has_MedDRA_code 10042772 ;
+         OpenPVSignal:has_MedDRA_prefered_term "syncope" ;
+         rdfs:label "syncope" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#syringitis
+:syringitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_MedDRA_code 10082170 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Syringitis" ;
+            rdfs:label "syringitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#tachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R00.0" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#totalNumberOfICSRsSubmittedForChemotrypsinIn2016
+:totalNumberOfICSRsSubmittedForChemotrypsinIn2016 rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Statistical_Entity ;
+                                                  OpenPVSignal:refers_to_drug :chymotrypsin ;
+                                                  OpenPVSignal:has_content "317% of these have been submitted since 2010, almost exclusively from Asia and Africa.  " ;
+                                                  OpenPVSignal:has_creation_date "2016"^^xsd:date ;
+                                                  rdfs:label "total number of ICSRs submitted for chemotrypsin in 2016" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#traumaticIridocyclitis
+:traumaticIridocyclitis rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Indication ;
+                        OpenPVSignal:has_ICD_code "H20.00" ;
+                        OpenPVSignal:has_MedDRA_code 10022941 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Iridocyclitis" ;
+                        rdfs:label "traumatic iridocyclitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#tubalSterility
+:tubalSterility rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Indication ;
+                OpenPVSignal:has_ICD_code "N97.1" ;
+                OpenPVSignal:has_MedDRA_code 10042012 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Sterility" ;
+                rdfs:label "tubal sterility" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#ulcers
+:ulcers rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "L97" ;
+        OpenPVSignal:has_MedDRA_code 10045285 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Ulcer" ;
+        rdfs:label "ulcers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#urticaria
+:urticaria rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "L50.9" ;
+           OpenPVSignal:has_MedDRA_code 10046735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "urticaria" ;
+           rdfs:label "urticaria" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#websites_product_info
+:websites_product_info rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001197 ;
+                       OpenPVSignal:refers_to_adverse_effect :allergenicity ,
+                                                             :anaphylacticShock ;
+                       OpenPVSignal:refers_to_drug :chymotrypsin ;
+                       OpenPVSignal:has_content "Websites presenting product information for chymotrypsin usually contain warnings and information on serious and severe allergic side effects; in most web sources anaphylactic shock is specifically mentioned." ;
+                       rdfs:label "websites product info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#wheezing
+:wheezing rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R06.2" ;
+          OpenPVSignal:has_MedDRA_code 10047924 ;
+          OpenPVSignal:has_MedDRA_prefered_term "wheezing" ;
+          rdfs:label "wheezing" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#dupuytren’sContracture
+<http://purl.org/OpenPVSignal/Signals/2017_1_chymotrypsin_anaphylactic_shock.owl#dupuytren’sContracture> rdf:type owl:NamedIndividual ,
+                                                                                                                  OpenPVSignal:Indication ;
+                                                                                                         OpenPVSignal:has_ICD_code "M72.0" ;
+                                                                                                         OpenPVSignal:has_MedDRA_code 10013872 ;
+                                                                                                         OpenPVSignal:has_MedDRA_prefered_term "Dupuytren's contracture" ;
+                                                                                                         rdfs:label "dupuytren’s contracture" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

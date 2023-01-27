@@ -1,0 +1,1526 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation> .
+
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                           mp: ;
+                                                                               rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255495/"^^xsd:anyURI ;
+                                                                               rdfs:label "Vemurafenib and Atrial fibrillation: Signal strengthening"^^xsd:Literal ;
+                                                                               owl:versionInfo "draft-v0.95-20211025"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationAtrial_fibrillation
+:Atrial_fibrillation rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ;
+                     OpenPVSignal:has_content "Atrial fibrillation is caused by a variety of clinical conditions. These can be divided into structural heart disease such as myocardial infarction, cardiomyopathy, cardiac valve disorders, hypertensive heart disease; right atrial stretch caused by pulmonary disorders; high adrenergic states such as thyrotoxicosis, major surgery and alcohol withdrawal; anomalous conduction pathways and sinus node dysfunction; acute alcohol intoxication and drugs such as antiarrhythmics, other cardiovascular medicines, medicines that alter sympathetic or vagal drive, cardiotoxic cytostatic medicines, diuretics causing hypokalaemia and others with unidentified mechanisms. Because of the underlying clinical conditions that may cause atrial fibrillation its prevalence increases with age. Atrial fibrillation is the commonest supraventricular tachycardia and predisposes patients to systemic embolism and therefore stroke.2,3 Assessment of a causal relationship between a drug and atrial fibrillation is complicated by the need to consider all the possible alternative or contributory causes of atrial fibrillation for a particular patient, its frequently paroxysmal nature and the need for prompt treatment to avoid systemic embolism without sufficient time to assess the outcome when the suspected drug is withdrawn, especially if it has, like vemurafenib, a long elimination half-life.1" ;
+                     rdfs:label "Atrial fibrillation pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationBRAF_V600E_positive
+:BRAF_V600E_positive rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_MedDRA_code 10075676 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "BRAF V600E mutation positive" ;
+                     rdfs:label "BRAF V600E positive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCardiovascular_side_effects_of_TKIs
+:Cardiovascular_side_effects_of_TKIs rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Literature_information ;
+                                     mp:references :Ref.6 ;
+                                     OpenPVSignal:has_content ". In a review of cardiac adverse effects of tyrosine kinase inhibitors (TKIs) the authors state that the type of cardiovascular side effect differs between TKIs based on which cellular signalling pathways they inhibit.6 They divided the agents into two clinical groups: (i) the VSP (VEGF signalling pathway) inhibitors and (ii)the non-VSP inhibitor agents (which include vemurafenib). They went on to state that VSP inhibitors are typically associated with hypertension, cardiomyopathy and arterial ischemia. Non-VSP inhibitors are more commonly associated with QT prolongation, arrhythmia, fluid retention and rarely cardiomyopathy. However, only vemurafenib was linked with atrial fibrillation in a table of reported cardiac adverse effects associated with TK inhibitors. The incidence was reported as 5% but without a reference or discussion." ;
+                                     rdfs:label "Cardiovascular side effects of TKIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport1
+:CaseInformationForReport1 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "In case 1, after developing atrial fibrillation, the patient was treated with antithrombotic but not anti-arrhythmic agents so that the treatment is not an explanation for recovery." ;
+                           rdfs:label "Case information for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport2
+:CaseInformationForReport2 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "“Ambulatory treatment” given, the atrial fibrillation did not recur. Indication for enoxaparin was “prophylaxis”" ;
+                           rdfs:label "Case information for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport3
+:CaseInformationForReport3 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "Case 3 suggests a dose-response relationship." ,
+                                                    "Treated with metoprolol" ;
+                           rdfs:label "Case information for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport4
+:CaseInformationForReport4 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "Carvedilol is a substrate and inhibitor of the efflux transporter P-glycoprotein and there is in vitro evidence that vemurafenib has the same characteristics.1 It is possible, in case 4, that carvedilol increased the bioavailability of vemurafenib and this is supported by the observation that the patient also developed fever with no evidence of infection, a documented adverse reaction to vemurafenib." ,
+                                                    "Possible interaction with carvedilol via P glycoprotein. Vemurafenib restarted after 15 days.** Treated with metoprolol and warfarin. ECG 7 days after vemurafenib re-started showed sinus rhythm" ;
+                           rdfs:label "Case information for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport5
+:CaseInformationForReport5 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "Cardioversion Vemurafenib half-life of 59 hours may explain persistence for 4 days. Amiodarone inhibition of vemurafenib CYP3A4 metabolism possible." ,
+                                                    "Case 5 is of interest as the patient had pre-existing atrial fibrillation treated with amiodarone. Both vemurafenib and amiodarone are substrates for CYP3A4. Amiodarone is an inhibitor and there is evidence that vemurafenib is an inducer.1 Theoretically therefore, atrial fibrillation may have recurred because amiodarone clearance was increased thus reducing its therapeutic effect and vemurafenib clearance reduced thus increasing its postulated pro-arrhythmic effect." ;
+                           rdfs:label "Case information for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport6
+:CaseInformationForReport6 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "Treated with rivaroxaban, metoprolol. ECHO- LVEF 55%, moderate tricuspid and mild aortic insufficiency" ;
+                           rdfs:label "Case information for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationCaseInformationForReport7
+:CaseInformationForReport7 rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Case_Report_Information ;
+                           OpenPVSignal:has_content "Treated with amiodarone" ;
+                           rdfs:label "Case information for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationClinical_trials_info
+:Clinical_trials_info rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Clinical_trial_information ;
+                      OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+                      OpenPVSignal:refers_to_drug :vemurafenib ;
+                      mp:references :Ref.1 ,
+                                    :Ref.5 ;
+                      OpenPVSignal:has_content "The FDA label indicates that atrial fibrillation was an adverse event observed in < 10% of patients in phase II and III clinical trials.1 A veterans affairs summary of vemurafenib randomised clinical trials indicates that nine patients developed atrial fibrillation.5" ;
+                      rdfs:label "Clinical trials info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         mp:references :Ref.1 ,
+                                       :Ref.3 ;
+                         OpenPVSignal:has_content "In a 2004 review of drug-induced atrial fibrillation the authors found that the evidence for causality for the wide range of suspect medicines came from published case reports rather than clinical studies.3 The clinical management of patients with serious disease requiring medicines that are reported to be pro-arrhythmic is particularly difficult if atrial fibrillation develops. It is important that the best evidence is available to aid decisions about drug discontinuation. For this reason, given scant data in the literature regarding vemurafenib and atrial fibrillation, the VigiBase® reports were assessed. Table 1 shows the seven reports providing the best evidence of causality. Of note is the possibility of a dose response in case 3. Although not strong evidence because metoprolol was commenced, the observation is supported by the onset of atrial fibrillation after carvedilol, a Pglycoprotein inhibitor, was added to vemurafenib in case 4. It is interesting to note that four of the reports in Table 1 are in the group of six with a time to onset of 12 to 19 days. Also, in case 4, although the time to onset of atrial fibrillation was two months after vemurafenib was started, it was 18 days after carvedilol was added. One other report with time to onset 13 days did not contain any other possible explanations for the development of atrial fibrillation but it is not included in Table 1 as there was no dechallenge information. These reports with a short time to onset and evidence of causality suggest the possibility that atrial fibrillation is more likely to be due to vemurafenib if it occurs within the first month after vemurafenib is commenced or exposure to it is increased. The patient aged 39 years was an outlier and the remainder of the 17 patients with age recorded were 62 to 87 years. There is an increasing prevalence of atrial fibrillation with age. The question is whether older age and the comorbidities many of the patients experienced were the sole cause of the atrial fibrillation or whether vemurafenib contributed. The FDA product information states that phase III study data showed that elderly patients (≥ 65 years old) may be more likely to experience adverse events, including cardiac disorders.1 It is interesting to note that vemurafenib, if causal, appeared to overcome the anti-arrhythmic effect of beta-adrenergic-blocking agents in some patients. However, in most of these reports the evidence for causality was weak or absent. Of greater importance is the co-prescription of amiodarone or carvedilol because of the possible pharmacokinetic interactions increasing exposure to vemurafenib. Furthermore both vemurafenib and amiodarone can prolong the QT interval and product information recommends against prescribing QT prolonging medicines with vemurafenib.1 As a substrate for CYP3A4 and Pglycoprotein vemurafenib is particularly vulnerable to drug interactions. Even in the reports with best evidence of causality shown in Table 1 the majority of patients were treated for atrial fibrillation on stopping verapamil and this is a limitation when assessing causality. However, the consistent time to onset within three weeks in most of the reports that contained the best evidence of causality in other respects, the evidence of a dose response and the evidence for interactions with biological plausibility all support there being a signal for vemurafenib and atrial fibrillation. However, it is not a strong signal and further investigation would be useful. The advice to undertake cardiovascular monitoring before and after treatment with vemurafenib3 is important to detect both prolonged QT interval and atrial fibrillation. The VigiBase® reports with best evidence of causality suggest that the greatest risk is within a month of starting vemurafenib and, possibly, after a dose increase or after prescription of a potentially interacting medicine. " ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage1
+:Dosage1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "1920 mg " ;
+         rdfs:label "Dosage 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage2
+:Dosage2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 960 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "960 mg " ;
+         rdfs:label "Dosage 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage3
+:Dosage3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dose_value "1920 mg " ;
+         OpenPVSignal:refers_to_partial_dechallenge_process "true"^^xsd:boolean ;
+         rdfs:label "Dosage 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage4
+:Dosage4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "1920 mg " ;
+         rdfs:label "Dosage 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage5
+:Dosage5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 1920 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "1920 mg " ;
+         rdfs:label "Dosage 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage6
+:Dosage6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 960 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "960 mg " ;
+         rdfs:label "Dosage 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDosage7
+:Dosage7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Dosage ;
+         OpenPVSignal:refers_to_drug :vemurafenib ;
+         OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+         OpenPVSignal:has_value 1440 ;
+         OpenPVSignal:refers_to_dechallenge_process "true"^^xsd:boolean ;
+         OpenPVSignal:refers_to_dose_value "1440 mg " ;
+         rdfs:label "Dosage 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationDr_Ruth_Savage
+:Dr_Ruth_Savage rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Author ;
+                OpenPVSignal:has_first_name "Ruth" ;
+                OpenPVSignal:has_last_name "Savage" ;
+                rdfs:label "Dr Ruth Savage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationFDA_product_sheet
+:FDA_product_sheet rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Structured_Product_Labels_information ;
+                   OpenPVSignal:refers_to_drug :vemurafenib ;
+                   mp:references :Ref.1 ;
+                   OpenPVSignal:has_content """The FDA product 
+information states that phase III study data 
+showed that elderly patients (≥ 65 years old) may 
+be more likely to experience adverse events, 
+including cardiac disorders.1""" ;
+                   rdfs:label "FDA product info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationInfoOnReportWithSickSinusSyndrome
+:InfoOnReportWithSickSinusSyndrome rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Case_Report_Information ;
+                                   OpenPVSignal:has_content "This was a report of sick sinus syndrome with progressive regression of signs after vemurafenib was stopped. Sick sinus syndrome can lead to atrial fibrillation. " ;
+                                   rdfs:label "Info on report with sick sinus syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationIntroduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :Ref.1 ,
+                                    :Ref.2 ,
+                                    :Ref.3 ;
+                      OpenPVSignal:has_content "Vemurafenib is a tyrosine kinase inhibitor. It inhibits some mutated forms of BRAF serine-threonine kinase, including BRAF V600E. It is indicated in the treatment of patients with unresectable or metastatic melanoma with BRAF V600E mutation as detected by an FDA approved test. The recommended dose is 960 mg twice daily and patients should be treated with vemurafenib until disease progression or unacceptable toxicity occurs.1 Atrial fibrillation is caused by a variety of clinical conditions. These can be divided into structural heart disease such as myocardial infarction, cardiomyopathy, cardiac valve disorders, hypertensive heart disease; right atrial stretch caused by pulmonary disorders; high adrenergic states such as thyrotoxicosis, major surgery and alcohol withdrawal; anomalous conduction pathways and sinus node dysfunction; acute alcohol intoxication and drugs such as anti-arrhythmics, other cardiovascular medicines, medicines that alter sympathetic or vagal drive, cardiotoxic cytostatic medicines, diuretics causing hypokalaemia and others with unidentified mechanisms. Because of the underlying clinical conditions that may cause atrial fibrillation its prevalence increases with age. Atrial fibrillation is the commonest supraventricular tachycardia and predisposes patients to systemic embolism and therefore stroke.2,3 Assessment of a causal relationship between a drug and atrial fibrillation is complicated by the need to consider all the possible alternative or contributory causes of atrial fibrillation for a particular patient, its frequently paroxysmal nature and the need for prompt treatment to avoid systemic embolism without sufficient time to assess the outcome when the suspected drug is withdrawn, especially if it has, like vemurafenib, a long elimination half-life. 1 There is a small amount of information about vemurafenib and atrial fibrillation in the literature but comparative rates with placebo or published case reports have not been identified. The case reports in the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase®, were therefore examined for evidence of causality and the characteristics of the patients affected." ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.5 ,
+                                      :Ref.6 ;
+                        OpenPVSignal:has_content """The FDA label indicates that atrial fibrillation was an adverse event observed in < 10% of patients in phase II and III clinical trials.1 A veterans affairs summary of vemurafenib randomised clinical trials indicates that nine patients developed atrial fibrillation.5 Neither source discusses causality or observed rates with vemurafenib compared with placebo. There is no mention of atrial fibrillation in 
+the EMA Summary of Product Characteristics. In a review of cardiac adverse effects of tyrosine kinase inhibitors (TKIs) the authors state that the type of cardiovascular side effect differs between TKIs based on which cellular signalling pathways they inhibit.6 They divided the agents into two clinical groups: 
+(i) the VSP (VEGF signalling pathway) inhibitors and 
+(ii) the non-VSP inhibitor agents (which include vemurafenib).
+They went on to state that VSP inhibitors are typically associated with hypertension, cardiomyopathy and arterial ischemia. Non-VSP inhibitors are more commonly associated with QT prolongation, arrhythmia, fluid retention and rarely cardiomyopathy. However, only vemurafenib was linked with atrial fibrillation in a table of reported cardiac adverse effects associated with TK inhibitors. The incidence was reported as 5% but without a reference or discussion.""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationMechanism_of_vemurafenib
+:Mechanism_of_vemurafenib rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          mp:references :Ref.1 ;
+                          OpenPVSignal:has_content "Vemurafenib is a tyrosine kinase inhibitor. It inhibits some mutated forms of BRAF serinethreonine kinase, including BRAF V600E." ;
+                          rdfs:label "Mechanism of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationOverallReportsInVigibaseClearedWithVigirank
+:OverallReportsInVigibaseClearedWithVigirank rdf:type owl:NamedIndividual ,
+                                                      OpenPVSignal:Reports_group ;
+                                             OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+                                             OpenPVSignal:refers_to_drug :vemurafenib ;
+                                             OpenPVSignal:has_count 29 ;
+                                             OpenPVSignal:has_count_of_men 14 ;
+                                             OpenPVSignal:has_count_of_women 15 ;
+                                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                             rdfs:label "Overall reports in vigibase cleared with Vigirank" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 74 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 78 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 82 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 62 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 72 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPatient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 64 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationPossible_mechanism_of_vemurafenib_amiodarone_ADR
+:Possible_mechanism_of_vemurafenib_amiodarone_ADR rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                  mp:references :Ref.1 ;
+                                                  OpenPVSignal:has_content "Both vemurafenib and amiodarone are substrates for CYP3A4. Amiodarone is an inhibitor and there is evidence that vemurafenib is an inducer.1 Theoretically therefore, atrial fibrillation may have recurred because amiodarone clearance was increased thus reducing its therapeutic effect and vemurafenib clearance reduced thus increasing its postulated pro-arrhythmic effect. " ;
+                                                  rdfs:label "Possible mechanism of vemurafenib amiodarone ADR" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA product label for vemurafenib. URL: http://www.accessdata.fda.gov/drugsatfda_ docs/label/2014/202429s006lbl.pdf. Accessed: March 2015. " ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Sanoski CA BJ. The arrhythmias. In Pharmacotherapy: a pathophysiologic approach. In: DiPiro JT, Talbert RL, Yee GC et al., editors. 9th ed 2014. " ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "van der Hooft CS, Heeringa J, van Herpen G, Kors JA, Kingma JH, Stricker BH. Druginduced atrial fibrillation. J Am Coll Cardiol. 2004;44(11):2117-24. " ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Caster O, Juhlin K, Watson S, Noren GN. Improved statistical signal detection in pharmacovigilance by combining multiple strength-of-evidence aspects in vigiRank. Drug Saf. 2014;37(8):617-28.  " ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "VA Pharmacy Benefits Management Services Medical Advisory Panel, and VISN Pharmacist Executives. Vemurafenib (Zelboraf), National Drug Monograph 2012. URL: http://www.pbm.va.gov/pbm/clinicalguidance /drugmonographs/vemurafenibdrugmonograph. pdf. Accessed: March 2015. " ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Mouhayar E, Durand JB, Cortes J. Cardiovascular toxicity of tyrosine kinase inhibitors. Expert Opin Drug Saf. 2013;12(5):687-96. " ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport1 ;
+         OpenPVSignal:refers_to_adverse_effect :Atrial_fibrillation ,
+                                               :asthenia ,
+                                               :hyperpyrexia ,
+                                               :synovitis ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report1 ;
+         OpenPVSignal:time_to_onset :TimeToOnset1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport2 ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+         OpenPVSignal:refers_to_concomitant_drug :enoxaparin ,
+                                                 :omeprazole ,
+                                                 :simvastatin ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report2 ;
+         OpenPVSignal:time_to_onset :TimeToOnset2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport3 ;
+         OpenPVSignal:refers_to_adverse_effect :Atrial_fibrillation ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report3 ;
+         OpenPVSignal:time_to_onset :TimeToOnset3 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after dose reduction" ;
+         OpenPVSignal:refers_to_partial_dechallenge_outcome "positive - condition not applied" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport4 ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                               :fever ;
+         OpenPVSignal:refers_to_concomitant_drug :carvedilol ;
+         OpenPVSignal:refers_to_past_diagnosis :hypertension ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report4 ;
+         OpenPVSignal:time_to_onset :TimeToOnset4 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport5 ;
+         OpenPVSignal:refers_to_adverse_effect :Atrial_fibrillation ,
+                                               :hypotension ;
+         OpenPVSignal:refers_to_concomitant_drug :amiodarone ,
+                                                 :hydrochlorothiazide ,
+                                                 :lisinopril ,
+                                                 :metronidazole ,
+                                                 :nebivolol ,
+                                                 :permethrin ;
+         OpenPVSignal:refers_to_past_diagnosis :anaemia ,
+                                               :atrialFibrillation ,
+                                               :cholecystolithiasis ,
+                                               :hypernatraemia ,
+                                               :hypertension ,
+                                               :rosacea ,
+                                               <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#Dupuytren’s_contracture> ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report5 ;
+         OpenPVSignal:time_to_onset :TimeToOnset5 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         OpenPVSignal:refers_to_partial_rechallenge_outcome "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport6 ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+         OpenPVSignal:refers_to_past_diagnosis :mitral_insufficiency ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report6 ;
+         OpenPVSignal:time_to_onset :TimeToOnset6 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInformationForReport7 ;
+         OpenPVSignal:refers_to_adverse_effect :Atrial_fibrillation ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+         OpenPVSignal:refers_to_reported_drug_usage :vemurafenib_usage_for_Report7 ;
+         OpenPVSignal:time_to_onset :TimeToOnset7 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReport_with_sick_sinus
+:Report_with_sick_sinus rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:VigiBase_Report ;
+                        OpenPVSignal:has_free_text_reporting_element :InfoOnReportWithSickSinusSyndrome ;
+                        OpenPVSignal:refers_to_adverse_effect :sick_sinus ;
+                        OpenPVSignal:refers_to_patient :Patient_with_sick_sinus ;
+                        OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                        OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                        OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                        rdfs:label "Report with sick sinus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsForThyroidCancer
+:ReportsForThyroidCancer rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:concerns_indication_for_use :thyroidCancer ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                         OpenPVSignal:has_count 2 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports treated for thyroid cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.1 ,
+                                 :Ref.4 ;
+                   OpenPVSignal:has_content """Vemurafenib is a suspect medicine in 30 reports of atrial fibrillation. The reports were submitted from eight countries. The drug/ADR combination was identified using the vigiRank method.4 One report was excluded from the assessment as it originated from a double-blind placebo-controlled study and both the placebo and vemurafenib were listed as suspect. In the 29 reports assessed 15 females and 14 males developed atrial fibrillation with an age range, recorded for 17 patients, of 39 to 87 years, median 71 years. Indication for vemurafenib use was recorded in 20 reports. Eighteen patients were being treated for malignant melanoma. Eleven of these were reported to have metastatic disease. For two patients the indication was thyroid cancer. One patient had pre-existing atrial fibrillation and hypertension and one had recently diagnosed mitral insufficiency. Eight patients were taking medicines indicative of hypertension, angina, arrhythmia or cardiac failure (diuretics, digoxin, ACE inhibitors, angiotensin II receptor blockers, beta-blockers, calcium channel blockers). Three of these patients and one other patient were taking a statin. One was taking warfarin and a beta-adrenergic blocking agent suggesting that they might have pre-existing atrial fibrillation. Vemurafenib was the sole suspect medicine in 27 reports. Only one patient of 19 for whom daily doses were recorded exceeded the recommended daily dose. Time from starting vemurafenib to onset of atrial fibrillation ranged from 12 days to seven months (15 reports). The time to onset was 12 to 19 days for six patients and between three and seven months for seven patients. Time to onset for the two other patients was 60 days (but 18 days from addition of a potentially interacting medicine) and 37 days. There were no consistently reported concomitant medicines that may have contributed. One patient was taking amiodarone for atrial fibrillation. A pharmacokinetic interaction with vemurafenib is theoretically possible. Adverse reaction terms that were co-reported with atrial fibrillation that may have been the trigger for atrial fibrillation, rather than a direct effect of vemurafenib on cardiac conduction, were pleural effusion (2 reports), pericardial effusion (1), pneumothorax (1), electrolyte abnormalities (2), myocardial infarction (1) and cardiomegaly (1). Other co-reported adverse reaction terms were hypotension and cardiac failure, known consequences of atrial fibrillation although one of these patients also had multi-organ failure. Four patients developed arthralgia and three fever, these are recognised vemurafenib adverse reactions. Table 1 shows reports that recorded recovery on dechallenge or a stop date and recovery. The first three provide best evidence of causality as there were no clear alternative explanations for the atrial fibrillation. In case 1, after developing atrial fibrillation, the patient was treated with antithrombotic but not anti-arrhythmic agents so that the treatment is not an explanation for recovery. Case 3 suggests a dose-response relationship. Case 4 and 5 both contain evidence of a drug interaction. Carvedilol is a substrate and inhibitor of the efflux transporter P-glycoprotein and there is in vitro evidence that vemurafenib has the same characteristics.1 It is possible, in case 4, that carvedilol increased the bioavailability of vemurafenib and this is supported by the observation that the patient also developed fever with no evidence of infection, a documented adverse reaction to vemurafenib. Case 5 is of interest as the patient had pre-existing atrial fibrillation treated with amiodarone. Both vemurafenib and amiodarone are substrates for CYP3A4. Amiodarone is an inhibitor and there is evidence that vemurafenib is an inducer.1 Theoretically therefore, atrial fibrillation may have recurred because amiodarone clearance was increased thus reducing its therapeutic effect and vemurafenib clearance reduced thus increasing its postulated pro-arrhythmic effect. Two other reports also recorded that the patient recovered on dechallenge but these were not included in the Table. The narratives were complex, one patient recovered from atrial flutter but atrial fibrillation recurred the following day and the outcome was not recorded. In the other report there are contradictory statements about recovery and mitral insufficiency had been diagnosed the same year. Of the patients not discussed above, three others recovered, one while vemurafenib was continued. For the other two, action with vemurafenib was not recorded or was discontinued 45 days before onset of atrial fibrillation. Two patients did not recover and the action with vemurafenib was not recorded. Four patients died. Outcome was not recorded in the remaining reports. Of the four reports recording death as the outcome, two patients appeared to have disease progression and were seriously unwell and one had a pneumothorax and multi-organ failure. There was no evidence that atrial fibrillation was the direct cause of death in these reports. One patient had hypotension, which may have been a result of atrial fibrillation, and increased hepatic transaminases. In this case, atrial fibrillation may have contributed to death although the patient was taking morphine which could indicate advanced malignancy. 
+Related reports in VigiBase® 
+At the time of assessment there were 47 reports of prolonged QT interval, a recognised adverse reaction to vemurafenib. There were also 15 reports of arrhythmia. One recorded recovery on dechallenge. This was a report of sick sinus syndrome with progressive regression of signs after vemurafenib was stopped. Sick sinus syndrome can lead to atrial fibrillation.""" ;
+                   rdfs:label "Reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsTreatedForMalignantMelanoma
+:ReportsTreatedForMalignantMelanoma rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:concerns_indication_for_use :malignantMelanoma ;
+                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                    OpenPVSignal:has_count 18 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports treated for malignant melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithArrhythmiaAndVemurafenib
+:ReportsWithArrhythmiaAndVemurafenib rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:refers_to_adverse_effect :arrhythmia ;
+                                     OpenPVSignal:refers_to_drug :vemurafenib ;
+                                     OpenPVSignal:has_count 15 ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Reports with arrhythmia and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithFatalOutcome
+:ReportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                         OpenPVSignal:has_count 4 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "Reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithFatalOutcomeAndDiseaseProgression
+:ReportsWithFatalOutcomeAndDiseaseProgression rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:is_subgroup_of :ReportsWithFatalOutcome ;
+                                              OpenPVSignal:has_count 2 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports with fatal outcome and disease progression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithMetastaticMalignantMelanoma
+:ReportsWithMetastaticMalignantMelanoma rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                                        OpenPVSignal:is_subgroup_of :ReportsTreatedForMalignantMelanoma ;
+                                        OpenPVSignal:has_count 11 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Reports with metastatic malignant melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithMitralInsufficiency
+:ReportsWithMitralInsufficiency rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                OpenPVSignal:refers_to_past_diagnosis :mitral_insufficiency ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "Reports with mitral insufficiency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReportsWithProlongedQTIntervalAndVemurafenib
+:ReportsWithProlongedQTIntervalAndVemurafenib rdf:type owl:NamedIndividual ,
+                                                       OpenPVSignal:Reports_group ;
+                                              OpenPVSignal:refers_to_adverse_effect :qt_prolongation ;
+                                              OpenPVSignal:refers_to_drug :vemurafenib ;
+                                              OpenPVSignal:has_count 47 ;
+                                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                              rdfs:label "Reports with prolonged QT interval and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_age_info
+:Reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                       OpenPVSignal:has_count 17 ;
+                       OpenPVSignal:has_max_age 87 ;
+                       OpenPVSignal:has_median_age 71 ;
+                       OpenPVSignal:has_min_age 39 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_arthralgia
+:Reports_with_arthralgia rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                         OpenPVSignal:refers_to_adverse_effect :arthralgia ;
+                         OpenPVSignal:has_count 4 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         rdfs:label "Reports with arthralgia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_cardiomegaly
+:Reports_with_cardiomegaly rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                           OpenPVSignal:refers_to_adverse_effect :cardiomegaly ;
+                           OpenPVSignal:has_count 1 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports with cardiomegaly" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_electrolyte_abnormalities
+:Reports_with_electrolyte_abnormalities rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                        OpenPVSignal:refers_to_adverse_effect :electrolyteAbnormalities ;
+                                        OpenPVSignal:has_count 2 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "Reports with electrolyte abnormalities" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_fever
+:Reports_with_fever rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                    OpenPVSignal:refers_to_adverse_effect :fever ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports with fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_myocardial_infraction
+:Reports_with_myocardial_infraction rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Reports_group ;
+                                    OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                    OpenPVSignal:refers_to_adverse_effect :myocardialInfarction ;
+                                    OpenPVSignal:has_count 1 ;
+                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                    rdfs:label "Reports with myocardial infraction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_pericardial_effusion
+:Reports_with_pericardial_effusion rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                   OpenPVSignal:refers_to_adverse_effect :pericardialEffusion ;
+                                   OpenPVSignal:has_count 1 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   rdfs:label "Reports with pericardial effusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_pleural_effusion
+:Reports_with_pleural_effusion rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                               OpenPVSignal:refers_to_adverse_effect :pleuralEffusion ;
+                               OpenPVSignal:has_count 2 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "Reports with pleural effusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_pneumothorax
+:Reports_with_pneumothorax rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                           OpenPVSignal:refers_to_adverse_effect :pneumothorax ;
+                           OpenPVSignal:has_count 1 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "Reports with pneumothorax" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_statin
+:Reports_with_statin rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                     OpenPVSignal:refers_to_concomitant_drug :statin ;
+                     OpenPVSignal:has_count 4 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "Reports with statin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_time_to_onset_info
+:Reports_with_time_to_onset_info rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                 OpenPVSignal:time_to_onset :time_to_onset_info ;
+                                 OpenPVSignal:has_count 15 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "Reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationReports_with_vemurafenib_as_the_sole_suspect_drug
+:Reports_with_vemurafenib_as_the_sole_suspect_drug rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Reports_group ;
+                                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                                   OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+                                                   OpenPVSignal:has_count 27 ;
+                                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                   rdfs:label "Reports with vemurafenib as the sole suspect drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationResponse_from_Roche
+:Response_from_Roche rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                     OpenPVSignal:refers_to_pharmacovigilance_signal_report :Vemurafenib_and_Atrial_Fibrillation:_Signal_strengthening ;
+                     OpenPVSignal:has_content """The WHO Collaborating Centre in Uppsala invited Roche to comment on a signal of atrial fibrillation (AF) in patients treated with vemurafenib based on 29 cases in the VigiBase®. AF is the most common pathologic supraventricular tachycardia affecting more than 3 million people in the US and many more worldwide. Risk factors for AF include older age, male sex, hypertension, and underlying cardiac disease. The incidence increases with age with up to 4% of the adult population >60 years will experience arrhythmia (Stricker, van der Hooft, & Al, 2004). The incidence of drug induced atrial fibrillation (DIAF) is unknown but is likely very low, and no risk factors have been characterized. Cancer itself creates an arrhythmogenic environment and is difficult to determine whether AF reflects the disease or is an adverse effect of the treatment. The onset of DIAF is variable depending on the inducing drug. The correlation is easy to demonstrate in healthy individuals when AF appears after drug administration with close temporal relationship between drug pharmacokinetics and initiation/termination of AF (Tamargo, Caballero, & Delpon, 2012). Possible mechanisms of DIAF are adrenergic or vagal stimulation, direct cardiotoxicity, coronary vasoconstriction/ischemia, and electrolyte disturbances (Stricker, van der Hooft, & Al, 2004). Vemurafenib inhibits mutant BRAFV600 approved for the treatment of metastatic melanoma (mM) harbouring this mutation. There has been no described association between the RAF/MEK/ERK pathway and AF. The current vemurafenib label does not include AF as an ADR, however prolongation of QT interval, which could potentially cause ventricular tachyarrhythmias is a known ADR of vemurafenib. Vemurafenib (a CYP 3A4 substrate/inducer and P-gp substrate) (Roche, 2015) may also potentially interact with concomitant medications in patients with cardiac conditions and exacerbate pre-existing cardiac pathology putting patient at risk for AF. An analysis of the Truven Healthcare MarketScan® Commercial Claims and Encounters database estimates the overall prevalence of AF following a diagnosis of mM at 12.5%. The overall incidence rate in mM was estimated as 30.9 (CI 28.77- 33.24) per 1000 patient years and significantly higher in patients > 60 years. In comparison, the incidence of AF among vemurafenib patients in the Phase III clinical study was 3.5% (12 out of 337) with a median age of 70.5 years (range 58-78). All 12 patients had confounding/risk factors for AF such as medical history of AF or unspecified arrhythmia (n=4), mitral valve prolapse (n=1) and concurrent medical conditions of hypertension (n=1), myocardial infarction (n=1) and pericardial effusion (n=2). In the dacarbazine arm, the incidence was 0.34% (1 out of 294, aged 82). Latency for the 12 cases ranged from 9-952 days (median 63). In ten of the 12 cases, vemurafenib was maintained and the event resolved in 7 cases, persisted in one case even when vemurafenib was eventually discontinued, and unknown outcome in the remaining cases. In two of the 12 cases, vemurafenib was interrupted and dose reduced with resolution of events. In the Phase IV safety study (MO25515), 54 out of the 3222 (1.7%) patients reported AF. Median age was 68.5 years (range 36-84) with 49 patients (90%) >60 years. Median latency was 78 days (range 2-659). The majority of patients (83%) had risk/contributing factors such as hypertension, thyroid disease, structural heart disease, myocardial infarction, systemic infection/sepsis, and pericardial effusion. As of May 19, 2015, there are 68 cases of AF reported with vemurafenib use in the Roche safety database. Twenty-seven cases (40%) were from company sponsored interventional clinical trials (15 of the 27 from the MO25515 phase IV study) and 41 cases were from other sources. Age was reported in 63 of the 68 cases with a median of 71 years (range 39-85), and 55 patients (87%) > 60 years. Thirty-three were male (49%), 34 (51%) were female, and one unreported gender. Seven patients (10%) have a medical history of AF. Latency was provided in 52 of the 68 cases with a median of 84 days (range 1-952). Based on Roche’s medical review of the 68 AF cases, causal association cannot be excluded in 5 cases based on latency, absence of reported risk factors, and positive dechallenge (Table 1). The remaining cases had inadequate case information, or had strong alternative etiology for AF, had longer than expected latency relative to vemurafenib’s pharmacokinetic profile (>200 days), or had negative dechallenge/rechallenge.
+Table 1. Cases of interest in Roche Safety Database CT: Clinical Trial, Spont: Spontaneous, D/C: Discontinued The incidence rate of AF for vemurafenib based on the 27 cases from clinical trials is estimated at 7.05 cases per 1000 patient years*. The 54 cases in the MO25515 Phase IV study yield an incidence rate of 17.5 per 1000 patient years. Both rates are significantly lower when compared to the background incidence for the mM population in a commercial claims and reimbursement database (30.9 per 1000 patient years). In addition, the cases had wide latency ranging from 1 to 965 days, with majority of the cases (88%) having pre-existing risk factors or a negative dechallenge. Our review of the literature also did not provide any evidence on plausible mechanism of action of vemurafenib/BRAF inhibitors causing cardiac arrhythmias. Roche acknowledges the signal for atrial fibrillation raised by the WHO. Although there are 5 cases of AF where causal association cannot be excluded, our overall assessment showed that there is no convincing evidence supporting a causal association between vemurafenib and AF based on low statistical strength, negative dechallenge in majority of cases, wide latency, and lack of plausible mechanism. This signal is monitored through routine pharmacovigilance. *estimated cumulative patient exposure = 3828 patient years References 1. Link, M. (2012). Evaluation and Initial Treatment of Supraventricular Tachycardia. New England Journal of Medicine , 367, 1438-48. 2. Roche, (2015). Zelboraf Summary of Product Chracteristics. http://www.ema.europa.eu/docs/en_GB/ document_library/EPAR_-_Product_Information/ human/002409/WC500124317.pdf 3. Stricker, B., van der Hooft, C., & Al. (2004). Drug- induced Atrial Fibrillation. Journal of the American College of Cardiology , 44 (11), 2117-24. 4. Tamargo, J., Caballero, R., & Delpon, E. (2012). Drug Induced Atrial Fibrillation. Expert Opinion on Drug Safety , 11 (4), 615-34.""" ;
+                     rdfs:label "Response from Roche" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationSummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Vemurafenib, a tyrosine kinase inhibitor, is a suspect medicine in 29 reports of atrial fibrillation in the WHO Global Individual Case Safety Report Database, VigiBase®, and the sole suspect in 27. Vemurafenib is indicated for metastatic or unresectable malignant melanoma with the BRAF V600E mutation. Atrial fibrillation can be triggered by a range of underlying pathologies and drugs and needs to be treated promptly when it is deemed likely to increase the risk of stroke. Thus, assessment of a causal relationship with a particular medicine is complex. Product information and literature sources indicate that atrial fibrillation occurred in patients taking vemurafenib in phase II and III clinical trials but no published evidence of causality has been identified. In the VigiBase® reports older patients were most often affected and a high proportion were taking medicines usually prescribed for co-morbidities likely to increase the risk of atrial fibrillation. However, seven of the VigiBase® reports recorded improvement on dechallenge with little evidence of alternative explanations. In four of these reports time to onset was 19 days or less and the same was true in a fifth report when a potentially interacting medicine, carvedilol, was added to vemurafenib. One patient being treated for atrial fibrillation with amiodarone experienced a recurrence when vemurafenib was commenced. Vemurafenib is a CYP3A4 and P-glycoprotein substrate and a CYP3A4 inducer. Carvedilol is a P-glycoprotein inhibitor and amiodarone is a CYP3A4 inhibitor which may be explanations for these possible interactions. One other patient recovered on vemurafenib dose reduction. This report, together with the carvedilol/vemurafenib report, suggests a dose-response relationship. The reports do represent a signal and add another reason, as well as QT prolongation, for cardiovascular monitoring before and after treatment with vemurafenib is commenced. The reports also suggest that the risk might be greatest in the first month and, possibly, after an increased dose or the addition of potentially interacting medicines." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset1
+:TimeToOnset1 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 19 ;
+              rdfs:label "Time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset2
+:TimeToOnset2 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 15 ;
+              rdfs:label "Time to onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset3
+:TimeToOnset3 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 12 ;
+              rdfs:label "Time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset4
+:TimeToOnset4 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              OpenPVSignal:has_content "2 months Atrial fibrillation 18 days and fever 13 days after carvedilol started" ;
+              time:nominalPosition "months" ;
+              time:numericPosition 2 ;
+              rdfs:label "Time to onset 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset5
+:TimeToOnset5 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "days" ;
+              time:numericPosition 16 ;
+              rdfs:label "Time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset6
+:TimeToOnset6 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "months" ;
+              time:numericPosition 4.5 ;
+              rdfs:label "Time to onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationTimeToOnset7
+:TimeToOnset7 rdf:type owl:NamedIndividual ,
+                       time:DurationDescription ;
+              time:nominalPosition "months" ;
+              time:numericPosition 7 ;
+              rdfs:label "Time to onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationamiodarone
+:amiodarone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01BD01" ;
+            rdfs:label "amiodarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationanaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Past_Diagnosis ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationangina
+:angina rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Indication ;
+        OpenPVSignal:has_ICD_code "I20.9" ;
+        OpenPVSignal:has_MedDRA_code 10002383 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+        rdfs:label "angina" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationarrhythmia
+:arrhythmia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Indication ;
+            OpenPVSignal:has_ICD_code "I49.9" ;
+            OpenPVSignal:has_MedDRA_code 10003119 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arrhythmia" ;
+            rdfs:label "arrhythmia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationarthralgia
+:arthralgia rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "M25.50" ;
+            OpenPVSignal:has_MedDRA_code 10003239 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Arthralgia" ;
+            rdfs:label "arthralgia " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationarthralgia_and_vemurafenib
+:arthralgia_and_vemurafenib rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Warning_Information ;
+                            OpenPVSignal:refers_to_adverse_effect :arthralgia ;
+                            OpenPVSignal:refers_to_drug :vemurafenib ;
+                            rdfs:label "arthralgia and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationasthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53.1" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationatrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ,
+                             OpenPVSignal:Past_Diagnosis ;
+                    OpenPVSignal:has_ICD_code "I48.91" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationcardiomegaly
+:cardiomegaly rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I51.7" ;
+              OpenPVSignal:has_MedDRA_code 10007632 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Cardiomegaly" ;
+              rdfs:label "cardiomegaly " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationcarvedilol
+:carvedilol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AG02" ;
+            rdfs:label "carvedilol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationcholecystolithiasis
+:cholecystolithiasis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Past_Diagnosis ;
+                     OpenPVSignal:has_MedDRA_code 10049890 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Cholecystolithiasis" ;
+                     rdfs:label "cholecystolithiasis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationconcomitant_drugs
+:concomitant_drugs rdf:type owl:NamedIndividual ,
+                            obo:OAE_0001182 ;
+                   OpenPVSignal:has_content "Eight patients were taking medicines indicative of hypertension, angina, arrhythmia or cardiac failure (diuretics, digoxin, ACE inhibitors, angiotensin II receptor blockers, beta-blockers, calcium channel blockers). Three of these patients and one other patient were taking a statin. One was taking warfarin and a beta-adrenergic blocking agent suggesting that they might have pre-existing atrial fibrillation." ;
+                   rdfs:label "possible pre existing atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationconsistentTimeToOnset
+:consistentTimeToOnset rdf:type owl:NamedIndividual ,
+                                obo:OAE_0001125 ;
+                       OpenPVSignal:has_content "However, the consistent time to onset within three weeks in most of the reports that contained the best evidence of causality in other respects, the evidence of a dose response and the evidence for interactions with biological plausibility all support there being a signal for vemurafenib and atrial fibrillation . However, it is not a strong signal and further investigation would be useful. " ;
+                       rdfs:label "consistent time to onset" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationelectrolyteAbnormalities
+:electrolyteAbnormalities rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "E87.8" ;
+                          OpenPVSignal:has_MedDRA_code 10014410 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Electrolyte abnormality" ;
+                          rdfs:label "electrolyte abnormalities " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationenoxaparin
+:enoxaparin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "B01AB05 " ;
+            rdfs:label "enoxaparin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationf
+:f rdf:type owl:NamedIndividual ,
+            OpenPVSignal:Warning_Information ;
+   OpenPVSignal:refers_to_adverse_effect :qt_prolongation ;
+   OpenPVSignal:refers_to_drug :amiodarone ,
+                               :vemurafenib ;
+   mp:references :Ref.1 ;
+   OpenPVSignal:has_content "Furthermore both vemurafenib and amiodarone can prolong the QT interval and product information recommends against prescribing QT prolonging medicines with vemurafenib.1" ;
+   rdfs:label "qt prolonged and vemurafenib and amiodarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationfever
+:fever rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Adverse_Effect ;
+       OpenPVSignal:has_ICD_code "R50.9" ;
+       OpenPVSignal:has_MedDRA_code 10037660 ;
+       OpenPVSignal:has_MedDRA_prefered_term "Pyrexia" ;
+       rdfs:label "fever" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationfever_and_vemurafenib
+:fever_and_vemurafenib rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Warning_Information ;
+                       OpenPVSignal:refers_to_adverse_effect :fever ;
+                       OpenPVSignal:refers_to_drug :vemurafenib ;
+                       rdfs:label "fever and vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationhydrochlorothiazide
+:hydrochlorothiazide rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "C03AA03" ;
+                     rdfs:label "hydrochlorothiazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationhypernatraemia
+:hypernatraemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Past_Diagnosis ;
+                OpenPVSignal:has_MedDRA_code 10020679 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hypernatraemia" ;
+                rdfs:label "hypernatraemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationhyperpyrexia
+:hyperpyrexia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R50.9" ;
+              OpenPVSignal:has_MedDRA_code 10020741 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hyperpyrexia" ;
+              rdfs:label "hyperpyrexia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationhypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Indication ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationhypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I95.9" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationlisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03 " ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmalignantMelanoma
+:malignantMelanoma rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "C43.9" ;
+                   OpenPVSignal:has_MedDRA_code 10025650 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Malignant melanoma" ;
+                   rdfs:label "malignant melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmalignantMelanomaOfSkin
+:malignantMelanomaOfSkin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Indication ;
+                         OpenPVSignal:has_ICD_code "C43.9" ;
+                         OpenPVSignal:has_MedDRA_code 10025650 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Malignant melanoma" ;
+                         rdfs:label "malignant melanoma of skin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmetronidazole
+:metronidazole rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "G01AF01" ;
+               rdfs:label "metronidazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmitral_insufficiency
+:mitral_insufficiency rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Past_Diagnosis ;
+                      OpenPVSignal:has_MedDRA_code 10027716 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Mitral insufficiency" ;
+                      rdfs:label "mitral insufficiency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmulti-organFailure
+:multi-organFailure rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_ICD_code " R65.2" ;
+                    OpenPVSignal:has_MedDRA_code 10077361 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "multi-organ failure" ;
+                    rdfs:label "multi-organ failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationmyocardialInfarction
+:myocardialInfarction rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Adverse_Effect ;
+                      OpenPVSignal:has_ICD_code "I21.9" ;
+                      OpenPVSignal:has_MedDRA_code 10028596 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Myocardial infarction" ;
+                      rdfs:label "myocardial infarction" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationnebivolol
+:nebivolol rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C07AB12" ;
+           rdfs:label "nebivolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationomeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationone_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationpericardialEffusion
+:pericardialEffusion rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "I31.3" ;
+                     OpenPVSignal:has_MedDRA_code 10034474 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Pericardial effusion" ;
+                     rdfs:label "pericardial effusion " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationpermethrin
+:permethrin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "P03AC04" ;
+            rdfs:label "permethrin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationpleuralEffusion
+:pleuralEffusion rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "J90" ;
+                 OpenPVSignal:has_MedDRA_code 10035598 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pleural effusion" ;
+                 rdfs:label "pleural effusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationpneumothorax
+:pneumothorax rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "J93.9" ;
+              OpenPVSignal:has_MedDRA_code 10035759 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pneumothorax" ;
+              rdfs:label "pneumothorax" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationpvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Atrial_fibrillation ,
+                                                   :DiscussionAndConclusion ,
+                                                   :Introduction_content ,
+                                                   :ReportsInVigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_subgroup_of :Report_with_sick_sinus ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report_with_sick_sinus ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsInVigibaseClearedWithVigirank ,
+                                                          :ReportsForThyroidCancer ,
+                                                          :ReportsTreatedForMalignantMelanoma ,
+                                                          :ReportsWithArrhythmiaAndVemurafenib ,
+                                                          :ReportsWithFatalOutcome ,
+                                                          :ReportsWithFatalOutcomeAndDiseaseProgression ,
+                                                          :ReportsWithMetastaticMalignantMelanoma ,
+                                                          :ReportsWithMitralInsufficiency ,
+                                                          :ReportsWithProlongedQTIntervalAndVemurafenib ,
+                                                          :Reports_with_age_info ,
+                                                          :Reports_with_arthralgia ,
+                                                          :Reports_with_cardiomegaly ,
+                                                          :Reports_with_electrolyte_abnormalities ,
+                                                          :Reports_with_fever ,
+                                                          :Reports_with_myocardial_infraction ,
+                                                          :Reports_with_pericardial_effusion ,
+                                                          :Reports_with_pleural_effusion ,
+                                                          :Reports_with_pneumothorax ,
+                                                          :Reports_with_statin ,
+                                                          :Reports_with_time_to_onset_info ,
+                                                          :Reports_with_vemurafenib_as_the_sole_suspect_drug ,
+                                                          :reports_with_no_recovery_outcome ,
+                                                          :reports_with_positive_dechallenge ,
+                                                          :reports_with_recovery_without_drug_withdrawal ,
+                                                          :reports_with_recovery_without_further_info ,
+                                                          :reports_with_unknown_outcome ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithFatalOutcomeAndpneumonothorax/multi-organFailure> ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithpre-existingAtrialfibrillation/hypertension> ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+          OpenPVSignal:refers_to_drug :vemurafenib ;
+          OpenPVSignal:refers_to_primary_suspect_drug :vemurafenib ;
+          mp:supportedByData :FDA_product_sheet ,
+                             :arthralgia_and_vemurafenib ,
+                             :concomitant_drugs ,
+                             :consistentTimeToOnset ,
+                             :f ,
+                             :fever_and_vemurafenib ,
+                             :review_of_cardiac_adverse_effects_of_TKIs ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationqt_prolongation
+:qt_prolongation rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_MedDRA_code 10037705 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "QT prolonged" ;
+                 rdfs:label "qt prolonged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationrecommendedDoseOfVemurafenib
+:recommendedDoseOfVemurafenib rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Dosage ;
+                              OpenPVSignal:refers_to_drug :vemurafenib ;
+                              OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#12_hours_interval> ;
+                              OpenPVSignal:has_content "The recommended dose is 960 mg twice daily and patients should be treated with vemurafenib until disease progression or unacceptable toxicity occurs " ;
+                              OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                              OpenPVSignal:has_value 960 ;
+                              OpenPVSignal:refers_to_dose_value "960 mg" ;
+                              rdfs:label "recommended dose of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreports_with_no_recovery_outcome
+:reports_with_no_recovery_outcome rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  OpenPVSignal:refers_to_outcome_after_action "no recovery" ;
+                                  rdfs:label "reports with no recovery outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreports_with_positive_dechallenge
+:reports_with_positive_dechallenge rdf:type owl:NamedIndividual ,
+                                            OpenPVSignal:Reports_group ;
+                                   OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                   OpenPVSignal:has_count 9 ;
+                                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                   OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                   OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                   rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreports_with_recovery_without_drug_withdrawal
+:reports_with_recovery_without_drug_withdrawal rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                               OpenPVSignal:has_count 1 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+                                               rdfs:label "reports with recovery without drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreports_with_recovery_without_further_info
+:reports_with_recovery_without_further_info rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                            OpenPVSignal:has_count 2 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+                                            rdfs:label "reports with recovery without further info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreports_with_unknown_outcome
+:reports_with_unknown_outcome rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                              OpenPVSignal:has_count 11 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+                              rdfs:label "reports with unknown outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationreview_of_cardiac_adverse_effects_of_TKIs
+:review_of_cardiac_adverse_effects_of_TKIs rdf:type owl:NamedIndividual ,
+                                                    obo:OAE_0001197 ;
+                                           OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ;
+                                           OpenPVSignal:refers_to_drug :vemurafenib ;
+                                           mp:references :Ref.6 ;
+                                           OpenPVSignal:has_content """In a review of cardiac adverse effects of tyrosine 
+kinase inhibitors (TKIs) the authors state that the 
+type of cardiovascular side effect differs between 
+TKIs based on which cellular signalling pathways 
+they inhibit.6 They divided the agents into two 
+clinical groups: 
+(i) the VSP (VEGF signalling pathway) inhibitors 
+and 
+(ii) the non-VSP inhibitor agents (which include 
+vemurafenib). They went on to state that VSP inhibitors are 
+typically associated with hypertension, 
+cardiomyopathy and arterial ischemia. Non-VSP 
+inhibitors are more commonly associated with QT 
+prolongation, arrhythmia, fluid retention and 
+rarely cardiomyopathy. However, only 
+vemurafenib was linked with atrial fibrillation in a 
+table of reported cardiac adverse effects 
+associated with TK inhibitors. The incidence was 
+reported as 5% but without a reference or 
+discussion.""" ;
+                                           rdfs:label "review of cardiac adverse effects of TKIs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationrosacea
+:rosacea rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Past_Diagnosis ;
+         OpenPVSignal:has_MedDRA_code 10039218 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Rosacea" ;
+         rdfs:label "rosacea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationsick_sinus
+:sick_sinus rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_MedDRA_code 10040639 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Sick sinus syndrome" ;
+            rdfs:label "sick sinus syndrome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationsimvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "C10AA01" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationstatin
+:statin rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Drug ;
+        OpenPVSignal:has_ATC_code "C10AA" ;
+        rdfs:label "statin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationsynovitis
+:synovitis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "M65" ;
+           OpenPVSignal:has_MedDRA_code 10042868 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Synovitis" ;
+           rdfs:label "synovitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationthyroidCancer
+:thyroidCancer rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Indication ;
+               OpenPVSignal:has_ICD_code "C73" ;
+               OpenPVSignal:has_MedDRA_code 10066474 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Thyroid cancer" ;
+               rdfs:label "thyroid cancer" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationtime_to_onset_info
+:time_to_onset_info rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "Time from starting vemurafenib to onset of atrial fibrillation ranged from 12 days to seven months (15 reports). The time to onset was 12 to 19 days for six patients and between three and seven months for seven patients. Time to onset for the two other patients was 60 days (but 18 days from addition of a potentially interacting medicine) and 37 days." ;
+                    rdfs:label "time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationusage_of_vemurafenib
+:usage_of_vemurafenib rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Drug_Usage ;
+                      OpenPVSignal:concerns_indication_for_use :BRAF_V600E_positive ,
+                                                               <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                      OpenPVSignal:refers_to_dosage :recommendedDoseOfVemurafenib ;
+                      OpenPVSignal:refers_to_drug :vemurafenib ;
+                      mp:references :Ref.1 ;
+                      rdfs:label "usage of vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib
+:vemurafenib rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :Mechanism_of_vemurafenib ;
+             OpenPVSignal:has_ATC_code "L01XE15 " ;
+             rdfs:label "vemurafenib" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report1
+:vemurafenib_usage_for_Report1 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage1 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report2
+:vemurafenib_usage_for_Report2 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage2 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report3
+:vemurafenib_usage_for_Report3 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage3 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report4
+:vemurafenib_usage_for_Report4 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage4 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report5
+:vemurafenib_usage_for_Report5 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage5 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report6
+:vemurafenib_usage_for_Report6 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage6 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvemurafenib_usage_for_Report7
+:vemurafenib_usage_for_Report7 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:concerns_indication_for_use <http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> ;
+                               OpenPVSignal:refers_to_dosage :Dosage7 ;
+                               OpenPVSignal:refers_to_drug :vemurafenib ;
+                               rdfs:label "usage for report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationvomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#Patient_with_sick_sinus
+:Patient_with_sick_sinus rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001817 ;
+                         rdfs:label "Patient with sick sinus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#12_hours_interval
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#12_hours_interval> rdf:type owl:NamedIndividual ,
+                                                                                                         time:DurationDescription ;
+                                                                                                time:nominalPosition "hours" ;
+                                                                                                time:numericPosition 12 ;
+                                                                                                rdfs:label "12 hours interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#Dupuytren’s_contracture
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#Dupuytren’s_contracture> rdf:type owl:NamedIndividual ,
+                                                                                                               OpenPVSignal:Past_Diagnosis ;
+                                                                                                      OpenPVSignal:has_MedDRA_code 10013872 ;
+                                                                                                      OpenPVSignal:has_MedDRA_prefered_term "Dupuytren's contracture" ;
+                                                                                                      rdfs:label "Dupuytren’s contracture" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithFatalOutcomeAndpneumonothorax/multi-organFailure
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithFatalOutcomeAndpneumonothorax/multi-organFailure> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   OpenPVSignal:Reports_group ;
+                                                                                                                                          OpenPVSignal:is_subgroup_of :ReportsWithFatalOutcome ;
+                                                                                                                                          OpenPVSignal:has_count 1 ;
+                                                                                                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                          rdfs:label "Reports with fatal outcome and pneumonothorax/multi-organ failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithpre-existingAtrialfibrillation/hypertension
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#ReportsWithpre-existingAtrialfibrillation/hypertension> rdf:type owl:NamedIndividual ,
+                                                                                                                                              OpenPVSignal:Reports_group ;
+                                                                                                                                     OpenPVSignal:is_subgroup_of :OverallReportsInVigibaseClearedWithVigirank ;
+                                                                                                                                     OpenPVSignal:refers_to_past_diagnosis :atrialFibrillation ,
+                                                                                                                                                                           :hypertension ;
+                                                                                                                                     OpenPVSignal:has_count 1 ;
+                                                                                                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                                     rdfs:label "Reports with pre-existing atrial fibrillation/hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable
+<http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillation#skinmelanoma,MetastaticOrUnResectable> rdf:type owl:NamedIndividual ,
+                                                                                                                             OpenPVSignal:Indication ;
+                                                                                                                    OpenPVSignal:has_MedDRA_code 10027481 ;
+                                                                                                                    OpenPVSignal:has_MedDRA_prefered_term "Metastatic melanoma" ;
+                                                                                                                    rdfs:label "metastatic melanoma" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2016_1_Vemurafenib_atrial_fibrillationVemurafenib_and_Atrial_Fibrillation:_Signal_strengthening
+:Vemurafenib_and_Atrial_Fibrillation:_Signal_strengthening rdf:type owl:NamedIndividual ,
+                                                                    OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                                           OpenPVSignal:refers_to_author :Dr_Ruth_Savage ;
+                                                           OpenPVSignal:refers_to_signal :pvSignal ;
+                                                           OpenPVSignal:has_creation_date "01/02/2022" ;
+                                                           OpenPVSignal:has_overall_conclusion "Further investigation needed" ;
+                                                           rdfs:label "Vemurafenib and Atrial Fibrillation: Signal strengthening" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

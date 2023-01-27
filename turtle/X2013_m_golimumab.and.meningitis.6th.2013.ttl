@@ -1,0 +1,688 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis> .
+
+<http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ;
+                                                                    rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255517"^^xsd:anyURI ;
+                                                                    rdfs:label "Golimumab and Meningitis"^^xsd:Literal ;
+                                                                    owl:versionInfo "draft-v0.95-20210611"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#AE_of_anti-TNF_drugs
+:AE_of_anti-TNF_drugs rdf:type owl:NamedIndividual ,
+                               obo:OAE_0001197 ,
+                               OpenPVSignal:Warning_Information ;
+                      OpenPVSignal:refers_to_adverse_effect :meningitis ;
+                      OpenPVSignal:refers_to_class <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+                      OpenPVSignal:refers_to_drug :adalimumab ,
+                                                  :etanercept ,
+                                                  :infliximab ;
+                      mp:references :Ref.10 ,
+                                    :Ref.11 ,
+                                    :Ref.12 ,
+                                    :Ref.7 ,
+                                    :Ref.8 ,
+                                    :Ref.9 ;
+                      OpenPVSignal:has_content "Meningitis is not commonly associated with rheumatoid arthritis or spondyloarthropathies; however, it has been reported in association with various anti-TNF drugs used to treat such disorders including infliximab, adalimumab, and etanercept. ICSRs of meningitis from various types of infectious origin have been observed in association with both infliximab and etanercept therapy.7-12" ;
+                      rdfs:label "AE of anti-TNF drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#ConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.10 ,
+                                 :Ref.11 ,
+                                 :Ref.12 ,
+                                 :Ref.13 ,
+                                 :Ref.14 ,
+                                 :Ref.4 ,
+                                 :Ref.5 ,
+                                 :Ref.7 ,
+                                 :Ref.8 ,
+                                 :Ref.9 ;
+                   OpenPVSignal:has_content """This relatively small series of cases reporting a suspected association between golimumab and the occurrence of meningitis have been observed in several countries and in all ICSRs the anti-TNF antibody was reported as the only suspected drug. Golimumab was generally reported to be used for a licensed indication and at the recommended dosage. An alternative product or combination of products that might explain the occurrence of the suspected reaction was not readily identified from the ICSRs. The positive IC and IC025 values showed that the meningitis-golimumab association has been statistically disproportionately reported into the database. 
+Although clinical experience with this product is limited, golimumab is considered to have a relatively similar safety profile and to offer a similar benefit/risk ratio compared to other anti-TNF products.4,5 Meningitis is not commonly associated with rheumatoid arthritis or spondyloarthropathies; however, it has been reported in association with various anti-TNF drugs used to treat such disorders including infliximab, adalimumab, and etanercept. ICSRs of meningitis from various types of infectious origin have been observed in association with both infliximab and etanercept therapy.7-12 Interestingly, cases of meningitis of non-infectious origin have also been reported.13 Since golimumab is similar in structure to infliximab, it has been suggested that a comparable pattern of opportunistic infections could be expected with it after further clinical use.14 Since half of the cases in the series of ICSRs with golimumab were reported as viral meningitis, it would be interesting to know if golimumab could represent a particular risk for this type of adverse reaction. As far as we know, the association has not been previously reported in the literature and the risk of meningitis is not mentioned in the product labelling for golimumab. Opportunistic infections are well recognised adverse reactions of the anti-TNF class of drugs. Meningitis is a particularly serious and life threatening complication of several types of infectious diseases and is specifically mentioned in the product labelling of the other anti-TNF products. Current information supports a signal of meningitits in association with golimumab, and we recommend its inclusion in the product label.""" ;
+                   rdfs:label "Discussion and Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#DosageOfGolimumab
+:DosageOfGolimumab rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_interval_between_administrations :One_month_interval ;
+                   OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                   OpenPVSignal:has_value 50 ;
+                   OpenPVSignal:refers_to_dose_value "50 mg" ;
+                   rdfs:label "Dosage of Golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Dr_Ariel_E._Arias
+:Dr_Ariel_E._Arias rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Author ;
+                   OpenPVSignal:has_affiliation "Canada" ;
+                   OpenPVSignal:has_first_name "Ariel" ;
+                   OpenPVSignal:has_last_name "E. Arias" ;
+                   rdfs:label "Dr Ariel E. Arias" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#FDA_warning_for_Golimumab
+:FDA_warning_for_Golimumab rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001197 ,
+                                    OpenPVSignal:Structured_Product_Labels_information ,
+                                    OpenPVSignal:Warning_Information ;
+                           OpenPVSignal:refers_to_adverse_effect :legionellaInfection ,
+                                                                 :listeriosis ;
+                           OpenPVSignal:refers_to_drug :golimumab ;
+                           mp:references :Ref.3 ;
+                           OpenPVSignal:has_content "The FDA label includes a warning for infections due to opportunistic infections including legionella and listeria.3" ;
+                           rdfs:label "FDA warning for Golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Golimumab_and_Meningitis
+:Golimumab_and_Meningitis rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                          OpenPVSignal:refers_to_author :Dr_Ariel_E._Arias ;
+                          OpenPVSignal:refers_to_signal :pvClinical ;
+                          mp:publishedBy :Uppsala_Monitoring_Centre ;
+                          OpenPVSignal:has_creation_date "01/12/2013" ;
+                          OpenPVSignal:has_overall_conclusion "causal association" ;
+                          rdfs:label "Golimumab and Meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Golimumab_subcutaneously_administration
+:Golimumab_subcutaneously_administration rdf:type owl:NamedIndividual ,
+                                                  OpenPVSignal:Drug_Intake_Form ;
+                                         OpenPVSignal:refers_to_drug :golimumab ;
+                                         OpenPVSignal:refers_to_form_of_intake "subcutaneous" ;
+                                         rdfs:label "Golimumab subcutaneous administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#IC
+:IC rdf:type owl:NamedIndividual ,
+             <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+    OpenPVSignal:refers_to_adverse_effect :meningitis ;
+    OpenPVSignal:refers_to_drug :golimumab ;
+    OpenPVSignal:has_value 1.53 ;
+    OpenPVSignal:refers_to_number_of_reports 8 ;
+    rdfs:label "IC for golimumab and meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#IC025
+:IC025 rdf:type owl:NamedIndividual ,
+                <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+       OpenPVSignal:refers_to_adverse_effect :meningitis ;
+       OpenPVSignal:refers_to_drug :golimumab ;
+       OpenPVSignal:refers_to_information_component :IC ;
+       OpenPVSignal:has_value 0.36 ;
+       OpenPVSignal:refers_to_number_of_reports 8 ;
+       rdfs:label "IC025 for golimumab and meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ;
+                     OpenPVSignal:has_content "Golimumab is described as a human IgG1 monoclonal antibody that forms high affinity, stable complexes with both the soluble and the transmembrane bioactive forms of human tumor necrosis factors (TNF), which prevents the binding of TNF to its receptors.1,2,3 There is no evidence of the golimumab antibody binding to other TNF superfamily ligands; in particular, it did not bind or neutralize human lymphotoxin.1,3 Golimumab modulated the in vitro biological effects mediated by TNF in several bioassays, including the expression of adhesion proteins responsible for leukocyte infiltration, E-selectin, Intercellular Adhesion Molecule-1(ICAM-1), Vascular Cell Adhesion Molecule-1 (VCAM-1), and the secretion of pro-inflammatory cytokines: IL-6 and 8, granulocyte colony-stimulating factor (G-CSF) and granulocyte macrophage colony-stimulating factor (GM-CSF). TNF-a is an important mediator of articular inflammation, and elevated TNF-a levels in the blood, synovium, and joints have been implicated in the pathophysiology of several chronic inflammatory diseases such as rheumatoid arthritis, psoriatic arthritis, and ankylosing spondylitis. Golimumab has been primarily licensed in many countries for the treatment of rheumatoid arthritis, as well as spondyloarthropathies such as psoriatic arthritis and ankylosing spondylitis.1,2,3 It has been licensed in some countries for the treatment of moderate to severe ulcerative colitis with an inadequate response or intolerance to prior treatment, or when requiring continuous steroid therapy.3 Although clinical experience with golimumab is somewhat limited, after direct and indirect comparisons on efficacy and safety, some authors have concluded that infliximab, adalimumab, etanercept and golimumab offer similar benefit/risk ratios and could be regarded as equivalent treatment alternatives in psoriatic arthritis.4 However, because of the paucity of data available, similar types of adverse events as those seen with other TNF-a inhibitors, need to be considered as of special concern for patients treated with golimumab therapy.5 We discuss here a series of eight Individual Case Safety Reports (ICSRs) on the association of golimumab and meningitis that have been reported from five different countries to the WHO Global ICSR Database, VigiBase™." ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Labelling
+:Labelling rdf:type owl:NamedIndividual ,
+                    obo:OAE_0001197 ,
+                    OpenPVSignal:Structured_Product_Labels_information ,
+                    OpenPVSignal:Warning_Information ;
+           OpenPVSignal:refers_to_adverse_effect :demyelinatingDisorders ,
+                                                 :sepsis ;
+           OpenPVSignal:refers_to_drug :golimumab ;
+           mp:references :Ref.1 ,
+                         :Ref.2 ,
+                         :Ref.3 ;
+           OpenPVSignal:has_content "We could not find any published reports of meningitis in association with golimumab use in the literature to date, although various types of opportunistic and viral infections including sepsis, and cases of new onset or exacerbation of central nervous system demyelinating disorders are well labelled adverse drug reactions for this product." ;
+           rdfs:label "Labelling for golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Listeriosis_and_TNF_inhibitors
+:Listeriosis_and_TNF_inhibitors rdf:type owl:NamedIndividual ,
+                                         obo:OAE_0001197 ,
+                                         OpenPVSignal:Warning_Information ;
+                                OpenPVSignal:refers_to_adverse_effect :listeriosis ,
+                                                                      :meningitis ;
+                                OpenPVSignal:refers_to_class <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+                                mp:references :Ref.6 ;
+                                OpenPVSignal:has_content "Listeriosis in patients treated with TNF inhibitors can present as meningitis,6" ;
+                                rdfs:label "Listeriosis and TNF inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#LiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ,
+                                      :Ref.6 ;
+                        OpenPVSignal:has_content "We could not find any published reports of meningitis in association with golimumab use in the literature to date, although various types of opportunistic and viral infections including sepsis, and cases of new onset or exacerbation of central nervous system demyelinating disorders are well labelled adverse drug reactions for this product. There is no information on the risk of meningitis in any verified product informations.1,2,3 The FDA label includes a warning for infections due to opportunistic infections including legionella and listeria.3 Listeriosis in patients treated with TNF inhibitors can present as meningitis,6 however, none of the reports in VigiBase have other infections co-reported." ;
+                        rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#MechanismOfGolimumab
+:MechanismOfGolimumab rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Mechanism ;
+                      OpenPVSignal:has_content "Golimumab is described as a human IgG1 monoclonal antibody that forms high affinity, stable complexes with both the soluble and the transmembrane bioactive forms of human tumor necrosis factors (TNF), which prevents the binding of TNF to its receptors.1,2,3 There is no evidence of the golimumab antibody binding to other TNF superfamily ligands; in particular, it did not bind or neutralize human lymphotoxin.1,3 Golimumab modulated the in vitro biological effects mediated by TNF in several bioassays, including the expression of adhesion proteins responsible for leukocyte infiltration, E-selectin, Intercellular Adhesion Molecule-1(ICAM-1), Vascular Cell Adhesion Molecule-1 (VCAM-1), and the secretion of pro-inflammatory cytokines: IL-6 and 8, granulocyte colony-stimulating factor (G-CSF) and granulocyte macrophage colony-stimulating factor (GM-CSF). TNF-a is an important mediator of articular inflammation, and elevated TNF-a levels in the blood, synovium, and joints have been implicated in the pathophysiology of several chronic inflammatory diseases such as rheumatoid arthritis, psoriatic arthritis, and ankylosing spondylitis." ;
+                      rdfs:label "Mechanism of Golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#One_month_interval
+:One_month_interval rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2006/time#DurationDescription> ;
+                    <http://www.w3.org/2006/time#nominalPosition> "months" ;
+                    <http://www.w3.org/2006/time#numericPosition> 1 ;
+                    rdfs:label "One month interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Canadian Product Monograph for golimumab (Simponi). URL: http://webprod5.hc-sc.gc.ca/dpd-bdpp/index-eng.jsp. Accessed 30 July 2013." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Slifman NR, Gershon SK, Lee JH, Edwards ET, Braun MM. Listeria monocytogenes infection as a complication of treatment with tumor necrosis factor alpha-neutralizing agents. Arthritis Rheum. 2003 Feb;48(2):319-24." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ueda M, Tateishi T, Shigeto H, Yamasaki R, Ohyagi Y, Kira J. A case of acute disseminated encephalomyelitis associated with Epstein-Barr virus reactivation during infliximab therapy. Clin Neurol. 2010 Jul;50(7):461-6." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Yang C-T, Kuo C-F, Luo S-F, Yu KH. Discontinuation of anti-TNF-a therapy in a Chinese cohort of patients with rheumatoid arthritis. Clin Rheumatol. 2012 Nov;31(11):1549-57." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ramos-Casals M, Roberto-Perez-Alvarez, Diaz-Lagares C, Cuadrado MJ, Khamashta MA; BIOGEAS Study Group. Autoimmune diseases induced by biological agents. A double-edged sword? Autoimmun Rev 2010 Jan; 9(3):188-93." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Koo S, Marty FM, Baden LR. Infectious complications associated with immunomodulating biologic agents. Infect Dis Clin North Am. 2010 Jun; 24 (2):285-306." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "EU Summary of Product Characteristics for golimumab (Simponi). URL: http://www.ema.europa.eu/ema/Accessed 30 July 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "US FDA Product Label for golimumab (Simponi). URL: http://www.accessdata.fda.gov/scnpts/cder/drugs atfda/ index.cfm. Accessed 30 July 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Fénix-Caballero S, Alegre-del Rey EJ, Castaño-Lara R, Puigventós-Latorre F, Borrero-Rubio JM, López-Vallejo JF. Direct and indirect comparison of the efficacy and safety of adalimumab, etanercept, infliximab and golimumab in psoriatic arthritis. J Clin Pharm Ther. 2013 Aug; 38(4):286-93." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Simsek I, Yazici Y. Safety and clinical efficacy of golimumab in the treatment of arthritides. Drug Healthc Patient Safety. 2010;2:169-80." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "De Kayser F. Choice of Biologic Therapy for Patients with Rheumatoid Arthritis: The Infection Perspective. Curr Rheumatol Rev. 2011 Feb; 7(1):77-87." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Cohen M, Baldin B, Thomas P, Le Brun C. Neurological adverse events under anti-TNF alpha therapy [Evenements neurologiques sous traitement par anti-TNF alpha] Rev Neurol. 2012 Jan;168(1):33-9." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ma C, Walters B, Fedorak RN. Varicella zoster meningitis complicating combined anti-tumor necrosis factor and corticosteroid therapy in Crohn's disease. World J Gastroenterol. 2013 Jun 7;19(21):3347-51." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Peña-Sagredo JL, Hernández MV, Fernandez-Llanio N, Giménez-Ubeda E, Muñoz-Fernandez S, Ortiz A, et al. Listeria monocytogenes infection in patients with rheumatic diseases on TNF-alpha antagonist therapy: the Spanish Study Group experience. Clin Exp Rheumatol. 2008 Sept-Oct; 26(5):854-9." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:refers_to_adverse_effect :meningitis ;
+                   OpenPVSignal:refers_to_drug :golimumab ;
+                   OpenPVSignal:refers_to_reported_drug_usage :usage_of_golimumab ;
+                   OpenPVSignal:has_count 8 ;
+                   OpenPVSignal:has_count_of_men 2 ;
+                   OpenPVSignal:has_count_of_women 6 ;
+                   OpenPVSignal:has_max_age "64.0"^^xsd:float ;
+                   OpenPVSignal:has_min_age "36.0"^^xsd:float ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Reports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     OpenPVSignal:has_content "Eight ICSRs of meningitis in association with goli-mumab have been reported to VigiBase from the United States, United Kingdom, Canada, Spain and Switzerland as of May 2013. The subjects, six females and two males, were between 36 and 64 years of age. The reaction was further described as viral meningitis in four cases and aseptic meningitis in one case, with no additional description in the three other cases. There were no fatalities but in four cases the outcome of the reaction was unknown or not reported. Golimumab was the only suspected medicine in all the ICSRs and was used subcutaneously, mainly 50 mg once a month, to treat arthritis (three reports), ankylosing spondylitis, psoriatic arthritis, and immune system disorder (in one case each). The indication for use was not reported in two cases, and there was almost no information on the length of the therapy or the reaction onset. There was only one rechallenge reported in the ICSRs, and the effect of this was unknown. Four of the case reports were reported by a physician or other health care professionals. The IC and the IC025 values for the association were 1.53 and 0.36 respectively." ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Response_from_Janssen_Biologics_B.V.
+<http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Response_from_Janssen_Biologics_B.V.> rdf:type owl:NamedIndividual ,
+                                                                                                                 OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                                                                                        OpenPVSignal:refers_to_pharmacovigilance_signal_report :Golimumab_and_Meningitis ;
+                                                                                                        OpenPVSignal:has_content "Simponi is one of several TNF-blocking agents that are available for the treatment of diseases such as rheumatoid arthritis and ulcerative colitis. Janssen works closely with health authorities to accurately inform patients and prescribers about the safety profile of Simponi. To date, meningitis has not been considered an adverse drug reaction for Simponi. However, TNF-blocking agents, including Simponi, have been associated with a variety of infections, including serious infections, from all types of organisms, including bacterial, viral, and fungal organisms, and the prescribing information for Simponi reflects this information. Janssen will continue to monitor serious infections, including meningitis, and all potential adverse reactions, reported with Simponi." ;
+                                                                                                        rdfs:label "Response from Janssen Biologics B.V." .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#StructuralResemblanceBetweenInfliximabAndGolimumab
+:StructuralResemblanceBetweenInfliximabAndGolimumab rdf:type owl:NamedIndividual ,
+                                                             obo:OAE_0001197 ;
+                                                    OpenPVSignal:refers_to_drug :golimumab ,
+                                                                                :infliximab ;
+                                                    mp:references :Ref.14 ;
+                                                    OpenPVSignal:has_content "Since golimumab is similar in structure to infliximab, it has been suggested that a comparable pattern of opportunistic infections could be expected with it after further clinical use.14" ;
+                                                    rdfs:label "Structural resemblance between infliximab and golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#SummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content "Golimumab is a monoclonal antibody that prevents the binding of tumor necrosis factors (TNF) to its receptors and has been licensed for the treatment of chronic inflammatory diseases such as rheumatoid arthritis, psoriatic arthritis, and ankylosing spondylitis. The drug was approved as late as in 2009. We discuss a series of eight Individual Case Safety Reports (ICSRs) on the association of golimumab and meningitis that have been received from five different countries to the WHO Global ICSR Database, VigiBaseTM. The association has been statistically disproportionately reported into the database. Although rare, the occurrence of meningitis has already been reported in association with the other anti-TNF products in the class. Current information supports a signal of meningitits in association with golimumab, and we recommend its inclusion in the product label." ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#Uppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#adalimumab
+:adalimumab rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+            OpenPVSignal:has_ATC_code "L04AB04" ;
+            rdfs:label "adalimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#ankylosingSpondylitis
+:ankylosingSpondylitis rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Indication ;
+                       OpenPVSignal:has_ICD_code "M45.9" ;
+                       OpenPVSignal:has_MedDRA_code 10002556 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Ankylosing spondylitis" ;
+                       rdfs:label "ankylosing spondylitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#arthritis
+:arthritis rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "M13" ;
+           OpenPVSignal:has_MedDRA_code 10003246 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Arthritis" ;
+           rdfs:label "arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#asepticMeningitis
+:asepticMeningitis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "A27.81" ;
+                   OpenPVSignal:has_MedDRA_code 10027201 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Meningitis aseptic" ;
+                   rdfs:label "aseptic meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#demyelinatingDisorders
+:demyelinatingDisorders rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "G37.9" ;
+                        OpenPVSignal:has_MedDRA_code 10012303 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Demyelinating disorders" ;
+                        rdfs:label "demyelinating disorders" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#etanercept
+:etanercept rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+            OpenPVSignal:has_ATC_code "L04AB01" ;
+            rdfs:label "etanercept" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#golimumab
+:golimumab rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:concerns_indication_for_use :ankylosingSpondylitis ,
+                                                    :psoriaticArthritis ,
+                                                    :rheumatoidArthritis ,
+                                                    :spondyloarthropathies ,
+                                                    :ulcerativeColitis ;
+           OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+           OpenPVSignal:has_mechanism :MechanismOfGolimumab ;
+           OpenPVSignal:has_ATC_code "L04AB06" ;
+           rdfs:label "golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#immuneSystemDisorder
+:immuneSystemDisorder rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Indication ;
+                      OpenPVSignal:has_ICD_code "D89.9" ;
+                      OpenPVSignal:has_MedDRA_code 10021425 ;
+                      OpenPVSignal:has_MedDRA_prefered_term "Immune system disorder" ;
+                      rdfs:label "immune system disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#infliximab
+:infliximab rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass <http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> ;
+            OpenPVSignal:has_ATC_code "L04AB02" ;
+            rdfs:label "infliximab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#legionellaInfection
+:legionellaInfection rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "A48.1" ;
+                     OpenPVSignal:has_MedDRA_code 10061266 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Legionella infection" ;
+                     rdfs:label "legionella infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#listeriosis
+:listeriosis rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "A32.9" ;
+             OpenPVSignal:has_MedDRA_code 10024641 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Listeriosis" ;
+             rdfs:label "listeriosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#meningitis
+:meningitis rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "G03.9" ;
+            OpenPVSignal:has_MedDRA_code 10027199 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Meningitis" ;
+            rdfs:label "meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#psoriaticArthritis
+:psoriaticArthritis rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "L40.52" ;
+                    OpenPVSignal:has_MedDRA_code 10037162 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Psoriatic arthropathy" ;
+                    rdfs:label "psoriatic arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#pvClinical
+:pvClinical rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Signal ;
+            OpenPVSignal:Free_text_reporting_element :ConclusionContent ,
+                                                     :IntroductionContent ,
+                                                     :Reports_in_Vigibase ,
+                                                     :SummaryContent ;
+            OpenPVSignal:is_supported_by_statistical_entity :IC ,
+                                                            :IC025 ,
+                                                            :ReportsInVigibase ,
+                                                            :reportsFromAPhysicianOrOtherHealthcareProfessionals ,
+                                                            :reportsWithAnkylosingSpondylitis ,
+                                                            :reportsWithArthritisAsIndication ,
+                                                            :reportsWithAsepticMeningitis ,
+                                                            :reportsWithImmuneSystemDisorder ,
+                                                            :reportsWithPsoriaticArthritis ,
+                                                            :reportsWithViralMeningitis ,
+                                                            :reports_with_rechallenge ;
+            OpenPVSignal:refers_to_adverse_effect :meningitis ;
+            OpenPVSignal:refers_to_drug :golimumab ;
+            OpenPVSignal:refers_to_primary_suspect_drug :golimumab ;
+            mp:supportedByData :AE_of_anti-TNF_drugs ,
+                               :FDA_warning_for_Golimumab ,
+                               :Labelling ,
+                               :Listeriosis_and_TNF_inhibitors ,
+                               :StructuralResemblanceBetweenInfliximabAndGolimumab ;
+            OpenPVSignal:initially_identified_on "01/12/2013" ;
+            rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsFromAPhysicianOrOtherHealthcareProfessionals
+:reportsFromAPhysicianOrOtherHealthcareProfessionals rdf:type owl:NamedIndividual ,
+                                                              OpenPVSignal:Reports_group ;
+                                                     OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                                                     OpenPVSignal:has_count 4 ;
+                                                     OpenPVSignal:has_reporter_type "health care professional" ;
+                                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                     rdfs:label "reports from a physician or other healthcare professionals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithAnkylosingSpondylitis
+:reportsWithAnkylosingSpondylitis rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:concerns_indication_for_use :ankylosingSpondylitis ;
+                                  OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                                  OpenPVSignal:has_count 1 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with ankylosing spondylitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithArthritisAsIndication
+:reportsWithArthritisAsIndication rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:concerns_indication_for_use :arthritis ;
+                                  OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                                  OpenPVSignal:has_count 3 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with arthritis as indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithAsepticMeningitis
+:reportsWithAsepticMeningitis rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                              OpenPVSignal:refers_to_adverse_effect :asepticMeningitis ;
+                              OpenPVSignal:has_count 1 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "reports with aseptic meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithImmuneSystemDisorder
+:reportsWithImmuneSystemDisorder rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Reports_group ;
+                                 OpenPVSignal:concerns_indication_for_use :immuneSystemDisorder ;
+                                 OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                                 OpenPVSignal:has_count 1 ;
+                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                 rdfs:label "reports with immune system disorder" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithPsoriaticArthritis
+:reportsWithPsoriaticArthritis rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:concerns_indication_for_use :psoriaticArthritis ;
+                               OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                               OpenPVSignal:has_count 1 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports with psoriatic arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reportsWithViralMeningitis
+:reportsWithViralMeningitis rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                            OpenPVSignal:refers_to_adverse_effect :viralMeningitis ;
+                            OpenPVSignal:has_count 4 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with viral meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#reports_with_rechallenge
+:reports_with_rechallenge rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :ReportsInVigibase ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_rechallenge_outcome "unknown" ;
+                          rdfs:label "reports with rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#rheumatoidArthritis
+:rheumatoidArthritis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Indication ;
+                     OpenPVSignal:has_ICD_code "M06.9" ;
+                     OpenPVSignal:has_MedDRA_code 10039073 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Rheumatoid arthritis" ;
+                     rdfs:label "rheumatoid arthritis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#sepsis
+:sepsis rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "A41" ;
+        OpenPVSignal:has_MedDRA_code 10040047 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Sepsis" ;
+        rdfs:label "sepsis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#spondyloarthropathies
+:spondyloarthropathies rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "M45.9" ;
+                       rdfs:label "spondyloarthropathies" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#ulcerativeColitis
+:ulcerativeColitis rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Indication ;
+                   OpenPVSignal:has_ICD_code "K51.90" ;
+                   OpenPVSignal:has_MedDRA_code 10009900 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Colitis ulcerative" ;
+                   rdfs:label "ulcerative colitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#usage_of_golimumab
+:usage_of_golimumab rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:is_related_with_drug_intake :Golimumab_subcutaneously_administration ;
+                    OpenPVSignal:refers_to_dosage :DosageOfGolimumab ;
+                    OpenPVSignal:refers_to_drug :golimumab ;
+                    rdfs:label "usage of golimumab" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#viralMeningitis
+:viralMeningitis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "A87.9" ;
+                 OpenPVSignal:has_MedDRA_code 10027260 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Meningitis viral" ;
+                 rdfs:label "viral meningitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors
+<http://purl.org/OpenPVSignal/Signals/2013_6_golimumab_meningitis#tumorNecrosisFactorAlpha(tnf-α)Inhibitors> rdf:type owl:NamedIndividual ,
+                                                                                                                      OpenPVSignal:DrugClass ;
+                                                                                                             OpenPVSignal:has_ATC_code "L04AB " ;
+                                                                                                             rdfs:label "tumor necrosis factor alpha (tnf-α) inhibitors" ,
+                                                                                                                        "tumorNecrosisFactorAlpha(tnf-α)Inhibitors" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

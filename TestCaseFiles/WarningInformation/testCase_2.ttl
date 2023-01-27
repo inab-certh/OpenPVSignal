@@ -1,0 +1,14 @@
+@prefix : <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/OpenPVSignal.owl> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Test Case: A "Warning information" instance has to have content
+
+:PVShape a sh:NodeShape ;
+sh:targetClass OpenPVSignal:Warning_Information ;
+sh:property[
+		sh:path OpenPVSignal:has_content ;	
+		sh:minCount 1;
+		sh:message "A Warning information instance has to have content"].

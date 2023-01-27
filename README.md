@@ -15,6 +15,23 @@ Moreover, an article about **OpenPVSignal** was published in **Uppsala Reports**
 
 User-friendly tools are currently under development that will enable pharmacovigilance experts to use **OpenPVSignal** for annotating signal report data, hiding this way the underlying technical details of the model.
 
+Along the data model there can be found 101 Signal Reports that have been published between 2012 and 2019 by the <a href="https://who-umc.org/signal-work/signal-detection/" target="_blank">**Uppsala Monitoring Center**</a>
+These datasets have been manually converted to individual KGs and have been through a quality control process with many iterations. One of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions. Note that some of the constrained imposed by the SHACL tests still appear on the results as a violation. This can be attributed to the original data sources, i.e. for a patient appearing on an Individual Case Safety Report (ICSR) their gender and age should have been recorded but this is not the case for each ICSR. The SHACL tests that have been written, will mark that as a violation and it should be manually verified that the field is indeed missing on the original data.
+
+The pySHACL python library is used to run the SHACL tests and an R script is used to create the summarized reports 
+
+```
+pip install pyshacl
+```
+
+navigate to the opvsignal directory
+
+```
+Rscript run_com.r
+```
+
+
+
 In this repository you may find:
 1. The <a href="OpenPVSignal.owl" target="_blank">OpenPVSignal ontology model</a>.
 2. The OpenPVSignal <a href="https://inab-certh.github.io/OpenPVSignal/" target="_blank">web page</a>.
@@ -28,7 +45,11 @@ In this repository you may find:
 - The Netherlands Pharmacovigilance Center - Lareb Web site:
   - Instantiation: <a href="examples/Lareb_2013_3_Esomeprazole_and_tinnitus.owl" target="_blank">Lareb_2013_3_Esomeprazole_and_tinnitus.owl</a>
   - Source: <a href="https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf" target="_blank">https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf</a>
+4. The <a href="https://github.com/achillec/OpenPVSignal/tree/master/turtle" target="_blank">converted data</a> in turtle format.
+5. The <a href="https://github.com/achillec/OpenPVSignal/tree/master/TestCaseFiles" target="_blank">SHACL data models</a> used to validate the dataset.
+4. An <a href="https://github.com/achillec/OpenPVSignal/blob/master/run_com.r" target="_blank">R based script</a> that executes the validation pipeline.
+
 
 **OpenPVSignal** is versioned following the <a href="https://semver.org/" target="_blank">semantic versioning scheme</a>, applying the guidelines provided <a href="https://github.com/dbrock/semver-howto/blob/master/README.md" target="_blank">here</a>. The last part of the version refers to the date that this version has been created. For example, version 0.8.20171211 is the version that has been first commited on GitHub, on 2017, 11th of December. Typically, each new version should be worked on a branch, following the rationale presented <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">here</a>.
 
-> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr).
+> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr) or Mr. Achilleas Chytas (achytas@certh.gr).

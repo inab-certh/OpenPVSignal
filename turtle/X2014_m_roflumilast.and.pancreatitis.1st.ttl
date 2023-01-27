@@ -1,0 +1,1232 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis> rdf:type owl:Ontology ;
+                                                                        owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                    mp: ;
+                                                                        rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255516/"^^xsd:anyURI ;
+                                                                        rdfs:label "Roflumilast and Pancreatitis"^^xsd:Literal ;
+                                                                        owl:versionInfo "draft-v0.95-20211115"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/publishedBy
+mp:publishedBy rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisChronicObstructivePulmonaryDisease
+:ChronicObstructivePulmonaryDisease rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Indication ;
+                                    OpenPVSignal:has_ICD_code "J449" ;
+                                    OpenPVSignal:has_MedDRA_code 10009033 ;
+                                    OpenPVSignal:has_MedDRA_prefered_term "Chronic obstructive pulmonary disease" ;
+                                    rdfs:label "chronic obstructive pulmonary disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisDiscussionAndConclusion
+:DiscussionAndConclusion rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Conclusion ,
+                                  OpenPVSignal:Discussion ;
+                         OpenPVSignal:has_content """Several of the eight cases presented in this assessment have reported confounders that may have caused or contributed to the pancreatitis, and the general lack of data on the ICSRs also makes the assessment difficult. Patients suffering from COPD often take a combination of medicines in order to reduce and relieve their symptoms but other drugs were only reported in half of the cases. There were no treatment dates for any of the co-reported drugs, but none of them were suspected by the reporter to have caused the reaction. Only one of the reports gives any information on recreational habits: recent alcohol consumption is denied in this case without further
+ 
+information. Time to onset varied from days up to approximately two months and there may be a possibility that introduction of this drug could have caused the pancreatitis regardless of any previous confounders.
+Five out of eight patients recovered/were recovering when the drug was withdrawn and there was one positive rechallenge. Cases of acute pancreatitis were also seen during clinical trials and can be found in the US FDA Product Label.
+Drug induced pancreatitis is rare, however despite possible confounders and unreported predisposing factors the cases presented in this assessment together with the results from the clinical trials support a possible causal association between roflumilast and pancreatitis. This reaction should be investigated further for inclusion in the product information in all countries.""" ;
+                         rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisEMA_SPC
+:EMA_SPC rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Structured_Product_Labels_information ;
+         OpenPVSignal:refers_to_drug :roflumilast ;
+         mp:references :Ref.10 ;
+         OpenPVSignal:has_content "There is no mention of pancreatitis in the EMA Summary of Product Characteristics (SPC).10" ;
+         rdfs:label "EMA SPC" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisIC025OfRoflumilastAndPancreatitis
+:IC025OfRoflumilastAndPancreatitis rdf:type owl:NamedIndividual ,
+                                            <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component__025_(IC025)> ;
+                                   OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                   OpenPVSignal:refers_to_drug :roflumilast ;
+                                   OpenPVSignal:refers_to_information_component :ICOfRoflumilastAndPancreatitis ;
+                                   OpenPVSignal:has_content "-0.06" ;
+                                   rdfs:label "IC025 of roflumilast and pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisICOfRoflumilastAndPancreatitis
+:ICOfRoflumilastAndPancreatitis rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/OpenPVSignal/OpenPVSignal.owl#Information_Component_(IC)> ;
+                                OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                OpenPVSignal:refers_to_drug :roflumilast ;
+                                OpenPVSignal:has_content "1.03" ;
+                                rdfs:label "IC of roflumilast and pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisIncidenceOfDrugInducedPancreatitis
+:IncidenceOfDrugInducedPancreatitis rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Incidence ;
+                                    OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                    mp:references :ref2 ,
+                                                  :ref3 ;
+                                    OpenPVSignal:has_content "1,2-1,4%" ;
+                                    OpenPVSignal:has_value 0.012 ,
+                                                           0.014 ;
+                                    rdfs:label "Incidence of drug induced pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisIntroduction_content
+:Introduction_content rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Introduction ;
+                      mp:references :ref1 ,
+                                    :ref2 ,
+                                    :ref3 ,
+                                    :ref4 ,
+                                    :ref5 ,
+                                    :ref6 ;
+                      OpenPVSignal:has_content """Roflumilast is a phosphodiesterase type-4 inhibitor used in the treatment of inflammatory conditions of the lungs. It was approved in the European Union (EU) in June 2010 for severe chronic obstructive pulmonary disease (COPD) associated with chronic bronchitis as an add-on to bronchodilator therapy and in the United States (US) in March 2011 for reducing COPD exacerbations. The recommended daily dose is 500 microgram (mcg) daily taken orally.1
+Pancreatitis, inflammation of the pancreas, is usually caused by gallstones or alcohol abuse, but may also be caused by drugs such as corticosteroids, diuretics, ACE inhibitors, tetracyclines, sulphonamides and statins. The incidence of drug induced pancreatitis has been estimated as 1.2-1.4%.2,3 Other risk factors include trauma, mumps or measles, autoimmune disease, old age, smoking and obesity. The inflammation can affect surrounding organs such as the bowel, spleen, lungs and stomach and lead to multiorgan failure. The condition can either be acute with a sudden onset or chronic with symptoms ranging over a spectrum of mild to severe. Severe cases can be life threatening and require intensive care.4,5 The potential mechanisms of drug induced pancreatitis include pancreatic duct constriction, cytotoxic and metabolic effects, and hypersensitivity reactions.6""" ;
+                      rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.10 ,
+                                      :ref7 ,
+                                      :ref8 ,
+                                      :ref9 ;
+                        OpenPVSignal:has_content """Acute pancreatitis is labelled in the US FDA Product Label for roflumilast and refers to clinical trial data from eight clinical studies; four one-year placebo controlled trials, two six-months placebo controlled trials and two six-months drug add-on trials. 8630 COPD patients were enrolled; 1232 patients received a dosage of 500 mcg daily for one year and 3136 patients were given the same dosage for six months. 4192 patients received placebo. The most common adverse effects were nausea, diarrhoea, weight loss and headache.7 A letter in The Lancet, comparing FDA's review of the clinical trial data for roflumilast with the publications from the same clinical trials, highlights that severe adverse events reported in the clinical trial data were not mentioned in the publications, among them acute pancreatitis.8,9 There is no mention of pancreatitis in the EMA Summary of Product Characteristics (SPC).10
+""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisPancreatitis
+:Pancreatitis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Free_text_reporting_element ;
+              OpenPVSignal:refers_to_drug :pancreatitis ;
+              mp:references :ref2 ,
+                            :ref3 ,
+                            :ref4 ,
+                            :ref5 ,
+                            :ref6 ;
+              OpenPVSignal:has_content "Pancreatitis, inflammation of the pancreas, is usually caused by gallstones or alcohol abuse, but may also be caused by drugs such as corticosteroids, diuretics, ACE inhibitors, tetracyclines, sulphonamides and statins. The incidence of drug induced pancreatitis has been estimated as 1.2-1.4%.2,3 Other risk factors include trauma, mumps or measles, autoimmune disease, old age, smoking and obesity. The inflammation can affect surrounding organs such as the bowel, spleen, lungs and stomach and lead to multiorgan failure. The condition can either be acute with a sudden onset or chronic with symptoms ranging over a spectrum of mild to severe. Severe cases can be life threatening and require intensive care.4,5 The potential mechanisms of drug induced pancreatitis include pancreatic duct constriction, cytotoxic and metabolic effects, and hypersensitivity reactions.6" ;
+              rdfs:label "Pancreatitis pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisRef.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "European Medicines Agency: Roflumilast Summary of Product Characteristics (SPC). URL: http://www.ema. europa.eu/docs/en_GB/document_library/EPAR_-_ Product_Information/human/002398/WC500103078. pdf. Accessed 28 July 2013." ;
+        rdfs:label "Ref10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :amlodipine ,
+                                                 :budesonide ,
+                                                 :cetirizine ,
+                                                 :dexlansoprazole ,
+                                                 :docusate ,
+                                                 :formoterol ,
+                                                 :insulin ,
+                                                 :montelukast ,
+                                                 :phenytoin ,
+                                                 :salbutamol ,
+                                                 :simvastatin ,
+                                                 :tamsulosin ,
+                                                 :theophylline ,
+                                                 :tiotropiumBromide ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis#fluticasonepropionate/salmeterolXinafoate> ;
+         OpenPVSignal:refers_to_patient :patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :allopurinol ,
+                                                 :lisinopril ,
+                                                 :sotalol ;
+         OpenPVSignal:refers_to_patient :patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :amlodipine ,
+                                                 :azithromycin ,
+                                                 :furosemide ,
+                                                 :gliclazide ,
+                                                 :ipratropium ,
+                                                 :metformin ,
+                                                 :methylprednisolone ,
+                                                 :omeprazole ,
+                                                 :simvastatin ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis#fluticasonepropionate/salmeterolXinafoate> ;
+         OpenPVSignal:refers_to_patient :patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_patient :patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReport9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+         OpenPVSignal:refers_to_concomitant_drug :azithromycin ,
+                                                 :beclometasone ,
+                                                 :calciumCarbonate ,
+                                                 :carbocisteine ,
+                                                 :citalopram ,
+                                                 :cyclizine ,
+                                                 :diazepam ,
+                                                 :formoterol ,
+                                                 :furosemide ,
+                                                 :ipratropium ,
+                                                 :mirtazapine ,
+                                                 :omeprazole ,
+                                                 :prednisolone ,
+                                                 :salbutamol ,
+                                                 :theophylline ;
+         OpenPVSignal:refers_to_patient :patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsAfterDuplicateRemoval
+:ReportsAfterDuplicateRemoval rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                              OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+                              OpenPVSignal:has_count 8 ;
+                              OpenPVSignal:has_count_of_men 4 ;
+                              OpenPVSignal:has_count_of_women 4 ;
+                              OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                              rdfs:label "Overall reports after duplicate removal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                    OpenPVSignal:has_count 1 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                  OpenPVSignal:has_count 2 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                OpenPVSignal:has_count 4 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsFromUnitedKingdom
+:ReportsFromUnitedKingdom rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                          OpenPVSignal:has_count 1 ;
+                          OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_Kingdom" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from United Kingdom" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   OpenPVSignal:has_content """As of July 2013 there were nine Individual Case Safety
+Reports (ICSRs) in the WHO Global ICSR Database, VigiBaseTM relating to roflumilast and pancreatitis with an IC of 1.03 and IC025 of -0.06. An overview of the ICSRs is presented in Table 1. There was one suspected duplicate which leaves eight reports from four countries; United States of America (four cases), Spain (two cases), Germany and United Kingdom (one case each). The ICSRs concern four women and four men and where age was provided (on six ICSRs) it ranged from 58 to 92 years with a median of 75 years.
+COPD was the given indication on six ICSRs and on two ICSRs the indication was not stated. Only two ICSRs had a clearly reported dosage which was given as 500 mcg daily in both cases.
+Roflumilast was the only suspected drug on all the ICSRs and where time to onset was reported (in four cases) it ranged from 10 days to two months. In two other cases it was not specified when the reaction occurred but the patients only took the drug for one and five days respectively before it was discontinued.
+Although one might expect polypharmacy for these patients, other drugs were only reported in four cases. Co-reported drugs of interest included amlodipine, azithromycin, dexlansoprazole, furosemide, lisinopril, methylprednisolone, prednisolone, theophyllin and simvastatin, all of which may cause pancreatitis, but were only listed as concomitant by the reporter. No therapy dates were given for any of these drugs. Two patients were on medicinal treatment for diabetes mellitus. Only one of the reports gives any information on recreational habits: recent alcohol consumption is denied in this case without further information.
+In five cases, roflumilast was withdrawn and the patient recovered/was recovering at the time of reporting. There was one positive rechallenge in a case where the drug was reintroduced but again withdrawn after one day as the patient experienced abdominal pain. One report had a fatal outcome, but the cause of death was not stated.""" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisReportsInVigibaseForRoflumilastAndPancreatitis
+:ReportsInVigibaseForRoflumilastAndPancreatitis rdf:type owl:NamedIndividual ,
+                                                         OpenPVSignal:Reports_group ;
+                                                OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                                                OpenPVSignal:has_count 6 ;
+                                                OpenPVSignal:has_max_age "92.0"^^xsd:float ;
+                                                OpenPVSignal:has_median_age "75.0"^^xsd:float ;
+                                                OpenPVSignal:has_min_age "58.0"^^xsd:float ;
+                                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                rdfs:label "Reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisResponse_from_Takeda
+:Response_from_Takeda rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                      OpenPVSignal:has_content """Response from Takeda and Forest Laboratories
+ 
+The reported annual incidence of acute pancreatitis ranges from 4.9 to 35 per 100,000 population.1 Drugs are a rare cause of acute pancreatitis, with an estimated incidence of 0.1- 2% of all cases.2 Alcohol consumption and gallstones are the most common causes of acute pancreatitis in many parts of the world3, though multiple other causes exist, many of which are found amongst the profile of severe COPD patients, for whom roflumilast is indicated, including obesity, hyperlipidemia, old age, the use of steroids, gastrointestinal, cardiovascular, and anti-diabetic medications, and smoking, which has been shown to be an independent risk factor for pancreatitis.4-10 Additionally, 10% to 25% of cases of acute pancreatitis are idiopathic.11
+Roflumilast, a selective phophodiesterase type 4 inhibitor, was first approved in 2010 and is now marketed in more than 50 countries worldwide, with an estimated patient exposure of 365,000 patient-years since first launch.
+Non-clinical toxicity studies in rodent and non- rodent species failed to demonstrate pancreatic effects after administration of roflumilast, although in the 4-week rat toxicity study with direct administration of roflumilast N-oxide (RNO) at the highest dose of 3.6 mg/kg/day, inflammatory changes were seen in abdominal organs, including the pancreas. These effects occurred at a free drug exposure ratio of RNO (active principle) more than 20x above human exposure at 500 ug
+In the extensive clinical development program (during which more than 24,000 subjects were enrolled in 114 clinical studies, of whom more than 14,000 were exposed to roflumilast at a variety of dose levels), a total of 17 pancreatitis cases (including AEs of \"pancreatitis\", \"pancreatitis acute\", and \"pancreatitis chronic\") were reported. These 17 cases demonstrated a balanced distribution between treatment arms (9 in roflumilast-treated and 8 in non-roflumilast- treated patients). Alternative reasons for
+ 
+pancreatitis in roflumilast-treated patients were provided in most cases (e.g. dietary causes, pre- existing conditions, concomitant medications with known potential to cause pancreatitis). In some cases, the temporal association was not suggestive of a causal relationship with roflumilast. All cases of pancreatitis with roflumilast treatment were considered unrelated or unlikely related to study medication by the sponsor and the investigators with one exception, a case of exacerbation of pre-existing chronic pancreatitis was assessed as likely related by the investigator, however assessed as unlikely related by the sponsor.
+Takeda and Forest Laboratories concluded that there was no causal association with roflumilast and that no signal of pancreatitis had been identified. Per the clinical assessment report to the European Medicines Agency (EMA) for Day 150 during the centralized EU marketing authorization procedure in 2010, the Assessor concluded: \"The analysis of reports of pancreatitis is reassuring in that there is no excess in the active treatment arms. There is no need for a change to the SPC.\"
+For Periodic Safety Update Report (PSUR) #4 (reporting period 6-Jan-2012 to 05-Jul-2012), the Pharmacovigilance Risk Assessment Committee (PRAC) of the EMA requested a cumulative review of all spontaneously reported pancreatitis cases occurring with roflumilast treatment (10 cases). Based on this cumulative review, Takeda and Forest Laboratories concluded that the data did not provide evidence for a causal association with roflumilast. The PRAC agreed with this conclusion and the decision to close this signal, with the recommendation that Takeda should monitor cases of pancreatitis on an ongoing basis. Since PSUR #4, 4 additional cases of pancreatitis have been received, all of which have been evaluated and have not changed the current safety profile of roflumilast.
+
+A search of the roflumilast global safety database identified in total 14 spontaneous post-marketing cases of pancreatitis, including the 8 cases identified from the Uppsala Monitoring Centre (UMC). Takeda and Forest Laboratories have closely tracked all reports of pancreatitis and reviewed each case individually and cumulatively. The majority of cases reporting pancreatitis presented with confounding factors that could potentially account for the event, including co- morbid conditions (e.g., smoking, obesity, old age, hyperlipidemia), the use of concomitant medications known to cause drug-induced pancreatitis (e.g., amlodipine, azithromycin, dexlansoprazole, furosemide, lisinopril, methyl- prednisolone, prednisolone, theophyllin, simvastatin) and an implausible time to onset.
+Often cases lacked sufficient information to allow
+for a substantive medical assessment.
+In addition, statistical signal detection efforts conducted by Forest using the Empirica Signal tool, with data from VigiBase™ and AERS, did not identify a statistical signal (EB05>2) for \"pancreatitis\" nor any of the preferred terms that comprise the acute pancreatitis SMQ [narrow].
+The Bayesian Confidence Propagation Neural Network used by the UMC detected an IC of 1.03 and an IC025 (the lower limit of a 95% credibility interval for the IC) of -0.06. If the lower limit of the IC value is negative, the likelihood of a positive quantitative association between the drug and the adverse reaction is low. It should furthermore be noted that the IC scores obtained were based on 9 cases of pancreatitis, 1 of which was suspected to be a duplicate case.
+
+Conclusion
+The available evidence does not suggest a causal relationship between the occurrence of pancreatitis and the use of roflumilast. Post-marketing cases of pancreatitis (14 cases out of 365,000 patient years) were either confounded by known risk factors, implausible latencies or were missing sufficient information for a substantive medical assessment. Furthermore, statistical signal detection efforts have failed to identify a statistical signal for pancreatitis. Finally, evidence from pre- clinical and controlled clinical studies does not support an association.
+Based on this investigation, and in agreement with the EMA's assessment of pancreatitis following PSUR#4, the core safety profile of roflumilast is deemed unchanged and the current EMA SPC is considered appropriate. No safety variation will be initiated to establish \"pancreatitis\" as a globally labeled Adverse Drug Reaction at this time.
+Takeda and Forest Laboratories are committed to the close monitoring of pancreatitis through their pharmacovigilance processes on an ongoing basis.
+ 
+References
+1.	Vege SS, Yadav D, Chari ST. Pancreatitis. In: GI Epidemiology, 1st ed, Talley NJ, Locke GR, Saito YA (Eds), Blackwell Publishing, Malden, MA 2007.
+2.	Balani AR, Grendell JH. Drug-induced pancreatitis: incidence, management and prevention. Drug Safety
+2008, 3(10):823-837.
+3.	Guo-Jun W, Chun-Fang G, Dong W, Cun W,
+Si-Qin D. Acute pancreatitis: Etiology and common pathogenesis. World J Gastroenterol. 2009 March 28; 15(12): 1427¬1430.
+4.	Fortson MR, Freedman SN, Webster PD 3rd. Clinical assessment of hyperlipidemic pancreatitis. Am J Gastroenterol. 1995;90(12):2134.
+5.	Noel RA, Braun DK, Patterson RE, Bloomgren GL. Increased Risk of Acute Pancreatitis and Biliary Disease Observed in Patients With Type 2 Diabetes A retrospective cohort study. Diabetes Care 2009 vol. 32 no.5 834-838.
+6.	Badalov N, Baradarian R, Iswara K, Li J, Steinberg W Tenner S. Drug-induced acute pancreatitis: an evidence-based review. Clin Gastroenterol Hepatol. 2007;5(6):648.
+7.	Lindkvist B, Appelros S, Manjer J, Berglund G, Borgstrom A. A prospective cohort study of smoking in acute pancreatitis. Pancreatology. 2008;8(1):63.
+8.	Tolstrup JS, Kristiansen L, Becker U, Gronbaek M. Smoking and risk of acute and chronic pancreatitis among women and men: a population-based cohort study. Arch Intern Med. 2009;169(6):603.
+9.	Yadav D, Hawes RH, Brand RE, Anderson MA, Money ME, Banks PA, Bishop MD, Baillie J, Sherman
+S, DiSario J, Burton FR, Gardner TB, Amann ST, Gelrud A, Lawrence C, Elinoff B, Greer JB, O'Connell M, Barmada MM, Slivka A, Whitcomb DC, North American Pancreatic Study Group.
+Alcohol consumption, cigarette smoking, and the risk of recurrent acute and chronic pancreatitis. Arch Intern Med. 2009;169(11):1035.
+10.	Sadr-Azodi O, Andrén-SandbergÂ, Orsini N, Wolk A. Cigarette smoking, smoking cessation and acute pancreatitis: a prospective population-based study. Gut. 2012 Feb;61(2):262-7. Epub 2011 Aug 11.
+11.	Banks PA. Epidemiology, natural history, and predictors of disease outcome in acute and chronic pancreatitis. Gastrointest Endosc. 2002 Dec;56(6 Suppl):S226-30.""" ;
+                      rdfs:label "Response from Takeda and Forest Laboratories" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisRoflumilast_and_Pancreatitis
+:Roflumilast_and_Pancreatitis rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                              OpenPVSignal:refers_to_author :Uppsala_Monitoring_Centre ;
+                              OpenPVSignal:refers_to_signal :pvSignal ;
+                              mp:publishedBy :Uppsala_Monitoring_Centre ;
+                              OpenPVSignal:has_creation_date "01/03/2014" ;
+                              OpenPVSignal:has_overall_conclusion "Further investigation needed" ;
+                              rdfs:label "Roflumilast and Pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisSummary_content
+:Summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content """Summary
+In the WHO Global Individual Case Safety Report (ICSR) Database, VigiBase™, there are nine ICSRs of pancreatitis in association with roflumilast.
+There was one suspected duplicate which leaves a total number of eight ICSRs. In all eight cases, roflumilast was the only suspected drug and in the five cases where an outcome was reported the patient had recovered or was recovering. Acute pancreatitis is labelled in the US FDA drug safety information, based on clinical trial data but not mentioned in the EMA SPC. Drug induced pancreatitis is rare: 1.4% of the cases of pancreatitis have been considered drug related, and it might be difficult to diagnose due to predisposing factors such as alcohol consumption and biliary disorder, comorbidities or unknown risk factors, but the eight cases in this assessment strengthen the signal.""" ;
+                 rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisUppsala_Monitoring_Centre
+:Uppsala_Monitoring_Centre rdf:type owl:NamedIndividual ,
+                                    prov:Organization ;
+                           rdfs:label "Uppsala Monitoring Centre" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisaceinhibitors
+:aceinhibitors rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "C09BA" ;
+               rdfs:label "ace inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisacetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "B01AC06" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisalcoholAbuse
+:alcoholAbuse rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "F10.10" ;
+              OpenPVSignal:has_MedDRA_code 10001584 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Alcohol abuse" ;
+              rdfs:label "alcohol abuse" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisallopurinol
+:allopurinol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "M04AA01" ;
+             rdfs:label "allopurinol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisamlodipine
+:amlodipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA01" ,
+                                      "C08GA02" ,
+                                      "C09BB03" ,
+                                      "C09BB04" ,
+                                      "C09BB07" ,
+                                      "C09BX01" ,
+                                      "C09DB01" ,
+                                      "C09DB02" ,
+                                      "C09DB04" ,
+                                      "C09DB05" ,
+                                      "C09DB06" ,
+                                      "C09DB07" ,
+                                      "C09DX01" ,
+                                      "C09DX03" ,
+                                      "C09XA53" ,
+                                      "C09XA54" ,
+                                      "C10BX03" ,
+                                      "C10BX07" ,
+                                      "C10BX09" ,
+                                      "C10BX11" ;
+            rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisazithromycin
+:azithromycin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "J01FA10" ,
+                                        "J01RA07" ,
+                                        "S01AA26" ;
+              rdfs:label "azithromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisbeclometasone
+:beclometasone rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "R03BA01" ;
+               rdfs:label "beclometasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisbudesonide
+:budesonide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03BA02" ;
+            rdfs:label "budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscalciumCarbonate
+:calciumCarbonate rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "A12AA04" ;
+                  rdfs:label "calcium carbonate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscarbocisteine
+:carbocisteine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "R05CB03" ;
+               rdfs:label "carbocisteine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscetirizine
+:cetirizine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R06AE07" ;
+            rdfs:label "cetirizine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscitalopram
+:citalopram rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N06AB04" ;
+            rdfs:label "citalopram" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisconfounding
+:confounding rdf:type owl:NamedIndividual ,
+                      obo:OAE_0001182 ;
+             OpenPVSignal:has_content "Several of the eight cases presented in this assessment have reported confounders that may have caused or contributed to the pancreatitis, and the general lack of data on the ICSRs also makes the assessment difficult. Patients suffering from COPD often take a combination of medicines in order to reduce and relieve their symptoms but other drugs were only reported in half of the cases. " ;
+             rdfs:label "confounding" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscorticosteroids
+:corticosteroids rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A07EA" ,
+                                           "S02B" ;
+                 rdfs:label "corticosteroids" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitiscyclizine
+:cyclizine rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "R06AE03" ;
+           rdfs:label "cyclizine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdd
+:dd rdf:type owl:NamedIndividual ,
+             obo:OAE_0001197 ,
+             OpenPVSignal:Clinical_trial_information ,
+             OpenPVSignal:Structured_Product_Labels_information ;
+    OpenPVSignal:refers_to_adverse_effect :diarrhoea ,
+                                          :diazepam ,
+                                          :headache ,
+                                          :nausea ,
+                                          :pancreatitis ,
+                                          :weight_loss ;
+    OpenPVSignal:refers_to_drug :roflumilast ;
+    mp:references :ref7 ;
+    OpenPVSignal:has_content "Acute pancreatitis is labelled in the US FDA Product Label for roflumilast and refers to clinical trial data from eight clinical studies; four one-year placebo controlled trials, two six-months placebo controlled trials and two six-months drug add-on trials. 8630 COPD patients were enrolled; 1232 patients received a dosage of 500 mcg daily for one year and 3136 patients were given the same dosage for six months. 4192 patients received placebo. The most common adverse effects were nausea, diarrhoea, weight loss and headache.7" ;
+    rdfs:label "US FDA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdexlansoprazole
+:dexlansoprazole rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A02BC06" ;
+                 rdfs:label "dexlansoprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdiarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdiazepam
+:diazepam rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "N05BA01" ;
+          rdfs:label "diazepam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdiuretics
+:diuretics rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C03" ;
+           rdfs:label "diuretics" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisdocusate
+:docusate rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "A06AA02" ;
+          rdfs:label "docusate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisformoterol
+:formoterol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03AC13" ;
+            rdfs:label "formoterol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisfurosemide
+:furosemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA01" ,
+                                      "C03CB01" ,
+                                      "C03EB01" ,
+                                      "G01AE10" ;
+            rdfs:label "furosemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisgallstones
+:gallstones rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "K8020" ;
+            OpenPVSignal:has_MedDRA_code 10008629 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Cholelithiasis" ;
+            rdfs:label "gallstones" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisgliclazide
+:gliclazide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A10BB09" ;
+            rdfs:label "gliclazide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisheadache
+:headache rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_MedDRA_code 10019211 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Headache" ;
+          rdfs:label "headache" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisinsulin
+:insulin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "A10AD01" ;
+         rdfs:label "insulin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisipratropium
+:ipratropium rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R03BB01" ;
+             rdfs:label "ipratropium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitislisinopril
+:lisinopril rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09AA03" ,
+                                      "C09BA03" ,
+                                      "C09BB03" ,
+                                      "C10BX07" ;
+            rdfs:label "lisinopril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitismechanism_of_roflumilast
+:mechanism_of_roflumilast rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Mechanism ;
+                          OpenPVSignal:has_content "Roflumilast is a phosphodiesterase type-4 inhibitor used in the treatment of inflammatory conditions of the lungs." ;
+                          rdfs:label "mechanism of roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitismetformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitismethylprednisolone
+:methylprednisolone rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug ;
+                    OpenPVSignal:has_ATC_code "D07AA01" ,
+                                              "D07AC14" ,
+                                              "D07CA02" ,
+                                              "D10AA02" ,
+                                              "H02AB04" ,
+                                              "H02BX01" ,
+                                              "S01CA08" ;
+                    rdfs:label "methylprednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitismirtazapine
+:mirtazapine rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N06AX11" ;
+             rdfs:label "mirtazapine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitismontelukast
+:montelukast rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R03DC03" ;
+             rdfs:label "montelukast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisnausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisomeprazole
+:omeprazole rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BC01" ;
+            rdfs:label "omeprazole" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisone_day_interval
+:one_day_interval rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2006/time#DurationDescription> ;
+                  <http://www.w3.org/2006/time#nominalPosition> "days" ;
+                  <http://www.w3.org/2006/time#numericPosition> 1 ;
+                  rdfs:label "one day interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisoral_administration
+:oral_administration rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug_Intake_Form ;
+                     OpenPVSignal:refers_to_form_of_intake "oral" ;
+                     rdfs:label "oral administration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispancreatitis
+:pancreatitis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "K85" ;
+              OpenPVSignal:has_MedDRA_code 10033645 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Pancreatitis" ;
+              rdfs:label "pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispancreatitis_and_drugs
+:pancreatitis_and_drugs rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Warning_Information ;
+                        OpenPVSignal:refers_to_adverse_effect :alcoholAbuse ,
+                                                              :gallstones ,
+                                                              :pancreatitis ;
+                        OpenPVSignal:refers_to_drug :aceinhibitors ,
+                                                    :corticosteroids ,
+                                                    :diuretics ,
+                                                    :statins ,
+                                                    :sulphonamides ,
+                                                    :tetracyclines ;
+                        OpenPVSignal:has_content "Pancreatitis, inflammation of the pancreas, is usually caused by gallstones or alcohol abuse, but may also be caused by drugs such as corticosteroids, diuretics, ACE inhibitors, tetracyclines, sulphonamides and statins." ;
+                        rdfs:label "pancreatitis and causes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient1
+:patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient2
+:patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient3
+:patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 58 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient4
+:patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 58 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient5
+:patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 92 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient6
+:patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 82 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient7
+:patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 87 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient8
+:patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 61 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispatient9
+:patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 69 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisphenytoin
+:phenytoin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N03AB02" ;
+           rdfs:label "phenytoin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispotential_mechanisms_of_drug_induced_pancreatitis
+:potential_mechanisms_of_drug_induced_pancreatitis rdf:type owl:NamedIndividual ,
+                                                            OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                   OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+                                                   mp:references :ref6 ;
+                                                   OpenPVSignal:has_content "The potential mechanisms of drug induced pancreatitis include pancreatic duct constriction, cytotoxic and metabolic effects, and hypersensitivity reactions.6" ;
+                                                   rdfs:label "potential mechanisms of drug induced pancreatitis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisprednisolone
+:prednisolone rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A01AC54" ,
+                                        "A07EA01" ,
+                                        "C05AA04" ,
+                                        "D07AA03" ,
+                                        "D07BA01" ,
+                                        "D07CA03" ,
+                                        "D07XA02" ,
+                                        "H02AB06" ,
+                                        "R01AD02" ,
+                                        "R01AD52" ,
+                                        "S01BA04" ,
+                                        "S01BB02" ,
+                                        "S01CA02" ,
+                                        "S01CB02" ,
+                                        "S02BA03" ,
+                                        "S02CA01" ,
+                                        "S03BA02" ,
+                                        "S03CA02" ,
+                                        "V03AB05" ;
+              rdfs:label "prednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitispvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :DiscussionAndConclusion ,
+                                                   :Introduction_content ,
+                                                   :Pancreatitis ,
+                                                   :ReportsInVigibase ,
+                                                   :Summary_content ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :IC025OfRoflumilastAndPancreatitis ,
+                                                          :ICOfRoflumilastAndPancreatitis ,
+                                                          :IncidenceOfDrugInducedPancreatitis ,
+                                                          :ReportsAfterDuplicateRemoval ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromSpain ,
+                                                          :ReportsFromUSA ,
+                                                          :ReportsFromUnitedKingdom ,
+                                                          :ReportsInVigibaseForRoflumilastAndPancreatitis ,
+                                                          :reportsWithCOPDAsTheIndication ,
+                                                          :reportsWithConcomitantDrugs ,
+                                                          :reportsWithFatalOutcome ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithPositiveRechallenge ,
+                                                          :reportsWithTimeToOnsetInfo ,
+                                                          :reports_with_dosage ;
+          OpenPVSignal:refers_to_adverse_effect :pancreatitis ;
+          OpenPVSignal:refers_to_drug :roflumilast ;
+          OpenPVSignal:refers_to_primary_suspect_drug :roflumilast ;
+          mp:supportedByData :EMA_SPC ,
+                             :confounding ,
+                             :dd ,
+                             :pancreatitis_and_drugs ;
+          OpenPVSignal:initially_identified_on "01/03/2014" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisrecommendedDoseOfRoflumilast
+:recommendedDoseOfRoflumilast rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Dosage ;
+                              OpenPVSignal:refers_to_drug :roflumilast ;
+                              OpenPVSignal:refers_to_interval_between_administrations :one_day_interval ;
+                              OpenPVSignal:has_dosage_unit "mcg" ;
+                              OpenPVSignal:has_value 500 ;
+                              OpenPVSignal:refers_to_dose_value "500 mcg" ;
+                              rdfs:label "recommended dose of roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref1
+:ref1 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "New Drugs Online Report for roflumilast. URL: http://www.ukmi.nhs.uk/applications/ndo/record_ view_open. asp?newDrugID=3320.Accessed: 28 July 2013." ;
+      rdfs:label "ref1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref2
+:ref2 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Sekimoto M, Takada T, Kawarada Y, Hirata K, Mayumi T, Yoshida M, et al. JPN guidelines for the management of acute pancreatitis: epidemiology, etiology, natural history, and outcome predictors in acute pancreatitis. J Hepatobiliary Pancreat Surg. 2006;13(1):10-24." ;
+      rdfs:label "ref2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref3
+:ref3 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "3.       Lankisch PG, Droge M, Gottesleben F. Drug induced acute pancreatitis: incidence and severity. Gut. 1995;37(4):565-67." ;
+      rdfs:label "ref3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref4
+:ref4 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Taber's online. URL: http://www.tabers.com/ tabersonline/view/Tabers-Dictionary/744381/all/ pancreatitis?q=pancreatitis. Accessed: July 2013." ;
+      rdfs:label "ref4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref5
+:ref5 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "NHS choices, Acute pancreatitis. http://www.nhs.uk/ Conditions/Pancreatitis. Accessed: July 2013." ;
+      rdfs:label "ref5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref6
+:ref6 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Underwood TW, Frye CB. Drug-induced pancreatitis. Clin Pharm. 1993;12(6):440-48." ;
+      rdfs:label "ref6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref7
+:ref7 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "US FDA Label for roflumilast (Daliresp) URL:http://www.accessdata.fda.gov/drugsatfda_d ocs/ label/2011/022522s000lbl.pdf.Accessed: 28 July 2013." ;
+      rdfs:label "ref7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref8
+:ref8 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content """Gupta S. Side-effects of roflumilast. The Lancet, 2012;379(9817):710-11.URL:
+http://www.thelancet.com/journals/lancet/article/ PIIS0140-6736(12)60304-3/fulltext. Accessed: 28
+July 2013.""" ;
+      rdfs:label "ref8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisref9
+:ref9 rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Bibliographic_reference ;
+      OpenPVSignal:has_content "Center for drug evaluation and research, medical reviews. URL:http://www.accessdata.fda.gov/drugsatfda_docs/nda/2011/022522Orig1s000MedR.pdf. Accessed: 28 July 2013." ;
+      rdfs:label "ref9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithCOPDAsTheIndication
+:reportsWithCOPDAsTheIndication rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:concerns_indication_for_use :ChronicObstructivePulmonaryDisease ;
+                                OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                                OpenPVSignal:has_count 6 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                rdfs:label "reports with COPD as the indication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithConcomitantDrugs
+:reportsWithConcomitantDrugs rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                             OpenPVSignal:has_count 4 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             rdfs:label "reports with concomitant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithFatalOutcome
+:reportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                                OpenPVSignal:has_count 5 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+                                OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                rdfs:label "reports with positive dechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithPositiveRechallenge
+:reportsWithPositiveRechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                                OpenPVSignal:has_count 1 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_rechallenge_outcome "positive rechallenge - condition appeared again" ;
+                                rdfs:label "reports with positive rechallenge" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreportsWithTimeToOnsetInfo
+:reportsWithTimeToOnsetInfo rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Reports_group ;
+                            OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                            OpenPVSignal:time_to_onset :timeToOnsetContent ;
+                            OpenPVSignal:has_count 4 ;
+                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                            rdfs:label "reports with time to onset info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisreports_with_dosage
+:reports_with_dosage rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Reports_group ;
+                     OpenPVSignal:is_subgroup_of :ReportsAfterDuplicateRemoval ;
+                     OpenPVSignal:refers_to_dosage :recommendedDoseOfRoflumilast ;
+                     OpenPVSignal:has_count 2 ;
+                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                     rdfs:label "reports with dosage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisroflumilast
+:roflumilast rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :mechanism_of_roflumilast ;
+             OpenPVSignal:has_ATC_code "R03DX07" ;
+             rdfs:label "roflumilast" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisroflumilastUsage
+:roflumilastUsage rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug_Usage ;
+                  OpenPVSignal:concerns_indication_for_use :ChronicObstructivePulmonaryDisease ;
+                  OpenPVSignal:is_related_with_drug_intake :oral_administration ;
+                  OpenPVSignal:refers_to_dosage :recommendedDoseOfRoflumilast ;
+                  OpenPVSignal:refers_to_drug :roflumilast ;
+                  mp:references :ref1 ;
+                  rdfs:label "roflumilast usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitissalbutamol
+:salbutamol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "R03CC02" ;
+            rdfs:label "salbutamol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitissimvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitissotalol
+:sotalol rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C07AA07" ;
+         rdfs:label "sotalol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisstatins
+:statins rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_ATC_code "C10AA " ;
+         rdfs:label "statins" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitissulphonamides
+:sulphonamides rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "D06BA " ;
+               rdfs:label "sulphonamides" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitistamsulosin
+:tamsulosin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G04CA02" ;
+            rdfs:label "tamsulosin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitistetracyclines
+:tetracyclines rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "J01AA " ;
+               rdfs:label "tetracyclines" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitistheophylline
+:theophylline rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "R03DA04" ;
+              rdfs:label "theophylline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitistimeToOnsetContent
+:timeToOnsetContent rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2006/time#DurationDescription> ;
+                    OpenPVSignal:has_content "it ranged from 10 days to two months" ;
+                    rdfs:label "time to onset content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitistiotropiumBromide
+:tiotropiumBromide rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug ;
+                   OpenPVSignal:has_ATC_code "R03BB04" ;
+                   rdfs:label "tiotropium bromide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitisweight_loss
+:weight_loss rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_MedDRA_code 10047900 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Weight loss" ;
+             rdfs:label "weight loss" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis#fluticasonepropionate/salmeterolXinafoate
+<http://purl.org/OpenPVSignal/Signals/2014_1_roflumilast_pancreatitis#fluticasonepropionate/salmeterolXinafoate> rdf:type owl:NamedIndividual ,
+                                                                                                                          OpenPVSignal:Drug ;
+                                                                                                                 OpenPVSignal:has_ATC_code "R03AK06" ;
+                                                                                                                 rdfs:label "fluticasone propionate / salmeterol xinafoate" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

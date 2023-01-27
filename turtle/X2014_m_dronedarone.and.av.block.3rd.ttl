@@ -1,0 +1,1610 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block> .
+
+<http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block> rdf:type owl:Ontology ;
+                                                                    owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                mp: ;
+                                                                    rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255514/"^^xsd:anyURI ;
+                                                                    rdfs:label "Dronedarone and AV block"^^xsd:Literal ;
+                                                                    owl:versionInfo "draft-v0.95-20211112"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+dc:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/hasVersion
+terms:hasVersion rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#refers_to_dechallenge_outcome
+OpenPVSignal:refers_to_dechallenge_outcome rdfs:subPropertyOf owl:topDataProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockATHENA_trial
+:ATHENA_trial rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001182 ;
+              OpenPVSignal:refers_to_drug :dronedarone ;
+              mp:references :Ref.8 ,
+                            :Ref.9 ;
+              OpenPVSignal:has_content "The published results of the ATHENA trial (2,301 patients receiving dronedarone 400 mg twice daily and 2,327 patients receiving placebo) does not specifically mention AV block as an adverse event. 8 In the post- hoc analysis publication, there is no mentioning of AV block as an adverse event. 9 This article highlights that the reduced mortality and cardiovascular hospitalization associated with the use of dronedarone occurs in a subgroup of patients with more extensive cardiovascular disease and who already receive established (secondary) cardiovascular preventive drugs, i.e. b-blockers, statins, angiotensin converting enzyme inhibitors, and antithrombotic therapy." ;
+              rdfs:label "ATHENA trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockAVBlock
+:AVBlock rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Free_text_reporting_element ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ;
+         mp:references :Ref.4 ,
+                       :Ref.5 ;
+         OpenPVSignal:has_content """The primary role of the  atrioventricular  (AV) node is to conduct the action potential from the atria to the ventricles,introducing a delay between atrial and ventricular excitation; this delay is essential for allowing ventricles to be properly filled. The AV node also acts as a backup pacemaker in the case  of failure  of the sinus node and stops arrhythmias in the atria,such as atrial fibrillation. AV conduction can be delayed,intermittently blocked,or completely blocked – classified as first,second,or third degree block.4 AV block can be caused by myocardial ischaemia or infarction,degeneration of the His-Purkinje conduction system,infections,immunological disorders,surgery,congenital disorders and drugs.4 Beta-blockers,digoxin,verapamil and diltiazem are among the most frequent culprit drugs,digitalis toxicity causes AV block. Non- cardiovascular drugs,such as rivastigmine,have also been reported as the cause of AV block.
+Pharmacokinetic (PK) interaction between paroxetine and metoprolol has also been associated with AV block. Pharmacodynamic (PD) interactions between rivastigmine and beta blockers have also been published.
+In first degree block there is a delay in conduction of the atrial impulse to the ventricles,usually at the level of the atrioventricular node. In second degree block some P waves are not followed by a QRS complex because of an intermittent failure of conduction between the atria and ventricles. In third degree block there is complete failure of conduction between the atria and ventricles,with complete independence of atrial and ventricular contractions and no relation between P waves and the QRS complexes.4AV block can be caused by myocardial ischaemia or infarction, degeneration of the His-Purkinje conduction system, infections, immunological disorders, surgery, congenital disorders and drugs.4 Beta-blockers, digoxin, verapamil and diltiazem are among the most frequent culprit drugs, digitalis toxicity causes AV block. Non-cardiovascular drugs, such as rivastigmine, have also been reported as the cause of AV block. Pharmacokinetic (PK) interaction between paroxetine and metoprolol has also been associated with AV block. Pharmacodynamic (PD) interactions between rivastigmine and beta blockers have also been published. In first degree block there is a delay in conduction of the atrial impulse to the ventricles, usually at the level of the atrioventricular node. In second degree block some P waves are not followed by a QRS complex because of an intermittent failure of conduction between the atria and ventricles. In third degree block there is complete failure of conduction between the atria and ventricles, with complete independence of atrial and ventricular contractions and no relation between P waves and the QRS complexes.4""" ;
+         rdfs:label "AV block pathophysiology" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockAuspar_Clinical_Findings
+:Auspar_Clinical_Findings rdf:type owl:NamedIndividual ,
+                                   obo:OAE_0001197 ;
+                          OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                          OpenPVSignal:refers_to_drug :dronedarone ;
+                          mp:references :Ref.2 ;
+                          OpenPVSignal:has_content "The Auspar “Clinical findings” section includes safety data results of six safety studies.2 In the study DAFNE, two patients (1%) presented with AV block in the dronedarone group (one patient in the 1200 mg group and one patient in the 1600 mg group), compared with 2 patients (3%) in the placebo group. In the ADONIS study one out of six deaths in the dronaderone group was due to a third degree AV block; AV block is not mentioned among cardiac treatment emerging adverse events (TEAEs). AV block is not mentioned as an adverse effect in the ERATO, EURIDIS, ATHENA or DIONYSOS studies. In the ERATO study, prolongation of PR interval occurred more frequently in the dronedarone group.2 The Auspar “Clinical findings” section also includes the safety data results of Bioavailability and Bioequivalence(BA/BE) and PK studies.2 In 11 BA/BE, PK and interaction studies including 332 healthy volunteers, 44 subjects experienced 1st or 2 nd degree AV block, with dronedarone alone (39 cases) or with propranolol (one case), diltiazem (one case) oestrogens (two cases) and grapefruit juice (one case); one AV block was reported as a serious adverse event (SAE), two withdrawals were due to AV block (one being the mentioned SAE). Doses that caused AV block ranged from 400 mg to 2400 mg, but not all are specified. The PR interval was reported as increased in five studies: “at higher doses”, “in all doses”, “with diltiazem”, “in elderly males” and “PR>220 ms”. The studies’ characteristics and number of subjects experiencing AV block are shown in Table 2." ;
+                          rdfs:label "Auspar Clinical Findings" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockConclusionContent
+:ConclusionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Conclusion ;
+                   OpenPVSignal:has_content """As previously stated, a global analysis of these 13 ICSRs supports an association between dronedarone and AV block, because of biological plausibility, time to onset and dechallenge, although concomitant drugs could have had a contributory or synergistic role. Concerning the case reporting the results of  a study performed  in 70 patients (although it is not stated how many patients presented with AV block after therapy with dronedarone (one patient would mean 1.43%, two patients 2.86%) and concomitant medication or pathological status are not detailed), it seems to be clear that dronedarone had a role in the onset of AV block due to the time to onset.
+No published cases or case series reports for humans were found in a PubMed search with the query “dronedarone AND (AV block OR atrioventricular block)”. Labelled product information does not mention AV block as an adverse effect of dronedarone, although it is stated that decreased AV conduction  is  one  of the electrophysiological effects of dronedarone. In one of the published articles reporting clinical trials results, AV block is mentioned as an adverse effect. Results posted in www.clinicaltrials.gov (six clinical trials) mention AV block as an adverse event or a serious adverse event in two studies.
+According to WHO’s definition, a signal is “the reported information on a possible causal relation between an adverse effect and a drug, the relationship being previously unknown or incompletely documented”. Taking into account that, on one hand, AV block with dronedarone is not mentioned as an adverse effect in the information addressed to prescribers and is rarely reported in publications of  Phase  III  clinical trial results, and, on the other hand, both PK clinical trials’ available information and the analysis of the ICSRs in VigiBase provide a rationale for an association between dronedarone and AV block, this combination should be considered as a signal and deserves further investigation.""" ;
+                   rdfs:label "Conclusion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDiscussionContent
+:DiscussionContent rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Discussion ;
+                   mp:references :Ref.1 ,
+                                 :Ref.2 ,
+                                 :Ref.3 ,
+                                 :Ref.6 ,
+                                 :Ref.7 ;
+                   OpenPVSignal:has_content """Discussion
+For the analysis of ICSRs retrieved in VigiBaseTM, as previously stated, case 1 will not be taken into consideration because of inconsistencies in how dates are reported. In six out of the remaining 13 ICSRs, concomitant drugs with potential to prolong PR interval had been administered before the starting of dronedarone’s therapy: digoxin (case 5), beta blockers (metoprolol in cases 3 and 9 bisoprolol in case 4, carvedilol in  cases 10 and 13, and atenolol in case 10, pindolol in case 12), and calcium channel blockers (lercanidipine in case 3). Besides, amiodarone is mentioned as a concomitant medication in case 5 (together with digoxine). A synergistic effect on atrioventricular conduction is possible; treatment with Class I or III antiarrhythmics such as amiodarone is formally contraindicated with dronedarone.
+Pharmacodynamic interactions between
+dronedarone and digoxin, beta blockers and calcium-channel blockers are known: dronedarone (400 mg twice daily) increased digoxin exposure by 2.5-fold by inhibiting P-gp transporter; beta blockers that are metabolized by CYP2D6 can have their exposure increased by dronedarone, and lercanidipine is metabolized by CYP3A4.
+Cytochrome P450 CYP2D6 is involved in the metabolism of bisoprolol, carvedilol and metoprolol; carvedilol is also substrate of P-gP and CYP3A4 and bisoprolol of  CYP3A4. In all these six cases, concomitant medication could play a synergistic effect in AV block, but the role of dronedarone cannot be ruled out due to the time to onset and the PD characteristics of the drug. In two cases, concomitant medication have no potential to cause AV block (cases 2 and 11), and in four cases (including the only fatal case) no concomitant medication was reported. For 13 analysed ICSRs, nine patients (70%) were women: of note, dronedarone’s plasma exposure in elderly females was increased in a pharmacokinetic study conducted in healthy subjects. In this study, systemic exposure to dronedarone was increased in the elderly males compared with young males by  around 25%, and in elderly females compared with elderly males by around 50%. The PK parameters for dronedarone were increased by around 60% in elderly females compared with elderly males.
+However, dose adjustments are not formally considered necessary.
+2nd and 3rd AV block, which was one of the exclusion criteria in clinical trials EURIDIS,2,7 ADONIS,2,7 ATHENA,2,6 DIONYSOS,2,6 and ERATO2,
+is a formal contraindication for therapy with dronedarone, except for patients with pacemakers.1-3 No ICSR reports a history of 2nd or 3rd AV block, (but the details for pacemaker indication and implantation were not mentioned for the two patients with pacemaker).
+
+ 
+""" ;
+                   rdfs:label "Discussion content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDr._Raquel_Herrera_Comoglio
+:Dr._Raquel_Herrera_Comoglio rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Author ;
+                             OpenPVSignal:has_affiliation "Argentina" ;
+                             OpenPVSignal:has_first_name "Raquel" ;
+                             OpenPVSignal:has_last_name "Herrera Comoglio" ;
+                             rdfs:label "Dr. Raquel Herrera Comoglio" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDronedaroneDosage
+:DronedaroneDosage rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Dosage ;
+                   OpenPVSignal:refers_to_drug :dronedarone ;
+                   OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#12_hours_interval> ;
+                   OpenPVSignal:has_content "Dronedarone 400 mg twice daily has been approved since 2009 in USA, Canada, Australia, the EU and other countries to reduce the risk of cardiovascular hospitalization in patients with paroxysmal or persistent atrial fibrillation (AF) or atrial flutter (AFL), with a recent episode of AF/AFL and associated cardiovascular risk factors.1-3" ;
+                   OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                   OpenPVSignal:has_value 400 ;
+                   OpenPVSignal:refers_to_dose_value "400 mg" ;
+                   rdfs:label "Dronedarone dosage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDronedaroneUsage
+:DronedaroneUsage rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug_Usage ;
+                  OpenPVSignal:concerns_indication_for_use :atrialFibrillation ,
+                                                           :atrialFlutterFibrillation ;
+                  OpenPVSignal:refers_to_dosage :DronedaroneDosage ;
+                  OpenPVSignal:refers_to_drug :dronedarone ;
+                  rdfs:label "Dronedarone usage" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDronedarone_and_AV_block
+:Dronedarone_and_AV_block rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                          OpenPVSignal:refers_to_author :Dr._Raquel_Herrera_Comoglio ;
+                          OpenPVSignal:refers_to_signal :pvSignal ;
+                          OpenPVSignal:has_creation_date "01/06/2014" ;
+                          OpenPVSignal:has_overall_conclusion "causal association" ;
+                          rdfs:label "Dronedarone and AV block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment1
+:DurationOfTreatment1 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "10 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 10 ;
+                      rdfs:label "Duration of treatment 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment10
+:DurationOfTreatment10 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "47 days" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 47 ;
+                       rdfs:label "Duration of treatment 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment11
+:DurationOfTreatment11 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "7 days" ;
+                       time:nominalPosition "days" ;
+                       time:numericPosition 7 ;
+                       rdfs:label "Duration of treatment 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment13
+:DurationOfTreatment13 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "17 months" ;
+                       time:nominalPosition "months" ;
+                       time:numericPosition 17 ;
+                       rdfs:label "Duration of treatment 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment14
+:DurationOfTreatment14 rdf:type owl:NamedIndividual ,
+                                time:DurationDescription ;
+                       OpenPVSignal:has_content "6 months" ;
+                       time:nominalPosition "months" ;
+                       time:numericPosition 6 ;
+                       rdfs:label "Duration of treatment 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment2
+:DurationOfTreatment2 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "41 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 41 ;
+                      rdfs:label "Duration of treatment 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockDurationOfTreatment3
+:DurationOfTreatment3 rdf:type owl:NamedIndividual ,
+                               time:DurationDescription ;
+                      OpenPVSignal:has_content "112 days" ;
+                      time:nominalPosition "days" ;
+                      time:numericPosition 112 ;
+                      rdfs:label "Duration of treatment 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockEURIDIS_and_ADONIS_trials
+:EURIDIS_and_ADONIS_trials rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001197 ,
+                                    OpenPVSignal:Clinical_trial_information ;
+                           OpenPVSignal:refers_to_adverse_effect :bradycardia ;
+                           OpenPVSignal:refers_to_drug :dronedarone ;
+                           mp:references :Ref.7 ;
+                           OpenPVSignal:has_content "Published articles reporting clinical trials results with dronedarone were also reviewed, although a systematic review was not performed. The article for the EURIDIS and ADONIS trials (828 patients treated with dronedarone and 409 patients with placebo),7 reported “bradycardia or conduction block” as an adverse event in 22 patients treated with dronedarone (2.7%) and in eight patients with placebo (2%) (p=0.56); and as SAEs in eight patients treated with dronedarone (1%) and in three patients with placebo (0.7%) (p=1.0). The term “Any bradycardia or conduction block event” included complete AV block; serious adverse events included complete AV block, sinus bradycardia, 1st-degree AV block and nodal arrhythmia." ;
+                           rdfs:label "EURIDIS and ADONIS trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockIntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ;
+                     OpenPVSignal:has_content """Introduction
+Dronedarone is an amiodarone analogue with structural modifications intended to eliminate the effects of amiodarone on thyroid and pulmonary functions.1-3 Dronedarone is iodine-free, less lipophilic than  amiodarone,  has  a   much smaller volume of distribution, and has an elimination half-life of about 24 hours,  in contrast to amiodarone’s half-life of several weeks. Unlike amiodarone, dronedarone has little effect at thyroid receptors.
+Dronedarone’s electrophysiological properties belong to all four Vaughan-Williams classes of antiarrhythmic agents with multiple ion channel blocking, which include inhibiting potassium currents (Class III), sodium currents (Class Ib) and calcium currents (Class IV).1-3 It also noncompetitively antagonizes beta adrenergic activity (Class II). In animal models, dronedarone reduces the heart rate, prolongs Wenckebach cycle length and AH-, PQ-, QT- intervals. It increases effective refractory periods (ERP) of the atrium, atrioventricular node. A moderate heart rate lowering effect (about four beats  per  minute) was noted at 800 mg twice daily. There was a clear dose-dependent effect on PR-interval with an increase of +5 millisecond (ms) at 400 mg twice daily and up to +50 ms at 1600 mg twice daily3.
+Dronedarone  is  primarily  metabolized  by CYP3A4 and  therefore  inhibitors  and   inducers of CYP3A4 have the potential to interact on dronedarone. Dronedarone acts as a moderate inhibitor of CYP3A4, a mild inhibitor of CYP2D6 and a potent inhibitor of P-glycoproteins (P-gp), thus having the potential to  interact  on substrates of P-glycoproteins, CYP3A4 or CYP2D6. Dronedarone and/or its metabolites also have been shown to inhibit transport proteins of the Organic Anion Transporter (OAT), Organic Anion Transporting Polypeptide (OATP) and Organic Cation Transporter (OCT) families in vitro. These pharmacokinetic characteristics produce PK interactions with digoxin (transported by P-gp), verapamil and diltiazem (CYP3A4 inhibitors) and beta-blockers (metabolized by CYP2D6). Digoxin’s dose has to be halved when administered with dronedarone, verapamil and diltiazem produce a
+1.4 to 1.7 increase in dronedarone’s plasma level,
+and metoprolol level increases 1.6 folds with dronedarone.1-3
+Potential pharmacodynamic interactions can also be expected with beta-blockers, calcium antagonists and digitalis. Decreased AV conduction can be potentiated by digoxin. Calcium channel blockers with depressant effects on the sinus and AV nodes could potentiate dronedarone’s effects on conduction. Bradycardia was seen more frequently in patients treated with beta- blockers.1-3
+Dronedarone 400 mg twice daily has been approved since 2009 in USA, Canada, Australia, the EU and other countries to reduce the risk of cardiovascular hospitalization in patients with paroxysmal or persistent atrial fibrillation (AF) or atrial flutter (AFL), with a recent episode of AF/AFL and associated cardiovascular risk factors.1-3
+The primary role of the  atrioventricular  (AV) node is to conduct the action potential from the atria to the ventricles, introducing a delay between atrial and ventricular excitation; this delay is essential for allowing ventricles to be properly filled. The AV node also acts as a backup pacemaker in the case  of failure  of the sinus node and stops arrhythmias in the atria, such as atrial fibrillation. AV conduction can be delayed, intermittently blocked, or completely blocked – classified as first, second, or third degree block.4 AV block can be caused by myocardial ischaemia or infarction, degeneration of the His-Purkinje conduction system, infections, immunological disorders, surgery, congenital disorders and drugs.4 Beta-blockers, digoxin, verapamil and diltiazem are among the most frequent culprit drugs, digitalis toxicity causes AV block. Non- cardiovascular drugs, such as rivastigmine, have also been reported as the cause of AV block.
+Pharmacokinetic (PK) interaction between paroxetine and metoprolol has also been associated with AV block. Pharmacodynamic (PD) interactions between rivastigmine and beta blockers have also been published.
+In first degree block there is a delay in conduction of the atrial impulse to the ventricles, usually at the level of the atrioventricular node. In second degree block some P waves are not followed by a QRS complex because of an intermittent failure of conduction between the atria and ventricles. In third degree block there is complete failure of conduction between the atria and ventricles, with complete independence of atrial and ventricular contractions and no relation between P waves and the QRS complexes.4""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockLiteratureAndLabelling
+:LiteratureAndLabelling rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Literature_information ;
+                        mp:references :Ref.1 ,
+                                      :Ref.10 ,
+                                      :Ref.11 ,
+                                      :Ref.2 ,
+                                      :Ref.3 ,
+                                      :Ref.6 ,
+                                      :Ref.7 ,
+                                      :Ref.8 ,
+                                      :Ref.9 ;
+                        OpenPVSignal:has_content """Literature and Labelling
+Atrioventricular block is not mentioned as an adverse effect in the EMA Summary of Product characteristics, the FDA Multaq label dated on March 27th 2013 or in the Auspar Multaq Product Information.1-3
+The Auspar “Clinical findings” section includes safety data results of six safety studies.2 In the study DAFNE, two patients (1%) presented with AV block  in  the dronedarone group (one patient in the 1200 mg group and one patient in the 1600 mg group), compared with 2 patients (3%) in the placebo group. In the ADONIS study one  out of six deaths in the dronaderone group was due to a third degree AV block; AV block is not mentioned among cardiac treatment emerging adverse events (TEAEs). AV block is not mentioned as an adverse effect in the ERATO, EURIDIS, ATHENA or DIONYSOS studies. In the ERATO study, prolongation of PR interval occurred more frequently in the dronedarone group.2
+The Auspar “Clinical findings” section also includes the safety data results of Bioavailability and Bioequivalence(BA/BE) and PK studies.2 In 11 BA/BE, PK and interaction studies including 332 healthy volunteers, 44 subjects experienced 1st or 2nd degree AV block, with dronedarone alone (39 cases) or with propranolol (one case), diltiazem (one case) oestrogens (two cases) and grapefruit juice (one case); one AV block was reported as a serious adverse event (SAE), two withdrawals were due to AV block (one being the mentioned SAE). Doses that caused AV block ranged from
+400 mg to 2400 mg, but not all are specified. The PR interval was reported as increased in five studies: “at higher doses”, “in all doses”, “with diltiazem”, “in elderly males” and “PR>220 ms”. The studies’ characteristics and number of subjects experiencing AV block are shown in Table 2.
+At the www.clinicaltrials.gov website, results from six studies with dronedarone are presented. AV block is not listed as a SAE or AE for the HESTIA, ODYSSEUS or PALLAS studies. AV block first degree is reported as an AE in one subject treated with dabigatran etexilate 150 mg + dronedarone 400 mg two hours later in the Phase I “Drug Interaction Study with dabigatran etexilate and dronedarone in healthy subjects”, (36 healthy volunteers). One patient in the dronedarone group presented with atrioventricular block complete (SAE) in the Phase III Study ATHENA. No patients in the dronedarone group and one patient in the amiodarone group presented with AV block 2nd degree (SAE) in the Phase III study DIONYSOS.6
+Published articles reporting clinical trials results with dronedarone were also reviewed, although a systematic review was not performed. The article for the EURIDIS and ADONIS trials (828 patients treated with dronedarone and 409 patients with placebo),7 reported “bradycardia or conduction block” as an adverse event in 22 patients treated with dronedarone (2.7%) and in eight patients with placebo (2%) (p=0.56); and as SAEs in eight patients treated with dronedarone (1%) and in three patients with placebo (0.7%) (p=1.0). The term “Any bradycardia or conduction block event” included complete AV block; serious adverse events included complete AV block, sinus bradycardia, 1st-degree AV block and nodal arrhythmia.
+
+The published results of the ATHENA trial (2,301 patients receiving dronedarone 400 mg  twice daily and 2,327 patients receiving placebo) does not specifically mention AV block as an adverse event.8 In the  post- hoc analysis publication, there is no mentioning of AV block as an adverse event.9 This article highlights that the reduced mortality and cardiovascular hospitalization associated with the use of dronedarone occurs in a subgroup of patients with more extensive cardiovascular disease and who already receive established (secondary) cardiovascular
+preventive drugs, i.e. b-blockers, statins, angiotensin converting enzyme inhibitors, and antithrombotic therapy.
+An article reporting results from the PALLAS trial does not mention AV block as an adverse effect. There were 13 deaths because of cardiac arrhythmia (2.5%) in the dronedarone group and four deaths (0.8%) in the placebo group, types of arrhythmia are not stated.10
+A third of the patients were treated with digoxin, in this subgroup study medication was permanently discontinued prematurely in 21% of patients with dronedarone and in the 11% of patients with placebo, causes are not stated.10
+A review article published in 2011 does not mention AV block as a possible adverse effect of dronedarone, but does state that dronedarone slows heart rate and prolongs AV nodal refractoriness and thus can increase the PR interval.11
+
+""" ;
+                        rdfs:label "Literature and labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockMechanismContent
+:MechanismContent rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Mechanism ;
+                  mp:references :Ref.1 ,
+                                :Ref.2 ,
+                                :Ref.3 ;
+                  OpenPVSignal:has_content "Dronedarone is an amiodarone analogue with structural modifications intended to eliminate the effects of amiodarone on thyroid and pulmonary functions.1-3 Dronedarone is iodine-free, less lipophilic than amiodarone, has a much smaller volume of distribution, and has an elimination half-life of about 24 hours, in contrast to amiodarone’s half-life of several weeks. Unlike amiodarone, dronedarone has little effect at thyroid receptors. Dronedarone’s electrophysiological properties belong to all four Vaughan-Williams classes of antiarrhythmic agents with multiple ion channel blocking, which include inhibiting potassium currents (Class III), sodium currents (Class Ib) and calcium currents (Class IV).1-3 It also noncompetitively antagonizes beta adrenergic activity (Class II). In animal models, dronedarone reduces the heart rate, prolongs Wenckebach cycle length and AH-, PQ-, QT- intervals. It increases effective refractory periods (ERP) of the atrium, atrioventricular node. A moderate heart rate lowering effect (about four beats per minute) was noted at 800 mg twice daily. There was a clear dose-dependent effect on PR-interval with an increase of +5 millisecond (ms) at 400 mg twice daily and up to +50 ms at 1600 mg twice daily3 . Dronedarone is primarily metabolized by CYP3A4 and therefore inhibitors and inducers of CYP3A4 have the potential to interact on dronedarone. Dronedarone acts as a moderate inhibitor of CYP3A4, a mild inhibitor of CYP2D6 and a potent inhibitor of P-glycoproteins (P-gp), thus having the potential to interact on substrates of P-glycoproteins, CYP3A4 or CYP2D6. Dronedarone and/or its metabolites also have been shown to inhibit transport proteins of the Organic Anion Transporter (OAT), Organic Anion Transporting Polypeptide (OATP) and Organic Cation Transporter (OCT) families in vitro. These pharmacokinetic characteristics produce PK interactions with digoxin (transported by P-gp), verapamil and diltiazem (CYP3A4 inhibitors) and beta-blockers (metabolized by CYP2D6). Digoxin’s dose has to be halved when administered with dronedarone, verapamil and diltiazem produce a 1.4 to 1.7 increase in dronedarone’s plasma level, and metoprolol level increases 1.6 folds with dronedarone.1-3" ;
+                  rdfs:label "Mechanism content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset1
+:Onset1 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        OpenPVSignal:has_content "17 d" ;
+        time:nominalPosition "days" ;
+        time:numericPosition 17 ;
+        rdfs:label "Onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset12
+:Onset12 rdf:type owl:NamedIndividual ,
+                  time:DurationDescription ;
+         OpenPVSignal:has_content "1 y 4.5 m" ;
+         time:nominalPosition "days" ;
+         time:numericPosition 500 ;
+         rdfs:label "Onset 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset13
+:Onset13 rdf:type owl:NamedIndividual ,
+                  time:DurationDescription ;
+         OpenPVSignal:has_content "1 y 4 m 21 d" ;
+         time:nominalPosition "days" ;
+         time:numericPosition 506 ;
+         rdfs:label "Onset 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset14
+:Onset14 rdf:type owl:NamedIndividual ,
+                  time:DurationDescription ;
+         time:nominalPosition "months" ;
+         time:numericPosition 6 ;
+         rdfs:label "Onset 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset2
+:Onset2 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        OpenPVSignal:has_content "14 d" ;
+        time:nominalPosition "days" ;
+        time:numericPosition 14 ;
+        rdfs:label "Onset 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset3
+:Onset3 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        OpenPVSignal:has_content "112 d" ;
+        time:nominalPosition "days" ;
+        time:numericPosition 112 ;
+        rdfs:label "Onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset6
+:Onset6 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        OpenPVSignal:has_content "same month" ;
+        rdfs:label "Onset 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockOnset7
+:Onset7 rdf:type owl:NamedIndividual ,
+                 time:DurationDescription ;
+        OpenPVSignal:has_content "same month" ;
+        rdfs:label "Onset 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPALLAS_trial
+:PALLAS_trial rdf:type owl:NamedIndividual ,
+                       obo:OAE_0001182 ;
+              OpenPVSignal:refers_to_drug :dronedarone ;
+              mp:references :Ref.10 ;
+              OpenPVSignal:has_content "An article reporting results from the PALLAS trial does not mention AV block as an adverse effect. There were 13 deaths because of cardiac arrhythmia (2.5%) in the dronedarone group and four deaths (0.8%) in the placebo group, types of arrhythmia are not stated.10 A third of the patients were treated with digoxin, in this subgroup study medication was permanently discontinued prematurely in 21% of patients with dronedarone and in the 11% of patients with placebo, causes are not stated.10" ;
+              rdfs:label "PALLAS trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 79 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 75 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 67 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 87 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 75 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 28 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 73 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 70 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 71 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPatient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 57 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockPharmacokineticProfileOfDronedaroneInWomen
+:PharmacokineticProfileOfDronedaroneInWomen rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Adverse_Effect_Mechanism ;
+                                            OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                                            OpenPVSignal:has_content """For 13 analysed ICSRs, nine patients (70%) were women: of note, dronedarone’s plasma exposure in elderly females was increased in a pharmacokinetic study conducted in healthy subjects. In this study, systemic exposure to dronedarone was increased in the elderly males compared with young males by  around 25%, and in elderly females compared with elderly males by around 50%. The PK parameters for dronedarone were increased by around 60% in elderly females compared with elderly males.
+However, dose adjustments are not formally considered necessary.""" ;
+                                            rdfs:label "Pharmacokinetic profile of dronedarone in women" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Summary of product characteristics for Dronedarone Hydrochloride. URL: http://www.ema.europa.eu/docs/ en_GB/document_library/EPAR_-_Product_Information/human/001043/WC500044534.pdf. Accessed 20 September 2013." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Connolly SJ, Camm AJ, Halperin JL, Joyner C, Alings M, Amerena J et al. Dronedarone in high- risk per- manent atrial fibrillation. N Engl J Med. 2011 Dec 15;365(24):2268-76. doi: 10.1056/NEJMoa1109867." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Naccarelli GV, Wolbrette DL, Levin V, Samii S, Banchs JE, Penny-Peterson E et al. Safety and efficacy of dro- nedarone in the treatment of atrial fibrillation/flutter. Clin Med Insights Cardiol. 2011;5:103-19." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Australian Public Assessment Report for Dronedarone Hydrochloride. URL: http://www. tga.gov.au/pdf/auspar/auspar-multaq.pdf. Accessed 20 September 2013." ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "FDA. Multaq Label FDA March 27th 2013. URL:http://www.accessdata.fda.gov/drugsatfda_d ocs/ label/2013/022425s021lbl.pdf. Accessed 20 September 2013." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Da Costa D, Brady WJ, Edhouse J. Bradycardias and atrioventricular conduction block. BMJ. 2002 Mar 2;324(7336):535-8." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Wetzel U, Hindricks G, Bollmann A, Salmas J, John S, Kornej J et al. Safety and efficacy of dronedarone in clinical routine use in patients with atrial arrhythmias, Herbsttagung DGK Nürnberg 2010-POSTER HZ Leipzig, Clin Res Cardiol. 99, Suppl 2, October 2010 / DOI: 10.1007/s00392- 010-1200-0." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Clinicaltrials.gov URL: http://www.clinicaltrials.gov/ct2/results?term=dro nedarone. Accessed between October 11th and Nov. 5th 2013." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Singh BN, Connolly SJ, Crijns HJ, Roy D, Kowey PR, Capucci A et al. EURIDIS and ADONIS Investigators. Dronedarone for maintenance of sinus rhythm in atrial fibrillation or flutter. N Engl J Med. 2007 Sep 6;357(10):987-99." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Hohnloser SH, Crijns HJ, van Eickels M, Gaudin C, Page RL, Torp-Pedersen C et al. ATHENA Investigators. Effect of dronedarone on cardiovascu- lar events in atrial fibrillation. N Engl J Med. 2009 Feb 12;360(7):668-78." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockRef.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Pisters R, Hohnloser SH, Connolly SJ, TorpPedersen C, Naditch-Brûlé L, Page RL, Crijns HJ; for the ATHENA Investigators. Effect of dronedarone on clinical end points in patients with atrial fibrillation and coronary heart disease: insights from the ATHENA trial. Europace. 2013 Sep 26, e-pub ahead of print." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :acuteRenalFailure ,
+                                               :avBlock ,
+                                               :av_block_first_degree ,
+                                               :bloodCreatinineIncreased ,
+                                               :diarrhoea ,
+                                               :potassiumSerumIncreased ;
+         OpenPVSignal:refers_to_concomitant_drug :amlodipin ,
+                                                 :digoxin ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset1 ;
+         time:hasDurationDescription :DurationOfTreatment1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                :avBlock ,
+                                                :av_block_first_degree ,
+                                                :brainNatriureticPeptideIncreased ,
+                                                :cardiacFailureCongestive ,
+                                                :dyspnoea ,
+                                                :muscleSpasms ,
+                                                :oedemaPeripheral ,
+                                                :sinusBradycardia ;
+          OpenPVSignal:refers_to_concomitant_drug :atenolol ,
+                                                  :carvedilol ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          time:hasDurationDescription :DurationOfTreatment10 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFlutterFibrillation ,
+                                                :avBlock ,
+                                                :av_block_first_degree ,
+                                                :bradycardia ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          time:hasDurationDescription :DurationOfTreatment11 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                :avBlock ,
+                                                :av_block_first_degree ,
+                                                :dyspnoea ,
+                                                :fatigue ,
+                                                :hyperhydrosis ,
+                                                :malaise ,
+                                                :palpitations ,
+                                                :tachycardia ;
+          OpenPVSignal:refers_to_concomitant_drug :pindolol ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          OpenPVSignal:time_to_onset :Onset12 ;
+          OpenPVSignal:refers_to_dechallenge_process "false"^^xsd:boolean ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                :avBlock ,
+                                                :av_block_first_degree ,
+                                                :malaise ;
+          OpenPVSignal:refers_to_concomitant_drug :carvedilol ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          OpenPVSignal:time_to_onset :Onset13 ;
+          time:hasDurationDescription :DurationOfTreatment13 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                                :pacemakerComplication ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+          OpenPVSignal:time_to_onset :Onset14 ;
+          time:hasDurationDescription :DurationOfTreatment14 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :info_case_2 ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                               :av_block_second_degree ,
+                                               :pacemaker-generatedRhythm ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset2 ;
+         time:hasDurationDescription :DurationOfTreatment2 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+         OpenPVSignal:refers_to_rechallenge_outcome "negative rechallenge - condition not appeared" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                               :av_block_second_degree ,
+                                               :cardiacFailure ;
+         OpenPVSignal:refers_to_concomitant_drug :lercanidipine ,
+                                                 :metoprolol ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset3 ;
+         time:hasDurationDescription :DurationOfTreatment3 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                               :bradycardia ;
+         OpenPVSignal:refers_to_concomitant_drug :bisoprolol ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                               :supraventricularExtrasystoles ;
+         OpenPVSignal:refers_to_concomitant_drug :amiodarone ,
+                                                 :digoxin ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_dechallenge_outcome "unknown" ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :acuteLiverDisturbance ,
+                                               :avBlock ,
+                                               :bloodCreatinineIncreased ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset6 ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :avBlock ,
+                                               :palpitations ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:time_to_onset :Onset7 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :atrialTachycardia ,
+                                               :avBlock ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReport9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                               :avBlock ,
+                                               :av_block_first_degree ,
+                                               :bradycardia ,
+                                               :hotFlushes ,
+                                               :intoleranceInduced ,
+                                               :lethargia ,
+                                               :qtProlonged ,
+                                               :shortnessOfBreath ,
+                                               :supraventricularExtrasystoles ;
+         OpenPVSignal:refers_to_concomitant_drug :metoprolol ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :dronedarone ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReportsFromCanada
+:ReportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReportsFromGermany
+:ReportsFromGermany rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Reports_group ;
+                    OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                    OpenPVSignal:has_count 3 ;
+                    OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Germany" ;
+                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                    rdfs:label "Reports from Germany" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReportsFromIsrael
+:ReportsFromIsrael rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                   OpenPVSignal:has_count 1 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Israel" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Israel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReportsFromSpain
+:ReportsFromSpain rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Spain" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Spain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReportsFromUSA
+:ReportsFromUSA rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                OpenPVSignal:has_count 8 ;
+                OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Reports from USA" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockReports_in_Vigibase
+:Reports_in_Vigibase rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Free_text_reporting_element ;
+                     mp:references :Ref.4 ,
+                                   :Ref.5 ;
+                     OpenPVSignal:has_content "Up to 20 September 2013, 14 Individual Case Safety Reports (ICSRs) and one ICSR reflecting data from literature5 were submitted to the WHO Global ICSR Database, VigiBaseTM. The ICSRs come from USA (eight), Germany (three), Canada (one), Israel (one), and Spain (one). The main characteristics of these reports in VigiBase are displayed in Table 1. The ICSRs represent 10 female and four male patients; age was reported in 10 cases and ranged from 28 to 87 years, (seven patients >65 years; four patients 75 years or older). All but two ICSRs were reported as “serious”, one being fatal. Six out of 14 ICSRs do not report the degree of AV block, six report 1st degree AV block and 2nd degree is reported in two cases. The dose of dronedarone was 400 mg twice daily in eight cases, 400 mg without reported frequency in two cases, and not known in four cases. Nine ICSRs report drug withdrawal: outcome was reported as “recovered” in four cases (two cases recovered the day after the withdrawal of dronedarone), and in one case as “recovering” (case 2). In only one case (with unknown outcome), the dose was reported as “not changed”. In case 2, a 28 year old woman with pacemaker presented with AV block 2nd degree Wenckebach and AV block complete and increased pacemaker rhythm 14 days after having started dronedarone therapy. The dose of dronedarone was first reduced and the patient’s condition improved; dronedarone was withdrawn 27 days later. After rechallenge, there was no recurrence. In all ICSRs except one, dronedarone was the only drug suspected; concomitant medications were reported in 10 cases. Digoxin, beta-blockers, calcium-channel blockers and amiodarone (in one case) are mentioned as previous concomitant medication in seven cases. In seven cases, time to onset is not reported; although in the fatal case it can be supposed to be shorter than a month because the date of patient’s death was in the same month as the month stated in the duration of use. Time to onset, reported in seven cases, ranges from seven days to one year and five months. Due to inconsistencies in time to onset, case 1 cannot be considered for a possible association of dronedarone and AV block. The ICSR reflecting data from literature (case 15) contains an abstract of a study in which 70 patients (35 men and 35 women), mean age 67 years, NYHA Class I-III, normal left ventricular ejection fraction, with atrial flutter or paroxysmal or persistent atrial fibrillation, were treated with dronedarone 400 mg twice daily, initiated under ECG in-hospital monitoring for three days.5 Four patients presented with AV block 2nd degree, QT prolonged with sinus bradycardia (the number of patients with AV block was not specified) and required discontinuation of dronedarone. In four other patients, dronedarone was discontinued due to unspecified side effects in the four-week period of follow-up.5" ;
+                     rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockResponse_from_Sanofi
+:Response_from_Sanofi rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                      OpenPVSignal:refers_to_pharmacovigilance_signal_report :Dronedarone_and_AV_block ;
+                      OpenPVSignal:has_content """The main safety concern with antiarrhythmics in general, and Class I and III in particular, is the potential proarrhythmic effect. It is universally recognized that the potential proarrhythmia is considerably increased in the presence of structural heart disease, which led to a contraindication for Class I drugs in this subgroup of patients.
+Theoretically, dronedarone might share the latter class effect, however, based on clinical experience, dronedarone has a low proarrhythmic effect, nevertheless, close surveillance of proarrhythmic effects has been performed by the Marketing Authorization Holder (MAH) via routine pharmacovigilance, namely in subsequent 6 month Periodic Safety Update Reports (PSURs).
+The Risk Management Plan updates coincidence with the release of PSURs, refer to proarrhythmic effects as a potential Pharmacological class effect with emphasis on regular data review by the MAH. From periodic analyses and review of conduction disorders based on the information collected and analysed during the reporting period from submission to last PSUR, no new emerging safety signals were noted. In the Assessment Report to the recently submitted PSUR7 (September 2013), EMA endorsed the MAH conclusion on the topic.
+From launch of dronedarone to 31 October 2013 the MAH has collected worldwide 7 solicited cases including: atrioventricular block (n =1), atrioventricular block complete (n =2), atrioventricular block second degree (n=2); atrioventricular block first degree (n=2) and 25 unsolicited cases including: atrioventricular block (n=6), atrioventricular block complete (n =6), atrioventricular block second degree (n=4), atrioventricular block first degree (n=9). No consumer case was reported.
+Among 32 case reports, 24 cases were serious. The reports concern patients aged between 28 and 90 years (age was not stated in 8 reports). The onset dates was reported in 21 reports, from 1 day to nearly 1 year. In 11 out of 18 reports, dronedarone was discontinued and the patients were reported as recovered or recovering. No rechallenge was reported. Concomitant drugs which may have contributed to the events onset was reported in 18/32 cases.
+Overall, the analysis of the 32 cases (6 cases of atrioventricular block second degree, 11 cases of atrioventricular block first degree, 7 cases of atrioventricular block) and 8 cases of complete atrioventricular block showed that contributive factors such as concomitant drugs and or underlying cardiac disease were reported in all cases; or cases were poorly documented to allow proper medical assessment.
+Focusing on eight (8) out of 32 cases were reported as complete atrioventricular block, 3 cases (n=1 solicited, n=2 unsolicited) were reported with fatal outcome in which, alternative explanations and confounding factors were reported:
+•	In first case, the 78 yearold female patient with a medical history of hypertension and stroke experienced a chest pain and third degree atrioventricular block and cardiogenic shock 4 weeks after starting dronedarone; the most likely cause of death according to the investigator was acute myocardial infarction;
+•	In the second case, the elderly patient experienced acute liver function impairment NOS and complete atrioventricular block, 5 days after starting dronedarone.  She ultimately died from an unknown cause, in addition to the concomitant use of atenolol was reported; and finally,
+•	In the third case, 77 year old female patient with severe relevant medical history of cardiovascular diseases including cardiac insufficiency (off label use) in addition to the concomitant use of verapamil were reported.
+•	In the remaining 5 cases reported as complete atrioventricular block, the following confounding might provide alternative explanations:
+•	Digoxin was stopped and dronedarone maintained and the patient recovered
+•	As the reporter stated, the intrinsic characteristic of patient’s heart disease were most likely responsible of the reaction.
+•	The patient with already an inserted pacemaker pointing out to heart rhythm/conduction disorders prior to dronedarone. It remained unclear whether the patient had treatment with a beta-blocker.
+•	The patient with reoccurrence of the AV-block complete while on different treatment had been given (requirement of placement of a permanent implantable device). Concomitant drugs not reported, patient’s heart disease was most likely responsible of the reaction.
+ 
+•	Concurrent effect of hyperkalaemia on heart conduction might be considered as a primary cause. The patient completely recovered following normalization of kalaemia and after discontinuation of dronedarone, carvedilol and spironolactone.
+In healthy subjects repeated dose studies, the incidence of first or second degree AV block was similar in dronedarone 800 mg/day (2/102 subjects) and the placebo (1/58 subjects) groups. A higher incidence of first or second degree AV block was observed at dronedarone supratherapeutic doses >800 mg/day (18/72 subjects). All cases of AV block were asymptomatic.
+In placebo-controlled clinical trial programme in the pooled population, 1 /989 patients reported AV Block first degree in dronedarone 400mg BID versus none in placebo (n=564 patients)
+In others studies (ATHENA study, ANDROMEDA study with patients with severe episode CHF), atrioventricular block were reported with low and similar frequencies between dronedarone and placebo groups
+Referring to preclinical data, first degree block was reported in rats, dogs and monkeys. Second degree block was also reported in macaques.
+Based on the known effect of dronedarone  to slow AV-conduction and repolarization prolongation, effects that may increase with dose, the MAH contraindicated the use of dronedarone in patients with first and second degree atrioventricular block (except when used in conjunction with a functioning pacemaker). In addition, information on this potential risk when dronedarone is coadministered with Calcium antagonists was provided in the label.
+Furthermore, it is clearly stated in dronedarone label (precaution section) that, proarrhythmic effects may occur in particular situations such as concomitant use with drugs favoring arrhythmia and/or electrolytic disorders.
+Based on available up-to-date information the MAH concludes that when dronedarone used as recommended, the cumulative weighted evidence is insufficient to support causal association between dronedarone and AV Block, however with doses of dronedarone above 800mg/Day (i.e. per phase 1 repeated dose study) or when used in a setting of interaction, the risk of AV Block may increase.""" ;
+                      rdfs:label "Response from Sanofi" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockSummaryContent
+:SummaryContent rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Summary ;
+                OpenPVSignal:has_content """Dronedarone is an iodine-free analogue of amiodarone, approved for use in atrial fibrillation (AF) since 2009. Its net electrocardiographic manifestations include sinus rate slowing, PR prolongation and mild QTc prolongation with little effect on QRS duration.
+The atrioventricular (AV) node conducts the electric impulse generated in the sinoauricular node (P waves) to ventricles. Atrioventricular conduction can be either delayed, intermittent or totally blocked (that is, 1st, 2nd or 3rd degree AV block, respectively). AV block can be caused by pathological conditions or drugs.
+On 20 September 2013, 15 reports had been entered into the WHO Global Individual Case Safety Reports (ICSR) Database, VigiBaseTM
+reporting the combination dronedarone and AV
+block: 14 ICSRs where all but one document dronedarone as the only  suspected drug, and one report from literature, an abstract presenting results of ECG monitoring in 70 patients. For these ICSRs, causality assessment globally suggests a possible association between AV block onset and dronedarone, although the role of other concomitant medication cannot be ruled out in six of the patients. No published cases or case series reports were  found in a PubMed search with the query “dronedarone AND (AV block OR atrioventricular block)”. Labelled product information does not mention AV block as an adverse effect of dronedarone, and AV block is specifically reported as an adverse effect in only one clinical trial publication. The reported combination “AV block and dronedarone” deserves further investigation and should be considered as a signal.""" ;
+                rdfs:label "Summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockacuteLiverDisturbance
+:acuteLiverDisturbance rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "K72.00" ;
+                       OpenPVSignal:has_MedDRA_code 10000840 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Acute liver damage" ;
+                       rdfs:label "acute liver disturbance" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockacuteRenalFailure
+:acuteRenalFailure rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N179" ;
+                   OpenPVSignal:has_MedDRA_code 10069339 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Acute kidney injury" ;
+                   rdfs:label "acute renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockamiodarone
+:amiodarone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C01BD01" ;
+            rdfs:label "amiodarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockamlodipin
+:amlodipin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C08CA01" ;
+           rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockatenolol
+:atenolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AB03" ,
+                                    "C07BB03" ,
+                                    "C07CB03" ,
+                                    "C07CB53" ,
+                                    "C07DB01" ,
+                                    "C07FB03" ;
+          rdfs:label "atenolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockatrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ,
+                             OpenPVSignal:Indication ;
+                    OpenPVSignal:has_ICD_code "I4891" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockatrialFlutterFibrillation
+:atrialFlutterFibrillation rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ,
+                                    OpenPVSignal:Indication ;
+                           OpenPVSignal:has_ICD_code "I4891" ;
+                           OpenPVSignal:has_MedDRA_code 10003662 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Atrial flutter" ;
+                           rdfs:label "atrial flutter" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockatrialTachycardia
+:atrialTachycardia rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "I47.1" ;
+                   OpenPVSignal:has_MedDRA_code 10003668 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Atrial tachycardia" ;
+                   rdfs:label "atrial tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockavBlock
+:avBlock rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_MedDRA_code 10003671 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Atrioventricular block" ;
+         rdfs:label "av block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockav_block_first_degree
+:av_block_first_degree rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_MedDRA_code 10003850 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "AV block first degree" ;
+                       rdfs:label "av block first degree" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockav_block_second_degree
+:av_block_second_degree rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_MedDRA_code 10003851 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "AV block second degree" ;
+                        rdfs:label "av block second degree" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockbeta-blockers
+:beta-blockers rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_mechanism <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions> ;
+               OpenPVSignal:has_ATC_code "C07" ;
+               rdfs:label "beta-blockers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockbisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockbloodCreatinineIncreased
+:bloodCreatinineIncreased rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "R7989" ;
+                          OpenPVSignal:has_MedDRA_code 10005483 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Blood creatinine increased" ;
+                          rdfs:label "blood creatinine increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockbradycardia
+:bradycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R001" ;
+             OpenPVSignal:has_MedDRA_code 10006093 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Bradycardia" ;
+             rdfs:label "bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockbrainNatriureticPeptideIncreased
+:brainNatriureticPeptideIncreased rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Adverse_Effect ;
+                                  OpenPVSignal:has_MedDRA_code 10053405 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Brain natriuretic peptide increased" ;
+                                  rdfs:label "brain natriuretic peptide increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockcardiacFailure
+:cardiacFailure rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "I50" ;
+                OpenPVSignal:has_MedDRA_code 10007554 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+                rdfs:label "cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockcardiacFailureCongestive
+:cardiacFailureCongestive rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I509" ;
+                          OpenPVSignal:has_MedDRA_code 10007559 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure congestive" ;
+                          rdfs:label "cardiac failure congestive" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockcarvedilol
+:carvedilol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AG02" ;
+            rdfs:label "carvedilol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockclinicaltrials_gov_results
+:clinicaltrials_gov_results rdf:type owl:NamedIndividual ,
+                                     obo:OAE_0001197 ,
+                                     OpenPVSignal:Clinical_trial_information ;
+                            OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                            OpenPVSignal:refers_to_drug :dronedarone ;
+                            mp:references :Ref.6 ;
+                            OpenPVSignal:has_content "At the www.clinicaltrials.gov website, results from six studies with dronedarone are presented. AV block is not listed as a SAE or AE for the HESTIA, ODYSSEUS or PALLAS studies. AV block first degree is reported as an AE in one subject treated with dabigatran etexilate 150 mg + dronedarone 400 mg two hours later in the Phase I “Drug Interaction Study with dabigatran etexilate and dronedarone in healthy subjects”, (36 healthy volunteers). One patient in the dronedarone group presented with atrioventricular block complete (SAE) in the Phase III Study ATHENA. No patients in the dronedarone group and one patient in the amiodarone group presented with AV block 2nd degree (SAE) in the Phase III study DIONYSOS.6" ;
+                            rdfs:label "clinicaltrials gov results" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdiarrhoea
+:diarrhoea rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R197" ;
+           OpenPVSignal:has_MedDRA_code 10012735 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Diarrhoea" ;
+           rdfs:label "diarrhoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdigoxin
+:digoxin rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Drug ;
+         OpenPVSignal:has_mechanism <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions> ;
+         OpenPVSignal:has_ATC_code "C01AA05" ;
+         rdfs:label "digoxin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdose_400_mg_twice_daily
+:dose_400_mg_twice_daily rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Dosage ;
+                         OpenPVSignal:refers_to_drug :dronedarone ;
+                         OpenPVSignal:refers_to_interval_between_administrations <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#12_hours_interval> ;
+                         OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                         OpenPVSignal:has_value 400 ;
+                         OpenPVSignal:refers_to_dose_value "400 mg" ;
+                         rdfs:label "dose 400 mg twice daily" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdose_400_mg_without_frequency
+:dose_400_mg_without_frequency rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Dosage ;
+                               OpenPVSignal:refers_to_drug :dronedarone ;
+                               OpenPVSignal:has_dosage_unit "mg"^^xsd:string ;
+                               OpenPVSignal:has_value 400 ;
+                               OpenPVSignal:refers_to_dose_value "400 mg" ;
+                               rdfs:label "dose 400 mg without frequency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdronedarone
+:dronedarone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_mechanism :MechanismContent ,
+                                        :PharmacokineticProfileOfDronedaroneInWomen ,
+                                        <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions> ;
+             OpenPVSignal:has_ATC_code "C01BD07" ;
+             rdfs:label "dronedarone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockdyspnoea
+:dyspnoea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R060" ;
+          OpenPVSignal:has_MedDRA_code 10013968 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+          rdfs:label "dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockfatigue
+:fatigue rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R53" ,
+                                   "R5383" ;
+         OpenPVSignal:has_MedDRA_code 10016256 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Fatigue" ;
+         rdfs:label "fatigue" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockhotFlushes
+:hotFlushes rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R232" ;
+            OpenPVSignal:has_MedDRA_code 10060800 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Hot flush" ;
+            rdfs:label "hot flushes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockhyperhydrosis
+:hyperhydrosis rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R61" ;
+               OpenPVSignal:has_MedDRA_code 10073590 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Hyperhydration" ;
+               rdfs:label "hyperhydrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockinfo_case_2
+:info_case_2 rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 2, a 28 year old woman with pacemaker presented with AV block 2nd degree Wenckebach and AV block complete and increased pacemaker rhythm 14 days after having started dronedarone therapy. The dose of dronedarone was first reduced and the patient’s condition improved; dronedarone was withdrawn 27 days later. After rechallenge, there was no recurrence." ;
+             rdfs:label "info case 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockinfo_literature_case
+:info_literature_case rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Case_Report_Information ;
+                      mp:references :Ref.5 ;
+                      OpenPVSignal:has_content "The ICSR reflecting data from literature (case 15) contains an abstract of a study in which 70 patients (35 men and 35 women), mean age 67 years, NYHA Class I-III, normal left ventricular ejection fraction, with atrial flutter or paroxysmal or persistent atrial fibrillation, were treated with dronedarone 400 mg twice daily, initiated under ECG in-hospital monitoring for three days.5" ;
+                      rdfs:label "info literature case" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockintoleranceInduced
+:intoleranceInduced rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10052805 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Drug tolerance decreased" ;
+                    rdfs:label "intolerance induced" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocklabelling
+:labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ;
+           OpenPVSignal:refers_to_drug :dronedarone ;
+           mp:references :Ref.1 ,
+                         :Ref.2 ,
+                         :Ref.3 ;
+           OpenPVSignal:has_content "Atrioventricular block is not mentioned as an adverse effect in the EMA Summary of Product characteristics, the FDA Multaq label dated on March 27th 2013 or in the Auspar Multaq Product Information.1-3" ;
+           rdfs:label "labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocklercanidipine
+:lercanidipine rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_mechanism <http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions> ;
+               OpenPVSignal:has_ATC_code "C08CA13" ,
+                                         "C09BB02" ,
+                                         "C09DB08" ;
+               rdfs:label "lercanidipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocklethargia
+:lethargia rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Adverse_Effect ;
+           OpenPVSignal:has_ICD_code "R53.83" ;
+           OpenPVSignal:has_MedDRA_code 10024264 ;
+           OpenPVSignal:has_MedDRA_prefered_term "Lethargy" ;
+           rdfs:label "lethargia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockliterature_case_study_report
+:literature_case_study_report rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Reports_group ;
+                              OpenPVSignal:has_free_text_reporting_element :info_literature_case ;
+                              OpenPVSignal:has_average_age 67 ;
+                              OpenPVSignal:has_count_of_men 35 ;
+                              OpenPVSignal:has_count_of_women 35 ;
+                              rdfs:label "Literature case study report" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockliterature_case_study_report_group_1
+:literature_case_study_report_group_1 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :literature_case_study_report ;
+                                      OpenPVSignal:refers_to_adverse_effect :av_block_second_degree ,
+                                                                            :qtProlonged ,
+                                                                            :sinusBradycardia ;
+                                      OpenPVSignal:has_count 4 ;
+                                      OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                      rdfs:label "Literature case study report group 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockliterature_case_study_report_group_2
+:literature_case_study_report_group_2 rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :literature_case_study_report ;
+                                      OpenPVSignal:has_count 4 ;
+                                      OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                      rdfs:label "Literature case study report group 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockmalaise
+:malaise rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R538 " ;
+         OpenPVSignal:has_MedDRA_code 10025482 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Malaise" ;
+         rdfs:label "malaise" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockmetoprolol
+:metoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB02" ,
+                                      "C07AB52" ,
+                                      "C07BB02" ,
+                                      "C07BB52" ,
+                                      "C07CB02" ,
+                                      "C07FB02" ;
+            rdfs:label "metoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockmuscleSpasms
+:muscleSpasms rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "M62.838" ;
+              OpenPVSignal:has_MedDRA_code 10028334 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Muscle spasms" ;
+              rdfs:label "muscle spasms" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockoedemaPeripheral
+:oedemaPeripheral rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R609" ;
+                  OpenPVSignal:has_MedDRA_code 10030124 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Oedema peripheral" ;
+                  rdfs:label "oedema peripheral" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpacemaker-generatedRhythm
+:pacemaker-generatedRhythm rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Adverse_Effect ;
+                           OpenPVSignal:has_ICD_code "Z95.0" ;
+                           OpenPVSignal:has_MedDRA_code 10059831 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Pacemaker generated rhythm" ;
+                           rdfs:label "pacemaker-generated rhythm" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpacemakerComplication
+:pacemakerComplication rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "T829XXA" ;
+                       OpenPVSignal:has_MedDRA_code 10059835 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Pacemaker complication" ;
+                       rdfs:label "pacemaker complication" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpalpitations
+:palpitations rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "R002" ;
+              OpenPVSignal:has_MedDRA_code 10033557 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Palpitations" ;
+              rdfs:label "palpitations" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpindolol
+:pindolol rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Drug ;
+          OpenPVSignal:has_ATC_code "C07AA03" ,
+                                    "C07CA03" ;
+          rdfs:label "pindolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpotassiumSerumIncreased
+:potassiumSerumIncreased rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Adverse_Effect ;
+                         OpenPVSignal:has_ICD_code "E87.5" ;
+                         OpenPVSignal:has_MedDRA_code 10005725 ;
+                         OpenPVSignal:has_MedDRA_prefered_term "Blood potassium increased" ;
+                         rdfs:label "potassium serum increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockpvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :AVBlock ,
+                                                   :ConclusionContent ,
+                                                   :DiscussionContent ,
+                                                   :IntroductionContent ,
+                                                   :Reports_in_Vigibase ,
+                                                   :SummaryContent ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :ReportsFromCanada ,
+                                                          :ReportsFromGermany ,
+                                                          :ReportsFromIsrael ,
+                                                          :ReportsFromSpain ,
+                                                          :ReportsFromUSA ,
+                                                          :literature_case_study_report ,
+                                                          :reportsInVigibase ,
+                                                          :reportsWithDronedaroneBeingTheOnlyDrug ,
+                                                          :reportsWithFatalOutcome ,
+                                                          :reportsWithNoConcomitantDrugs ,
+                                                          :reportsWithPositiveDechallenge ,
+                                                          :reportsWithSeriousOutcome ,
+                                                          :reports_with_1st_degree_av_block ,
+                                                          :reports_with_2nd_degree_av_block ,
+                                                          :reports_with_age_info ,
+                                                          :reports_with_dose_400_mg_twice_daily ,
+                                                          :reports_with_dose_400_mg_without_frequency ,
+                                                          :reports_with_recovering_after_drug_withdrawal ;
+          OpenPVSignal:refers_to_adverse_effect :avBlock ;
+          OpenPVSignal:refers_to_drug :dronedarone ;
+          mp:supportedByData :ATHENA_trial ,
+                             :Auspar_Clinical_Findings ,
+                             :EURIDIS_and_ADONIS_trials ,
+                             :PALLAS_trial ,
+                             :clinicaltrials_gov_results ,
+                             :labelling ,
+                             :review_article ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockqtProlonged
+:qtProlonged rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I4581" ;
+             OpenPVSignal:has_MedDRA_code 10014387 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Electrocardiogram QT prolonged" ;
+             rdfs:label "qt prolonged" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsInVigibase
+:reportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                   OpenPVSignal:refers_to_drug :dronedarone ;
+                   OpenPVSignal:has_count 14 ;
+                   OpenPVSignal:has_count_of_men 4 ;
+                   OpenPVSignal:has_count_of_women 10 ;
+                   OpenPVSignal:has_max_age "87.0"^^xsd:float ;
+                   OpenPVSignal:has_min_age "28.0"^^xsd:float ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "overall reports in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsWithDronedaroneBeingTheOnlyDrug
+:reportsWithDronedaroneBeingTheOnlyDrug rdf:type owl:NamedIndividual ,
+                                                 OpenPVSignal:Reports_group ;
+                                        OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                        OpenPVSignal:has_count 13 ;
+                                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                        rdfs:label "reports with dronedarone being the only drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsWithFatalOutcome
+:reportsWithFatalOutcome rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Reports_group ;
+                         OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                         OpenPVSignal:has_count 1 ;
+                         OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                         OpenPVSignal:refers_to_outcome_after_action "death" ;
+                         rdfs:label "reports with fatal outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsWithNoConcomitantDrugs
+:reportsWithNoConcomitantDrugs rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Reports_group ;
+                               OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                               OpenPVSignal:has_count 4 ;
+                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                               rdfs:label "reports with no concomitant drugs" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsWithPositiveDechallenge
+:reportsWithPositiveDechallenge rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Reports_group ;
+                                OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                OpenPVSignal:has_count 4 ;
+                                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+                                rdfs:label "reports with recovery after drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreportsWithSeriousOutcome
+:reportsWithSeriousOutcome rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Reports_group ;
+                           OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                           OpenPVSignal:has_count 12 ;
+                           OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                           rdfs:label "reports with serious outcome" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_1st_degree_av_block
+:reports_with_1st_degree_av_block rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                  OpenPVSignal:refers_to_adverse_effect :av_block_first_degree ;
+                                  OpenPVSignal:has_count 6 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with 1st degree av block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_2nd_degree_av_block
+:reports_with_2nd_degree_av_block rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Reports_group ;
+                                  OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                  OpenPVSignal:refers_to_adverse_effect :av_block_second_degree ;
+                                  OpenPVSignal:has_count 2 ;
+                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                  rdfs:label "reports with 2nd degree av block" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_age_info
+:reports_with_age_info rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                       OpenPVSignal:has_count 10 ;
+                       OpenPVSignal:has_max_age 87 ;
+                       OpenPVSignal:has_min_age 28 ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "reports with age info" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_dose_400_mg_twice_daily
+:reports_with_dose_400_mg_twice_daily rdf:type owl:NamedIndividual ,
+                                               OpenPVSignal:Reports_group ;
+                                      OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                      OpenPVSignal:refers_to_dosage :dose_400_mg_twice_daily ;
+                                      OpenPVSignal:has_count 8 ;
+                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                      rdfs:label "reports with dose 400 mg twice daily" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_dose_400_mg_without_frequency
+:reports_with_dose_400_mg_without_frequency rdf:type owl:NamedIndividual ,
+                                                     OpenPVSignal:Reports_group ;
+                                            OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                            OpenPVSignal:refers_to_dosage :dose_400_mg_without_frequency ;
+                                            OpenPVSignal:has_count 2 ;
+                                            OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                            rdfs:label "reports with dose 400 mg without frequency" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreports_with_recovering_after_drug_withdrawal
+:reports_with_recovering_after_drug_withdrawal rdf:type owl:NamedIndividual ,
+                                                        OpenPVSignal:Reports_group ;
+                                               OpenPVSignal:is_subgroup_of :reportsInVigibase ;
+                                               OpenPVSignal:has_count 1 ;
+                                               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                               OpenPVSignal:refers_to_outcome_after_action "recovering" ;
+                                               rdfs:label "reports with recovering after drug withdrawal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockreview_article
+:review_article rdf:type owl:NamedIndividual ,
+                         obo:OAE_0001182 ;
+                OpenPVSignal:refers_to_drug :dronedarone ;
+                mp:references :Ref.11 ;
+                OpenPVSignal:has_content "A review article published in 2011 does not mention AV block as a possible adverse effect of dronedarone, but does state that dronedarone slows heart rate and prolongs AV nodal refractoriness and thus can increase the PR interval.11" ;
+                rdfs:label "review article" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blockshortnessOfBreath
+:shortnessOfBreath rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R060" ;
+                   OpenPVSignal:has_MedDRA_code 10040604 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Shortness of breath" ;
+                   rdfs:label "shortness of breath" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocksinusBradycardia
+:sinusBradycardia rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R00.1" ;
+                  OpenPVSignal:has_MedDRA_code 10040741 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Sinus bradycardia" ;
+                  rdfs:label "sinus bradycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocksupraventricularExtrasystoles
+:supraventricularExtrasystoles rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Adverse_Effect ;
+                               OpenPVSignal:has_ICD_code "I47.1" ;
+                               OpenPVSignal:has_MedDRA_code 10042602 ;
+                               OpenPVSignal:has_MedDRA_prefered_term "Supraventricular extrasystoles" ;
+                               rdfs:label "supraventricular extrasystoles" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_blocktachycardia
+:tachycardia rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "R000" ;
+             OpenPVSignal:has_MedDRA_code 10043071 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Tachycardia" ;
+             rdfs:label "tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#12_hours_interval
+<http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#12_hours_interval> rdf:type owl:NamedIndividual ,
+                                                                                              time:DurationDescription ;
+                                                                                     time:nominalPosition "hours" ;
+                                                                                     time:numericPosition 12 ;
+                                                                                     rdfs:label "12 hours interval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions
+<http://purl.org/OpenPVSignal/Signals/2014_2_dronedarone_av_block#Pharmacokinetic/PharmacodynamicInteractions> rdf:type owl:NamedIndividual ,
+                                                                                                                        OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                                                                               OpenPVSignal:refers_to_adverse_effect :avBlock ;
+                                                                                                               OpenPVSignal:has_content """A synergistic effect on atrioventricular conduction is possible; treatment with Class I or III antiarrhythmics such as amiodarone is formally contraindicated with dronedarone.
+Pharmacodynamic interactions between
+dronedarone and digoxin, beta blockers and calcium-channel blockers are known: dronedarone (400 mg twice daily) increased digoxin exposure by 2.5-fold by inhibiting P-gp transporter; beta blockers that are metabolized by CYP2D6 can have their exposure increased by dronedarone, and lercanidipine is metabolized by CYP3A4.
+Cytochrome P450 CYP2D6 is involved in the metabolism of bisoprolol, carvedilol and metoprolol; carvedilol is also substrate of P-gP and CYP3A4 and bisoprolol of  CYP3A4. In all these six cases, concomitant medication could play a synergistic effect in AV block, but the role of dronedarone cannot be ruled out due to the time to onset and the PD characteristics of the drug. """ ;
+                                                                                                               rdfs:label "Pharmacokinetic/Pharmacodynamic interactions" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

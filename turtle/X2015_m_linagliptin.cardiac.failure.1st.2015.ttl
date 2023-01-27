@@ -1,0 +1,2558 @@
+@prefix : <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mp: <http://purl.org/mp/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.obolibrary.org/obo/uberon/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix pato: <http://purl.obolibrary.org/obo/pato#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix core1: <http://purl.obolibrary.org/obo/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix uberon: <http://purl.obolibrary.org/obo/uberon#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix OpenPVSignal: <http://purl.org/OpenPVSignal/OpenPVSignal.owl#> .
+@base <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure> .
+
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.org/OpenPVSignal/OpenPVSignal.owl> ,
+                                                                                       mp: ;
+                                                                           rdfs:isDefinedBy "https://apps.who.int/iris/handle/10665/255502/"^^xsd:anyURI ;
+                                                                           rdfs:label "Linagliptin and Cardiac failure"^^xsd:Literal ;
+                                                                           owl:versionInfo "draft-v0.95-20211109"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ATC_code
+OpenPVSignal:has_ATC_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_ICD_code
+OpenPVSignal:has_ICD_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_code
+OpenPVSignal:has_MedDRA_code rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#has_MedDRA_prefered_term
+OpenPVSignal:has_MedDRA_prefered_term rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/OpenPVSignal/OpenPVSignal.owl#Free_text_reporting_element
+OpenPVSignal:Free_text_reporting_element rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/mp/references
+mp:references rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#AlogliptinClinicalTrial
+:AlogliptinClinicalTrial rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Clinical_trial_information ;
+                         OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                         OpenPVSignal:refers_to_drug :alogliptin ;
+                         mp:references :Ref.25 ,
+                                       :Ref.26 ;
+                         OpenPVSignal:has_content "In a large trial assessing the effect of alogliptin on cardiovascular outcomes in 5,380 patients followed for a median of 18 months, 28% of the participants had HF at baseline; HF was not part of the primary composite outcome or secondary outcomes. Although the heterogeneity of sub-groups is mentioned, no specific details are provided.25 Prior HF was the strongest predictor of hospitalization during the study, followed by impaired kidney function. In the EXAMINE study, the risk increase for hospitalization due to HF associated with alogliptin was apparently less clear in spite of the percentage of patients with prior HF, the higher use of ß-blocking agents, and the more frequent medical controls with treatment adaptations in EXAMINE might be one of the potential explanations.26" ;
+                         rdfs:label "Alogliptin clinical trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Cardiac_failure_background
+:Cardiac_failure_background rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Free_text_reporting_element ;
+                            OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+                            mp:references :Ref.4 ,
+                                          :Ref.5 ;
+                            OpenPVSignal:has_content "Cardiac failure, or heart failure (HF), is a pathophysiologically complex clinical syndrome, not fully understood, which results from an impaired function of the heart as a pump supporting physiological circulation. Symptoms are dyspnoea, exercise intolerance, and sodium and water retention, often manifested as oedema. Cardiac failure can be caused by any abnormality of the structure, mechanical function or electrical activity of the heart, or as a secondary dysfunction of other organs and tissues, e.g. kidneys, liver or muscles; other systemic processes, as neurohumoral activation, are also involved.4,5" ;
+                            rdfs:label "Cardiac failure background" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Case12
+:Case12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content "In case 12, an 88 year-old woman who had started linagliptin 45 days earlier, went to a hospital for routine pacemaker battery replacement, and cardiac insufficiency was detected; the patient lost 13 kg with appropriate therapy (this indicates the amount of fluid retention), and her ejection fraction was 45%." ,
+                                 "case 12 mentions hypertension and atrial fibrillation" ;
+        rdfs:label "case info 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Case13
+:Case13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content """Case 13 reports that an 83 year-old man with renal insufficiency and hypertension presented with cardiac failure. Linagliptin was withdrawn, but there is no information about the outcome.
+Concomitant poly-medication is mentioned but details are not provided.""" ,
+                                 "case 13 renal insufficiency and hypertension" ;
+        rdfs:label "case info 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Case14
+:Case14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Case_Report_Information ;
+        OpenPVSignal:has_content "The case from literature (case 14) was extracted from a 52 weeks multifactorial design study, and reports two drug related serious adverse events (SAEs) in the same patient on day 295 after starting the study treatment (2.5 mg linagliptin + 1000 mg metformin). The patient experienced cardiogenic shock and supraventricular tachycardia within one hour of administration of medication. The patient required hospitalisation and study medication was discontinued; the patient recovered.12" ;
+        rdfs:label "case info 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#CaseInfo1
+:CaseInfo1 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Case_Report_Information ;
+           OpenPVSignal:has_content "The first spontaneous reporting (case 1) referred to a woman presenting with cardiac failure 44 days after having started her treatment with linagliptin 5 mg. All the other adverse events (urinary infection, pulmonary infection) occurred at least 11 days after the HF onset, and were probably related to complications derived from hospitalization. Linagliptin was withdrawn after the patient had recovered from her cardiac failure, and hypothetically, after hospitalization." ;
+           rdfs:label "Case info 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#DDP4_inhibitors
+:DDP4_inhibitors rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:DrugClass ;
+                 OpenPVSignal:has_mechanism :DetailedMechanismOfDPP4InhibitionAndCardiacFailure ,
+                                            :MolecularPharmacologyOfDPP4InhibitorsAffectingCardiacFunction ;
+                 OpenPVSignal:has_ATC_code "A10BH" ;
+                 rdfs:label "DDP4 inhibitors" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#DPP4InhibitorsClinicalTrial
+:DPP4InhibitorsClinicalTrial rdf:type owl:NamedIndividual ,
+                                      obo:OAE_0001197 ,
+                                      OpenPVSignal:Clinical_trial_information ;
+                             OpenPVSignal:refers_to_drug :alogliptin ,
+                                                         :dutogliptin ,
+                                                         :heartFailure ,
+                                                         :linagliptin ,
+                                                         :saxagliptin ,
+                                                         :sitagliptin ,
+                                                         :vildagliptin ;
+                             mp:references :Ref.17 ;
+                             OpenPVSignal:has_content "A meta-analysis of clinical trials with vildagliptin, sitagliptin, saxagliptin, alogliptin, linagliptin, and dutogliptin found that the overall risk of acute HF was higher in patients treated with DPP4i in comparison with those treated with placebo/active comparators, and suggested that DPP4i could be associated with an increased risk of HF.17" ;
+                             OpenPVSignal:has_reporter_type "clinical trial report" ;
+                             rdfs:label "DPP4 inhibitors clinical trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#DetailedMechanismOfDPP4InhibitionAndCardiacFailure
+:DetailedMechanismOfDPP4InhibitionAndCardiacFailure rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                    OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+                                                    mp:references :Ref.10 ,
+                                                                  :Ref.26 ,
+                                                                  :Ref.27 ,
+                                                                  :Ref.28 ,
+                                                                  :Ref.29 ,
+                                                                  :Ref.6 ,
+                                                                  :Ref.7 ,
+                                                                  :Ref.9 ;
+                                                    OpenPVSignal:has_content "Mechanisms of the hypothesized effect of DDP4 inhibitors on HF are unknown. As previously mentioned, DPP4 cleaves not only GLP-1 and GIP, but also other cardioactive peptides, such as substance P, brain natriuretic peptide (BNP), neuropeptide Y, CXCL12, bradykinin, and related peptides.6-7 BNP is increased in HF, being both a diagnostic and prognostic marker.9,10 It has also been suggested that DPP4 is abnormally increased in patients with T2DM and these increased DPP4 levels are independently associated with asymptomatic left ventricular both diastolic and systolic dysfunction in T2DM patients which have a higher risk of presenting left ventricular dysfunction.27 Neuropeptide Y (NPY1-36) is released from sympathetic neurons; DPP4 removes the N-terminal from NPY1-36 to generate NPY3-36, which binds to Y2 receptors that have relative antagonist properties to Y1 receptor activation. Any decrease in the DPP4 mediated generation of NPY3-36 would decrease the activity of Y2 inhibitory autoreceptors; and so augment sympathetic and parasympathetic neurotransmitter release.28 A clinical study in 53 patients found that peptide Y is augmented in diabetic patients.29" ;
+                                                    rdfs:label "Detailed mechanism of DPP4 inhibition and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Discussion_and_conclusion
+:Discussion_and_conclusion rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Conclusion ,
+                                    OpenPVSignal:Discussion ;
+                           mp:references :Ref.1 ,
+                                         :Ref.10 ,
+                                         :Ref.11 ,
+                                         :Ref.17 ,
+                                         :Ref.19 ,
+                                         :Ref.2 ,
+                                         :Ref.20 ,
+                                         :Ref.21 ,
+                                         :Ref.22 ,
+                                         :Ref.23 ,
+                                         :Ref.24 ,
+                                         :Ref.25 ,
+                                         :Ref.26 ,
+                                         :Ref.27 ,
+                                         :Ref.28 ,
+                                         :Ref.29 ,
+                                         :Ref.30 ,
+                                         :Ref.5 ,
+                                         :Ref.6 ,
+                                         :Ref.7 ,
+                                         :Ref.9 ;
+                           OpenPVSignal:has_content "Ageing, dyslipidaemia, hypertension, renal insufficiency and diabetes are risk factors for developing cardiac failure. As stated, all patients with a reported age were 60 years or older: four ISCRs refer to patients 83 year-old and older, and for the other five the patient’s age was between 60 to 71 years. Another patient’s age was estimated to 85-90 years. Co-morbidities predisposing to HF (dyslipidaemia, hypertension, prior cardiac disease, renal insufficiency) are mentioned in six cases. Concomitant medication was reported in nine cases (although not specified in one case). Linagliptin was the only suspected drug in thirteen ISCRs, in two cases another drug was reported as suspected (cilostazol and metformin, respectively). In three cases (cases 7, 8, and 9), cholesterol lowering agents, i.e. statins or ezetimibe or both, are reported among concomitant medication. Three patients (3, 8 and 9) were under diuretic treatment (furosemide/amiloride, hydrochlorotiazide and furosemide respectively). Two patients (7 and 9) were treated with angiotensin converting enzyme inhibitors (quinapril and enalapril), two other patients with angiotensin receptors antagonists (2 and 9, irbesartan and losartan respectively). Three patients were treated with calcium channel blockers and two patients with doxazocin (α-blocker). Calcium channel blockers can lead to worsening HF and have been associated with an increased risk of cardiovascular events, especially the non vasoselective ones.5 In three cases, patients were also treated with calcium channel blockers, two with amlodipine and one patient with nifedipine. Time to onset was reported in two out of these three cases (6 days and 16 days). In case 8 (fatal outcome), a 66 year-old woman presented with HF 16 days after having started linagliptin. She was also treated with amlodipine 10 mg, quinapril 5 mg, bisoprolol 5 mg, gliquidone 30 mg, and simvastatin 20 mg. Recent studies have found that amlodipine does not exert favourable effects on the clinical course of patients with HF;19,20 other not significant interactions for HF seem unlikely, such as simvastatin with amlodipine (amlodipine increases the systemic exposure of simvastatin, this patient being on amlodipine low-dose). In case 9 (an 87 year-old woman treated with nifedipine and other cardiovascular therapies), cilostazol and linagliptin 5 mg had been added respectively nine days and five days before the HF onset. Cilostazol is a reversible phosphodiesterase III inhibitor with anti-platelet, vasodilatory and antithrombotic properties, metabolized by CYP3A4 and CYP2C19. Cilostazol is formally contraindicated in patients with pre-existing HF. Nifedipine is metabolized by CYP2C19 (interaction described in product information). For the patient treated with pioglitazone/ metformin (case 2), no time to onset was reported. Pioglitazone is a thiazolidinedione, which selectively ligands the nuclear transcription factor peroxisome proliferator-activated receptor-γ (PPAR-γ). Thiazolidinediones improve glycaemic control by increasing insulin sensitivity. Fluid retention, that can cause or exacerbate HF in some patients, is a known effect of PPAR-γ, and pioglitazone can cause or exacerbate congestive HF in some patients.21 In eight cases, linagliptin was withdrawn. Except for the fatal case and one with unknown outcome, dechallenge was positive. No cases with rechallenge were reported. In case 3, the dose was not changed and the patient recovered with hospitalization. Time to onset (reported in seven cases) was <6 months in six patients (44 days, 6 days, 147 days, 16 days, 6 days and 164 days respectively). In a large study with saxagliptin, the risk for HF hospitalization associated with the use of saxagliptin was highest in the first six months and declined thereafter. DDP4 inhibitors have been expected to have beneficial effects on cardiac outcomes, both due to GLP-1 actions and to other peptide hormones with direct cardiorenal effects. Preclinical data and mechanistic studies suggested a possible additional non-glycaemic beneficial action on blood vessels and the heart, via both GLP-1 dependent and GLP-1-independent effects.22 It has been suggested that DPP4 inhibitors reduce the risk for the multiple co-morbidities associated with obesity/T2DM including hypertension, cardiovascular and kidney disease.23 However, a recently published meta-analysis suggested that HF is a class effect of DPP4i.17 Two large trials specifically designed to assess composite cardiovascular outcomes contributed largely to this conclusion. A large trial found a higher statistically significant risk of hospitalization due to HF in the saxagliptin group than in the placebo group. Patients had T2DM and established cardiovascular disease or multiple cardiovascular risks factors, and were followed for a median of 2.1 years; HF was included in a composite secondary endpoint. 12.8% of participants had prior HF.11 The events were more frequent in patients with diabetes and HF.24 In a large trial assessing the effect of alogliptin on cardiovascular outcomes in 5,380 patients followed for a median of 18 months, 28% of the participants had HF at baseline; HF was not part of the primary composite outcome or secondary outcomes. Although the heterogeneity of sub-groups is mentioned, no specific details are provided.25 Prior HF was the strongest predictor of hospitalization during the study, followed by impaired kidney function. In the EXAMINE study, the risk increase for hospitalization due to HF associated with alogliptin was apparently less clear in spite of the percentage of patients with prior HF, the higher use of ß-blocking agents, and the more frequent medical controls with treatment adaptations in EXAMINE might be one of the potential explanations.26 Mechanisms of the hypothesized effect of DDP4 inhibitors on HF are unknown. As previously mentioned, DPP4 cleaves not only GLP-1 and GIP, but also other cardioactive peptides, such as substance P, brain natriuretic peptide (BNP), neuropeptide Y, CXCL12, bradykinin, and related peptides.6-7 BNP is increased in HF, being both a diagnostic and prognostic marker.9,10 It has also been suggested that DPP4 is abnormally increased in patients with T2DM and these increased DPP4 levels are independently associated with asymptomatic left ventricular both diastolic and systolic dysfunction in T2DM patients which have a higher risk of presenting left ventricular dysfunction.27 Neuropeptide Y (NPY1-36) is released from sympathetic neurons; DPP4 removes the N-terminal from NPY1-36 to generate NPY3-36, which binds to Y2 receptors that have relative antagonist properties to Y1 receptor activation. Any decrease in the DPP4 mediated generation of NPY3-36 would decrease the activity of Y2 inhibitory autoreceptors; and so augment sympathetic and parasympathetic neurotransmitter release.28 A clinical study in 53 patients found that peptide Y is augmented in diabetic patients.29 Linagliptin also has significant inhibitory activity on the human M1, M2 and M3 muscarinic receptors, with half minimal inhibitory concentration (IC50) values of 295 to 1000 nM (more than 22 times the clinical peak concentration (Cmax), which has not been considered clinically relevant.1,2 In animal models a relationship between B-adrenergic and M2 muscarinic receptors and diminished ventricular contractility has been suggested.30 In spite of their inherent limitations, spontaneous reports from VigiBase® add observational data in support of the association cardiac failure-linagliptin/ (DPP4i) as a drug-related effect in some patients with risk factors (e.g. old age), underlying concomitant conditions or pre-existing cardiac failure and/or other concomitant medication. The pair linagliptin-cardiac failure should be considered as a signal, and deserves further clinical and pharmacoepidemiological investigation." ;
+                           rdfs:label "Discussion and conclusion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Dr_Raquel_Herrera_Comoglio
+:Dr_Raquel_Herrera_Comoglio rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Author ;
+                            OpenPVSignal:has_first_name "Raquel" ;
+                            OpenPVSignal:has_last_name "Herrera Comoglio" ;
+                            rdfs:label "Dr Raquel Herrera Comoglio" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#IntroductionContent
+:IntroductionContent rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Introduction ;
+                     mp:references :Ref.1 ,
+                                   :Ref.10 ,
+                                   :Ref.2 ,
+                                   :Ref.3 ,
+                                   :Ref.4 ,
+                                   :Ref.5 ,
+                                   :Ref.6 ,
+                                   :Ref.7 ,
+                                   :Ref.8 ,
+                                   :Ref.9 ;
+                     OpenPVSignal:has_content """Linagliptin is a synthetic, reversible inhibitor of dipeptidyl peptidase-4 (DPP4). Acting through inhibition of DPP4, linagliptin inhibits the proteolytic degradation of the incretin hormones glucagon-like peptide 1 (GLP-1) and glucose- dependent insulinotropic peptide (GIP), resulting in increased glucose dependent insulin secretion. Linagliptin is indicated in the treatment of type 2 diabetes mellitus (T2DM) to improve glycaemic control in adults, as monotherapy or as combination therapy with metformin, or sulphonylurea and metformin, or in combination with insulin with or without metformin.1-3
+Cardiac failure, or heart failure (HF), is a pathophysiologically complex clinical syndrome, not fully understood, which results from an impaired function of the heart as a pump supporting physiological circulation. Symptoms are dyspnoea, exercise intolerance, and sodium and water retention, often manifested as oedema.
+Cardiac failure can be caused by any abnormality of the structure, mechanical function or electrical activity of the heart, or as a secondary dysfunction of other organs and tissues, e.g. kidneys, liver or muscles; other systemic processes, as neurohumoral activation, are also involved.4,5
+Receptors of GLP-1 (GLP-1R) are expressed in pancreas and extrapancreatic tissues (lung, kidney, central, enteric and peripheral nervous systems, lymphocytes, blood vessels, and heart). GLP-1 exerts direct actions on the cardiovascular system, the heart, vessels and kidney, mainly via GLP-1R. In preclinical studies, incretin-based agents control body weight, improve glycaemic control with a low risk of hypoglycaemia, decrease blood pressure, inhibit the secretion of intestinal chylomicrons, and reduce inflammation.6
+GIP and GLP-1 are rapidly inactivated by DPP4, 1- 3, 6-8 a transmembrane protein that removes N- terminal dipeptides from various substrate hormones, chemokines, neuropeptides, growth factors and incretins. Other cardioactive peptides cleaved by DPP4, are brain natriuretic peptide (BNP) and neuropeptide Y. BNP is a cardiac neurohormone with natriuretic and vasodilatory actions, secreted into the plasma from the ventricles in response to ventricular volume expansion and pressure overload.6-8 BNP has been established as a diagnostic and prognostic marker of left ventricular (LV) systolic and diastolic dysfunction.9 BNP plasma levels have been shown to be significantly higher in patients with decompensated chronic HF.10""" ;
+                     rdfs:label "Introduction content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#LinagliptinInVivoExperiments
+:LinagliptinInVivoExperiments rdf:type owl:NamedIndividual ,
+                                       OpenPVSignal:Clinical_trial_information ,
+                                       OpenPVSignal:Mechanism ;
+                              OpenPVSignal:refers_to_drug :linagliptin ;
+                              mp:references :Ref.1 ,
+                                            :Ref.2 ,
+                                            :Ref.30 ;
+                              OpenPVSignal:has_content "Linagliptin also has significant inhibitory activity on the human M1,M2 and M3 muscarinic receptors,with half minimal inhibitory concentration (IC50) values of 295 to 1000 nM (more than 22 times the clinical peak concentration (Cmax),which has not been considered clinically relevant.1,2 In animal models a relationship between B-adrenergic and M2 muscarinic receptors and diminished ventricular contractility has been suggested.30" ;
+                              rdfs:label "Linagliptin in vivo experiments" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Linagliptin_and_cardiac_failure
+:Linagliptin_and_cardiac_failure rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Pharmacovigilance_Signal_Report ;
+                                 OpenPVSignal:refers_to_author :Dr_Raquel_Herrera_Comoglio ;
+                                 OpenPVSignal:refers_to_signal :pvSignal ;
+                                 OpenPVSignal:has_creation_date "01/02/2015" ;
+                                 OpenPVSignal:has_overall_conclusion "Further investigation needed" ;
+                                 rdfs:label "Linagliptin and cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Literature_and_Labelling
+:Literature_and_Labelling rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Literature_information ;
+                          mp:references :Ref.1 ,
+                                        :Ref.12 ,
+                                        :Ref.13 ,
+                                        :Ref.14 ,
+                                        :Ref.15 ,
+                                        :Ref.16 ,
+                                        :Ref.17 ,
+                                        :Ref.18 ,
+                                        :Ref.2 ,
+                                        :Ref.3 ;
+                          OpenPVSignal:has_content "The EMA Summary of Product Characteristics for linagliptin, the Australian Public Assessment report and the product label for linagliptin (US FDA) do not mention heart/cardiac failure as an event associated with or described for linagliptin therapy.1-3 In a published clinical trial report, cardiac failure is mentioned as having occurred in a patient after 295 days of linagliptin 5 mg/metformin 2 g treatment.12 This case has been retrieved in VigiBase® and already mentioned in the “Reports in VigiBase®” section. A meta-analysis, published in February 2013, found that treatment with DPP4i reduces the risk of cardiovascular events (particularly myocardial infarction) and all-cause mortality in patients with type 2 diabetes. Although HF was a pre-specified component of major cardiovascular events (MACE), meta-analysis’s results don’t mention HF.13 A trial in older patients does not mention cardiac failure among adverse events.14 Results posted on Clinicaltrials.gov mention only rhythm abnormalities and coronary artery diseases as serious cardiac adverse events.15 A meta-analysis of 50 DPP4-inhibitors trials, enrolling 55,141 participants, found a statistically significant trend towards increased risk of HF outcomes with no increase in risk with regards to all-cause mortality, cardiovascular mortality, acute coronary syndrome (ACS) or stroke. Most of the HF cases were retrieved from results of SAVOR-TIMI-53 (saxagliptin, 66.2% of the data of HF), EXAMINE (alogliptin, 21.3%) and the VIVIDD trial (vildagliptin, 6.9%), the latter enrolled only patients with left ventricular fraction <40%. Seven clinical trials for linagliptin with 5,260 participants were included in the analysis.16 A meta-analysis of clinical trials with vildagliptin, sitagliptin, saxagliptin, alogliptin, linagliptin, and dutogliptin found that the overall risk of acute HF was higher in patients treated with DPP4i in comparison with those treated with placebo/active comparators, and suggested that DPP4i could be associated with an increased risk of HF.17 A recently published analysis of pooled data of 22 placebo-controlled trials found a negative relationship, with an incidence of HF adverse events (AEs) for linagliptin- and placebo-treated patients of 0.2% (n = 11) for linagliptin and 0.3% (n = 7) for placebo.18" ;
+                          rdfs:label "Literature and Labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#MechanismOfLinagliptin
+:MechanismOfLinagliptin rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Mechanism ;
+                        OpenPVSignal:has_content "Linagliptin is a synthetic, reversible inhibitor of dipeptidyl peptidase-4 (DPP4). Acting through inhibition of DPP4, linagliptin inhibits the proteolytic degradation of the incretin hormones glucagon-like peptide 1 (GLP-1) and glucose- dependent insulinotropic peptide (GIP), resulting in increased glucose dependent insulin secretion. " ;
+                        rdfs:label "Mechanism of Linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Mechanism_of_cilostazol
+:Mechanism_of_cilostazol rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Mechanism ;
+                         OpenPVSignal:has_content "Cilostazol is a reversible phosphodiesterase III inhibitor with anti-platelet, vasodilatory and antithrombotic properties, metabolized by CYP3A4 and CYP2C19. Cilostazol is formally contraindicated in patients with pre-existing HF. Nifedipine is metabolized by CYP2C19 (interaction described in product information)." ;
+                         rdfs:label "Mechanism of cilostazol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Mechanism_of_pioglitazone
+:Mechanism_of_pioglitazone rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Mechanism ;
+                           mp:references :Ref.21 ;
+                           OpenPVSignal:has_content "Pioglitazone is a thiazolidinedione, which selectively ligands the nuclear transcription factor peroxisome proliferator-activated receptor-γ (PPAR-γ). Thiazolidinediones improve glycaemic control by increasing insulin sensitivity." ;
+                           rdfs:label "Mechanism of pioglitazone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Mechanism_of_pioglitazone_for_HF
+:Mechanism_of_pioglitazone_for_HF rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Adverse_Effect_Mechanism ;
+                                  OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                                  mp:references :Ref.21 ;
+                                  OpenPVSignal:has_content "Fluid retention, that can cause or exacerbate HF in some patients, is a known effect of PPAR-γ, and pioglitazone can cause or exacerbate congestive HF in some patients.21" ;
+                                  rdfs:label "Mechanism of pioglitazone for HF" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#MolecularPharmacologyOfDPP4InhibitorsAffectingCardiacFunction
+:MolecularPharmacologyOfDPP4InhibitorsAffectingCardiacFunction rdf:type owl:NamedIndividual ,
+                                                                        OpenPVSignal:Adverse_Effect_Mechanism ;
+                                                               OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+                                                               mp:references :Ref.10 ,
+                                                                             :Ref.6 ,
+                                                                             :Ref.8 ,
+                                                                             :Ref.9 ;
+                                                               OpenPVSignal:has_content """Receptors of GLP-1 (GLP-1R) are expressed in pancreas and extrapancreatic tissues (lung, kidney, central, enteric and peripheral nervous systems, lymphocytes, blood vessels, and heart). GLP-1 exerts direct actions on the cardiovascular system, the heart, vessels and kidney, mainly via GLP-1R. In preclinical studies, incretin-based agents control body weight, improve glycaemic control with a low risk of hypoglycaemia, decrease blood pressure, inhibit the secretion of intestinal chylomicrons, and reduce inflammation.6
+GIP and GLP-1 are rapidly inactivated by DPP4, 1- 3, 6-8 a transmembrane protein that removes N- terminal dipeptides from various substrate hormones, chemokines, neuropeptides, growth factors and incretins. Other cardioactive peptides cleaved by DPP4, are brain natriuretic peptide (BNP) and neuropeptide Y. BNP is a cardiac neurohormone with natriuretic and vasodilatory actions, secreted into the plasma from the ventricles in response to ventricular volume expansion and pressure overload.6-8 BNP has been established as a diagnostic and prognostic marker of left ventricular (LV) systolic and diastolic dysfunction.9 BNP plasma levels have been shown to be significantly higher in patients with decompensated chronic HF.10""" ;
+                                                               rdfs:label "Molecular Pharmacology of DPP4 inhibitors affecting cardiac function" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#OverallReportsWithCardiacFailureAndLinagliptinInVigibase
+:OverallReportsWithCardiacFailureAndLinagliptinInVigibase rdf:type owl:NamedIndividual ,
+                                                                   OpenPVSignal:Reports_group ;
+                                                          OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+                                                          OpenPVSignal:refers_to_drug :linagliptin ;
+                                                          OpenPVSignal:has_count 15 ;
+                                                          OpenPVSignal:has_count_of_men 3 ;
+                                                          OpenPVSignal:has_count_of_women 11 ;
+                                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                          rdfs:label "Overall reports with cardiac failure and linagliptin in vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient1
+:Patient1 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient10
+:Patient10 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 67 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient11
+:Patient11 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient12
+:Patient12 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 88 ;
+           OpenPVSignal:has_gender "female" ;
+           rdfs:label "Patient 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient13
+:Patient13 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_age 83 ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient14
+:Patient14 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           rdfs:label "Patient 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient15
+:Patient15 rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Patient ;
+           OpenPVSignal:has_gender "male" ;
+           rdfs:label "Patient 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient2
+:Patient2 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient3
+:Patient3 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 84 ;
+          OpenPVSignal:has_gender "male" ;
+          rdfs:label "Patient 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient4
+:Patient4 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 71 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient5
+:Patient5 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient6
+:Patient6 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 60 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient7
+:Patient7 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 69 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient8
+:Patient8 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 66 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Patient9
+:Patient9 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Patient ;
+          OpenPVSignal:has_age 87 ;
+          OpenPVSignal:has_gender "female" ;
+          rdfs:label "Patient 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.1
+:Ref.1 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Australian Public Assessment Report for Linagliptin. Department of Health and Ageing, Therapeutic Goods Administration (TGA). December 2011." ;
+       rdfs:label "Ref.1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.10
+:Ref.10 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Gong H, Wang X, Ling Y, Shi Y, Shi H. Prognostic value of brain natriuretic peptide in patients with heart failure and reserved left ventricular systolic function. Exp Ther Med. 2014 Jun;7(6):1506-1512." ;
+        rdfs:label "Ref.10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.11
+:Ref.11 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Scirica BM, Bhatt DL, Braunwald E, Steg PG, Davidson J, Hirshberg B et al. Cardiovascular out- comes in patients with type 2 diabetes mellitus. N Engl J Med. 2013 Oct 3;369(14):1317-26." ;
+        rdfs:label "Ref.11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.12
+:Ref.12 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Haak T, Meinicke T, Jones R, Weber S, von Eynatten M, Woerle HJ. Initial combination of linagliptin and metformin in patients with type 2 diabetes: efficacy and safety in a randomised, double-blind 1-year extension study. Int J Clin Pract. 2013 Dec;67(12):1283-93. 9." ;
+        rdfs:label "Ref.12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.13
+:Ref.13 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Monami M, Ahrén B, Dicembrini I, Mannucci E. Dipeptidyl peptidase-4 inhibitors and cardiovascular risk: a meta-analysis of randomized clinical trials. Diabetes Obes Metab. 2013 Feb;15(2):112-20." ;
+        rdfs:label "Ref.13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.14
+:Ref.14 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Barnett AH, Huisman H, Jones R, von Eynatten M, Patel S, Woerle HJ. Linagliptin for patients aged 70 years or older with type 2 diabetes inadequately controlled with common antidiabetes treatments: a randomised, double-blind, placebo-controlled trial. Lancet. 2013 Oct 26;382(9902):1413- 23." ;
+        rdfs:label "Ref.14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.15
+:Ref.15 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Clinicaltrials.gov (identifier NCT01084005). URL: http://www.clinicaltrials.gov. Accessed: June 2014." ;
+        rdfs:label "Ref.15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.16
+:Ref.16 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Wu S, Hopper I, Skiba M, Krum H. Dipeptidyl peptidase-4 inhibitors and cardiovascular outcomes: Meta-analysis of randomized clinical trials with 55,141 participants. Cardiovasc Ther. 2014 Aug;32(4):147-58." ;
+        rdfs:label "Ref.16" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.17
+:Ref.17 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Monami M, Dicembrini I, Mannucci E. Dipeptidyl peptidase-4 inhibitors and heart failure: A meta-analysis of randomized clinical trials. Nutr Metab Cardiovasc Dis. 2014 Jul;24(7):689-97." ;
+        rdfs:label "Ref.17" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.18
+:Ref.18 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lehrke M, Marx N, Patel S, Seck T, Crowe S, Cheng K et al. Safety and Tolerability of Linagliptin in Patients With Type 2 Diabetes: A" ;
+        rdfs:label "Ref.18" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.19
+:Ref.19 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Lee SA, Choi HM, Park HJ, Ko SK, Lee HY. Amlodipine and cardiovascular outcomes in hypertensive patients: meta-analysis comparing amlodipine-based versus other antihypertensive therapy. Korean J Intern Med. 2014 May;29(3):315-24." ;
+        rdfs:label "Ref.19" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.2
+:Ref.2 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Summary of Product Characteristics for Linagliptin. European Medicines Agency. URL: http://www.ema. europa.eu/ema/… Accessed: June 2014" ;
+       rdfs:label "Ref.2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.20
+:Ref.20 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Packer M, Carson P, Elkayam U, Konstam MA, Moe G, O’Connor C et al. Effect of amlodipine on the survival of patients with severe chronic heart failure due to a nonischemic cardiomyopathy: results of the PRAISE-2 study (prospective randomized amlodipine survival evaluation 2). JACC Heart Fail. 2013 Aug;1(4):308-14." ;
+        rdfs:label "Ref.20" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.21
+:Ref.21 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Information for Healthcare Professionals: Pioglitazone HCl. URL: http://www.fda.gov/Drugs/DrugSafety/ost- marketDrugSafetyInformationforPatientsandP roviders/ ucm124178.htm. Accessed: 2014." ;
+        rdfs:label "Ref.21" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.22
+:Ref.22 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Scheen AJ. Cardiovascular effects of dipeptidyl peptidase-4 inhibitors: from risk factors to clinical outcomes. Postgrad Med. 2013 May;125(3):7-20." ;
+        rdfs:label "Ref.22" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.23
+:Ref.23 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Aroor AR, Sowers JR, Jia G, DeMarco VG. Pleiotropic Effects of the Dipeptidylpeptidase- 4 Inhibitors on the Cardiovascular System. Am J Physiol Heart Circ Physiol. 2014 Jun 13" ;
+        rdfs:label "Ref.23" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.24
+:Ref.24 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Scirica BM, Raz I, Cavender MA, Steg PG, Hirshberg B, Davidson J et al. Abstract 17503: Outcomes of Patients With Type 2 Diabetes and Known Congestive Heart Failure Treated With Saxagliptin: Analyses of the SAVORTIMI 53 Study. Cardiovasc Ther. 2014 Apr 21." ;
+        rdfs:label "Ref.24" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.25
+:Ref.25 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "White WB, Cannon CP, Heller SR, Nissen SE, Bergenstal RM, Bakris GL, et al. Alogliptin after acute coronary syndrome in patients with type 2 diabetes. N Engl J Med. 2013 Oct 3;369(14):1327-35." ;
+        rdfs:label "Ref.25" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.26
+:Ref.26 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Schernthaner G, Sattar N. Lessons from SAVOR and EXAMINE: Some important answers, but many open questions. J Diabetes Complications. 2014 Jul- Aug;28(4):430-3. doi: 10.1016/j. jdiacomp.2014.02.011." ;
+        rdfs:label "Ref.26" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.27
+:Ref.27 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Ravassa S, Barba J, Coma-Canella I, Huerta A, López B, González A, et al. The activity of circulating dipeptidyl peptidase-4 is associated with subclinical left ventricular dysfunction in patients with type 2 diabetes mellitus. Cardiovasc Diabetol. 2013 Oct 7;12:143." ;
+        rdfs:label "Ref.27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.28
+:Ref.28 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Baraniuk JN, Jamieson MJ. Rhinorrhea, cough and fatigue in patients taking sitagliptin. Allergy, Asthma & Clinical Immunology. 2010;6(1):8-" ;
+        rdfs:label "Ref.28" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.29
+:Ref.29 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Matyal R, Mahmood F, Robich M, Glazer H, Khabbaz K, Hess P, et al. Chronic type II diabetes mellitus leads to changes in neuropeptide Y receptor expression and distribution in human myocardial tissue. Eur J Pharmacol. 2011 Aug 31;665(1-3):19-28." ;
+        rdfs:label "Ref.29" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.3
+:Ref.3 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Product Label for linagliptin (Tradjenta®). US Food & Drug Administration. URL: http://www. accessdata.fda.gov/scripts/cder/drugsatfda/in dex.cfm?fuseaction=Search.Search_Drug_Na me. Accessed: June 2014." ;
+       rdfs:label "Ref.3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.30
+:Ref.30 rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Bibliographic_reference ;
+        OpenPVSignal:has_content "Kashihara T, Hirose M, Shimojo H, Nakada T, Gomi S, Hongo M, et al. β(2)-Adrenergic and M(2)-muscarinic receptors decrease basal t- tubular L-type Ca2+ channel activity and suppress ventricular contractility in heart failure. Eur J Pharmacol. 2014 Feb 5 ;724:122-31." ;
+        rdfs:label "Ref.30" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.4
+:Ref.4 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Braunwald E. Heart failure. JACC Heart Fail. 2013 Feb;1(1):1-20. doi: 10.1016/j.jchf.2012.10.002. Epub 2013 Feb 4." ;
+       rdfs:label "Ref.4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.5
+:Ref.5 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Jessup M, Abraham WT, Casey DE, Feldman AM, Francis GS, Ganiats TG et al. 2009 focu- sed update: ACCF/AHA Guidelines for the diagnosis and Management of Heart Failure in Adults: a report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines: developed in collaboration with the International Society for Heart and Lung Transplantation. Circulation. 2009 Apr 14;119(14):1977-2016." ;
+       rdfs:label "Ref.5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.6
+:Ref.6 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ussher JR, Drucker DJ. Cardiovascular actions of incretin-based therapies. Circulation research. 2014; 114:1788-1803." ;
+       rdfs:label "Ref.6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.7
+:Ref.7 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Ussher JR, Drucker DJ. Cardiovascular biology of the incretin system. Endocr Rev. 2012 Apr;33(2):187-215." ;
+       rdfs:label "Ref.7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.8
+:Ref.8 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Drucker DJ. Dipeptidyl peptidase-4 inhibition and the treatment of type 2 diabetes: preclinical bio- logy and mechanism of action. Diabetes care. 2007 Jun;30(6):1335-43." ;
+       rdfs:label "Ref.8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Ref.9
+:Ref.9 rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Bibliographic_reference ;
+       OpenPVSignal:has_content "Braunwald E. Biomarkers in heart failure. N Engl J Med. 2008 May 15;358(20):2148-59." ;
+       rdfs:label "Ref.9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report1
+:Report1 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :CaseInfo1 ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacCongestiveFailure ,
+                                               :hypotension ,
+                                               :hypoxia ,
+                                               :nausea ,
+                                               :pain ,
+                                               :pleuralFibrosis ,
+                                               :pulmonaryCongestion ,
+                                               :urinaryTractInfection ;
+         OpenPVSignal:refers_to_patient :Patient1 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:refers_to_reported_drug_usage :usage_of_linagliptin_case_1 ;
+         OpenPVSignal:time_to_onset :time_to_onset_1 ;
+         time:hasDurationDescription :treatmentDuration1 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery without drug withdrawal" ;
+         rdfs:label "Report 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report10
+:Report10 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :caseInfo10A ;
+          OpenPVSignal:refers_to_adverse_effect :atrialFibrillation ,
+                                                :cardiacArrestPathology ,
+                                                :diseaseProgression ,
+                                                :myocardialDecompensation ,
+                                                :oedema ;
+          OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                  :cyclophosmamide ,
+                                                  :enalapril ,
+                                                  :estradiol ,
+                                                  :ezetimibe ,
+                                                  :furosemide ,
+                                                  :insulinAspart ,
+                                                  :insulinGlargine ,
+                                                  :magnesiumOxide ,
+                                                  :potassium ,
+                                                  :prednisolone ,
+                                                  :sildenafil ,
+                                                  :simvastatin ,
+                                                  :terbutaline ,
+                                                  <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#formoterolfumarate/budesonide> ;
+          OpenPVSignal:refers_to_past_diagnosis :corPulmonale ,
+                                                :hypertensionPulmonary ,
+                                                :lungFibrosis ;
+          OpenPVSignal:refers_to_patient :Patient10 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          OpenPVSignal:time_to_onset :time_to_onset_10 ;
+          time:hasDurationDescription :treatmentDuration10 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report11
+:Report11 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :caseInfo11 ;
+          OpenPVSignal:refers_to_adverse_effect :myocardialDecompensation ;
+          OpenPVSignal:refers_to_concomitant_drug :metformin ;
+          OpenPVSignal:refers_to_past_diagnosis :heart_disease_unspecified ;
+          OpenPVSignal:refers_to_patient :Patient11 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report12
+:Report12 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case12 ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ,
+                                                :oedema ;
+          OpenPVSignal:refers_to_concomitant_drug :metformin ;
+          OpenPVSignal:refers_to_past_diagnosis :atrialFibrillation ,
+                                                :hypertension ;
+          OpenPVSignal:refers_to_patient :Patient12 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          time:hasDurationDescription :treatmentDuration12 ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery with no further information" ;
+          rdfs:label "Report 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report13
+:Report13 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case13 ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+          OpenPVSignal:refers_to_past_diagnosis :hypertension ,
+                                                :renalInsufficiency ;
+          OpenPVSignal:refers_to_patient :Patient13 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 13" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report14
+:Report14 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:has_free_text_reporting_element :Case14 ;
+          OpenPVSignal:refers_to_adverse_effect :cardiogenicShock ,
+                                                :supraventricularTachycardia ;
+          OpenPVSignal:refers_to_patient :Patient14 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          OpenPVSignal:refers_to_reported_drug_usage :linagliptin_usage_for_Report14 ,
+                                                     :linagliptin_usage_for_Report14_1 ;
+          OpenPVSignal:refers_to_secondary_suspect_drug :metformin ;
+          OpenPVSignal:time_to_onset :time_to_onset_14 ;
+          time:hasDurationDescription :treatmentDuration14 ;
+          OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+          OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+          rdfs:label "Report 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report15
+:Report15 rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:VigiBase_Report ;
+          OpenPVSignal:refers_to_adverse_effect :abdominalDiscomfort ,
+                                                :asthenia ,
+                                                :hyperglycaemia ,
+                                                :nocturnalDyspnoea ,
+                                                :tremor ;
+          OpenPVSignal:refers_to_patient :Patient15 ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+          rdfs:label "Report 15" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report2
+:Report2 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_info_2 ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+         OpenPVSignal:refers_to_concomitant_drug :amlodipine ,
+                                                 :irbesartan ,
+                                                 :metformin ,
+                                                 :pioglitazone ;
+         OpenPVSignal:refers_to_patient :Patient2 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report3
+:Report3 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :case_3_info ;
+         OpenPVSignal:refers_to_adverse_effect :conditionAggravated ,
+                                               :congestiveHeartFailure ,
+                                               :oedema ,
+                                               :orthopnoea ,
+                                               :respiratoryRateIncreased ,
+                                               :wheezes ;
+         OpenPVSignal:refers_to_concomitant_drug :clarithromycin ,
+                                                 :clopidogrel ,
+                                                 :doxazocin ,
+                                                 :fluticasone ,
+                                                 :lactulose ,
+                                                 :latanoprost ,
+                                                 :metformin ,
+                                                 :senna ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#furosemide/amiloride> ;
+         OpenPVSignal:refers_to_patient :Patient3 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:time_to_onset :time_to_onset_3 ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report4
+:Report4 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+         OpenPVSignal:refers_to_patient :Patient4 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:refers_to_outcome_after_action "unknown" ;
+         rdfs:label "Report 4" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report5
+:Report5 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :anaemia ,
+                                               :congestiveHeartFailure ,
+                                               :hypertensionPulmonary ;
+         OpenPVSignal:refers_to_patient :Patient5 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:time_to_onset :time_to_onset_5 ;
+         time:hasDurationDescription :treatmentDuration5 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery with sequelae" ;
+         rdfs:label "Report 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report6
+:Report6 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :congestiveHeartFailure ;
+         OpenPVSignal:refers_to_patient :Patient6 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         rdfs:label "Report 6" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report7
+:Report7 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ,
+                                               :dyspnoea ,
+                                               :swelling ;
+         OpenPVSignal:refers_to_patient :Patient7 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         rdfs:label "Report 7" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report8
+:Report8 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :caseInfo8A ;
+         OpenPVSignal:refers_to_adverse_effect :acuteDyspnoea ,
+                                               :generalPhysicalHealthDeterioration ,
+                                               :myocardialDecompensation ,
+                                               :renalFailureAcute ,
+                                               :vomiting ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :amlodipine ,
+                                                 :bisoprolol ,
+                                                 :calciumAcetate ,
+                                                 :calciumCarbonate ,
+                                                 :cloxazolam ,
+                                                 :colecalciferol ,
+                                                 :gliquidone ,
+                                                 :quinapril ,
+                                                 :simvastatin ,
+                                                 :sodiumBicarbonate ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sodiumascorbate/ferrousSulfate> ;
+         OpenPVSignal:refers_to_past_diagnosis :chronicObstructivePulmonaryDiseases ,
+                                               :dyslipidaemia ,
+                                               :hypertension ,
+                                               :hyperuricaemia ,
+                                               :renalAnaemia ,
+                                               :renalArteryStenosis ,
+                                               :renalDisease ,
+                                               :renalInsufficiency ,
+                                               :renalOsteodystrophy ;
+         OpenPVSignal:refers_to_patient :Patient8 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:time_to_onset :time_to_onset_8 ;
+         time:hasDurationDescription :treatmentDuration8 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "negative - condition still applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "death" ;
+         rdfs:label "Report 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Report9
+:Report9 rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:VigiBase_Report ;
+         OpenPVSignal:has_free_text_reporting_element :caseInfo9A ;
+         OpenPVSignal:refers_to_adverse_effect :cardiacCongestiveFailure ,
+                                               :renalFailureAggravated ;
+         OpenPVSignal:refers_to_concomitant_drug :acetylsalicylicAcid ,
+                                                 :doxazocin ,
+                                                 :ezetimibe ,
+                                                 :famotidine ,
+                                                 :haloperidol ,
+                                                 :nifedipine ,
+                                                 :zopiclone ,
+                                                 <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hydrochlorotiazide/losartanPotassium> ;
+         OpenPVSignal:refers_to_past_diagnosis :anginaPectoris ,
+                                               :chronicRenalFailure ,
+                                               :diabetesMellitus ,
+                                               :hyperlipidaemia ,
+                                               :hypertension ,
+                                               :myocardialIschaemia ,
+                                               :percutaneousCoronaryIntervention ;
+         OpenPVSignal:refers_to_patient :Patient9 ;
+         OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+         OpenPVSignal:refers_to_reported_drug_usage :linagliptin_usage_for_Report9 ,
+                                                    :linagliptin_usage_for_Report9_1 ;
+         OpenPVSignal:refers_to_secondary_suspect_drug :cilostazol ;
+         OpenPVSignal:time_to_onset :time_to_onset_9 ;
+         time:hasDurationDescription :treatmentDuration9 ;
+         OpenPVSignal:refers_to_dechallenge_outcome "positive - condition not applied" ;
+         OpenPVSignal:refers_to_outcome_after_action "recovery after drug withdrawal" ;
+         rdfs:label "Report 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromAustralia
+:ReportsFromAustralia rdf:type owl:NamedIndividual ,
+                               OpenPVSignal:Reports_group ;
+                      OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                      OpenPVSignal:has_count 2 ;
+                      OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Australia" ;
+                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                      rdfs:label "Reports from Australia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromCanada
+:ReportsFromCanada rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                   OpenPVSignal:has_count 2 ;
+                   OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Canada" ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   rdfs:label "Reports from Canada" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromEurope
+:ReportsFromEurope rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Reports_group ;
+                   OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                   OpenPVSignal:has_count 6 ;
+                   OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                   OpenPVSignal:refers_to_geographical_region "http://dbpedia.org/resource/Europe" ;
+                   rdfs:label "Reports from Europe" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromJapan
+:ReportsFromJapan rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Reports_group ;
+                  OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                  OpenPVSignal:has_count 1 ;
+                  OpenPVSignal:refers_to_country "http://dbpedia.org/resource/Japan" ;
+                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                  rdfs:label "Reports from Japan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromManufacturers
+:ReportsFromManufacturers rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Reports_group ;
+                          OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                          OpenPVSignal:has_count 2 ;
+                          OpenPVSignal:has_reporter_type "pharmaceutical company" ;
+                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                          rdfs:label "Reports from manufacturers" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromOtherHealthProfessionals
+:ReportsFromOtherHealthProfessionals rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Reports_group ;
+                                     OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                     OpenPVSignal:has_count 1 ;
+                                     OpenPVSignal:has_reporter_type "health care professional, other than physician" ;
+                                     OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                     rdfs:label "Reports from other health professionals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromPharmacists
+:ReportsFromPharmacists rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Reports_group ;
+                        OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                        OpenPVSignal:has_count 1 ;
+                        OpenPVSignal:has_reporter_type "pharmacist" ;
+                        OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                        rdfs:label "Reports from pharmacists" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromPhysicians
+:ReportsFromPhysicians rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Reports_group ;
+                       OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                       OpenPVSignal:has_count 10 ;
+                       OpenPVSignal:has_reporter_type "physician" ;
+                       OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                       rdfs:label "Reports from physicians " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromUS
+:ReportsFromUS rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Reports_group ;
+               OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+               OpenPVSignal:has_count 3 ;
+               OpenPVSignal:refers_to_country "http://dbpedia.org/resource/United_States" ;
+               OpenPVSignal:refers_to_database "WHO Vigibase" ;
+               rdfs:label "Reports from US" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsInVigibase
+:ReportsInVigibase rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Free_text_reporting_element ;
+                   mp:references :Ref.11 ,
+                                 :Ref.12 ;
+                   OpenPVSignal:has_content "Fifteen ICSRs were retrieved from the WHO Global ICSR Database, VigiBase®, up to 6 May 2014 (Table 1). All but one (a case from literature) were spontaneous reports. All but two cases were serious (one case doesn’t state serious- ness, another one was reported as not serious),and there was one death reported. The patients were 11 women (73%) and three men (20%),while the literature case doesn’t report the patient’s sex. Age was reported in nine cases (60%),being all patients 60 years or older; age ranged from 83 to 88 years in four out of nine patients (44%). Another patient’s age (case 11) was estimated to 85-90 years. Fifteen ICSRs were retrieved from the WHO Global ICSR Database,VigiBase®,up to 6 May 2014Relevant medical history was reported in six cases (cases 8,9,10,11,12 and 13). In case 8, concomitant diseases included renal artery stenosis,renal insufficiency,renal disease (shrinked kidneys),renal anaemia,renal osteodystrophy,hyperuricaemia,dyslipidaemia, hypertension,and chronic obstructive pulmonary diseases (COPD). In case 9,relevant medical history mentions cardiovascular disease (CVD) (percutaneous coronary intervention,angina pectoris and myocardial ischaemia),hypertension, hyperlipidaemia,chronic renal failure and diabetes mellitus. Of note,both patients had low weight (43 kg and 40 kg). Case 10 reports hypertension pulmonale,cor pulmonale and lung fibrosis. Case 11 reports unspecified heart disease,case 12 mentions hypertension and atrial fibrillation and case 13 renal insufficiency and hypertension. Reports come from Europe (six cases),the US (three),Canada (two),Australia (two) and Japan (one). ICSRs were sent by physicians (ten cases), manufacturers (two),pharmacist (one) consumers/non health professionals (one case) and other health professionals (one case). The completeness score of the ICSRs was low (0.17- 0.27) in 31%,medium (0.33-0.53) in 44% and high (0.75-0.95) in 25% of the reports. One report mentions a recently published article about the effect of saxagliptin on cardiac outcomes. Seven reports provide time to onset,which varied from 6 days (two reports) to 295 days. In all cases but two,linagliptin is the only suspected drug. In the case from literature, metformin 2 g/day (part of the investigational product) was also suspected. In case 9,cilostazol was started nine days before the adverse event and was also mentioned as a suspected drug. Co-administered medication was reported in nine cases,although it was not specified in one case. Three cases included calcium-channel blockers (amlodipine in two cases and nifedipine in one). T2DM medication was reported in six cases, metformin was the only antidiabetic drug concomitantly administrated in four (in the case from a clinical trial it was reported as a suspected drug),there was one case with metformin and pioglitazone,and another with insulin. Dechallenge action was reported in nine cases (60%): linagliptin was reported as withdrawn in eight of these,and in one linagliptin dose was reported as not changed,the patient recovered with sequelae. The fatal case (case 8) refers to a 66 year-old woman with renal insufficiency (renal artery stenosis,renal anaemia,renal dystrophia), hyperuricemia,dyslipemia,hypertension and COPD,who presented with acute dyspnoea and cardiac decompensation 16 days after having started therapy with linagliptin. The patient died 15 days later,and linagliptin was considered “implied”. The first spontaneous reporting (case 1) referred to a woman presenting with cardiac failure 44 days after having started her treatment with linagliptin 5 mg. All the other adverse events (urinary infection,pulmonary infection) occurred at least 11 days after the HF onset,and were probably related to complications derived from hospitalization. Linagliptin was withdrawn after the patient had recovered from her cardiac failure,and hypothetically,after hospitalization. In the case reported by a manufacturer (case 2),a female patient was also treated with pioglitazone, amlodipine,metformin and irbesartan. Case 9 refers to a Japanese 87 year-old woman,weight 40 kg,treated with several drugs including nifedipine for hypertension,hyperlipidaemia, chronic renal failure and myocardial ischaemia. The patient presented with congestive HF and aggravated renal failure six days after having started linagliptin 5 mg/day and nine days after start of cilostazol treatment with 200 mg/day. In case 10,a 67 year-old woman with a history of scleroderma,lung fibrosis and pulmonary hypertension presented with atrial fibrillation and cardiac failure after approximately six months in treatment with linagliptin. The reporter,a physician,mentions an article of Scirica et al., published the previous month.11 In case 12,an 88 year-old woman who had started linagliptin 45 days earlier,went to a hospital for routine pacemaker battery replacement,and cardiac insufficiency was detected; the patient lost 13 kg with appropriate therapy (this indicates the amount of fluid retention),and her ejection fraction was 45%. Case 13 reports that an 83 year-old man with renal insufficiency and hypertension presented with cardiac failure. Linagliptin was withdrawn,but there is no information about the outcome. Concomitant poly-medication is mentioned but details are not provided. The case from literature (case 14) was extracted from a 52 weeks multifactorial design study,and reports two drug related serious adverse events (SAEs) in the same patient on day 295 after starting the study treatment (2.5 mg linagliptin + 1000 mg metformin). The patient experienced cardiogenic shock and supraventricular tachycardia within one hour of administration of medication. The patient required hospitalisation and study medication was discontinued; the patient recovered.12" ;
+                   rdfs:label "Reports in Vigibase" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsWithLinagliptinAsTheSuspectedDrug
+:ReportsWithLinagliptinAsTheSuspectedDrug rdf:type owl:NamedIndividual ,
+                                                   OpenPVSignal:Reports_group ;
+                                          OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                          OpenPVSignal:has_count 13 ;
+                                          OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                          rdfs:label "Reports with linagliptin as the suspected drug" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Reports_with_death_reported
+:Reports_with_death_reported rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Reports_group ;
+                             OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                             OpenPVSignal:has_count 1 ;
+                             OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                             OpenPVSignal:refers_to_outcome_after_action "death" ;
+                             rdfs:label "Reports with death reported" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#Response_from_Boehringer_Ingelheim
+:Response_from_Boehringer_Ingelheim rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Response_to_Pharmacovigilance_Signal_Report ;
+                                    OpenPVSignal:refers_to_pharmacovigilance_signal_report :Linagliptin_and_cardiac_failure ;
+                                    OpenPVSignal:has_content "Thank you for the opportunity to provide our comments. Boehringer Ingelheim completed a cumulative assessment of HF on 14 February 2014 following an internally detected signal after publication of the results for the saxagliptin and alogliptin cardiovascular outcome trials (CVOT) in September 2013. A cumulative review of linagliptin and linagliptin+metformin fixed dose combination (FDC) reports entered in the Boehringer Ingelheim global drug safety database until 27AUG2014 was undertaken using the narrow MedDRA v17.0 SMQ cardiac failure. Data from clinical trials, epidemiologic studies and the published literature were also reviewed. 92 events (87 serious) in 83 reports were identified in association with linagliptin; no reports were identified in association with the linagliptin+metformin FDC. Forty-six events in 42 reports were from clinical trials, 32 events in 28 reports were spontaneous, 3 events in 3 reports were from Health Authorities and 11 events in 10 reports were from observational studies. The main reason for seriousness was hospitalization alone or associated with life-threatening or fatal reports. Forty six patients were female (55%), 35 were male (42%) and 2 did not report gender. The 78 reports which provide age range between 39 and 92 years with most (75%) over 60. Twenty one patients (25%) were older than 80. All of the reports were individually assessed and had a plausible alternative explanation, factors (e.g. temporality) that make a causal relationship to linagliptin unlikely or insufficient information for a more full causal assessment. A dechallenge is described in 28 reports: 12 positive, 7 negative and 2 unknown outcomes. Four rechallenges are described: 2 negative, one unknown outcome. Only one positive rechallenge was described, in a patient with end stage renal and chronic cardiac failure with critical coronary occlusion. In 4 reports the patient recovered while linagliptin continued unchanged. Six reports were not temporally related to linagliptin; one patient had viral cardiomyopathy 5 months after discontinuation, another with pre-existing chronic renal failure experienced HF 3 months after discontinuation, 3 had evidence of worsening of pre-existing HF prior to starting linagliptin and one event occurred on the day that linagliptin was started, when hyperthyroidism was also diagnosed. Time to onset was reported in 71 of the 92 events. Thirty eight events (54%) were <6 months, and 11 (15%) events occurred more than 1 year after starting linagliptin. Of the 15 ICSRs identified on the Vigibase database, 14 are included in the search results. Case 15 is not because the Preferred Term Nocturnal dyspnoea is not in the narrow cardiac failure SMQ definition. In addition to the information presented, case 1 reported a patient in a Boehringer Ingelheim sponsored trial in patients with renal impairment. The patient was taking furosemide for congestive heart failure (CHF) and spironolactone and metolazone was added 3 months before linagliptin was started indicating worsening or instability of the disease prior to linagliptin. The evaluation of HF is complex in the type 2 Diabetes Mellitus (T2DM) population. As stated in the article above, the risk factors for HF would be expected to be higher in the T2DM population compared with non- diabetics. An assessment was conducted of past or concomitant conditions that are known risk factors for HF. Seventy seven patients (93%) had at least one risk factor and 55 patients (66%) had 3 or more risk factors. Six patients did not have at least one risk factor for HF and all 6 reports had limited or no medical history provided. Hypertension may be the single most important modifiable risk factor for HF.1 Fifty eight patients (70%) reported hypertension. Obesity and insulin resistance are also important risk factors for cardiac failure.1 Using the international classification of body mass index (BMI)2 , of 54 patients reporting a BMI, 12 (22%) were pre-obese and 27 (50%) were obese. Only 10 reports described patients with normal BMI and the 5 underweight patients had renal failure. Linagliptin does not require dose alteration in patients with renal insufficiency and may be more likely to be used in this patient population than other DPP-4 inhibitors. Thirty six patients (43%) reported renal insufficiency, acute or chronic renal failure or diabetic nephropathy which are recognised risk factors for HF.1 The reported incidence rate of HF in patients with T2DM varies across studies largely reflecting differences in ascertainment and adjustment approaches.3 A study conducted in multiple countries across Europe and North Africa estimated an annual incidence rate of CHF requiring hospitalisation of 10 per 1000 persons.4 In the US, the CDC reported the annual age-adjusted hospital discharge rate with HF as first-listed diagnosis in diabetes patients to be 13.4 per 1000 in 2006.5 Another US study estimated a crude incidence rate of about 11.8 per 1000 PY.6 The incidence rate of patients with unadjudicated narrow MedDRA SMQ cardiac failure events for linagliptin is 5.8 per 1000PY (N=9060).7 Pooled analysis of safety data from 23 randomized clinical trials (N=5488 linagliptin, 3290 placebo) showed same overall incidence of cardiac disorders (3.3% and 3.3%, respectively).7 Using the narrow MedDRA SMQ cardiac failure, the frequency was 0.5% (linagliptin) and 0.2% (placebo).8 This frequency in patients with a history of cardiac failure was 5.1% (linagliptin) and 5.5% (placebo).7 External adjudication of events of hospitalization for HF in 8 randomized, double-blind studies, (N=2039 linagliptin, 1275 placebo) showed 9 (0.4%) and 5 (0.4%) patients respectively were adjudicated to have HF. Further adjudicated analyses will be available when the large ongoing CVOTs CAROLINA and CARMELINA complete. It is not possible to demonstrate a direct causal effect of linagliptin with HF due to the confounding of the reports with risk factors for the condition and the known relatively high background incidence in the T2DM population. In addition, the observed incidence rate in the clinical trials appears to be within the published range. Data does not demonstrate an increased frequency in patients with previous HF. Boehringer Ingelheim concluded that linagliptin is not casually associated with HF however this topic will continue to be closely monitored and the linagliptin CVOTs CAROLINA and CARMELINA will provide important further information. References 1. Yancy CW, Jessup M, Bozkurt B, Butler J, Casey Jr DE, Drazner MH, et al. 2013 ACCF/AHA Guideline for the Management of Heart Failure: A Report of the American College of Cardiology Foundation/American Heart Association Task Force on Practice Guidelines. Circulation. 2013;128:e240-e327. 2. http://apps.who.int/bmi/index.jsp?introPage= intro_3. html Accessed 8 September 2014. 3. Roger VL. Epidemiology of heart failure. Circ Res 2013. 113(6):646-659. 4. Vaur L, Gueret P, Lievre M, Chabaud S, Passa P, DIABHYCAR Study Group. Development of congestive heart failure in type 2 diabetic patients with microalbuminuria or proteinuria: observations from the DIABHYCAR (type 2 DIABetes, Hypertension, CArdiovascular Events and Ramipril) study. Diabetes Care 2003. 26(3):855-860. 5. Centres for Disease Control and Prevention Diabetes Public Health Resource. http://www.cdc.gov/diabetes/ statistics/ cvdhosp/hf/fig3.htm Accessed 10 September 2014. 6. Kanaya AM, Adler N, Moffet HH, Liu J, Schillinger D, Adams A, Ahmed AT, Karter AJ. Heterogeneity of diabetes outcomes among Asians and Pacific Islanders in the US: the Diabetes Study of Northern California (DISTANCE). Diabetes Care 2011. 34(4):930- 937. 7. Internal Boehringer Ingelheim data. 8. Schernthaner G, Khunti K, Patel S, Cheng K, Mattheus M, Woerle HJ. Safety of linagliptin in 8778 patients with type 2 diabetes mellitus: pooled analysis of 23 placebo-controlled randomized clinical trials. 74th Sci Sess of the American Diabetes Association (ADA), San Francisco, 13 - 17 Jun 2014 (Poster) 2014." ;
+                                    rdfs:label "Response from Boehringer Ingelheim" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#SaxagliptinClinicalTrial
+:SaxagliptinClinicalTrial rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Clinical_trial_information ;
+                          OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                          OpenPVSignal:refers_to_drug :saxagliptin ;
+                          mp:references :Ref.11 ,
+                                        :Ref.24 ;
+                          OpenPVSignal:has_content """A large trial found a higher statistically significant risk of hospitalization due to HF in the saxagliptin group than in the placebo group. Patients had T2DM and established cardiovascular disease or multiple cardiovascular risks factors,and were followed for a median of
+2.1 years; HF was included in a composite secondary endpoint. 12.8% of participants had prior HF.11 The events were more frequent in patients with diabetes and HF.24""" ;
+                          rdfs:label "Saxagliptin clinical trial" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#SeriousReports
+:SeriousReports rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Reports_group ;
+                OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                OpenPVSignal:has_count 13 ;
+                OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                rdfs:label "Serious reports" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ThiazolidinedionesConfoundingEffect
+:ThiazolidinedionesConfoundingEffect rdf:type owl:NamedIndividual ,
+                                              obo:OAE_0001182 ;
+                                     OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                                     OpenPVSignal:refers_to_drug :pioglitazone ;
+                                     mp:references :Ref.21 ;
+                                     OpenPVSignal:has_content "For the patient treated with pioglitazone/ metformin (case 2), no time to onset was reported. Pioglitazone is a thiazolidinedione, which selectively ligands the nuclear transcription factor peroxisome proliferator-activated receptor-γ (PPAR-γ). Thiazolidinediones improve glycaemic control by increasing insulin sensitivity. Fluid retention, that can cause or exacerbate HF in some patients, is a known effect of PPAR-γ, and pioglitazone can cause or exacerbate congestive HF in some patients.21 " ;
+                                     rdfs:label "Thiazolidinediones confounding effect" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#TimeToOnsetForSaxagliptin
+:TimeToOnsetForSaxagliptin rdf:type owl:NamedIndividual ,
+                                    obo:OAE_0001197 ;
+                           OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                           OpenPVSignal:refers_to_drug :saxagliptin ;
+                           OpenPVSignal:has_content "In a large study with saxagliptin, the risk for HF hospitalization associated with the use of saxagliptin was highest in the first six months and declined thereafter." ;
+                           rdfs:label "Study for saxagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#UsageOfLinagliptin
+:UsageOfLinagliptin rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Drug_Usage ;
+                    OpenPVSignal:concerns_indication_for_use :diabetesMellitus ;
+                    OpenPVSignal:refers_to_drug :linagliptin ;
+                    rdfs:label "Usage of linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#abdominalDiscomfort
+:abdominalDiscomfort rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_MedDRA_code 10000059 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Abdominal discomfort" ;
+                     rdfs:label "abdominal discomfort" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#acetylsalicylicAcid
+:acetylsalicylicAcid rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Drug ;
+                     OpenPVSignal:has_ATC_code "A01AD05" ,
+                                               "B01AC06" ,
+                                               "B01AC56" ,
+                                               "C10BX01" ,
+                                               "C10BX02" ,
+                                               "C10BX04" ,
+                                               "C10BX05" ,
+                                               "C10BX06" ,
+                                               "C10BX08" ,
+                                               "M01BA03" ,
+                                               "N02BA01" ,
+                                               "N02BA51" ,
+                                               "N02BA71" ;
+                     rdfs:label "acetylsalicylic acid" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#acuteDyspnoea
+:acuteDyspnoea rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Adverse_Effect ;
+               OpenPVSignal:has_ICD_code "R06.0" ;
+               OpenPVSignal:has_MedDRA_code 10066607 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Acute dyspnoea" ;
+               rdfs:label "acute dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#alogliptin
+:alogliptin rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:hasClass :DDP4_inhibitors ;
+            OpenPVSignal:has_ATC_code "A10BD09" ,
+                                      "A10BD13" ,
+                                      "A10BH04" ;
+            rdfs:label "alogliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#amlodipine
+:amlodipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA01" ,
+                                      "C08GA02" ,
+                                      "C09BB03" ,
+                                      "C09BB04" ,
+                                      "C09BB07" ,
+                                      "C09BX01" ,
+                                      "C09DB01" ,
+                                      "C09DB02" ,
+                                      "C09DB04" ,
+                                      "C09DB05" ,
+                                      "C09DB06" ,
+                                      "C09DB07" ,
+                                      "C09DX01" ,
+                                      "C09DX03" ,
+                                      "C09XA53" ,
+                                      "C09XA54" ,
+                                      "C10BX03" ,
+                                      "C10BX07" ,
+                                      "C10BX09" ,
+                                      "C10BX11" ;
+            rdfs:label "amlodipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#anaemia
+:anaemia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "D64.9" ;
+         OpenPVSignal:has_MedDRA_code 10002034 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Anaemia" ;
+         rdfs:label "anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#analysis_of_pooled_data_of_clinical_trials
+:analysis_of_pooled_data_of_clinical_trials rdf:type owl:NamedIndividual ,
+                                                     obo:OAE_0001182 ,
+                                                     OpenPVSignal:Clinical_trial_information ;
+                                            OpenPVSignal:refers_to_drug :linagliptin ;
+                                            mp:references :Ref.18 ;
+                                            OpenPVSignal:has_content "A recently published analysis of pooled data of 22 placebo-controlled trials found a negative relationship, with an incidence of HF adverse events (AEs) for linagliptin- and placebo-treated patients of 0.2% (n = 11) for linagliptin and 0.3% (n = 7) for placebo.18" ;
+                                            rdfs:label "analysis of pooled data of clinical trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#anginaPectoris
+:anginaPectoris rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Past_Diagnosis ;
+                OpenPVSignal:has_ICD_code "I20.9" ;
+                OpenPVSignal:has_MedDRA_code 10002383 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Angina pectoris" ;
+                rdfs:label "angina pectoris" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#asthenia
+:asthenia rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R53" ;
+          OpenPVSignal:has_MedDRA_code 10003549 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Asthenia" ;
+          rdfs:label "asthenia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#atrialFibrillation
+:atrialFibrillation rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ,
+                             OpenPVSignal:Past_Diagnosis ;
+                    OpenPVSignal:has_ICD_code "I48" ;
+                    OpenPVSignal:has_MedDRA_code 10003658 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Atrial fibrillation" ;
+                    rdfs:label "atrial fibrillation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#bisoprolol
+:bisoprolol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C07AB07" ,
+                                      "C07AB57" ,
+                                      "C07BB07" ,
+                                      "C07FB07" ,
+                                      "C09BX02" ;
+            rdfs:label "bisoprolol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#calciumAcetate
+:calciumAcetate rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11GB01" ,
+                                          "V03AE04" ,
+                                          "V03AE07" ;
+                rdfs:label "calcium acetate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#calciumBlockers
+:calciumBlockers rdf:type owl:NamedIndividual ,
+                          obo:OAE_0001182 ;
+                 OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                 OpenPVSignal:refers_to_drug :amlodipine ,
+                                             :nifedipine ;
+                 mp:references :Ref.5 ;
+                 OpenPVSignal:has_content """Calcium channel blockers can lead to worsening HF and have been associated with an increased risk of cardiovascular events, especially the non vasoselective ones.5 In three cases, patients were also treated with calcium channel blockers, two with amlodipine and one patient with nifedipine.
+Time to onset was reported in two out of these three cases (6 days and 16 days). """ ;
+                 rdfs:label "calcium blockers and heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#calciumCarbonate
+:calciumCarbonate rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Drug ;
+                  OpenPVSignal:has_ATC_code "A02AC01" ,
+                                            "A11GB01" ,
+                                            "A12AA04" ;
+                  rdfs:label "calcium carbonate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cardiacArrestPathology
+:cardiacArrestPathology rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code " I46.9" ;
+                        OpenPVSignal:has_MedDRA_code 10007515 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Cardiac arrest" ;
+                        rdfs:label "cardiac arrest" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cardiacCongestiveFailure
+:cardiacCongestiveFailure rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "I50.9" ;
+                          OpenPVSignal:has_MedDRA_code 10010682 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Congestive cardiac failure" ;
+                          rdfs:label "cardiac congestive failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cardiacFailureComplication
+:cardiacFailureComplication rdf:type owl:NamedIndividual ,
+                                     OpenPVSignal:Adverse_Effect ;
+                            OpenPVSignal:has_ICD_code "I50.9" ;
+                            OpenPVSignal:has_MedDRA_code 10007554 ;
+                            OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+                            rdfs:label "cardiac failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cardiogenicShock
+:cardiogenicShock rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Adverse_Effect ;
+                  OpenPVSignal:has_ICD_code "R57.0" ;
+                  OpenPVSignal:has_MedDRA_code 10007625 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Cardiogenic shock" ;
+                  rdfs:label "cardiogenic shock" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#caseInfo10A
+:caseInfo10A rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             mp:references :Ref.11 ;
+             OpenPVSignal:has_content "Case 10 reports hypertension pulmonale, cor pulmonale and lung fibrosis . " ,
+                                      "In case 10, a 67 year-old woman with a history of scleroderma, lung fibrosis and pulmonary hypertension presented with atrial fibrillation and cardiac failure after approximately six months in treatment with linagliptin. The reporter, a physician, mentions an article of Scirica et al., published the previous month.11" ;
+             rdfs:label "case info 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#caseInfo11
+:caseInfo11 rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Case_Report_Information ;
+            OpenPVSignal:has_content "Case 11 reports unspecified heart disease" ;
+            rdfs:label "case info 11" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#caseInfo8A
+:caseInfo8A rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Case_Report_Information ;
+            OpenPVSignal:has_content "In case 8 (fatal outcome), a 66 year-old woman presented with HF 16 days after having started linagliptin. She was also treated with amlodipine 10 mg, quinapril 5 mg, bisoprolol 5 mg, gliquidone 30 mg, and simvastatin 20 mg." ,
+                                     "In case 8, concomitant diseases included renal artery stenosis, renal insufficiency, renal disease (shrinked kidneys), renal anaemia, renal osteodystrophy, hyperuricaemia, dyslipidaemia, hypertension, and chronic obstructive pulmonary diseases (COPD)" ,
+                                     "The fatal case (case 8) refers to a 66 year-old woman with renal insufficiency (renal artery stenosis, renal anaemia, renal dystrophia), hyperuricemia, dyslipemia, hypertension and COPD, who presented with acute dyspnoea and cardiac decompensation 16 days after having started therapy with linagliptin. The patient died 15 days later, and linagliptin was considered “implied”. " ;
+            rdfs:label "case info 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#caseInfo9A
+:caseInfo9A rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Case_Report_Information ;
+            OpenPVSignal:has_content """Case 9 refers to a Japanese 87 year-old woman, weight 40 kg, treated with several drugs including nifedipine for hypertension, hyperlipidaemia, chronic renal failure and myocardial ischaemia.
+The patient presented with congestive HF and aggravated renal failure six days after having started linagliptin 5 mg/day and nine days after start of cilostazol treatment with 200 mg/day""" ,
+                                     "In case 9 (an 87 year-old woman treated with nifedipine and other cardiovascular therapies), cilostazol and linagliptin 5 mg had been added respectively nine days and five days before the HF onset." ,
+                                     "In case 9, cilostazol was started nine days before the adverse event and was also mentioned as a suspected drug. " ,
+                                     "In case 9, relevant medical history mentions cardiovascular disease (CVD) (percutaneous coronary intervention, angina pectoris and myocardial ischaemia), hypertension, hyperlipidaemia, chronic renal failure and diabetes mellitus." ;
+            rdfs:label "case info 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#case_3_info
+:case_3_info rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "In case 3, the dose was not changed and the patient recovered with hospitalization." ;
+             rdfs:label "case info 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#case_info_2
+:case_info_2 rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Case_Report_Information ;
+             OpenPVSignal:has_content "For the patient treated with pioglitazone/ metformin (case 2), no time to onset was reported." ,
+                                      "In the case reported by a manufacturer (case 2), a female patient was also treated with pioglitazone, amlodipine, metformin and irbesartan." ;
+             rdfs:label "case info 2" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#chronicObstructivePulmonaryDiseases
+:chronicObstructivePulmonaryDiseases rdf:type owl:NamedIndividual ,
+                                              OpenPVSignal:Past_Diagnosis ;
+                                     OpenPVSignal:has_ICD_code "I50.9" ;
+                                     OpenPVSignal:has_MedDRA_code 10009033 ;
+                                     OpenPVSignal:has_MedDRA_prefered_term "Chronic obstructive pulmonary disease" ;
+                                     rdfs:label "chronic obstructive pulmonary diseases" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#chronicRenalFailure
+:chronicRenalFailure rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Past_Diagnosis ;
+                     OpenPVSignal:has_ICD_code "N18.9" ;
+                     OpenPVSignal:has_MedDRA_code 10064848 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Chronic kidney disease" ;
+                     rdfs:label "chronic renal failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cilostazol
+:cilostazol rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_mechanism :Mechanism_of_cilostazol ;
+            OpenPVSignal:has_ATC_code "B01AC23" ;
+            rdfs:label "cilostazol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#clarithromycin
+:clarithromycin rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A02BD04" ,
+                                          "A02BD05" ,
+                                          "A02BD06" ,
+                                          "A02BD07" ,
+                                          "A02BD09" ,
+                                          "A02BD11" ,
+                                          "J01FA09" ;
+                rdfs:label "clarithromycin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#clopidogrel
+:clopidogrel rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "B01AC04" ;
+             rdfs:label "clopidogrel" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cloxazolam
+:cloxazolam rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "N05BA22" ;
+            rdfs:label "cloxazolam" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#colecalciferol
+:colecalciferol rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A11CC05" ;
+                rdfs:label "colecalciferol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#conditionAggravated
+:conditionAggravated rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code " F91.8" ;
+                     OpenPVSignal:has_MedDRA_code 10010264 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Condition aggravated" ;
+                     rdfs:label "condition aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#congestiveHeartFailure
+:congestiveHeartFailure rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "I50.9" ;
+                        OpenPVSignal:has_MedDRA_code 10007559 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure congestive" ;
+                        rdfs:label "congestive heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#corPulmonale
+:corPulmonale rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I27.81" ;
+              OpenPVSignal:has_MedDRA_code 10010968 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Cor pulmonale" ;
+              rdfs:label "cor pulmonale" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#cyclophosmamide
+:cyclophosmamide rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "L01AA01" ;
+                 rdfs:label "cyclophosmamide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#data_favouring_beneficial_effects_on_cardiac_outcomes
+:data_favouring_beneficial_effects_on_cardiac_outcomes rdf:type owl:NamedIndividual ,
+                                                                obo:OAE_0001182 ;
+                                                       OpenPVSignal:refers_to_class :DDP4_inhibitors ;
+                                                       mp:references :Ref.22 ,
+                                                                     :Ref.23 ;
+                                                       OpenPVSignal:has_content "DDP4 inhibitors have been expected to have beneficial effects on cardiac outcomes, both due to GLP-1 actions and to other peptide hormones with direct cardiorenal effects. Preclinical data and mechanistic studies suggested a possible additional non-glycaemic beneficial action on blood vessels and the heart, via both GLP-1 dependent and GLP-1-independent effects.22 It has been suggested that DPP4 inhibitors reduce the risk for the multiple co-morbidities associated with obesity/T2DM including hypertension, cardiovascular and kidney disease.23" ;
+                                                       rdfs:label "data favouring beneficial effects on cardiac outcomes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#diabetesMellitus
+:diabetesMellitus rdf:type owl:NamedIndividual ,
+                           OpenPVSignal:Indication ,
+                           OpenPVSignal:Past_Diagnosis ;
+                  OpenPVSignal:has_MedDRA_code 10012601 ;
+                  OpenPVSignal:has_MedDRA_prefered_term "Diabetes mellitus" ;
+                  rdfs:label "diabetes mellitus" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#diseaseProgression
+:diseaseProgression rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Adverse_Effect ;
+                    OpenPVSignal:has_MedDRA_code 10061818 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Disease progression" ;
+                    rdfs:label "disease progression" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#doseForCase14Linagliptin
+:doseForCase14Linagliptin rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Dosage ;
+                          OpenPVSignal:refers_to_drug :linagliptin ;
+                          OpenPVSignal:refers_to_interval_between_administrations :one_day_inerval ;
+                          OpenPVSignal:has_dosage_unit "mg" ;
+                          OpenPVSignal:has_value 2.5 ;
+                          OpenPVSignal:refers_to_dose_value "2.5 mg" ;
+                          rdfs:label "dose for case 14 linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#doseForCase14Metformin
+:doseForCase14Metformin rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :metformin ;
+                        OpenPVSignal:refers_to_interval_between_administrations :one_day_inerval ;
+                        OpenPVSignal:has_dosage_unit "mg" ;
+                        OpenPVSignal:has_value 1000 ;
+                        OpenPVSignal:refers_to_dose_value "1000 mg" ;
+                        rdfs:label "dose for case 14 metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#doseForCase9Cilostazol
+:doseForCase9Cilostazol rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Dosage ;
+                        OpenPVSignal:refers_to_drug :cilostazol ;
+                        OpenPVSignal:refers_to_interval_between_administrations :one_day_inerval ;
+                        OpenPVSignal:has_dosage_unit "mg" ;
+                        OpenPVSignal:has_value 200 ;
+                        OpenPVSignal:refers_to_dose_value "200 mg" ;
+                        rdfs:label "dose for case 9 cilostazol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#doseForCase9Linagliptin
+:doseForCase9Linagliptin rdf:type owl:NamedIndividual ,
+                                  OpenPVSignal:Dosage ;
+                         OpenPVSignal:refers_to_drug :linagliptin ;
+                         OpenPVSignal:refers_to_interval_between_administrations :one_day_inerval ;
+                         OpenPVSignal:has_dosage_unit "mg" ;
+                         OpenPVSignal:has_value 5 ;
+                         OpenPVSignal:refers_to_dose_value "5 mg" ;
+                         rdfs:label "dose for case 9 linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#dose_for_case_1_linagliptin
+:dose_for_case_1_linagliptin rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Dosage ;
+                             OpenPVSignal:refers_to_drug :linagliptin ;
+                             OpenPVSignal:refers_to_interval_between_administrations :one_day_inerval ;
+                             OpenPVSignal:has_dosage_unit "mg" ;
+                             OpenPVSignal:has_value 5 ;
+                             OpenPVSignal:refers_to_dose_value "5 mg" ;
+                             rdfs:label "dose for case 1 linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#doxazocin
+:doxazocin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C02CA04 " ;
+           rdfs:label "doxazocin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#dutogliptin
+:dutogliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :DDP4_inhibitors ;
+             rdfs:label "dutogliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#dyslipidaemia
+:dyslipidaemia rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Past_Diagnosis ;
+               OpenPVSignal:has_ICD_code "E78.5" ;
+               OpenPVSignal:has_MedDRA_code 10058108 ;
+               OpenPVSignal:has_MedDRA_prefered_term "Dyslipidaemia" ;
+               rdfs:label "dyslipidaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#dyspnoea
+:dyspnoea rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R06.00" ;
+          OpenPVSignal:has_MedDRA_code 10013968 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Dyspnoea" ;
+          rdfs:label "dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#enalapril
+:enalapril rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C09AA02" ,
+                                     "C09BA02" ,
+                                     "C09BB02" ,
+                                     "C09BB06" ;
+           rdfs:label "enalapril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#estradiol
+:estradiol rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "G02BB01" ,
+                                     "G03AA14" ,
+                                     "G03AB08" ,
+                                     "G03CA03" ,
+                                     "G03CA53" ,
+                                     "G03EA01" ,
+                                     "G03EA02" ,
+                                     "G03EA03" ,
+                                     "G03FA01" ,
+                                     "G03FA02" ,
+                                     "G03FA03" ,
+                                     "G03FA04" ,
+                                     "G03FA05" ,
+                                     "G03FA06" ,
+                                     "G03FA07" ,
+                                     "G03FA08" ,
+                                     "G03FA09" ,
+                                     "G03FA10" ,
+                                     "G03FA11" ,
+                                     "G03FA12" ,
+                                     "G03FA13" ,
+                                     "G03FA14" ,
+                                     "G03FA15" ,
+                                     "G03FA16" ,
+                                     "G03FA17" ,
+                                     "G03FB01" ,
+                                     "G03FB02" ,
+                                     "G03FB03" ,
+                                     "G03FB04" ,
+                                     "G03FB05" ,
+                                     "G03FB06" ,
+                                     "G03FB07" ,
+                                     "G03FB08" ,
+                                     "G03FB09" ,
+                                     "G03FB10" ,
+                                     "G03FB11" ,
+                                     "G03FB12" ,
+                                     "G03HB01" ;
+           rdfs:label "estradiol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ezetimibe
+:ezetimibe rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C10AX09" ,
+                                     "C10BA02" ,
+                                     "C10BA05" ,
+                                     "C10BA06" ;
+           rdfs:label "ezetimibe" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#famotidine
+:famotidine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A02BA03" ,
+                                      "A02BA53" ;
+            rdfs:label "famotidine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#fluticasone
+:fluticasone rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R01AD08" ,
+                                       "R01AD58" ,
+                                       "R03AK06" ,
+                                       "R03AK11" ,
+                                       "R03BA05" ;
+             rdfs:label "fluticasone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#furosemide
+:furosemide rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C03CA01" ,
+                                      "C03CB01" ,
+                                      "C03EB01" ,
+                                      "G01AE10" ;
+            rdfs:label "furosemide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#generalPhysicalHealthDeterioration
+:generalPhysicalHealthDeterioration rdf:type owl:NamedIndividual ,
+                                             OpenPVSignal:Adverse_Effect ;
+                                    OpenPVSignal:has_ICD_code "R53.81" ;
+                                    OpenPVSignal:has_MedDRA_code 10049438 ;
+                                    OpenPVSignal:has_MedDRA_prefered_term "General physical health deterioration" ;
+                                    rdfs:label "general physical health deterioration" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#gliquidone
+:gliquidone rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "A10BB08" ;
+            rdfs:label "gliquidone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#haloperidol
+:haloperidol rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "N05AD01" ;
+             rdfs:label "haloperidol" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#heartFailure
+:heartFailure rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Adverse_Effect ;
+              OpenPVSignal:has_ICD_code "I50" ;
+              OpenPVSignal:has_MedDRA_code 10007554 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Cardiac failure" ;
+              rdfs:label "heart failure" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#heart_disease_unspecified
+:heart_disease_unspecified rdf:type owl:NamedIndividual ,
+                                    OpenPVSignal:Past_Diagnosis ;
+                           OpenPVSignal:has_MedDRA_code 10019276 ;
+                           OpenPVSignal:has_MedDRA_prefered_term "Heart disease, unspecified" ;
+                           rdfs:label "heart disease unspecified" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hyperglycaemia
+:hyperglycaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Adverse_Effect ;
+                OpenPVSignal:has_ICD_code "R73.9" ;
+                OpenPVSignal:has_MedDRA_code 10020635 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperglycaemia" ;
+                rdfs:label "hyperglycaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hyperlipidaemia
+:hyperlipidaemia rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Past_Diagnosis ;
+                 OpenPVSignal:has_ICD_code "E78.5" ;
+                 OpenPVSignal:has_MedDRA_code 10062060 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Hyperlipidaemia" ;
+                 rdfs:label "hyperlipidaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hypertension
+:hypertension rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "I10" ;
+              OpenPVSignal:has_MedDRA_code 10020772 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Hypertension" ;
+              rdfs:label "hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hypertensionPulmonary
+:hypertensionPulmonary rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ,
+                                OpenPVSignal:Past_Diagnosis ;
+                       OpenPVSignal:has_ICD_code "I27.23" ;
+                       OpenPVSignal:has_MedDRA_code 10037400 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Pulmonary hypertension" ;
+                       rdfs:label "Pulmonary hypertension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hyperuricaemia
+:hyperuricaemia rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Past_Diagnosis ;
+                OpenPVSignal:has_ICD_code "E79.0" ;
+                OpenPVSignal:has_MedDRA_code 10020903 ;
+                OpenPVSignal:has_MedDRA_prefered_term "Hyperuricaemia" ;
+                rdfs:label "hyperuricaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hypotension
+:hypotension rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Adverse_Effect ;
+             OpenPVSignal:has_ICD_code "I95.9" ;
+             OpenPVSignal:has_MedDRA_code 10021097 ;
+             OpenPVSignal:has_MedDRA_prefered_term "Hypotension" ;
+             rdfs:label "hypotension" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hypoxia
+:hypoxia rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R09.02" ;
+         OpenPVSignal:has_MedDRA_code 10021143 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Hypoxia" ;
+         rdfs:label "hypoxia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#insulinAspart
+:insulinAspart rdf:type owl:NamedIndividual ,
+                        OpenPVSignal:Drug ;
+               OpenPVSignal:has_ATC_code "A10AB05" ,
+                                         "A10AD05" ,
+                                         "A10AD06" ;
+               rdfs:label "insulin aspart" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#insulinGlargine
+:insulinGlargine rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Drug ;
+                 OpenPVSignal:has_ATC_code "A10AE04" ;
+                 rdfs:label "insulin glargine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#irbesartan
+:irbesartan rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C09CA04" ,
+                                      "C09DA04" ,
+                                      "C09DB05" ;
+            rdfs:label "irbesartan" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#labelling
+:labelling rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Structured_Product_Labels_information ;
+           OpenPVSignal:refers_to_drug :linagliptin ;
+           mp:references :Ref.1 ,
+                         :Ref.2 ,
+                         :Ref.3 ;
+           OpenPVSignal:has_content "The EMA Summary of Product Characteristics for linagliptin, the Australian Public Assessment report and the product label for linagliptin (US FDA) do not mention heart/cardiac failure as an event associated with or described for linagliptin therapy.1-3" ;
+           rdfs:label "labelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#lactulose
+:lactulose rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A06AD11" ,
+                                     "A06AD61" ;
+           rdfs:label "lactulose" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#latanoprost
+:latanoprost rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "S01EE01" ;
+             rdfs:label "latanoprost" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#linagliptin
+:linagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :DDP4_inhibitors ;
+             OpenPVSignal:has_mechanism :LinagliptinInVivoExperiments ,
+                                        :MechanismOfLinagliptin ;
+             OpenPVSignal:has_ATC_code "A10BD11" ,
+                                       "A10BD19" ,
+                                       "A10BH05" ;
+             rdfs:label "linagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#linagliptin_usage_for_Report14
+:linagliptin_usage_for_Report14 rdf:type owl:NamedIndividual ,
+                                         OpenPVSignal:Drug_Usage ;
+                                OpenPVSignal:refers_to_dosage :doseForCase14Linagliptin ;
+                                OpenPVSignal:refers_to_drug :linagliptin ;
+                                rdfs:label "usage of linagliptin case 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#linagliptin_usage_for_Report14_1
+:linagliptin_usage_for_Report14_1 rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Drug_Usage ;
+                                  OpenPVSignal:refers_to_dosage :doseForCase14Metformin ;
+                                  OpenPVSignal:refers_to_drug :metformin ;
+                                  rdfs:label "usage of metformin case 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#linagliptin_usage_for_Report9
+:linagliptin_usage_for_Report9 rdf:type owl:NamedIndividual ,
+                                        OpenPVSignal:Drug_Usage ;
+                               OpenPVSignal:refers_to_dosage :doseForCase9Linagliptin ;
+                               OpenPVSignal:refers_to_drug :linagliptin ;
+                               rdfs:label "usage of linagliptin case 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#linagliptin_usage_for_Report9_1
+:linagliptin_usage_for_Report9_1 rdf:type owl:NamedIndividual ,
+                                          OpenPVSignal:Drug_Usage ;
+                                 OpenPVSignal:refers_to_dosage :doseForCase9Cilostazol ;
+                                 OpenPVSignal:refers_to_drug :cilostazol ;
+                                 rdfs:label "usage of cilostazol case 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#lungFibrosis
+:lungFibrosis rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "J84.10" ;
+              OpenPVSignal:has_MedDRA_code 10025088 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Lung fibrosis" ;
+              rdfs:label "lung fibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#magnesiumOxide
+:magnesiumOxide rdf:type owl:NamedIndividual ,
+                         OpenPVSignal:Drug ;
+                OpenPVSignal:has_ATC_code "A02AA02" ,
+                                          "A06AD02" ,
+                                          "A12CC10" ;
+                rdfs:label "magnesium oxide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#meta_analysis_of_50_DPPis_trials
+:meta_analysis_of_50_DPPis_trials rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001197 ,
+                                           OpenPVSignal:Clinical_trial_information ;
+                                  OpenPVSignal:refers_to_adverse_effect :heartFailure ;
+                                  OpenPVSignal:refers_to_class :DDP4_inhibitors ;
+                                  mp:references :Ref.16 ;
+                                  OpenPVSignal:has_content "A meta-analysis of 50 DPP4-inhibitors trials, enrolling 55,141 participants, found a statistically significant trend towards increased risk of HF outcomes with no increase in risk with regards to all-cause mortality, cardiovascular mortality, acute coronary syndrome (ACS) or stroke. Most of the HF cases were retrieved from results of SAVOR-TIMI-53 (saxagliptin, 66.2% of the data of HF), EXAMINE (alogliptin, 21.3%) and the VIVIDD trial (vildagliptin, 6.9%), the latter enrolled only patients with left ventricular fraction <40%. Seven clinical trials for linagliptin with 5,260 participants were included in the analysis.16" ;
+                                  rdfs:label "meta analysis of 50 DPPis trials" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#meta_analysis_showing_lower_risk
+:meta_analysis_showing_lower_risk rdf:type owl:NamedIndividual ,
+                                           obo:OAE_0001182 ;
+                                  OpenPVSignal:refers_to_class :DDP4_inhibitors ;
+                                  mp:references :Ref.13 ;
+                                  OpenPVSignal:has_content "A meta-analysis, published in February 2013, found that treatment with DPP4i reduces the risk of cardiovascular events (particularly myocardial infarction) and all-cause mortality in patients with type 2 diabetes. Although HF was a pre-specified component of major cardiovascular events (MACE), meta-analysis’s results don’t mention HF.13" ;
+                                  rdfs:label "meta analysis showing lower risk" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#metformin
+:metformin rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "A10BA02" ,
+                                     "A10BD02" ,
+                                     "A10BD03" ,
+                                     "A10BD05" ,
+                                     "A10BD07" ,
+                                     "A10BD08" ,
+                                     "A10BD10" ,
+                                     "A10BD11" ,
+                                     "A10BD13" ,
+                                     "A10BD14" ,
+                                     "A10BD15" ,
+                                     "A10BD16" ,
+                                     "A10BD17" ,
+                                     "A10BD18" ,
+                                     "A10BD20" ;
+           rdfs:label "metformin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#myocardialDecompensation
+:myocardialDecompensation rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_MedDRA_code 10028588 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Myocardial decompensation" ;
+                          rdfs:label "myocardial decompensation" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#myocardialIschaemia
+:myocardialIschaemia rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Past_Diagnosis ;
+                     OpenPVSignal:has_ICD_code " I25.9" ;
+                     OpenPVSignal:has_MedDRA_code 10028600 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Myocardial ischaemia" ;
+                     rdfs:label "myocardial ischaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#nausea
+:nausea rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R11" ;
+        OpenPVSignal:has_MedDRA_code 10028813 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Nausea" ;
+        rdfs:label "nausea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#nifedipine
+:nifedipine rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "C08CA05" ,
+                                      "C08CA55" ,
+                                      "C08GA01" ;
+            rdfs:label "nifedipine" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#nocturnalDyspnoea
+:nocturnalDyspnoea rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "R06.00" ;
+                   OpenPVSignal:has_MedDRA_code 10049235 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Nocturnal dyspnoea" ;
+                   rdfs:label "nocturnal dyspnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#oedema
+:oedema rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R60.9" ;
+        OpenPVSignal:has_MedDRA_code 10030095 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Oedema" ;
+        rdfs:label "oedema" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#one_day_inerval
+:one_day_inerval rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 1 ;
+                 rdfs:label "one day inerval" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#orthopnoea
+:orthopnoea rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Adverse_Effect ;
+            OpenPVSignal:has_ICD_code "R06.01" ;
+            OpenPVSignal:has_MedDRA_code 10031123 ;
+            OpenPVSignal:has_MedDRA_prefered_term "Orthopnoea" ;
+            rdfs:label "orthopnoea" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#pain
+:pain rdf:type owl:NamedIndividual ,
+               OpenPVSignal:Adverse_Effect ;
+      OpenPVSignal:has_ICD_code "G89.1" ;
+      OpenPVSignal:has_MedDRA_code 10033371 ;
+      OpenPVSignal:has_MedDRA_prefered_term "Pain" ;
+      rdfs:label "pain" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#percutaneousCoronaryIntervention
+:percutaneousCoronaryIntervention rdf:type owl:NamedIndividual ,
+                                           OpenPVSignal:Past_Diagnosis ;
+                                  OpenPVSignal:has_ICD_code "Z98.61" ;
+                                  OpenPVSignal:has_MedDRA_code 10065608 ;
+                                  OpenPVSignal:has_MedDRA_prefered_term "Percutaneous coronary intervention" ;
+                                  rdfs:label "percutaneous coronary intervention" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#pioglitazone
+:pioglitazone rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_mechanism :Mechanism_of_pioglitazone ,
+                                         :Mechanism_of_pioglitazone_for_HF ;
+              OpenPVSignal:has_ATC_code "A10BD05" ,
+                                        "A10BD06" ,
+                                        "A10BD09" ,
+                                        "A10BD12" ,
+                                        "A10BG03" ;
+              rdfs:label "pioglitazone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#pleuralFibrosis
+:pleuralFibrosis rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Adverse_Effect ;
+                 OpenPVSignal:has_ICD_code "J84.10" ;
+                 OpenPVSignal:has_MedDRA_code 10035600 ;
+                 OpenPVSignal:has_MedDRA_prefered_term "Pleural fibrosis" ;
+                 rdfs:label "pleural fibrosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#potassium
+:potassium rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "B05XA17" ,
+                                     "C03AB01" ,
+                                     "C03AB02" ,
+                                     "C03AB03" ,
+                                     "C03AB04" ,
+                                     "C03AB05" ,
+                                     "C03AB06" ,
+                                     "C03AB07" ,
+                                     "C03AB08" ,
+                                     "C03AB09" ,
+                                     "C03BB02" ,
+                                     "C03BB03" ,
+                                     "C03BB04" ,
+                                     "C03BB05" ,
+                                     "C03BB07" ,
+                                     "C03CB01" ,
+                                     "C03CB02" ;
+           rdfs:label "potassium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#prednisolone
+:prednisolone rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:has_ATC_code "A01AC54" ,
+                                        "A07EA01" ,
+                                        "C05AA04" ,
+                                        "D07AA03" ,
+                                        "D07BA01" ,
+                                        "D07CA03" ,
+                                        "D07XA02" ,
+                                        "H02AB06" ,
+                                        "R01AD02" ,
+                                        "R01AD52" ,
+                                        "S01BA04" ,
+                                        "S01BB02" ,
+                                        "S01CA02" ,
+                                        "S01CB02" ,
+                                        "S02BA03" ,
+                                        "S02CA01" ,
+                                        "S03BA02" ,
+                                        "S03CA02" ,
+                                        "V03AB05" ;
+              rdfs:label "prednisolone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#pulmonaryCongestion
+:pulmonaryCongestion rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Adverse_Effect ;
+                     OpenPVSignal:has_ICD_code "J81.0" ;
+                     OpenPVSignal:has_MedDRA_code 10037368 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Pulmonary congestion" ;
+                     rdfs:label "pulmonary congestion" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#pvSignal
+:pvSignal rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Signal ;
+          OpenPVSignal:Free_text_reporting_element :Cardiac_failure_background ,
+                                                   :Discussion_and_conclusion ,
+                                                   :IntroductionContent ,
+                                                   :ReportsInVigibase ,
+                                                   :summary_content ;
+          OpenPVSignal:is_supported_by_individual_case_report :Report1 ,
+                                                              :Report10 ,
+                                                              :Report11 ,
+                                                              :Report12 ,
+                                                              :Report13 ,
+                                                              :Report14 ,
+                                                              :Report15 ,
+                                                              :Report2 ,
+                                                              :Report3 ,
+                                                              :Report4 ,
+                                                              :Report5 ,
+                                                              :Report6 ,
+                                                              :Report7 ,
+                                                              :Report8 ,
+                                                              :Report9 ;
+          OpenPVSignal:is_supported_by_statistical_entity :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ,
+                                                          :ReportsFromAustralia ,
+                                                          :ReportsFromCanada ,
+                                                          :ReportsFromEurope ,
+                                                          :ReportsFromJapan ,
+                                                          :ReportsFromManufacturers ,
+                                                          :ReportsFromOtherHealthProfessionals ,
+                                                          :ReportsFromPharmacists ,
+                                                          :ReportsFromPhysicians ,
+                                                          :ReportsFromUS ,
+                                                          :ReportsWithLinagliptinAsTheSuspectedDrug ,
+                                                          :Reports_with_death_reported ,
+                                                          :SeriousReports ,
+                                                          :reports_with_completeness_score_high_0.75_-_0.95 ,
+                                                          :reports_with_completeness_score_low_0.17_-_0.27 ,
+                                                          :reports_with_completeness_score_medium_0.33_-_0.53 ,
+                                                          <http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromconsumers/nonHealthProfessionals> ;
+          OpenPVSignal:refers_to_adverse_effect :cardiacFailureComplication ;
+          OpenPVSignal:refers_to_drug :linagliptin ;
+          OpenPVSignal:refers_to_primary_suspect_drug :linagliptin ;
+          mp:supportedByData :AlogliptinClinicalTrial ,
+                             :DPP4InhibitorsClinicalTrial ,
+                             :LinagliptinInVivoExperiments ,
+                             :SaxagliptinClinicalTrial ,
+                             :ThiazolidinedionesConfoundingEffect ,
+                             :TimeToOnsetForSaxagliptin ,
+                             :analysis_of_pooled_data_of_clinical_trials ,
+                             :calciumBlockers ,
+                             :data_favouring_beneficial_effects_on_cardiac_outcomes ,
+                             :labelling ,
+                             :meta_analysis_of_50_DPPis_trials ,
+                             :meta_analysis_showing_lower_risk ,
+                             :trial_in_older_patients ;
+          OpenPVSignal:initially_identified_on "01/02/2015" ;
+          rdfs:label "pv signal" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#quinapril
+:quinapril rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "C09AA06" ,
+                                     "C09BA06" ;
+           rdfs:label "quinapril" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalAnaemia
+:renalAnaemia rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "D63.1" ;
+              OpenPVSignal:has_MedDRA_code 10058123 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal anaemia" ;
+              rdfs:label "renal anaemia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalArteryStenosis
+:renalArteryStenosis rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Past_Diagnosis ;
+                     OpenPVSignal:has_ICD_code "I70.1" ;
+                     OpenPVSignal:has_MedDRA_code 10038378 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Renal artery stenosis" ;
+                     rdfs:label "renal artery stenosis" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalDisease
+:renalDisease rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Past_Diagnosis ;
+              OpenPVSignal:has_ICD_code "N18.9" ;
+              OpenPVSignal:has_MedDRA_code 10051051 ;
+              OpenPVSignal:has_MedDRA_prefered_term "Renal disease" ;
+              rdfs:label "renal disease" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalFailureAcute
+:renalFailureAcute rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Adverse_Effect ;
+                   OpenPVSignal:has_ICD_code "N17.9" ;
+                   OpenPVSignal:has_MedDRA_code 10038436 ;
+                   OpenPVSignal:has_MedDRA_prefered_term "Renal failure acute" ;
+                   rdfs:label "renal failure acute" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalFailureAggravated
+:renalFailureAggravated rdf:type owl:NamedIndividual ,
+                                 OpenPVSignal:Adverse_Effect ;
+                        OpenPVSignal:has_ICD_code "N18.9" ;
+                        OpenPVSignal:has_MedDRA_code 10038442 ;
+                        OpenPVSignal:has_MedDRA_prefered_term "Renal failure aggravated" ;
+                        rdfs:label "renal failure aggravated" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalInsufficiency
+:renalInsufficiency rdf:type owl:NamedIndividual ,
+                             OpenPVSignal:Past_Diagnosis ;
+                    OpenPVSignal:has_MedDRA_code 10038474 ;
+                    OpenPVSignal:has_MedDRA_prefered_term "Renal insufficiency" ;
+                    rdfs:label "renal insufficiency " .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#renalOsteodystrophy
+:renalOsteodystrophy rdf:type owl:NamedIndividual ,
+                              OpenPVSignal:Past_Diagnosis ;
+                     OpenPVSignal:has_ICD_code "N25.0" ;
+                     OpenPVSignal:has_MedDRA_code 10038489 ;
+                     OpenPVSignal:has_MedDRA_prefered_term "Renal osteodystrophy" ;
+                     rdfs:label "renal osteodystrophy" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#reports_with_completeness_score_high_0.75_-_0.95
+:reports_with_completeness_score_high_0.75_-_0.95 rdf:type owl:NamedIndividual ,
+                                                           OpenPVSignal:Reports_group ;
+                                                  OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                                  OpenPVSignal:has_count 4 ;
+                                                  OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                  rdfs:label "reports with completeness score high 0.75 - 0.95" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#reports_with_completeness_score_low_0.17_-_0.27
+:reports_with_completeness_score_low_0.17_-_0.27 rdf:type owl:NamedIndividual ,
+                                                          OpenPVSignal:Reports_group ;
+                                                 OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                                 OpenPVSignal:has_count 4 ;
+                                                 OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                 rdfs:label "reports with completeness score low 0.17 - 0.27" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#reports_with_completeness_score_medium_0.33_-_0.53
+:reports_with_completeness_score_medium_0.33_-_0.53 rdf:type owl:NamedIndividual ,
+                                                             OpenPVSignal:Reports_group ;
+                                                    OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                                    OpenPVSignal:has_count 7 ;
+                                                    OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                    rdfs:label "reports with completeness score medium 0.33 - 0.53" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#respiratoryRateIncreased
+:respiratoryRateIncreased rdf:type owl:NamedIndividual ,
+                                   OpenPVSignal:Adverse_Effect ;
+                          OpenPVSignal:has_ICD_code "R06.82" ;
+                          OpenPVSignal:has_MedDRA_code 10038712 ;
+                          OpenPVSignal:has_MedDRA_prefered_term "Respiratory rate increased" ;
+                          rdfs:label "respiratory rate increased" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#saxagliptin
+:saxagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :DDP4_inhibitors ;
+             OpenPVSignal:has_ATC_code "A10BD10" ,
+                                       "A10BD21" ,
+                                       "A10BH03" ;
+             rdfs:label "saxagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#senna
+:senna rdf:type owl:NamedIndividual ,
+                OpenPVSignal:Drug ;
+       rdfs:label "senna" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sildenafil
+:sildenafil rdf:type owl:NamedIndividual ,
+                     OpenPVSignal:Drug ;
+            OpenPVSignal:has_ATC_code "G01AE10" ,
+                                      "G04BE03" ;
+            rdfs:label "sildenafil" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#simvastatin
+:simvastatin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "A10BH51" ,
+                                       "C10AA01" ,
+                                       "C10BA02" ,
+                                       "C10BA04" ,
+                                       "C10BX01" ,
+                                       "C10BX04" ;
+             rdfs:label "simvastatin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sitagliptin
+:sitagliptin rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:hasClass :DDP4_inhibitors ;
+             OpenPVSignal:has_ATC_code "A10BD07" ,
+                                       "A10BD12" ,
+                                       "A10BH01" ,
+                                       "A10BH51" ;
+             rdfs:label "sitagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sodiumBicarbonate
+:sodiumBicarbonate rdf:type owl:NamedIndividual ,
+                            OpenPVSignal:Drug ;
+                   OpenPVSignal:has_ATC_code "B05CB04" ,
+                                             "B05XA02" ;
+                   rdfs:label "sodium bicarbonate" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#summary_content
+:summary_content rdf:type owl:NamedIndividual ,
+                          OpenPVSignal:Summary ;
+                 OpenPVSignal:has_content "Linagliptin is a reversible, selective inhibitor of the enzyme dipeptidyl peptidase-4 (DPP4), which is responsible for the metabolic inactivation of the incretin glucagon-like peptide 1 (GLP-1), thus extending the GLP-1 half-life. GLP-1 acts on glucose control by stimulating glucose-dependent insulin secretion and suppressing glucagon release. Linagliptin was approved in 2011 for patients with type 2 diabetes mellitus as monotherapy or in combination with other antidiabetic agents in the United States of America (US), the European Union, in Australia and in other countries. Heart failure can be caused by structural or functional abnormalities of the heart. Up to 6 May 2014, 15 ISCRs associating cardiac failure with linagliptin had been received in the WHO Global ICSR Database, VigiBase®. All but two of these ISCRs were reported as serious, and there was one death reported. Linagliptin was reported as the only suspected drug in 13 cases. Age, reported in nine cases, ranged from 60 to 88 years. Five patients were 83 years and older. Dipeptidyl peptidase-4 inhibitors (DPP4i) are expected to have beneficial effects on cardiac outcomes, mainly through the prolonged effect of GLP-1. However, two large trials assessing the impact of saxagliptin and alogliptin on cardiovascular death, non-fatal myocardial infarction and non-fatal stroke failed to show any beneficial effect of these drugs on the composite of major cardiovascular outcomes. In addition, concerns arose about the effect of saxagliptin and alogliptin on cardiac failure. A meta-analysis suggested that cardiac failure could be a DPP4i class effect; if it is a class effect, its mechanisms are unknown. In spite of their inherent limitations, spontaneous reports from VigiBase® add observational data in support of the association cardiac failure - linagliptin/ (DPP4i) as a drug-related effect in some patients with risk factors (e.g. old age), underlying concomitant conditions or pre-existing cardiac failure and/or other concomitant medication. The pair linagliptin-cardiac failure should be considered as a signal, and deserves further investigation." ;
+                 rdfs:label "summary content" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#supraventricularTachycardia
+:supraventricularTachycardia rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Adverse_Effect ;
+                             OpenPVSignal:has_ICD_code "I47.1" ;
+                             OpenPVSignal:has_MedDRA_code 10042604 ;
+                             OpenPVSignal:has_MedDRA_prefered_term "Supraventricular tachycardia" ;
+                             rdfs:label "supraventricular tachycardia" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#swelling
+:swelling rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R22" ;
+          OpenPVSignal:has_MedDRA_code 10042674 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Swelling" ;
+          rdfs:label "swelling" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#terbutaline
+:terbutaline rdf:type owl:NamedIndividual ,
+                      OpenPVSignal:Drug ;
+             OpenPVSignal:has_ATC_code "R03AC03" ,
+                                       "R03CC03" ,
+                                       "R03CC53" ;
+             rdfs:label "terbutaline" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_1
+:time_to_onset_1 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 44 ;
+                 rdfs:label "time to onset 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_10
+:time_to_onset_10 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 164 ;
+                  rdfs:label "time to onset 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_14
+:time_to_onset_14 rdf:type owl:NamedIndividual ,
+                           time:DurationDescription ;
+                  time:nominalPosition "days" ;
+                  time:numericPosition 295 ;
+                  rdfs:label "time to onset 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_3
+:time_to_onset_3 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 6 ;
+                 rdfs:label "time to onset 3" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_5
+:time_to_onset_5 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 147 ;
+                 rdfs:label "time to onset 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_8
+:time_to_onset_8 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 16 ;
+                 rdfs:label "time to onset 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#time_to_onset_9
+:time_to_onset_9 rdf:type owl:NamedIndividual ,
+                          time:DurationDescription ;
+                 time:nominalPosition "days" ;
+                 time:numericPosition 6 ;
+                 rdfs:label "time to onset 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration1
+:treatmentDuration1 rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "68 days" ;
+                    time:nominalPosition "days" ;
+                    time:numericPosition 68 ;
+                    rdfs:label "treatment duration 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration10
+:treatmentDuration10 rdf:type owl:NamedIndividual ,
+                              time:DurationDescription ;
+                     OpenPVSignal:has_content "176 days" ;
+                     time:nominalPosition "days" ;
+                     time:numericPosition 176 ;
+                     rdfs:label "treatment duration 10" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration12
+:treatmentDuration12 rdf:type owl:NamedIndividual ,
+                              time:DurationDescription ;
+                     OpenPVSignal:has_content "45 days" ;
+                     time:nominalPosition "days" ;
+                     time:numericPosition 45 ;
+                     rdfs:label "treatment duration 12" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration14
+:treatmentDuration14 rdf:type owl:NamedIndividual ,
+                              time:DurationDescription ;
+                     OpenPVSignal:has_content "295 days" ;
+                     time:nominalPosition "days" ;
+                     time:numericPosition 295 ;
+                     rdfs:label "treatment duration 14" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration5
+:treatmentDuration5 rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "147 days" ;
+                    time:nominalPosition "days" ;
+                    time:numericPosition 147 ;
+                    rdfs:label "treatment duration 5" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration8
+:treatmentDuration8 rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "16 days" ;
+                    time:nominalPosition "days" ;
+                    time:numericPosition 16 ;
+                    rdfs:label "treatment duration 8" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#treatmentDuration9
+:treatmentDuration9 rdf:type owl:NamedIndividual ,
+                             time:DurationDescription ;
+                    OpenPVSignal:has_content "6 days" ;
+                    time:nominalPosition "days" ;
+                    time:numericPosition 6 ;
+                    rdfs:label "treatment duration 9" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#tremor
+:tremor rdf:type owl:NamedIndividual ,
+                 OpenPVSignal:Adverse_Effect ;
+        OpenPVSignal:has_ICD_code "R25.1" ;
+        OpenPVSignal:has_MedDRA_code 10044565 ;
+        OpenPVSignal:has_MedDRA_prefered_term "Tremor" ;
+        rdfs:label "tremor" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#trial_in_older_patients
+:trial_in_older_patients rdf:type owl:NamedIndividual ,
+                                  obo:OAE_0001182 ,
+                                  OpenPVSignal:Clinical_trial_information ;
+                         mp:references :Ref.14 ;
+                         OpenPVSignal:has_content "A trial in older patients does not mention cardiac failure among adverse events.14" ;
+                         rdfs:label "trial in older patients" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#urinaryTractInfection
+:urinaryTractInfection rdf:type owl:NamedIndividual ,
+                                OpenPVSignal:Adverse_Effect ;
+                       OpenPVSignal:has_ICD_code "N39.0 " ;
+                       OpenPVSignal:has_MedDRA_code 10046571 ;
+                       OpenPVSignal:has_MedDRA_prefered_term "Urinary tract infection" ;
+                       rdfs:label "urinary tract infection" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#usage_of_linagliptin_case_1
+:usage_of_linagliptin_case_1 rdf:type owl:NamedIndividual ,
+                                      OpenPVSignal:Drug_Usage ;
+                             OpenPVSignal:refers_to_dosage :dose_for_case_1_linagliptin ;
+                             OpenPVSignal:refers_to_drug :linagliptin ;
+                             rdfs:label "usage of linagliptin case 1" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#vildagliptin
+:vildagliptin rdf:type owl:NamedIndividual ,
+                       OpenPVSignal:Drug ;
+              OpenPVSignal:hasClass :DDP4_inhibitors ;
+              OpenPVSignal:has_ATC_code "A10BD08" ,
+                                        "A10BH02" ;
+              rdfs:label "vildagliptin" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#vomiting
+:vomiting rdf:type owl:NamedIndividual ,
+                   OpenPVSignal:Adverse_Effect ;
+          OpenPVSignal:has_ICD_code "R11.10" ;
+          OpenPVSignal:has_MedDRA_code 10047700 ;
+          OpenPVSignal:has_MedDRA_prefered_term "Vomiting" ;
+          rdfs:label "vomiting" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#wheezes
+:wheezes rdf:type owl:NamedIndividual ,
+                  OpenPVSignal:Adverse_Effect ;
+         OpenPVSignal:has_ICD_code "R06.2" ;
+         OpenPVSignal:has_MedDRA_code 10047924 ;
+         OpenPVSignal:has_MedDRA_prefered_term "Wheezing" ;
+         rdfs:label "wheezes" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#zopiclone
+:zopiclone rdf:type owl:NamedIndividual ,
+                    OpenPVSignal:Drug ;
+           OpenPVSignal:has_ATC_code "N05CF01" ;
+           rdfs:label "zopiclone" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromconsumers/nonHealthProfessionals
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#ReportsFromconsumers/nonHealthProfessionals> rdf:type owl:NamedIndividual ,
+                                                                                                                               OpenPVSignal:Reports_group ;
+                                                                                                                      OpenPVSignal:is_subgroup_of :OverallReportsWithCardiacFailureAndLinagliptinInVigibase ;
+                                                                                                                      OpenPVSignal:has_count 1 ;
+                                                                                                                      OpenPVSignal:has_reporter_type "patient" ;
+                                                                                                                      OpenPVSignal:refers_to_database "WHO Vigibase" ;
+                                                                                                                      rdfs:label "Reports from consumers/non health professionals" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#formoterolfumarate/budesonide
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#formoterolfumarate/budesonide> rdf:type owl:NamedIndividual ,
+                                                                                                                 OpenPVSignal:Drug ;
+                                                                                                        OpenPVSignal:has_ATC_code "R03AK07" ;
+                                                                                                        rdfs:label "formoterol fumarate/ budesonide" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#furosemide/amiloride
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#furosemide/amiloride> rdf:type owl:NamedIndividual ,
+                                                                                                        OpenPVSignal:Drug ;
+                                                                                               OpenPVSignal:has_ATC_code "C03EB01" ;
+                                                                                               rdfs:label "furosemide/amiloride" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hydrochlorotiazide/losartanPotassium
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#hydrochlorotiazide/losartanPotassium> rdf:type owl:NamedIndividual ,
+                                                                                                                        OpenPVSignal:Drug ;
+                                                                                                               OpenPVSignal:has_ATC_code "C09DA01" ;
+                                                                                                               rdfs:label "hydrochlorotiazide/losartan potassium" .
+
+
+###  http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sodiumascorbate/ferrousSulfate
+<http://purl.org/OpenPVSignal/Signals/2015_1_linagliptin_cardiac_failure#sodiumascorbate/ferrousSulfate> rdf:type owl:NamedIndividual ,
+                                                                                                                  OpenPVSignal:Drug ;
+                                                                                                         OpenPVSignal:has_ATC_code "B03AA07 " ;
+                                                                                                         rdfs:label "sodium ascorbate/ferrous sulfate" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
