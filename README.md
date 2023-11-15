@@ -21,7 +21,7 @@ The pySHACL python library is used to run the SHACL tests and an R script is use
 pip install pyshacl
 ```
 
-navigate to the folder where opvsignal repository has been cloned
+after installing R, navigate to the folder where opvsignal repository has been cloned
 
 ```
 Rscript run_com.r
