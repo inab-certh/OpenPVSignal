@@ -13,7 +13,7 @@ A scientific paper describing the **OpenPVSignal** design, development and valid
 
 Moreover, an article about **OpenPVSignal** was published in **Uppsala Reports**, the news magazine concerning the latest issues in medicines safety released by **Uppsala Monitoring Centre**, and it can be accessed <a href="https://view.publitas.com/uppsala-monitoring-centre/uppsala-reports-80/page/20-21" target="_blank">here</a>.
 
-Based on the OpenPVSignal ontology, a Knowledge Graph (KG) has been built, including 101 PV Signal reports that have been published between 2012 and 2019 by the <a href="https://who-umc.org/signal-work/signal-detection/" target="_blank">**Uppsala Monitoring Center**</a>. These datasets have been manually converted to individual KGs and have been through an iterative quality control process. One of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions[1].
+Based on the OpenPVSignal ontology, **a Knowledge Graph (KG)** has been built, including 101 PV Signal reports that have been published between 2012 and 2019 by the <a href="https://who-umc.org/signal-work/signal-detection/" target="_blank">**Uppsala Monitoring Center**</a>. These datasets have been manually converted to individual KGs and have been through an iterative quality control process. One of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions[1].
 
 The pySHACL python library is used to run the SHACL tests and an R script is used to create the summarized reports 
 
