@@ -42,9 +42,9 @@ In this repository you may find:
 - The Netherlands Pharmacovigilance Center - Lareb Web site:
   - Instantiation: <a href="examples/Lareb_2013_3_Esomeprazole_and_tinnitus.owl" target="_blank">Lareb_2013_3_Esomeprazole_and_tinnitus.owl</a>
   - Source: <a href="https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf" target="_blank">https://databankws.lareb.nl/Downloads/KWB_2013_3_(Es)omeprazole_and_tinnitus.pdf</a>
-4. The <a href="https://github.com/achillec/OpenPVSignal/tree/master/turtle" target="_blank">KG</a> in turtle format.
-5. The <a href="https://github.com/achillec/OpenPVSignal/tree/master/TestCaseFiles" target="_blank">SHACL data models</a> used to validate the KG dataset.
-4. An <a href="https://github.com/achillec/OpenPVSignal/blob/master/run_com.r" target="_blank">R based script</a> that executes the KG alidation pipeline as a whole.
+4. The <a href="https://github.com/inab-certh/OpenPVSignal/tree/master/turtle" target="_blank">KG</a> in turtle format.
+5. The <a href="https://github.com/inab-certh/OpenPVSignal/tree/master/TestCaseFiles" target="_blank">SHACL data models</a> used to validate the KG dataset.
+4. An <a href="https://github.com/inab-certh/OpenPVSignal/blob/master/run_com.r" target="_blank">R based script</a> that executes the KG alidation pipeline as a whole.
 
 **OpenPVSignal** is versioned following the <a href="https://semver.org/" target="_blank">semantic versioning scheme</a>, applying the guidelines provided <a href="https://github.com/dbrock/semver-howto/blob/master/README.md" target="_blank">here</a>. The last part of the version refers to the date that this version has been created. For example, version 0.8.20171211 is the version that has been first commited on GitHub, on 2017, 11th of December. Typically, each new version should be worked on a branch, following the rationale presented <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">here</a>.
 
