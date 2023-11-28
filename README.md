@@ -35,13 +35,10 @@ In this repository you may find:
 Regarding the building of the OpenPVSignal KG, one of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions[1].
 
 The pySHACL python library is used to run the SHACL tests and an R script is used to create the summarized reports 
-
 ```
 pip install pyshacl
 ```
-
 after installing R, navigate to the folder where opvsignal repository has been cloned
-
 ```
 Rscript run_com.r
 ```
@@ -50,4 +47,4 @@ Rscript run_com.r
 
 [1] Note that some of the constrained imposed by the SHACL tests still appear on the results as a violation. This can be attributed to the original data sources, i.e. for a patient appearing on an Individual Case Safety Report (ICSR) their gender and age should have been recorded but this is not the case for each and every ICSR. The SHACL tests that have been written, will mark that as a violation and it should be manually verified that the field is indeed missing on the original data.
 
-> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Mr. Pantelis Natsiavas (pnatsiavas@certh.gr) or Mr. Achilleas Chytas (achytas@certh.gr).
+> For further information or guidance on how you can use **OpenPVSignal** or contribute in its further development, please contact Pantelis NATSIAVAS (M) (pnatsiavas@certh.gr) or Achilleas CHYTAS (M) (achytas@certh.gr).
