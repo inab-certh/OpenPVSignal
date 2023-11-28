@@ -13,21 +13,7 @@ A scientific paper describing the **OpenPVSignal** design, development and valid
 
 Moreover, an article about **OpenPVSignal** was published in **Uppsala Reports**, the news magazine concerning the latest issues in medicines safety released by **Uppsala Monitoring Centre**, and it can be accessed <a href="https://view.publitas.com/uppsala-monitoring-centre/uppsala-reports-80/page/20-21" target="_blank">here</a>.
 
-Based on the OpenPVSignal ontology, **a Knowledge Graph (KG)** has been built, including 101 PV Signal reports that have been published between 2012 and 2019 by the <a href="https://who-umc.org/signal-work/signal-detection/" target="_blank">**Uppsala Monitoring Center**</a>. These datasets have been manually converted to individual KGs and have been through an iterative quality control process. One of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions[1].
-
-The pySHACL python library is used to run the SHACL tests and an R script is used to create the summarized reports 
-
-```
-pip install pyshacl
-```
-
-after installing R, navigate to the folder where opvsignal repository has been cloned
-
-```
-Rscript run_com.r
-```
-
-
+Based on the OpenPVSignal ontology, **a Knowledge Graph (KG)** has been built, including 101 PV Signal reports that have been published between 2012 and 2019 by the <a href="https://who-umc.org/signal-work/signal-detection/" target="_blank">**Uppsala Monitoring Center**</a>. These datasets have been manually converted to individual KGs and have been through an iterative quality control process. 
 
 In this repository you may find:
 1. The <a href="OpenPVSignal.owl" target="_blank">OpenPVSignal ontology model</a>.
@@ -45,6 +31,20 @@ In this repository you may find:
 4. The <a href="https://github.com/inab-certh/OpenPVSignal/tree/master/turtle" target="_blank">KG</a> in turtle format.
 5. The <a href="https://github.com/inab-certh/OpenPVSignal/tree/master/TestCaseFiles" target="_blank">SHACL data models</a> used to validate the KG dataset.
 4. An <a href="https://github.com/inab-certh/OpenPVSignal/blob/master/run_com.r" target="_blank">R based script</a> that executes the KG alidation pipeline as a whole.
+
+Regarding the building of the OpenPVSignal KG, one of the final stages was the validation of data schema that was performed using the SHACL Shapes Constraint Language, a language for validating RDF graphs against a set of conditions[1].
+
+The pySHACL python library is used to run the SHACL tests and an R script is used to create the summarized reports 
+
+```
+pip install pyshacl
+```
+
+after installing R, navigate to the folder where opvsignal repository has been cloned
+
+```
+Rscript run_com.r
+```
 
 **OpenPVSignal** is versioned following the <a href="https://semver.org/" target="_blank">semantic versioning scheme</a>, applying the guidelines provided <a href="https://github.com/dbrock/semver-howto/blob/master/README.md" target="_blank">here</a>. The last part of the version refers to the date that this version has been created. For example, version 0.8.20171211 is the version that has been first commited on GitHub, on 2017, 11th of December. Typically, each new version should be worked on a branch, following the rationale presented <a href="http://nvie.com/posts/a-successful-git-branching-model/" target="_blank">here</a>.
 
