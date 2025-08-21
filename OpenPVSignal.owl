@@ -220,6 +220,9 @@
         <Class IRI="#Summary"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Underlying_Disease"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Vaccine"/>
     </Declaration>
     <Declaration>
@@ -265,7 +268,7 @@
         <Class IRI="http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Underlying_Disease"/>
+        <Class IRI="#BNPV_Report"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="prov:Agent"/>
@@ -385,6 +388,9 @@
         <ObjectProperty IRI="#refers_to_unconfirmed_adverse_effect"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#refers_to_underlying_disease"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#time_to_onset"/>
     </Declaration>
     <Declaration>
@@ -404,9 +410,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI="mp:supportedByData"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#refers_to_underlying_disease"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#concerns_action_upon_adverse_effect"/>
@@ -838,6 +841,10 @@
         <Class IRI="#Free_text_reporting_element"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Underlying_Disease"/>
+        <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Vaccine"/>
         <Class IRI="#Drug"/>
     </SubClassOf>
@@ -886,8 +893,8 @@
         <Class IRI="#Disproportionality_Analysis_Measure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Underlying_Disease"/>
-        <Class IRI="#Condition"/>
+        <Class IRI="#BNPV_Report"/>
+        <Class IRI="#Individual_Case_Safety_Report"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#concerns_indication_for_use"/>
@@ -1126,6 +1133,7 @@
             <Class IRI="#Drug_Usage"/>
             <Class IRI="#Individual_Case_Safety_Report"/>
             <Class IRI="#Number_of_prescriptions_on_population"/>
+            <Class IRI="#Reports_group"/>
             <Class IRI="#Signal"/>
             <Class IRI="#Warning_Information"/>
         </ObjectUnionOf>
@@ -1215,19 +1223,19 @@
         <Class IRI="#Pharmacovigilance_Signal_Report"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#time_to_onset"/>
-        <ObjectUnionOf>
-            <Class IRI="#Individual_Case_Safety_Report"/>
-            <Class IRI="#Reports_group"/>
-        </ObjectUnionOf>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_underlying_disease"/>
         <Class IRI="#Individual_Case_Safety_Report"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refers_to_underlying_disease"/>
         <Class IRI="#Reports_group"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#time_to_onset"/>
+        <ObjectUnionOf>
+            <Class IRI="#Individual_Case_Safety_Report"/>
+            <Class IRI="#Reports_group"/>
+        </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#belongs_to_reports_group"/>
@@ -1349,15 +1357,15 @@
         <Class IRI="#Signal"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#refers_to_underlying_disease"/>
+        <Class IRI="#Underlying_Disease"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#time_to_onset"/>
         <ObjectUnionOf>
             <Class IRI="http://www.w3.org/2006/time#DurationDescription"/>
             <Class IRI="http://www.w3.org/2006/time#Instant"/>
         </ObjectUnionOf>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#refers_to_underlying_disease"/>
-        <Class IRI="#Underlying_Disease"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#has_count_of_men"/>
@@ -2628,6 +2636,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Underlying_Disease</IRI>
+        <Literal>A medical condition that exists independently of the suspected drug administration or the occurrence of an adverse drug reaction (ADR), and may coexist without implying any causal or temporal relationship.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Underlying_Disease</IRI>
+        <Literal>Underlying Disease</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Vaccine</IRI>
         <Literal>A vaccine is a processed material with the function that when administered, it prevents or ameliorates a disorder in a target organism by inducing or modifying adaptive immune responses specific to the antigens in the vaccine.</Literal>
     </AnnotationAssertion>
@@ -3568,6 +3586,16 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#refers_to_underlying_disease</IRI>
+        <Literal>Assosiates an Individual Case Safety Report with an underlying disease.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#refers_to_underlying_disease</IRI>
+        <Literal>refers to underlying disease</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#time_to_onset</IRI>
         <Literal>Identifies the time passed before the adverse effect symptoms start, according to the respective spontaneous report.</Literal>
     </AnnotationAssertion>
@@ -3653,23 +3681,13 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#Underlying_Disease</IRI>
-        <Literal>A medical condition that exists independently of the suspected drug administration or the occurrence of an adverse drug reaction (ADR), and may coexist without implying any causal or temporal relationship.</Literal>
+        <IRI>#BNPV_Report</IRI>
+        <Literal>An Individual Case Safety Report stored in the Base Nationale de Pharmacovigilance (BNPV), the French pharmacovigilance database</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Underlying_Disease</IRI>
-        <Literal>Underlying Disease</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#refers_to_underlying_disease</IRI>
-        <Literal>Assosiates an Individual Case Safety Report with an underlying disease.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#refers_to_underlying_disease</IRI>
-        <Literal>refers to underlying disease</Literal>
+        <IRI>#BNPV_Report</IRI>
+        <Literal>BNPV Report</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_ATC_code"/>
