@@ -94,6 +94,9 @@
         <Class IRI="#Author"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BNPV_Report"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Bibliographic_reference"/>
     </Declaration>
     <Declaration>
@@ -266,9 +269,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="http://sweet.jpl.nasa.gov/2.3/humanJurisdiction.owl#Country"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#BNPV_Report"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="prov:Agent"/>
@@ -701,6 +701,10 @@
         </ObjectUnionOf>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BNPV_Report"/>
+        <Class IRI="#Individual_Case_Safety_Report"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Bibliographic_reference"/>
         <Class IRI="#Free_text_reporting_element"/>
     </SubClassOf>
@@ -892,10 +896,6 @@
         <Class IRI="#Proportional_Reporting_Ratio_(POR)"/>
         <Class IRI="#Disproportionality_Analysis_Measure"/>
     </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BNPV_Report"/>
-        <Class IRI="#Individual_Case_Safety_Report"/>
-    </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#concerns_indication_for_use"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -1026,6 +1026,7 @@
         <ObjectUnionOf>
             <Class IRI="#Individual_Case_Safety_Report"/>
             <Class IRI="#Pharmacovigilance_Signal_Report"/>
+            <Class IRI="#Reports_group"/>
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2111,6 +2112,16 @@ Definitions and Standards for Expedited Reporting - http://www.ema.europa.eu/doc
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Author</IRI>
         <Literal xml:lang="en">Author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BNPV_Report</IRI>
+        <Literal>An Individual Case Safety Report stored in the Base Nationale de Pharmacovigilance (BNPV), the French pharmacovigilance database</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BNPV_Report</IRI>
+        <Literal>BNPV Report</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3678,16 +3689,6 @@ group VIII, Practical Aspects of Signal Detection in Pharmacovigilance
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Proportional_Reporting_Ratio_(POR)</IRI>
         <Literal xml:lang="en">Proportional Reporting Ratio (PRR)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#BNPV_Report</IRI>
-        <Literal>An Individual Case Safety Report stored in the Base Nationale de Pharmacovigilance (BNPV), the French pharmacovigilance database</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#BNPV_Report</IRI>
-        <Literal>BNPV Report</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="#has_ATC_code"/>
